@@ -1,0 +1,53 @@
+PADS4 supports **direct and indirect sensor connections**, enabling integration with various **cameras and audience measurement software**. Sensors can connect **directly** via IP devices or **indirectly** through **third-party software** that interfaces with multiple sensors.
+
+---
+
+## **Direct Sensor Connections**
+The following **devices have been tested** and verified by NDS for **direct integration** with PADS4.
+
+### **Hikvision Cameras**
+| Manufacturer | Model | Functionality | Description |
+|-------------|--------|--------------|-------------|
+| **Hikvision** | DS-2TD1217B-6/PA | Face Recognition, Facemask Detection (firmware required) | Thermographic Turret Camera |
+|  | DS-2TD2617B-3/PA | Face Recognition, Facemask Detection (firmware required) | Thermographic Bullet Camera |
+|  | DS-2CD6365G0-IS | Tripwire Line Detection | Network Fisheye Camera |
+|  | DS-2CD6825G0/C-I(V)(S) | People Counting | Dual-Lens People Counting Network Camera |
+
+### **Hikvision API Configuration**
+To enable API access for PADS4:
+1. Open the **Admin portal** of the camera.
+2. Navigate to **Configuration > Security > Verification**.
+3. Set **RTSP authentication** to **Digest/Basic**.
+4. Set **Web verification** to **Digest/Basic**.
+
+---
+
+### **Mobotix Cameras**
+| Manufacturer | Model | Functionality | Description |
+|-------------|--------|--------------|-------------|
+| **Mobotix** | M7 Series | Facemask Detection (requires IAFacedetect app), Thermal Imaging | Various lens focal lengths available; check with the manufacturer for compatibility. |
+
+**Setup:** Visit the **Mobotix configuration page** for integration details.
+
+---
+
+## **Indirect Sensor Connections (Third-Party Software)**
+PADS4 can retrieve **data and events** from various third-party **face/audience recognition software**.
+
+### **Supported Third-Party Software**
+| Manufacturer | Software | Functionality | Description |
+|-------------|----------|--------------|-------------|
+| **Milestone** | XProtect | Alarm Retrieval | Connects with **9,000+ cameras**, enabling alarms that PADS4 can use to inform or guide the audience. See **Milestone XProtect setup** for integration details. |
+| **Quividi** | Vidireports 6/7 | Audience Measurement Data | Calculates **audience analytics** from camera video streams. Provides **gender, age, mood, and more** in real-time. See **Quividi website** for details. |
+| **SightCorp** | DeepSight | Audience Measurement Data, Face Recognition | Retrieves real-time **facemask, gender, age, mood, and other analytics**. See **SightCorp website** for details. |
+| **Saimos** | Saimos | Audience Measurement Data, Face Recognition, People Counting | Sends real-time **facemask detection events** when a person leaves the camera view. See **Saimos website** for details. |
+
+---
+
+### **Key Takeaways**
+- PADS4 supports both **direct** and **third-party** sensor connections.
+- Direct integrations include **Hikvision and Mobotix cameras**.
+- Indirect integrations work with **Milestone, Quividi, SightCorp, and Saimos**.
+- API configuration may be required for direct sensor connectivity.
+
+For further details, consult the **manufacturer’s website** or PADS4 documentation.

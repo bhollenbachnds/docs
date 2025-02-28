@@ -1,0 +1,62 @@
+This guide explains how to connect **Mobotix cameras** with **PADS4** to retrieve real-time audience measurement data. For more information on Mobotix cameras, visit: [www.Mobotix.com](https://www.mobotix.com).
+
+---
+
+## **Step 1: Configuring the Mobotix M7 Device**
+To ensure proper integration, event profiles in the Mobotix camera must be set up to match the **AIFacedetect App**.
+
+### **Accessing Camera Settings**
+1. **Log in** to the Mobotix camera.
+2. Navigate to **Setup Menu > Event Control > Event Overview > Message Events**.
+
+### **Check and Apply the Following Event Properties**
+| **Property**             | **Value**           |
+|--------------------------|--------------------|
+| Event sensor type        | **MxMessageSystem** |
+| Message name             | **AIFacedetect**   |
+| Message range            | **Local**          |
+| Filter message content   | **No Filter**      |
+
+---
+
+## **Step 2: Configuring the AIFacedetect App**
+To enable **facial detection** for masked and unmasked faces:
+
+1. **Navigate to:**  
+   **Setup Menu > Certified App Settings > AIFacedetect Settings > Configurator**.
+2. Apply the following settings:
+
+| **Property**              | **Value**   |
+|---------------------------|------------|
+| Detection algorithm       | **Deep**   |
+| Detect unmasked faces     | **Enable** |
+| Detect masked faces       | **Enable** |
+| Event management          | **Event on exit** |
+
+3. **Click "Set"** to save the settings.
+
+---
+
+## **Step 3: Configuring the Mobotix Connection in PADS4**
+1. **Open PADS4 CTRL Center**.
+2. **Navigate to Sensors** (If the **Sensors** category is not visible, you may need an **IOT module license**. Contact your PADS4 partner for assistance).
+3. Click **New Camera Software** and select **Mobotix**.
+4. **Enter the following details**:
+   - **Name**: A descriptive name for this sensor.
+   - **Hostname/IP Address**: The IP address of the Mobotix camera.
+   - **Port**: The port used by the camera.
+5. **Save the configuration**.
+
+Once completed, **PADS4 will connect to the Mobotix camera** and begin **receiving audience data**.
+
+---
+
+## **Additional Notes**
+- **Certified Sensors**: For details on the data retrieved from Mobotix, check the **Certified Sensors** page in PADS4.
+- **Event Handling**: The configured events will trigger **real-time incident creation** in PADS4.
+- **Integration Uses**:
+  - **Facial recognition for audience measurement**
+  - **Detecting if individuals are wearing masks**
+  - **Triggering PADS4 rules and automation based on detected data**
+
+By following this setup, **Mobotix cameras will seamlessly integrate with PADS4**, enhancing real-time audience analytics and event-driven automation.

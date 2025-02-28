@@ -1,0 +1,81 @@
+The **Sensors** feature in PADS4 allows you to integrate **cameras, camera management software, and other devices** that generate real-time data. This data can be used within PADS4 to trigger **incidents** or create **rules** that affect digital signage presentations.
+
+## **Certified Sensors**
+
+Some sensors, particularly cameras, can provide **audience measurement** and **facial perception data**, including:
+
+- Number of people detected
+- Age group estimation
+- Gender identification
+- Facial attributes (e.g., presence of a beard)
+- Whether a person is wearing a face mask
+
+The **available features depend on the sensor model**. Some devices require **third-party software** for integration. For a list of supported devices, check the **Certified Sensor page**.
+
+This sensor data can be used in PADS4 to **trigger incidents** and **apply rules** inside presentations based on real-time information.
+
+---
+
+## **Overview of Sensors in PADS4**
+
+The **Overview** section displays all added **Sensors**. A **green indicator** next to a sensor means that PADS4 has a successful connection.
+
+### **Adding a New Sensor**
+To add a sensor, follow these steps:
+
+1. Click **+ New** in the **Overview** section.
+2. Select the **Sensor type** (e.g., Camera, Sensor Management Software).
+3. Choose the **specific model or software type**.
+4. (Optional) Add a **description** and **location** for easy identification.
+5. Provide the **hostname and credentials** to allow PADS4 to connect to the sensor.
+
+---
+
+## **Using Areas to Group Sensors**
+
+An **Area** is a **physical or logical grouping of multiple sensors**. This is useful when **combining multiple people-counting cameras** to track total visitor numbers across multiple entry points.
+
+### **Creating a New Area**
+1. Click **+ New** in the **Area** section.
+2. Assign a **name** to the Area.
+3. (Optional) Provide a **description**.
+4. Select one or more **Sensors** to include.
+   - Sensors **can be assigned to multiple Areas** if necessary.
+5. Define **Incident Rules** for the Area.
+   - When a rule condition is met, **an incident is generated** in the **PADS4 CTRL Center**.
+
+---
+
+## **Configuring Incident Rules for Sensors**
+
+Incident rules allow **automated detection of specific conditions** and trigger alerts. These rules can be applied to Areas to enhance security, compliance, or operational efficiency.
+
+### **Available Incident Rules**
+| **Rule**                | **Description** |
+|-------------------------|----------------|
+| **No Facemask**         | If the camera supports facemask detection, an incident is created when someone without a mask is detected. |
+| **Maximum People Count** | Triggers an incident if the number of people in an Area exceeds the defined limit. |
+| **Maximum Temperature**  | Triggers an incident if the detected body temperature exceeds a specified threshold. |
+| **Milestone Alarms**     | Allows integration with the **Milestone video management system** to trigger incidents based on predefined camera conditions. |
+
+**Important Notes:**
+- Ensure that **temperature values** match the **unit settings (Celsius or Fahrenheit) of the camera**.
+- For **Milestone alarms**, define the alarm name in PADS4 to match the one used in **Milestone**.
+
+---
+
+## **Incidents in PADS4**
+
+Incidents detected by sensors are managed in the **PADS4 CTRL Center**. For more details, refer to the **How to Use Incidents** page.
+
+---
+
+## **Using Sensor Data in PADS4 Designer**
+
+PADS4 allows **sensor data integration** into digital signage presentations. Available options include:
+
+- **Event-based triggers** from cameras with detailed facial recognition.
+- **Area-level data** aggregation from multiple sensors.
+- **Incident-based triggers** for dynamic content adjustments.
+
+By utilizing **sensor data**, you can create **responsive, real-time** digital signage experiences based on **actual environmental conditions**.

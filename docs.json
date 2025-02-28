@@ -131,7 +131,52 @@
             "group": "Getting Started",
             "pages": [
               "ctrl-centre/introduction",
-              "ctrl-centre/dashboard"
+              "ctrl-centre/dashboard",
+              "ctrl-centre/content",
+              "ctrl-centre/schedules",
+              "ctrl-centre/viewers",
+              "ctrl-centre/sensors",
+              "ctrl-centre/incidents",
+              "ctrl-centre/clusters",
+              "ctrl-centre/viewer-variables",
+              "ctrl-centre/licenses",
+              "ctrl-centre/domains"
+            ]
+          },
+          {
+            "group": "Administration",
+            "pages": [
+              "ctrl-centre/administration/credentials",
+              "ctrl-centre/administration/teams",
+              "ctrl-centre/administration/Power-BI"
+            ]
+          },
+          {
+            "group": "Cluster",
+            "pages": [
+              "ctrl-centre/cluster/what-is-a-cluster",
+              "ctrl-centre/cluster/cluster-example",
+              "ctrl-centre/cluster/create-a-cluster",
+              "ctrl-centre/cluster/Cluster-related-Viewer-Variables"
+            ]
+          },
+          {
+            "group": "Viewer Variables",
+            "pages": [
+              "ctrl-centre/viewer-variables/introduction",
+              "ctrl-centre/viewer-variables/System-Viewer-Variables"
+            ]
+          },
+          {
+            "group": "Sensors",
+            "pages": [
+              "ctrl-centre/sensors/How-to-use-Sensors",
+              "ctrl-centre/sensors/How-to-create-Incidents",
+              "ctrl-centre/sensors/Sensor-Settings",
+              {
+                "group": "Certified Sensors",
+                "pages": ["ctrl-centre/sensors/certified-sensors/Certified-Sensors", "ctrl-centre/sensors/certified-sensors/Milestone-XProtect", "ctrl-centre/sensors/certified-sensors/Mobotix", "ctrl-centre/sensors/certified-sensors/Quividi-VidiReports", "ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"]
+              }
             ]
           }
         ]

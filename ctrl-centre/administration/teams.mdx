@@ -1,0 +1,148 @@
+This guide provides step-by-step instructions for setting up **PADS4 Teams integration** in **Microsoft Azure**. It assumes familiarity with **Azure App Registrations** and **Azure Communication Services**.
+
+---
+
+## **1. App Registration in Azure**
+To integrate **Microsoft Teams** with PADS4, create a **new application registration** in **Azure Active Directory (AAD)**.
+
+### **Step 1: Create a New App Registration**
+1. Open **Microsoft Azure Portal**.
+2. Navigate to **Azure Active Directory** > **App Registrations**.
+3. Click **New Registration**.
+4. Configure the following settings:
+   - **Name**: Any reference name.
+   - **Supported account types**:  
+     Select **Single-tenant** or **multi-tenant** based on your requirements.  
+     Personal Microsoft accounts are **not** supported.
+   - **Redirect URI**:  
+     - Select **Single Page Application (SPA)** as the platform type.  
+     - Enter the redirect URI:  
+       ```
+       https://<host>:<port>/credentials/oauth2/authorize/callback
+       ```
+       - **Host**: DNS name or **IP address** of **PADS4 CTRL Center**.
+       - **Port**: Optional, specify only if PADS4 CTRL Center is not using the default HTTP/HTTPS ports.
+
+---
+
+### **Step 2: Add the Login Hint Optional Claim**
+This claim enables **re-authentication** in PADS4 CTRL Center for **manual access token renewal**.
+
+1. Open **App Registration**.
+2. In the left menu, go to **Token Configuration**.
+3. Click **Add Optional Claim**.
+4. Select **Token type: ID**.
+5. Enable **Login_hint**.
+6. Click **Add**.
+
+---
+
+### **Step 3: Create an API Scope**
+This step allows **PADS4 Teams integration** to **join Teams meetings** on behalf of users.
+
+1. Open **App Registration**.
+2. In the left menu, select **Expose an API**.
+3. Click **Add a Scope**.
+4. Enter an **Application ID URI**:
+   ```
+   api://your-custom-uri
+   ```
+   - The Application ID URI **must start with** `api://` and **cannot contain spaces or special characters**.
+5. Click **Save and Continue**.
+6. Define the **Scope values**:
+   - **Scope Name**: Any unique name without spaces or special characters.
+   - **Who can consent?**: Select **Admins and Users**.
+   - **Admin Consent Display Name**: Any reference name.
+   - **User Consent Display Name**: Any reference name.
+   - **State**: **Enabled**.
+7. Click **Add Scope**.
+
+The **full scope URI** (Application ID URI + Scope name) will be required in **PADS4 CTRL Center**.
+
+---
+
+### **Step 4: Create a Client Secret**
+The **Client Secret** ensures that PADS4 Teams integration can **join Teams meetings** without requiring users to log in each time.
+
+1. Open **App Registration**.
+2. In the left menu, select **Certificates & Secrets**.
+3. Click **New Client Secret**.
+4. Enter a **description** and select an **expiration duration**.
+   - Ensure a new **Client Secret** is created before expiration.
+5. Click **Add**.
+6. **Copy the generated Client Secret Value immediately**, as it will not be visible later.
+
+---
+
+### **Step 5: Gather Required Information**
+PADS4 Teams integration requires the following details:
+
+- **Application (Client) ID** – Found in **App Registration Overview**.
+- **Directory (Tenant) ID** – Found in **App Registration Overview**.
+- **Client Secret** – Copied from Step 4.
+- **Scope Name** – Found in **Expose an API**.
+
+---
+
+## **2. Configuring Azure Communication Services**
+To enable **PADS4 Teams integration**, configure **Azure Communication Services**.
+
+### **Step 1: Create a Communication Services Resource**
+1. Open **Microsoft Azure Portal**.
+2. Navigate to **Azure Communication Services**.
+3. Click **Create**.
+4. Configure the following:
+   - **Subscription**: Select your Azure subscription.
+   - **Resource Group**: Choose an existing one or create a new one.
+   - **Name**: Any reference name.
+   - **Geography**: Select the preferred region.
+5. Click **Review + Create**, then **Create**.
+
+---
+
+### **Step 2: Retrieve the Connection String**
+PADS4 Teams integration requires the **Primary Connection String**.
+
+1. Open the **Communication Services resource**.
+2. In the left menu, select **Keys**.
+3. Copy the **Primary Key Connection String**.
+
+---
+
+## **3. User Configuration & Licensing**
+To integrate **Teams** with **PADS4**, user accounts must have the following **Microsoft 365 E3 licenses**:
+
+- **Exchange Online (Plan 2)**
+- **Microsoft Teams**
+
+### **Assigning Licenses**
+1. Open **Microsoft 365 Admin Center**.
+2. Navigate to **Users** > **Active Users**.
+3. Select the **user account**.
+4. Click **Licenses & Apps**.
+5. Assign:
+   - **Exchange Online (Plan 2)**
+   - **Microsoft Teams**
+6. Click **Save Changes**.
+
+---
+
+## **4. Summary of Required Information**
+To configure **PADS4 Teams Integration**, gather the following details:
+
+| **Required Value**        | **Where to Find It?** |
+|--------------------------|----------------------|
+| **Application (Client) ID** | App Registration Overview |
+| **Directory (Tenant) ID**  | App Registration Overview |
+| **Client Secret**         | Certificates & Secrets |
+| **Scope Name**           | Expose an API |
+| **Primary Key Connection String** | Communication Services → Keys |
+
+---
+
+## **5. Next Steps**
+- Enter these values into **PADS4 CTRL Center** to enable **Microsoft Teams integration**.
+- Ensure **licenses are assigned** to the relevant users.
+- Test the **connection** by attempting to join a Teams meeting through PADS4.
+
+The setup is now complete, and PADS4 is integrated with Microsoft Teams.

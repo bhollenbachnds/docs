@@ -1,0 +1,69 @@
+Viewer Variables, also known as **Dynamic Filtering**, allow you to create **smart and efficient digital signage content**. Instead of designing multiple presentations for different viewers, you can use Viewer Variables to automatically adapt content based on predefined values.
+
+---
+
+## **Meeting Room Example**
+Imagine managing 50 meeting room door signs in your digital signage network. Each sign displays a unique room number. Traditionally, you would need 50 separate presentations.
+
+With Viewer Variables, you design one presentation and let the system dynamically insert the correct room number for each display.
+
+---
+
+## **Creating a Viewer Variable**
+### **Steps:**
+1. Open PADS4 CTRL Center.
+2. Go to the **Viewers** menu category.
+3. Select **Variables** from the section that opens.
+4. Create a new Viewer Variable:
+   - Enter a name, for example, **MeetingRoomName**.
+   - Click **Create** to add the variable.
+5. Now, each **Viewer** can have its own unique value for **MeetingRoomName**.
+
+---
+
+## **Designing a Presentation with Viewer Variables**
+1. Create a text field in PADS4 Designer.
+2. Insert the Viewer Variable as **#MeetingRoomName#**.
+3. Schedule the presentation to your Viewers.
+
+Each Viewer will display its assigned **Meeting Room Name** without needing separate presentations.
+
+---
+
+## **Dynamic Content Adaptation**
+Viewer Variables are not limited to room numbers. You can use them for:
+- Location-based data
+- Directional signs
+- IP addresses
+- Opening hours
+- Personalized messages
+
+### **Example: SQL Integration**
+If you are fetching data from a database, you can insert Viewer Variables into SQL queries:
+
+```sql
+SELECT * FROM Table WHERE [field1] = #MeetingRoomName#
+```
+
+This ensures that the query dynamically filters data based on the Viewer Variable.
+
+---
+
+## **Where Can Viewer Variables Be Used?**
+- Text fields in presentations  
+- SQL queries in data providers  
+- Playlist items for dynamic content rotation  
+
+Viewer Variables **cannot** be used in password fields.
+
+---
+
+## **How Viewer Variables Work**
+PADS4 automatically scans all text for Viewer Variables (formatted as `#VariableName#`) and replaces them with the assigned values.
+
+If a **meeting room name** changes, simply update the value in **Viewer Variables**—there is no need to modify the presentation.
+
+---
+
+## **Conclusion**
+Viewer Variables simplify content management by allowing dynamic customization across multiple Viewers. This ensures a scalable, efficient, and flexible digital signage system with minimal manual updates.

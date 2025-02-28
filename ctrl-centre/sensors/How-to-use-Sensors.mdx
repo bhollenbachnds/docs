@@ -1,0 +1,73 @@
+PADS4 allows you to integrate **cameras, camera management software, and other sensor devices** to collect and process real-time data. These sensors provide **audience measurement**, **facial recognition**, **people counting**, and **environmental monitoring** capabilities.
+
+For a list of **certified sensors**, check the **Certified Sensors Page**.
+
+---
+
+## **Overview**
+The **Sensors Overview** section displays all added sensors. A **green dot** indicates that PADS4 has an **active connection** to the sensor.
+
+### **Adding a New Sensor**
+To add a new sensor, follow these steps:
+
+1. **Go to the Sensors Overview Page** in PADS4.
+2. **Click the "New" button** in the header.
+3. **Select the Sensor Type** – Camera or Sensor Management Software.
+4. **Specify the Model/Type** of the device.
+5. **Optionally Add a Description & Location** to help identify the sensor.
+6. **Enter the Credentials and Hostname** where the sensor is located.
+7. **Save the Configuration** – PADS4 will attempt to establish a connection.
+
+---
+
+## **Grouping Sensors into Areas**
+An **Area** is a logical grouping of sensors. This allows for **aggregated data collection and analysis**.
+
+### **People Counting**
+- If multiple **people-counting cameras** are in an Area, their data is **combined**.
+- Useful for **tracking total occupancy** when there are multiple entry points.
+
+### **Creating a New Area**
+1. **Go to the Areas Page** in PADS4.
+2. **Click "New"** in the header.
+3. **Enter an Area Name** and (optional) description.
+4. **Select Sensors** that belong to this area.
+5. **Assign Rules** to automate incident detection.
+6. **Save the Configuration**.
+
+---
+
+## **Defining Incident Rules**
+Rules define **what conditions trigger an incident**, allowing automated responses.
+
+### **Available Rules**
+| **Rule** | **Description** |
+|----------|----------------|
+| **No Facemask** | Detects if a person is **not wearing a facemask** and triggers an incident. |
+| **Maximum People Count** | Sets a **maximum occupancy** for an area. If exceeded, an incident is created. |
+| **Maximum Temperature** | Monitors body temperature. If **exceeding a set threshold** (e.g., 36.5°C), an incident is triggered. |
+| **Milestone Alarms** | Uses **Milestone VMS** alarms to detect security or safety concerns. Alarms can trigger incidents. |
+
+> **Note:** The temperature setting must match the camera’s configured unit (**Celsius or Fahrenheit**).
+
+---
+
+## **Managing Incidents**
+Incidents are generated when **rules are triggered**. You can manage incidents in the **PADS4 CTRL Center**.
+
+For more details, see the **How to Use Incidents Page**.
+
+---
+
+## **Using Sensor Data in PADS4 Designer**
+PADS4 Designer allows you to integrate **sensor data** into presentations.
+
+### **Data Usage Options**
+- **Real-time camera events** for interactive presentations.
+- **Aggregated area data** for audience analytics.
+- **Incident alerts** displayed on signage for immediate response.
+
+---
+
+## **Conclusion**
+PADS4’s **sensor integration** enables **real-time monitoring, automated rule-based alerts, and interactive digital signage**. By **configuring sensors and defining rules**, businesses can enhance **security, audience engagement, and operational efficiency**.

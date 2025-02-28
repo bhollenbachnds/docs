@@ -1,0 +1,79 @@
+## **What Are Domains in PADS4?**
+Domains in PADS4 allow you to manage **multiple separate client environments** on a **single PADS4 server**. This means different organizations or departments can **operate independently** while sharing the same infrastructure.
+
+With **reworked domain support**, all PADS4 services and applications are now domain-compatible, and domains can be **fully managed in PADS4 CTRL Center**.
+
+---
+
+## **Prerequisites**
+✔ **Request a License for Your Domain**  
+Before adding a new domain, contact the **PADS4 Sales Team** at **[sales@pads4.com](mailto:sales@pads4.com)** to request:  
+   - A **server license** for your domain  
+   - Any additional **user or Viewer licenses** needed  
+
+✔ **Upgrade to PADS4 2023.1 or Later**  
+Domains require PADS4 **2023.1 or higher**. Ensure your system is **updated before proceeding**.
+
+---
+
+## **Step 1: Creating a Root User**
+Before setting up a domain, a **root user** must be configured.
+
+1. **Open** the **PADS4 Foundation Configuration Tool**.
+2. **Set a password** for the **root user**.
+3. Click **Apply** to create the root user.
+4. **Store the password securely**.
+
+---
+
+## **Step 2: Logging into PADS4 CTRL Center as Root**
+Now that the **root user** is created, log in with:
+
+- **Username:** `su\root`
+- **Password:** `******` *(Your chosen password)*
+
+After logging in, you will see an **empty dashboard**, similar to an Administrator login, but with an **additional Domains tab**.
+
+---
+
+## **Step 3: Configuring Domains**
+You can now **add a new domain** or **modify the existing default domain ("pads")**.
+
+### **Creating a New Domain**
+1. Click **+ New** in the Domains dashboard.
+2. **Enter the domain details**:
+   - **Custom Domain Name** (e.g., "CompanyA" or "Branch1").
+   - **DNS Host Name** – Specify the domain’s **DNS hostname**.
+   - **Certificate File** – Upload the **third-party signed SSL certificate** (`.PEM format`).
+   - **Private Key File** – Upload the **third-party signed private key** (`.KEY format`).
+3. Click **Create**.  
+   - This will **restart PADS4 services** and apply the domain settings.
+
+---
+
+## **Step 4: Logging Into the New Domain**
+Once the domain is created, you can log in using:
+
+- **Username:** `DomainName\user1` (e.g., `Test123\user1`)
+- **Password:** `*****`
+
+After logging in, **activate the new domain** using the **Activate PADS4 Server** mechanism at the top of the screen.
+
+---
+
+## **Step 5: Managing Users & Configurations**
+Now that your **new domain is active**, you can:
+- **Log in to PADS4 System Management** with `user1` credentials.
+- **Set up additional users & permissions**.
+- **Assign Viewer licenses** for domain-based content management.
+
+---
+
+## **Key Takeaways**
+✔ **Run multiple independent clients** on a **single PADS4 server**.  
+✔ **Manage domains & certificates** in **PADS4 CTRL Center**.  
+✔ **Request a domain license** from **PADS4 Sales**.  
+✔ **Create & configure domains** with custom SSL certificates.  
+✔ **Assign users & licenses** within each domain.  
+
+For further setup, refer to **PADS4 System Management Help**.

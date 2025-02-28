@@ -1,0 +1,115 @@
+This guide demonstrates how to **create a Cluster in PADS4** and simulate a **real-world digital signage scenario** using a **Departure Screen** presentation.
+
+---
+
+## **Prerequisites**
+To follow this example, you need:
+- A **running PADS4 system**.
+- A **Google Chrome browser** to simulate multiple Viewers.
+- **PADS4 CTRL Center** and **PADS4 Designer** installed.
+
+---
+
+## **Step 1: Simulating Cluster Viewers in Chrome**
+1. **Open Chrome** and start a **HTML5 Viewer** using:
+   ```
+   http://<server>/PADS4/apps/viewer/
+   ```
+   _(Replace `<server>` with your PADS4 server address.)_
+2. **Open Viewer settings** and change the name to **Departure Cluster1**.
+3. **Repeat the process** for two more Chrome browsers _(not new tabs)_:
+   - **Viewer 2:** Departure Cluster2
+   - **Viewer 3:** Departure Cluster3
+4. Arrange the browsers side by side to simulate a **multi-screen cluster**.
+5. A **green indicator** in the bottom-left confirms the Viewers are connected to the PADS4 Server.
+
+---
+
+## **Step 2: Creating a Cluster Group in PADS4 CTRL Center**
+1. **Open PADS4 CTRL Center** in a browser.
+2. Navigate to **Viewers > Overview**.
+3. **Create a new Viewer Group** called **Cluster Departure Group**.
+4. **Add Viewers**:
+   - Departure Cluster1
+   - Departure Cluster2
+   - Departure Cluster3
+5. **Save the group**.
+
+---
+
+## **Step 3: Creating a Cluster in PADS4 CTRL Center**
+1. **Go to Viewers > Clusters**.
+2. **Click "+ New"** to create a new Cluster.
+3. **Enter a name** to identify this Cluster.
+4. **Add the three Cluster Viewers**:
+   - Click **"+"** to add each Viewer.
+5. **Click Save**.  
+   - The Cluster is now ready.
+
+---
+
+## **Step 4: Download & Import the Presentation**
+1. **Download the Departure Screen presentation** file (`departure.padsz`).
+2. **Open PADS4 Scheduler** _(Windows application)_.
+3. Click **New Presentation** to launch **PADS4 Designer**.
+4. **Import the presentation**:
+   - **Go to File > Import**.
+   - Select **departure.padsz**.
+   - Follow the wizard to copy images and database content.
+
+---
+
+## **Step 5: Scheduling the Presentation to the Cluster**
+1. **Open the Departure Screen presentation** in **PADS4 Designer**.
+2. **Go to the ribbon bar** and click **Schedule**.
+3. **Select "Cluster Departure Group"** as the destination.
+4. **Confirm scheduling**.
+
+Now, the presentation will be shown across all **Cluster Viewers**.
+
+---
+
+## **Step 6: Simulating Device Failure**
+1. **Close Departure Cluster2's browser**.
+   - **Departure Cluster3 will take over its data.**
+   - Prevents a **gap in displayed information**.
+2. **Close Departure Cluster1’s browser**.
+   - **The last remaining Viewer will start from Row 1**.
+
+This demonstrates how **PADS4 dynamically adjusts content** based on **Viewer availability**.
+
+---
+
+## **How It Works in PADS4**
+### **Cluster Rules and Page Management**
+1. **Each Viewer has a dedicated page**:
+   - Page 1 → Departure Cluster1
+   - Page 2 → Departure Cluster2
+   - Page 3 → Departure Cluster3
+2. **Pages are initially invisible**.
+3. **Rules control page visibility** based on **HorizontalPosition**.
+   - **If a Viewer is available**, it **shows its assigned page**.
+   - If a **Viewer fails**, another **automatically takes over**.
+
+### **Database-Connected Table Elements**
+- **Page 1 → Rows 1-17**
+- **Page 2 → Rows 18-35**
+- **Page 3 → Rows 36-53**
+- If a Viewer **fails**, remaining Viewers adjust content **automatically**.
+
+---
+
+## **Why Use Clusters?**
+- **Ensures continuous information flow** in case of hardware failure.
+- **Prioritizes critical information** dynamically.
+- **Enables smart automation** with predefined rules.
+- **Scales seamlessly** for **airports, retail displays, video walls, and more**.
+
+---
+
+## **Advanced Cluster Features**
+- Show **backup content (e.g., videos) when data is missing**.
+- **Adjust font size** dynamically if Viewers fail.
+- **Start a slideshow** on the last remaining Viewer.
+
+Clusters in **PADS4** provide **unmatched flexibility, automation, and reliability** for **digital signage networks**.

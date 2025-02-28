@@ -1,0 +1,50 @@
+When Clusters are created in **PADS4 CTRL Center**, **system-defined Viewer Variables** are automatically available. These variables help control **content distribution** across Clustered Viewers based on their **position** and **availability**.
+
+---
+
+## **System-Defined Cluster Viewer Variables**
+
+| **Variable**        | **Description** |
+|---------------------|----------------|
+| **ClusterWidth**    | Total number of **horizontal** Viewers in the Cluster. |
+| **ClusterHeight**   | Total number of **vertical** Viewers in the Cluster. |
+| **HorizontalPosition** | Defines the **current page number** that should be displayed based on **viewer availability** in a **horizontally aligned** Cluster. Adjusts dynamically when Viewers go offline. |
+| **VerticalPosition** | Defines the **current page number** that should be displayed based on **viewer availability** in a **vertically aligned** Cluster. Adjusts dynamically when Viewers go offline. |
+| **IndexX**          | The **designed horizontal position** of this Viewer within the Cluster. |
+| **IndexY**          | The **designed vertical position** of this Viewer within the Cluster. |
+
+---
+
+## **Example Cluster Configuration**
+The example below illustrates a **2x2 Cluster** with **4 Viewers**.
+
+| **Cluster Viewers**  | **Horizontal Position** | **Vertical Position** | **IndexX** | **IndexY** |
+|----------------------|------------------------|------------------------|------------|------------|
+| **Cluster Viewer 1** | 1                      | 1                      | 0          | 0          |
+| **Cluster Viewer 2** | 2                      | 3                      | 1          | 0          |
+| **Cluster Viewer 3** | 3                      | 2                      | 0          | 1          |
+| **Cluster Viewer 4** | 4                      | 4                      | 1          | 1          |
+
+---
+
+## **How These Variables Work in a Cluster**
+1. **Dynamic Page Assignment**:
+   - If **Viewer 2 goes offline**, **Viewer 3 or Viewer 4 will automatically take over its content**.
+   - If a Viewer is **removed or disabled**, PADS4 **automatically reassigns the correct page positions**.
+
+2. **Intelligent Content Distribution**:
+   - **HorizontalPosition** ensures content is **evenly distributed** when a Viewer is removed.
+   - **VerticalPosition** helps determine which **upper Viewers' content moves down** if a screen fails.
+
+3. **Flexible Layout Customization**:
+   - **IndexX/IndexY** allow **precise control** over the **placement of Viewers** within a Cluster.
+   - Adjustments can be **rule-based**, ensuring smooth **failover handling**.
+
+---
+
+## **Practical Use Cases**
+- **Airport Flight Information Displays**: Ensures **continuous flight listings** across multiple screens.
+- **Menu Boards in Restaurants**: Automatically shifts menu content if one screen **fails**.
+- **Retail Digital Signage**: Prevents **content gaps** and **adjusts layout dynamically**.
+
+By utilizing these **Cluster Viewer Variables**, you can **optimize digital signage layouts**, **reduce downtime**, and **automate content distribution** across your PADS4 system.
