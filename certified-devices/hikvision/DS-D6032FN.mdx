@@ -1,0 +1,213 @@
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on the **Hikvision DS-D6032FN** device.  
+
+---
+
+## **1. First-Time Use**  
+
+Before installation, ensure that the **PADS4 Server is set up and configured properly**.  
+
+<Note> The minimum **PADS4 Server version** required is **PADS4 Foundation 2023.1**.</Note>  
+
+---
+
+### **1.1 Resetting the Device**  
+
+If the device was previously used, perform a **factory reset** to clear storage and prevent software conflicts.  
+
+<Steps>  
+  <Step title="Step One">  
+    Open the **home screen** of the device.  
+  </Step>  
+  <Step title="Step Two">  
+    Open the **Settings app**.  
+  </Step>  
+  <Step title="Step Three">  
+    Click **System** in the **Settings menu**.  
+  </Step>  
+  <Step title="Step Four">  
+    Scroll down and select **Restore to Factory Settings**.  
+  </Step>  
+  <Step title="Step Five">  
+    Click **Confirm** in the dialog that appears.  
+  </Step>  
+</Steps>  
+
+---
+
+### **1.2 Updating Firmware**  
+
+Ensure the **firmware is updated** to at least **V1.7.1 build 20230424** before installing PADS4.  
+
+<Steps>  
+  <Step title="Step One">  
+    Copy the **update.zip** firmware file to the **root directory** of a USB stick.  
+  </Step>  
+  <Step title="Step Two">  
+    Insert the **USB stick** into the device.  
+  </Step>  
+  <Step title="Step Three">  
+    The device should detect the **USB firmware update** and prompt for installation.  
+  </Step>  
+  <Step title="Step Four">  
+    Follow the on-screen instructions to install the **firmware update**.  
+  </Step>  
+</Steps>  
+
+---
+
+## **2. Installing PADS4 Viewer**  
+
+Follow the steps below to install and configure **PADS4 Viewer on the Hikvision DS-D6032FN**.  
+
+---
+
+### **2.1 Installing PADS4 from USB Stick**  
+
+The **PADS4Hikvision.apk** file is available on the **PADS4 Server** in:  
+```  
+C:\Program Files\PADS4\Foundation\Apps  
+```  
+Alternatively, download the latest version from **[here](#)** and place it in the **PADS4 Server apps directory** to ensure the correct version is installed.  
+
+#### **Installation Steps**  
+
+<Steps>  
+  <Step title="Step One">  
+    Copy the **PADS4Hikvision.apk** file onto a **USB stick**.  
+  </Step>  
+  <Step title="Step Two">  
+    Insert the **USB stick** into the **Hikvision DS-D6032FN device**.  
+  </Step>  
+  <Step title="Step Three">  
+    Open the **home screen** of the device.  
+  </Step>  
+  <Step title="Step Four">  
+    Open the **FileBrowser app**.  
+  </Step>  
+  <Step title="Step Five">  
+    Select **USB DISK** from the list.  
+  </Step>  
+  <Step title="Step Six">  
+    Click on **PADS4Hikvision.apk**.  
+  </Step>  
+  <Step title="Step Seven">  
+    When prompted with **"Do you want to install this application?"**, click **Install**.  
+  </Step>  
+  <Step title="Step Eight">  
+    Once installed, click **Open** to launch the **PADS4 Hikvision app**.  
+  </Step>  
+</Steps>  
+
+---
+
+### **2.2 Connecting to PADS4 Server**  
+
+**PADS4 Server Address Format:**  
+```  
+protocol://host:port/hostpath/  
+```  
+- **Protocol:** `http` or `https` (depends on SSL certificate).  
+- **Host:** DNS name or **IP address** of **PADS4 Server**.  
+- **Port:** *(Optional - specify only if using non-default ports).*  
+- **Host Path:** Configured in **System Management** *(default: `PADS4`)*.  
+
+#### **Connection Steps**  
+
+<Steps>  
+  <Step title="Step One">  
+    Enter the **PADS4 Server Location**.  
+  </Step>  
+  <Step title="Step Two - *Optional*">  
+    Specify a **Viewer Name** (if left blank, PADS4 will generate one).  
+  </Step>  
+  <Step title="Step Three">  
+    Press **Start**.  
+  </Step>  
+  <Step title="Step Four">  
+    Grant **permission to access photos, media, and files** when prompted.  
+  </Step>  
+  <Step title="Step Five">  
+    The **PADS4 Viewer** will be **downloaded and installed**.  
+  </Step>  
+</Steps>  
+
+---
+
+### **2.3 Adjusting PADS4 Viewer Settings**  
+
+- **Press and hold the left mouse button** or **touch the screen for 3 seconds** to access **Viewer Settings**.  
+
+---
+
+### **2.4 Updating PADS4 Viewer & PADS4 Hikvision App**  
+
+The **PADS4 Viewer & PADS4 Hikvision app** will **automatically update** when the **PADS4 Server** is updated.  
+
+---
+
+### **2.5 Accessing Android Menu**  
+
+If you access the **Android Menu** while **PADS4 is running**, the device will **reboot in 30 seconds** (as the **Viewer Monitor Service** detects inactivity).  
+
+To prevent reboot, **stop the PADS4 Hikvision app within 30 seconds**.  
+
+---
+
+## **3. Supported Features & Limitations**  
+
+### **3.1 General Features**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Automatic PADS4 Software Updates** – Viewer updates automatically when PADS4 Server updates. |  
+| ✅ | **Offline Mode** – The device continues running presentations for **7 days** while offline. |  
+
+---
+
+### **3.2 Device Capabilities**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Portrait Mode** – Supported. Device automatically rotates. |  
+| ✅ | **Remote Control Blocking** – Prevents screen interaction via remote control. |  
+| ✅ | **Supports HTTP & HTTPS** |  
+| ✅ | **Turn Off Display** – Display turns off when no presentation is scheduled, reducing power consumption. |  
+| ✅ | **Cluster Viewer** – Supports **Cluster Mode**. |  
+| ✅ | **MD5 File Integrity Check** – Ensures content integrity. |  
+| ❌ | **Master Volume Control** – Volume can only be adjusted at the element level. |  
+
+---
+
+### **3.3 Playback & Content Support**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Maximum Videos Supported** – Up to **2 simultaneous videos** per page. |  
+| ❌ | **Streaming Video** – Not supported. |  
+| ✅ | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Supported. |  
+| ✅ | **Image, Text, Line, Shape, Scrolling Text, Tables, Buttons, Web Elements** |  
+| ✅ | **PowerPoint & PDF Elements** – Supported *(PowerPoint requires installation on PADS4 Server)*. |  
+| ❌ | **Flash Elements** – Not supported. |  
+
+---
+
+### **3.4 Data Connectivity & Integrations**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Data Providers** – Supports **70+ PADS4 data providers** for retrieving and integrating real-time data. |  
+| ✅ | **Viewer Variables** – Simplifies content management without modifying presentations. |  
+| ✅ | **Property Bindings** – Allows dynamic element properties using external data sources. |  
+
+---
+
+### **3.5 Device Management**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Remote Device Management** – Managed via **PADS4 CTRL Center & PADS4 Agent**. |  
+| ✅ | **Reboot & Restart Viewer** – Supported. |  
+| ✅ | **Screenshot Capture** – Retrieve display screenshots. |  
+| ✅ | **Proof of Play Tracking** – Monitors content playback history. |  
+| ✅ | **Blackbox Support** – Provides system logs for troubleshooting and support. |  
+

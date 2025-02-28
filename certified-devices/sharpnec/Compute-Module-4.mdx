@@ -1,0 +1,234 @@
+This guide provides **step-by-step instructions** for installing and configuring **PADS4 Viewer** on the **SharpNEC Compute Module 4**.  
+
+---
+
+## **Before You Start**  
+
+### **Supported SharpNEC Devices**  
+The following **SharpNEC Compute Module 4** device is supported:  
+
+- **SharpNEC Compute Module 4 (CM4)**  
+
+**Ensure your PADS4 Server is installed and configured before proceeding.**  
+
+---
+
+## **Minimum Requirements**  
+
+**PADS4 Server Version:** **2023.2 or later**  
+**Firmware Version:** **1.1.00 or later**  
+
+**Ensure your device firmware meets the minimum requirements before proceeding with installation.**  
+
+---
+
+## **First-Time Setup**  
+
+**Before installing PADS4, you need to update the device firmware and OS image.**  
+
+### **Updating Display Firmware**  
+
+<Steps>  
+  <Step title="Step One">  
+    Download the **NEC Firmware Update Tool** from the NEC website.  
+  </Step>  
+  <Step title="Step Two">  
+    Install the **firmware update tool** on your PC.  
+  </Step>  
+  <Step title="Step Three">  
+    Download the **latest firmware version (1.1.00 or later)** for your **NEC display**.  
+  </Step>  
+  <Step title="Step Four">  
+    Follow the **on-screen instructions** to update the firmware.  
+  </Step>  
+</Steps>  
+
+---
+
+### **Installing PADS4 OS Image**  
+
+**The device boots from a customized PADS4 OS image based on the Raspberry Pi Compute Module 4.**  
+
+<Steps>  
+  <Step title="Step One">  
+    Download the **PADS4 OS Image** from **PADS4 App Center**.  
+  </Step>  
+  <Step title="Step Two">  
+    Install **Raspberry Pi Imager** and **rpiboot** on your PC.  
+  </Step>  
+  <Step title="Step Three">  
+    Power **off** the display.  
+  </Step>  
+  <Step title="Step Four">  
+    Move the **boot mode switch** on the Raspberry Pi interface board **downwards**.  
+  </Step>  
+  <Step title="Step Five">  
+    Connect a **Micro-USB cable** from the display to the PC.  
+  </Step>  
+  <Step title="Step Six">  
+    Power **on** the display.  
+  </Step>  
+  <Step title="Step Seven">  
+    Run **rpiboot** and wait for the system to mount a new filesystem.  
+  </Step>  
+  <Step title="Step Eight">  
+    Open **Raspberry Pi Imager** and select **Use Custom** from the **Operating System** menu.  
+  </Step>  
+  <Step title="Step Nine">  
+    Select the **PADS4 OS image** you downloaded earlier.  
+  </Step>  
+  <Step title="Step Ten">  
+    Choose the **mounted drive** as the **target device** to flash the PADS4 image.  
+  </Step>  
+  <Step title="Step Eleven">  
+    Once the installation is complete, **remove the Micro-USB cable** and move the **boot mode switch upwards**.  
+  </Step>  
+  <Step title="Step Twelve">  
+    Power cycle the display to **restart** the **PADS4 Viewer Installer**.  
+  </Step>  
+</Steps>  
+
+**⚠️ Do not overwrite the default username when flashing the OS. Change the password if needed.**  
+
+---
+
+## **Installing PADS4 Viewer**  
+
+The **SharpNEC Compute Module 4** is **preconfigured** to run the **PADS4 Installer** if the **PADS4 Viewer** is not already installed.  
+
+**To install PADS4 Viewer:**  
+
+<Steps>  
+  <Step title="Step One">  
+    Enter your **PADS4 Server URL**.  
+  </Step>  
+  <Step title="Step Two">  
+    (Optional) Enter a **Viewer Name**.  
+  </Step>  
+  <Step title="Step Three">  
+    Follow the **installation steps** to download and install **PADS4 Viewer**.  
+  </Step>  
+  <Step title="Step Four">  
+    The **Viewer will start** and **automatically connect** to the **PADS4 Server**.  
+  </Step>  
+</Steps>  
+
+---
+
+## **Adjusting PADS4 Viewer Settings**  
+
+**To access the PADS4 Viewer settings screen:**  
+- **Connect a keyboard** to the device.  
+- **Right-click** using a **mouse**.  
+
+**You can adjust settings such as:**  
+**Screen orientation**  
+**Server URL configuration**  
+**Network settings**  
+
+---
+
+## **Updating & Reinstalling PADS4 Viewer**  
+
+**PADS4 Viewer updates automatically when you update the PADS4 Server.**  
+
+### **Reinstalling PADS4 Viewer**  
+
+**Use the built-in PADS4 Installer if:**  
+**You need to connect to a different server or domain.**  
+**You want to reset the Viewer settings.**  
+
+**To reinstall the PADS4 Viewer:**  
+
+<Steps>  
+  <Step title="Step One">  
+    Open the **Viewer settings menu**.  
+  </Step>  
+  <Step title="Step Two">  
+    Click **Launcher Settings** at the **bottom-left corner**.  
+  </Step>  
+  <Step title="Step Three">  
+    Start the **Viewer Installer** and follow the steps.  
+  </Step>  
+</Steps>  
+
+---
+
+## **Remote Device Connectivity**  
+
+**You can manage the device remotely without connecting a keyboard or mouse.**  
+
+### **1. VNC Viewer**  
+
+**How to connect:**  
+1. Download and install **VNC Viewer** on your **PC**.  
+2. Enter the **IP address** of the **Compute Module 4**.  
+
+### **2. Cockpit Server Monitoring (For Advanced Users)**  
+
+**Cockpit is a web-based interface for monitoring the device.**  
+**Access via browser:**  
+```
+https://<hostnameofpi>:9090  
+```
+
+### **3. SSH (For Advanced Users)**  
+
+**You can connect to the device via SSH for command-line access.**  
+
+---
+
+## **Supported Features & Limitations**  
+
+### **General Features**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Automatic Software Updates** – The Viewer updates automatically when the PADS4 Server is updated. |  
+| ✅ | **Offline Mode** – Plays scheduled content for **7 days** while offline. |  
+
+### **Device Features**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Portrait Mode** – Device automatically adjusts rotation. |  
+| ✅ | **Cluster Viewer** – Can be used in a **cluster setup**. |  
+| ✅ | **Block Remote Control** – Prevent unauthorized screen control. |  
+| ✅ | **Turn Off Display** – When no presentation is scheduled. |  
+
+### **Video & Content Support**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **2 Videos Per Page** – Supports seamless playback. |  
+| ✅ | **Video Rotation, Reflection, Skew, Flip** – Supported. |  
+| ✅ | **HTTP Streaming** – Supported. |  
+| ❌ | **Flash Element Support** – Not supported. |  
+
+### **Device Management**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Remote Management via PADS4 CTRL Center** |  
+| ✅ | **Connection State Monitoring & Alerts** |  
+| ✅ | **Reboot Support** – Supported. |  
+| ✅ | **Remote Screenshot Capture** |  
+| ❌ | **Shutdown Support** – Not supported. |  
+
+### **General Limitations**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ❌ | **Local File Playback** – Only supports files from PADS4 Content Library. |  
+| ❌ | **Local Proof of Play Storage** – Limited to **50,000 records**. |  
+| ❌ | **PowerBI Support** – Not supported. |  
+
+---
+
+## **Final Steps**  
+
+**Your PADS4 Viewer is now installed and ready to use! 🎉**  
+
+**Check the PADS4 Server for status updates.**  
+**Adjust settings via the Viewer menu.**  
+**Use remote access (VNC, Cockpit, SSH) for advanced management.**

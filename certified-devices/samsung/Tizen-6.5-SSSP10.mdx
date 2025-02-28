@@ -1,0 +1,250 @@
+This guide provides **step-by-step instructions** for installing and configuring **PADS4 Viewer** on **Samsung Tizen 6.5 (SSSP10)** devices.  
+
+---
+
+## **Before You Start**  
+
+### **Supported Samsung Tizen 6.5 Devices**  
+
+The following **Samsung SSSP10 (Tizen 6.5)** device is supported:  
+
+- **SSSP10 (Tizen 6.5)**  
+
+**Ensure your PADS4 Server is installed and configured before proceeding.**  
+
+---
+
+## **Minimum Requirements**  
+
+**PADS4 Server Version:** **2022.1 or later**  
+**Firmware Version:** **1040.7 or later**  
+
+**Ensure your device firmware meets the minimum requirements before proceeding with installation.**  
+
+---
+
+## **First-Time Setup**  
+
+When you **turn on** the Samsung SSSP10 for the first time, a **configuration wizard** will start.  
+
+**If the configuration wizard does not start, perform a factory reset before continuing.**  
+
+---
+
+## **Performing a Factory Reset**  
+
+<Steps>  
+  <Step title="Step One">  
+    Turn the **screen off**.  
+  </Step>  
+  <Step title="Step Two">  
+    On the remote control, press:  
+    `Mute + 1 + 8 + 2 + ON`  
+  </Step>  
+  <Step title="Step Three">  
+    Navigate to **Option** → Select **Factory Reset**.  
+  </Step>  
+</Steps>  
+
+**The device will restart and display the welcome screen.**  
+
+---
+
+## **Uninstalling an App (If Required)**  
+
+**If you cannot access the device menu, uninstall the existing app first.**  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **Home Menu**.  
+  </Step>  
+  <Step title="Step Two">  
+    Navigate to **URL Launcher Settings**.  
+  </Step>  
+  <Step title="Step Three">  
+    Select **Uninstall**.  
+  </Step>  
+  <Step title="Step Four">  
+    Confirm the uninstallation.  
+  </Step>  
+</Steps>  
+
+---
+
+## **Installing PADS4 Viewer**  
+
+### **Step 1: Run the Setup Wizard**  
+
+<Steps>  
+  <Step title="Step One">  
+    Select **Language** and press **Next**.  
+  </Step>  
+  <Step title="Step Two">  
+    Choose **Landscape** as the display orientation.  
+  </Step>  
+  <Step title="Step Three">  
+    Disable **Auto Power Off**.  
+  </Step>  
+  <Step title="Step Four">  
+    Connect to your **network** under **Network Settings**.  
+  </Step>  
+  <Step title="Step Five">  
+    Set the **Current Date & Time**.  
+  </Step>  
+  <Step title="Step Six">  
+    Under **Play via**, select **URL Launcher**.  
+  </Step>  
+</Steps>  
+
+**Specify your PADS4 Server URL:**  
+```
+http://<server>/PADS4/apps/tizen  
+https://<server>/PADS4/apps/tizen  
+```  
+**Replace `<server>`** with the **IP address** or **domain name** of your **PADS4 Server**.  
+**Ensure "PADS4" is in CAPITAL letters, or the connection will fail due to case sensitivity.**  
+
+**For PADS4 version 2020.1 or earlier, use the old link:**  
+```
+http://<server>/pads4/native/samsung  
+https://<server>/pads4/native/samsung  
+```  
+
+<Steps>  
+  <Step title="Step Seven">  
+    (Optional) Assign a **Device Name**.  
+  </Step>  
+  <Step title="Step Eight">  
+    Complete the **Setup Wizard**.  
+  </Step>  
+  <Step title="Step Nine">  
+    In **Home Menu**, select **URL Launcher** to start the Viewer.  
+  </Step>  
+</Steps>  
+
+**To manually start the wizard:**  
+- Change input to **HDMI**, then press **Menu** on the remote control and navigate to **System → Setup**.  
+
+**Once configured, the PADS4 HTML5 Viewer will download and start automatically.**  
+
+---
+
+## **Checking Device Firmware**  
+
+**Ensure your Samsung SSSP10 firmware is up to date before running PADS4.**  
+
+<Steps>  
+  <Step title="Step One">  
+    Power on the screen and press **Home** on the remote control.  
+  </Step>  
+  <Step title="Step Two">  
+    Open **More Options**.  
+  </Step>  
+  <Step title="Step Three">  
+    Navigate to **Support** → **Contact Samsung**.  
+  </Step>  
+  <Step title="Step Four">  
+    Verify that the **Software Version** is **1040.7 or later**.  
+  </Step>  
+</Steps>  
+
+---
+
+## **Updating Firmware**  
+
+<Steps>  
+  <Step title="Step One">  
+    Insert a **USB Stick** with the latest firmware.  
+  </Step>  
+  <Step title="Step Two">  
+    Press **Menu** on the remote control.  
+  </Step>  
+  <Step title="Step Three">  
+    Navigate to **Support** → **Software Update**.  
+  </Step>  
+  <Step title="Step Four">  
+    Select **Update Now** and follow the on-screen instructions.  
+  </Step>  
+</Steps>  
+
+---
+
+## **Adjusting PADS4 Viewer Settings**  
+
+**To access viewer settings:** Hold the **left mouse button** or **touch the screen** for **3 seconds**.  
+
+---
+
+## **Enabling 4K Video Mode**  
+
+**Enable Ultra HD/4K via PADS4 CTRL Center:**  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **PADS4 CTRL Center** and log in.  
+  </Step>  
+  <Step title="Step Two">  
+    Go to **Viewers** → Select your **Samsung Tizen Viewer**.  
+  </Step>  
+  <Step title="Step Three">  
+    Click the **3-dot menu** → Select **View Details**.  
+  </Step>  
+  <Step title="Step Four">  
+    Click the **Settings Cogwheel** to open **Screen Settings**.  
+  </Step>  
+  <Step title="Step Five">  
+    Open the **Style Tab** and enable **Ultra HD/4K Mode**.  
+  </Step>  
+</Steps>  
+
+**Available on Tizen 3.0+ with PADS4 2022.3+**  
+**You can play only ONE 4K video per page.**  
+
+---
+
+## **Supported Features & Limitations**  
+
+### **General Features**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Automatic Software Updates** – The HTML5 Viewer updates automatically. |  
+| ✅ | **Offline Mode** – Plays scheduled content for **7 days** while offline. |  
+
+### **Device Features**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Portrait Mode** – Set rotation to **270°** in Viewer Settings. Do **NOT** use SSP rotate. |  
+| ✅ | **Cluster Viewer** – Can be used in a **cluster setup**. |  
+| ✅ | **Block Remote Control** – Prevent unauthorized screen control. |  
+| ✅ | **Wake on LAN** – Supported. |  
+| ❌ | **Turn Off Display** – Not supported. |  
+
+### **Video & Content Support**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **4K Video Mode** – Enabled via **PADS4 CTRL Center**. |  
+| ✅ | **Seamless Video Playback** – **Supported** in **Landscape Mode**. |  
+| ✅ | **Streaming** – Supports **HTTP, HLS, RTP, UDP**. |  
+| ❌ | **Playback Speed Adjustment** – Not supported. |  
+| ❌ | **PowerBI Support** – Not available due to Chromium 85 Web Engine. |  
+
+### **Device Management**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Remote Management via PADS4 CTRL Center** |  
+| ✅ | **Connection State Monitoring & Alerts** |  
+| ✅ | **Reboot Support** – Supported. |  
+| ❌ | **Shutdown Support** – Not supported. |  
+
+---
+
+## **Troubleshooting**  
+
+| **Issue** | **Solution** |  
+|----------|------------|  
+| **Viewer does not start** | Check firmware version. |  
+| **Network connection issues** | Verify **PADS4 Server URL** is correct. |  

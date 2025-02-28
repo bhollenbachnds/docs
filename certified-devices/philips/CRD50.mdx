@@ -1,0 +1,170 @@
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **Philips CRD50 displays**.
+
+---
+
+## **1. First-Time Use**  
+
+Before installation, ensure that the **PADS4 Server is set up and configured properly**.  
+
+📌 **Minimum PADS4 Server version required:** **PADS4 Foundation 2023.1**  
+
+When turning on the device for the first time, the **Configuration Wizard** will appear. If not, **reset the device** as described in **1.2 Resetting the Device**.
+
+---
+
+### **1.1 Configuring the Device**  
+
+<Steps>  
+  <Step title="Step One">  
+    On the **Welcome Screen**, select your preferred **language** and click **Start**.  
+  </Step>  
+  <Step title="Step Two">  
+    On the **Security Settings** screen, ensure **SICP Network Port** is **enabled**. *(Other settings can be enabled or disabled as required.)*  
+  </Step>  
+  <Step title="Step Three">  
+    On the **Network Settings** screen, select and configure the **network type**.  
+  </Step>  
+  <Step title="Step Four">  
+    On the **Signage Display Settings** screen, press **Skip**.  
+  </Step>  
+  <Step title="Step Five">  
+    On the **Clone Media Files** screen, press **Skip**.  
+  </Step>  
+  <Step title="Step Six">  
+    Press **Finish** to complete the setup.  
+  </Step>  
+</Steps>  
+
+The device will display **CMND & Deploy**, an **app supplied by Philips** *(No configuration is required for this app).*  
+
+---
+
+### **1.2 Resetting the Device**  
+
+If the device was previously used, perform a **factory reset** to clear storage and prevent software conflicts.  
+
+<Steps>  
+  <Step title="Step One">  
+    Attach a **keyboard** to the **Philips CRD50 device**.  
+  </Step>  
+  <Step title="Step Two">  
+    Hold the **Windows key** and enter **1 8 8 8** to open the **Android menu**.  
+  </Step>  
+  <Step title="Step Three">  
+    Open **Settings**.  
+  </Step>  
+  <Step title="Step Four">  
+    Select **System Tools → Factory Reset**.  
+  </Step>  
+  <Step title="Step Five">  
+    Click **Factory Reset** and confirm by pressing **OK**.  
+  </Step>  
+</Steps>  
+
+After resetting, the **Welcome Screen** will appear. Follow the steps in **1.1 Configuring the Device**.  
+
+---
+
+## **2. Installing PADS4 Viewer**  
+
+Follow these steps to install the **PADS4 Viewer** on **Philips CRD50**.
+
+---
+
+### **2.1 Checking Device Firmware**  
+
+Ensure the **correct firmware version** is installed for full **PADS4 Viewer** functionality.  
+
+<Steps>  
+  <Step title="Step One">  
+    Attach a **keyboard** to the device.  
+  </Step>  
+  <Step title="Step Two">  
+    Hold the **Windows key** and enter **1 8 8 8** to open the **Android menu**.  
+  </Step>  
+  <Step title="Step Three">  
+    Open **Settings**.  
+  </Step>  
+  <Step title="Step Four">  
+    Select **About**.  
+  </Step>  
+  <Step title="Step Five">  
+    Ensure the **Build Number** is **FB04.01** *(required for PADS4)*.  
+  </Step>  
+</Steps>  
+
+---
+
+### **2.2 Updating Device Firmware**  
+
+To update the **firmware**, follow the **Philips instructions**:  
+
+📌 **Firmware update guide:** [Download Philips CRD50 Firmware](#)  
+
+---
+
+### **2.3 Installing PADS4Philips from USB Stick**  
+
+The **PADS4Philips.apk** file can be found on the **PADS4 Server** in:  
+
+```
+C:\Program Files\Net Display Systems\PADS4
+```  
+
+Alternatively, download the latest version from **[this link](http://go.pads4.com/?fwlink=1006)** and place it in the **apps directory on the PADS4 Server**.  
+
+#### **Installation Steps**  
+
+<Steps>  
+  <Step title="Step One">  
+    Copy the **PADS4Philips.apk** file onto a **USB stick**.  
+  </Step>  
+  <Step title="Step Two">  
+    Insert the **USB stick** into the **Philips CRD50 device**.  
+  </Step>  
+  <Step title="Step Three">  
+    Attach a **keyboard** to the device.  
+  </Step>  
+  <Step title="Step Four">  
+    Hold the **Windows key** and enter **1 8 8 8** to open the **Android menu**.  
+  </Step>  
+  <Step title="Step Five">  
+    Select **Apps → File Manager**.  
+  </Step>  
+  <Step title="Step Six">  
+    Navigate to **mnt → usb_storage**, then open **PADS4Philips.apk**.  
+  </Step>  
+  <Step title="Step Seven">  
+    Select **Install**, then **Open** the app.  
+  </Step>  
+</Steps>  
+
+---
+
+## **3. Supported Features & Limitations**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Automatic Software Updates** – PADS4 Viewer updates automatically. |  
+| ✅ | **Offline Mode** – Device continues running presentations for **7 days** while offline. |  
+| ✅ | **Supports HTTP & HTTPS** |  
+| ✅ | **Maximum 1 Video per Page** |  
+| ✅ | **Streaming Support** – HTTP. |  
+| ✅ | **Cluster Viewer Mode** – Supported. |  
+| ✅ | **Interactive Button, Text, Scrolling Text, Image, Table** |  
+| ✅ | **PowerPoint & PDF Elements** – *(PowerPoint requires installation on PADS4 Server)*. |  
+| ✅ | **Remote Device Management** – Controlled via **PADS4 Agent**. |  
+| ❌ | **Wake-on-LAN Not Supported** |  
+| ❌ | **Global Volume Control Not Supported** *(Only element-level volume control works.)* |  
+
+---
+
+## **4. Troubleshooting**  
+
+| **Problem** | **Solution** |  
+|------------|-------------|  
+| **Block Remote Control, Turn Off Display, Shutdown Commands Not Working** | Ensure **SICP over Network** is **enabled** and hosted on **port 5000**. |  
+| **Viewer does not start in full screen** | Check **firmware version** and **update if necessary**. |  
+| **Device fails to connect over Ethernet** | Updating the **firmware** may resolve this issue. |  
+| **Navigation bar remains visible** | **Firmware update** required. |  
+| **Viewer repeatedly asks for content storage permission** | Check if **correct firmware version** is installed. |  

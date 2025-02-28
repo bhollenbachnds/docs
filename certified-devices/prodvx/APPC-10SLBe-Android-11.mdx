@@ -1,0 +1,237 @@
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX APPC-10SLBe devices running Android 11**.
+
+**Minimum PADS4 Version Required:** **2024.1**  
+
+---
+
+## **1. Before You Start**  
+
+### **1.1 Ensure PADS4 Server is Installed**  
+
+During installation, you must **specify the PADS4 Server location**. It is **recommended** to **install and configure the PADS4 Server** before setting up the device.
+
+---
+
+### **1.2 Resetting the Device**  
+
+**A factory reset is recommended** to free up storage and **prevent software conflicts**.
+
+#### **Factory Reset Steps**  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **Android Settings**.  
+  </Step>  
+  <Step title="Step Two">  
+    Navigate to **System → Reset Options**.  
+  </Step>  
+  <Step title="Step Three">  
+    Select **Erase all data (factory reset)**.  
+  </Step>  
+  <Step title="Step Four">  
+    Click **ERASE ALL DATA**.  
+  </Step>  
+  <Step title="Step Five">  
+    Confirm by clicking **ERASE ALL DATA** again.  
+  </Step>  
+</Steps>  
+
+**Important:** This process **deletes all data**. **Back up important files** before proceeding.  
+
+---
+
+### **1.3 Complete the Device’s Welcome Wizard**  
+
+**Steps to Complete the Wizard:**  
+
+<Steps>  
+  <Step title="Step One">  
+    Plug in the **PoE cable** to **power on** the device.  
+  </Step>  
+  <Step title="Step Two">  
+    Click **START** on the **"Hi there"** screen.  
+  </Step>  
+  <Step title="Step Three">  
+    Wait for **device initialization** to complete.  
+  </Step>  
+  <Step title="Step Four">  
+    Select **"Don't copy"** when asked to **copy apps & data**.  
+  </Step>  
+  <Step title="Step Five">  
+    Click **Skip** to **bypass Google Sign-in**.  
+  </Step>  
+  <Step title="Step Six">  
+    Accept **Google Services** by clicking **Accept**.  
+  </Step>  
+  <Step title="Step Seven">  
+    Select **Skip** for **screen lock setup**.  
+  </Step>  
+</Steps>  
+
+---
+
+### **1.4 Verify ProDVX API Installation**  
+
+**ProDVX API is required** for PADS4 Viewer to function properly.  
+
+#### **Check if ProDVX API is Running**  
+
+<Steps>  
+  <Step title="Step One">  
+    Look for the **PA icon** in the **Android status bar**.  
+  </Step>  
+  <Step title="Step Two">  
+    If missing, **pull down the notification bar** and look for **"ProDVX API (EdLA) is running."**  
+  </Step>  
+  <Step title="Step Three">  
+    If the API is **not installed**, download it from **[here](#)** and install it before proceeding.  
+  </Step>  
+</Steps>  
+
+---
+
+### **1.5 ProDVX API Token**  
+
+**PADS4 uses a default API token** for authentication.  
+
+#### **Replace the Default Token (If Needed)**  
+
+<Steps>  
+  <Step title="Step One">  
+    Navigate to **C:\Program Files\PADS4\Foundation\Apps** on the **PADS4 Server**.  
+  </Step>  
+  <Step title="Step Two">  
+    Locate the file **prodvx-api-token.txt**.  
+  </Step>  
+  <Step title="Step Three">  
+    Open the file and **replace the existing token** with your **custom API token**.  
+  </Step>  
+  <Step title="Step Four">  
+    Save the file.  
+  </Step>  
+</Steps>  
+
+---
+
+## **2. Installing PADS4 Viewer**  
+
+### **2.1 Download the PADS4 Viewer**  
+
+**You can download the PADS4 Viewer from:**  
+
+**PADS4 Server:**  
+```
+https://[yourPADS4Server]/[domain]/apps
+```
+*(Replace `[yourPADS4Server]` with your **server's IP or name**, and `[domain]` with your **PADS4 domain** – default is **PADS4**.)*  
+
+**APP Center:** [Download Latest PADS4ProDVXv2 APK](#)  
+
+**Important:** If you download a newer version, **also place it in the apps directory** on the **PADS4 Server**.
+
+---
+
+### **2.2 Install the PADS4 Viewer**  
+
+<Steps>  
+  <Step title="Step One">  
+    Copy the **PADS4ProDVXv2.apk** to a **USB stick**.  
+  </Step>  
+  <Step title="Step Two">  
+    Insert the **USB stick** into the **ProDVX device**.  
+  </Step>  
+  <Step title="Step Three">  
+    Open the **Files app** on the device.  
+  </Step>  
+  <Step title="Step Four">  
+    Locate **PADS4ProDVXv2.apk** on the **USB stick**.  
+  </Step>  
+  <Step title="Step Five">  
+    Tap on the file to **start installation**.  
+  </Step>  
+  <Step title="Step Six">  
+    Confirm **installation prompts**.  
+  </Step>  
+  <Step title="Step Seven">  
+    When installation is **complete**, tap **Open**.  
+  </Step>  
+</Steps>  
+
+---
+
+### **2.3 Set PADS4 Viewer as the Home App**  
+
+**PADS4 must be set as the default Home App to auto-start.**  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **Android Settings**.  
+  </Step>  
+  <Step title="Step Two">  
+    Go to **Apps & Notifications**.  
+  </Step>  
+  <Step title="Step Three">  
+    Select **PADS4ProDVXv2**.  
+  </Step>  
+  <Step title="Step Four">  
+    Open **Advanced settings**.  
+  </Step>  
+  <Step title="Step Five">  
+    Set **PADS4ProDVXv2** as the **Home App**.  
+  </Step>  
+</Steps>  
+
+**PADS4 Viewer will now start automatically when the device turns on.**  
+
+---
+
+## **3. Connecting to PADS4 Server**  
+
+**Format:**  
+
+```
+<protocol>://<host>:<port>/<domain>/
+```
+
+**Example:**  
+
+```
+https://mydomain.pads365.com/pads4/
+```
+
+#### **Steps to Connect to PADS4 Server**  
+
+<Steps>  
+  <Step title="Step One">  
+    Enter the **PADS4 Server Address**.  
+  </Step>  
+  <Step title="Step Two">  
+    (Optional) Enter a **custom Viewer Name**.  
+  </Step>  
+  <Step title="Step Three">  
+    Click **Start**.  
+  </Step>  
+  <Step title="Step Four">  
+    Grant **access permissions** to **photos, media, and files**.  
+  </Step>  
+  <Step title="Step Five">  
+    The **PADS4 Viewer will download** and start automatically.  
+  </Step>  
+</Steps>  
+
+---
+
+## **4. Adjusting & Updating PADS4 Viewer**  
+
+### **4.1 Adjust Viewer Settings**  
+
+**To open the options screen:**  
+
+**Hold the left mouse button** or **touch the screen for 3 seconds**.  
+Click **Launcher Settings** to return to **PADS4ProDVXv2 app**.  
+
+---
+
+### **4.2 Updating PADS4 Viewer & PADS4ProDVXv2**  
+
+**If you update the PADS4 Server**, both **PADS4 Viewer** and **PADS4ProDVXv2** will **automatically update** to the latest version.

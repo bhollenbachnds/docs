@@ -1,41 +1,236 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "PADS4 Platform",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#00ADBA",
+    "light": "#74c9c3",
+    "dark": "#00ADBA"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "dropdowns": [
       {
-        "tab": "Guides",
+        "dropdown": "Installation Guide",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Getting Started",
             "pages": [
               "introduction",
-              "quickstart",
-              "development"
+              "system-requirements",
+              "network-requirements",
+              "prerequisites",
+              "modules-overview",
+              "certified-viewer-devices"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Upgrade Information",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "upgrade-info/Upgrading-to-PADS4-2023.2"
+            ]
+          },
+          {
+            "group": "System Configuration",
+            "pages": [
+              "system-configuration/PADS4-Configuration-Selection",
+              "system-configuration/Active-Directory-Configuration",
+              "system-configuration/PADS4-Hardware-Configuration-Guide",
+              "system-configuration/Microsoft-Windows-Group-Polocies"
+            ]
+          },
+          {
+            "group": "Install PADS4",
+            "pages": [
+              "install-pads4/Downloads",
+              {
+                "group": "Install PADS4 Servers",
+                "pages": ["install-pads4/install-pads4-server/How-to-install-PADS4-Main-Server", "install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers", "install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers", "install-pads4/install-pads4-server/How-to-install-PADS4-Sub-Server", "install-pads4/install-pads4-server/How-to-install-PADS4-Backup-Server", "install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key", "install-pads4/install-pads4-server/PADS4-Configuration", "install-pads4/install-pads4-server/Sensor-database-type-selection"]
+              },
+              {
+                "group": "Install PADS4 Viewers",
+                "pages": ["install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-Viewer", "install-pads4/install-pads4-viewer/How-to-install-PADS4-Generic-Android-Viewer"]
+              }
+            ]
+          },
+          {
+            "group": "Install PADS4 on certified Devices",
+            "pages": [
+              {
+                "group": "Aopen",
+                "pages": ["certified-devices/aopen/AT1032TP"]
+              },
+              {
+                "group": "BrightSign",
+                "pages": ["certified-devices/brightsign/BrightSign-Series-5", "certified-devices/brightsign/BrightSign-Series-4"]
+              },
+              {
+                "group": "Google Chrome OS",
+                "pages": ["certified-devices/chromeos/ChromeOS"]
+              },
+              {
+                "group": "Crestron",
+                "pages": ["certified-devices/crestron/TSS-1070-B-S"]
+              },
+              {
+                "group": "ELO",
+                "pages": ["certified-devices/elo/I-Series-2"]
+              },
+              {
+                "group": "Giada",
+                "pages": ["certified-devices/giada/DM-Series","certified-devices/giada/D6-Series", "certified-devices/giada/F-Series", "certified-devices/giada/F108D", "certified-devices/giada/D73-and-D74"]
+              },
+              {
+                "group": "HikVision",
+                "pages": ["certified-devices/hikvision/DS-D60C-B", "certified-devices/hikvision/DS-D6032FN"]
+              },
+              {
+                "group": "IAdea",
+                "pages": ["certified-devices/iadea/WRP-1000-v2","certified-devices/iadea/XDS-1078", "certified-devices/iadea/XMP-8550-and-8552", "certified-devices/iadea/WRP-1000", "certified-devices/iadea/XDS-Series"]
+              },
+              {
+                "group": "iiyama",
+                "pages": ["certified-devices/iiyama/54-and-60-series"]
+              },
+              {
+                "group": "LG",
+                "pages": ["certified-devices/lg/WebOS-6", "certified-devices/lg/WebOS-4.1"]
+              },
+              {
+                "group": "Philips",
+                "pages": ["certified-devices/philips/4650D", "certified-devices/philips/3650Q", "certified-devices/philips/4550D", "certified-devices/philips/3550Q", "certified-devices/philips/10BDL4551T", "certified-devices/philips/CRD50"]
+              },
+              {
+                "group": "ProDVX",
+                "pages": ["certified-devices/prodvx/APPC-R23-series-Android-12", "certified-devices/prodvx/APPC-R23-series-Android-11", "certified-devices/prodvx/APPC-10SLBe-Android-11", "certified-devices/prodvx/APPC-4200-Series-Android-9", "certified-devices/prodvx/IPPC-Series-Windows", "certified-devices/prodvx/UW-series-Android-8.1", "certified-devices/prodvx/APPC-series-RK3288-Android-8.1"]
+              },
+              {
+                "group": "Qbic",
+                "pages": ["certified-devices/qbic/BXP-100", "certified-devices/qbic/BXP-300", "certified-devices/qbic/BXP-321", "certified-devices/qbic/TD-0350", "certified-devices/qbic/TD-1050", "certified-devices/qbic/TD-1060"]
+              },
+              {
+                "group": "Samsung",
+                "pages": ["certified-devices/samsung/Tizen-7.0-SSSP10", "certified-devices/samsung/Tizen-6.5-SSSP10", "certified-devices/samsung/Tizen-5.0-SSSP7"]
+              },
+              {
+                "group": "Sharp NEC",
+                "pages": ["certified-devices/sharpnec/Compute-Module-4"]
+              },
+              {
+                "group": "Sony",
+                "pages": ["certified-devices/sony/BZxx-series"]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "dropdown": "Digital Signage",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          },
+          {
+            "group": "PADS4 Ctrl Centre",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          },
+          {
+            "group": "PADS4 Web Designer",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          },
+          {
+            "group": "PADS4 CMS",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          },
+          {
+            "group": "PADS4 Windows Applications",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          },
+          {
+            "group": "PADS4 Data Vaults",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "Workspace",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "FIDS",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "Visitor Management",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "Legacy CMS",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "modules/digital-signage/introduction",
+              "modules/digital-signage/components",
+              "modules/digital-signage/licenses"
+            ]
+          }
+        ]
+      },
+      {
+        "dropdown": "API Reference",
         "groups": [
           {
             "group": "API Documentation",
@@ -75,27 +270,25 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/PADS4.png",
+    "dark": "/logo/PADS4-dark.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Contact",
+        "href": "mailto:support@pads4.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Support Portal",
+      "href": "https://support.pads4.com"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://linkedin.com/company/pads-4"
     }
   }
 }

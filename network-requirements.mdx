@@ -1,0 +1,54 @@
+
+This page explains the usage of network ports by PADS4. Be aware that the port numbers mentioned are the default settings. Some ports can be adjusted.
+
+The network communication between the components of the PADS4 system uses TCP/IP. PADS4 now uses one port number to communicate and by default it's 7237.
+
+If you are using a firewall on the PADS4 Server this means that one or more of the above port numbers will have to be opened in order for PADS4 to communicate over the network. On the client side (for instance the PADS4 Server) it's not necessary to open any port numbers in the firewall.
+
+ 
+
+## PADS4 Server ports used with external connections
+| Port | Protocol | Firewall rules | Description |
+| ----------- | ----------- | ----------- | ----------- |
+| 7237 | TCP | Inbound | Default port used for PADS4 communication |
+| 3702 | UDP | Inbound | Required for PADS4 server search function (discover network functionality) |
+| 4525 or 443 | HTTP | Outbound | Online activation (only one port has to be available) |
+| 80 and/or 443 | HTTP | Inbound / Outbound | Software updates and replication when using more servers |
+| 7 | UDP | Outbound | Wake On LAN function (standard WOL port) |
+| 9 | UDP | Outbound | Wake On LAN function (standard WOL port) |
+| 123 | UDP | Inbound / Outbound | Required for NTP (Network Time Protocol for Viewer time synchronization) |
+ 	 	 	  
+
+## PADS4 Server local used ports
+*Be aware that these ports are used locally only!*
+
+|Port | Protocol | Description |
+| ----------- | ----------- | ----------- |
+| 15672 | HTTP | used by RabbitMQ for HTTP API connection |
+| 15671 | HTTP | used by RabbitMQ https for HTTP API over TLS connection |
+5672 | TCP | used by RabbitMQ AMQP |
+5671 | TCP | used by RabbitMQ AMQP over TLS |
+ 
+
+## PADS4 Viewer ports
+| Port | Protocol | Firewall rules | Description |
+| ----------- | ----------- | ----------- | ----------- |
+| 7237 | TCP | Outbound | Default port used for PADS4 communication |
+| 3702 | UDP | Outbound | Required for PADS4 server search function (discover network functionality) |
+| 7 | UDP | Inbound | Wake On LAN function (standard WOL port) |
+| 9 | UDP | Inbound	| Wake On LAN function (standard WOL port) |
+| 123 | Inbound / Outbound | Required for NTP (Network Time Protocol for Viewer time synchronization) |
+ 
+
+## PADS4 HTML5 Viewer ports
+Port 80 and/or 443 (HTTP)
+
+
+
+### Note
+
+<Note>PADS4 has built-in features to automatically detect a PADS4 Server in your network. However a PADS4 Server can only be automatically detected when the UDP port number 3702 is not blocked by a firewall on the server PC or somewhere else in the network.</Note>
+
+
+<Note>With version 2021.3 a new mechanism is introduced which replicates both ways. Changes on the Sub/Backup Server are synchronized with the Main Server and changes from the Main are synchronized with the Sub/Backup Servers.</Note>
+

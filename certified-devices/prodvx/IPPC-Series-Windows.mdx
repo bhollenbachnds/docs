@@ -1,0 +1,195 @@
+# **Installing PADS4 Viewer on ProDVX IPPC-Series (Windows)**  
+
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX IPPC-Series computers** running **Windows 10 or Windows 11**.  
+
+---
+
+## **Before You Start**  
+
+### **Supported ProDVX IPPC-Series Devices**  
+
+The following **ProDVX IPPC-Series** computers are supported:  
+
+- **IPPC-10SLB (R24-6701)**  
+- **IPPC-15-6000 (R22-6000)**  
+- **IPPC-22-6000 (R22-6000)**  
+- **IPPC-22-6200 (R22-6000)**  
+- **IPPC-24-6000 (R24-6000)**  
+- **IPPC-32-6000 (R24-6000)**  
+- **IPPC-10SLB (Intel Atom x5-Z8350)**  
+
+<Note> PADS4 Viewer is compatible with **Windows 10 and Windows 11**.</Note>  
+
+---
+
+## **Minimum Requirements**  
+
+### **PADS4 Server Version**  
+Ensure that your **PADS4 Server** is running **PADS4 version 2024.1** or later.  
+
+<Note>It is recommended to **complete the installation of the PADS4 Server first** before configuring your ProDVX IPPC-Series device.</Note>  
+
+### **Windows Version**  
+Your **ProDVX IPPC-Series** computer must be running:  
+**Windows 10 (64-bit)** or **Windows 11 (64-bit)**  
+
+---
+
+## **Installing PADS4 Viewer**  
+
+Follow these steps to install **PADS4 Viewer** on your **ProDVX IPPC-Series** device.  
+
+### **Step 1: Download the PADS4 Installer**  
+
+**You can download the PADS4 installation package from:**  
+
+**PADS4 Server Directory:**  
+```
+C:\Program Files\PADS4\Clients\Apps
+```  
+**Official Download Link:**  
+[Installing PADS4 on Windows](#) *(Refer to the official installation article for Windows.)*  
+
+---
+
+### **Step 2: Install PADS4 Viewer**  
+
+#### **Installation Steps**  
+
+<Steps>  
+  <Step title="Step One">  
+    Download the **PADS4 Windows Installer** from the **PADS4 Server** or the official link provided.  
+  </Step>  
+  <Step title="Step Two">  
+    Open the **installer (.exe) file**.  
+  </Step>  
+  <Step title="Step Three">  
+    Follow the **on-screen instructions** in the **PADS4 Setup Wizard**.  
+  </Step>  
+  <Step title="Step Four">  
+    Choose the **installation directory** (default is `C:\Program Files\PADS4`).  
+  </Step>  
+  <Step title="Step Five">  
+    Click **Install** and wait for the process to complete.  
+  </Step>  
+  <Step title="Step Six">  
+    Once installation is complete, click **Finish**.  
+  </Step>  
+</Steps>  
+
+<Note> If prompted, **restart your device** after installation.</Note>  
+
+---
+
+## **Configuring PADS4 Viewer**  
+
+### **Step 1: Set PADS4 Viewer to Start Automatically**  
+
+To ensure **PADS4 Viewer** starts automatically on boot:  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **Windows Settings** → **Apps**.  
+  </Step>  
+  <Step title="Step Two">  
+    Navigate to **Startup Apps**.  
+  </Step>  
+  <Step title="Step Three">  
+    Find **PADS4 Viewer** and toggle it **ON**.  
+  </Step>  
+</Steps>  
+
+---
+
+### **Step 2: Connect to the PADS4 Server**  
+
+**Format:**  
+
+```
+<protocol>://<host>:<port>/<domain>/
+```
+
+**Example:**  
+
+```
+https://example.pads365.com/pads4
+```
+
+#### **Steps to Connect to PADS4 Server**  
+
+<Steps>  
+  <Step title="Step One">  
+    Launch **PADS4 Viewer** on your **ProDVX device**.  
+  </Step>  
+  <Step title="Step Two">  
+    Enter the **PADS4 Server Address**.  
+  </Step>  
+  <Step title="Step Three">  
+    (Optional) Enter a **custom Viewer Name**.  
+  </Step>  
+  <Step title="Step Four">  
+    Press **Start** to connect.  
+  </Step>  
+  <Step title="Step Five">  
+    If required, allow **PADS4 Viewer** to access the network and system settings.  
+  </Step>  
+</Steps>  
+
+---
+
+## **Finalizing PADS4 Viewer Setup**  
+
+Once connected, configure **PADS4 Viewer settings** using the **PADS4 CTRL Center**:  
+
+- ✅ **Enable automatic updates**  
+- ✅ **Configure network settings**  
+- ✅ **Adjust screen resolution and orientation**  
+- ✅ **Block remote control access (if required)**  
+
+---
+
+## **Supported Features & Limitations**  
+
+### **General Features**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Automatic PADS4 Software Updates** – The **PADS4 Viewer** will update automatically. |  
+| ✅ | **Offline Mode** – The device will continue playing **scheduled presentations** for **7 days** if offline. |  
+
+### **Windows Compatibility**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Supports Windows 10 & 11 (64-bit)** |  
+| ❌ | **Windows 7, 8.1 not supported** |  
+
+### **Data & Content Support**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Real-time Data Providers** – Supports integration with external data sources. |  
+| ✅ | **Video, Images, Text, Tables, and Interactive Elements** – Supported. |  
+| ❌ | **Flash Content, Seamless Video Playback** – Not supported. |  
+
+### **Device Management**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Remote Management via PADS4 CTRL Center** |  
+| ✅ | **Connection State Monitoring & Alerts** |  
+| ✅ | **Restart Viewer, Retrieve Logs, Edit Viewer Settings** |  
+| ❌ | **Wake-on-LAN, Remote Shutdown** – Not supported. |  
+
+---
+
+## **Troubleshooting**  
+
+If you experience issues with **PADS4 Viewer installation or connection**, ensure:  
+
+✔ **PADS4 Server is running and reachable**  
+✔ **Network connection is active**  
+✔ **Windows firewall is not blocking PADS4**  
+✔ **Correct PADS4 Server URL is entered**  
+
+For more detailed troubleshooting, refer to the **PADS4 Windows Installation Guide**.  

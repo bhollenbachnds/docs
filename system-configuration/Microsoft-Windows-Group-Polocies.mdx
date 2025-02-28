@@ -1,0 +1,67 @@
+Many organizations use Microsoft Group Policies to centrally manage settings for the users. With the Group Policies of Microsoft you can centrally manage the Desktop Viewer settings.
+
+PADS4 has implemented group policies for the Desktop Viewer application to allow the administrator to specify the settings from a central location and push these settings towards 1 or more users or user groups. The policies set by the administrator are automatically detected by the Desktop Viewer options window and those options are disabled in the user interface. This way it is possible to push a set of predefined settings towards users, and still give them the opportunity to change some settings locally.
+
+The pushed settings are stored in the registry under:
+
+HKEY_CURRENT_USER\SOFTWARE\Policies\Net Display Systems\PADS4
+
+
+The 'normal settings' are stored in the registry under: 
+
+HKEY_CURRENT_USER\SOFTWARE\Net Display Systems\PADS4
+
+ 
+
+To configure the usage of Group Policies for PADS4 Desktop Viewers
+Installation PADS4 Server
+
+First Install PADS4 Server (or more components, but the policy files are installed along with the Server installation).
+
+Install Group Policy Template file
+
+Copy PADS4.admx from C:\Program Files\Net Display Systems\PADS4\PolicyDefinitions to the Domain Policy Definitions directory on the domain server (usually: \\<FQDN>\SYSVOL\<FQDN>\Policies\PolicyDefinitions)
+
+Policy Translation File
+
+Copy PADS4.adml from C:\Program Files\Net Display Systems\PADS4\PolicyDefinitions to the Domain Policy Definitions Language directory on the domain server (usually: \\<FQDN>\SYSVOL\<FQDN>\Policies\PolicyDefinitions\en-US)
+
+Microsoft Group Policy Management Console (GPMC)
+
+Open the Group Policy Management Console application and next open the Group Policy Editor.
+
+Select User configuration / Policies / Administrative Templates: Policy definition / Net Display Systems / PADS4 / Desktop Viewer
+
+ 
+
+PADS4 Property Table for the Desktop Viewer:
+
+Setting	Options	Type	Description
+PADS4 Backup Server	Backup Server Address	String	Name/IP address of the Backup PADS4 Server.
+ 	Port Number	Number	Portnumber on which the PADS4 Server listens for incoming calls (default is 7237).
+PADS4 Domain	Domain	String	Custom Domain (default is PADS).
+Enable PADS4 Screensaver on startup	Screensaver timeout	Number	Interval in milliseconds after which the screensaver is started when the user did not hit the keyboard or mouse.
+ 	Show logon screen on resume	Boolean	After the screensaver is active and the user moves the mouse or hits the keyboard, the logon screen can be shown.
+PADS4 Hostpath	Hostpath	String	The hostpath as specified in the PADS4 Server settings (default PADS4) which is used for the http synchronisation.
+Http portnumber	HTTP port number	Number	Portnumber used for synchronisation and specified in the PADS4 Server settings (default is 8080).
+Identification mode	Identification mode	Selection	Identification mode when connecting to the PADS4 Server.
+User permissions	User can view messages	Boolean	User can open the messages window.
+ 	User can open options window	Boolean	User can open the options window to change settings (not recommended with group policies).
+ 	User can exit application	Boolean	User can exit the application.
+ 	User can check for software updates	Boolean	User can check for software updates (not recommended with group policies).
+ 	User can start screensaver	Boolean	User can change the screen saver settings.
+Scale presentations to fit into the destination window	Scale presentations to fit into the destination window	Boolean	Resize the content to the window size.
+ 	Maintain aspect ratio	Boolean	Preserve the aspect ratio.
+PADS4 Server	Server Connection	Selection	Configures how the clients connect to the Server. When set to automatic the Server Address must be left empty.
+ 	Server Address	String	Name/IP address of the PADS4 Server.
+ 	Port Number	Number	Portnumber on which the PADS4 Server listens for incoming calls (default is 7237).
+Content Library Synchronization	Synchronization Mode	Selection	When automatic is selected, the content is synchronized.
+Content Library storage folder	Mode	Selection	When set to Manual specify the destination. Use variables like %APPDATA% to change the location to user specific folders.
+ 	Content library folder	String	folder location where the PADS4 content library is located.
+Tray icon appearance	Appearance	Selection	The way the Desktop Viewer is visible in the windows tray.
+Use local timezone for scheduled presentations	Use local timezone for scheduled presentations	Boolean	Use the timezone of the local system for determining when to show a message.
+ 
+
+ NOTE
+
+This allows the administrator to specify the settings from a central location and push these settings towards users. The users are not able to override these settings using the Options Window. The options that are set/pushed by the administrator are disabled in the Desktop Viewer Options Window.

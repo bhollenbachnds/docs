@@ -1,0 +1,217 @@
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on the **IAdea WRP-1000 (Android 9)** device.  
+
+---
+
+## **1. First-Time Use**  
+
+Before installation, ensure that the **PADS4 Server is set up and configured properly**.  
+
+<Note> The minimum **PADS4 Server version** required is **PADS4 Foundation 2023.1**.</Note>  
+
+---
+
+### **1.1 Resetting the Device**  
+
+If the device was used previously, perform a **factory reset** to clear storage and prevent software conflicts.  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **IAdea Basic Settings**.  
+  </Step>  
+  <Step title="Step Two">  
+    Click on **Advanced**.  
+  </Step>  
+  <Step title="Step Three">  
+    Select **System → Factory Default**.  
+  </Step>  
+  <Step title="Step Four">  
+    Click **OK** to confirm the factory reset.  
+  </Step>  
+</Steps>  
+
+After resetting, the **Basic Settings screen** will appear.  
+
+---
+
+### **1.2 Checking Device Firmware**  
+
+To ensure full **PADS4 Viewer compatibility**, verify that the device is running firmware version **3.4.1 or higher**.  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **IAdea Basic Settings**.  
+  </Step>  
+  <Step title="Step Two">  
+    Click on **Advanced**.  
+  </Step>  
+  <Step title="Step Three">  
+    Select **Information**.  
+  </Step>  
+  <Step title="Step Four">  
+    The **Firmware Version** is displayed on the right-hand side of the screen.  
+  </Step>  
+</Steps>  
+
+---
+
+### **1.3 Updating Firmware**  
+
+If the firmware is outdated, update it by following these steps:  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **IAdea Basic Settings**.  
+  </Step>  
+  <Step title="Step Two">  
+    Click on **Advanced**.  
+  </Step>  
+  <Step title="Step Three">  
+    Select **System → Firmware Update**.  
+  </Step>  
+  <Step title="Step Four">  
+    Click on **Check Latest Firmware from Internet**.  
+  </Step>  
+  <Step title="Step Five">  
+    If a new firmware version is available, select **Update from Internet**.  
+  </Step>  
+</Steps>  
+
+---
+
+## **2. Installing PADS4 Viewer**  
+
+Follow the steps below to install and configure **PADS4 Viewer on the IAdea WRP-1000**.  
+
+---
+
+### **2.1 Installing PADS4IAdea from USB Stick**  
+
+The **PADS4IAdea.apk** file is available on the **PADS4 Server** at:  
+```  
+https://[yourPADS4Server]/[domain]/apps  
+```  
+Alternatively, download the latest version from **[here](#)** and place it in the **PADS4 Server apps directory**.  
+
+#### **Installation Steps**  
+
+<Steps>  
+  <Step title="Step One">  
+    Copy the **PADS4IAdea.apk** onto a **USB stick**.  
+  </Step>  
+  <Step title="Step Two">  
+    Insert the **USB stick** into the **IAdea WRP-1000** device.  
+  </Step>  
+  <Step title="Step Three">  
+    Open **IAdea Basic Settings**.  
+  </Step>  
+  <Step title="Step Four">  
+    Click on **Advanced**.  
+  </Step>  
+  <Step title="Step Five">  
+    Click **three times** in the **lower right corner** of the **Advanced menu** to access Android.  
+  </Step>  
+  <Step title="Step Six">  
+    The **Android Home Screen** will now be visible.  
+  </Step>  
+  <Step title="Step Seven">  
+    Open the **Files app**.  
+  </Step>  
+  <Step title="Step Eight">  
+    Select **USB Disk** and click on **PADS4IAdea.apk**.  
+  </Step>  
+  <Step title="Step Nine">  
+    Click **CONTINUE** in the confirmation dialog.  
+  </Step>  
+  <Step title="Step Ten">  
+    Click **INSTALL** when prompted.  
+  </Step>  
+  <Step title="Step Eleven">  
+    Once installed, click **DONE**.  
+  </Step>  
+</Steps>  
+
+---
+
+## **3. Configuring PADS4 Viewer**  
+
+### **3.1 Setting Automatic Start**  
+
+<Steps>  
+  <Step title="Step One">  
+    Open **IAdea Basic Settings**.  
+  </Step>  
+  <Step title="Step Two">  
+    Click on **Advanced**.  
+  </Step>  
+  <Step title="Step Three">  
+    Select **Content → AppStart**.  
+  </Step>  
+  <Step title="Step Four">  
+    Click **(+)Advanced**.  
+  </Step>  
+  <Step title="Step Five">  
+    In **Package Name**, enter:  
+    ```  
+    com.pads4.viewer.iadea  
+    ```  
+  </Step>  
+  <Step title="Step Six">  
+    Click **Set** to save the setting.  
+  </Step>  
+</Steps>  
+
+---
+
+### **3.2 Connecting to PADS4 Server**  
+
+**PADS4 Server Address Format:**  
+```  
+protocol://host:port/hostpath/  
+```  
+- **Protocol:** `http` or `https` (depends on SSL certificate).  
+- **Host:** DNS name or **IP address** of **PADS4 Server**.  
+- **Port:** *(Optional - specify only if using non-default ports).*  
+- **Host Path:** Configured in **System Management** *(default: `PADS4`)*.  
+
+#### **Connection Steps**  
+
+<Steps>  
+  <Step title="Step One">  
+    Enter the **PADS4 Server Location**.  
+  </Step>  
+  <Step title="Step Two - *Optional*">  
+    Specify a **Viewer Name** (if left blank, PADS4 will generate one).  
+  </Step>  
+  <Step title="Step Three">  
+    Press **Start**.  
+  </Step>  
+  <Step title="Step Four">  
+    Grant **permission to access media and files** when prompted.  
+  </Step>  
+  <Step title="Step Five">  
+    The **PADS4 Viewer** will be **downloaded and installed**.  
+  </Step>  
+</Steps>  
+
+---
+
+## **4. Updating PADS4 Viewer**  
+
+The **PADS4 Viewer** will **automatically update** when the **PADS4 Server** is updated.  
+
+---
+
+## **5. Supported Features & Capabilities**  
+
+| Feature | Description |  
+|:------:|------------|  
+| ✅ | **Automatic Software Updates** – Updates when the **PADS4 Server** updates. |  
+| ✅ | **Offline Mode** – The device continues running presentations for **7 days** while offline. |  
+| ✅ | **HTTP & HTTPS Support** |  
+| ✅ | **Streaming Video** – HTTPS & HLS supported. |  
+| ✅ | **Maximum 2 FHD Videos Simultaneously** |  
+| ✅ | **PowerPoint & PDF Elements** – *(PowerPoint requires installation on PADS4 Server)*. |  
+| ✅ | **Device Management** – Remote control via **PADS4 CTRL Center & PADS4 Agent**. |  
+| ✅ | **Reboot & Restart Viewer** – Supported. |  
+| ❌ | **Wake-on-LAN** – Not supported. |  
+| ✅ | **Proof of Play Tracking** – Monitors content playback history. |  

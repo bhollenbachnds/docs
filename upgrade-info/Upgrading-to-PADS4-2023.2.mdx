@@ -1,0 +1,24 @@
+If you want to upgrade to PADS4 2023.2 your current PADS4 version needs to be at least PADS4 2022.3. That means that you will need to have PADS4 2022.3 installed & running before updating to 2023.2.
+
+Any version before 2022.2 and lower will not automatically update to 2023.2, and you will need to perform an intermediate upgrade first to PADS4 2022.3.
+
+ 
+Release notes for PADS4 Version 2023.2 can be found here.
+
+ 
+
+### HSTS
+
+With this new release, we have implemented a new security feature with the PADS4 configuration wizard called HSTS.
+
+
+<img
+  className="block"
+  src="/images/hsts.png"
+  alt="HSTS"
+/>
+
+
+The HSTS toggle will enable HTTP Strict Transport Security header on all http requests. This header will instruct smart devices (PADS4 HTML5 Viewers, PADS4 CTRL Center, PADS4 CMS (legacy)) to use the HTTPS protocol instead of HTTP. For example, if you connect to http://pads4server.com/, all connections on that web app will be upgraded to HTTPS.
+
+<Warning>Important: You need to have HTTPS enabled and have a valid certificate. If the certificate is not valid, any connection from HTTP or HTTPS will not work. This means that PADS4 devices on HTTP will no longer connect to the server and the connection will be lost. Make sure to always check if your certificate is valid and working on HTTPS, before enabling HSTS.</Warning>

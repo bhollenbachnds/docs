@@ -1,0 +1,33 @@
+# Changes in Synchronization with PADS4 Version 2021.3
+
+With the introduction of **PADS4 version 2021.3**, the **synchronization mechanism** between PADS4 Servers has been updated. This change may impact existing installations where **PADS4 Sub and/or Backup Servers** are in use.  
+
+---
+
+## New Replication Mechanism in PADS4 Version 2021.3
+
+In previous versions of PADS4, replication followed a **one-way connection model**, where the **Sub/Backup Server** initiated a connection to the **Main Server** for synchronization.  
+
+Starting from **PADS4 version 2021.3**, the replication process has been enhanced. The **Main Server** and **Sub/Backup Servers** can now both **initiate** the connection, enabling a more **flexible and resilient** synchronization process.  
+
+This update introduces a key **networking requirement**:  
+- A **host port** must be **opened** in the firewall for communication between servers.  
+- Both **Main Servers** and **Sub/Backup Servers** must be able to establish a **bidirectional connection** for replication to function correctly.  
+
+---
+
+## Firewall Configuration Requirements
+
+From **PADS4 version 2021.3**, replication between servers **requires** that:  
+- The **Main Server** must be able to initiate a connection with the **Sub/Backup Server**.  
+- The **Sub/Backup Server** must be able to initiate a connection with the **Main Server**.  
+- The appropriate **host ports** must be **opened in the firewall** to allow traffic in both directions.  
+
+This differs from previous versions, where only the **Sub/Backup Server** was responsible for initiating the connection to the **Main Server**.  
+
+---
+
+## **Important Note**  
+<Note>**A full-duplex network connection is required between the Main Server and the Sub/Backup Servers.** Both servers must be able to establish a direct connection with each other for proper replication and synchronization.</Note>
+
+This new replication method ensures a **more robust and efficient** synchronization process, reducing potential disruptions in digital signage operations.  

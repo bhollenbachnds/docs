@@ -1,0 +1,37 @@
+The intent of this document is to outline the hardware requirements for PADS4. Additional performance gestures are also provided for a better experience. NDS assumes no responsibility or liability for any errors or omissions in the content of this document. The information contained in this document is provided on an “as is” basis with no guarantees of completeness, accuracy, usefulness or timeliness.
+
+## PADS4 Platform requirements
+Be aware that hardware requirements depend on the purpose of the system. Situations where static information is shown require less resources than full multimedia solutions.
+
+| Viewer quantity | CPU | Memory (static) | Application storage | Content storage (client dependent) | OS | Data server max. quantity |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| 1 - 100 | 4 cores | 16Gb| 2Gb | 16Gb | Windows Server 2016, 64bit and above | 25|
+| 100 - 500 | 8 cores | 16Gb | 2Gb | 64Gb | Windows Server 2016, 64bit and above | 25 |
+| 500 | 8 cores | 24Gb | 2Gb | 64Gb | Windows Server 2016, 64bit and above | 100 |
+| 1000* | 16 cores | 32Gb | 2Gb | 256Gb | Windows Server 2016, 64bit and above | 200 |
+
+**For PADS4 Systems with more than 1000 Viewers, it is strongly advisable to consider the use of Backup and Sub-Servers. For assistance with this, please reach out to our Solutions team at support@pads4.com*
+
+## General performance tips
+These are required for the proper running and configuration of your respective PADS4 environment.
+
+| Component | Description | 
+| ----------- | ----------- |
+| Disk | Synchronisation of content is one of the processes that has a big performance impact on the server. Usage of Solid State Disks (SSD) significantly improves server performance. |
+| Virus scanners | Be aware that virus scanners can have a big impact on the performance related to synchronization of content and processes. |
+| Virtual Server | When using a virtual network, make sure you use a static Mac address. A dynamic MAC address will negatively impact the PADS4 License mechanism during a PADS4 Server restart which may result in a required reactivation. |
+| Network | Best performance will be reached when the network is stable, 100Mbps or faster, 1Gbit network preferred |
+| Content storage space	| Content storage size depends on customer's requirement and will have impact on bandwidth used. Usage of SSD storage devices can increase performance dramatically for both server and Viewer. |
+| Content | Please convert 4K Videos and 4K images which are shown on Full HD displays back to the specs of the displays to improve performance on both network and visualization. |
+| Content permissions | Use content permissions to limit the synchronization of content send to certain Viewer groups and/or User groups. This prevents content from being synched with devices which will never show the content. |
+| Data Server | Try to limit the amount of data retrieved using data providers for both memory usage and performance drops. Only retrieve the information from the data source that is going to be used to prevent high bandwidth usage. Limit the number of rows, or the columns used to only get what is used by the presentation. Do not specify small Data Provider read intervals when the data is not updated realtime. Prevent small read intervals that will increase cpu usage when there is no need to read the information continuously. |
+
+## PADS4 Viewer hardware requirements
+Below table are the specifications for the PADS4 viewers and viewer types.
+
+| Viewer type | CPU | RAM | Application storage | Content storage | OS | Data providers |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Windows Viewer - (minimum specs) | 2 cores | 2Gb | 2Gb | 16Gb | Windows 10 64bit | 25
+| Windows Viewer (recommended specs) | 4 cores | 4Gb | 2Gb | 128Gb | Windows 10 64bit |50 |
+| Windows Viewer (full multimedia specs) | 4 cores | 4Gb | 2Gb | 128Gb | Windows 10 64bit |50 |
+| Android Viewer (recommended specs)| NA | 4Gb | 1Gb | 4Gb |Android | NA |
