@@ -125,6 +125,18 @@
         ]
       },
       {
+        "dropdown": "PADS4 Ctrl Center",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "ctrl-centre/introduction",
+              "ctrl-centre/dashboard"
+            ]
+          }
+        ]
+      },
+      {
         "dropdown": "Digital Signage",
         "groups": [
           {
@@ -248,26 +260,7 @@
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
     "light": "/logo/PADS4.png",
