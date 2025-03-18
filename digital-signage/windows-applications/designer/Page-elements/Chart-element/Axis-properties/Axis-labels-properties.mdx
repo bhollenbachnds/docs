@@ -1,0 +1,37 @@
+
+These properties define how **labels** are displayed along the **X-axis, Y-axis, and Z-axis** of a chart element. Labels help users understand what each axis represents and can be fully customized for visual clarity and data accuracy.
+
+---
+
+## **Labels Settings**
+
+| **Property**                | **Description**                                                                                                 |
+|----------------------------|----------------------------------------------------------------------------------------------------------------|
+| **Font**                    | Specifies the font and style of axis labels. Click the button next to the font field to open the font dialog.  |
+| **Color**                   | Sets the color of the axis labels for better contrast and readability.                                         |
+| **Automatic Label Mode**    | Automatically determines the number of labels that will fit on the axis and adjusts placement dynamically.     |
+| **Manual Label Mode**       | Manually set the number and positioning of labels for precise control.                                          |
+| **Angle**                   | Sets the rotation angle (in degrees) of the labels relative to the axis. Useful for fitting long text.          |
+| **Interval**                | Defines the space (in pixels) between consecutive labels when in manual mode.                                   |
+| **Areas**                   | When enabled, includes labels for the axis minimum and maximum values.                                          |
+| **Axis Minimum Value**      | Specifies the minimum value of the axis to which a label should be assigned.                                    |
+| **Axis Maximum Value**      | Specifies the maximum value of the axis to which a label should be assigned.                                    |
+
+---
+
+## **Data Provider Integration**
+
+| **Property**                        | **Description**                                                                                                                |
+|-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| **Show Data Provider Content on Axis** | Enables or disables the use of a data provider to supply the labels dynamically.                                               |
+| **Data Provider**                    | Select a data provider that represents a connection to a data source (e.g., database, XML, RSS).                               |
+| **Column**                           | Choose the column within the selected data provider that contains the label values.                                            |
+
+> **Note**: Data providers are defined at the **presentation level** and are available for use across all elements in your presentation. You can create a new data provider directly from this window using the adjacent button. Refer to **Working with Data Providers** for more details.
+
+---
+
+## **Remarks**
+- All properties described above for the **X-axis** are equally applicable to the **Y-axis and Z-axis**.
+- When using **Automatic Label Mode**, the system ensures labels are legible and well-spaced, adjusting automatically based on available space.
+- **Manual Label Mode** is ideal when precise control over label positions is necessary, such as for fixed intervals or predefined categories.

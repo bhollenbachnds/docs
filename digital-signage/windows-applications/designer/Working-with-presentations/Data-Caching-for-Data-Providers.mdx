@@ -1,0 +1,87 @@
+
+PADS4 Designer includes **data caching** functionality for data providers, making it easier and faster to design data-driven presentations — even when the data source is slow or temporarily unavailable.
+
+---
+
+## **Purpose of Data Caching**
+
+- **Speed up design time** when data providers are slow to load.
+- **Allow offline design work** when the data source cannot be reached (e.g., external teams or remote locations).
+- Enable **sharing presentations** with cached data so others can design and test without needing direct access to the data source.
+
+---
+
+## **Enabling Data Caching for a Data Provider**
+
+1. **Open** your data provider settings in PADS4 Designer.
+2. On the **first page of the data provider configuration**, locate the option **"Use Design Cache"**.
+3. **Enable** this option to activate caching.
+4. Optionally, **limit the number of rows** (up to 999 rows) to control cache size.
+5. If you **do not want to store original data** in cache, you can enable **"Generate sample values"** to let PADS4 create artificial sample data for design purposes.
+
+> **Note:** Sample values will follow the format: `Value_<row number>`
+
+---
+
+## **Benefits of Using Design Cache**
+
+- **Faster** graphic design experience, especially with slow-loading data sources.
+- **Offline capability** for designers who don't have access to the original data source.
+- Ability to **share presentations with preloaded data**, enabling third parties to work on layout and design without needing data access.
+- Immediate **page rendering on load** without waiting for live data.
+
+---
+
+## **Cached Data & Refresh Behavior**
+
+- **Cached data is static** until refreshed.
+- PADS4 Designer **does not automatically update cached data** — it shows what was stored at the time of caching.
+- To **update** the data, you need to manually refresh the cache from the data provider.
+
+---
+
+## **Preview Mode and Caching**
+
+- While previewing a presentation in PADS4 Designer, you can choose whether to **use cached data or live data**.
+- **Ribbon bar** contains a toggle to **enable/disable data cache** during preview:
+  - **Enabled:** Faster loading using cached data.
+  - **Disabled:** Direct live data retrieval for real-time preview.
+
+---
+
+## **Behavior on Presentation Load**
+
+- If caching is enabled, **cached data is used first** to quickly display the presentation.
+- Meanwhile, **PADS4 will attempt to load fresh data in the background**.
+- **New data will replace cached data** when retrieved — this update happens **once during load**.
+- Further updates require **manual refresh** of the data.
+
+---
+
+## **Sharing Presentations with Cached Data**
+
+- **Design presentations with data providers and cache enabled**.
+- Share the `.padsx` file with third parties.
+- Recipients can **open and design using cached data** — even if they **don't have access to the live data source**.
+- Cached data enables full use of **data connections, rules, and layout testing**.
+
+---
+
+## **Important Notes**
+
+- **Caching is for design time only.**  
+- **PADS4 Viewers do NOT use cached data.** They always fetch **live data** at runtime.
+
+---
+
+## **Summary of Key Points**
+
+| **Feature**                               | **Behavior/Benefit**                                              |
+|------------------------------------------|------------------------------------------------------------------|
+| **Use Design Cache**                      | Store data locally for fast access and offline design            |
+| **Sample Values**                         | Use generated placeholder data to avoid storing real data        |
+| **Preview Mode Cache Toggle**              | Switch between cached and live data for faster preview           |
+| **Automatic Data Refresh**                 | Cached data loads first, background refresh happens once         |
+| **Sharing with Third Parties**             | Cached data allows others to design without accessing live data  |
+| **Viewer Behavior**                        | **Viewers do not use cached data**; they require live connections |
+

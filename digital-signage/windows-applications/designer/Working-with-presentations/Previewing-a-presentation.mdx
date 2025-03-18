@@ -1,0 +1,88 @@
+
+The **PADS4 Designer application** allows you to **preview presentations** to see exactly how they will look and behave when played in the **PADS4 Viewer application**. This helps verify the layout, content, data connections, and interactivity before publishing.
+
+---
+
+## **How to Start a Preview**
+
+### **Preview the Entire Presentation**
+1. **Click** on the **View** tab in the ribbon bar.
+2. In the **Preview section**, click **Presentation**.
+3. The **Presentation Preview window** will open and **automatically start the presentation**.
+
+**Tip:**  
+- Quickly start a preview by pressing **F2**.
+- Press **F12** during preview for **web element debugging** (when using Chromium browser engine).
+
+---
+
+### **Preview a Specific Page**
+1. Navigate to the page you want to preview using the **Go To** section in the **View** menu.
+2. Follow the steps above to start the presentation preview.
+3. Alternatively, inside the **Presentation Preview window**:
+   - Use the **Page selector dropdown** to pick a starting page.
+   - Click **Start** to begin the preview from that page.
+
+---
+
+## **Presentation Preview Window Overview**
+
+### **Presentation Group**
+- **Close**: Closes the preview window.
+- **Start**: Starts the preview from the selected page.
+- **Stop**: Stops the running presentation.
+- **Page & Total**: Shows the **current page number**, **time on current page**, and **total running time**.
+
+---
+
+### **Zoom Group**
+- **Stretch/Zoom Options**: Adjust the zoom level to fit the preview window.  
+  Note: Some content like **web elements** may not scale perfectly.
+
+---
+
+### **Options Group**
+- **Viewer Name**: Enter an existing Viewer name to **simulate** how that specific Viewer would run the presentation. Useful for testing **Viewer Variables** like `#ViewerName#`.
+- **Page**: Select the starting page for the preview.
+- **Viewer Type**: Choose a Viewer Type to **simulate** and remove elements **not supported** by that Viewer Type.
+
+---
+
+### **Data Source Group**
+(These can only be adjusted **before** starting the preview)
+
+- **Use Data Cache**:  
+  - Uses **cached data** for a faster preview.  
+  - Avoids time-consuming data provider calls.  
+  - Essential for working offline or designing with slow/remote data sources.  
+  - Learn more: **Data Caching in PADS4 Designer**.
+  
+- **Use Backup**:  
+  - Forces PADS4 to use **backup Data Providers** (if defined), allowing simulation of fallback scenarios.
+
+---
+
+### **Show Group**
+- **Viewer Variables**: Opens a window listing **all Viewer Variables** for this preview session. See **Viewer Variables** page for more details.
+- **Data Preview**: Displays all connected **Data Providers** and their **retrieved data** for this presentation.
+- **Log Information**:  
+  - Shows logs with **errors/warnings** during preview.
+  - Automatically updates in real-time.
+  - Button turns **red** if any issue is detected.
+  - View the last 4 log messages directly.
+
+---
+
+## **Important Notes**
+- **Hidden pages** can still be forced into view for preview if chosen as the starting page.
+- If using **web elements** with **interactivity enabled**, press **F12** to open the **Chromium browser debug tools**.  
+  (Note: This is not supported for Internet Explorer engine).
+
+---
+
+## **Summary of Shortcut Keys**
+| Action                                    | Shortcut Key |
+|-------------------------------------------|--------------|
+| Start full presentation preview           | F2           |
+| Open Chromium web debugger (for web elem) | F12          |
+

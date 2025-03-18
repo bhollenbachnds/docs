@@ -1,0 +1,41 @@
+
+By defining **property bindings**, you can link specific properties of an element directly to an **external data source**. Once bound, the element's property will **automatically update** in real-time when the value in the data source changes.
+
+For example, if you bind the **Visible** property of an element to a value in an XML file, the element will automatically show or hide as that value changes.
+
+---
+
+### **Property Bindings Overview**
+
+The **Property Bindings** section lists all element properties that can be dynamically bound to a data source. To set up a binding, you must specify **at least** the following:
+
+- **Data Provider** (the external source)
+- **Column** (the specific data field)
+- **Row** (the data record)
+
+---
+
+### **Fields and Definitions**
+
+| **Field**            | **Description**                                                                                   |
+|---------------------|--------------------------------------------------------------------------------------------------|
+| **Property**         | The element property to be bound (system-defined and cannot be changed).                         |
+| **Type**             | The data type of the property to be bound (system-defined and cannot be changed).                 |
+| **Data Provider**    | The data provider representing the external data source to bind (must be added beforehand).      |
+| **Column**           | The data field (column) of the data source to bind.                                               |
+| **Row**              | The specific record (row) of the data source to bind.                                             |
+| **Scroll**           | Enable this to apply data scrolling if desired. If switched on, **data scrolling properties** will apply to the binding. |
+
+---
+
+### **Important Notes and Limitations:**
+
+- **Property binding options vary depending on the type of element.** Not all properties can be bound for every element type.
+- **Limitation on playlist duration scrolling:** Property bindings **do not** detect or follow scrolling based on **local playlist duration**. This type of scrolling is element-specific and cannot synchronize with property bindings.
+- **Limitation inside Table Elements:** When an element is placed inside a **Table Element**, data refreshes occur in sync with the **Table's refresh cycle**, not independently.
+
+---
+
+### **Tip:**
+
+For more information on how to write proper binding values, refer to the **[Property Bindings Values](#)** page that details the exact formats and notation for binding values (e.g., booleans, colors, sizes).

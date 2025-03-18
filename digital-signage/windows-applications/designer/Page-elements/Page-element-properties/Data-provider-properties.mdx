@@ -1,0 +1,50 @@
+
+Elements can be connected to an **external data source** (such as a SQL Server database, Microsoft Excel file, or RSS feed) to display **real-time data**. These properties define how the element connects to that data source, and which **column** and **row** are used for the content.
+
+---
+
+### Data Provider Info
+
+- **No external data connection**  
+  The element is **not connected** to a data source. It will display **fixed content** as specified directly in the element settings.
+
+- **External data from the following data source**  
+  The element is connected to a **data provider**, and specific **column** and **row** are used to deliver real-time content.
+
+---
+
+### Data Provider Components
+
+- **Data Provider**  
+  Represents a connection to a **data source**.  
+  Examples:  
+  - Table, query, or stored procedure (SQL databases)  
+  - XML file  
+  - RSS feed  
+  - Any other external source  
+  **Note**: Data providers are defined at **presentation level** and are available to all elements. You can create a new data provider by clicking the button in the drop-down box.  
+  *(See "Working with data providers" for more details.)*
+
+- **Column**  
+  The **field/column** from the data provider that delivers the content to your element.
+
+- **Content Type**  
+  Defines **how the data** should be interpreted by the element (e.g., as text, image path, number).
+
+- **Row**  
+  The **record/row** of the data provider that supplies the content for the element.
+
+---
+
+### Remarks
+
+- **Applicability**: Not all properties are applicable to every element. Some elements (like text elements) expect **text content**, while others (like image elements) expect **file paths to images**.
+- **Dynamic Content**:  
+  - When connected to a data provider, **manual content settings** of the element are **disabled**.
+  - The element content is always controlled by **real-time data** from the data source.
+- **Row Limitation**:  
+  If the data source has fewer rows than specified in the **Row** property, **no content** will be displayed.
+- **Data Scrolling**:  
+  When **data scrolling** is enabled, the **Row** property combined with the **Scroll step** property controls the scroll behavior.
+- **Playlists**:  
+  Most elements support **playlists**. If the database field returns a playlist (multiple items), the system will automatically cycle through them.

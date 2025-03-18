@@ -1,0 +1,47 @@
+
+These properties define the **Flash content** that will be played by your Flash player element. You can add **a single Flash file** or create a **play list of multiple Flash files** that will be played in sequence.
+
+### **Managing Play List Items**
+- **Add** new Flash items to the play list.
+- **Edit** existing play list items.
+- **Reorder** items using sequence adjustment tools.
+- **Remove** items from the list if needed.
+- Use **navigation buttons** (at the bottom of the dialog) to move through play list items.
+- The **total duration** shows the combined playback time of all listed items.
+- Play list item properties depend on the type of content in your element.
+
+> **IMPORTANT**:  
+> For detailed information about managing play lists, see **Working with play lists**.
+
+---
+
+### **Flash Play List Item Properties**
+
+#### **Type**  
+Defines the **source** of the Flash file. Options include:
+
+| Option                     | Description                                                                                                                                                             |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Flash from Content Library** | Reference to a Flash file stored in the **PADS4 content library** (recommended). Automatically synchronized across all PADS4 systems. References are **relative** and remain valid even if the library is moved. |
+| **Flash from File**            | Reference to a Flash file stored **outside the content library**. **Not synchronized**—you must manage distribution yourself. References are **absolute** and must be valid on playback PCs.                 |
+| **No Flash**                  | No Flash file included. Used to create a **pause** in the play list.                                                                                                    |
+
+---
+
+#### **Content**  
+Specifies the **Flash file path**, depending on the selected **Type**.  
+- Use the **browse button** to select files from the **Content Library** or local file system.  
+- If **Flash from File** is selected, provide the **full file path**.
+
+---
+
+#### **Duration**  
+Sets the **duration (in seconds)** for which the Flash content will be displayed.  
+- If **No Flash** is selected, this defines the length of the pause.
+
+---
+
+### **Remarks**
+- Only **references** to Flash files are stored in your presentation, **not the actual files**.  
+- If the Flash file is updated, the **latest version** will be used during playback.
+- **Play list properties are disabled** when the element is connected to a **data provider** — in that case, content is dynamically determined by real-time data.

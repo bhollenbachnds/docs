@@ -1,0 +1,30 @@
+
+These properties define **if and when** the external application launched by the element should be **automatically stopped**.
+
+---
+
+### **Stop Application Options**
+
+| Option                                      | Description                                                                                   |
+|---------------------------------------------|-----------------------------------------------------------------------------------------------|
+| **When switching to another page**          | Automatically stop the external application **when moving to the next page** in the presentation. |
+| **When closing the presentation**           | Automatically stop the external application **when the presentation ends**.                      |
+| **Never stop this application**             | The application **will not** be stopped automatically. This is only recommended when combined with **"Do not start this application when already running"** to avoid restarting it repeatedly. |
+
+---
+
+### **Remarks & Important Notes**
+
+- **Stopping Mechanism**:  
+  PADS4 will **kill** the running process of the external application to stop it.  
+  However, **any child processes** or additional processes **started by that application will NOT be stopped automatically**. You will need to stop those manually if required.
+  
+- **System Performance Warning**:  
+  >  **Important**: **Always ensure** that external applications are stopped properly.  
+  Failure to do so can cause **memory leaks**, performance degradation, or **system instability** over time.
+
+- **Recommended Usage**:  
+  - If you set **"Never stop this application"**, ensure that:
+    - The app is properly managed elsewhere.
+    - You are also using **"Do not start this application when already running"** to avoid multiple instances.
+

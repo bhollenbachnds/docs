@@ -1,0 +1,43 @@
+
+These properties define the **text displayed** on the surface of an interactive button.  
+
+---
+
+### **Content (Text)**  
+
+You can choose **two options** to define the button text:  
+
+| **Option** | **Description** |
+|------------|-----------------|
+| **Manual Text** | Enter a **fixed/static text** that will always be shown on the button. |
+| **External data from the following data source** | Connect the button text to **real-time data** from a data provider. The text will automatically update based on the data source content. |
+
+---
+
+### **Data Provider**  
+
+- A **data provider** is a connection to an external data source, such as:  
+  - Database tables, queries, stored procedures.  
+  - XML files, RSS feeds, and other data formats.  
+
+- Data providers are defined at **presentation level**, making them available to all elements within your presentation.  
+
+- You can create a new data provider directly by clicking the **button next to the dropdown box**.  
+  *(See "Working with Data Providers" for detailed guidance.)*  
+
+---
+
+### **Fields to Define for External Data Source**  
+
+| **Field** | **Description** |
+|-----------|-----------------|
+| **Column** | The specific column in the data source that contains the text to display. |
+| **Content Type** | Determines **how** the content from the data source should be interpreted (e.g., plain text, formatted). |
+| **Row** | The specific row in the data source to pull the text from. |
+
+---
+
+### **Remarks**  
+
+- If the **data provider delivers fewer rows** than specified in the **Row property**, **no content** will be shown on the button.  
+- This dynamic setup allows the button to **update its label automatically** based on real-time data, enhancing interactivity and responsiveness.  

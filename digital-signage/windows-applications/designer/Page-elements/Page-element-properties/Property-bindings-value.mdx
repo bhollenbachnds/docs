@@ -1,0 +1,38 @@
+
+Property bindings allow you to dynamically **link element properties to values from a Data Provider**. Below is a list of supported properties and their expected value types and formats.
+
+---
+
+### **Property Name, Type, and Possible Values**
+
+| **Property Name**        | **Type**   | **Possible Values**                                                                                      |
+|-------------------------|------------|--------------------------------------------------------------------------------------------------------|
+| **Visible**              | Boolean    | `true` (or `t`, `1`, `-1`, `yes`), `false` (or `f`, `0`, `no`)                                           |
+| **Left**                 | Integer    | Numeric value (positive or negative)                                                                    |
+| **Top**                  | Integer    | Numeric value (positive or negative)                                                                    |
+| **Width**                | Integer    | Numeric value (greater than or equal to 0)                                                              |
+| **Height**               | Integer    | Numeric value (greater than or equal to 0)                                                              |
+| **Background Color**     | Color      | `#FF00FF` (hex RGB), `#AAFF00FF` (hex ARGB), `12002010` (System.Drawing.Color value), `red` (named color)|
+| **Foreground Color**     | Color      | Same formats as Background Color                                                                        |
+| **Font Name**            | String     | Font name, e.g., `Arial`, `Courier`                                                                     |
+| **Font Bold**            | Boolean    | `true` (or `t`, `1`, `-1`, `yes`), `false` (or `f`, `0`, `no`)                                           |
+| **Font Size**            | Integer    | Numeric value (greater than or equal to 1)                                                              |
+| **Angle**                | Integer    | Numeric value (0 to 359 degrees)                                                                        |
+| **Volume Level**         | Integer    | Numeric value (0 to 100)                                                                                |
+| **Fill Color**           | Color      | Same formats as Background Color                                                                        |
+| **Right to Left**        | Boolean    | `true` (or `t`, `1`, `-1`, `yes`), `false` (or `f`, `0`, `no`)                                           |
+
+---
+
+### **Notes:**
+
+- **Boolean values** can be expressed in multiple ways for flexibility (e.g., `true`, `yes`, `1`).
+- **Color values** accept a variety of formats:
+  - Hexadecimal RGB (e.g., `#FF00FF`)
+  - Hexadecimal ARGB (e.g., `#AAFF00FF`)
+  - Integer value representing system color (e.g., `12002010`)
+  - Named system color (e.g., `red`)
+- **Font names** should correspond to fonts available on the system.
+- **Volume Level** ranges from `0` (mute) to `100` (max volume).
+- **Angle** specifies rotation in degrees.
+

@@ -1,0 +1,126 @@
+## **Introduction**
+PADS4 Designer is the application used to create and manage presentations for your PADS4 system. This guide explains how to start PADS4 Designer, connect it to your PADS4 Server, manage connections, and handle potential issues like hardware changes.
+
+---
+
+## **Starting PADS4 Designer**
+
+You can start **PADS4 Designer** in several ways:
+
+### **Option 1: From Windows Start Menu**
+- Click the **Start** button on your Windows taskbar.
+- Navigate to **Programs** > **PADS4**.
+- Select **Designer**.
+
+### **Option 2: From Windows Explorer (Program Files)**
+- Go to the folder where PADS4 Designer is installed.
+- Double-click `PADSDesigner.exe`.
+
+### **Option 3: Open a Presentation File**
+- Locate a `.padsx` presentation file.
+- Double-click to open it in PADS4 Designer.
+- If Designer is running, the file will open in a new tab. Otherwise, it will launch Designer and open the file.
+
+---
+
+## **Connecting to Your PADS4 Server**
+
+### **First-Time Connection**
+1. Start PADS4 Designer.
+2. If no connection is set up, a message will prompt you to configure one. Click **OK**.
+3. In the **PADS4 Server Connection** window, click **Add**.
+4. Fill out the connection properties (see Managing Connections below).
+5. Click **Connect** to establish the connection.
+6. If required, enter **Username** and **Password**, and click **Log On**.
+
+> **Note**: Even with automatic connection enabled, the first connection must be manual.
+
+### **Subsequent Connections**
+- If auto-connect is enabled, PADS4 Designer will connect automatically on startup.
+- If not, go to the **Home tab** in the ribbon, click the **Connect** button, and select a connection.
+- To disconnect, click **Disconnect** on the Home tab.
+- To reconnect, click **Connect** again.
+
+---
+
+## **Working Offline**
+If you are unable to connect but have connected successfully in the past:
+- Click **Work Offline** in the **PADS4 Server Connections** window.
+- You can continue working for up to **7 days** before reconnection is required.
+- Changes made offline will sync automatically when reconnected.
+
+> **Note**: Offline mode stores changes locally until synchronization.
+
+---
+
+## **Managing Connections**
+
+### **Viewing Connections**
+- Go to **Home tab > Manage (Connections)**.
+- This opens the **PADS4 Server Connections** window showing all defined connections.
+
+### **Adding a New Connection**
+1. Click **Add**.
+2. On the **Connection tab**, fill in:
+   - **Connection Name**: Unique identifier.
+   - **Automatic Connection**: Whether to auto-connect on startup.
+   - **Server Connection**: Choose from:
+     - **Automatic**: Detects server (requires UDP 3702 open and server running).
+     - **This Computer**: For local installations.
+     - **Other**: Manually specify the server's IP, DNS name, or hostname.
+3. Optional **HTTP Settings** for manual host path/port adjustments.
+4. On **Credentials tab**, specify **Username** and **Password**, and **Automatic Login** if desired.
+5. **Synchronization tab**: Set synchronization mode (Automatic, Manual, None), content storage folder, and domain if applicable.
+6. Click **OK** to save.
+
+### **Editing a Connection**
+- Ensure the connection is disconnected.
+- Select the connection and click **Edit**.
+- Make changes and click **OK**.
+
+### **Deleting a Connection**
+- Select the connection and click **Remove**.
+
+> **Tip**: Managing multiple connections is useful for agencies supporting different clients.
+
+---
+
+## **Graceful Degradation and Hardware Changes**
+
+### **Grace Period**
+- If hardware changes are detected, PADS4 allows a **7-day grace period** to reactivate the system.
+- During this period, a message will appear upon login prompting reactivation.
+
+### **Reactivation Process**
+1. Contact your reseller with your **PADS4 product key**.
+2. Reseller will coordinate with **Net Display Systems (NDS)** for approval.
+3. After approval, use **License Wizard** on the PADS4 Server:
+   - Select **Reactivate current installation**.
+   - System will connect to NDS and reset hardware changes.
+4. If no internet is available, use **offline activation** via License Wizard.
+
+> **Important**: Reactivate before the grace period ends, or PADS4 will stop functioning.
+
+### **Hardware Detection Parameters**
+PADS4 monitors:
+- Operating System
+- Processor ID
+- OS Install Date and Serial Number
+- BIOS Serial Number and Version
+- Network Adapter and MAC Address
+- Windows Activation Code
+
+### **Preventing Issues on Virtual Servers**
+- Ensure **MAC address is fixed**.
+- Avoid **Bluetooth device sharing** to prevent virtual adapter changes.
+
+---
+
+## **Quick Tips**
+- Use **Alerts via PADS4 Agent** to notify admins when hardware changes are detected.
+- Regularly verify connection settings, especially after network or server changes.
+- Store **PADS4 product keys and connection credentials** securely.
+
+---
+
+Let me know if you want this content formatted into a downloadable document!

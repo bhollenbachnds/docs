@@ -1,0 +1,27 @@
+
+The **Data Scrolling Properties** define how **real-time data** is scrolled within a page during playback.
+
+---
+
+## **General Data Scrolling**
+
+### **Interval**
+- Specifies the **time interval (in seconds)** used to scroll through data for all page elements that have **Data Scrolling** enabled.
+- This interval controls **how fast** new data rows are shown in elements like tables, lists, or tickers.
+
+---
+
+### **Hold Scroll Positions after Page Change**
+- **When enabled**, the **current row position** of all data providers on the page will be **remembered** during playback when switching to another page.
+- When returning to this page, scrolling will **continue from where it left off**, instead of starting over from the first row.
+- For example:
+  - If the page was showing **row 4** when it switched away, on returning it will continue with **row 5**.
+
+> **Tip**: This is **especially useful for play lists of advertisements or long data lists**, ensuring that content plays **sequentially** across loops, rather than repeating from the start each time the page appears.
+
+---
+
+### **Example Use Case**
+- You are displaying a rotating list of ads, and you want to ensure that **each ad is shown** without restarting the list when returning to that page. 
+- By holding the scroll position, **the next ad in sequence** will play when the page is shown again.
+

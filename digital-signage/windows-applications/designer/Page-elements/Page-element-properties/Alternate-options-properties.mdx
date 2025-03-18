@@ -1,0 +1,58 @@
+
+These properties control how an element switches between items in its playlist during playback.
+
+### Play Entire Play List
+
+- **If disabled**:  
+  Only the **first playlist item** will be played.  
+
+- **If enabled**:  
+  All items in the playlist will be played based on one of the following methods:  
+
+#### Playback Methods (when "Play Entire Play List" is enabled)
+
+1. **Play using Play List Durations**:  
+   Each playlist item will play for the duration **defined within the playlist** itself.
+
+2. **Play using Page Alternate Interval**:  
+   All playlist items will play for the **same fixed duration**, as specified in the **Alternate Interval** of the Page Properties.  
+
+   **Important Note**:  
+   - When this option is used, **multiple elements** using it will **synchronize** their playlist switching.  
+   - If elements have a different number of playlist items, the system will calculate which item should display at each time point, so they remain aligned.  
+
+---
+
+### Example of Synchronization
+
+Consider **two elements** with different playlist lengths:  
+
+| **Element 1 (4 items)** | **Element 2 (2 items)** |
+|------------------------|------------------------|
+| Playlist item 1         | Playlist item 1         |
+| Playlist item 2         | Playlist item 2         |
+| Playlist item 3         | Playlist item 1         |
+| Playlist item 4         | Playlist item 2         |
+| Playlist item 1         | Playlist item 1         |
+| Playlist item 2         | Playlist item 2         |
+
+In this example:  
+- **Playlist item 1** of both elements will **always be shown at the same time**.  
+- The system automatically aligns cycles, even with different list lengths.
+
+---
+
+### Synchronized Playback Across Viewers
+
+When **Play using Page Alternate Interval** is active, the alternation of playlist items is **synchronized across all Viewers** (screens/players).  
+- This ensures **simultaneous alternation** on all connected displays.  
+- Make sure system synchronization settings are properly configured to support this behavior.
+
+---
+
+### Summary
+
+- **Play Entire Play List**: Enables cycling through all playlist items.
+- Choose between **individual item durations** or a **uniform alternate interval**.
+- Synchronization keeps multiple elements and devices in sync.
+- Helpful for coordinated content display across multiple areas or screens.

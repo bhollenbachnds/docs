@@ -1,0 +1,35 @@
+
+These properties allow you to add a watermark image to your chart.
+
+---
+
+#### **Watermark Image**
+
+**Type**  
+Defines the source of the watermark image. Available options:
+
+| Option                        | Description                                                                                                                                                                                                                      |
+|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Picture from Content Library** | The watermark references an existing image in the PADS4 Content Library (recommended). Content Library items are automatically synchronized between all PCs in the system. References are relative and remain valid if the library is moved. |
+| **Picture from File**         | The watermark references an image file located outside the PADS4 Content Library. These files are **not** synchronized automatically and require manual distribution. References are absolute, and files must exist at the specified location for playback. |
+| **No Picture**                | No watermark image will be included.                                                                                                                                                                                              |
+
+---
+
+**Content**  
+Specifies the file reference of the image, depending on the selected **Type**. You can browse the **Content Library** or the file system using the browse button.  
+- If **Picture from File** is selected, provide the full file path and name.
+
+---
+
+**Stretch**  
+When enabled, the watermark image is resized to fully fit within the chart boundaries.  
+When disabled, the watermark image displays at its original size.  
+- If smaller than the chart, the image may not cover the entire background.  
+- If larger than the chart, the image may be clipped.
+
+---
+
+#### **Remarks**  
+- **Only references** to image files are stored in the presentation, **not the images themselves**.  
+- If the source image file is updated, the updated image will be used automatically during playback.

@@ -1,0 +1,98 @@
+
+These properties define the **calculated value** that will be displayed by the **Formatted Text element**. You can choose from a variety of dynamic values such as date, time, page numbers, data counts, or numeric values.
+
+---
+
+### **Available Content Types**
+
+| **Option**                                | **Description**                                                               |
+|-------------------------------------------|-------------------------------------------------------------------------------|
+| **Date/Time**                             | Displays the current date and/or time.                                        |
+| **Count Down Timer**                      | Displays a countdown timer to a specified moment. Optionally auto-switch page.|
+| **Stopwatch**                             | Counts up from 0 or from a specified start value.                            |
+| **Numeric**                               | Displays a numeric value with custom formatting.                             |
+| **Page Number**                           | Displays the current page number of your presentation.                       |
+| **Total Number of Pages**                  | Displays the total number of pages in your presentation.                     |
+| **Page Number of Total Pages**             | Displays both current page number and total number of pages.                 |
+| **Total Number of Data Provider Rows**    | Displays the total number of rows returned from a connected data provider.   |
+
+---
+
+### **Formatting Options per Content Type**
+
+#### **1. Date/Time Formatting**
+
+- **Prefix**: Text displayed before the date/time value.
+- **Date Format**: 
+  - None: No date shown.
+  - Long Date: Uses Windows long date format.
+  - Short Date: Uses Windows short date format.
+  - Custom: Use custom formats (see [Standard Date and Time Format Strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings)).
+- **Insertion**: Text between date and time (default is a space).
+- **Time Format**: 
+  - None: No time shown.
+  - Long Time: Windows long time format.
+  - Short Time: Windows short time format.
+  - Custom: Custom time format (see link above).
+- **Suffix**: Text displayed after the date/time value.
+- **Culture**: Set culture (e.g., en-US, de-DE) to adjust formatting.
+- **Time zone**: Adjust the time to display for a different time zone.
+
+---
+
+#### **2. Page Number & Total Pages Formatting**
+
+- **Prefix**: Text before the value.
+- **Format**: Specify character length/format for display.
+- **Suffix**: Text after the value.
+
+---
+
+#### **3. Page Number of Total Pages Formatting**
+
+- **Prefix**: Text before page number.
+- **Page Number**: Character length/format.
+- **Between**: Text between page number and total pages.
+- **Total Pages**: Character length/format.
+- **Suffix**: Text after total pages value.
+
+---
+
+#### **4. Total Number of Data Provider Rows Formatting**
+
+- Same as **Page Number Formatting**.
+- **Note**: Requires connection to a data source and at least one other element using that data source with scrolling enabled.
+
+---
+
+#### **5. Count Down Timer Formatting**
+
+- **Prefix**: Text before the countdown value.
+- **Time Format**:
+  - Long Time: Windows long time format.
+  - Short Time: Windows short time format.
+  - Custom: Custom format (see [Standard Date and Time Format Strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings)).
+- **Suffix**: Text after countdown value.
+- **Duration**: Starting time (e.g., `1:00:00` for 1 hour).
+- **Show next page when time reaches zero**: Automatically navigate to the next page when countdown ends.
+
+---
+
+#### **6. Stopwatch Formatting**
+
+- **Start Value**: Set initial value or start from zero.
+- **Format**: Use time formatting for display.
+
+---
+
+#### **7. Numeric Formatting**
+
+- Custom numeric formats supported (see [Standard Numeric Format Strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings)).
+
+---
+
+### **Important Remarks**
+- Calculated values are updated **in real-time during playback**.
+- If connected to a data source, formats like DateTime or Timespan follow the **column data type**.
+- The system will automatically **sync time** with the PADS4 Server, unless otherwise specified.
+- Countdown timers can trigger **automatic page changes** when the countdown hits zero.

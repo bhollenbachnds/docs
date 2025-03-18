@@ -1,0 +1,105 @@
+
+**Viewer Variables** are powerful tools that allow dynamic, context-driven content in PADS4 presentations. They are **customizable variables** assigned to each Viewer and automatically filled in during the display of presentations. These variables enable content personalization **without the need to create multiple presentations** for different locations or devices.
+
+---
+
+## **What Are Viewer Variables?**
+
+- **Viewer-specific placeholders** that can dynamically adjust content shown in presentations.
+- Used in **text, data providers, filters, rules, property bindings**, and more.
+- **Identified** in content using the format:  
+  `#<Viewer Variable name>#`  
+  _(Example: `#Store Name#`)_
+
+---
+
+## **Where to Define Viewer Variables?**
+
+### **1. System Management Application (Recommended)**
+- **Add and manage** Viewer Variables.
+- Assign **default values** that apply to all Viewers.
+- Ensures **centralized control** and prevents unauthorized creation or deletion via PADS4 Agent.
+
+### **2. PADS4 Agent**
+- Adjust **values for individual Viewers** under the **Server tab**.
+- Overwrites the default value assigned in System Management.
+
+### **3. Viewer Options Window (on the Viewer device)**
+- Adjust Viewer Variables directly on the Viewer for **local adjustments**.
+
+---
+
+## **Example: Personalized Text with Viewer Variables**
+
+If you define a Viewer Variable `#Store Name#` with the default value **"New York Health"**, and use this text in a Text Element:
+
+> **Welcome to the #Store Name#.**
+
+During playback, it will automatically display:
+
+> **Welcome to the New York Health.**
+
+If you update the variable in PADS4 Agent or Viewer options (e.g., to "Chicago Health"), the content will adjust **without changing the presentation**.
+
+---
+
+## **Where Can Viewer Variables Be Used?**
+
+- **Text fields** in elements.
+- **Data Providers** (queries, filters, expressions, sort, file paths).
+- **Rules** for dynamic content behavior.
+- **Property bindings**.
+- **Playlists** for media sequences.
+- **File references** (e.g., dynamically select images based on Viewer location).
+
+---
+
+## **Automation Examples Using Viewer Variables**
+
+| **Use Case**                                | **Example**                                                      |
+|---------------------------------------------|------------------------------------------------------------------|
+| Personalized store information              | Show specific store name and address per Viewer.                |
+| Product selection based on store size       | Filter products based on Viewer Variable like `#StoreSize#`.    |
+| Region-specific data                        | Use `#Country#` or GPS-based Viewer Variables for localized content. |
+| Dynamic map display                         | Show different maps depending on location variable.             |
+
+---
+
+## **When Are Viewer Variables Transformed into Actual Values?**
+
+| **Context**                                      | **When Replaced**                                                     |
+|--------------------------------------------------|----------------------------------------------------------------------|
+| **Inside data sources (SQL, XML, JSON, RSS)**    | When Viewer reads or receives data from the source.                  |
+| **In Data Providers (filter, sort, expressions)**| At start of data retrieval. New variable values affect next retrieval.|
+| **Inside presentations (text, image, video)**    | At presentation start.                                                |
+| **In rules (element, page, presentation rules)** | At time the rule is checked (not auto-updated if variable changes).  |
+| **Property bindings (with data provider)**       | On scheduled data read.                                                |
+| **Playlists**                                   | Replaced when loaded. For alternated playlists, updated at next cycle. |
+
+---
+
+## **Playlist Handling with Viewer Variables**
+
+- **Single-item, non-alternating playlist**:  
+  Viewer Variable is replaced at load time and **remains static** until next load.
+- **Alternating playlist**:  
+  Viewer Variable is updated **on each interval**, allowing dynamic changes.
+
+---
+
+## **Important Notes**
+
+- **Do NOT use Viewer Variables for constantly changing values.**  
+  Viewer Variables are **not designed** to function as high-frequency data sources (use Data Providers for that).
+- Changes in Viewer Variables **do not automatically trigger** re-evaluation of all rules or content refresh unless reloaded.
+- **Files outside Content Library** referenced with Viewer Variables may **not synchronize properly**—keep files inside the Content Library.
+
+---
+
+## **Key Benefits**
+
+- **Centralized content management** with dynamic local personalization.
+- **Single presentation** serving multiple Viewers with unique content.
+- Easy to update and maintain—**change the variable value, not the presentation**.
+- Enhances **automation and targeted communication** without complex redesign.
+

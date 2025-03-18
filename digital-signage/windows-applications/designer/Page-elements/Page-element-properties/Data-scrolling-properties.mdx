@@ -1,0 +1,52 @@
+
+When an element is connected to a **data source**, **data scrolling properties** control how the element scrolls through **real-time data**. This allows you to display **multiple records** when more data is available than can be shown at once.
+
+---
+
+### Data Scrolling
+
+- **Use Data Scrolling**  
+  Enable or disable scrolling through real-time data for the element.
+
+---
+
+### Scrolling Step Size
+
+- **Scrolling Step Size**  
+  Defines **how many rows** to advance each time a scroll action occurs.  
+  Example:  
+  - If set to `3`, and the element starts at row `2`, the next rows shown will be `5`, `8`, `11`, etc.
+
+**Important**:  
+When **multiple elements** are used within a row of a table element, **all elements must share the same Scrolling Step Size** to ensure synchronized scrolling.
+
+---
+
+### Scroll Mode
+
+Defines **how and when** the scrolling takes place. You can choose from the following options:
+
+| Option                                 | Description                                                                                                                                                   |
+|----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Scroll by Using General Page Scroll Interval** | The **page data refresh interval** controls scrolling speed. <br>Use this option to ensure **all elements** on the page scroll **in sync** and at the same rate. <br>*(Note: If the element is part of a **table row**, this is the only option available.)* |
+| **Scroll by using Play List Options**  | The **play list options** of the element control the scroll speed, allowing you to **customize scroll frequency** for each playlist item.                     |
+| **Scroll in Sync with...**              | The element will **scroll in synchronization** with another element. <br>Specify the leading element in the **Element** property. <br>Use this option to **link scrolling** between multiple elements. |
+
+---
+
+### 💡 **Tip**
+
+Using **Scroll in Sync with...** allows you to **synchronize** the scrolling of one element with another.  
+**Example**: If you have a video element that plays a series of clips, and you want related data (e.g., captions, statistics) to scroll at the same pace, you can synchronize them. When the video advances, the other element will also scroll automatically.
+
+---
+
+### Remarks
+
+- Data scrolling is **only available** if the element is connected to a **data source**.
+- **Displayed data** is always determined by the combination of:
+  - **Row property** (starting row)
+  - **Scrolling Step Size** (number of rows to skip each cycle)
+- Example of scrolling flow:
+  - If **Row = 2** and **Scroll Step Size = 3**, the scrolling sequence will be:  
+    `Row 2` → `Row 5` → `Row 8` → `Row 11` → ... until the end of the data source is reached, then it **loops back** to row `2`.

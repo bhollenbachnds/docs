@@ -1,0 +1,44 @@
+
+The **Data Provider properties** in the **Data Series Wizard** define **how the data series connects to an external data source**, ensuring your chart is populated with **real-time data**.
+
+---
+
+## **Properties Overview**
+
+| **Property**                     | **Description**                                                                                                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Select Data Provider**          | Choose an existing **data provider** (table, query, stored procedure, XML file, RSS feed, etc.) that feeds the data series.                                      |
+|                                  | Data providers are defined **at the presentation level** and are available to all elements. You can create a **new provider on-the-fly** via the drop-down button. |
+| **Data Column**                   | Select the **column** from the data provider that contains the **main data values** for the chart.                                                               |
+| **Label Column** (Optional)       | Select a **column** that contains **labels** associated with the data values (e.g., product names, dates).                                                      |
+
+---
+
+## **Special Columns for Specific Chart Types**
+
+### **Bubble Chart Columns**  
+If **Bubble Chart** is selected as Chart Type:
+
+| **Bubble Column**        | **Description**                                                                                                  |
+|-------------------------|------------------------------------------------------------------------------------------------------------------|
+| **Bubble Size Column**  | Select the column that provides the **size of each bubble**, used to represent a third dimension in the chart.     |
+
+---
+
+### **Stock Chart Columns**  
+If **Stock Chart** is selected as Chart Type:
+
+| **Stock Column**        | **Description**                                                                                                   |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------|
+| **High Column**          | Column containing the **highest stock value**.                                                                   |
+| **Low Column**           | Column containing the **lowest stock value**.                                                                    |
+| **Open Column**          | Column containing the **opening stock value**.                                                                   |
+| **Close Column**         | Column containing the **closing stock value**.                                                                   |
+
+---
+
+## **Key Notes**
+- **Data Providers** allow dynamic, real-time data feeding for live updates in your charts.
+- Column selection **binds specific fields** from your source data to the chart for visualization.
+- Different chart types (e.g., Bubble, Stock) require **specialized columns** to represent data properly.
+- You can define **new data providers directly** while setting up your data series for convenience.

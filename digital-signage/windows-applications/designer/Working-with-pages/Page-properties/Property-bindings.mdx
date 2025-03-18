@@ -1,0 +1,56 @@
+
+Property bindings allow you to **dynamically link page properties** to external data sources. When the data source updates, the corresponding page property will automatically update during playback.
+
+For example, if you **bind the Background Color** of a page to an XML file, **the background color will automatically change** when the value in the XML file changes.
+
+---
+
+## **Property Bindings Overview**
+
+This section contains a **list of page properties** that can be bound to an external data source.  
+To create a binding, you must define at least:
+
+- **Data Provider**
+- **Column (Field)**
+- **Row (Record)**
+
+---
+
+### **Property**
+- The **specific page property** to be bound (e.g., **Background Color**, **Visible**, etc.).
+- **System-defined** — cannot be changed.
+
+### **Type**
+- The **data type** of the property (e.g., **Color**, **Boolean**, **Integer**).
+- **System-defined** — cannot be changed.
+
+### **Data Provider**
+- Choose the **data provider** that supplies the data (e.g., XML, Excel, SQL, JSON).
+- If no data providers are available, **create one first** in the data provider setup.
+
+### **Column**
+- Select the **data field** (column) within the data provider that contains the value for the property.
+
+### **Row**
+- Select the **record (row)** within the data provider that holds the desired value.
+
+### **Scroll**
+- **Enable this option** if data scrolling should be applied.
+- When enabled, **Data Scrolling Properties** will dictate how the data is scrolled through during playback.
+
+---
+
+## **Example Use Case: Dynamic Page Visibility**
+
+- Bind the **Visible** property of a page to a **cell in an Excel file**.
+- If the Excel value is "1", the page will be shown.
+- If the Excel value is "0", the page will be hidden.
+- This allows **dynamic control** over which pages are shown, simply by editing the Excel file — useful for schedule-based content.
+
+---
+
+> **Tip**:  
+Property bindings are powerful for **real-time adaptive content**. For example:
+- Change background color based on real-time sensor data.
+- Show or hide pages based on external scheduling files.
+- Adjust transition effects dynamically.

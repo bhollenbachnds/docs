@@ -1,0 +1,25 @@
+
+The **Other Properties** section contains **miscellaneous settings**, including the option to enable **Proof of Play logging** for tracking presentation playback.
+
+---
+
+## **Proof of Play**
+
+### **Log Presentation Statistics Info**
+When this option is enabled, **detailed information** about the playback of your presentation will be **logged**.  
+This data can be used to **prove** (for example, to advertisers) that specific content has been shown, **where**, **when**, and **for how long**.
+
+### **How it Works:**
+- **Exact playback information** is stored in a **log file** and **sent to the PADS4 Server** for **centralized logging**.
+- All log data is stored in the **PADS4 billing database**, located on the **PADS4 Server PC**.
+- You can **view and manage** this data using:
+  - The **PADS4 Agent application**.
+  - **Microsoft Access** (for direct database access).
+  - The **PADS4 Software Development Kit (SDK)** to develop custom solutions for processing the data.
+
+---
+
+## **Important Note**
+
+- **If logging is enabled**, it is **absolutely required** to set up a procedure to **manually or automatically process and clean up** the log data.
+- **Failing to manage this log data** may result in the **PADS4 billing database** consuming all available disk space, as **PADS4 does not automatically delete old log entries**.

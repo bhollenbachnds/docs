@@ -1,0 +1,42 @@
+
+These properties define the **image displayed** on the button surface of an interactive button element.
+
+---
+
+### **Image Source Options**
+
+To specify the **origin** or **type of picture**, choose one of the following options:
+
+| **Option**                                    | **Description**                                                                                                                                                        |
+|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Content Library**                            | Reference an existing picture file from the **PADS4 Content Library** (recommended). Content Library items are **auto-synced across all PCs**, with **relative references**. |
+| **File Name**                                  | Reference an existing picture file located **outside the Content Library**. Files must be manually distributed and referenced with **absolute file paths**.            |
+| **External Data from Data Source**              | Connect the element to a **Data Provider** and specify which data row and column will provide the image dynamically.                                                  |
+
+---
+
+### **Data Provider Settings** (When using external data)
+
+| **Property**   | **Description**                                                                                   |
+|----------------|--------------------------------------------------------------------------------------------------|
+| **Data Provider** | Connect to a source such as a table, query, stored procedure, XML file, RSS feed, etc. You can create new providers on the fly. See *Working with Data Providers* for more. |
+| **Column**        | Select the column containing the image reference.                                              |
+| **Content Type**  | Specify how the content should be interpreted (e.g., image file path, URL, etc.).                |
+| **Row**           | Specify which row of the data source to bind to the element.                                    |
+
+---
+
+### **Image Display Options**
+
+| **Property**              | **Description**                                                                                               |
+|---------------------------|--------------------------------------------------------------------------------------------------------------|
+| **Stretch**                | If enabled, the image will automatically resize to **fit the element boundaries**.                          |
+| **Maintain Aspect Ratio**  | If enabled, the image will **retain its original width-to-height ratio** when stretched.                     |
+
+---
+
+### **Remarks**
+- Only **references** to image files are stored in the presentation, **not the images themselves**. If the image file is updated, **the new version will be used automatically** during playback.
+- If the specified **row** does not exist in the data source, **no image** will be displayed.
+- **TIP**: For best visual quality, try to display images at their **original size** when possible.
+

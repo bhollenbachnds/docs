@@ -1,0 +1,45 @@
+
+These properties define **the media items (images, videos, streams)** that will be displayed in your Mixed Media element. You can create a **single item display** or a **playlist** that runs media files sequentially.
+
+---
+
+### **Managing the Playlist**  
+
+- **Add**, **edit**, **reorder**, or **remove** items in your playlist.
+- Playlist items can be managed in **detailed view** or **list view**.
+- **Navigation buttons** at the bottom of the playlist window allow you to move through the list.
+- **Total Duration** displays the cumulative duration of all playlist items.
+
+> **Important:**  
+> For in-depth guidance on managing playlists, see **Working with Play Lists**.
+
+---
+
+### **Playlist Item: Type Options**  
+
+| **Type**                    | **Description**                                                                                      |
+|----------------------------|---------------------------------------------------------------------------------------------------|
+| **Media from Content Library** | References an existing **picture or video file** stored in the **PADS4 Content Library** (recommended). Files are **automatically synchronized** across all system PCs. |
+| **Media from URL**          | A direct **URL reference** to a media source (e.g., web-hosted image or video).                      |
+| **Video Stream**            | A **stream URL** reference (e.g., IP camera or live streaming service).                            |
+| **Separator**               | An **empty** playlist item, used to create a **pause** in the sequence.                            |
+
+---
+
+### **Properties of Each Playlist Item**
+
+| **Property**               | **Description**                                                                                   |
+|---------------------------|-------------------------------------------------------------------------------------------------|
+| **Media from Content Library** | Contains the **relative file reference** to an item in the content library.                      |
+| **Media from URL**         | Contains the **URL** linking to the media source.                                                 |
+| **Video Stream**           | Contains the **stream URL** reference.                                                           |
+| **Duration**               | Length of time (in seconds) the item will be displayed. If a **video**, its natural duration is used. |
+| **Effect**                 | **Transition effect** applied when the item appears (e.g., fade, slide) and **effect duration** (in seconds). |
+
+---
+
+### **Key Remarks**
+
+- **Only references** to media files are included, **not** the media itself. This allows **automatic updates** during playback if the source file changes.
+- **Play List properties** are **disabled** when the element is linked to a **data source**. In such cases, media content is controlled by **real-time data**.
+- **Separators** are a useful way to **insert pauses** without media between items in a sequence.

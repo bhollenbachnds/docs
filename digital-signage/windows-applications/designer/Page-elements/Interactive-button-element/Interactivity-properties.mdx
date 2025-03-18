@@ -1,0 +1,73 @@
+
+These properties determine **how an interactive button responds to user actions**, including clicks, key combinations, and more.  
+
+---
+
+### **Hotkey**
+
+Define a **keyboard shortcut** to activate the button:  
+
+- **Hotkey Setup**:  
+  - Use the button on the right to open **Advanced Settings**.  
+  - In Advanced Settings, you can:
+    - Manually enter any key combination using **ASCII values**.
+    - Use **Auto Detect** to automatically capture the key combination when typed.  
+
+⚙️ **Note on ASCII and Key Codes**:  
+- **ASCII values** distinguish between lowercase and uppercase (e.g., `65 = 'A'`, `97 = 'a'`).
+- **Key codes** do not differentiate between cases. To use 'A', specify ASCII `65` and add `[Shift]` if uppercase is needed.
+
+---
+
+### **Page Action**
+
+Choose a **single page-related action** (one allowed per button):  
+
+| **Option**                  | **Description**                                           |
+|----------------------------|----------------------------------------------------------|
+| **Go to Previous Page**      | Go to the previous visible page.                         |
+| **Go to Next Page**          | Go to the next visible page.                             |
+| **First Page**               | Go to the first page.                                    |
+| **Last Page**                | Go to the last page.                                     |
+| **Go to Page...**            | Jump to a specific page (makes invisible pages visible). |
+| **Show data sort dialog box**| User sets sort order for a data provider.                |
+| **Show data filter dialog box**| User sets a filter for a data provider.                |
+| **Exit application**         | Close the PADS Viewer application.                       |
+
+---
+
+### **Actions**
+
+Add **one or multiple actions** to be executed when the button is clicked or hotkey pressed.  
+Actions are executed in the order they are added.
+
+| **Action Option**                                  | **Description**                                                                                          |
+|---------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| **Send Web Request command**                       | Send HTTP request (GET, POST, PUT, PATCH, DELETE) and optionally switch pages.                          |
+| **Edit Viewer Variable**                           | Change or reset a Viewer Variable value until presentation ends.                                        |
+| **Scroll data (up/down/page up/page down/begin/end)**| Scroll a data provider in various ways. *Note: Resets on page change.*                                  |
+| **Set data filter (with page change)**              | Apply a dynamic filter to a data provider and optionally switch pages.                                   |
+| **Clear data filter (with page change)**            | Clear previously applied dynamic filters.                                                               |
+| **Apply data sort for this page**                   | Sort data provider's data. Resets when page changes.                                                    |
+| **Apply data filter for this page**                 | Apply a page-specific filter. Resets when page changes.                                                 |
+| **Send message to Web Element**                    | Control a Web Element (toggle microphone/camera, join/leave meeting, send custom command).               |
+| **Open webpage in external window**                | Open URL in a separate browser window.                                                                 |
+
+---
+
+### **Important Notes on Scrolling and Filters**
+
+- **Scrolling with interactive buttons** can conflict with **automatic scrolling** — may cause double scrolling.
+- **Filters and sorts** applied via buttons **reset on page change**, unless noted (e.g., dynamic filters stay active until cleared).
+- When **scrolling or filtering data**, ensure that the interactive button targets the **same data provider** used by page elements.
+
+---
+
+### **Special Remarks**
+
+- **Synchronize Mode**: If **presentation synchronization** is enabled, **interactive features (e.g., page navigation)** will **not function** to maintain sync.
+- **Hotkey Configuration**:  
+  - **ASCII value** is case-sensitive.
+  - **Key code** is not case-sensitive.
+  - Use Auto Detect for easy hotkey setup.  
+

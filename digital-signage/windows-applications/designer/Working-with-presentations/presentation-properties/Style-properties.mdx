@@ -1,0 +1,40 @@
+
+The **Style properties** define how your presentation will be played, including options for synchronizing playback across multiple Viewers.
+
+---
+
+## **Synchronize Viewers**
+
+### **Calculate Time of Page Change Based on Scheduled Time**
+
+- **When enabled**, this option ensures that the presentation is **played synchronously** on all displays (Viewers) to which it has been scheduled.
+- **When enabled**, dynamic page behaviors such as **conditional page skipping** (e.g., skipping a page when no data is available) **will no longer function**, as synchronization takes priority.
+
+---
+
+## **Example of Synchronized Playback**
+
+If a presentation is scheduled to start at **10:00** and contains **two pages**, each displayed for **1 minute**, the playback would proceed as follows:
+
+- **10:00 - 10:01**: Page 1 is displayed  
+- **10:01 - 10:02**: Page 2 is displayed  
+- **10:02 - 10:03**: Page 1 is displayed  
+- **10:03 - 10:04**: Page 2 is displayed  
+- **10:04 - 10:05**: Page 1 is displayed  
+- **10:05 - 10:06**: Page 2 is displayed  
+
+If the **PADS4 Viewer** is restarted at **10:03**, the presentation will **resume** by displaying **Page 2** for the remaining time until **10:04**, when it will switch to Page 1.
+
+---
+
+## **Remarks**
+
+- **Synchronization is based on the system clock** of each PADS4 Viewer PC. The Viewer uses this clock to determine the correct point in time to display each page, ensuring alignment with other Viewers.
+- Because synchronization is **time-based**, **the presentation may not always start from Page 1**.
+- Synchronization works at the **page level**, meaning all participating displays switch to the next page **simultaneously**.
+- The system automatically **resynchronizes on each page change**.
+- Synchronization requires that the presentation contains at least **two pages**.
+- Synchronization **depends on page duration**. It **will not work** if:
+  - Page durations are disabled or ignored.
+  - The presentation uses rules or options that bypass page timing.
+- **External factors** such as high CPU usage on a Viewer PC may affect perfect synchronization, though the system will attempt to resynchronize at every page transition.

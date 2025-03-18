@@ -1,0 +1,60 @@
+
+These properties define **which external application** will be started by the External Application element and how it will behave when launched.
+
+---
+
+### **Start Application**
+
+- **Do not start this Application when already running**  
+  If enabled, PADS4 will **not start a new instance** of the external application if it is already running.  
+  Instead, it will **activate** the running instance.
+
+---
+
+### **Application**  
+Options to specify which application should be launched:
+
+| Option          | Description                                                      |
+|-----------------|------------------------------------------------------------------|
+| **Manual**      | Manually enter the **full path** to the application executable. |
+| **Data Provider**| Dynamically set the application path via a **data provider**, column, and row. |
+
+- **Application**:  
+  The **full file path** of the executable to be launched. You can use the **browse button** to locate the file.
+
+> **Note**: The path is **absolute** and must be valid on the playback device.  
+
+---
+
+### **Data Provider (Optional Alternative to Manual)**  
+A **Data Provider** can be used to dynamically determine which application to start:
+- **Data Provider**: The external data source (table, query, XML, RSS, etc.).
+- **Column**: The specific column in the data source containing the application path.
+- **Row**: The row to read the application value from.
+
+---
+
+### **Arguments**  
+Some applications accept **command line arguments** for advanced launching options (e.g., opening a file, starting in silent mode).
+
+| Option          | Description                                                      |
+|-----------------|------------------------------------------------------------------|
+| **Manual**      | Manually specify the arguments used to launch the application.  |
+| **Data Provider**| Dynamically set the arguments via a **data provider**, column, and row. |
+
+- **Arguments**:  
+  The full command-line arguments string to use when launching the application.
+
+---
+
+### **Remarks & Tips**
+
+- If **spaces** are present in the Application or Arguments path, PADS4 **automatically** adds quotes `""`, so **you don't need to add them manually**, unless required **within** the command.
+- **Example** for running a PowerPoint presentation without showing the PowerPoint window:  
+  ```
+  Application: C:\Program Files\Microsoft Office\Powerpoint Viewer\PPTView.exe  
+  Arguments: /s sample.ppt
+  ```
+- If the data provider contains **fewer rows** than specified in the **Row** field, **no application will be started**.
+- **Quotes** are added automatically when necessary (e.g., for file paths containing spaces).
+- Useful when integrating external tools, files, or processes into your PADS4 presentation workflow.
