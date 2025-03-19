@@ -1,0 +1,60 @@
+
+Samsung **Smart Signage Platform (SSSP)** devices support **video streaming**, including **HLS streams and Lynk DRM encryption**.
+
+---
+
+## **Playing HLS Streams on Samsung SSSP**  
+
+If the **HLS stream URL does not end with `.m3u8`**, follow these steps:  
+1. **Manually modify the URL** using Samsung’s notation.  
+2. **Add `|COMPONENT=HLS`** at the end of the stream URL.  
+
+### **Example:**  
+```
+http://<server>:<port>/<path>|COMPONENT=HLS
+```
+
+---
+
+## **Lynk DRM Protocol Support**  
+
+Samsung **Lynk DRM** (Digital Rights Management) allows playback of **encrypted video streams**.  
+
+To enable **Lynk DRM**, you must modify the stream URL by adding **query options**:  
+
+| **Query Option** | **Description** |
+|-----------------|-----------------|
+| **lynk_server** | Specifies the Lynk DRM server location. |
+| **lynk_type** | Defines if the stream is **encrypted** or **normal**. (Defaults to **unencrypted** if not set). |
+
+---
+
+## **Lynk DRM Stream URL Examples**  
+
+### **Example 1: Default Lynk DRM Usage**  
+```
+http://server.nds.local/stream1.mp4?lynk_server
+```
+- **Lynk DRM server address is not specified**, so the system **automatically** uses the host of the stream (`server.nds.local`).  
+- Since **`lynk_type` is not defined**, the system assumes **unencrypted content**.  
+
+### **Example 2: Specifying a Lynk DRM Server**  
+```
+http://server.nds.local/stream1.mp4?lynk_server=lynkserver.nds.local:8080
+```
+- **Lynk DRM server explicitly set** to `lynkserver.nds.local`.  
+- **Port 8080 is used for connection**.  
+
+### **Example 3: Playing Encrypted Streams**  
+```
+http://server.nds.local/stream1.mp4?lynk_server=lynkserver.nds.local:8080&lynk_type=encrypted
+```
+- **Lynk DRM server is defined (`lynkserver.nds.local:8080`)**.  
+- **`lynk_type=encrypted`** ensures **decryption key retrieval** from the Lynk DRM server.  
+
+---
+
+## **Considerations for Streaming on Samsung SSSP**  
+- **HLS streams must be formatted correctly** using `|COMPONENT=HLS`.  
+- **Lynk DRM-protected content requires a properly configured server**.  
+- **Incorrect DRM settings will prevent playback**.  

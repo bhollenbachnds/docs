@@ -1,0 +1,48 @@
+
+These properties determine how your element **handles multi-line text** when connected to an **external data source**.  
+
+---
+
+## **Text Handling Options**  
+
+### **Split Multi-Line Text into Play List Items**  
+- **Enabled** – Each **line of text** from the data source is treated as a **separate play list item**, allowing for **alternating display**.  
+- **Disabled** – The **entire text value** is treated as **one single play list item**, displaying all lines together.  
+
+---
+
+## **How It Works**  
+If a **multi-line text value** is received from a **data source**, this setting controls whether:  
+1. **Each line is displayed separately** (like a scrolling news ticker or rotating announcements).  
+2. **All lines are displayed together** in one text block.  
+
+---
+
+## **Example Usage**  
+
+### **Scenario 1: Flight Announcements (Enabled)**  
+**Data Source Input:**  
+```
+Boarding  
+Einsteigen
+```
+- **With Splitting Enabled:** Each word appears **individually** in the playlist (e.g., "Boarding" → "Einsteigen").  
+- **With Splitting Disabled:** Both lines are displayed **together** in a single text block.  
+
+---
+
+### **Scenario 2: Image Playlist (Enabled)**  
+**Data Source Input:**  
+```
+c:\folder\image1.jpg  
+c:\folder\image2.jpg  
+```
+- **Without Splitting:** The image element **cannot read** the entire input as a valid path.  
+- **With Splitting:** The element **processes each line separately**, allowing a **playlist of images** to display in sequence.  
+
+---
+
+## **Key Notes**  
+- The **separator between text lines** is the **carriage return line feed character** (`<CR> <LF>`).  
+- This feature is useful when working with **lists of images, messages, or real-time data feeds**.  
+- Works in combination with **playlist options** to define how items are displayed.  

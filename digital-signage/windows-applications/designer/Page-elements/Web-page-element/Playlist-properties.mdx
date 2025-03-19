@@ -1,0 +1,62 @@
+
+These properties define the **web content** displayed by the **Web Page Element**. You can select a **single web page** or create a **playlist** of multiple pages to be shown sequentially.
+
+---
+
+## **Managing the Playlist**  
+
+- Add, edit, reorder, or remove playlist items.  
+- Use navigation controls to browse through playlist items.  
+- The **total duration** of all items is displayed.
+
+---
+
+## **Web Page Playlist Items**  
+
+The **Type** field specifies the source of web content.
+
+| **Option**                     | **Description**  |
+|---------------------------------|------------------|
+| **HTML**                        | Displays **embedded HTML content** instead of a full website. |
+| **HTML from Content Library**    | Loads an HTML file **stored in the PADS4 Content Library** (recommended). Files in the library **sync across all systems**. |
+| **Web Page**                     | Displays a **website from the Internet or Intranet**. Requires **internet access**. Can also reference **HTML files stored outside the content library**. These files must be **manually distributed** to all playback systems. |
+| **Separator**                    | Creates a **pause** in the playlist with no content displayed. |
+
+---
+
+## **Content Configuration**  
+
+- Enter **HTML code, a website URL, or a file path**, based on the selected **Type**.  
+- Use the **browse** button to select a file from the **Content Library** or your local system.  
+- **External HTML files** must include the **full file path**.  
+
+**Tip:**  
+The Web Page Element supports **any content** that a web browser can display, including **third-party applications, interactive elements, and streaming media**.
+
+---
+
+## **Duration**  
+
+- Sets **how long (in seconds)** each item remains on-screen before switching to the next.  
+- **Separators** introduce **pauses** in the playlist.
+
+---
+
+## **Cropping & Display Adjustments**  
+
+- **Crop**: Clips a portion of the web page for display.  
+- **Offset (Left, Top)**: Defines the **starting position in pixels** within the element.  
+- **Interactive Cropping**: Use the **crop tool** to manually adjust the visible portion.  
+- **Web Browser Container Size**:  
+  - Prevents unwanted **realignment** of web elements.  
+  - Set a **fixed size** larger than the visible area to maintain **layout consistency**.  
+
+---
+
+## **Additional Considerations**  
+
+- **Memory Leaks**: Some web pages contain elements that **cause memory leaks**, potentially leading to **performance issues** during playback.  
+- **Live Updates**:  
+  - Web pages and HTML files are **referenced**, not embedded.  
+  - If the **source file or website** is updated, changes appear **automatically** during playback.  
+- **Data Source Connection**: If the Web Page Element is **linked to a data source**, playlist settings are **disabled**, and the displayed content is determined **in real-time**.  

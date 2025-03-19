@@ -1,0 +1,67 @@
+
+These properties define the **RS-232 communication port settings**, ensuring successful data transmission between your **presentation system** and an **external device**.
+
+---
+
+## **Communication Port Settings**  
+
+### **Communication Port**  
+- Select the **COM (serial)** or **LPT (parallel)** port used for **RS-232 communication**.
+
+### **Baud Rate**  
+- Defines the **transmission speed** in **symbols per second (bps)**.  
+- Common values: **1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200**.  
+- Must match the **external device settings**.
+
+### **Parity**  
+Determines how **parity checking** is applied for **error detection**.  
+
+| **Option** | **Description** |
+|------------|----------------|
+| **None** | No parity check (default). |
+| **Even** | Ensures an even number of **1s** in the data frame. |
+| **Odd** | Ensures an odd number of **1s** in the data frame. |
+| **Mark** | Always sets the parity bit to **1**. |
+| **Space** | Always sets the parity bit to **0**. |
+
+### **Data Bits**  
+- Defines the number of **data bits per frame**.  
+- Standard values: **5, 6, 7, or 8 bits** (default: **8**).  
+- Must match the **external device settings**.
+
+### **Start Bits**  
+- Specifies the **leading bits** before actual data transmission.  
+- Standard value: **1 bit**.
+
+### **Stop Bits**  
+- Specifies the **end of transmission bits**.  
+- Standard values: **1, 1.5, or 2 bits** (default: **1**).  
+- Used to **separate data packets**.
+
+### **Handshake**  
+Defines **flow control** between sender and receiver to prevent **data loss**.  
+
+| **Option** | **Description** |
+|------------|----------------|
+| **None** | No handshake (default). |
+| **XOn/XOff** | Software-based handshake. Uses special characters to control data flow. |
+| **RTS/CTS** | Hardware-based handshake using Ready-to-Send (RTS) and Clear-to-Send (CTS) signals. |
+| **DTR/DSR** | Hardware-based handshake using Data Terminal Ready (DTR) and Data Set Ready (DSR) signals. |
+
+### **Read Timeout**  
+- **Time limit (in milliseconds)** for receiving a **response from the external device**.  
+- If no response is received within this time, a **timeout error occurs**.
+
+### **Write Timeout**  
+- **Time limit (in milliseconds)** for successfully **sending a command**.  
+- If data cannot be transmitted within this time, a **timeout error occurs**.
+
+---
+
+## **Remarks**  
+- The **correct RS-232 settings** for communication with your **external device** can be found in its **user manual**.  
+- **Incorrect port settings** may result in **failed communication** or **unexpected device behavior**.
+
+### **Important**  
+- The communication port settings **must match** those of the **external device**.  
+- These settings apply **only during playback**, so **RS-232 commands will only be sent if the specified port is available on the playback PC**.  

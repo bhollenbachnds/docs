@@ -1,0 +1,38 @@
+
+The **grouping by properties** allow you to organize table rows by **hiding duplicate values** in selected columns. When **two or more consecutive rows** contain the same value for a **grouped element**, that value is **only displayed in the first row**.  
+
+⚠ **Important:** This feature **does not** actually group data in the table like the **"Scroll Data, Grouped By"** option. Instead, it simply **hides duplicate values** to improve readability.
+
+---
+
+## **Defining Group By Elements in a Table**  
+
+1. Open the **Table Properties** window.  
+2. Navigate to the **Row Properties** section.  
+3. Click **Edit** to modify the **Row Definition**.  
+4. In the **Home tab** of the ribbon bar, click **Group By**.  
+5. Select the **elements** you want to group by.  
+6. (Optional) Use **Move Up** or **Move Down** to adjust the **grouping priority**.  
+7. Click **OK** to save the **group settings**.  
+8. In the **File menu**, click **Close**.  
+9. Click **Yes** to confirm changes.  
+10. Click **OK** or **Apply** to update the presentation.
+
+---
+
+## **Additional Grouping Options**  
+
+- If you need to **display data grouped together** instead of just **hiding duplicate values**, use the **"Scroll Data, Grouped By"** option in **Scroll Options**.
+
+---
+
+## **Remarks & Best Practices**  
+
+- **All elements** in the row definition **can be used for grouping**, but **text elements and picture elements** are the most **commonly used**.  
+- **When multiple elements are grouped**, the system processes them in **priority order**:  
+  - It first **checks the first group by element**.  
+  - If its value **matches the previous row**, it is **hidden**.  
+  - The system then checks the **next group by element**, continuing until either:  
+    - A **different value is found**, or  
+    - All selected **group by elements** have been processed.  
+- **There is no limit** to the number of **group by elements** you can define.

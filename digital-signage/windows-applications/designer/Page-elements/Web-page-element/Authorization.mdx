@@ -1,0 +1,38 @@
+
+These properties define the **authentication credentials** required for accessing web pages. By default, **no authorization** is used.  
+
+If the web server requests **authentication**, the system will automatically detect this request and provide the credentials specified in this section.  
+
+---
+
+## **Authorization Settings**  
+
+### **Enable Authorization**  
+- Allows you to **enable/disable** authentication for accessing protected web pages.  
+
+### **User ID**  
+- Enter the **username** required to authenticate with the website.  
+
+### **Password**  
+- Enter the **password** associated with the specified username.  
+
+---
+
+## **Authentication Methods**  
+
+If the server or proxy supports **multiple authentication schemes**, the system will choose the **most secure available method** based on the following priority ranking:  
+
+| **Authentication Method** | **Priority Score** |
+|--------------------------|--------------------|
+| **Basic** (least secure) | 1 |
+| **Digest** | 2 |
+| **NTLM** | 3 |
+| **Negotiate** (most secure) | 4 |
+
+---
+
+## **Additional Notes**  
+
+- **If no credentials are provided**, the system will attempt to access the page **without authentication**.  
+- **If authentication is required**, the credentials specified here will be automatically submitted.  
+- The selected **authentication method** is determined by the **server’s configuration**.

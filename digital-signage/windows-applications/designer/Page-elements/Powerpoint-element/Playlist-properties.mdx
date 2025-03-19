@@ -1,0 +1,37 @@
+
+The **Play List Properties** define the **PowerPoint files** that will be displayed within your PowerPoint element. You can **add multiple presentations**, edit them, change their sequence, or remove them from the list.
+
+---
+
+## **Managing the Play List**
+- You can **add**, **edit**, **reorder**, or **remove** PowerPoint presentations.
+- Navigation buttons allow you to **browse through the list**.
+- The **total duration** shows the combined display time of all presentations.
+- The properties of a playlist item depend on the **type of the PowerPoint element**.
+
+### **PowerPoint Playlist Item**
+Each item in the play list can originate from **different sources**, as described below:
+
+| **Option**                  | **Description** |
+|-----------------------------|----------------|
+| **PowerPoint from Content Library** | The PowerPoint file is stored in the **PADS4 Content Library** (recommended). Files in the Content Library are **automatically synchronized** between all PCs. |
+| **PowerPoint from File**     | The file is **stored locally** outside the PADS4 Content Library. These files are **not automatically synchronized**, so you must manually distribute them. |
+| **Separator**               | Creates a **pause** in the playlist. No PowerPoint presentation is displayed during this interval. |
+
+---
+
+## **PowerPoint File Details**
+| **Property** | **Description** |
+|-------------|----------------|
+| **Content** | Stores the reference to the PowerPoint file. You can **browse** the Content Library or your file system. If using a local file, the full **file path** must be specified. |
+| **Duration** | Defines **how long (in seconds)** each PowerPoint presentation will be displayed. If set to `0`, the slides will follow the default PowerPoint timing. |
+| **Effect**   | Specifies the **incoming transition effect** and its **duration (in seconds)**. |
+
+---
+
+## **Important Notes**
+- Only **references** to PowerPoint files are stored, **not the actual files**.
+- If the **original PowerPoint file is updated**, the latest version will be used during playback.
+- The **Play List properties are disabled** if the element is connected to a **data source**—in that case, content is determined by real-time data.
+- **PowerPoint presentations always appear in the foreground** and cannot be overlapped by other elements.
+

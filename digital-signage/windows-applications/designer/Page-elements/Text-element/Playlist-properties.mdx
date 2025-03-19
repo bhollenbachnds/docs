@@ -1,0 +1,60 @@
+
+These properties define the **text content** displayed by a **text-based element**. You can add a **single text item** or create a **play list of text items** that will be displayed in sequence.
+
+---
+
+## **Managing the Play List**  
+
+You can:  
+- **Add, edit, or remove** text items.  
+- **Rearrange** the order of play list items.  
+- **Use navigation buttons** to browse through play list items.  
+- View the **total duration** of all play list items.  
+
+---
+
+## **Text-Based Play List Item Options**  
+
+| **Type** | **Description** |
+|----------|----------------|
+| **Text** | Displays **static text** directly entered into the element. |
+| **Text from Content Library** | References a **text file** stored in the **PADS4 content library** (recommended). Content is automatically synchronized across all PCs. |
+| **Text from File** | References a **text file outside the content library**. These files **must be manually distributed** across PCs. |
+| **No Text** | Creates a **pause** in the play list, useful for timing adjustments. |
+
+---
+
+## **Content**  
+
+- **Directly enter static text** or provide a **file reference** depending on the chosen type.  
+- If using **Text from File**, ensure the file path is **correct and accessible**.  
+
+---
+
+## **Duration**  
+
+- Specifies the **display time (in seconds)** for each text item or pause in the play list.  
+- The timing determines how long the text remains visible before moving to the next item.  
+
+---
+
+## **Effect**  
+
+- Select an **incoming transition effect** for each play list item.  
+- Set the **effect duration (in seconds)**.  
+
+---
+
+## **Additional Considerations**  
+
+- **Multi-Line Text Handling**:  
+  - If entering multiple lines manually, press **[Enter]** to separate lines.  
+  - For text files, **Data Source Text Conversion Properties** determine how multi-line text is processed.  
+
+- **Real-Time Data Handling**:  
+  - If the text element is connected to a **data source**, **play list properties are disabled**.  
+  - The element’s content will instead be determined by the **real-time data feed**.  
+
+- **Updating Text Files**:  
+  - When using text files, **only file references** are included in the presentation.  
+  - If the **text file is updated**, the new content will be used during playback **without modifying the presentation itself**.  

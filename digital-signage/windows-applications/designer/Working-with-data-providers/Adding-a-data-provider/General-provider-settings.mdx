@@ -1,0 +1,70 @@
+
+On the **second step** of the **Data Provider Wizard**, you define a **unique name** for your data provider and configure settings for **real-time data retrieval**.  
+
+---
+
+## **Steps to Configure General Provider Settings**  
+1. **Start the Data Provider Wizard**  
+   - Follow the steps in **Adding a Data Provider** or **Editing a Data Provider**  
+2. **Enter a Unique Name for the Provider**  
+   - Assign a **Provider Name** (must be unique within your presentation)  
+   - Optionally, enter a **Description**  
+3. **Decide Whether to Use PADS4 Data Server**  
+   - **Enable or Disable** the option:  
+     **"Make use of the Data Server for retrieval of Data"**  
+   - If **enabled**, real-time data is retrieved centrally through the **PADS4 Data Server**  
+   - If **disabled**, each **PADS4 Viewer** retrieves data **individually**  
+4. **Enable Caching (Optional)**  
+   - **Use Design Cache**: Stores data from the source for **design-time preview**  
+   - **Generate Sample Values**: Creates **placeholder values** if the data source is unavailable  
+5. **Proceed to the Next Step**  
+
+---
+
+## **Using the PADS4 Data Server**  
+The **PADS4 Data Server** retrieves and distributes **real-time data** to all connected Viewers.  
+
+### **Comparison of Data Retrieval Methods**  
+
+| **Feature** | **Using PADS4 Data Server** | **Retrieving Data Individually** |
+|------------|----------------------|---------------------|
+| **Data Retrieval** | Single request for all Viewers | Each Viewer retrieves data separately |
+| **Performance** | Optimized (reduces database queries) | More load on the data source |
+| **Use Case** | Large-scale networks, slow data sources | Viewer-specific queries (e.g., filtering by Viewer Name) |
+| **Failover Support** | Switches to a backup PADS4 Server if needed | No built-in redundancy |
+
+### **When to Enable the PADS4 Data Server**
+✔ **Recommended if:**  
+- **Multiple Viewers** need the **same data** at the same time  
+- Your **data source is slow or external** (e.g., APIs, remote databases)  
+- You want to **reduce network traffic and database load**  
+
+✘ **Not Recommended if:**  
+- Each **Viewer requires different data** (e.g., filtered by location)  
+- The **database already optimizes queries** for multiple connections  
+
+---
+
+## **Caching Options in PADS4**  
+Caching can **improve performance** and **allow offline design** when live data is unavailable.  
+
+| **Caching Option** | **Function** |
+|-------------------|-------------|
+| **Use Design Cache** | Saves **up to 999 rows** of data for offline use |
+| **Generate Sample Values** | Replaces missing data with **placeholder text** |
+| **Best for** | Designing presentations **without live data access** |
+
+### **Example Use Case**  
+A **designer** needs to create a **data-driven layout** but doesn't have **database access**. Using **cached data**, they can still **design and test** the layout.  
+
+---
+
+## **Failover & Backup Considerations**  
+- If the **PADS4 Data Server** fails, a **Backup PADS4 Server** (if configured) takes over.  
+- If **Data Server is disabled**, ensure **every Viewer** can **independently access** the data source.  
+
+---
+
+## **Final Steps**  
+- **Click Next** to proceed to **Connection Settings**  
+- Complete the **Data Provider Wizard**  

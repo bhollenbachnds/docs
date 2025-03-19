@@ -1,0 +1,43 @@
+
+These properties define the presentations that will be played within the **Presentation in Page** element. You can add a single presentation or create a **playlist** of multiple presentations that will be played sequentially.
+
+#### **Managing the Playlist**  
+- Add, edit, reorder, or remove items from the playlist.  
+- Navigate through items using the **navigation buttons** at the bottom.  
+- The **total duration** of all playlist items is displayed.  
+
+💡 **For general playlist management details, see "Working with Playlists."**  
+
+---
+
+### **Presentation in Page Playlist Item**  
+
+#### **Type**  
+Defines the **source** of the included presentation:  
+
+| **Option** | **Description** |
+|------------|----------------|
+| **PADS4 Presentation from Content Library** | References a presentation stored in the **PADS4 content library** (recommended). Content library items are automatically **synchronized** across all PCs in your system. |
+| **PADS4 Presentation from File** | References a presentation stored **outside** the content library. These files are **not synchronized** automatically, and you must manually distribute them. |
+| **No PADS4 Presentation** | No presentation is included—this option is used to create a **pause** in the playlist. |
+
+#### **Content**  
+Contains the **file reference** for the selected presentation type. You can:  
+- Browse the **Content Library** or your file system.  
+- If using "PADS4 Presentation from File," specify the **full file path**.  
+
+#### **Duration**  
+Defines how long (in **seconds**) the selected presentation or pause will be displayed.
+
+#### **Clip Presentation**  
+- **If enabled**, only a portion of the presentation will be played based on the selected page range.  
+- **First Page:** The first page to be displayed.  
+- **Last Page:** The last page to be displayed.  
+
+---
+
+### **Remarks**  
+- **Only references** to presentation files are stored in the **container presentation**—not the actual files. If the referenced presentation is updated, the latest version will be used automatically during playback.  
+- **Playlist properties will be disabled** when the element is connected to a **data source**. In this case, content is determined by real-time data.  
+- **In PADS4 Designer**, data providers inside the **Presentation in Page** element are **not loaded** for performance reasons.  
+

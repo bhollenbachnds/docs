@@ -1,0 +1,36 @@
+
+These properties help **optimize video playback performance** when using **Microsoft Windows players**, particularly useful for **low-performance hardware** or **multi-screen setups**.
+
+---
+
+## **Performance Optimization Settings**  
+
+### **Limit Video Element Functionalities**  
+- **Improves video playback speed** by disabling certain **graphical effects**.  
+- Recommended when using **multiple screens** or **low-power hardware**.  
+- **Turning this option on will disable:**  
+
+| **Feature** | **Effect** |
+|------------|-----------|
+| **Video Effects** | No transition effects can be applied. |
+| **Stretching** | Aspect ratio is always preserved. If the video does not fit the area, black borders will appear. Use **Uniform** to prevent black borders. |
+| **Always on Top** | Video remains **above all other elements**. |
+| **Transparency** | Not supported. |
+| **Rotation** | The video **cannot be rotated** freely. It will follow the display rotation only. |
+| **Flip/Skew** | Flipping and skewing are **not possible**. |
+| **Reflection** | Reflection effects **cannot be applied**. |
+
+---
+
+## **Video Wall & Multi-Screen Optimization**  
+- When creating a **video wall** or using **multiple screens** on a **single player**, Windows can cause **performance drops** when crossing screen boundaries.  
+- **Solution:**  
+  - Create a **large virtual canvas** (e.g., **2× width and 2× height** of a single screen).  
+  - Divide the display into **separate regions**.  
+  - **Enable "Limit Video Element Functionalities"** to maintain **GPU acceleration** and prevent frame drops.  
+
+---
+
+## **Best Practices for Multi-Screen Setups**  
+- If a **single PC drives multiple screens**, setting **"Limit Video Element Functionalities"** significantly **boosts performance**.  
+- Avoid crossing **display borders** in **Windows multi-monitor setups** when playing videos.  

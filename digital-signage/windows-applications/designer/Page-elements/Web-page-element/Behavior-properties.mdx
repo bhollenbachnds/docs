@@ -1,0 +1,61 @@
+
+These properties define the **interactive behavior** of the **Web Page Element** and how it renders and interacts with users.
+
+---
+
+## **Behavior Settings**  
+
+### **Scrollbars**  
+- **Show Scrollbars**: Enables or disables scrollbars when the content exceeds the element boundaries.
+
+### **Mouse Interaction**  
+- **Show Mouse Pointer**: When enabled, the **mouse pointer** is visible, allowing users to scroll and click hyperlinks.
+
+### **Screenshot Mode**  
+- When enabled, the element **captures a screenshot** of the webpage after loading and displays the **static image** instead of the live page.  
+- **Advantages**: Improves performance, prevents unwanted interactions, and allows proper scaling when presentations are automatically resized.  
+- **Disadvantages**: **Dynamic content (e.g., animations, videos, interactive elements) will not function.**  
+
+### **User Interactivity**  
+- **Allow User Interactivity**: Enables users to click hyperlinks within the web page element.  
+  - **Note**: Disabled if **Screenshot Mode** is on.  
+  - **Limitation**: Hyperlinks that open **new windows/popups** are **not supported**.  
+
+### **Address Bar**  
+- **Show Address Bar**: Displays an **address bar** for users to enter URLs.  
+  - **Only available in interactive mode.**  
+  - **Security Tip**: Combine this with **Web Page Restrictions** to prevent unauthorized browsing.  
+
+### **Scaling Options**  
+- **Ignore Scaling**: Ensures the element **ignores** Windows **display scaling settings** and renders at **100% zoom**.  
+
+---
+
+## **Web Browser Engine Options**  
+
+Select the **browser engine** used to render the web page. Different web pages **may behave differently** based on the engine:  
+
+| **Engine**        | **Description** | **Current Version** |
+|------------------|---------------|------------------|
+| **Chromium**     | Based on the **Chrome** open-source project. | **Chrome 100** |
+| **Edge**         | Uses **Microsoft Edge WebView**. | **Edge 108** |
+| **Internet Explorer** | Uses **IE11**, which may have compatibility issues. | **IE11** |
+
+---
+
+## **Cache & Performance Settings**  
+
+### **Cache Control**  
+- **Clear Cache on Start**: Automatically **clears cached data** when the web element starts.  
+
+### **Performance Optimization**  
+- **Frame Rate**: Adjusts the **frame rate** (default: **30 FPS**).  
+- **Render Mode**:  
+  - **Always on Top**: Ensures the **web element is displayed above other elements** in the presentation.  
+
+---
+
+## **Remarks**  
+- **User Interactivity** only allows **navigation within the same window**. **Popups** and **new window links** are not supported.  
+- If **dynamic content causes memory leaks**, enabling **Screenshot Mode** may help **improve stability**.  
+- **Security Tip**: If allowing user interaction, enable **Web Page Restrictions** to **control which sites can be accessed**.

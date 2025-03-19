@@ -1,0 +1,57 @@
+
+Video streams are used in **entertainment and communication systems** to manage streaming media servers.  
+
+---
+
+## **Playlist URL Specification**  
+1. Select **"Video from File"** from the content type dropdown.  
+2. Enter the **stream URL** where the stream is located.  
+   - Example: `RTSP://<server>/example.mp4`  
+   - Example: `RTSP://xxx.xxx.xxx.xxx:554`  
+3. Click **"..."** next to the URL field to open the **URL Editor**, which assists in structuring the correct URL format.  
+
+---
+
+## **Supported Streaming Protocols**  
+
+| **Protocol** | **Implemented** | **Description** |
+|-------------|----------------|-----------------|
+| **RTSP** | Yes | Real-Time Streaming Protocol (Typically on TCP port **554**) |
+| **RTP** | Yes | Real-time Transfer Protocol |
+| **UDP** | Yes | User Datagram Protocol |
+| **MMS** | Yes | Microsoft Media Server |
+| **HTTP** | Yes | Hypertext Transfer Protocol |
+
+---
+
+## **Video Display Delay**  
+- **Streaming can introduce a delay** due to buffering.  
+- To reduce buffering, **increase the speed ratio to 400%**, which **bypasses the buffer**.  
+- **Side effect:** This may cause video **stuttering** if the network connection is **unstable**.  
+
+---
+
+## **Multicast vs. Unicast**  
+
+### **Multicast**  
+- **Sends one stream to multiple clients** instead of creating separate streams for each viewer.  
+- **Reduces server/network load** by avoiding duplicate data transmission.  
+- **Best for large-scale streaming environments**.  
+
+### **Unicast**  
+- **Each viewer receives an independent copy** of the stream.  
+- **Uses more bandwidth** than multicast.  
+- **Best for personalized or private streaming**.  
+
+---
+
+## **Considerations for Streaming**  
+- **Streaming consumes more bandwidth** than playing locally stored videos.  
+- **Multicasting** can help reduce network usage (consult your **network administrator** for details).  
+- If the **network connection fails**, the stream **will stop playing**.  
+
+---
+
+### **Performance Optimization Tip**  
+- **To reduce playback delay**, set the **speed ratio to 400%**.  
+- **Possible side effect:** If the connection is **unstable**, the video may **stutter**.  

@@ -1,0 +1,75 @@
+
+The **.NET framework provider** enables **high-performance connections** to **MySQL, Oracle, SQL Server**, and other databases. It reduces overhead while maintaining full functionality.  
+
+---
+
+## **Prerequisites**  
+- Install the **.NET driver** for your database before proceeding.  
+- Ensure your database is **accessible** from the **PADS4 Data Server** or individual Viewers.  
+
+---
+
+## **Steps to Connect a Database via .NET Framework**  
+
+### **1. Start the Data Provider Wizard**  
+- Follow the steps in **Adding a Data Provider** or **Editing a Data Provider**.  
+- Choose **.NET Framework** as the provider type.  
+
+### **2. Configure .NET Connection Settings**  
+- Select the **.NET Data Provider** from the installed providers list.  
+  - If your provider is missing, ensure the correct **.NET driver** is installed.  
+- Enter the **Connection String** to connect to your database.  
+  - Refer to your **.NET provider documentation** or check **www.connectionstrings.com** for examples.  
+- Secure the Connection String (Optional)  
+  - Use **"Optional Password"** to hide the connection string when editing.  
+
+**Example Connection String for MySQL:**  
+```
+Server=192.168.1.10;Port=3306;Database=mysampledb;Uid=root;Pwd=mypassword;pooling=false;
+```
+
+### **3. Enter SQL Query to Retrieve Data**  
+- Define an **SQL statement** specifying the data to fetch.  
+
+**Example Query to Select All Data:**  
+```sql
+SELECT * FROM MyTable
+```
+
+- Customize the query based on filters, sorting, or joins.  
+
+### **4. Test the Connection**  
+- Click **Test** to verify the connection.  
+
+### **5. Complete the Wizard**  
+- Click **Next** to proceed.  
+- Finish the wizard as described in **Adding a Data Provider**.  
+
+---
+
+## **Important Considerations**  
+
+- **If Using PADS4 Data Server:**  
+  - Ensure the **.NET driver is installed** on the **server**.  
+  - The **database must be accessible** from the **PADS4 Data Server's network**.  
+
+- **If Not Using PADS4 Data Server:**  
+  - Install the **.NET driver** on **all PADS4 Viewers** and **PADS4 Designer** machines.  
+  - Verify that **each Viewer** can access the **database** directly.  
+
+---
+
+## **Troubleshooting**  
+
+- **Database connection fails?**  
+  - Check **firewall settings** and **database credentials**.  
+  - Ensure **network access** to the **database server**.  
+  - Verify that the **.NET driver** is **installed correctly**.  
+
+- **Query returns no data?**  
+  - Run the SQL **query manually** in a database tool to check for errors.  
+  - Verify that the **table and column names** are correct.  
+
+---
+
+Your database is now connected. If you need advanced filtering, sorting, or real-time updates, explore **Data Provider options** in PADS4.

@@ -1,0 +1,83 @@
+
+The **Scrolling Text Element** includes special properties that can be applied at the **item level**, rather than just at the **element level**. This allows for **customized styling and behavior** for individual text items inside the scrolling text.  
+
+These **item-level rules** enable dynamic changes, such as modifying the **foreground color** of a specific text item or **changing the separator** based on a **data condition**.
+
+---
+
+## **Applying Rules to Individual Scrolling Text Items**  
+
+When a **rule** is triggered, it can modify multiple properties, including:  
+- Making the **entire scrolling text element invisible**  
+- Adding a **border around the scrolling text**  
+- Adjusting the **position or size**  
+- **Changing font or foreground color** for individual items  
+
+Rules can be used on:  
+1. **A play list of multiple text items**  
+2. **A scrolling text element linked to a data provider** (e.g., displaying multiple rows of data)  
+
+Each **separate item** in the scrolling text can be **validated independently** based on the **current data selection**.
+
+---
+
+## **Special Properties for Playlist Items & Rules**  
+
+### **Change Font & Foreground Color Based on a Rule**  
+
+A **rule** can be added to validate text content and apply a **font and foreground color change** when a condition is met.
+
+#### **Example: Highlighting a Specific Line in a Scrolling Text**  
+1. **Data Source Example**  
+   ```
+   Line one  
+   Line two  
+   Line three  
+   ```
+2. **Steps to Implement**:  
+   - Connect a **Scrolling Text Element** to a **static data provider** containing the **text data**.  
+   - Enable **Data Scrolling**.  
+   - Set **Scroll Options** to **Directly after previous text**.  
+   - Add a **rule**:  
+     **IF Current Data Equals ‘Line two’**  
+   - Click on **Set Properties** → **Change Foreground Color** (e.g., make it red).  
+   - **Press F2** to preview → **Line two will display in red**, while the rest remain unchanged.
+
+#### **Example: Applying a Rule to Multiple Lines**  
+- If the rule is instead:  
+  **IF Current Data Starts With ‘Line’**,  
+  **all lines** would be affected and displayed in the same color.
+
+---
+
+## **Changing the Separator Based on a Rule**  
+
+This example demonstrates how to create a **stock exchange ticker** using the **Scrolling Text Element** with **dynamic separator images** based on stock price movement.
+
+#### **Data Source Example**
+| Stock       | CurrentPrice | OldPrice | Description        |
+|------------|-------------|---------|-------------------|
+| Coca Cola  | 42.40       | 41.30   | Coca Cola 42.40  |
+| Microsoft  | 65.22       | 67.43   | Microsoft 65.22  |
+| Google     | 820.19      | 834.11  | Google 820.19    |
+
+#### **Steps to Implement**  
+1. **Connect a Scrolling Text Element** to a **static data provider** with stock data.  
+2. **Enable Data Scrolling**.  
+3. Set **Scroll Options** to **Directly after previous text** and **select the Description column** for the scrolling text.  
+4. Add a **rule**:  
+   - **IF** `CurrentPrice` **is greater than** `OldPrice` → **Set a green separator image** (▲ Uptrend).  
+   - **IF** `CurrentPrice` **is less than or equal to** `OldPrice` → **Set a red separator image** (▼ Downtrend).  
+
+#### **Results**  
+- **Coca Cola 42.40** (Price increased) → **Green Separator**  
+- **Microsoft 65.22** (Price decreased) → **Red Separator**  
+- **Google 820.19** (Price decreased) → **Red Separator**  
+
+---
+
+## **Key Takeaways**  
+- **Rules allow item-level customization** in scrolling text.  
+- **Individual text items** can have **different fonts, colors, and separators** based on **real-time data validation**.  
+- **Database values** can control how **text content and separators** appear dynamically.  
+- **Multiple columns can be used** for rule validation, not just the one displayed.  

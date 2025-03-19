@@ -1,0 +1,39 @@
+
+These properties control how **text items** appear and move within the **scrolling text element**.
+
+---
+
+## **Scroll Options**  
+
+### **Text Scroll Options**  
+Determine how new text is introduced into the scrolling text element:  
+
+| **Option** | **Description** |
+|------------|----------------|
+| **Line by Line** | Displays one line at a time. Each line is shown separately, and the next line appears only after the previous one disappears. |
+| **Directly After Previous Text** | New text is placed **immediately after** the previous text, ensuring a continuous scrolling effect with no gaps. |
+| **When Previous Text is Scrolled Out** | New text starts **only after** the previous text has **fully disappeared** from view. |
+
+---
+
+### **Additional Settings**  
+
+#### **Concatenate Multiple Text Lines to One Single Line**  
+- If enabled, **hard returns (line breaks)** inside a single text entry are **removed**.  
+- The entire text is treated as **one continuous line** during scrolling.  
+- Cannot be used in combination with **Line by Line** mode.  
+
+#### **Do Not Scroll When the Text Fits**  
+- When enabled, PADS4 calculates whether the **entire text (including separators)** fits within the **element area**.  
+- If the text fits, it will remain **static** instead of scrolling.  
+- If the text **exceeds** the element area, scrolling will **automatically start**.  
+
+#### **Show Changes in Text Immediately**  
+- When connected to a **data source**, enabling this setting ensures that **any text updates are reflected immediately**.  
+- The scrolling process is **aborted**, and the **new text begins scrolling immediately**.  
+
+---
+
+## **Remarks**  
+- **"Line by Line" mode** cannot be used with **"Concatenate Multiple Text Lines to One Single Line"**, as they **conflict in behavior**.  
+- Ensuring **seamless scrolling** requires careful configuration of **text length, separator spacing, and update frequency**.  

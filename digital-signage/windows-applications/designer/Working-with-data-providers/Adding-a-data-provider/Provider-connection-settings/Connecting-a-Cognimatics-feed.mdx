@@ -1,0 +1,131 @@
+
+The **Cognimatics feed provider** allows integration with **Cognimatics devices** for **audience measurement data**, such as **people counting**, **queue monitoring**, and **demographics analysis**.
+
+---
+
+## **Steps to Add or Modify a Cognimatics Data Provider**  
+
+### **1. Start the Data Provider Wizard**  
+- Follow the steps in **Adding a Data Provider** or **Editing a Data Provider**.  
+- Choose **Cognimatics** as the provider type.  
+
+### **2. Configure Cognimatics Connection Settings**  
+- Enter the **HTTP Address (IP Address)** of the **Cognimatics application**.  
+- Alternatively, specify a **manual URL** with all parameters.  
+
+### **3. Select the Active Source**  
+- Choose the **installed and active source** from the list.  
+- Only **one source** can be active at a time.  
+- Selecting an **inactive source** will result in a **404 error** when testing.  
+
+### **4. Select Data Type: Real-Time or Period**  
+
+#### **Real-Time Data**  
+- Displays **current people count** entering or leaving a location.  
+
+#### **Period-Based Data**  
+- Retrieves **statistical results** for a specific period:  
+
+| Period Option | Description |
+|--------------|-------------|
+| **None** | No time range is applied. |
+| **Today** | Data for **today** only. |
+| **Yesterday** | Data for **yesterday** only. |
+| **Manual** | Custom date range selection. |
+
+---
+
+## **5. Data Fields Returned by the Cognimatics Feed**  
+
+### **People Counter**  
+| Field | Type | Description |
+|--------|------|-------------|
+| **Name** | String | Name of the reader. |
+| **Serial** | String | Serial number of the software. |
+| **In** | Integer | Number of people who entered. |
+| **Out** | Integer | Number of people who left. |
+| **People Inside** | Integer | Difference between `In` and `Out` values. |
+| **Timestamp** | Date/Time | Time of data recording. |
+
+### **One-Way Flow Monitoring**  
+| Field | Type | Description |
+|--------|------|-------------|
+| **Name** | String | Name of the reader. |
+| **Serial** | String | Serial number of the software. |
+| **In** | Integer | Number of people who entered. |
+| **Out** | Integer | Number of people who left. |
+| **People Inside** | Integer | Difference between `In` and `Out` values. |
+| **Timestamp** | Date/Time | Time of data recording. |
+
+### **Queue Monitoring**  
+| Field | Type | Description |
+|--------|------|-------------|
+| **Serial** | String | Serial number of the software. |
+| **Name** | String | Device name. |
+| **Region 1 Name** | String | Name of **Region 1**. |
+| **Region 1 People** | Integer | People in **Region 1**. |
+| **People Inside** | Integer | Total number of people in all regions. |
+| **Region 2 Name** | String | Name of **Region 2**. |
+| **Region 2 People** | Integer | People in **Region 2**. |
+| **Region 3 Name** | String | Name of **Region 3**. |
+| **Region 3 People** | Integer | People in **Region 3**. |
+| **Timestamp** | Date/Time | Time of data recording. |
+
+### **Occupancy Monitoring**  
+| Field | Type | Description |
+|--------|------|-------------|
+| **Name** | String | Name of the reader. |
+| **Serial** | String | Serial number of the software. |
+| **In** | Integer | Number of people who entered. |
+| **Out** | Integer | Number of people who left. |
+| **People Inside** | Integer | Difference between `In` and `Out` values. |
+| **Timestamp** | Date/Time | Time of data recording. |
+
+### **Demographics Analysis**  
+| Field | Type | Description |
+|--------|------|-------------|
+| **Time Start** | Date/Time | First recorded face observation. |
+| **Time End** | Date/Time | Last recorded face observation. |
+| **Gender Average** | Integer | -1 = Female, 1 = Male. |
+| **Age Average** | Integer | Estimated average age. |
+| **Boxsize Average** | Integer | Estimated average **face box size**. |
+| **Gender Last** | Integer | Last recorded **gender**. |
+| **Age Last** | Integer | Last recorded **age**. |
+| **Boxsize Last** | Integer | Last recorded **box size**. |
+
+---
+
+## **6. Finish the Setup**  
+- Click **Next** to proceed.  
+- Complete the wizard as described in **Adding a Data Provider**.  
+
+---
+
+## **Important Considerations**  
+
+- **Ensure the Correct Source is Selected:**  
+  - If an **inactive source** is selected, the **Preview** button will return a **404 error**.  
+
+- **Verify Network Access:**  
+  - If using **PADS4 Data Server**, ensure the **Cognimatics feed** is **accessible** from the **server’s network**.  
+  - If **not** using a **Data Server**, each **PADS4 Viewer** must have **direct access** to the Cognimatics feed.  
+
+- **Review Cognimatics Documentation:**  
+  - For **detailed field descriptions** and **device configurations**, refer to **Cognimatics official documentation**.  
+
+---
+
+## **Troubleshooting**  
+
+- **No data appearing?**  
+  - Verify the **HTTP Address/IP** is correct.  
+  - Ensure the **Cognimatics device** is powered on and active.  
+  - Check if the **correct source** is selected.  
+
+- **Unexpected data values?**  
+  - Confirm the **selected time range** matches the data you expect.  
+  - If using **Real-Time Mode**, ensure the data feed is updating.  
+
+---
+
+By setting up a **Cognimatics data feed** in **PADS4**, businesses can **analyze customer flow, queue times, and demographic insights** in **real-time**, optimizing their **digital signage content and operations**.

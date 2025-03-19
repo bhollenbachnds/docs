@@ -1,0 +1,38 @@
+
+The **scroll options** define how **data scrolling** is handled within the table element, including **non-scrolling rows, grouped data display, and automatic page transitions**.
+
+---
+
+## **Scroll Data Once and Show the Next Page**  
+- **Enabled:** The table scrolls through all available **data rows once**. After the last row is displayed, the presentation **automatically switches to the next page**.  
+- **Disabled:** The table continues scrolling **indefinitely**, looping through the available data.  
+
+> **Best Use Case:**  
+> - When the number of **data rows is unknown**, but you need to ensure **each row is displayed exactly once** before moving to the next page.
+
+---
+
+## **Don't Scroll the First X Rows**  
+- **Define a fixed number of rows** that will **always remain visible** while other rows scroll.  
+- Useful for **displaying critical or high-priority information** at the top of the table.  
+
+> **Example Use Case:**  
+> - **Airports**: The **first five rows** remain static to display flights departing soon, while other flights scroll below.  
+> - **Stock Markets**: The **top companies** remain visible, with **less critical stocks scrolling**.
+
+---
+
+## **Scroll Data, Group By**  
+- Displays **grouped data sets** one at a time before scrolling to the next group.  
+- **Select a column** that contains the grouping information.  
+- The **Data Provider must already be sorted** by the selected group column.  
+
+> **Example Use Case:**  
+> - **Hotel Room Reservations**: First displays **Room 101 bookings**, then scrolls to **Room 102**, then **Room 103**, etc.  
+> - **Company Sales Reports**: Displays sales data **grouped by department**, ensuring each department's data is shown separately.
+
+---
+
+## **Important Notes**  
+- **Each element in a row must have data scrolling enabled** for it to scroll within the table.  
+- **Sorting must be configured within the Data Provider settings**—the table element does **not** sort the data automatically.  

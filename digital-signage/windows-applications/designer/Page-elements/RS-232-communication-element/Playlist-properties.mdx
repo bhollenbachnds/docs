@@ -1,0 +1,44 @@
+
+These properties define the **RS-232 commands** that will be sent by your **RS-232 communication element**. You can enter a **single command** or create a **play list** of commands that will be executed sequentially.  
+
+You can **add, edit, reorder, or remove** commands from the play list. The navigation buttons allow you to browse through play list items. The **total duration** displays the combined execution time for all commands.  
+
+---
+
+## **RS-232 Command Play List Item**  
+
+### **Type**  
+Defines the **origin** or **format** of the RS-232 command.  
+
+| **Option** | **Description** |
+|------------|----------------|
+| **RS-232 Command (Text)** | Static command entered as plain text. |
+| **RS-232 Command (Hexadecimal)** | Command entered in **hexadecimal format**. |
+| **RS-232 Command from Content Library** | Reference to a **predefined text file** stored in the **PADS4 content library** (recommended). Items are **automatically synchronized** across all PCs. |
+| **RS-232 Command from File** | Reference to a text file **outside the PADS4 content library**. These files are **not synchronized** automatically, so manual distribution is required. |
+| **No RS-232 Command** | No command is included. This is used to **pause** between commands. |
+
+---
+
+### **Content**  
+Defines the **command** to be executed.  
+- If using **manual entry**, type the **text or hexadecimal command** directly.  
+- If using a **file reference**, browse to **select the file** containing the commands.  
+- File references **must include the full file path** if stored outside the content library.  
+
+---
+
+### **Duration**  
+Specifies how long (in **seconds**) to **wait** before sending the next command or **pausing** playback.  
+
+---
+
+### **Effect**  
+Defines the **incoming transition effect** for the play list item and the **duration** (in seconds).  
+
+---
+
+## **Remarks**  
+- **Only file references are stored**, not the actual command content. If the referenced **text file is updated**, the latest commands will be used automatically.  
+- The **play list properties** will be **disabled** if the **element is connected to a data source**. In this case, the **real-time data source** determines which commands are executed.  
+

@@ -1,0 +1,59 @@
+
+These properties define the **videos or sounds** that will be played by the **video/sound element**. You can either **select a single file** or create a **playlist of multiple videos/sounds** that will play sequentially.  
+
+---
+
+## **Managing the Play List**  
+
+- **Add**, **edit**, **reorder**, or **remove** play list items.  
+- Use **navigation buttons** to move through the playlist.  
+- The **total duration** of all playlist items is displayed.  
+- **Play list item properties** vary depending on the type of element.  
+
+---
+
+## **Video/Sound Play List Item Options**  
+
+| **Option** | **Description** |
+|------------|----------------|
+| **Video from Content Library** | Uses a **video or sound file** from the **PADS4 Content Library** (recommended). Content is **automatically synchronized** across all PCs. |
+| **Video from File** | Uses a **video or sound file** from an **external source** (including RTSP streams). Files **must be manually managed**, and playback requires the exact file path. |
+| **Video Stream** | Uses a **video stream** from an **IP camera, streaming media server, or online source**. Requires a valid **streaming URL**. |
+| **Separator** | Inserts a **pause** in the playlist (no video/sound will be played). |
+| **HDMI / DVI** | Plays **HDMI/DVI content** from devices that support it (e.g., Samsung SSSP3 and higher). Specify the source using: **SOURCE://HDMI1** or **SOURCE://DVI2**. |
+
+---
+
+## **Play List Item Properties**  
+
+### **Content**  
+- Specifies the **file reference** for the video/sound.  
+- If using **"Video from File"**, the **full file path** must be provided.  
+- If using a **video stream**, enter the **streaming URL**.  
+
+### **Clip Video**  
+- Allows **playing only a selected portion** of the video/sound.  
+
+| **Property** | **Description** |
+|-------------|----------------|
+| **Start** | The **starting frame** for the clipped section. |
+| **Duration** | The **length (in frames)** of the clipped section or pause duration. |
+
+### **Effect**  
+- Defines the **incoming transition effect** for each play list item.  
+- **Effect duration** can be specified in **seconds**.  
+
+---
+
+## **Using Video Streams**  
+
+- **Connect to a Video Stream** from a **streaming media server, IP camera, or online file**.  
+- Enter the **URL** of the video stream.  
+
+---
+
+## **Remarks**  
+
+- The **playlist stores references to video/sound files** but does **not store the actual media**.  
+- If a **referenced file is updated**, the new version will **automatically be used during playback**.  
+- **Playlist properties are disabled** if the element is connected to a **data source**—content will instead be determined by the real-time data feed.  

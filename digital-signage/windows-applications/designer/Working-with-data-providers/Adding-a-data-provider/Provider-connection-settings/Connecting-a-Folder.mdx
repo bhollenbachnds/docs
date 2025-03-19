@@ -1,0 +1,57 @@
+
+The **Folder** provider type allows you to connect to a **specific folder** to retrieve and display its **file content**. You can include **all files** or filter them based on **extensions**. **Subfolders** can also be included if needed.
+
+---
+
+## **Steps to Add/Modify a Folder Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** by following the instructions in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Folder** as the **provider type**.
+
+### **2. Specify Folder Connection Settings**
+- Choose one of the following **source options**:
+  - **Content Library:** Uses a folder from the **PADS4 Content Library** (Recommended).
+  - **Folder:** Uses a **folder outside** the content library.
+
+- **Enter the Folder Path**:
+  - If using **Content Library**, provide the **relative path**.
+  - If using an **external folder**, provide the **absolute path** (e.g., `C:\MyFolder`).
+  - Use the **Browse** button to locate the folder.
+
+- **Include Subfolders** *(Optional)*
+  - Enable this option to include files **from subfolders** of the selected folder.
+
+- **Set File Filters**
+  - Use **Search Extension Restriction** to **filter specific file types** (e.g., `.jpg`, `.png`, `.mp4`).
+
+- **Sort Files**
+  - Use **Sorting File List** settings to **define the sorting order**.
+
+### **3. Finalize the Connection**
+- Click **Next** to proceed.
+- Complete the wizard as described in **Adding a Data Provider**.
+
+---
+
+## **Best Practices**
+- **Use the PADS4 Content Library**  
+  - Files in the **Content Library** are **automatically synchronized** across **all PADS4 systems**.  
+  - If you use an **external folder**, you must **manually distribute** the files across systems.
+
+- **Avoid Shared Network Folders**  
+  - **Network traffic may increase** when using a **mapped drive** or **UNC path** (`\\server\folder`).
+  - This can **slow down** the **Viewer performance** when retrieving file lists or loading content.
+
+- **Sorting Rules**  
+  - **Folder-specific sorting** applies first.
+  - **Generic sorting** (set in later wizard steps) **overrides folder sorting**.
+
+---
+
+## **Important Considerations**
+- **Data Server Access**  
+  - If using a **PADS4 Data Server**, ensure the **folder is accessible** from the **server's point of view**.
+  - If **not using a Data Server**, each **PADS4 Designer and Viewer** must have **direct access** to the folder.
+
+By following these steps, you can successfully **connect a folder** and retrieve its contents for use in **digital signage presentations**.

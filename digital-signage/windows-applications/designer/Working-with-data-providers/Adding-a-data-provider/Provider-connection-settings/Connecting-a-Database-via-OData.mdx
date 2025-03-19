@@ -1,0 +1,66 @@
+
+**OData (Open Data Protocol)** is a web-based protocol used for **querying and retrieving structured data** from various sources such as relational databases, file systems, and content management systems. It leverages **HTTP, JSON, and AtomPub** to expose data as a web service.  
+
+---
+
+## **Steps to Connect to an OData Data Source**  
+
+### **1. Start the Data Provider Wizard**  
+- Follow the steps outlined in **Adding a Data Provider** or **Editing a Data Provider**.  
+- Select **OData** as the provider type.  
+
+### **2. Specify OData Web Service URL**  
+- Enter the **URL** where the **OData data source** is located.  
+- The system will only accept data that follows the **official OData specifications** from [www.odata.org](http://www.odata.org).  
+
+#### **Example URL**  
+A commonly used example is the **Northwind sample database**:  
+```plaintext
+http://services.odata.org/Northwind/Northwind.svc/
+```
+
+- If your **OData source is secured**, enable **Authorization Required** and enter the:  
+  - **User ID**  
+  - **Password**  
+  - **Domain** (optional)  
+
+- Click the **Test** button to verify the connection.  
+
+- Click **Next** to proceed.  
+
+---
+
+### **3. Select the Data Source**  
+- If the **data source is automatically detected**, select **Predefined** and choose the appropriate table or entity from the list.  
+- If **no predefined data source is detected**, select **Manual** and manually enter the **table name, query, or entity name**.  
+
+- Optionally, use **Skip first number of rows** to remove a specified number of rows from the retrieved dataset.  
+
+- Click **Next** to continue.  
+
+---
+
+### **4. Complete the Setup**  
+- Follow the remaining steps in the **Adding a Data Provider** guide.  
+- Click **Finish** to save the connection settings.  
+
+---
+
+## **Important Considerations**  
+
+- **Ensure Network Access:**  
+  - If using a **PADS4 Data Server**, verify that the **OData source is accessible** from the server’s point of view.  
+  - If **not using a Data Server**, ensure that **each PADS4 Viewer and the Designer can access the OData source** directly.  
+
+- **Security & Authentication:**  
+  - If the **OData service requires authentication**, provide valid **login credentials**.  
+
+- **Testing the Connection:**  
+  - Use the **Test** button before proceeding to ensure that the entered details are correct.  
+
+- **Row Skipping:**  
+  - If your **OData source contains headers** or irrelevant first rows, use the **Skip first number of rows** option.  
+
+---
+
+By integrating **OData with PADS4**, businesses can efficiently connect to **cloud databases, REST APIs, and enterprise applications** to fetch **real-time, structured data** for **digital signage and dynamic content display**.

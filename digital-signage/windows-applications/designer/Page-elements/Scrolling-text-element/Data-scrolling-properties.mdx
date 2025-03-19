@@ -1,0 +1,39 @@
+
+When a **scrolling text element** is connected to a **data source**, these properties define how **real-time data** scrolls. **Data scrolling** loops through rows of data, while **visual scrolling** determines how text moves across the screen.
+
+---
+
+## **Data Scrolling Settings**  
+
+### **Use Data Scrolling**  
+- Enables or disables **scrolling through real-time data** in the element.
+
+### **Scrolling Step Size**  
+- Defines how many **rows** the element moves forward each time data refreshes.  
+- Example:  
+  - If **Row = 2** and **Scrolling Step Size = 3**, the element will display **Row 2, Row 5, Row 8**, and so on.  
+  - Once all available rows have been displayed, the element **loops back** to Row 2.
+
+**Important:**  
+- When multiple elements with **data scrolling** are placed inside a **table row**, they **must** have the **same Scrolling Step Size** to stay synchronized.
+
+---
+
+## **Alternative Data Scrolling (For Table Elements Only)**  
+When a **scrolling text element** is part of a **table row**, additional options are available:
+
+### **Number of Rows**  
+- Limits scrolling to the **first N rows** of the data source.  
+- Useful when displaying only the **most recent news items** from an **RSS feed** or database.
+
+**Tip:**  
+- If you need to show only **top news items**, use **Number of Rows** to limit scrolling to the latest entries.
+
+---
+
+## **Additional Notes**  
+- **Data scrolling** properties are only available if the element is **connected to a data source**.  
+- The displayed data is determined by:  
+  - **Row property** (starting position).  
+  - **Scroll Step Size** (how many rows to skip per refresh).  
+- The scrolling process **loops** through all available rows and **restarts** when reaching the end.

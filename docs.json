@@ -550,7 +550,179 @@
                       {
                         "group": "Picture Element",
                         "pages": [
-                          "digital-signage/windows-applications/designer/Page-elements/Picture-element/Introduction"
+                          "digital-signage/windows-applications/designer/Page-elements/Picture-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Picture-element/Playlist-properties"
+                        ]
+                      },
+                      {
+                        "group": "Powerpoint Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Powerpoint-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Powerpoint-element/Playlist-properties"
+                        ]
+                      },
+                      {
+                        "group": "Presentation in page Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Presentation-in-page-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Presentation-in-page-element/Background-color-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Presentation-in-page-element/Playlist-properties"
+                        ]
+                      },
+                      {
+                        "group": "Rich Text Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Rich-text-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Rich-text-element/Playlist-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Rich-text-element/Advanced-rich-text-editor",
+                          "digital-signage/windows-applications/designer/Page-elements/Rich-text-element/Font-dialog-box"
+                        ]
+                      },
+                      {
+                        "group": "RS-232 Communication Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/RS-232-communication-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/RS-232-communication-element/Playlist-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/RS-232-communication-element/Communication-port-settings"
+                        ]
+                      },
+                      {
+                        "group": "Scrolling Text Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Data-scrolling-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Playlist-separator-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Special-rules-for-scrolling-text",
+                          "digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Scroll-direction-&-speed-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Scroll-options-properties" 
+                        ]
+                      },
+                      {
+                        "group": "Shape Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Shape-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Shape-element/Outline-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Shape-element/Shape-properties"
+                        ]
+                      },
+                      {
+                        "group": "Table Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Table-element/Introduction",
+                          {
+                            "group": "Content Properties",
+                            "pages": [
+                              "digital-signage/windows-applications/designer/Page-elements/Table-element/Content-properties/Header-properties",
+                              "digital-signage/windows-applications/designer/Page-elements/Table-element/Content-properties/Row-properties",
+                              "digital-signage/windows-applications/designer/Page-elements/Table-element/Content-properties/Grouping-by-elements-properties",
+                              "digital-signage/windows-applications/designer/Page-elements/Table-element/Content-properties/Background-properties",
+                              "digital-signage/windows-applications/designer/Page-elements/Table-element/Content-properties/Footer-properties"
+                            ]
+                          },
+                          "digital-signage/windows-applications/designer/Page-elements/Table-element/Row-style-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Table-element/Scroll-options-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Table-element/Separator-properties"
+                        ]
+                      },
+                      {
+                        "group": "Text Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Text-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Text-element/Data-source-text-conversion-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Text-element/Playlist-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Text-element/Font-dialog-box"
+                        ]
+                      },
+                      {
+                        "group": "TV Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/TV-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/TV-element/Playlist-properties"
+                        ]
+                      },
+                      {
+                        "group": "Video/Sound Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Playlist-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Fading-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Color-replacement-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Performance-settings-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Video-streams",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Video-streams-on-samsung-SSSP",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Video-streams-URL-editor",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Size-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Slide-show-options-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Speed-ratio-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Video-&-Sound-element/Volume-properties"
+                        ]
+                      },
+                      {
+                        "group": "Web Page Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Behavior-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Playlist-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Proxy-settings-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Authorization",
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Web-page-position-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Refresh-content-properties",
+                          "digital-signage/windows-applications/designer/Page-elements/Web-page-element/Web-page-restriction-properties"
+                        ]
+                      },
+                      {
+                        "group": "PDF Document Reader Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/PDF-document-reader-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/PDF-document-reader-element/Playlist-properties"
+                        ]
+                      },
+                      {
+                        "group": "Zone Viewer Element",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Zone-Viewer-element/Introduction",
+                          "digital-signage/windows-applications/designer/Page-elements/Zone-Viewer-element/Zone-viewer-properties"
+                        ]
+                      },
+                      {
+                        "group": "Custom elements",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Page-elements/Custom-elements/Custom-elements"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Working with Playlists",
+                    "pages": [
+                      "digital-signage/windows-applications/designer/Working-with-playlists/Introduction",
+                      "digital-signage/windows-applications/designer/Working-with-playlists/Managing-playlists",
+                      "digital-signage/windows-applications/designer/Working-with-playlists/External-playlists",
+                      "digital-signage/windows-applications/designer/Working-with-playlists/Viewer-variables"
+                    ]
+                  },
+                  {
+                    "group": "Working with Data Providers",
+                    "pages": [
+                      "digital-signage/windows-applications/designer/Working-with-data-providers/Introduction",
+                      {
+                        "group": "Adding a Data Provider",
+                        "pages": [
+                          "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Adding-a-Data-Provider",
+                          "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Choosing-a-provider-type",
+                          "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/General-provider-settings",
+                          {
+                            "group": "Provider connection settings",
+                            "pages": [
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-.NET-framework-data-provider",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Bluefox-Digital-Signage-content-feed",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Cognimatics-feed",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Database-via-OData",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Database-via-ODBC",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Database-via-OLEDB",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Folder"
+                            ]
+                          }
                         ]
                       }
                     ]

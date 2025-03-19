@@ -1,0 +1,69 @@
+
+**OLEDB (Object Linking and Embedding Database)** is a **generic model** for accessing various **industry-standard databases**. Compared to **ODBC**, OLEDB provides **more functionality** but comes with **higher overhead**.
+
+---
+
+## **Prerequisites**
+Before setting up an **OLEDB connection** in **PADS4**, ensure:
+- The **OLEDB driver** for the required database **is installed** on your system.
+- The **database is accessible** from the **PADS4 Data Server** or **local machine**.
+
+---
+
+## **Steps to Add/Modify an OLEDB Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Follow the steps outlined in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **OLEDB** as the provider type.
+
+### **2. Enter the OLEDB Connection String**
+- Provide the **OLEDB connection string** to establish a link with your database.
+- The format of this string depends on the **OLEDB driver** in use.
+- Visit [www.connectionstrings.com](https://www.connectionstrings.com) for reference.
+
+#### **Example Connection String for Microsoft Access**
+```plaintext
+Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\MyDatabase.accdb;Persist Security Info=True
+```
+- Click **Test** to validate the connection.
+- Click **Next** to proceed.
+
+---
+
+### **3. Select the Data Source**
+- Choose one of the detected data sources:
+  - **Tables**
+  - **Views**
+  - **Stored Procedures**
+- If no predefined data sources are available, choose **SQL Statement** and manually enter an **SQL query**.
+
+#### **Example SQL Query**
+```sql
+SELECT * FROM Customers
+```
+
+**Tip:**  
+Only use **SQL statements** when necessary. Manually written queries need to be validated during execution, which may **affect performance**.
+
+- Click **Next** to continue.
+
+---
+
+### **4. Complete the Setup**
+- Follow the remaining steps in the **Adding a Data Provider** guide.
+- Click **Finish** to save the connection settings.
+
+---
+
+## **Important Considerations**
+- **Ensure Network Access:**  
+  - If using a **PADS4 Data Server**, the **OLEDB driver must be installed** on the **server**, and the database **must be accessible**.
+  - If **not using a Data Server**, ensure that **each PADS4 Viewer and Designer** has the **correct OLEDB driver installed**.
+
+- **Testing the Connection:**  
+  - Use the **Test** button to verify the connection **before proceeding**.
+
+- **Performance Considerations:**  
+  - Use **predefined Tables, Views, or Stored Procedures** for **better performance** instead of raw **SQL queries**.
+
+By following these steps, you can successfully **connect an OLEDB database to PADS4** and retrieve **real-time data** for **digital signage and automated content updates**.

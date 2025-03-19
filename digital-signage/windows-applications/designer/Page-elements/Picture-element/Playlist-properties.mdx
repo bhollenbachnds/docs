@@ -1,0 +1,49 @@
+
+These properties define the **images** that will be displayed by your picture element. You can **add a single image** or create a **playlist of images** that will be shown sequentially.
+
+You can:
+- **Add, edit, reorder, or remove** images in the playlist.
+- Use the **navigation buttons** at the bottom to browse through playlist items.
+- View the **total duration** of all playlist items combined.
+
+---
+
+## **Picture Playlist Item Properties**
+
+### **Type**  
+Defines the **source** of the image. Possible options:
+
+| **Option**                      | **Description** |
+|----------------------------------|----------------------------------------------------------------|
+| **Picture from Content Library** | Reference to an existing **picture file in the PADS4 content library** (recommended). Automatically **synchronized** across all Viewers. |
+| **Picture from File** | Reference to an **image stored outside the content library**. Not synchronized automatically, so you must manually handle file distribution. |
+| **Base64 String** | Used when the image **data is stored in a text-based format (Base64 string)** inside a data provider. **Example:** `"data:image/png;base64,..."` |
+| **Separator** | No image—used to **create a pause** in the playlist. |
+
+---
+
+### **Content**
+Defines the **image source**, depending on the selected **Type**.  
+- If **Picture from File** is chosen, enter the **full file path**.
+- If using **Content Library**, browse and select the image.
+
+---
+
+### **Duration**
+- Specifies how **long** (in seconds) the image will be displayed before moving to the next playlist item.  
+- If an **image is missing**, a blank frame will be shown for the set duration.
+
+---
+
+### **Effect**
+- Select a **transition effect** for each image.
+- Define the **effect duration (in seconds)**.
+
+---
+
+### **Important Notes**
+- **Only references** to images are stored in the presentation, **not the images themselves**.  
+  - If an image file is updated, the presentation will display the latest version.
+- **Playlist properties are disabled** if the element is connected to a **data source**.  
+  - In this case, **image content is determined in real time** by the data source.
+

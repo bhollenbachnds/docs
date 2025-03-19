@@ -1,0 +1,98 @@
+
+**Viewer Variables** enable dynamic content customization by replacing placeholders with real-time values for each **Viewer**. These variables can be used in **text fields, data providers, rules, filters, and other elements**, ensuring that displayed content is specific to each Viewer without requiring separate presentations.
+
+---
+
+## **Managing Viewer Variables**  
+
+### **System Management (Administrator Level)**  
+- Viewer Variables are created in **PADS4 System Management**.  
+- Each variable has a **default value** assigned.  
+- These variables apply to all Viewers unless overridden.  
+- Users **cannot add or remove variables** through **PADS4 Agent**.  
+
+### **PADS4 Agent (User Level)**  
+- Viewer variables can be **modified** via **PADS4 Agent (Server tab)**.  
+- Changes made here **overwrite** the default values set in **System Management**.  
+
+### **Viewer Options (Local Adjustment)**  
+- The **Viewer Options window** in the **PADS4 Viewer** application allows **local adjustments**.  
+- These changes **override both System Management and PADS4 Agent settings**.  
+
+---
+
+## **Using Viewer Variables**  
+
+### **How Viewer Variables Are Identified**  
+- A Viewer Variable is written as `#VariableName#`.  
+- Example: `#Store Name#`.  
+
+### **Using Viewer Variables in Text Elements**  
+- Example:  
+  - **System Management:** `#Store Name# = New York Health`  
+  - **Text Element:** `Welcome to #Store Name#!`  
+  - **Displayed Output:** `Welcome to New York Health!`  
+
+This method allows **one presentation to be used across multiple locations** while dynamically adjusting text.
+
+---
+
+## **Where Can Viewer Variables Be Used?**  
+
+### **Text-Based Fields**  
+- Playlist text content.  
+- Rule conditions.  
+- Property bindings.  
+- Data provider connections.  
+
+### **Data Providers**  
+- Used in **sorting, filtering, expressions, file references, parameters, SQL queries**.  
+
+### **Automation Use Cases**  
+- **Store Size Filtering:**  
+  - If a store has a **Viewer Variable for size** (`L, XL, XXL`), only products relevant to that size are displayed.  
+- **Location-Based Content:**  
+  - A **GPS-based Viewer Variable** allows **location-specific maps or ads** to be displayed.  
+- **Single Presentation for Multiple Viewers:**  
+  - Instead of creating multiple presentations, **one presentation can be used with Viewer Variables** to change **store names, addresses, or promotions dynamically**.  
+
+---
+
+## **When NOT to Use Viewer Variables**  
+- **For continuous real-time updates** (e.g., rapidly changing stock prices).  
+- In these cases, a **data provider** should be used instead.  
+
+---
+
+## **When Are Viewer Variables Updated?**  
+
+### **Inside the Data Source**  
+- When the **Viewer retrieves data**, the **variables are replaced immediately**.  
+- If the **data provider updates**, the **new values are applied**.  
+
+### **In Data Providers**  
+- If a **Viewer Variable** is used in **filters, sorting, or queries**, it is **replaced at the start of data retrieval**.  
+- If a data provider **updates once per hour**, **Viewer Variables only update after the next read cycle**.  
+
+### **In Presentations**  
+- When a **presentation loads**, **Viewer Variables in elements (text, images, videos) are replaced**.  
+
+### **In Rules**  
+- **Viewer Variables in rules** are replaced **only when the rule is checked**.  
+- **Rule checks do not trigger automatically** if a Viewer Variable changes.  
+
+### **In Property Bindings**  
+- If a **data provider updates on a set interval**, the **newest Viewer Variable values replace the old ones**.  
+- However, changing a Viewer Variable **does not force the data provider to refresh**.  
+
+### **In Playlists**  
+- If the **playlist contains only one item**, the **Viewer Variable is replaced only once** (it does not update).  
+- If **playlist alternation is enabled**, the **Viewer Variable is replaced with new values after each interval**.  
+
+---
+
+## **Key Benefits of Viewer Variables**  
+- **One presentation can be used across multiple locations**, reducing duplication.  
+- **Automated content personalization**, such as store names and locations.  
+- **Works seamlessly with data providers, filters, and rules**.  
+- **Efficient updates without redesigning presentations**.  

@@ -1,0 +1,56 @@
+
+The **separator properties** define how **separators** are displayed between rows in a table. **Separators** can be used to visually indicate **category changes, group transitions, or significant breaks in data** (e.g., **a new day, different department, or category change**).
+
+---
+
+## **Setting Up a Separator**  
+
+### **Add or Modify a Separator**  
+1. Click **Add** to create a new separator or **Edit** to modify an existing one.  
+2. Define the **condition (IF clause)** that determines **when** the separator appears.  
+3. Click **Show Separator (THEN clause)** to design the separator’s visual properties.  
+4. Add **page elements, text, images, or lines** to the separator.  
+5. Click **Close > Yes to Save > OK** to apply the changes.  
+
+---
+
+## **Separator Conditions (IF Clause)**  
+- A separator appears **only if its condition is met** for a specific row.  
+- **Examples of conditions:**  
+  - **Date Change:** Show a separator when the **date** in the next row is different.  
+  - **Category Change:** Display a separator when a **product category** changes.  
+  - **Location Change:** Show a separator when the **location or department name** changes.  
+
+> **Example Use Case:**  
+> - **Event Schedule Table:** Show a separator when moving from **Morning Events to Afternoon Events**.  
+> - **Stock Market Ticker:** Insert a separator when switching from **Tech Stocks to Healthcare Stocks**.
+
+---
+
+## **Managing Multiple Separators**  
+- **Only one separator is applied at a time** based on the first **valid condition**.  
+- The **sequence of separators matters**—the system **checks separators in order** from **top to bottom**.  
+- Use **Move Up / Move Down** to **prioritize separators**.  
+
+---
+
+## **Removing a Separator**  
+- Click **Remove** to delete an existing separator.  
+
+---
+
+## **Important Considerations**  
+- **Row-Based Logic:**  
+  - The separator’s **condition applies to the first row** in a comparison.  
+  - The **row number is determined at runtime**—it **automatically adjusts** as rows are processed.  
+- **Designing the Separator:**  
+  - You can use **text, lines, images, or colored backgrounds** to create a visual break.  
+  - **Align elements horizontally or stack them across two lines** for clarity.  
+  - You **cannot** include **another table element** inside a separator.  
+
+---
+
+## **Dynamic Adjustments**  
+- **Separator Height Adjustments:**  
+  - If any **elements within the separator become invisible**, the system **automatically resizes** the separator height.  
+  - The **width is automatically set** to match the table width.  

@@ -1,0 +1,56 @@
+
+These properties define the **text content** displayed by the **Rich Text** element. You can enter a **single text item** or create a **playlist of text items** that will play sequentially.  
+
+---
+
+### **Advanced Rich Text Editor**  
+- **Basic formatting** (bold, italic, underline, etc.) is available in the toolbar.  
+- To access **advanced features** (data provider integration, rules, and more), click the **Advanced Editor** icon.  
+
+---
+
+### **Managing Playlist Items**  
+- **Add** new text items.  
+- **Edit** existing items.  
+- **Change order** of text items.  
+- **Remove** text items.  
+- **Navigate** through playlist items using the buttons at the bottom.  
+- **Total duration** of the playlist is displayed.  
+
+**Important:** For general playlist management, refer to **Working with Playlists**.  
+
+---
+
+### **Text-Based Playlist Item Properties**  
+
+| **Option**  | **Description**  |
+|-------------|----------------|
+| **Text**  | Static text directly entered into the element. |
+| **Text from Content Library**  | Uses a stored text file from the PADS4 **Content Library** (recommended). |
+| **Text from File**  | References an external text file outside the Content Library. **Not synchronized automatically**—requires manual distribution. |
+| **No Text**  | Inserts a blank entry, creating a pause in the playlist. |
+
+---
+
+### **Content Property**  
+- Displays the **text content** or **text file reference** based on the selected type.  
+- **Browse the Content Library** or **local file system** to select files.  
+- If **Text from File** is chosen, ensure the **full file path** is included.  
+
+---
+
+### **Additional Playlist Properties**  
+
+| **Property**  | **Description**  |
+|--------------|----------------|
+| **Duration**  | Specifies how long the text will be displayed (in seconds). |
+| **Effect**  | Applies an **incoming transition effect** and defines the effect duration. |
+
+---
+
+### **Remarks**  
+- **Multi-line text:** Use the **[Enter] key** to separate lines. Text wrapping in the editor **does not automatically mean** a multi-line display.  
+- **Plain text files:** The **Data Source Text Conversion** settings determine how multi-line text is handled.  
+- **Supported Formats:** The Rich Text element can read **Plain Text (TXT), Rich Text Format (RTF), and HTML**.  
+- **File References Only:** If using external text files, only **references** are stored. If the text file is updated, the **latest version** will be used during playback.  
+- **Data-Driven Content:** When linked to a **data source**, the playlist properties become **disabled**, as real-time data determines content dynamically.  
