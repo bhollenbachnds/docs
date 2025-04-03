@@ -60,6 +60,7 @@
                 "group": "Install PADS4 Viewers",
                 "pages": [
                   "install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-Viewer",
+                  "install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-HTML5-Viewer",
                   "install-pads4/install-pads4-viewer/How-to-install-PADS4-Generic-Android-Viewer"
                 ]
               }
@@ -84,7 +85,7 @@
               {
                 "group": "Google Chrome OS",
                 "pages": [
-                  "certified-devices/chromeos/ChromeOS"
+                  "certified-devices/chromeOS/ChromeOS"
                 ]
               },
               {
@@ -129,14 +130,14 @@
               {
                 "group": "iiyama",
                 "pages": [
-                  "certified-devices/iiyama/54-and-60-series"
+                  "certified-devices/iiyama/54-and-60-Series"
                 ]
               },
               {
                 "group": "LG",
                 "pages": [
-                  "certified-devices/lg/WebOS-6",
-                  "certified-devices/lg/WebOS-4.1"
+                  "certified-devices/lg/webOS-6",
+                  "certified-devices/lg/webOS-4.1"
                 ]
               },
               {
@@ -267,32 +268,19 @@
             "group": "Getting Started",
             "pages": [
               "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
-            ]
-          },
-          {
-            "group": "PADS4 Ctrl Centre",
-            "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/digital-signage/components"
             ]
           },
           {
             "group": "PADS4 Web Designer",
             "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/digital-signage/web-designer/introduction"
             ]
           },
           {
             "group": "PADS4 CMS",
             "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/digital-signage/cms/introduction"
             ]
           },
           {
@@ -720,11 +708,189 @@
                               "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Database-via-OData",
                               "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Database-via-ODBC",
                               "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Database-via-OLEDB",
-                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Folder"
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Folder",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Facebook",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Flickr-feed",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-FTP-Folder",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Genesys",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Google-Workspace-Calendar",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Google-Workspace-Sheets",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-an-Instagram-feed",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-an-Intel-AIM-Device",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Invue-POD",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-JSON-Feed-or-File",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-legacy-JSON-Feed",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-legacy-JSON-File",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-media-RSS-feed",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-media-RSS-file",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Microsoft-Access-Database",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Micorosft-Dynamics-CRM",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Micorosft-LinkedIn",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Micorosft-Teams",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Office-365-Excel",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Office-365-Exchange",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Micorsoft-Excel-Sheet",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Micorsoft-Exchange-Server",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Micorsoft-Exchange-Server-Calendar-Table",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Microsoft-Sharepoint",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Microsoft-SQL-Server-CE-Database",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Microsoft-SQL-Server-Database",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Newmarket-Delphi-feed",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-an-OpenOffice-Calc-File",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-Aviavox",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-PADS4FIDS",
+                              "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-to-PADS4-Sensors"
                             ]
                           }
                         ]
                       }
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Scheduler",
+                "pages": [
+                  "digital-signage/windows-applications/scheduler/introduction",
+                  {
+                    "group": "Starting the Scheduler",
+                    "pages": [
+                      "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/starting-the-application",
+                      "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/connecting-to-your-PADS4-server",
+                      "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/logging-on-to-your-PADS4-server",
+                      {
+                        "group": "Specifying connection and log on properties",
+                        "pages": [
+                          "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/connection-properties",
+                          "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/logon-properties"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Main Window",
+                    "pages": [
+                      "digital-signage/windows-applications/scheduler/main-window/overview",
+                      "digital-signage/windows-applications/scheduler/main-window/ribbon-bar",
+                      "digital-signage/windows-applications/scheduler/main-window/selecting-a-date-or-period",
+                      "digital-signage/windows-applications/scheduler/main-window/selecting-a-destination",
+                      {
+                        "group": "Scheduled Presentations",
+                        "pages": [
+                          {
+                            "group": "Views",
+                            "pages": [
+                              "digital-signage/windows-applications/scheduler/main-window/scheduled-presentations/views/table-view",
+                              "digital-signage/windows-applications/scheduler/main-window/scheduled-presentations/views/calendar-view",
+                              "digital-signage/windows-applications/scheduler/main-window/scheduled-presentations/views/combined-view",
+                              "digital-signage/windows-applications/scheduler/main-window/scheduled-presentations/views/zoom"
+                            ]
+                          },
+                          {
+                            "group": "Printing",
+                            "pages": [
+                              "digital-signage/windows-applications/scheduler/main-window/scheduled-presentations/printing/printing-your-scheduled-presentations"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Scheduling Presentations",
+                    "pages": [
+                      {
+                        "group": "Introduction",
+                        "pages": [
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/introduction/scheduling-concepts",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/introduction/content-library",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/introduction/type-of-schedule",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/introduction/priorities",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/introduction/recurrence"
+                        ]
+                      },
+                      {
+                        "group": "Creating Schedules",
+                        "pages": [
+                          {
+                            "group": "Schedule Wizard",
+                            "pages": [
+                              "digital-signage/windows-applications/scheduler/scheduling-presentations/creating-schedules/schedule-wizard/simple-schedule",
+                              "digital-signage/windows-applications/scheduler/scheduling-presentations/creating-schedules/schedule-wizard/playlist-schedule",
+                              "digital-signage/windows-applications/scheduler/scheduling-presentations/creating-schedules/schedule-wizard/advanced-schedule",
+                              "digital-signage/windows-applications/scheduler/scheduling-presentations/creating-schedules/schedule-wizard/applying-recurrence"
+                            ]
+                          },
+                          {
+                            "group": "New Presentation",
+                            "pages": [
+                              "digital-signage/windows-applications/scheduler/scheduling-presentations/creating-schedules/new-presentation/designing-and-scheduling-a-new-presentation"
+                            ]
+                          },
+                          {
+                            "group": "Using Drag & Drop",
+                            "pages": [
+                              "digital-signage/windows-applications/scheduler/scheduling-presentations/creating-schedules/using-drag-and-drop/Drag-&-drop-a-presentation-from-Windows-Explorer"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "group": "Editing Schedules",
+                        "pages": [
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/introduction",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/editing-the-design-of-your-schedule",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/editing-the-timetable-of-your-schedule",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/editing-the-priority-of-your-schedule",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/editing-recurring-schedules",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/editing-a-schedule-belonging-to-another-group",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/editing-the-period-of-your-schedule"
+                        ]
+                      },
+                      {
+                        "group": "Removing Schedules",
+                        "pages": [
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/removing-schedules/removing-a-schedule",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/removing-schedules/removing-a-recurring-schedule"
+                        ]
+                      },
+                      {
+                        "group": "Cut, Copying and Pasting",
+                        "pages": [
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/cut-copy-and-pasting/cutting-,-copying-and-pasting-a-schedule",
+                          "digital-signage/windows-applications/scheduler/scheduling-presentations/cut-copy-and-pasting/cutting-,-copying-and-pasting-a-recurring-schedule"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tools",
+                    "pages": [
+                      "digital-signage/windows-applications/scheduler/tools/graceful-degradation",
+                      "digital-signage/windows-applications/scheduler/tools/options",
+                      "digital-signage/windows-applications/scheduler/tools/synchronization",
+                      "digital-signage/windows-applications/scheduler/tools/check-for-updates",
+                      "digital-signage/windows-applications/scheduler/tools/about"
+                    ]
+                  },
+                  {
+                    "group": "Advanced Features",
+                    "pages": [
+                      "digital-signage/windows-applications/scheduler/advanced-features/working-with-mulitple-windows",
+                      "digital-signage/windows-applications/scheduler/advanced-features/working-with-mulitple-servers"
+                    ]
+                  },
+                  "digital-signage/windows-applications/scheduler/closing-PADS4-Scheduler"
+                ]
+              },
+              {
+                "group": "Agent",
+                "pages": [
+                  {
+                    "group": "Starting PADS4 Agent",
+                    "pages": [
+                      "digital-signage/windows-applications/agent/starting-PADS4-Agent/starting-the-application"
+    
                     ]
                   }
                 ]
@@ -735,9 +901,7 @@
           {
             "group": "PADS4 Data Vaults",
             "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/digital-signage/data-vault/introduction"
             ]
           }
         ]
@@ -748,9 +912,67 @@
           {
             "group": "Getting Started",
             "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/workspace/introduction"
+            ]
+          },
+          {
+            "group": "Workspace Web Application",
+            "pages": [
+              "modules/workspace/workspace-web-application/introduction",
+              "modules/workspace/workspace-web-application/searching-for-a-space",
+              "modules/workspace/workspace-web-application/booking-a-space",
+              "modules/workspace/workspace-web-application/booking-a-common-space",
+              "modules/workspace/workspace-web-application/booking-a-group-workspace",
+              "modules/workspace/workspace-web-application/declaring-remote-work",
+              "modules/workspace/workspace-web-application/reporting-absence",
+              "modules/workspace/workspace-web-application/my-calendar",
+              "modules/workspace/workspace-web-application/searching-for-colleagues",
+              "modules/workspace/workspace-web-application/special-cases",
+              "modules/workspace/workspace-web-application/account-settings",
+              "modules/workspace/workspace-web-application/logging-out",
+              "modules/workspace/workspace-web-application/appendices"
+            ]
+          },
+          {
+            "group": "Workspace Mobile Application",
+            "pages": [
+              "modules/workspace/workspace-mobile-application/introduction",
+              "modules/workspace/workspace-mobile-application/installation"
+            ]
+          },
+          {
+            "group": "Workspace Outlook Plugin",
+            "pages": [
+              "modules/workspace/workspace-outlook-plugin/introduction",
+              "modules/workspace/workspace-outlook-plugin/configuration"
+            ]
+          },
+          {
+            "group": "Workspace Administration",
+            "pages": [
+              "modules/workspace/workspace-admin/introduction",
+              "modules/workspace/workspace-admin/home",
+              "modules/workspace/workspace-admin/rooms",
+              "modules/workspace/workspace-admin/buildings",
+              "modules/workspace/workspace-admin/room-profiles",
+              "modules/workspace/workspace-admin/equipment",
+              "modules/workspace/workspace-admin/defective-equipment",
+              "modules/workspace/workspace-admin/users",
+              "modules/workspace/workspace-admin/room-user-profile",
+              "modules/workspace/workspace-admin/occupancy-sensors",
+              "modules/workspace/workspace-admin/statistics",
+              "modules/workspace/workspace-admin/additional-services",
+              "modules/workspace/workspace-admin/extended-property",
+              "modules/workspace/workspace-admin/welcome-message"
+            ]
+          },
+          {
+            "group": "Workspace CMS Administration",
+            "pages": [
+              "modules/workspace/workspace-cms-admin/introduction",
+              "modules/workspace/workspace-cms-admin/users",
+              "modules/workspace/workspace-cms-admin/profiles",
+              "modules/workspace/workspace-cms-admin/plugins"
             ]
           }
         ]
@@ -761,9 +983,19 @@
           {
             "group": "Getting Started",
             "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/fids/introduction",
+              "modules/fids/installation",
+              "modules/fids/Starting-the-FIDS-Operator",
+              "modules/fids/server-settings",
+              "modules/fids/setup-a-SQL-server-failover",
+              {
+                "group": "SQL Server",
+                "pages": [
+                  "modules/fids/sql-server/Create-the-database-manually-with-Microsoft-SQL-Server-Management-Studio",
+                  "modules/fids/sql-server/Create-the-database-manually-with-Powershell",
+                  "modules/fids/sql-server/Create-the-database-manually-with-SQL-Statements"
+                ]
+              }
             ]
           }
         ]
@@ -774,9 +1006,10 @@
           {
             "group": "Getting Started",
             "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/visitor-management/introduction",
+              "modules/visitor-management/home-and-creating-users",
+              "modules/visitor-management/archive",
+              "modules/visitor-management/settings"
             ]
           }
         ]
@@ -787,9 +1020,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "modules/digital-signage/introduction",
-              "modules/digital-signage/components",
-              "modules/digital-signage/licenses"
+              "modules/legacy-cms/introduction"
             ]
           }
         ]

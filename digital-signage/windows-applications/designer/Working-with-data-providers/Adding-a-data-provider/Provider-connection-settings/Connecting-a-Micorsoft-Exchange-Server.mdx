@@ -1,0 +1,117 @@
+
+The **Microsoft Exchange Server** provider in **PADS4** allows you to connect to **Microsoft Exchange Servers** (Office 2010 or 2007 SP1) to retrieve **calendar, inbox, or contacts** data.
+
+---
+
+### **Steps to Add or Modify a Microsoft Exchange Server Connection**  
+
+#### **1. Start the Data Provider Wizard**  
+- Open the **Data Provider Wizard** in **PADS4**.  
+- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.  
+- Select **Microsoft Exchange Server** as the **provider type**.  
+
+---
+
+#### **2. Configure Connection Settings**  
+
+- **Select the Microsoft Exchange Server Version**  
+  - Choose the appropriate **Exchange Server version** from the available options.
+
+- **Choose Automatic or Manual Configuration**  
+  - **Automatic**:  
+    - Enter the **E-mail Address** of a valid **Exchange account**.  
+  - **Manual**:  
+    - Enter the **Exchange Server URL** to establish a connection.  
+
+  **Example URL:**  
+  ```
+  https://YourSmallBusinessServer/EWX/Exchange.asmx
+  ```
+
+- **Enter Login Credentials**  
+  - Provide a **User Name, Password, and Domain** of a valid Exchange Server account.  
+
+- **Access Other User Mailbox (Optional)**  
+  - Enter an **E-mail Address** to retrieve data from another user’s mailbox.  
+
+- **Impersonate Another User (Optional)**  
+  - Enter an **E-mail Address** to impersonate a different user.  
+
+Click **Next** to continue.  
+
+---
+
+#### **3. Select Data Source to Connect To**  
+
+- **Calendar**  
+  - Retrieves calendar data.  
+  - Optionally, enable **Include Message Text** to retrieve event details.  
+  - *Note:* Retrieving the message body **may cause performance issues**.  
+
+- **Inbox**  
+  - Retrieves emails from the **Inbox**.  
+  - Optionally, specify:  
+    - A specific **(sub)folder** to retrieve emails from.  
+    - **Include Message Text** (for email body).  
+
+- **Contacts**  
+  - Retrieves the contact list from the Exchange account.  
+
+- **Public Folders**  
+  - Access **public folders** used for shared information within an organization.  
+  - *Note:* Public folders do not have an **SMTP address** and are accessed via the **EWS API**.  
+
+- **Resource Calendar**  
+  - Retrieves **room and meeting** resource data.  
+  - Specify **one or more e-mail addresses** to access multiple resource calendars.  
+  - Optionally, enable **Include Message Text** to retrieve details.  
+
+- **User Availability**  
+  - Retrieves the **free/busy status** of users.  
+  - Specify **one or more e-mail addresses** to get merged availability data.  
+
+---
+
+#### **4. Set the Time Range for Data Retrieval**  
+
+- **Today**  
+  - Retrieves data from **today’s** schedule.  
+  - Optionally, apply an **offset** in days.  
+
+- **Now**  
+  - Retrieves data from the **current date and time**.  
+  - Optionally, specify an **offset before or after** the current time.  
+
+- **Date and Time**  
+  - Retrieves data for a **fixed period**.  
+
+- **Predefined**  
+  - Select a predefined period:  
+    - **This Week**  
+    - **Next Week**  
+    - **This Month**  
+
+**Important Note:**  
+- Retrieving data for **long periods** may cause **performance issues** due to large amounts of stored data.  
+- Use **filters** or **limit the number of rows** to prevent excessive data retrieval.  
+
+Click **Next** to continue.  
+
+---
+
+#### **5. Complete the Setup**  
+- Follow the remaining steps in the **Data Provider Wizard**.  
+- Click **Finish** to finalize the setup.  
+
+---
+
+### **Additional Notes**  
+
+- **Using a PADS4 Data Server?**  
+  - Ensure that the **Exchange Server URL** is **accessible from the PADS4 Server**.  
+
+- **Not Using a PADS4 Data Server?**  
+  - Make sure **PADS4 Designer** (for previewing) and all **PADS4 Viewers** can access the Exchange Server.  
+
+- **Avoid Large Data Loads**  
+  - When retrieving **long periods of data**, use filters to limit memory usage.  

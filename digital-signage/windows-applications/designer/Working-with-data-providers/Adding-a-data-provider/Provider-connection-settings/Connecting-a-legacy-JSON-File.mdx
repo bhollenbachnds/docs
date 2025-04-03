@@ -1,0 +1,51 @@
+
+JSON (**JavaScript Object Notation**) is a widely used format for **storing and exchanging structured data**. In **PADS4**, JSON files can be used as **data sources** for real-time digital signage content.
+
+---
+
+### **Steps to Add or Modify a JSON File Connection**
+#### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** using the instructions in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **JSON File** as the provider type.
+
+---
+
+#### **2. Specify the JSON File Location**
+- **Content Library** → Select this option to use a JSON file stored in the **PADS4 Content Library**.
+- **File Name** → Choose this option to use a JSON file located **outside the content library**.
+- Use the browse function to locate and select the desired JSON file.
+
+**Recommendation**:  
+If **not using a PADS4 Data Server**, it is best to store JSON files in the **PADS4 Content Library**. This ensures **automatic synchronization** across all connected computers. If a JSON file is **outside the library**, file distribution must be managed manually.
+
+---
+
+#### **3. Configure Text Encoding**
+- If the JSON file **requires a specific text encoding format**, select the appropriate option.
+
+---
+
+#### **4. Configure Data Formatting**
+- **Flatten Hierarchical Data** → If the JSON structure contains multiple levels, this option **flattens nested data** into a tabular format.
+- **Include Parent Levels Column Names** → Appends parent-level names for **clearer hierarchical representation**.
+- **Create Additional Columns Without HTML Tags** → Removes HTML tags from text fields and **converts them to plain text**.
+
+Proceed to the next step.
+
+---
+
+#### **5. Finalizing the JSON File Setup**
+- Complete the data provider setup.
+
+---
+
+## **Important Considerations**
+- **Using PADS4 Data Server**  
+  - If a **PADS4 Data Server** is in use, ensure that the JSON file **is accessible** from the **server's point of view**.
+  - If **not using a Data Server**, confirm that **PADS4 Designer and PADS4 Viewers** can access the specified JSON file location.
+
+- **Handling Hierarchical JSON Data**  
+  - If the JSON structure contains multiple levels, enabling **Flatten Hierarchical Data** ensures better compatibility.
+
+By following these steps, **PADS4 can seamlessly integrate and display JSON-based data** within digital signage presentations.
+

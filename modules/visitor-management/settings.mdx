@@ -1,0 +1,81 @@
+The **Settings** tab in the PADS4 Visitor Management System allows you to customize the user experience, badge appearance, kiosk behavior, and system integrations. It is the central location for configuring the operational and visual aspects of your visitor check-in process.
+
+---
+
+## Badge Design
+
+You can design a custom ID badge that matches your organization’s branding.
+
+### Badge Customization Options:
+
+- **Company Logo**  
+  Upload a logo (recommended size: **300x300 px**) to appear on the badge.
+
+- **Brand Colors**  
+  Select your **primary and secondary colors** to reflect your corporate identity.
+
+- **Font Selection**  
+  Choose from standard **Google Fonts** to style your badge text.
+
+### Badge Preview & Printing:
+
+- Use the **Preview** button to view your design in real time.  
+- You can **download the badge as an image** or **print it as a PDF**.  
+- The badge will automatically scale based on your printer settings.  
+  > Be sure your **printer or badge printer** is configured properly via the Windows print settings.
+
+---
+
+## Kiosk and Workflow Configuration
+
+Within the Settings tab, you can also define how the **VMS Kiosk** behaves during check-in.
+
+### Available Options:
+
+- **Two-Step Verification**  
+  Requires visitors to check in at the kiosk even after pre-registration.
+
+- **Mandatory Company Documents**  
+  Attach documents visitors must **read and agree to** before entering (e.g., NDAs, safety policies).
+
+- **Decline Terms Message**  
+  Add a **custom message** for users who decline terms and conditions.
+
+- **Auto-Archive**  
+  Automatically archive a visitor after a selected number of days post check-out.
+
+- **Include Terms in Email**  
+  Embed company documents directly into the **pre-registration email** for review ahead of time.
+
+- **Show Virtual Keyboard**  
+  Enable an **on-screen keyboard** during kiosk check-in (recommended for touchscreen displays).
+
+- **Time Zone Selection**  
+  Choose the **default time zone** for the VMS system and all email communications.
+
+---
+
+## API Keys and Integration
+
+An **API authentication key** is generated here for use in **PADS4 Designer**.
+
+### To connect to VMS data via the JSON Dataprovider:
+
+1. Open the JSON Dataprovider’s **Advanced Connection Settings**  
+2. Navigate to **Headers > Add**  
+3. Configure the following header:
+
+- **Custom Header**:  
+  ```
+  x-apikey
+  ```
+
+- **Value**:  
+  ```
+  #your API Key#
+  ```
+
+> For detailed API documentation, access your system's Swagger page:  
+```
+http://<servername>:<portnumber>/rdx/NDS.Visitor.Management/swagger/index.html
+```

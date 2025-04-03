@@ -1,0 +1,44 @@
+
+The **OpenOffice** provider in **PADS4** allows you to connect to **OpenOffice Calc files (.ods)** to retrieve and display spreadsheet data.
+
+---
+
+### **Steps to Add or Modify an OpenOffice File Connection**
+
+#### **1. Start the Data Provider Wizard**
+- Open **PADS4** and navigate to the **Data Provider Wizard**.
+- Select **OpenOffice File** as the **provider type**.
+- Click **Next** to continue.
+
+#### **2. Specify the File Location**
+- Choose where the file is stored:
+  - **Content Library** – Recommended, as it **automatically synchronizes** across all PADS4-connected devices.
+  - **File Name** – Select an OpenOffice file outside the content library *(you will need to manually manage distribution)*.
+- Click **Browse** to locate the file, or manually enter the full path.
+- Click **Next** to continue.
+
+#### **3. Select the Sheet**
+- Choose the **specific sheet** from the OpenOffice Calc file.
+- Click **Preview** to check if the data is correctly loaded.
+- Click **Next** to continue.
+
+#### **4. Complete the Setup**
+- Review the connection settings.
+- Click **Finish** to save the data provider.
+
+---
+
+### **Important Notes**
+- **Performance Considerations**:
+  - Using an **external OpenOffice file** *(outside the Content Library)* requires **manual file distribution**.
+  - If the OpenOffice file is large, ensure **PADS4 has enough resources** for processing.
+- **Security & Accessibility**:
+  - If you are using a **PADS4 Data Server**, the file **must be accessible** from the server’s location.
+  - Without a PADS4 Data Server, ensure **each PADS4 Viewer** can locate and access the specified OpenOffice file.
+- **Offline Usage**:
+  - You can **download** data from an **RSS feed** and save it as an **OpenOffice Calc file** for offline access.
+  - To do this, open the **RSS feed in a browser**, select **View Source**, and save it as a **.txt or .csv file** before importing into OpenOffice.
+
+---
+
+This setup ensures **real-time or scheduled access** to **OpenOffice Calc data** within **PADS4**, making it useful for **dynamic presentations, data visualization, and reporting**.

@@ -1,0 +1,51 @@
+This section provides SQL-based instructions for manually creating the **PADS4FIDS** database using your preferred SQL client (e.g., SQL Server Management Studio, Azure Data Studio, etc.).
+
+> **Note:** Execute the following SQL commands using an account with **sysadmin privileges** on the SQL Server.
+
+---
+
+## **SQL Script**
+
+```sql
+USE [master];
+GO
+
+-- Step 1: Create login for NT AUTHORITY\SYSTEM if it does not exist
+IF NOT EXISTS (
+    SELECT * FROM [master].[sys].[server_principals]
+    WHERE name = 'NT AUTHORITY\SYSTEM'
+)
+BEGIN
+    CREATE LOGIN [NT AUTHORITY\SYSTEM] FROM WINDOWS;
+END
+GO
+
+-- Step 2: Create the PADS4FIDS database if it doesn't exist
+IF DB_ID('PADS4FIDS') IS NULL
+BEGIN
+    CREATE DATABASE [PADS4FIDS];
+END
+GO
+
+-- Step 3: Grant db_owner role to NT AUTHORITY\SYSTEM on PADS4FIDS
+USE [PADS4FIDS];
+GO
+
+IF IS_ROLEMEMBER('db_owner', 'NT AUTHORITY\SYSTEM') = 0
+BEGIN
+    EXEC sp_addrolemember 'db_owner', 'NT AUTHORITY\SYSTEM';
+END
+GO
+```
+
+---
+
+## Result
+
+After running this script:
+
+- The **NT AUTHORITY\SYSTEM** login is created if not already present  
+- The **PADS4FIDS** database is created if it does not exist  
+- The login is assigned **db_owner** rights on the newly created database  
+
+The system is now ready to connect PADS4FIDS to this database during configuration.

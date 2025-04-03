@@ -1,0 +1,68 @@
+
+The **Facebook provider** in **PADS4** allows you to **connect to a Facebook Business Page** and retrieve content using the **Facebook Graph API (v15.0)**.
+
+### **Requirements**
+- A **Facebook/Meta Business Page**.
+- A valid **Facebook account** with access to the page.
+- **Internet access** for authentication and data retrieval.
+
+---
+
+## **Steps to Add/Modify a Facebook Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** by following the instructions in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Facebook** as the **provider type**.
+
+### **2. Authenticate Your Facebook Account**
+- Click **Authenticate** to open the **Facebook login page**.
+- Enter your **credentials** and click **OK**.
+- PADS4 will generate a **token** and automatically close the window.
+- The **expiration date** of the token will be displayed.
+
+**Important Notes on Authentication:**
+- Each time you edit the **Facebook Data Provider**, you must **re-authenticate**.
+- If the **credentials are saved** in the browser, the process will be **automatic**.
+- The **token is valid for 60 days** and is **automatically extended** as long as it is used within that time.
+- If the **token expires**, Facebook will **no longer return data**, and you must **re-authenticate manually**.
+
+### **3. Select the Facebook Account and Page**
+- **Choose the account type**:
+  - **My account** (retrieves data from your own Facebook account).
+  - **Page** (retrieves data from a **Facebook Business Page**).
+- If selecting a **Page**, enter the **Page ID** (recommended) or select it from the list.
+
+**Important:**  
+- The **Page ID number** is found under the **Page Name** in **Facebook settings**.  
+- **Album names in Facebook are not unique**—PADS4 will select the **first matching album name**.
+
+### **4. Load Page Details and Specify Content Source**
+- Click **Load** to retrieve **page-specific details**.
+- Choose the type of **content to retrieve**:
+  - **Photos** (you can specify an album).
+  - **Other Facebook content** (such as posts or events).
+- **Limit the number of rows returned** for **better performance**.
+
+### **5. Finalize the Connection**
+- Click **Next** to proceed.
+- Complete the wizard as described in **Adding a Data Provider**.
+
+---
+
+## **Best Practices**
+- **Use the Page ID** instead of the **Page Name** to ensure the correct page is selected.
+- **Keep the authentication active** by ensuring the **data provider is used at least once every 60 days**.
+- **Limit the number of rows** for **faster data retrieval** and **better performance**.
+
+---
+
+## **Important Considerations**
+- **Token Expiration:**  
+  - Facebook authentication tokens **expire after 60 days**.  
+  - If a **presentation** is **not used for more than 60 days**, **re-authentication** is required.
+
+- **Data Server Access:**  
+  - If using a **PADS4 Data Server**, ensure that **Facebook is accessible** from the **server's point of view**.  
+  - If **not using a Data Server**, verify that each **PADS4 Designer and Viewer** has an **active internet connection**.
+
+By following these steps, you can successfully **connect PADS4 to Facebook** and **display dynamic social media content** in your **digital signage presentations**.

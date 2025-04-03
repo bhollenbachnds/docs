@@ -1,0 +1,55 @@
+# Plugins Overview
+
+The **Plugins** section allows you to configure essential system integrations that enhance the functionality of the PADS4 Workspace and CMS modules. Below is an overview of the available plugin options and their purposes.
+
+---
+
+## Active Directory
+
+Use this plugin to connect an **Active Directory (LDAP)** server to your PADS4 environment.
+
+![Active Directory Settings](/mnt/data/image.png)
+
+- Enter your **LDAP server**, **username**, and **password** to establish a secure connection.
+- Once connected, you can import users from Active Directory directly through the **Users** tab in each module.
+
+---
+
+## SMTP
+
+This section allows you to set up the **SMTP (Simple Mail Transfer Protocol)** server credentials to enable the platform to send:
+
+- **Email alerts**
+- **Automated reports**
+
+You must specify the email address that will be used as the sender on behalf of the platform.
+
+---
+
+## Single Sign-On (SSO)
+
+Configure a connection to either:
+
+- **Azure Active Directory**
+- **Active Directory Federation Services (ADFS)**
+
+This enables **Single Sign-On (SSO)** capabilities, allowing users to authenticate using their Windows credentials.  
+> **Note:** You will need to create and configure the appropriate groups within your identity provider to manage access permissions effectively.
+
+---
+
+## Calendar Integration
+
+This plugin links the **PADS4 Workspace** module to your organization's calendar system. This enables the system to:
+
+- Retrieve **meeting and resource booking information**
+- Display real-time **calendar availability**
+- Import resources such as meeting rooms and shared spaces
+
+### Supported Calendar Systems:
+
+- Microsoft Exchange 365  
+- Microsoft Exchange On-Premises  
+- Google Calendar  
+- iPorta Calendar
+

@@ -1,0 +1,74 @@
+When PADS4 is initially installed, activation is completed using the **PADS4 License Wizard**. This process generates a **hardware-bound product key**, which is verified against your system’s hardware profile.
+
+---
+
+## Graceful Degradation Period: 7 Days
+
+If **hardware changes** are detected (e.g., replacement of the network adapter or changes in system identifiers), PADS4 enters a **graceful degradation period**.
+
+- **Duration**: 7 days
+- During this time, the system **continues to function normally**
+- A **warning message** is displayed during login for the following applications:
+  - PADS4 Agent
+  - PADS4 Messenger
+  - System Management
+  - Scheduler
+  - Designer
+
+> You can configure an alert within the **PADS4 Agent** to notify administrators via email when hardware changes are detected and reactivation is required.
+
+---
+
+## Reactivating the PADS4 Server
+
+To prevent PADS4 from shutting down after the 7-day grace period, follow these steps:
+
+### Step-by-Step Reactivation Process:
+
+1. **Contact your reseller** to report the hardware change and request reactivation.
+   - Provide your **PADS4 product key**.
+2. The reseller will contact **Net Display Systems** to verify your license and authorize reactivation.
+3. You will receive an **email confirmation** once your license has been approved for reactivation.
+
+### Reactivation via License Wizard:
+
+1. Launch the **License Wizard** on the PADS4 Server.
+2. Select the **Server** and click **Next**.
+3. Review the current license details and click **Next** again.
+4. In the **Select an Action** window, choose:
+   - **Reactivate current installation**
+5. The wizard will connect to the PADS4 License Server to verify your key.
+6. Upon successful validation, the hardware profile is reset, and the degradation period ends.
+
+> Note: An **internet connection** is required for online reactivation.
+
+### Offline Activation:
+
+If your server does not have internet access:
+- Select **Activate installation offline** in the License Wizard
+- Follow the guided instructions to complete activation manually
+
+[Click here to open the Net Display Systems Zendesk article for offline activation](#)
+
+---
+
+## Best Practices and Recommendations
+
+- **PADS4 will stop working** after 7 days if the reactivation is not completed.
+- If running on a **virtual machine**, ensure the **MAC address is fixed** to avoid unintended hardware changes.
+- Avoid enabling or sharing **Bluetooth devices** on virtual machines, as this may trigger a hardware change detection.
+- Use **email alerts** via the PADS4 Agent to stay informed about pending reactivation requirements.
+
+---
+
+## What Triggers a Hardware Change Detection?
+
+PADS4 compares several hardware identifiers to the original activation data. If any of the following change, a reactivation may be required:
+
+- Operating System
+- Processor ID
+- OS Installation Date
+- OS Serial Number
+- BIOS Serial Number and Version
+- Network Adapter and MAC Address
+- Windows Activation Code

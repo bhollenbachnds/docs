@@ -1,0 +1,51 @@
+
+PADS4 Sensors data provider allows you to retrieve all camera-related information registered on the PADS4 Server. Use the PADS4 CTRL Center to add Sensors to PADS4.
+
+### Steps to Add or Modify a Sensor Data Provider
+
+#### 1. Start the Data Provider Wizard
+- Open the **Data Provider Wizard** in **PADS4**.
+- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **PADS4 Sensors** as the **provider type**.
+
+---
+
+#### 2. Configure Sensor Information Settings
+- **Select the type of information to retrieve:**
+  - **Events**: Real-time data provided by the sensor.
+  - **Incidents**: Notifications triggered when a predefined condition is met.
+  - **Areas**: Real-time data on the number of people in an area.
+  - **Statistics**: Statistical insights on incidents and areas.
+
+---
+
+#### 3. Configure Data Retrieval Options
+
+- **If Events is selected:**
+  - Choose the specific event type you want to retrieve.
+  - Not all cameras support all event types; verify compatibility with your camera.
+  
+- **If Incidents is selected:**
+  - Set a filter to retrieve incidents from the last **x** seconds.
+  - Optionally, select a specific area to filter incidents.
+
+- **If Areas is selected:**
+  - Retrieve real-time occupancy data for a specified area.
+
+- **If Statistics is selected:**
+  - Select the **view type** (day, week, or month).
+  - Define the **time period** for data retrieval.
+
+---
+
+#### 4. Finalize the Setup
+- Complete the remaining steps in the **Data Provider Wizard**.
+- Click **Finish** to finalize the setup.
+
+---
+
+### Additional Notes
+- **Check camera compatibility**: Not all sensors support all functions. Refer to the **Certified Sensors** page for details.
+- **Use filters**: Setting filters optimizes data retrieval and minimizes unnecessary data load.
+- **Verify access permissions**: Ensure proper authorization and connectivity settings to retrieve sensor data successfully.
+

@@ -1,0 +1,69 @@
+
+The **Aviavox provider** in **PADS4** enables integration with the **Aviavox Artificial Voice System**, allowing real-time automated voice announcements.
+
+---
+
+### **Steps to Add or Modify an Aviavox Connection**
+
+#### **1. Start the Data Provider Wizard**
+- Open **PADS4** and navigate to the **Data Provider Wizard**.
+- Select **Aviavox** as the **provider type**.
+- Click **Next** to continue.
+
+#### **2. Configure the Aviavox Connection Settings**
+- Enter the **Server IP Address** where the **Aviavox server** is running.
+- Enter the **Port Number** for communication.
+- Select the appropriate **Text Encoding** format.
+- Click **Next** to proceed.
+
+#### **3. Complete the Setup**
+- Review the connection settings.
+- Click **Finish** to save the data provider.
+
+---
+
+### **How Aviavox Works in PADS4**
+- The **Aviavox system** pushes announcements to the **PADS4 Aviavox data provider**.
+- Each message includes **duration**, **language**, **zones**, and **text content**.
+- Once the message is announced, it is **removed from the data provider table**.
+- Multiple messages can be announced **simultaneously** in **different zones**.
+
+---
+
+### **Aviavox Data Structure**
+| **Column Name**       | **Description** |
+|----------------------|--------------------------------------------|
+| **ID** | Unique message identifier |
+| **Language** | Language of the message (e.g., `En`, `Fr`) |
+| **Text** | Announcement message |
+| **Duration** | Time required to announce the message (in seconds) |
+| **Zones** | Comma-separated list of zones where the message will be announced |
+| **Description** | Additional details about the announcement |
+| **TextPlaylistitem** | Text announcement in PADS4 playlist structure |
+| **DescriptionPlaylistitem** | Description in PADS4 playlist structure |
+
+---
+
+### **Example of an Aviavox Message Structure**
+```xml
+<Announcements>
+  <Announcement>
+    <ID>G01En,DuDBA 8420EE02131649476614</ID>
+    <Text>
+      <LanguageText Language='En' Text='We invite business class passengers to come forward for boarding'/>
+      <LanguageText Language='Du' Text='We nodigen business class passagiers uit naar voren te komen voor het instappen'/>
+    </Text>
+    <Duration>13</Duration>
+    <Zones>A,B</Zones>
+    <Description>Business class boarding</Description>
+  </Announcement>
+</Announcements>
+```
+---
+
+### **Key Considerations**
+- **Real-time updates**: Messages arrive dynamically from **Aviavox** and are removed after playback.
+- **Multi-zone support**: Messages can be played **simultaneously** in different zones.
+- **Language support**: Each message can be **multilingual**, with different translations.
+
+This setup ensures **seamless integration** of **Aviavox voice announcements** into your **PADS4 digital signage system**.

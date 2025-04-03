@@ -1,0 +1,54 @@
+
+The **Google Workspace Calendar** data provider in **PADS4** allows you to retrieve real-time calendar data from **Google Workspace** for digital signage scheduling.
+
+---
+
+## **Steps to Add/Modify a Google Workspace Calendar Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** by following the steps in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Google Workspace Calendar** as the **provider type**.
+
+---
+
+### **2. Authenticate with Google Workspace**
+- Click **Authentication** to open a web browser.
+- **Log in to your Google Workspace account**.
+- Grant **PADS4 access** to retrieve calendar information.
+
+If your network requires a **proxy server**, configure the **Proxy Server settings** for authentication.
+
+Click **Next** to proceed.
+
+---
+
+### **3. Select a Google Calendar**
+- Choose the **Google Calendar** from which you want to retrieve event data.
+- Enable **Group Recurrent Events** if you want to retrieve **only recurring events** instead of each individual instance.
+- **Filter Events (Optional):** 
+  - Enter a **text substring** to filter events based on keywords.
+- **Set the Retrieval Period:**
+  - Select a **specific time range** to fetch calendar events.
+
+Click **Next** to proceed.
+
+---
+
+### **4. Complete the Setup**
+- Click **Finish** to finalize the Google Workspace Calendar connection.
+- The **PADS4 Viewer** will now pull **real-time Google Calendar events** for display.
+
+---
+
+## **Important Considerations**
+- **Ensure Internet Access:**
+  - If using a **PADS4 Data Server**, ensure that the **Google Calendar API** is **accessible** from the server.
+  - If **not using a Data Server**, each **PADS4 Designer and Viewer** must have **direct internet access** to connect to Google.
+- **Google Workspace Permissions:**
+  - The authenticated user must have **sufficient access** to view the selected calendar.
+- **Event Filtering:**
+  - Use the **text substring filter** to show **only relevant calendar entries**.
+- **Handling Recurring Events:**
+  - Enabling **Group Recurrent Events** ensures that **only the main event** is shown, avoiding **duplicate instances**.
+
+By completing these steps, you can successfully integrate **Google Workspace Calendar** with **PADS4** for real-time scheduling and event displays.

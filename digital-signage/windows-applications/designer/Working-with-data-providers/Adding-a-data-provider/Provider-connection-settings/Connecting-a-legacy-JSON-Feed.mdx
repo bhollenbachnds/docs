@@ -1,0 +1,65 @@
+
+**JSON (JavaScript Object Notation)** is a widely used, lightweight format for **data exchange**. PADS4 supports **legacy JSON feed integration**, allowing real-time data retrieval for digital signage presentations.
+
+---
+
+## **Steps to Add or Modify a JSON Feed Connection**
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** by following the instructions in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **JSON Feed** as the provider type.
+
+---
+
+### **2. Specify the JSON Feed URL**
+- Enter the **JSON Feed URI** (URL) pointing to the data source.
+- Click **Preview** to view a sample of the retrieved data.
+
+Click **Next** to proceed.
+
+---
+
+### **3. Choose the Request Method**
+- **GET (default)** → Retrieves data without modifying it.
+- **POST** → Used for sending additional parameters.
+  - If **POST** is selected, enter the **request body** with required parameters.
+
+---
+
+### **4. Configure Data Formatting**
+- **Flatten Hierarchical Data** → Converts **nested JSON structures** into a flat table format.
+- **Include Parent Levels Column Names** → Adds **parent-level identifiers** for hierarchical relationships.
+- **Create Additional Columns Without HTML Tags** → Removes **HTML formatting** and extracts **plain text**.
+
+Click **Next** to proceed.
+
+---
+
+### **5. Configure Security and Authentication**
+- **Authorization (if required)**  
+  - Enable **Authorization Required**.
+  - Enter **UserID, Password, and Domain**.
+  
+- **Proxy Server (if applicable)**  
+  - Configure proxy settings if your network requires authentication.
+
+- **User-Agent Identification**  
+  - If required, specify a **custom User-Agent string** (useful for API access restrictions).
+
+Click **Next** to proceed.
+
+---
+
+### **6. Finalizing the JSON Feed Setup**
+- Click **Finish** to complete the configuration.
+
+---
+
+## **Important Considerations**
+- **PADS4 Data Server**  
+  - If using a **PADS4 Data Server**, ensure the **JSON feed is accessible from the server**.
+  - If not using a Data Server, ensure that both **PADS4 Designer (for previewing) and Viewers** can access the JSON feed.
+
+- **Hierarchical JSON Data Handling**  
+  - If your JSON structure has **multiple levels**, ensure that **Flatten Hierarchical Data** is enabled for a structured output.
+
+By following these steps, **PADS4 can efficiently retrieve and display JSON-based real-time data** within digital signage presentations.

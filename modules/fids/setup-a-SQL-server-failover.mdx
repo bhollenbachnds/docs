@@ -1,0 +1,63 @@
+To ensure high availability and system redundancy, PADS4FIDS supports a **failover configuration** using two PADS4 servers with a shared SQL database and a DNS API switcher.
+
+This setup ensures that if one PADS4 server becomes unavailable, the system can automatically redirect to the secondary server with minimal disruption.
+
+---
+
+## Overview
+
+- **SQL Database**: Hosted on a separate server (not on either PADS4 server)  
+- **Two PADS4FIDS Servers**: Installed on separate machines  
+- **DNS API Switcher**: Automatically redirects traffic between primary and secondary servers  
+- **Unified Access**: Viewers and operators use a common DNS address
+
+---
+
+## Step-by-Step Setup
+
+### Step 1: Prepare the SQL Database
+
+- Set up a **SQL Server** on a dedicated machine in your network.  
+- Follow the standard steps for **creating a PADS4FIDS database** on this server.  
+- Ensure both PADS4 servers will have access to this SQL Server.
+
+---
+
+### Step 2: Install Two PADS4FIDS Servers
+
+- Deploy **two separate PADS4FIDS servers** (on two virtual or physical machines).  
+- These servers will **share the same licensing**, but you must contact the **PADS4 Sales Team** to authorize this configuration.  
+- Refer to the official **PADS4 installation manual** for setup instructions.
+
+---
+
+### Step 3: Install a DNS API Switcher
+
+- Install the **DNS API Switcher** on a machine that is **not one of the PADS4 servers**.  
+- This machine can be the SQL server or another system that can **communicate with both PADS4 servers and all PADS4 Viewers**.  
+- Configure the DNS API Switcher to:
+  - Use the **primary PADS4 server** as the default endpoint
+  - Automatically switch to the **secondary server** if the primary becomes unreachable
+
+---
+
+### Step 4: Configure Viewers and Operator Access
+
+- Configure all **PADS4 Viewers** to use the **DNS address** from the API switcher instead of a fixed server IP.  
+- The DNS address should be entered as the **PADS4 Server IP** in viewer connection settings.  
+- Default ports remain unchanged unless otherwise specified:
+  - **Port 80** (HTTP)
+  - **Port 7237** (PADS4 communication)
+
+- Users accessing the **PADS4FIDS Operator** must also use the **DNS address** to ensure continuity, regardless of which server is active.
+
+---
+
+## Network Diagram
+
+*A network topology diagram would be displayed here, illustrating the relationship between:*
+
+- SQL Server  
+- Primary and Secondary PADS4 Servers  
+- DNS API Switcher  
+- PADS4 Viewers and Operators  

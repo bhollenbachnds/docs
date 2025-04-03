@@ -1,0 +1,44 @@
+When **PADS4 Scheduler** starts, it attempts to establish a connection to a configured **PADS4 Server**. The behavior of the application on startup depends on how the **connection properties** are set.
+
+---
+
+## Connecting for the First Time
+
+If this is the **first time** you are starting PADS4 Scheduler and no connection properties have been configured:
+
+- You will receive a **notification message** prompting you to set up the connection.
+- Click **OK** to open the **PADS4 Server Connections** window.
+- In this window, you can specify the required settings to connect to your PADS4 Server, including server address, port, and credentials.
+
+Once completed and saved, the Scheduler will attempt to establish a connection.
+
+---
+
+## Manual Connection
+
+If you've chosen to **manually manage server connections**, the main window will remain empty on startup.
+
+To manually connect:
+
+### Option 1: Use the Network Connection Button
+
+1. Locate the **network connection button** in the ribbon bar.  
+2. Click it to initiate a connection to the default or previously used server.
+
+### Option 2: Use the Server Connection Split Button
+
+1. Click the **PADS4 Server Connection Split Button** in the ribbon.  
+2. A dropdown list of available server connections will appear.  
+3. Hover over the server you wish to connect to, and click it.  
+4. PADS4 Scheduler will attempt to connect to the selected server.
+
+---
+
+## Automatic Connection
+
+If you've configured **automatic server connection**, PADS4 Scheduler will:
+
+- Attempt to connect to the specified PADS4 Server **immediately on launch**
+- Load the interface once the connection is successful
+
+No additional interaction is required unless the connection fails, in which case you'll be prompted to verify or re-enter connection settings.

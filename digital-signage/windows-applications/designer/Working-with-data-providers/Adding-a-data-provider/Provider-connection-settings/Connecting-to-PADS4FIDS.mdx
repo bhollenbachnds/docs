@@ -1,0 +1,53 @@
+
+The PADS4FIDS provider type enables you to access Flight Information Display System (FIDS) data, stored in the PADS4FIDS product. The PADS4FIDS is a complementary product of PADS4 that can be separately purchased. It can be used to manage and display flight information at your airport, exactly the way you want.
+
+After you have chosen PADS4FIDS as provider type in the data provider wizard of PADS4, you must specify the right settings to connect to the PADS4FIDS system.
+
+To add/modify the PADS4FIDS connection settings of your data provider:
+1. Start the data provider wizard as described in Adding a data provider or Editing a data provider.
+2. Follow the instructions of the wizard until the page where you start specifying the PADS4FIDS connection settings.
+
+Specify the settings required to connect to your PADS4FIDS Server:
+- Enter the name of the Server where the PADS4FIDS server is installed.
+- If the URI is more complex, use the FIDS Server URI to enter the full URI to connect to the PADS4FIDS Server. The default URI is: http://<Server>/PADS4/FIDS/Database
+
+Select which Flight information you want to receive from the dropdown list:
+- Arrivals: All arriving flights
+- Departures: All departing flights
+- Check-in: Service counters
+- Gates: All exits in the terminal for boarding the plane
+- Baggage belts: Baggage claim area
+- Flights (all): All arrival and departure flights, often used for staff information
+
+Specify the Proxy Server settings if the connection runs via a proxy server that requires authentication.
+
+Afterwards, click Next to continue.
+
+Based on your flight information selection, one of the following pages will be displayed:
+- Arrivals
+- Departures
+- Check-Ins
+- Gates
+- Baggage belts
+- Flights (staff)
+
+Click Next to continue.
+
+Select a Period:
+- You may select one of the predefined flight filters to filter the flights returned. Enable the checkbox for the category and choose hide or show based on your needs.
+- These filters are set at the Server side and will decrease the amount of data sent over the network.
+- Specify which Period you would like to use. By default, all the data for today is selected. By using the options, you can select several ways to get data. For example, if you only want the data from the current time and later, select "now" in the "from" part, and "today" for the "until".
+
+To limit the data based on a certain status:
+- Enable the checkbox "Show flights with status" and select the status from the dropdown. The available statuses are retrieved from the FIDS Server.
+- If the flight information for check-ins is selected, you will also have an option to show check-ins with status.
+- If the flight information for arrivals is selected, you will also have an option to only show the arrived flights.
+
+To automatically remove the flight after a period, use the "Hide flights x minutes after actual time of arrival/departure" setting.
+
+Click on Preview to show the data that will be read from the database with the options that are selected.
+
+Afterwards, click Next to continue.
+
+Finish the wizard as described in Adding a data provider.
+

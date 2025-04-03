@@ -1,0 +1,78 @@
+
+The **Office 365 Microsoft Exchange** provider in **PADS4** enables connections to **Exchange Online** (cloud-based). This allows retrieval of data such as **calendars, inbox messages, and user availability**.  
+
+---
+
+### **Steps to Add or Modify an Office 365 Microsoft Exchange Connection**  
+
+#### **1. Start the Data Provider Wizard**  
+- Open the **Data Provider Wizard** in **PADS4**.  
+- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.  
+- Select **Office 365 Microsoft Exchange** as the **provider type**.  
+
+---
+
+#### **2. Configure Connection Settings**  
+
+- **Specify Proxy Settings (If Required)**  
+  - If your organization uses a **proxy server**, enter the required settings.  
+  - Contact your **system administrator** for details.  
+
+- **Authenticate with Microsoft Exchange**  
+  - Click the **Authenticate** button.  
+  - A **Microsoft sign-in page** will open.  
+  - Log in with your **Exchange Online credentials** and authorize **PADS4** to access your environment.  
+  - Once authentication is successful, the **status** will display **successful**.  
+
+- **Reauthentication**  
+  - Each time you edit this **data provider**, you will need to reauthenticate.  
+
+Click **Next** to continue.  
+
+---
+
+#### **3. Choose the Data Source to Retrieve**  
+
+Select the type of **Exchange data** to retrieve:  
+
+| **Option**           | **Description** |
+|----------------------|----------------|
+| **My Calendar** | Retrieves calendar events from your **personal** Exchange calendar. |
+| **Shared Calendar** | Retrieves **shared** calendars by specifying email addresses. Useful for **meeting rooms or group events**. |
+| **User Availability** | Retrieves **free/busy status** for specified users. Useful for **scheduling applications**. |
+| **My Inbox** | Retrieves **emails** from your **personal** inbox. Optionally specify a folder and whether to include **subfolders**. |
+| **Shared Inbox** | Retrieves emails from a **shared** inbox by specifying email addresses. Optionally merge data from multiple inboxes. |
+
+Click **Next** to continue.  
+
+---
+
+#### **4. Configure Data Filtering Options**  
+
+- **Include Message Text**  
+  - Check this option to **retrieve the email body** along with other metadata.  
+
+- **Specify Date Range (From / Until)**  
+  - Use a **static** or **dynamic** period to filter results.  
+  - Reduces **memory usage** and **increases performance**.  
+
+**Note:**  
+If retrieving a **large period of data**, this may cause **high memory usage**. Use filters or set a **maximum number of rows** to avoid excessive data loads.  
+
+Click **Next** to continue.  
+
+---
+
+#### **5. Finalize the Setup**  
+- Complete the remaining steps in the **Data Provider Wizard**.  
+- Click **Finish** to finalize the setup.  
+
+---
+
+### **Additional Notes**  
+
+- If **authentication fails**, ensure that your **Microsoft 365 account** has the necessary **permissions** to access **Exchange Online**.  
+- If **large data sets** are causing performance issues, **limit the time range or the number of rows retrieved**.  
+- If using a **proxy server**, ensure that **proxy settings** are correctly configured.  
+
+This setup allows **PADS4** to retrieve and display real-time **Exchange data** for **emails, calendars, and availability**.

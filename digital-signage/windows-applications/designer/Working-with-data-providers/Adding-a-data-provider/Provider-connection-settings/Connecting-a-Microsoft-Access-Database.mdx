@@ -1,0 +1,64 @@
+
+The **Microsoft Access provider type** allows **PADS4** to connect to **Microsoft Access databases** (**Office 2010 or earlier**).  
+
+---
+
+### **Requirements**  
+- **Office System Drivers**  
+  - If you're using **Windows 7** or certain other Windows versions, you may need to **install the Office System drivers** before connecting to a **Microsoft Access database**.  
+  - These drivers are available **for free** on the **Microsoft website**.  
+
+---
+
+### **Steps to Connect to a Microsoft Access Database**  
+
+#### **1. Start the Data Provider Wizard**  
+- Open the **Data Provider Wizard** by following the instructions in **Adding a Data Provider** or **Editing a Data Provider**.  
+- Select **Microsoft Access** as the **provider type**.  
+
+---
+
+#### **2. Specify the Access Database File Location**  
+- Choose between:  
+  - **Content Library** (Recommended) → Uses a database stored in the **PADS4 Content Library**.  
+  - **File Name** → Uses a database **outside the Content Library** (must specify the full file path).  
+- Click **Browse** to locate and select the **.mdb** or **.accdb** file.  
+
+**For Protected Databases:**  
+- If your database requires authentication, enter the **Login Name** and **Password**.  
+- Click **Test** to verify the connection.  
+
+---
+
+#### **3. Select the Data Source**  
+- Choose the type of data to retrieve:  
+  - **Tables** – Select a table from the dropdown list.  
+  - **Queries** – Select a query that already exists in the database.  
+  - **Parameter Queries** – If your query requires parameters, configure them accordingly.  
+  - **SQL Statement** – Manually enter an **SQL query** (Only use this if no predefined tables or queries meet your needs).  
+
+**Tip:**  
+Using **SQL Statements** may reduce performance since they need to be **validated every time** data is retrieved.  
+
+---
+
+#### **4. Complete the Setup**  
+- Click **Next** to proceed.  
+- Finish the setup by completing the **Data Provider Wizard**.  
+
+---
+
+### **Important Considerations**  
+- **Using a PADS4 Data Server**  
+  - If a **PADS4 Data Server** is in use, ensure that the **Office System drivers** are **installed on the server**.  
+  - The **Access database must be accessible** from the **server’s point of view**.  
+- **Without a PADS4 Data Server**  
+  - Ensure that **PADS4 Designer** (for previewing) and **PADS4 Viewers** have the **Office System drivers installed**.  
+  - Confirm that **each Viewer can access the database**.  
+- **Avoid Using Shared Network Folders**  
+  - **Using a shared network folder** (via a **mapped drive** or **UNC path**) for an **Access database** can cause **high network traffic** whenever data is refreshed.  
+  - It's **recommended** to **store the database in the PADS4 Content Library** or use **a centralized SQL database** for better performance.  
+
+---
+
+By following these steps, PADS4 can successfully connect to a **Microsoft Access database** and retrieve real-time data.

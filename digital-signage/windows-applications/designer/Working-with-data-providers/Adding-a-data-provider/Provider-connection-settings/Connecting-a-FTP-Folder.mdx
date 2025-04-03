@@ -1,0 +1,50 @@
+
+The **FTP folder provider** in **PADS4** allows you to connect to a **remote FTP server** and access its files for use in your **digital signage presentations**.
+
+---
+
+## **Steps to Add/Modify an FTP Folder Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** using the steps in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **FTP Folder** as the **provider type**.
+
+### **2. Specify FTP Server and Connection Settings**
+- **Enter the FTP URL** (e.g., `ftp://yourserver.com/folder/`).
+- **Authentication (if required):**
+  - Enter the **username** and **password** if the FTP server requires login credentials.
+- **Proxy Settings (if needed):**
+  - Configure a proxy server if required for internet access.
+- **Security Options:**
+  - Enable **Use SSL** for secure FTP connections (**FTPS**).
+  - Enable **Passive Mode** if the client needs to use a port above **1024** when connecting to port **21**.
+
+Click **Next** to proceed.
+
+---
+
+### **3. Configure Folder and File Retrieval Settings**
+- **Include Subfolders** if you want to retrieve files from subdirectories.
+- **File Filtering:**
+  - Use **Search Extension Restriction** to filter files by type (e.g., `.jpg`, `.pdf`).
+- **Sorting Options:**
+  - Choose sorting preferences for **file retrieval order**.
+
+Click **Next** to continue.
+
+---
+
+### **4. Complete the Wizard**
+- Click **Finish** to finalize the FTP connection.
+- The **PADS4 Viewer** will now retrieve **files** from the FTP folder in real time.
+
+---
+
+## **Important Considerations**
+- **PADS4 Data Server Access:**
+  - If using a **PADS4 Data Server**, the FTP folder **must be accessible** from the **server's location**.
+  - If **not using a Data Server**, ensure that each **PADS4 Designer and Viewer** has **internet access** to the **FTP folder**.
+- **Sorting Behavior:**
+  - Generic **sorting options** in the **last steps** of the wizard will **override** folder-specific sorting settings.
+
+By following these steps, you can **successfully integrate FTP folder content** into your **PADS4 digital signage presentations**.

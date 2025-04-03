@@ -1,0 +1,47 @@
+
+The **Genesys provider** in **PADS4** allows you to connect to a **Genesys WSDL web service** to retrieve data for **real-time digital signage integration**.
+
+---
+
+## **Steps to Add/Modify a Genesys Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** using the steps in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Genesys** as the **provider type**.
+
+### **2. Configure the Genesys Connection**
+- **Enter the Genesys Server URL** (e.g., `https://yourgenesysserver.com/wsdl`).
+- **Authentication (if required):**
+  - Enter the **username** and **password** if the Genesys web service requires login credentials.
+- **Proxy Settings (if needed):**
+  - Configure a **proxy server** if your network setup requires it.
+
+Click **Next** to proceed.
+
+---
+
+### **3. Configure Genesys Service Settings**
+- Review **service settings** based on your **Genesys documentation**.
+- Select the **relevant data endpoints** to retrieve information.
+
+Click **Next** to continue.
+
+---
+
+### **4. Complete the Wizard**
+- Click **Finish** to finalize the Genesys connection.
+- The **PADS4 Viewer** will now retrieve **real-time data** from the Genesys web service.
+
+---
+
+## **Important Considerations**
+- **Ensure Correct Authentication:**
+  - If credentials are required, make sure you **have the correct access rights** for the Genesys API.
+- **PADS4 Data Server Access:**
+  - If using a **PADS4 Data Server**, the Genesys service **must be accessible** from the **server's location**.
+  - If **not using a Data Server**, ensure that each **PADS4 Designer and Viewer** has **internet access** to the **Genesys web service**.
+- **Follow Genesys API Documentation:**
+  - Some data fields may require **custom query parameters** or **specific API calls**.
+  - Refer to **Genesys documentation** for detailed integration instructions.
+
+By following these steps, you can **successfully integrate Genesys data** into your **PADS4 digital signage presentations**.

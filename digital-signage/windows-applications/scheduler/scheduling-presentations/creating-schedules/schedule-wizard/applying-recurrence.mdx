@@ -1,0 +1,89 @@
+As outlined in the *Recurrence* overview, PADS4 Scheduler allows you to define **repetitive schedules** using customizable recurrence patterns. Recurrence can be applied to **Simple**, **Playlist**, and **Advanced** schedules and ensures that content is shown repeatedly over defined intervals without needing to create duplicate schedules.
+
+---
+
+## Accessing the Recurrence Settings
+
+You can apply recurrence in two ways:
+
+- During schedule creation in the **Schedule Wizard** by clicking the **Recurrence** button.
+- From the **Ribbon Bar** by selecting the **Recurrence** function (see the *Recurrence* topic for details).
+
+Once accessed, the **Recurrence Settings** window will appear.
+
+---
+
+## Recurrence Settings Window
+
+This window is divided into four key sections:
+
+1. **Period**  
+2. **Type**  
+3. **Within One Day**  
+4. **Description**  
+
+Each is described below.
+
+---
+
+### 1. Period: Defining the Time Span
+
+In this section, you set the overall **start and end conditions** of the recurrence pattern.
+
+- **Start Date**: Specifies when the recurrence begins.
+- **End Options**:
+  - **By End Date**: Ends on a specific date.
+  - **By Number of Occurrences**: Ends after a set number of repeats.
+  - **No End Date**: Repeats indefinitely.
+
+---
+
+### 2. Type: Defining the Recurrence Pattern
+
+PADS4 Scheduler offers **four recurrence types**, each with flexible configuration options:
+
+#### **Daily**
+- Repeats every *X* number of days  
+- Optionally, restrict to weekdays only
+
+#### **Weekly**
+- Select specific days of the week (e.g., Mon, Wed, Fri)  
+- Choose the repeat interval in weeks (e.g., every 2 weeks)
+
+#### **Monthly**
+- Two configuration options:
+  - **By Date**: e.g., every 15th of the month  
+  - **By Pattern**: e.g., *Second Tuesday* of every 3 months  
+    - Choose: `first`, `second`, `third`, `fourth`, `last`  
+    - Then select: `day`, `weekday`, `weekend day`, or a specific day (e.g., Monday)
+
+#### **Yearly**
+- Similar to Monthly, with two options:
+  - **By Date**: e.g., March 23rd every year  
+  - **By Pattern**: e.g., *Last Friday* of April  
+    - Define the ordinal, weekday, and month
+
+---
+
+### 3. Within One Day: Time-Based Repetition
+
+This section defines **when during a single day** the content should be displayed:
+
+- **From / Until**: Set the daily time window (e.g., 08:00–18:00)
+
+You can also specify finer granularity within that window:
+
+- **Uninterrupted**: Show continuously within the time window  
+- **Several minutes per hour**  
+- **Several minutes per X minutes**
+
+> This is useful when you want content to appear only at intervals, such as 10 minutes every hour.
+
+---
+
+### 4. Description: Review the Recurrence Summary
+
+The **Description** section dynamically updates as you adjust the settings. It provides a **readable summary** of the recurrence pattern for easy verification.
+
+Example output:  
+*“Occurs every Monday and Wednesday, from 08:00 to 18:00, starting on March 1st, ending after 10 occurrences.”*

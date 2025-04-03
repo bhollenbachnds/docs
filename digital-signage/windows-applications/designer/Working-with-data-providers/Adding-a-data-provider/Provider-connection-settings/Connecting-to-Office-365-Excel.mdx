@@ -1,0 +1,96 @@
+
+The **Office 365 Microsoft Excel** data provider allows **PADS4** to connect to **Excel documents stored in the cloud** via **SharePoint** or **OneDrive for Business**.  
+
+---
+
+### **Steps to Add or Modify an Office 365 Microsoft Excel Connection**  
+
+#### **1. Start the Data Provider Wizard**  
+- Open the **Data Provider Wizard** in **PADS4**.  
+- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.  
+- Select **Office 365 Microsoft Excel** as the **provider type**.  
+
+---
+
+#### **2. Configure Connection Settings**  
+
+- **Specify Proxy Settings (If Required)**  
+  - If your organization uses a **proxy server**, enter the required settings.  
+  - Contact your **system administrator** for details.  
+
+- **Authenticate with Microsoft**  
+  - Click the **Authenticate** button.  
+  - A **Microsoft sign-in page** will open.  
+  - Log in with your **Office 365 credentials** and authorize **PADS4** to access your environment.  
+  - Once authentication is successful, the **status** will display **successful**.  
+
+- **Reauthentication**  
+  - Each time you edit this **data provider**, you will need to reauthenticate.  
+
+Click **Next** to continue.  
+
+---
+
+#### **3. Select the Data Source Location**  
+
+Choose where your **Excel document** is stored:  
+- **SharePoint**  
+- **OneDrive for Business**  
+
+**Note:** If your document is stored **locally**, use the **Microsoft Excel data provider** instead.  
+
+---
+
+#### **4. Connecting to an Excel Document on SharePoint**  
+
+- **Select the SharePoint Site**  
+  - Click the **Browse** button to open a **site selection window**.  
+  - Choose the correct **SharePoint site**.  
+
+- **Select the Document Library**  
+  - The first available library is **selected by default**.  
+  - If needed, choose the correct **library** manually.  
+
+- **Select the Excel File**  
+  - Click **Browse** to locate and select your **Excel document**.  
+
+- **Open Excel Document (Optional)**  
+  - Click **Open Excel document** to preview the file inside a **web browser**.  
+  - Use this preview to confirm **where the data is located** in the spreadsheet.  
+
+Click **Next** to continue.  
+
+---
+
+#### **5. Configure Columns and Data Range**  
+
+- **Specify Column Names**  
+  - If the **column names** are in a specific range, check the box for **Column names range**.  
+  - Enter the **row number** and **column range** containing the column names.  
+  - If left blank, columns will be named **Column1, Column2, etc.**  
+
+- **Select Data Range**  
+  - If data is in a **specific range**, enter the **start row and start column**.  
+  - If left blank, **PADS4** will **automatically detect** the data range.  
+  - Ensure that the **data range does not include column headers**, or they will be treated as data.  
+
+- **Preview Data**  
+  - Click **Preview** to check if the retrieved data is correct.  
+
+Click **Next** to continue.  
+
+---
+
+#### **6. Finalize the Setup**  
+- Complete the remaining steps in the **Data Provider Wizard**.  
+- Click **Finish** to finalize the setup.  
+
+---
+
+### **Additional Notes**  
+
+- If **authentication fails**, ensure that your **Microsoft 365 account** has the necessary **permissions** to access **SharePoint** or **OneDrive for Business**.  
+- If your **Excel sheet changes frequently**, verify that your **data range settings** correctly capture the latest data.  
+- If using a **proxy server**, ensure that **proxy settings** are correctly configured.  
+
+This setup allows **PADS4** to retrieve and display real-time **Excel data** from **Office 365** within your **presentations**.

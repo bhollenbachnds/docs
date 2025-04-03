@@ -1,0 +1,60 @@
+PADS4 Scheduler supports connections to **multiple PADS4 Servers** simultaneously. This feature allows you to view and manage schedules from different servers within a single instance of the application—ideal for environments with distributed or segmented deployments.
+
+---
+
+## Connecting to an Additional PADS4 Server
+
+Assuming you already have one connection active (e.g., **MyPADSServer**), and another server connection has been configured (e.g., **AnotherPADSServer**) via the **Connection Properties** settings:
+
+To establish a connection to a second server:
+
+1. Go to the **Home** tab in the ribbon bar.
+2. In the **Connections** group, click the **Connect** split button.
+3. From the dropdown list, select the additional server connection (e.g., **AnotherPADSServer**).
+
+Once connected, both server connections will appear in the **navigation pane** at the bottom-left of the interface. The newly selected server becomes the **active** server, indicated by:
+
+- Highlighted server name in the navigation pane
+- Display of the server name above the calendar
+- Updated status bar information
+
+> **Note:** Navigation panes are only shown when two or more server connections are active. If only one server is connected, the pane remains hidden.
+
+---
+
+## Viewing Schedules from Multiple Servers
+
+You can now open **separate windows** for different PADS4 Servers and compare schedules side by side.
+
+To do this:
+
+- Use the **New Window** button under the **View** tab (see the *Working with Multiple Windows* section).
+- Assign each window to a different **Destination** on a separate server.
+
+This layout allows simultaneous visibility into schedules from both servers.
+
+---
+
+## Disconnecting from PADS4 Servers
+
+To disconnect from one or more server connections:
+
+### Disconnect a Single Server
+
+1. Go to the **Home** tab.
+2. In the **Connections** group, click the **Disconnect** split button.
+3. Select the specific server connection you wish to disconnect.
+
+This will:
+
+- Close the selected connection
+- Remove its navigation pane
+- Close any windows associated with that server
+
+### Disconnect All Servers
+
+To close all active server connections at once:
+
+- In the **Home** tab, under **Connections**, click **Disconnect All**.
+
+All connected servers and associated windows will be closed.

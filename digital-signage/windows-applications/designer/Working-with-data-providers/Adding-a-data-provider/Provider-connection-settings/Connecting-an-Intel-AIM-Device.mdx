@@ -1,0 +1,74 @@
+
+The **Intel AIM (Audience Impression Metric)** provider in **PADS4** enables the collection of real-time **audience analytics** using **camera-based facial recognition technology**. This allows businesses to gather insights on **gender, age group, viewing duration, and audience engagement**.
+
+---
+
+## **Steps to Add/Modify an Intel AIM Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** using the steps in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Intel AIM** as the **provider type**.
+
+---
+
+### **2. Configure Intel AIM Connection Settings**
+#### **Specify the AIM Software Location**
+- **Version:** Currently, only **version 1** is supported.
+- **Server:** Enter the **network address** (IP address or hostname) of the PC where the AIM software is running.
+- **Port Number:** The **default port** for AIM communication is **12500**.
+
+Click **Test** to verify the connection.
+
+---
+
+### **3. Select Data Collection Mode**
+Choose how the **AIM provider** collects and processes data:
+
+- **Real-time Audience:**  
+  - Retrieves data only for the **current moment**.
+- **Real-time Audience and History:**  
+  - Retrieves **both real-time and historical** data.
+- **Remove Audience Information After a Specific Period:**  
+  - Automatically **deletes data** after a specified **time period**.
+  - This ensures the **data table** remains focused on recent interactions.
+
+⚠ **Note:**  
+If a time period is set, **total audience counts** (e.g., total male viewers) will reflect only the viewers within the **specified timeframe**.
+
+Click **Next** to proceed.
+
+---
+
+### **4. Complete the Setup**
+- Click **Finish** to finalize the Intel AIM connection.
+- The **PADS4 Viewer** will now display real-time **audience analytics**.
+
+---
+
+## **Important Considerations**
+### **High Data Refresh Frequency**
+- To **accurately detect** viewers, set a **high refresh frequency**.
+- A **low refresh rate** may cause **missed detections**.
+
+### **Data Structure Overview**
+Each row of the **Intel AIM data table** represents an individual detected viewer. The system captures details like **gender, age range, timestamp, viewing duration, and position**.
+
+| Column                 | Data Type  | Description |
+|------------------------|------------|------------|
+| **ID**                 | Long        | Unique ID for each viewer. |
+| **Gender**             | Integer     | 0 = Unknown, 1 = Male, 2 = Female |
+| **Age Group**          | Integer     | 0 = Unknown, 1 = Child (<16), 2 = Teen (16-19), 3 = Young Adult (19-34), 4 = Older Adult (34-64), 5 = Senior (>65) |
+| **Timestamp**          | Date        | Date and time of detection. |
+| **Viewing Time (s)**   | Long        | Time spent in front of the camera (seconds). |
+| **Face Width/Height**  | Long        | Size of detected face. |
+| **Total Male Viewers** | Long        | Total males detected. |
+| **Total Female Viewers** | Long      | Total females detected. |
+
+The **most recent viewer** is listed in the **first row**.
+
+---
+
+## **Use Cases**
+- **Retail & Advertising:** Measure **audience engagement** for digital signage.
+- **Events & Exhibitions:** Understand attendee **demographics**.
+- **Security & Analytics:** Improve **crowd monitoring** in public spaces.

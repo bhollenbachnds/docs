@@ -1,0 +1,50 @@
+
+The **Microsoft SQL Server** provider in **PADS4** allows you to connect to a **SQL Server database**, retrieve data, and use it in your presentation.
+
+---
+
+### **Steps to Add or Modify a Microsoft SQL Server Connection**  
+
+#### **1. Start the Data Provider Wizard**
+- Open **PADS4** and go to the **Data Provider Wizard**.
+- Select **Microsoft SQL Server** as the **provider type**.
+- Click **Next** to continue.
+
+#### **2. Specify SQL Server Connection Settings**
+- Enter the **SQL Server Name**:
+  - Manually type the **server name**.
+  - Click the **drop-down button** to scan and select an available server on your network.
+- In the **Logon to the Server** section, choose one of the authentication methods:
+  - **Windows Authentication** *(uses the current user’s credentials)*.
+  - **SQL Server Authentication** *(requires a username and password)*.
+- Click **Next** to continue.
+
+#### **3. Select the Database and Data Source**
+- Choose the **database** from the drop-down list.
+- Select the **data source**:
+  - **Tables** – Retrieve data from a specific table.
+  - **Views** – Use a predefined SQL Server view.
+  - **Stored Procedures** – Execute a stored procedure.
+  - **SQL Statement** – Manually enter a custom SQL query.
+- If using **SQL Statement**, ensure it is optimized for performance.
+
+- Click **Next** to continue.
+
+#### **4. Complete the Setup**
+- **Review** the connection settings.
+- Click **Finish** to save the data provider.
+
+---
+
+### **Important Notes**
+- **SQL Server Authentication**:
+  - If using **Windows Authentication**, ensure the **PADS4 service** has **proper permissions**.
+  - If using **SQL Server Authentication**, use a **secure username and password**.
+- **Optimizing Queries**:
+  - Using **Views** or **Stored Procedures** is recommended for efficiency.
+  - Avoid **complex SQL queries** in **SQL Statements** when possible.
+- **Performance Considerations**:
+  - **SQL Server is optimized** for handling queries internally.
+  - Using a **PADS4 Data Server** may not provide additional benefits.
+
+This setup ensures **PADS4** can efficiently retrieve **real-time SQL Server data**, making it useful for **dynamic presentations, dashboards, and automation**. 

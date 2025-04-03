@@ -1,0 +1,75 @@
+Here’s a structured and professional version of the **PADS4 Server Settings for PADS4FIDS** section, written to match your documentation style:
+
+---
+
+# Configuring PADS4 Server Settings for PADS4FIDS
+
+This section describes how to configure the database settings required for the **PADS4FIDS** product using the **PADS4 System Management** application.
+
+> **Note:** These options are only visible if a valid **PADS4FIDS product license** is installed. If not, the PADS4FIDS configuration will be hidden.
+
+---
+
+## Accessing Server Settings
+
+1. Open the **PADS4 System Management** application.  
+2. Log in using your credentials.  
+3. In the **left-hand panel**, select **Server Settings**.  
+4. Click **Edit** in the **Ribbon bar**.  
+5. Select **PADS4FIDS** from the list of available server settings.
+
+---
+
+## Database Configuration
+
+### Microsoft SQL Server
+
+If the PADS4FIDS database has not yet been created, it can be manually set up using one of the following methods:
+
+- SQL Server Management Studio (GUI-based)  
+- SQL statements  
+- PowerShell script
+
+---
+
+### Server Name
+
+- Choose the SQL Server instance to be used.  
+- When the dropdown is opened, allow a few seconds for the list to populate.
+
+### Authentication
+
+- If **SQL Server Authentication** is selected, provide the **username** and **password**.  
+- Again, allow a few seconds for credential fields to populate if using dropdowns.
+
+### Database Name
+
+- Select or enter the name of the **PADS4FIDS database**.  
+- If the database does not exist, PADS4 will attempt to create it once settings are saved.
+
+> If the selected database is not already a valid PADS4FIDS database, the existing structure will be overwritten and all current data will be deleted.
+
+---
+
+## Flight Remover Settings
+
+These settings control how long operational flight data is retained in the system.
+
+### **Remove Flights After X Days**
+
+- Define the number of days after which completed or expired flights should be deleted from the operational database.
+
+### **Archive Flights on Removal**
+
+- Optionally, specify the name of an **archive database** where old flights should be stored.
+- If no archive is defined, the flights will be **permanently deleted** and cannot be recovered.
+
+---
+
+## Help
+
+Click the **Help** button in the interface to open the **online documentation** for PADS4FIDS Server Settings.
+
+---
+
+Let me know if you'd like this followed by a **FIDS screen layout configuration guide** or a **walkthrough for content design and scheduling**.

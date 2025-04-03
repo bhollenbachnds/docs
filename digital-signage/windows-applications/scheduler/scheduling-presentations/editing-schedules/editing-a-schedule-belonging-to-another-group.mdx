@@ -1,0 +1,43 @@
+In environments with complex **hierarchical Destination structures**, it can be difficult to track where a schedule was originally created—especially when viewing individual **Viewers** within a **Viewer Group**.
+
+To simplify this, **PADS4 Scheduler** provides a quick mechanism to identify and navigate to the **original Destination** where a schedule resides, making editing fast and efficient.
+
+---
+
+## Example Scenario
+
+- A schedule has been created for a **Viewer Group** called **1stFloor**.
+- A **Viewer** named **1stFloorViewer01** is part of this group.
+
+When you select the **1stFloorViewer01** in the **Destinations tree**, you'll see that the **group-level schedule** (from *1stFloor*) is **visible** in the Calendar or Table view.
+
+> You can tell the schedule belongs to a group and **not** the individual Viewer because the schedule **displays the name of the original Destination** in its description (e.g., “1stFloor”).
+
+---
+
+## Attempting to Edit the Schedule
+
+If you attempt to **edit the schedule directly** from the Viewer level (e.g., 1stFloorViewer01), the action will be **blocked**, as the schedule does **not belong** to that Viewer—it belongs to the Viewer Group.
+
+---
+
+## Quickly Navigate to the Correct Destination
+
+To edit the schedule, you must navigate to the **Viewer Group** where the schedule was originally created.
+
+### Steps:
+
+1. **Right-click** the schedule that belongs to another group.
+2. Select **Go to Destination of Schedule** from the context menu.
+
+PADS4 Scheduler will automatically switch the selection to the correct **Viewer Group** (e.g., 1stFloor).
+
+From there, you can:
+
+- **Edit the schedule**
+- **Change its content, destination, time, or priority**
+- **Apply or update recurrence settings**
+
+---
+
+This feature greatly improves efficiency when working in systems with nested or multi-level destination structures, helping ensure changes are made in the right context.

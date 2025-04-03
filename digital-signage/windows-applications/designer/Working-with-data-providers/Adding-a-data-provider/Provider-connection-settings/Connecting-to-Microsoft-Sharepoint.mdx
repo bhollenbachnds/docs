@@ -1,0 +1,52 @@
+
+The **Microsoft SharePoint** provider in **PADS4** allows you to connect and retrieve data from a **SharePoint site, document library, or list**.
+
+---
+
+### **Steps to Add or Modify a Microsoft SharePoint Connection**  
+
+#### **1. Start the Data Provider Wizard**
+- Open **PADS4** and navigate to the **Data Provider Wizard**.
+- Select **Microsoft SharePoint** as the **provider type**.
+- Click **Next** to continue.
+
+#### **2. Specify SharePoint Connection Settings**
+- Enter the **SharePoint URL** to connect to your SharePoint environment.
+- Select the **authentication method** based on your organization's setup:
+
+  | **Authentication Method**          | **Description** |
+  |------------------------------------|----------------|
+  | **SharePoint Online Credentials**  | Requires a **username** and **password**. |
+  | **NTLM Authentication**            | Requires **username, password, and domain**. |
+  | **Basic Authentication**           | No credentials required. |
+  | **Active Directory Authentication (ADAL)** | Authenticate via **Microsoft Active Directory**. |
+
+- If your system uses a **Proxy Server**, specify the proxy settings.
+
+- Click **Next** to continue.
+
+#### **3. Select the Data Source**
+- The **data source** must be a **folder** within SharePoint.
+- Click the **Browse** button to search and select the correct **SharePoint folder**. *(This process may take time depending on the size of the SharePoint environment.)*
+
+#### **4. Apply Optional Filters**
+- **Enable Published Date**: Filter files based on the date they were published.
+- **Select a time period**: Choose the range of files you want to retrieve.
+
+#### **5. Define Data Retrieval Options**
+- **Commonly Used Columns** *(Default)*: Limits the amount of retrieved data by only returning essential columns.
+- **Retrieve All Columns**: Returns **all available columns** (may increase data load).
+- **Add "NoHTML" Columns**: Converts **string-based columns** to **plain text** (removes HTML content).
+
+#### **6. Complete the Setup**
+- Click **Next** to continue.
+- **Finish** the wizard to save the data provider.
+
+---
+
+### **Important Notes**
+- **Supported SharePoint Versions**: Only **SharePoint 2013 and newer** are supported. *(Older versions are not implemented.)*
+- **Performance Considerations**: Selecting **all available columns** may **increase load time** and **data size**.
+- **Proxy Settings**: If your system uses a **proxy server**, ensure that it allows SharePoint connections.
+
+This setup allows **PADS4** to retrieve and use **real-time data from SharePoint** for digital signage, reports, or automation.

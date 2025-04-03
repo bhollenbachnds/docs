@@ -1,0 +1,53 @@
+
+The **Instagram feed** provider in **PADS4** allows you to connect to **Instagram** and retrieve posts, comments, or user-specific content for digital signage.
+
+---
+
+## **Steps to Add/Modify an Instagram Feed Connection in PADS4**
+
+### **1. Start the Data Provider Wizard**
+- Open the **Data Provider Wizard** using the steps in **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Instagram Feed** as the **provider type**.
+
+---
+
+### **2. Authenticate with Instagram**
+- Click the **Authenticate** button to open Instagram's login page.
+- Enter your **Instagram credentials** and complete the **authentication process**.
+- Grant **PADS4 access** to retrieve Instagram data.
+- Once authentication is successful, **PADS4 will generate an access token**.
+
+Close the browser once authentication is complete.
+
+---
+
+### **3. Configure Instagram Feed Settings**
+Choose one of the following options:
+
+- **Popular on Instagram:** Retrieves the **most popular posts** from Instagram.
+- **Search:** Fetches posts related to a **specific keyword or hashtag**.
+- **User Name:** Displays posts from a **specific Instagram user** (must be the exact username).
+- **Get Image Comments:** Retrieves **comments** for a specified **image ID**.
+
+Click **Next** to proceed.
+
+---
+
+### **4. Complete the Setup**
+- Click **Finish** to finalize the Instagram feed connection.
+- The **PADS4 Viewer** will now display **real-time Instagram content**.
+
+---
+
+## **Important Considerations**
+- **Internet Access Required:**  
+  - If using a **PADS4 Data Server**, ensure it has **internet access** to fetch Instagram data.
+  - If **not using a Data Server**, each **PADS4 Designer and Viewer** must be able to connect to Instagram.
+- **Authentication Token Expiry:**  
+  - Instagram authentication tokens **expire periodically** and need **re-authentication**.
+- **Username Matching:**  
+  - When filtering by **user**, you must enter the **exact username** (partial usernames are not supported).
+- **Content Limitations:**  
+  - Instagram’s API restricts access to **private accounts**, so ensure the account you are retrieving data from is **public**.
+
+By following these steps, **PADS4** can successfully retrieve **Instagram content** for real-time display in **digital signage presentations**.

@@ -1,0 +1,43 @@
+In **PADS4 Scheduler**, every scheduled presentation is assigned a **priority**. This priority determines which presentation is displayed in cases where multiple schedules overlap in time for the same destination.
+
+By default, priority levels include **High**, **Medium**, and **Low**, but custom levels can be defined and modified using the **PADS4 System Management** application.
+
+> Access to specific priority levels can also be controlled through **user permissions**.
+
+---
+
+## Priority
+
+- When multiple presentations are scheduled for the **same time period**, the one with the **highest priority** will be shown.
+- Priority is a **required field** when creating a schedule.
+- You can **modify the priority** of a scheduled presentation at any time after creation.
+
+> For example: If a **High priority** presentation overlaps with a **Medium priority** presentation, only the **High priority** content will be displayed.
+
+---
+
+## Sub Priority
+
+If multiple scheduled presentations have the **same priority level** and **overlap in time**, PADS4 uses an internal system called **sub priority** to decide which presentation is shown.
+
+### How Sub Priority Works:
+
+- The **sub priority** is automatically set based on the **creation time** of the schedule.
+- The presentation scheduled **most recently** will have the **highest sub priority** and will be displayed.
+- **Sub priority is not updated** when editing the presentation or schedule. It only reflects the original creation timestamp.
+
+---
+
+## Adjusting Sub Priority
+
+Although sub priority is not directly visible, you can **manually adjust it** using the Scheduler interface.
+
+To change a presentation's importance:
+
+1. Go to the **Home** tab in the Scheduler’s ribbon bar.  
+2. In the **Priority** group, use:
+   - **Increase Priority**: Raises sub priority, giving it preference over others with the same main priority.  
+   - **Decrease Priority**: Lowers sub priority, reducing its chance to override similar-priority presentations.
+
+This allows finer control in scheduling conflicts without changing the main priority level.
+

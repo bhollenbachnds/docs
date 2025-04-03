@@ -1,0 +1,66 @@
+PADS4 Scheduler allows you to use **cut**, **copy**, and **paste** operations on **recurring schedules**, making it easy to move or duplicate them across different **Viewers** or **Viewer Groups**. The behavior of these actions differs slightly from regular (non-recurring) schedules.
+
+---
+
+## Cutting and Pasting a Recurring Schedule
+
+When you **cut and paste** a recurring schedule, a **new schedule** is created at the destination, and the original is removed.
+
+### Steps:
+
+1. In the **Destinations tree view**, select the **Viewer** or **Viewer Group** that contains the recurring schedule.
+
+2. In the **Calendar** or **Table** view, select the recurring schedule.
+
+3. Navigate to the **Home** tab in the ribbon bar and click **Cut** in the **Clipboard** group.
+
+4. A confirmation dialog will appear. Confirm that you want to delete the recurring schedule.
+
+   - The schedule is removed from the original location.
+   - A copy remains in the clipboard, ready to be pasted.
+
+5. Navigate to the new destination and select the desired position.
+
+6. Click **Paste** in the **Clipboard** group.
+
+The recurring schedule is now created as a **new, independent schedule** at the destination.
+
+To confirm:
+- Right-click the pasted schedule
+- Select **Edit > Schedule**
+- The **Edit Schedule** window will show it as a new recurrence definition
+
+---
+
+## Copying and Pasting a Recurring Schedule
+
+When you **copy and paste** a recurring schedule, it creates a **new timetable entry** within the original schedule object, assuming the schedule type supports multiple destinations or time slots (e.g., an Advanced Schedule).
+
+### Steps:
+
+1. In the **Destinations tree view**, select the **Viewer** or **Viewer Group** that contains the recurring schedule.
+
+2. In the **Calendar** or **Table** view, select the recurring schedule.
+
+3. Click **Copy** from the **Clipboard** group in the ribbon bar.
+
+4. Navigate to the new date or Viewer where the schedule should be duplicated.
+
+5. Click **Paste**.
+
+The recurring schedule is now added as a **new entry in the schedule’s timetable**.
+
+To confirm:
+- Right-click the pasted schedule
+- Select **Edit > Schedule**
+- The **Edit Schedule** window will show multiple entries, including the new one
+
+---
+
+## Summary
+
+| Action         | Result                                                        |
+|----------------|---------------------------------------------------------------|
+| Cut + Paste    | Removes original and creates a **new recurring schedule**     |
+| Copy + Paste   | Adds a **new recurring entry** to the **existing schedule**   |
+

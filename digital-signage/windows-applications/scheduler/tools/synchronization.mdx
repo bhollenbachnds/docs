@@ -1,0 +1,84 @@
+When enabled in the **PADS4 Server settings**, content synchronization ensures that the local **Content Library** on your PADS4 Scheduler remains in sync with the central server. This applies to all media types, including PADS4 presentations, video files, images, and other supported content.
+
+PADS4 supports **two-way synchronization**: any changes made locally or on the server—such as adding, editing, or removing content—are automatically or manually synchronized across systems.
+
+---
+
+## Setting Up Content Synchronization
+
+To configure synchronization:
+
+1. Open the **Tools** tab in the ribbon bar.
+2. In the **Synchronization** section, click **Options**.
+
+The **Synchronization Settings** window will open.
+
+### Configuration Options
+
+- **Content Library Synchronization Activation**  
+  Choose one of the following synchronization modes:
+  - **Automatically** – Synchronization starts when a content change is detected.
+  - **Manually** – Requires user-initiated synchronization.
+  - **Never** – Disables synchronization entirely.
+
+- **PADS4 Content Library Storage Folder**  
+  Defines the local folder where synchronized content is stored.
+  - **Automatic** is recommended if not using multiple servers or domains.
+
+Click **OK** to apply the settings.
+
+> **Note:**  
+> If **PADS4 Server** and **PADS4 Scheduler** are installed on the same computer, be sure to select **This Computer** in the connection settings. This automatically disables synchronization since both components share the same local content.
+
+> When multiple PADS4 applications (e.g., Scheduler, Designer) run on the same PC and connect to the same server, they share the same synchronization process.
+
+---
+
+## Starting Content Synchronization
+
+If **Automatic** synchronization is enabled, the system will initiate synchronization when it detects changes in the content library.
+
+If **Manual** synchronization is enabled:
+
+1. Go to the **Tools** tab.
+2. Click **Synchronize Now** under the **Synchronization** section.
+
+The **Synchronization Progress** window will open and display the progress of the current session.
+
+Once synchronization is complete, the log will display:  
+> *"The synchronization session has finished."*
+
+Click **Close** to exit the window.
+
+> If you use automatic synchronization, clicking **Synchronize Now** will either manually start the process or show its current progress.
+
+---
+
+## Canceling Content Synchronization
+
+To stop an ongoing synchronization session:
+
+1. If the **Synchronization Progress** window is open, you can simply click **Close**.
+2. Alternatively, click **Cancel** in the **Tools > Synchronization** section.
+
+> If the **Cancel** button is disabled, no synchronization process is currently running.
+
+---
+
+## Viewing Synchronization Progress and Logs
+
+To check real-time synchronization status or review recent logs:
+
+1. In the **Tools** tab, under **Synchronization**, click **Show Progress**.
+2. The **Synchronization Progress** window will open.
+
+### Window Breakdown
+
+- **Synchronization Status**  
+  - Top progress bar: shows overall sync progress.
+  - Bottom progress bar: shows progress of the current item.
+  - Once completed, only one progress bar is visible at 100%.
+
+- **Download Progress / Log**  
+  - Displays logs from the current or most recent session.
+  - Click **Refresh** to update the log view with the latest information.

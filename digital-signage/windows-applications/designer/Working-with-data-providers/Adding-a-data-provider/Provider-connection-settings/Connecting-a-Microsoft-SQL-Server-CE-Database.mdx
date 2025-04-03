@@ -1,0 +1,45 @@
+
+The **Microsoft SQL Server Compact Edition (CE)** provider in **PADS4** allows you to connect to a **SQL Server CE database file** and retrieve data for use in your presentations.
+
+---
+
+### **Steps to Add or Modify a Microsoft SQL Server CE Connection**  
+
+#### **1. Start the Data Provider Wizard**
+- Open **PADS4** and navigate to the **Data Provider Wizard**.
+- Select **Microsoft SQL Server CE** as the **provider type**.
+- Click **Next** to continue.
+
+#### **2. Specify Database Location and Access Settings**
+- Choose one of the following options:
+  - **Content Library**: Use a **SQL Server CE database** stored in the **PADS4 Content Library** *(recommended for automatic synchronization)*.
+  - **File Name**: Use a **SQL Server CE database** stored **outside** the content library *(manual file distribution required)*.
+- Enter the **file path** or use the **Browse** button to locate the file.
+- If the database is **password-protected**, enter the **password**.
+
+- Click **Next** to continue.
+
+#### **3. Select the Table or SQL Query**
+- The system will automatically detect **available tables** in the database.
+- Select a table from the **drop-down list**.
+- Alternatively, select **SQL Statement** and enter a **custom SQL query** to retrieve specific data.
+
+- Click **Next** to continue.
+
+#### **4. Complete the Setup**
+- **Review** the selected settings.
+- Click **Finish** to save the data provider.
+
+---
+
+### **Important Notes**
+- **PADS4 Data Server Considerations**:  
+  - If using a **PADS4 Data Server**, ensure the **database file is accessible from the server**.
+  - If **not** using a **PADS4 Data Server**, ensure **PADS4 Designer and Viewers** can access the **database file**.
+- **File Storage Recommendations**:  
+  - Using the **PADS4 Content Library** ensures **automatic file synchronization**.
+  - Storing the database **outside** the content library requires **manual file distribution**.
+- **SQL Queries**:  
+  - Manually entered **SQL statements** should be optimized for **performance and efficiency**.
+
+This setup allows **PADS4** to pull real-time data from a **SQL Server CE database**, integrating it seamlessly into digital signage, reports, or automation workflows. 

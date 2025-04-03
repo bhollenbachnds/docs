@@ -1,0 +1,79 @@
+
+The **Newmarket Delphi** provider in **PADS4** allows you to connect to **Delphi hospitality feeds** to retrieve information related to locations, bookings, and room functions.
+
+---
+
+### **Steps to Add or Modify a Newmarket Delphi Feed Connection**  
+
+#### **1. Start the Data Provider Wizard**
+- Open **PADS4** and go to the **Data Provider Wizard**.
+- Select **Newmarket Delphi Feed** as the **provider type**.
+- Click **Next** to continue.
+
+#### **2. Select the Server Version**
+- Choose the **server version**:
+  - **Older versions** require different credentials.
+  - **Newer versions** may offer improved performance and security.
+
+#### **3. Authenticate with Newmarket Delphi**
+- Enter the **Delphi NWS (Newmarket Web Services) credentials**.
+- Click **Connect** (if credentials are saved, the system may connect automatically).
+
+#### **4. Choose the Data Type to Retrieve**
+- **Get Location**  
+  - Select the **Location ID** from the dropdown list.
+
+- **Booking Events**  
+  - Select the **Location ID**.
+  - Define the **time period** *(From/Until)*.
+  - Enable **Only show posted events** *(optional)*.
+  - Enable **Include location data** *(adds location-related columns)*.
+  - Enable **Include room data** *(adds room-related columns, may impact performance)*.
+
+- **Room Functions / Room Group Functions**  
+  - Select one or more **Locations**.
+  - Check **External ID** if using external Location IDs.
+  - Enable **Include location data** *(adds location-related columns, may impact performance)*.
+
+#### **5. Configure Older Delphi Feed Settings (Version 9.6 and Earlier)**
+- Enter the **Delphi Service URL** *(e.g., http://your-ip-address/MeetingSpaceServices/Request.asmx)*.
+- Enter the **Property Key** *(building ID number)*.
+- Provide a **Username** *(Vendor System)* and **Password** *(License Key)*.
+- Choose between:
+  - **Get Room Characteristics** *(retrieves room details: name, floor, description, etc.)*.
+  - **Get Room Information** *(retrieves room availability details)*.
+  - **Include Characteristics** *(matches room details automatically)*.
+
+#### **6. Apply Optional Filters**
+- **Event Key** – Filter by event name.
+- **Room Group** – Filter by room group *(case-sensitive)*.
+- **Exhibit** – Filter rooms with scheduled exhibitions.
+- **Postable** – Filter based on postable status.
+- **Alternate Language** – Select an alternative language template.
+
+#### **7. Define the Date/Time Range for Data Retrieval**
+- **Today** – Retrieves data for the current day.
+  - Optionally, set an **offset in days**.
+- **Now** – Retrieves current data.
+  - Optionally, specify an **offset before or after the current time**.
+- **Date and Time** – Define a **fixed period**.
+- **Predefined** – Select **Week, Next Week, or Month**.
+
+Click **Next** to continue.
+
+#### **8. Complete the Setup**
+- **Review** the connection settings.
+- Click **Finish** to save the data provider.
+
+---
+
+### **Important Notes**
+- **Performance Considerations**:
+  - Enabling **Include Room Data** may **slow performance** due to additional processing.
+  - Older Delphi versions require **manual entry** of service URLs.
+- **Security & Authentication**:
+  - Ensure **Delphi credentials** are correct for seamless integration.
+- **Customization**:
+  - Use **filters** to **limit data retrieval**, preventing **large memory loads**.
+  
+This setup ensures **PADS4** can efficiently retrieve **real-time hospitality data**, making it useful for **event management, room scheduling, and operational insights**.

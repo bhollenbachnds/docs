@@ -1,0 +1,72 @@
+This section provides step-by-step instructions for manually creating the **PADS4FIDS** database using **SQL Server Management Studio (SSMS)**.
+
+---
+
+## **Step 1: Open SQL Server Management Studio**
+
+1. Launch **SQL Server Management Studio**.
+2. Log in to the **Database Engine**.
+3. In the **Object Explorer**, expand your SQL Server instance.
+4. Right-click on **Databases**.
+5. Select **New Database...**
+
+---
+
+## **Step 2: Create the Database**
+
+1. In the **Database Name** field, enter:  
+   ```
+   PADS4FIDS
+   ```
+2. Click **OK** to create the database.
+
+---
+
+## **Step 3: Check for NT AUTHORITY\SYSTEM Login**
+
+1. Expand the **Security** node.
+2. Expand **Logins**.
+3. Look for the login:  
+   ```
+   NT AUTHORITY\SYSTEM
+   ```
+
+- If it **already exists**, right-click it and choose **Properties**, then skip to **Step 6**.  
+- If it does **not exist**, continue with **Step 4**.
+
+---
+
+## **Step 4: Create NT AUTHORITY\SYSTEM Login**
+
+1. Right-click **Logins**.
+2. Select **New Login...**
+
+---
+
+## **Step 5: Configure New Login**
+
+1. In the **Login name** field, enter:  
+   ```
+   NT AUTHORITY\SYSTEM
+   ```
+2. Select **Windows Authentication**.
+3. Do **not** enter a password.
+
+---
+
+## **Step 6: Assign Database Permissions**
+
+1. In the **Login Properties** window, select **User Mapping** from the left menu.
+2. In the **Users mapped to this login** section, check the box next to:  
+   ```
+   PADS4FIDS
+   ```
+3. In the **Database role membership for: PADS4FIDS**, check the role:  
+   ```
+   db_owner
+   ```
+4. Click **OK** to save changes.
+
+---
+
+The PADS4FIDS database is now configured and ready for use. Let me know if you'd like to proceed with similar instructions for setup via SQL scripts or PowerShell.
