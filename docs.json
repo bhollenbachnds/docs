@@ -1071,12 +1071,108 @@
             ]
           },
           {
-            "group": "Endpoint Examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete"
-            ]
+            "group": "Domains",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Nginx.Domains//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Authentication",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Authentication Integration",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication.Integration//swagger/v1/swagger.json"
+          },
+          {
+            "group": "CMS",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Cms//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Configuration",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Configuration//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Content",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Content//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Credentials",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Data",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Device",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Email",
+            "openapi": "https://saas.pads365.com/rdx/nds.services.email//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Engine",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Engine//swagger/v1/swagger.json"
+          },
+          {
+            "group": "FIDS Connector",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.FIDS.Connector//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Globalization",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Globalization//swagger/v1/swagger.json"
+          },
+          {
+            "group": "License",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.License//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Messaging",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Messaging//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Migration",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Migration//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Orchestration",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Orchestration//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Package",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Process",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Replication",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Replication//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Schedule",
+            "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json"
+          },
+          {
+            "group": "User SCIM",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.User.Scim//swagger/v1/swagger.json"
+          },
+          {
+            "group": "User Profile",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.UserProfile//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Video Conversion",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Video.Conversion//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Viewer",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Viewer//swagger/v1/swagger.json"
+          },
+          {
+            "group": "Web to Image",
+            "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json"
           }
         ]
       }

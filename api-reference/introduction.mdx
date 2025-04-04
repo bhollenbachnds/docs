@@ -1,33 +1,89 @@
+Welcome to the **PADS4 API Documentation**, your complete reference for interacting programmatically with the PADS4 Platform.
+
+The PADS4 API suite is built to support seamless integration, automation, and scalability of your digital signage and workspace solutions. Whether you're building a custom frontend, integrating with third-party systems, or automating content workflows, this API documentation provides all the tools and endpoints needed to communicate with the PADS4 backend services.
+
+Each API module is designed around a specific domain of functionality within the PADS4 ecosystem. All services follow a RESTful architecture and expose OpenAPI (Swagger) definitions to streamline development and reduce integration effort.
+
+### Available API Groups
+
+The PADS4 API platform is divided into the following functional groups:
+
+- **Domains**  
+  Manage tenant domains and related configuration.
+
+- **Authentication & Authentication Integration**  
+  Handle user login, session management, and integration with third-party identity providers.
+
+- **CMS**  
+  Create and manage content, messages, templates, and digital signage workflows.
+
+- **Configuration**  
+  Access and modify system-wide configuration settings.
+
+- **Content**  
+  Manage media assets, files, and associated metadata.
+
+- **Credentials**  
+  Securely handle credential storage and tokenized access.
+
+- **Data**  
+  Access external and internal data sources integrated into presentations.
+
+- **Device**  
+  Register and monitor player devices across the digital signage network.
+
+- **Email**  
+  Configure and send notifications and alerts.
+
+- **Engine**  
+  Manage backend logic and runtime behavior of services.
+
+- **FIDS Connector**  
+  Integrate with Flight Information Display Systems for transportation environments.
+
+- **Globalization**  
+  Manage language localization and translation settings.
+
+- **License**  
+  Manage product licensing and entitlement tracking.
+
+- **Messaging**  
+  Configure messaging services such as SMS, push notifications, and more.
+
+- **Migration**  
+  Support data transfer and legacy system upgrades.
+
+- **Orchestration**  
+  Coordinate and automate workflows between different services and components.
+
+- **Package**  
+  Manage grouped configurations and presentation packages.
+
+- **Process**  
+  Execute custom logic or trigger internal processes.
+
+- **Replication**  
+  Handle data synchronization across distributed systems.
+
+- **Schedule**  
+  Control presentation playback timing, calendars, and recurring schedules.
+
+- **User SCIM & User Profile**  
+  Support user provisioning, SCIM-compliant directory sync, and user attribute management.
+
+- **Video Conversion**  
+  Automate video transcoding and formatting for compatible playback.
+
+- **Viewer**  
+  Register, configure, and monitor digital signage player endpoints.
+
+- **Web to Image**  
+  Capture and convert web pages into static display images.
+
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
----
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+Each group has a dedicated Swagger interface, available via OpenAPI links, allowing developers to explore endpoints, test requests, and build integrations confidently.
 
-## Welcome
+To begin, choose a group relevant to your integration needs and consult its Swagger documentation. All APIs are secured, and proper authentication is required to make calls to most endpoints.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
-
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
-
-## Authentication
-
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
-
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+Let’s get started building with PADS4.
