@@ -1032,6 +1032,32 @@
             "pages": [
               "modules/legacy-cms/introduction"
             ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "modules/legacy-cms/user-guide/login",
+              "modules/legacy-cms/user-guide/homepage",
+              "modules/legacy-cms/user-guide/categories",
+              "modules/legacy-cms/user-guide/masks",
+              "modules/legacy-cms/user-guide/messages",
+              "modules/legacy-cms/user-guide/content",
+              "modules/legacy-cms/user-guide/text-area",
+              "modules/legacy-cms/user-guide/broadcast",
+              "modules/legacy-cms/user-guide/history",
+              "modules/legacy-cms/user-guide/logout"
+            ]
+          },
+          {
+            "group": "Administration",
+            "pages": [
+              "modules/legacy-cms/administration/login",
+              "modules/legacy-cms/administration/create-a-profile",
+              "modules/legacy-cms/administration/create-a-user",
+              "modules/legacy-cms/administration/add-a-display",
+              "modules/legacy-cms/administration/logout",
+              "modules/legacy-cms/administration/media-prerequisites"
+            ]
           }
         ]
       },
