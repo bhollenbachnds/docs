@@ -222,7 +222,13 @@
             "pages": [
               "ctrl-centre/administration/credentials",
               "ctrl-centre/administration/teams",
-              "ctrl-centre/administration/Power-BI"
+              "ctrl-centre/administration/Power-BI",
+              {
+                "group": "Meta",
+                "pages": [
+                  "ctrl-centre/administration/meta/create-meta-app"
+                ]
+              }
             ]
           },
           {
