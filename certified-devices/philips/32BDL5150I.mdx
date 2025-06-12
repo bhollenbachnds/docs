@@ -1,0 +1,154 @@
+
+Before beginning the installation process, ensure the **LauncherServiceViewer.zip** file is placed in the `/PADS4/apps/` directory on the PADS4 Server.
+
+For detailed hardware-related instructions, visit the **Philips Dropbox** documentation. Click **“Models”** in the bottom-left menu to select your display.
+
+---
+
+### **1.1 Resetting the Device**
+
+A reset is highly recommended when the device has been previously used, to remove any conflicting configurations.
+
+<Steps>
+  <Step title="Step One">
+    Press and hold the **universal + hidden key** on the device for approximately **3 seconds**.
+  </Step>
+  <Step title="Step Two">
+    Wait for the **LED to flash green** after briefly turning white.
+  </Step>
+  <Step title="Step Three">
+    After about **3 minutes**, the LED will turn **blue**. A message prompting USB insertion will appear—this can be ignored.
+  </Step>
+</Steps>
+
+---
+
+### **1.2 Updating the Firmware**
+
+To ensure compatibility, update your firmware by following the steps in the **Philips instructions manual**:
+
+Access the instructions through the Philips Dropbox by selecting **“Models”**, finding your display, and opening the **manual** (use right-click to open in a new tab if needed).
+
+---
+
+### **1.3 Installing scrcpy**
+
+**scrcpy** enables interaction with the device through your PC, essential since **ePaper displays lack interactivity**.
+
+<Steps>
+  <Step title="Step One">
+    Navigate to the **[scrcpy GitHub](https://github.com/Genymobile/scrcpy)** page.
+  </Step>
+  <Step title="Step Two">
+    Scroll to **"Get the app"**, and download the version for your OS.
+  </Step>
+  <Step title="Step Three">
+    On Windows, download and extract the **64-bit .zip** file.
+  </Step>
+  <Step title="Step Four">
+    Ensure the extracted folder contains both **scrcpy** and **adb**.
+  </Step>
+  <Step title="Step Five">
+    (Optional) Add the folder to your system’s **Path Environment Variable** for easy access.
+  </Step>
+  <Step title="Step Six">
+    Open Command Prompt and test with `scrcpy -v` and `adb version`.
+  </Step>
+</Steps>
+
+---
+
+## **2. Installing the Application**
+
+Use **scrcpy and adb** to install the PADS4 application.
+
+<Steps>
+  <Step title="Step One">
+    Connect the **display to your PC/laptop via USB**.
+  </Step>
+  <Step title="Step Two">
+    The Android file system should appear in File Explorer.
+  </Step>
+  <Step title="Step Three">
+    Open **Command Prompt**.
+  </Step>
+  <Step title="Step Four">
+    Run `adb devices` to verify connection.
+  </Step>
+  <Step title="Step Five">
+    Launch scrcpy with `scrcpy`. For multiple devices: `scrcpy -s {device-name}`.
+  </Step>
+  <Step title="Step Six">
+    Download the **latest PADS4 Web Launcher .apk** file.
+  </Step>
+  <Step title="Step Seven">
+    Navigate to the folder containing the `.apk`, right-click and select **"Open in Terminal"**.
+  </Step>
+  <Step title="Step Eight">
+    Run: `adb install {application}.apk`. Look for `Success`.
+  </Step>
+  <Step title="Step Nine">
+    Switch to the **scrcpy window**, press **Home**, and locate **PADS4 Web Launcher**.
+  </Step>
+  <Step title="Step Ten">
+    Launch the app and complete the PADS4 environment configuration.
+  </Step>
+</Steps>
+
+---
+
+## **3. Supported Features & Limitations**
+
+| **Area**                             | **Support**                                              |
+| :----------------------------------- | :------------------------------------------------------- |
+| Display Models                       | ✅ Supported                                              |
+| Portrait Mode                        | ✅ Supported                                              |
+| Remote Control                       | ⚠️ Setting can be changed, but remotes are not supported |
+| HTTPS                                | ✅ Supported                                              |
+| Video                                | ❌ Not Applicable – only first frame shown                |
+| Image                                | ✅ JPG, PNG, BMP *(GIF static only)*                      |
+| Text / Line / Shape                  | ✅ Supported                                              |
+| Scrolling Text                       | ⚠️ Unpredictable due to low refresh rate                 |
+| Formatted Text                       | ✅ Supported with timing considerations                   |
+| Flash                                | ❌ Not Supported                                          |
+| Table                                | ✅ Static content only. Some rows may not render fully    |
+| PDF / PowerPoint                     | ✅ Static content only; first page shown                  |
+| Interactive Button                   | ✅ Displayed statically (not interactive)                 |
+| Playlist                             | ✅ Supported from Content Library                         |
+| Web                                  | ❌ Not Supported                                          |
+| Colors                               | ✅ Limited to display color range                         |
+| Data Providers                       | ✅ Static data only                                       |
+| Transitions                          | ❌ Not Applicable                                         |
+| Rules                                | ⚠️ Only if refresh-tolerant                              |
+| Offline Features                     | ✅ Content Library, Schedules, Data                       |
+| Property Bindings                    | ✅ Only with slow update interval                         |
+| Viewer Variables                     | ✅ Supported                                              |
+| Software Updates                     | ✅ Supported                                              |
+| Turn Off Display                     | ⚠️ Works but no black screen shown                       |
+| LED / NFC / 4K                       | ❌ Not Supported                                          |
+| PADS4 Ctrl Center                    | ✅ Supported (limited features)                           |
+| Reboot / Shutdown / Connection State | ❌ Not Supported (use scrcpy instead)                     |
+| Monitoring & Alerts                  | ✅ Partial (network monitoring only)                      |
+| Wake-on-LAN                          | ❌ Not Supported                                          |
+
+---
+
+## **4. General Limitations**
+
+* **Refresh Rate:**
+
+  * 25BDL4150I: \~1 minute
+  * 32BDL5150I: \~2 minutes
+
+* **Dynamic Content Rendering:**
+
+  * Dynamic elements are rendered as static **screenshots**.
+
+---
+
+## **5. Troubleshooting**
+
+| **Problem**                        | **Solution**                                                                                                                      |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `adb devices` does not list device | Unplug both USB ends and replug. Reboot device by holding **power button \~5s**, then reconnect after green light stops flashing. |
+| Device not connecting via USB      | Follow the above reset/unplug steps. Perform a device reset if not previously done.                                               |
