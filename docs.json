@@ -3,8 +3,6 @@
   "theme": "mint",
   "contextual": {
     "options": [
-      "copy",
-      "view",
       "chatgpt",
       "claude"
     ]
