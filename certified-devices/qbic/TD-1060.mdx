@@ -1,240 +1,241 @@
-This guide provides **step-by-step instructions** for installing and configuring **PADS4 Viewer** on **Qbic TD-1060** devices running Android.  
+This guide provides **step-by-step instructions** for installing and configuring **PADS4 Viewer** on **Qbic TD-1060** devices running Android.
 
 ---
 
-## **Before You Start**  
+## **Before You Start**
 
-### **Supported Qbic TD-1060 Devices**  
+### **Supported Qbic TD-1060 Devices**
 
-The following **Qbic TD-1060** device is supported:  
+The following **Qbic TD-1060** device is supported:
 
-- **TD-1060 (Android 10)**  
+- **TD-1060 (Android 10)**
 
-**Ensure your PADS4 Server is installed and configured before proceeding.**  
-
----
-
-## **Minimum Requirements**  
-
-**PADS4 Server Version:** **2022.3 or later**  
-**Firmware Version:** **Kernel 4.19.1111+ Build v2.0.1**  
-
-**Ensure your device firmware meets the minimum requirements before proceeding with installation.**  
+**Ensure your PADS4 Server is installed and configured before proceeding.**
 
 ---
 
-## **First-Time Setup**  
+## **Minimum Requirements**
 
-When you **turn on** the Qbic TD-1060 for the first time, a **configuration wizard** will start.  
+**PADS4 Server Version:** **2022.3 or later**\
+**Firmware Version:** **Kernel 4.19.1111\+ Build v2.0.1**
 
-**If the configuration wizard does not start, perform a factory reset before continuing.**  
-
----
-
-## **Performing a Factory Reset**  
-
-<Steps>  
-  <Step title="Step One">  
-    Open **Settings → Reset Options**.  
-  </Step>  
-  <Step title="Step Two">  
-    Select **Erase all data (Factory Reset)**.  
-  </Step>  
-  <Step title="Step Three">  
-    Press **Erase all data** to confirm.  
-  </Step>  
-</Steps>  
-
-**Once completed, the device will restart and display the welcome screen.**  
+**Ensure your device firmware meets the minimum requirements before proceeding with installation.**
 
 ---
 
-## **Installing PADS4 Viewer**  
+## **First-Time Setup**
 
-To install the **PADS4 Viewer**, access the **Android menu** on the device.  
+When you **turn on** the Qbic TD-1060 for the first time, a **configuration wizard** will start.
 
-### **Step 1: Check Device Firmware**  
-
-<Steps>  
-  <Step title="Step One">  
-    Open **Settings**.  
-  </Step>  
-  <Step title="Step Two">  
-    Navigate to **About Device**.  
-  </Step>  
-  <Step title="Step Three">  
-    Verify that the **Build Number** matches **Kernel 4.19.1111+ Build v2.0.1**.  
-  </Step>  
-</Steps>  
-
-**If the firmware is outdated, contact Qbic for firmware updates.**  
+**If the configuration wizard does not start, perform a factory reset before continuing.**
 
 ---
 
-### **Step 2: Install PADS4Qbic from USB Stick**  
+## **Performing a Factory Reset**
 
-**Download PADS4Qbic APK:**  
+<Steps>
+  <Step title="Step One">
+    Open **Settings → Reset Options**.
+  </Step>
+  <Step title="Step Two">
+    Select **Erase all data (Factory Reset)**.
+  </Step>
+  <Step title="Step Three">
+    Press **Erase all data** to confirm.
+  </Step>
+</Steps>
+
+**Once completed, the device will restart and display the welcome screen.**
+
+---
+
+## **Installing PADS4 Viewer**
+
+To install the **PADS4 Viewer**, access the **Android menu** on the device.
+
+### **Step 1: Check Device Firmware**
+
+<Steps>
+  <Step title="Step One">
+    Open **Settings**.
+  </Step>
+  <Step title="Step Two">
+    Navigate to **About Device**.
+  </Step>
+  <Step title="Step Three">
+    Verify that the **Build Number** matches **Kernel 4.19.1111\+ Build v2.0.1**.
+  </Step>
+</Steps>
+
+**If the firmware is outdated, contact Qbic for firmware updates.**
+
+---
+
+### **Step 2: Install PADS4Qbic from USB Stick**
+
+**Download PADS4Qbic APK:**
+
 ```
-https://install.appcenter.ms/orgs/nds/apps/nds.droid.qbic/distribution_groups/public
-```  
+https://github.com/PADS4/PADS4-Viewer-Qbic/releases/latest
+```
 
-<Steps>  
-  <Step title="Step One">  
-    Copy **PADS4Qbic.apk** to a **USB stick**.  
-  </Step>  
-  <Step title="Step Two">  
-    Insert the **USB stick** into the **Qbic TD-1060**.  
-  </Step>  
-  <Step title="Step Three">  
-    Open **Android Settings → Player Settings**.  
-  </Step>  
-  <Step title="Step Four">  
-    Enable **Switch to Native Android Mode**.  
-  </Step>  
-  <Step title="Step Five">  
-    Close **Settings** to access the **Android Home Screen**.  
-  </Step>  
-  <Step title="Step Six">  
-    Open **Explorer App** → Press **USB Button** → Select **PADS4Qbic.apk**.  
-  </Step>  
-  <Step title="Step Seven">  
-    Allow installation from **Unknown Sources** if prompted.  
-  </Step>  
-  <Step title="Step Eight">  
-    Confirm installation by pressing **Install**.  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Copy **PADS4Qbic.apk** to a **USB stick**.
+  </Step>
+  <Step title="Step Two">
+    Insert the **USB stick** into the **Qbic TD-1060**.
+  </Step>
+  <Step title="Step Three">
+    Open **Android Settings → Player Settings**.
+  </Step>
+  <Step title="Step Four">
+    Enable **Switch to Native Android Mode**.
+  </Step>
+  <Step title="Step Five">
+    Close **Settings** to access the **Android Home Screen**.
+  </Step>
+  <Step title="Step Six">
+    Open **Explorer App** → Press **USB Button** → Select **PADS4Qbic.apk**.
+  </Step>
+  <Step title="Step Seven">
+    Allow installation from **Unknown Sources** if prompted.
+  </Step>
+  <Step title="Step Eight">
+    Confirm installation by pressing **Install**.
+  </Step>
+</Steps>
 
-**Do not open PADS4Qbic after installation.**  
-
----
-
-## **Configuring the Qbic TD-1060 for PADS4Qbic**  
-
-### **Step 1: Set PADS4 as the Default App**  
-
-<Steps>  
-  <Step title="Step One">  
-    Open **Android Settings → Player Settings**.  
-  </Step>  
-  <Step title="Step Two">  
-    Disable **Switch to Native Android Mode**.  
-  </Step>  
-  <Step title="Step Three">  
-    Enable **Kiosk Mode**.  
-  </Step>  
-  <Step title="Step Four">  
-    Select **Launched Activity or Webpage URL**.  
-  </Step>  
-  <Step title="Step Five">  
-    Press **Select Application** → Choose **PADS4Qbic**.  
-  </Step>  
-  <Step title="Step Six">  
-    Press **Set**.  
-  </Step>  
-</Steps>  
-
-**Ensure the settings below are configured correctly:**  
-
-| **Setting** | **Value** |  
-|------------|---------|  
-| **Request Desktop Site** | ❌ No |  
-| **Show Security Warnings** | ❌ No |  
-| **Ignore X-Frame-Options** | ✅ Yes |  
-| **Block Pop-ups** | ✅ Yes |  
-| **Keep Cookies** | ❌ No |  
+**Do not open PADS4Qbic after installation.**
 
 ---
 
-## **Connecting to the PADS4 Server**  
+## **Configuring the Qbic TD-1060 for PADS4Qbic**
 
-### **Step 1: Enter PADS4 Server Details**  
+### **Step 1: Set PADS4 as the Default App**
 
-<Steps>  
-  <Step title="Step One">  
-    Open **PADS4Qbic** and specify the **Server Address**.  
-  </Step>  
-  <Step title="Step Two">  
-    (Optional) Specify a **Viewer Name**.  
-  </Step>  
-  <Step title="Step Three">  
-    Press **Start**.  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Open **Android Settings → Player Settings**.
+  </Step>
+  <Step title="Step Two">
+    Disable **Switch to Native Android Mode**.
+  </Step>
+  <Step title="Step Three">
+    Enable **Kiosk Mode**.
+  </Step>
+  <Step title="Step Four">
+    Select **Launched Activity or Webpage URL**.
+  </Step>
+  <Step title="Step Five">
+    Press **Select Application** → Choose **PADS4Qbic**.
+  </Step>
+  <Step title="Step Six">
+    Press **Set**.
+  </Step>
+</Steps>
 
-**If Chrome is missing, it will be downloaded automatically.**  
+**Ensure the settings below are configured correctly:**
 
----
-
-## **Adjusting PADS4 Viewer Settings**  
-
-**To access settings, hold the left mouse button for 3 seconds.**  
-
-**You can also configure settings remotely using:**  
-**PADS4 CTRL Center**  
-**PADS4 Agent**  
-
----
-
-## **Updating PADS4 Viewer & PADS4Qbic App**  
-
-**After installation, updates will be applied automatically when the PADS4 Server is updated.**  
-
----
-
-## **Accessing the Android Menu**  
-
-**To access the Android menu while PADS4 is running:**  
-Press **Home Button + Volume Down** in sequence.  
-
-**To prevent a reboot, first open PADS4Qbic settings.**  
+| **Setting**                | **Value** |
+| -------------------------- | --------- |
+| **Request Desktop Site**   | ❌ No      |
+| **Show Security Warnings** | ❌ No      |
+| **Ignore X-Frame-Options** | ✅ Yes     |
+| **Block Pop-ups**          | ✅ Yes     |
+| **Keep Cookies**           | ❌ No      |
 
 ---
 
-## **Supported Features & Limitations**  
+## **Connecting to the PADS4 Server**
 
-### **General Features**  
+### **Step 1: Enter PADS4 Server Details**
 
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Automatic Software Updates** – The app updates automatically. |  
-| ✅ | **Offline Mode** – Plays scheduled content for **7 days** while offline. |  
+<Steps>
+  <Step title="Step One">
+    Open **PADS4Qbic** and specify the **Server Address**.
+  </Step>
+  <Step title="Step Two">
+    (Optional) Specify a **Viewer Name**.
+  </Step>
+  <Step title="Step Three">
+    Press **Start**.
+  </Step>
+</Steps>
 
-### **Device Features**  
-
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Portrait Mode** – Auto-adjusts screen rotation. |  
-| ✅ | **Block Remote Control** – Prevents unauthorized use. |  
-| ✅ | **Cluster Viewer Support** – Allows synchronization with other screens. |  
-| ✅ | **LED Light Bar** – Full color spectrum supported. |  
-| ❌ | **Turn Off Display** – Not supported. |  
-
-### **Content & Data Support**  
-
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Images (JPG, PNG, BMP, GIF)** |  
-| ✅ | **Scrolling Text, Tables, and Interactive Elements** |  
-| ❌ | **Flash & Seamless Videos** – Not supported. |  
-| ✅ | **Streaming via HTTP** |  
-
-### **Device Management**  
-
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Remote Management via PADS4 CTRL Center** |  
-| ✅ | **Connection State Monitoring & Alerts** |  
-| ❌ | **Reboot, Shutdown, Wake-on-LAN** – Not supported. |  
-| ✅ | **Retrieve Logs & Edit Viewer Settings** |  
+**If Chrome is missing, it will be downloaded automatically.**
 
 ---
 
-## **Troubleshooting**  
+## **Adjusting PADS4 Viewer Settings**
 
-| **Issue** | **Solution** |  
-|----------|------------|  
-| **Browser is not full screen** | Check firmware version. |  
-| **Device fails to connect via Ethernet** | Update firmware. |  
-| **Navigation bar is visible** | Update firmware. |  
-| **Viewer repeatedly asks for storage permission** | Check firmware version. |  
+**To access settings, hold the left mouse button for 3 seconds.**
+
+**You can also configure settings remotely using:**\
+**PADS4 CTRL Center**\
+**PADS4 Agent**
+
+---
+
+## **Updating PADS4 Viewer & PADS4Qbic App**
+
+**After installation, updates will be applied automatically when the PADS4 Server is updated.**
+
+---
+
+## **Accessing the Android Menu**
+
+**To access the Android menu while PADS4 is running:**\
+Press **Home Button \+ Volume Down** in sequence.
+
+**To prevent a reboot, first open PADS4Qbic settings.**
+
+---
+
+## **Supported Features & Limitations**
+
+### **General Features**
+
+| Feature | Description                                                              |
+| :-----: | ------------------------------------------------------------------------ |
+| ✅       | **Automatic Software Updates** – The app updates automatically.          |
+| ✅       | **Offline Mode** – Plays scheduled content for **7 days** while offline. |
+
+### **Device Features**
+
+| Feature | Description                                                             |
+| :-----: | ----------------------------------------------------------------------- |
+| ✅       | **Portrait Mode** – Auto-adjusts screen rotation.                       |
+| ✅       | **Block Remote Control** – Prevents unauthorized use.                   |
+| ✅       | **Cluster Viewer Support** – Allows synchronization with other screens. |
+| ✅       | **LED Light Bar** – Full color spectrum supported.                      |
+| ❌       | **Turn Off Display** – Not supported.                                   |
+
+### **Content & Data Support**
+
+| Feature | Description                                          |
+| :-----: | ---------------------------------------------------- |
+| ✅       | **Images (JPG, PNG, BMP, GIF)**                      |
+| ✅       | **Scrolling Text, Tables, and Interactive Elements** |
+| ❌       | **Flash & Seamless Videos** – Not supported.         |
+| ✅       | **Streaming via HTTP**                               |
+
+### **Device Management**
+
+| Feature | Description                                        |
+| :-----: | -------------------------------------------------- |
+| ✅       | **Remote Management via PADS4 CTRL Center**        |
+| ✅       | **Connection State Monitoring & Alerts**           |
+| ❌       | **Reboot, Shutdown, Wake-on-LAN** – Not supported. |
+| ✅       | **Retrieve Logs & Edit Viewer Settings**           |
+
+---
+
+## **Troubleshooting**
+
+| **Issue**                                         | **Solution**            |
+| ------------------------------------------------- | ----------------------- |
+| **Browser is not full screen**                    | Check firmware version. |
+| **Device fails to connect via Ethernet**          | Update firmware.        |
+| **Navigation bar is visible**                     | Update firmware.        |
+| **Viewer repeatedly asks for storage permission** | Check firmware version. |
