@@ -1,203 +1,208 @@
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on the **Iiyama 54 & 60 Series** devices.  
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on the **Iiyama 54 & 60 Series** devices.
 
 ---
 
-## **1. First-Time Use**  
+## **1. First-Time Use**
 
-Before installation, ensure that the **PADS4 Server is set up and configured properly**.  
+Before installation, ensure that the **PADS4 Server is set up and configured properly**.
 
-<Note> The minimum **PADS4 Server version** required is **PADS4 Foundation 2024.2.6**.</Note>  
+<Note>
+   The minimum **PADS4 Server version** required is **PADS4 Foundation 2024.2.6**.
+</Note>
 
-When you turn on the device for the first time, the **Configuration Wizard** should start automatically. If it does not, please **factory reset** the device following the instructions in **1.2 Resetting the Device**.  
-
----
-
-### **1.1 Configuring the Device**  
-
-<Steps>  
-  <Step title="Step One">  
-    On the **Welcome Screen**, select your preferred **language** and click **Start**.  
-  </Step>  
-  <Step title="Step Two">  
-    On the **Security Setting Screen**, ensure that **SICP Network Port** is **enabled**.  
-  </Step>  
-  <Step title="Step Three">  
-    On the **Network Setting Screen**, select your preferred **network type** and configure it.  
-  </Step>  
-  <Step title="Step Four">  
-    On the **Signage Display Settings Screen**, click **Skip**.  
-  </Step>  
-  <Step title="Step Five">  
-    On the **Clone Media Files Screen**, click **Skip**.  
-  </Step>  
-  <Step title="Step Six">  
-    On the **Setup Complete Screen**, click **Finish**.  
-  </Step>  
-</Steps>  
+When you turn on the device for the first time, the **Configuration Wizard** should start automatically. If it does not, please **factory reset** the device following the instructions in **1.2 Resetting the Device**.
 
 ---
 
-### **1.2 Resetting the Device**  
+### **1.1 Configuring the Device**
 
-If the device was used previously, perform a **factory reset** to clear storage and prevent software conflicts.  
-
-<Steps>  
-  <Step title="Step One">  
-    Enter the **Android Menu** by pressing the **Home button**, followed by **1 8 6 6** on the **remote control**.  
-  </Step>  
-  <Step title="Step Two">  
-    Open **Settings**.  
-  </Step>  
-  <Step title="Step Three">  
-    Select **System Tools → Factory Reset**.  
-  </Step>  
-  <Step title="Step Four">  
-    Click on **Factory Reset** and confirm by pressing **OK**.  
-  </Step>  
-</Steps>  
-
-After resetting, the **Welcome Screen** will appear. Follow the steps in **1.1 Configuring the Device**.  
-
----
-
-## **2. Installing PADS4 Viewer**  
-
-To install the PADS4 Viewer, enter the **Android Menu** by pressing **Home** followed by **1 8 6 6** on the **Iiyama remote control**.  
+<Steps>
+  <Step title="Step One">
+    On the **Welcome Screen**, select your preferred **language** and click **Start**.
+  </Step>
+  <Step title="Step Two">
+    On the **Security Setting Screen**, ensure that **SICP Network Port** is **enabled**.
+  </Step>
+  <Step title="Step Three">
+    On the **Network Setting Screen**, select your preferred **network type** and configure it.
+  </Step>
+  <Step title="Step Four">
+    On the **Signage Display Settings Screen**, click **Skip**.
+  </Step>
+  <Step title="Step Five">
+    On the **Clone Media Files Screen**, click **Skip**.
+  </Step>
+  <Step title="Step Six">
+    On the **Setup Complete Screen**, click **Finish**.
+  </Step>
+</Steps>
 
 ---
 
-### **2.1 Checking Device Firmware**  
+### **1.2 Resetting the Device**
 
-Ensure the **correct firmware version** is installed for full PADS4 Viewer functionality.  
+If the device was used previously, perform a **factory reset** to clear storage and prevent software conflicts.
 
-<Steps>  
-  <Step title="Step One">  
-    Enter the **Android Menu** by pressing **Home 1 8 6 6**.  
-  </Step>  
-  <Step title="Step Two">  
-    Open **Settings**.  
-  </Step>  
-  <Step title="Step Three">  
-    Select **About**.  
-  </Step>  
-  <Step title="Step Four">  
-    Verify the **firmware version**:  
-    - **60 Series:** `m7332_eu-userdebug 11 RP1A.200720.011 eng.nobody.20240921.000102 test-keys`  
-    - **54 Series:** `t7_an400_arm64-userdebug 11 RQ3A.210805.001.A1 eng.yangpe.20230307.012903 test-keys`  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Enter the **Android Menu** by pressing the **Home button**, followed by **1 8 6 6** on the **remote control**.
+  </Step>
+  <Step title="Step Two">
+    Open **Settings**.
+  </Step>
+  <Step title="Step Three">
+    Select **System Tools → Factory Reset**.
+  </Step>
+  <Step title="Step Four">
+    Click on **Factory Reset** and confirm by pressing **OK**.
+  </Step>
+</Steps>
 
----
-
-### **2.2 Updating Device Firmware**  
-
-To obtain the correct **firmware**, contact **Iiyama Support**.  
-
-#### **Firmware Update Steps**  
-
-<Steps>  
-  <Step title="Step One">  
-    Format a **USB flash drive** in **FAT32**.  
-  </Step>  
-  <Step title="Step Two">  
-    Download the **firmware file** provided by **Iiyama Support** and **extract** it.  
-  </Step>  
-  <Step title="Step Three">  
-    Copy the **unzipped firmware file** to the **root directory** of the **USB drive**.  
-  </Step>  
-  <Step title="Step Four">  
-    Insert the **USB drive** into the **Iiyama display**.  
-  </Step>  
-  <Step title="Step Five">  
-    Start the **screen**. A message will appear:  
-    `"Do not power off the TV during the upgrade. Waiting..."`  
-  </Step>  
-  <Step title="Step Six">  
-    When prompted, remove the **USB drive**.  
-  </Step>  
-</Steps>  
+After resetting, the **Welcome Screen** will appear. Follow the steps in **1.1 Configuring the Device**.
 
 ---
 
-### **2.3 Installing PADS4Iiyama from USB Stick**  
+## **2. Installing PADS4 Viewer**
 
-The **PADS4Iiyama.apk** is available on the **PADS4 Server** in:  
-```  
+To install the PADS4 Viewer, enter the **Android Menu** by pressing **Home** followed by **1 8 6 6** on the **Iiyama remote control**.
+
+---
+
+### **2.1 Checking Device Firmware**
+
+Ensure the **correct firmware version** is installed for full PADS4 Viewer functionality.
+
+<Steps>
+  <Step title="Step One">
+    Enter the **Android Menu** by pressing **Home 1 8 6 6**.
+  </Step>
+  <Step title="Step Two">
+    Open **Settings**.
+  </Step>
+  <Step title="Step Three">
+    Select **About**.
+  </Step>
+  <Step title="Step Four">
+    Verify the **firmware version**:
+
+    - **60 Series:** `m7332_eu-userdebug 11 RP1A.200720.011 eng.nobody.20240921.000102 test-keys`
+    - **54 Series:** `t7_an400_arm64-userdebug 11 RQ3A.210805.001.A1 eng.yangpe.20230307.012903 test-keys`
+  </Step>
+</Steps>
+
+---
+
+### **2.2 Updating Device Firmware**
+
+To obtain the correct **firmware**, contact **Iiyama Support**.
+
+#### **Firmware Update Steps**
+
+<Steps>
+  <Step title="Step One">
+    Format a **USB flash drive** in **FAT32**.
+  </Step>
+  <Step title="Step Two">
+    Download the **firmware file** provided by **Iiyama Support** and **extract** it.
+  </Step>
+  <Step title="Step Three">
+    Copy the **unzipped firmware file** to the **root directory** of the **USB drive**.
+  </Step>
+  <Step title="Step Four">
+    Insert the **USB drive** into the **Iiyama display**.
+  </Step>
+  <Step title="Step Five">
+    Start the **screen**. A message will appear:\
+    `"Do not power off the TV during the upgrade. Waiting..."`
+  </Step>
+  <Step title="Step Six">
+    When prompted, remove the **USB drive**.
+  </Step>
+</Steps>
+
+---
+
+### **2.3 Installing PADS4Iiyama from USB Stick**
+
+The **PADS4Iiyama.apk** is available on the **PADS4 Server** in:
+
+```
 C:\Program Files\PADS4\Foundation\Apps  
-```  
-Alternatively, download the latest version from **[here](#)** (when publicly available).  
+```
 
-#### **Installation Steps**  
+Alternatively, download the latest version from [**here**](https://github.com/PADS4/PADS4-Viewer-for-iiyama-signage-devices/releases/latest).
 
-<Steps>  
-  <Step title="Step One">  
-    Copy the **PADS4Iiyama.apk** file onto a **USB stick**.  
-  </Step>  
-  <Step title="Step Two">  
-    Insert the **USB stick** into the **Iiyama display**.  
-  </Step>  
-  <Step title="Step Three">  
-    Enter the **Android Menu** by pressing **Home 1 8 6 6**.  
-  </Step>  
-  <Step title="Step Four">  
-    Open **Apps** and launch the **File Manager** app.  
-  </Step>  
-  <Step title="Step Five">  
-    Navigate to `mnt → usb_storage` and open **PADS4Iiyama.apk**.  
-  </Step>  
-  <Step title="Step Six">  
-    Click **Install**, then **Open**.  
-  </Step>  
-</Steps>  
+#### **Installation Steps**
 
----
-
-### **2.4 Configuring the Device for PADS4Iiyama**  
-
-#### **Automatic Startup Configuration**  
-
-<Steps>  
-  <Step title="Step One">  
-    Open **PADS4Iiyama** and click on **System Settings**.  
-  </Step>  
-  <Step title="Step Two">  
-    Select **Signage Display → Custom App**.  
-  </Step>  
-  <Step title="Step Three">  
-    Click **Select App**, choose **PADS4Iiyama**, and press **Save**.  
-  </Step>  
-  <Step title="Step Four">  
-    Enable **Force Restart Custom App**.  
-  </Step>  
-  <Step title="Step Five">  
-    Press **Back** three times until you return to **PADS4Iiyama**.  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Copy the **PADS4Iiyama.apk** file onto a **USB stick**.
+  </Step>
+  <Step title="Step Two">
+    Insert the **USB stick** into the **Iiyama display**.
+  </Step>
+  <Step title="Step Three">
+    Enter the **Android Menu** by pressing **Home 1 8 6 6**.
+  </Step>
+  <Step title="Step Four">
+    Open **Apps** and launch the **File Manager** app.
+  </Step>
+  <Step title="Step Five">
+    Navigate to `mnt → usb_storage` and open **PADS4Iiyama.apk**.
+  </Step>
+  <Step title="Step Six">
+    Click **Install**, then **Open**.
+  </Step>
+</Steps>
 
 ---
 
-## **3. Supported Features & Limitations**  
+### **2.4 Configuring the Device for PADS4Iiyama**
 
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Automatic Software Updates** – Updates when the **PADS4 Server** updates. |  
-| ✅ | **Offline Mode** – The device continues running presentations for **7 days** while offline. |  
-| ✅ | **Supports HTTP & HTTPS** |  
-| ✅ | **Maximum 1 Video Per Page** |  
-| ✅ | **Cluster Viewer Mode** – Supported. |  
-| ✅ | **Interactive Button, Text, Scrolling Text, Image, Table** |  
-| ✅ | **PowerPoint & PDF Elements** – *(PowerPoint requires installation on PADS4 Server)*. |  
-| ✅ | **Device Management** – Remote control via **PADS4 CTRL Center & PADS4 Agent**. |  
-| ✅ | **Wake-on-LAN** – Supported. |  
-| ✅ | **Proof of Play Tracking** – Monitors content playback history. |  
+#### **Automatic Startup Configuration**
+
+<Steps>
+  <Step title="Step One">
+    Open **PADS4Iiyama** and click on **System Settings**.
+  </Step>
+  <Step title="Step Two">
+    Select **Signage Display → Custom App**.
+  </Step>
+  <Step title="Step Three">
+    Click **Select App**, choose **PADS4Iiyama**, and press **Save**.
+  </Step>
+  <Step title="Step Four">
+    Enable **Force Restart Custom App**.
+  </Step>
+  <Step title="Step Five">
+    Press **Back** three times until you return to **PADS4Iiyama**.
+  </Step>
+</Steps>
 
 ---
 
-## **4. Troubleshooting**  
+## **3. Supported Features & Limitations**
 
-| **Problem** | **Solution** |  
-|------------|-------------|  
-| **Remote control commands not working** | Ensure **SICP over network** is **enabled** on **port 5000**. |  
-| **Browser not running full screen** | Check **firmware version** – may be incompatible. |  
-| **Navigation bar is visible** | Updating firmware may fix this. |  
-| **Repeated permission prompts for file storage** | Check **firmware version** – may be incompatible. |  
+| Feature | Description                                                                                 |
+| :-----: | ------------------------------------------------------------------------------------------- |
+| ✅       | **Automatic Software Updates** – Updates when the **PADS4 Server** updates.                 |
+| ✅       | **Offline Mode** – The device continues running presentations for **7 days** while offline. |
+| ✅       | **Supports HTTP & HTTPS**                                                                   |
+| ✅       | **Maximum 1 Video Per Page**                                                                |
+| ✅       | **Cluster Viewer Mode** – Supported.                                                        |
+| ✅       | **Interactive Button, Text, Scrolling Text, Image, Table**                                  |
+| ✅       | **PowerPoint & PDF Elements** – _(PowerPoint requires installation on PADS4 Server)_.       |
+| ✅       | **Device Management** – Remote control via **PADS4 CTRL Center & PADS4 Agent**.             |
+| ✅       | **Wake-on-LAN** – Supported.                                                                |
+| ✅       | **Proof of Play Tracking** – Monitors content playback history.                             |
+
+---
+
+## **4. Troubleshooting**
+
+| **Problem**                                      | **Solution**                                                  |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| **Remote control commands not working**          | Ensure **SICP over network** is **enabled** on **port 5000**. |
+| **Browser not running full screen**              | Check **firmware version** – may be incompatible.             |
+| **Navigation bar is visible**                    | Updating firmware may fix this.                               |
+| **Repeated permission prompts for file storage** | Check **firmware version** – may be incompatible.             |
