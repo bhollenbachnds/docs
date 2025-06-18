@@ -1,129 +1,140 @@
-The **PADS4 Configuration** tool allows you to define and manage critical system settings for your PADS4 installation.  
-
-<img
-  src="/images/pads4-configuration.png"
-  alt="Hero Light"
-/>
+The **PADS4 Configuration** tool allows you to define and manage critical system settings for your PADS4 installation.
 
 ---
 
-## **Hosting Configuration**  
+![Pads4foundationconfiguration Pn](/images/install-pads4/install-pads4-server/PADS4Foundationconfiguration.png)
 
-Specify the port settings for hosting **PADS4** and optionally enable **HTTPS**.  
+## **Hosting Configuration**
 
-### **Port Settings**  
-- **HTTP Port:** The port used to host the **PADS4 CTRL Center** (default: **80**).  
-- **HTTPS Port (SSL):** Secure port for **SSL-encrypted** communication (default: **443**).  
+Specify the port settings for hosting **PADS4** and optionally enable **HTTPS**.
 
-### **SSL Configuration**  
-To enable **SSL**, configure the following:  
-- **DNS Host Name** – Registered domain name.  
-- **Certificate File** – Provide the SSL certificate file (`.certificate`).  
-- **Private Key File** – Specify the corresponding private key file (`.private`).  
+### **Port Settings**
 
-### **Additional Security Settings**  
-- **Enable HSTS:** Enforces **HTTPS-only** connections for secure communication.  
-- **TLS Version:** Choose the required **TLS version** (**1.0, 1.1, 1.2, or 1.3**) when using **SSL certificates** with PADS4 domains.  
+- **HTTP Port:** The port used to host the **PADS4 CTRL Center** (default: **80**).
+- **HTTPS Port (SSL):** Secure port for **SSL-encrypted** communication (default: **443**).
 
-### **Message Broker Configuration**  
-From **PADS4 version 2022.3**, users can select the preferred **message broker**:  
-- **Default:** **NDS Message Broker** (new default from version **2022.3**).  
-- **Alternative:** **RabbitMQ** (available for backward compatibility).  
+### **SSL Configuration**
 
----
+To enable **SSL**, configure the following:
 
-## **Root User Configuration**  
+- **DNS Host Name** – Registered domain name.
+- **Certificate File** – Provide the SSL certificate file (`.certificate`).
+- **Private Key File** – Specify the corresponding private key file (`.private`).
 
-- **Username:** Default **`su\root`**.  
-- **Password:** Select a password when upgrading to **PADS4 version 2023.1 or higher**.  
+### **Additional Security Settings**
 
----
+- **Enable HSTS:** Enforces **HTTPS-only** connections for secure communication.
+- **TLS Version:** Choose the required **TLS version** (**1.0, 1.1, 1.2, or 1.3**) when using **SSL certificates** with PADS4 domains.
 
-## **PADS4 Server Settings**  
+### **Message Broker Configuration**
 
-- **IP Address:** By default, the **PADS4 Server** runs on **localhost (127.0.0.1)**. Typically, **PADS4 Foundation** and **PADS4 Server** are installed on the same machine.  
-- **HTTP Port:** The default communication port for **PADS4 Server** is **9005**.  
+From **PADS4 version 2022.3**, users can select the preferred **message broker**:
 
----
+- **Default:** **NDS Message Broker** (new default from version **2022.3**).
+- **Alternative:** **RabbitMQ** (available for backward compatibility).
 
-## **PADS4 Foundation Services**  
+### **Reverse Proxy Configuration**
 
-- **Custom Storage Location:** If required, change the **default storage** location for **PADS4 Foundation Services**.  
-- **Note:** This setting **does not** affect the **content folder**. The **content folder** location can be defined using **PADS4 System Management** for each **domain**.  
+From **PADS4 version 2025.1, **users can select the preferred **reverse proxy.**
+
+- **Default: PADS4 Reverse Proxy **(new default from version **2025.1**).
+- **Alternative: NGinx** (available for backward compatibility).
 
 ---
 
-## **PADS4 CMS (Legacy)**  
+## **Root User Configuration**
 
-- **Default Language:** Set the **default language** for PADS4 CMS.  
-- **Public Host (FQDN):** Discontinued in **PADS4 2023.1** due to the introduction of **PADS4 Domains**.  
-- **Database Configuration:** Select the database type for storage:  
-  - **SQLite**  
-  - **SQL Server**  
+- **Username:** Default **`su\root`**.
+- **Password:** Select a password when upgrading to **PADS4 version 2023.1 or higher**.
 
 ---
 
-## **Service Selection**  
+## **PADS4 Server Settings**
 
-To optimize system performance, disable **unused microservices** on the **PADS4 Server**. Below is a list of configurable **microservices**:  
-
-- **NDS.PADS4.FIDS.Server**  
-- **NDS.Services.CMS**  
-- **NDS.Services.Content**  
-- **NDS.Services.Crystal**  
-- **NDS.Services.Device**  
-- **NDS.Services.Email**  
-- **NDS.Services.Engine**  
-- **NDS.Services.FIDS.Connector**  
-- **NDS.Services.Globalization**  
-- **NDS.Services.License**  
-- **NDS.Services.Location**  
-- **NDS.Services.Messaging**  
-- **NDS.Services.Package**  
-- **NDS.Services.PDF.ToImage**  
-- **NDS.Services.PowerBI**  
-- **NDS.Services.Powerpoint.ToVideo**  
-- **NDS.Services.Process**  
-- **NDS.Services.Replication**  
-- **NDS.Services.Schedule**  
-- **NDS.Services.Sensor**  
-- **NDS.Services.Teams.Integration**  
-- **NDS.Services.User.Scim**  
-- **NDS.Services.UserProfile**  
-- **NDS.Services.Video.Conversion**  
-- **NDS.Services.Viewer**  
-- **NDS.Visitor.Management**  
-- **NDS.Web.DAV**  
-- **NDS.Windows.Gateway**  
+- **IP Address:** By default, the **PADS4 Server** runs on **localhost (127.0.0.1)**. Typically, **PADS4 Foundation** and **PADS4 Server** are installed on the same machine.
+- **HTTP Port:** The default communication port for **PADS4 Server** is **9005**.
 
 ---
 
-## **Change Sensor Database**  
+## **PADS4 Foundation Services**
 
-Click **[here](#)** to modify the **Sensor Database type selection**.  
-
----
-
-## **Applying Changes & Restarting Services**  
-
-After applying configuration changes, **PADS4 will restart all services** to apply the new settings.  
-
-⚠ **Important:** Restarting **PADS4 processes** may take up to **30 seconds**, depending on your hardware specifications.  
+- **Custom Storage Location:** If required, change the **default storage** location for **PADS4 Foundation Services**.
+- **Note:** This setting **does not** affect the **content folder**. The **content folder** location can be defined using **PADS4 System Management** for each **domain**.
 
 ---
 
-## **Tips & Troubleshooting**  
+## **PADS4 CMS (Legacy)**
 
-### **Verify PADS4 Server is Running**  
+- **Default Language:** Set the **default language** for PADS4 CMS.
+- **Public Host (FQDN):** Discontinued in **PADS4 2023.1** due to the introduction of **PADS4 Domains**.
+- **Database Configuration:** Select the database type for storage:
+  - **SQLite**
+  - **SQL Server**
 
-To check if **PADS4 Server** is operational:  
+---
 
-1. Open a **web browser**.  
-2. Enter the following URL based on your **settings**:  
-   ```  
+## **Service Selection**
+
+To optimize system performance, disable **unused microservices** on the **PADS4 Server**. Below is a list of configurable **microservices**:
+
+- **NDS.PADS4.FIDS.Server**
+- **NDS.Services.CMS**
+- **NDS.Services.Content**
+- **NDS.Services.Crystal**
+- **NDS.Services.Device**
+- **NDS.Services.Email**
+- **NDS.Services.Engine**
+- **NDS.Services.FIDS.Connector**
+- **NDS.Services.Globalization**
+- **NDS.Services.License**
+- **NDS.Services.Location**
+- **NDS.Services.Messaging**
+- **NDS.Services.Package**
+- **NDS.Services.PDF.ToImage**
+- **NDS.Services.PowerBI**
+- **NDS.Services.Powerpoint.ToVideo**
+- **NDS.Services.Process**
+- **NDS.Services.Replication**
+- **NDS.Services.Schedule**
+- **NDS.Services.Sensor**
+- **NDS.Services.Teams.Integration**
+- **NDS.Services.User.Scim**
+- **NDS.Services.UserProfile**
+- **NDS.Services.Video.Conversion**
+- **NDS.Services.Viewer**
+- **NDS.Visitor.Management**
+- **NDS.Web.DAV**
+- **NDS.Windows.Gateway**
+
+---
+
+## **Change Sensor Database**
+
+Click [**here**](#) to modify the **Sensor Database type selection**.
+
+---
+
+## **Applying Changes & Restarting Services**
+
+After applying configuration changes, **PADS4 will restart all services** to apply the new settings.
+
+⚠ **Important:** Restarting **PADS4 processes** may take up to **30 seconds**, depending on your hardware specifications.
+
+---
+
+## **Tips & Troubleshooting**
+
+### **Verify PADS4 Server is Running**
+
+To check if **PADS4 Server** is operational:
+
+1. Open a **web browser**.
+2. Enter the following URL based on your **settings**:
+
+   ```
    http(s)://localhost:<port>  
-   ```  
-   - Use **`http`** or **`https`** based on your configuration.  
-   - Replace `<port>` with the actual **PADS4 Server port** (e.g., **80, 443, or 9005**).  
+   ```
+   - Use **`http`** or **`https`** based on your configuration.
+   - Replace `<port>` with the actual **PADS4 Server port** (e.g., **80, 443, or 9005**).
 
-If the **PADS4 CTRL Center login page** appears, the server is running successfully.  
+If the **PADS4 CTRL Center login page** appears, the server is running successfully.
