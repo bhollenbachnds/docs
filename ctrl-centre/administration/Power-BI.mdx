@@ -3,6 +3,7 @@ This guide provides step-by-step instructions to configure **Microsoft Power BI*
 ---
 
 ## **1. Considerations and Limitations**
+
 Before proceeding, take note of the following:
 
 - **"My Workspace" is not supported** when using a service principal.
@@ -16,7 +17,7 @@ Before proceeding, take note of the following:
   - Edge: **88**
 - **Workspaces require capacities**, which may incur additional costs.
 
-For further details, visit:  
+For further details, visit:\
 [Power BI Embedded Documentation](https://learn.microsoft.com/en-us/power-bi/developer/embedded/move-to-production)
 
 Failure to set a capacity can result in a **warning above your reports/dashboards** or prevent them from displaying in the **PADS4 Viewer**.
@@ -24,26 +25,32 @@ Failure to set a capacity can result in a **warning above your reports/dashboard
 ---
 
 ## **2. Register an App in Microsoft Azure**
+
 To integrate Power BI with PADS4, a **new App Registration** is required in **Microsoft Azure**.
 
 ### **Step 1: Create a New App Registration**
+
 1. **Open** the **Azure Portal**.
-2. **Navigate to** **Azure Active Directory** > **App Registrations**.
+2. **Navigate to** **Azure Active Directory** \> **App Registrations**.
 3. **Click** **New Registration**.
 4. **Enter the following values**:
    - **Name**: Any reference name.
-   - **Supported Account Types**:  
-     Select **Single-tenant** or **Multi-tenant** as per your requirements.  
+   - **Supported Account Types**:\
+     Select **Single-tenant** or **Multi-tenant** as per your requirements.\
      **Do not enable personal Microsoft accounts**.
-   - **Redirect URI**:  
+   - **Redirect URI**:\
      This **is not required** for Power BI integration.
 5. **Click** **Register**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerbi-register.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/powerbi-register.png"
+/>
 
 ---
 
 ### **Step 2: Create a Client Secret**
+
 1. **Go to** **Certificates & Secrets** in the left menu.
 2. **Select** **Client Secrets**.
 3. **Click** **New Client Secret**.
@@ -52,25 +59,34 @@ To integrate Power BI with PADS4, a **new App Registration** is required in **Mi
 5. **Click** **Add**.
 6. **Copy the generated Client Secret Value immediately**, as it **will not be visible later**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerbiClientSecret.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/powerbiClientSecret.png"
+/>
 
 ---
 
 ### **Step 3: Gather Required Information**
+
 PADS4 requires the following values for Power BI integration:
 
-| **Required Value**         | **Where to Find It?** |
-|--------------------------|----------------------|
+| **Required Value**          | **Where to Find It?**     |
+| --------------------------- | ------------------------- |
 | **Application (Client) ID** | App Registration Overview |
-| **Directory (Tenant) ID**  | App Registration Overview |
-| **Client Secret**         | Certificates & Secrets |
+| **Directory (Tenant) ID**   | App Registration Overview |
+| **Client Secret**           | Certificates & Secrets    |
 
-
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerBiClientID.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBIClientID.png"
+  alt=""
+  title=""
+/>
 
 ---
 
 ## **3. Enable Power BI Service Admin Settings**
+
 To use the service principal for Power BI integration, follow these steps:
 
 1. **Log in to** the **Power BI Admin portal**.
@@ -85,60 +101,95 @@ To use the service principal for Power BI integration, follow these steps:
 8. **Enable** **Allow Service Principals to Use Power BI APIs**.
 9. **Click Save**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerBIAdminportal.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBIAdminportal.png"
+  alt=""
+  title=""
+/>
 
 ---
 
 ## **4. Add the Service Principal to a Power BI Workspace**
+
 To allow PADS4 to access Power BI reports and dashboards, the **service principal** must be added to a **Power BI Workspace**.
 
 ### **Steps:**
+
 1. **Log in to** **Power BI Home**.
 2. **Click on** **Workspaces** in the left menu.
 3. **Find the Workspace** you want to use and **open More Options**.
 4. **Select** **Workspace Access**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerBIWorkspaceaccess.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBiWorkspaceaccess.png"
+  alt=""
+  title=""
+/>
 
 5. **Click** **Add People or Groups**.
 6. **Search for** the **App Registration name** (created in Azure).
 7. **Add it as** **Member or Admin**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerBIAddPeople.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBiAddPeople.png"
+  alt=""
+  title=""
+/>
 
 8. **Click Save**.
 
 ---
 
 ## **5. Retrieve Power BI Workspace and Report/Dashboard IDs**
+
 To display Power BI content in PADS4, you need the **Workspace ID** and **Report/Dashboard ID**.
 
 ### **Find the IDs in the Power BI URL**
+
 1. **Open** the **Power BI report or dashboard**.
 2. **Check the URL format:**
 
 #### **Reports Example:**
+
 ```
 https://app.powerbi.com/groups/2a72e361-1e1a-43ed-a048-b44b8d2baaae/reports/d4a2c463-c469-4a58-906c-74a7bbe158ba/ReportSectiond8ab5d035cceb8586528?experience=power-bi
 ```
+
 - **Workspace ID**: Found **between** `groups/` **and** `/reports`.
 - **Report ID**: Found **between** `/reports/` **and** `/ReportSection`.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerBIReports.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBIReports.png"
+  alt=""
+  title=""
+/>
 
 #### **Dashboards Example:**
+
 ```
 https://app.powerbi.com/groups/947c4e75-b0c4-4488-aab9-ffc2b67285db/dashboards/ed6ae326-b545-44ec-8524-f951f94a0fd2?experience=power-bi
 ```
+
 - **Workspace ID**: Found **between** `groups/` **and** `/dashboards`.
 - **Dashboard ID**: Found **after** `/dashboards/`.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerBIDashboard.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBIDashboard.png"
+  alt=""
+  title=""
+/>
 
 ---
 
 ## **6. Add Power BI Integration in PADS4 CTRL Center**
+
 ### **Step 1: Register the App in PADS4 Credential Manager**
+
 1. **Log in to** **PADS4 CTRL Center**.
 2. **Open** **Credentials** under the **Administration menu**.
 3. **Click** **Providers**.
@@ -149,35 +200,51 @@ https://app.powerbi.com/groups/947c4e75-b0c4-4488-aab9-ffc2b67285db/dashboards/e
    - **Directory (Tenant) ID**.
    - **Client Secret**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIAppReg.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBIAppReg.png"
+/>
 
 6. **Click** **Create**.
 
 ---
 
 ### **Step 2: Register Power BI Report/Dashboard in PADS4**
+
 1. **Go to** **Overview** in **Credential Manager**.
 2. **Find the App Registration you added**.
 3. **Click** **Connect**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PADS4PowerBIappOverview.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PADS4PowerBIappOverview.png"
+/>
 
 4. **Enter the following details**:
    - **Workspace ID**.
    - **Type** (**Report or Dashboard**).
    - **Report/Dashboard ID**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerBIRegScreen.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBiRegScreen.png"
+  alt=""
+  title=""
+/>
 
 5. **Click** **Create**.
 
 This **generates a Token ID**, which will be used in PADS4 **Web elements**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIReference.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBIReference.png"
+/>
 
 ---
 
 ## **7. Show Power BI Reports/Dashboards in PADS4 Viewers**
+
 To display Power BI content on **PADS4 Viewers**, use the following **URL format**:
 
 ```
@@ -185,12 +252,14 @@ To display Power BI content on **PADS4 Viewers**, use the following **URL format
 ```
 
 ### **URL Breakdown:**
+
 - **Protocol**: `http` or `https` (use `https` if using a valid public SSL certificate).
 - **Host**: **DNS name or IP address** of the **PADS4 Server**.
 - **Port**: Optional (specify only if not using default HTTP/HTTPS ports).
 - **Token ID**: Generated in **Credential Manager**.
 
 ### **Example:**
+
 ```
 https://test.pads4.com/PowerBI/fb709440-5904-4931-962e-a02c1ab4af39
 ```
@@ -198,6 +267,7 @@ https://test.pads4.com/PowerBI/fb709440-5904-4931-962e-a02c1ab4af39
 ---
 
 ## **8. Final Steps**
+
 - **Ensure the Power BI Service Principal is added to Workspaces**.
 - **Verify all API permissions are enabled** in Power BI Admin settings.
 - **Check that the Power BI capacities are set** to avoid access warnings.
