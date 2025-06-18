@@ -1,236 +1,242 @@
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX UW-Series devices** running **Android 8.1**.  
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX UW-Series devices** running **Android 8.1**.
 
 ---
 
-## **Before You Start**  
+## **Before You Start**
 
-### **Supported ProDVX UW-Series Devices**  
+### **Supported ProDVX UW-Series Devices**
 
-The following **ProDVX UW-Series** devices are supported:  
+The following **ProDVX UW-Series** devices are supported:
 
-- **UW-24**  
-- **UW-28**  
-- **UW-37**  
+- **UW-24**
+- **UW-28**
+- **UW-37**
 
-### **Minimum PADS4 Requirements**  
+### **Minimum PADS4 Requirements**
 
-**PADS4 Server Version:** **2024.1** or later  
+**PADS4 Server Version:** **2024.1** or later
 
-**Android Version:** **8.1.0**  
+**Android Version:** **8.1.0**
 
-**Firmware Requirements:**  
+**Firmware Requirements:**
 
-| Device | Firmware Version |
-|:------:|----------------|
-| UW-24 | ProDVX-UW24-R03V3.2-D0.2-20221009 |
-| UW-28 | ProDVX-UW28-R03V3.2-D0.2-20221009 |
-| UW-37 | ProDVX-UW37-R03-37-D0.2-20211210 |
+| Device | Firmware Version                  |
+| :----: | --------------------------------- |
+| UW-24  | ProDVX-UW24-R03V3.2-D0.2-20221009 |
+| UW-28  | ProDVX-UW28-R03V3.2-D0.2-20221009 |
+| UW-37  | ProDVX-UW37-R03-37-D0.2-20211210  |
 
-<Note> Firmware updates can be requested from your **ProDVX dealer**.</Note>  
+<Note>
+   Firmware updates can be requested from your **ProDVX dealer**.
+</Note>
 
-**Important:**  
-By default, **network settings are disabled** on the device. Before installation, go to **Android Settings** and ensure **Wi-Fi** or **Ethernet** is enabled.  
-
----
-
-## **Resetting the Device (Recommended)**  
-
-If the device was used before, perform a **factory reset** to clear storage and prevent software conflicts.  
-
-<Steps>  
-  <Step title="Step One">  
-    Open **Android Settings**.  
-  </Step>  
-  <Step title="Step Two">  
-    Navigate to **System → Reset Options**.  
-  </Step>  
-  <Step title="Step Three">  
-    Select **Erase all data (Factory Reset)**.  
-  </Step>  
-  <Step title="Step Four">  
-    Click **Reset Tablet** and confirm by selecting **Erase Everything**.  
-  </Step>  
-  <Step title="Step Five">  
-    The device will restart automatically after the reset.  
-  </Step>  
-</Steps>  
+**Important:**\
+By default, **network settings are disabled** on the device. Before installation, go to **Android Settings** and ensure **Wi-Fi** or **Ethernet** is enabled.
 
 ---
 
-## **Installing PADS4 Viewer**  
+## **Resetting the Device (Recommended)**
 
-Follow these steps to install **PADS4 Viewer** on your **ProDVX UW-Series device**.  
+If the device was used before, perform a **factory reset** to clear storage and prevent software conflicts.
 
-### **Step 1: Download and Transfer PADS4 Viewer APK**  
+<Steps>
+  <Step title="Step One">
+    Open **Android Settings**.
+  </Step>
+  <Step title="Step Two">
+    Navigate to **System → Reset Options**.
+  </Step>
+  <Step title="Step Three">
+    Select **Erase all data (Factory Reset)**.
+  </Step>
+  <Step title="Step Four">
+    Click **Reset Tablet** and confirm by selecting **Erase Everything**.
+  </Step>
+  <Step title="Step Five">
+    The device will restart automatically after the reset.
+  </Step>
+</Steps>
 
-**Download Locations:**  
+---
 
-**PADS4 Server Directory:**  
+## **Installing PADS4 Viewer**
+
+Follow these steps to install **PADS4 Viewer** on your **ProDVX UW-Series device**.
+
+### **Step 1: Download and Transfer PADS4 Viewer APK**
+
+**Download Locations:**
+
+**PADS4 Server Directory:**
+
 ```
 C:\Program Files\PADS4\Clients\Apps
-```  
-**Official Download Link:**  
-[Download PADS4ProDVX APK](https://install.appcenter.ms/orgs/nds/apps/nds.droid.prodvx/distribution_groups/public)  
+```
 
-**Transfer to USB Stick:**  
+**Official Download Link:**\
+[Download PADS4ProDVX APK](https://github.com/PADS4/PADS4-Viewer-ProDVX-x-series/releases/latest)
 
-<Steps>  
-  <Step title="Step One">  
-    Copy the **PADS4ProDVX.apk** file to a **USB stick**.  
-  </Step>  
-  <Step title="Step Two">  
-    Insert the **USB stick** into the **ProDVX UW-Series device**.  
-  </Step>  
-</Steps>  
+**Transfer to USB Stick:**
 
----
-
-### **Step 2: Install PADS4 Viewer APK**  
-
-<Steps>  
-  <Step title="Step One">  
-    Open the **APK Installer App** on the device (Allow access to external storage if prompted).  
-  </Step>  
-  <Step title="Step Two">  
-    Select **Install** and browse the USB for **PADS4ProDVX.apk**.  
-  </Step>  
-  <Step title="Step Three">  
-    Click on the **APK file** to start installation.  
-  </Step>  
-  <Step title="Step Four">  
-    If prompted, enable **Allow Install from Unknown Sources** and then retry installation.  
-  </Step>  
-  <Step title="Step Five">  
-    Click **Install**, then **Open** when the installation is complete.  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Copy the **PADS4ProDVX.apk** file to a **USB stick**.
+  </Step>
+  <Step title="Step Two">
+    Insert the **USB stick** into the **ProDVX UW-Series device**.
+  </Step>
+</Steps>
 
 ---
 
-## **Configuring PADS4 Viewer**  
+### **Step 2: Install PADS4 Viewer APK**
 
-### **Step 1: Validate Date & Time Configuration**  
-
-Incorrect date and time settings can cause **certificate errors** and **connection issues**.  
-
-<Steps>  
-  <Step title="Step One">  
-    Open **PADS4ProDVX** and go to **System Settings**.  
-  </Step>  
-  <Step title="Step Two">  
-    Navigate to **Date & Time**.  
-  </Step>  
-  <Step title="Step Three">  
-    Configure **correct date & time**, or enable **Auto Sync Date & Time** if supported.  
-  </Step>  
-  <Step title="Step Four">  
-    Return to the **PADS4ProDVX Launcher**.  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Open the **APK Installer App** on the device (Allow access to external storage if prompted).
+  </Step>
+  <Step title="Step Two">
+    Select **Install** and browse the USB for **PADS4ProDVX.apk**.
+  </Step>
+  <Step title="Step Three">
+    Click on the **APK file** to start installation.
+  </Step>
+  <Step title="Step Four">
+    If prompted, enable **Allow Install from Unknown Sources** and then retry installation.
+  </Step>
+  <Step title="Step Five">
+    Click **Install**, then **Open** when the installation is complete.
+  </Step>
+</Steps>
 
 ---
 
-### **Step 2: Connect to PADS4 Server**  
+## **Configuring PADS4 Viewer**
 
-**Format:**  
+### **Step 1: Validate Date & Time Configuration**
+
+Incorrect date and time settings can cause **certificate errors** and **connection issues**.
+
+<Steps>
+  <Step title="Step One">
+    Open **PADS4ProDVX** and go to **System Settings**.
+  </Step>
+  <Step title="Step Two">
+    Navigate to **Date & Time**.
+  </Step>
+  <Step title="Step Three">
+    Configure **correct date & time**, or enable **Auto Sync Date & Time** if supported.
+  </Step>
+  <Step title="Step Four">
+    Return to the **PADS4ProDVX Launcher**.
+  </Step>
+</Steps>
+
+---
+
+### **Step 2: Connect to PADS4 Server**
+
+**Format:**
+
 ```
 <protocol>://<host>:<port>/<domain>/
 ```
 
-**Example:**  
+**Example:**
+
 ```
 https://example.pads365.com/pads4
 ```
 
-<Steps>  
-  <Step title="Step One">  
-    Open **PADS4ProDVX** and enter the **PADS4 Server Address**.  
-  </Step>  
-  <Step title="Step Two">  
-    (Optional) Enter a **custom Viewer Name**.  
-  </Step>  
-  <Step title="Step Three">  
-    Click **Start** to connect.  
-  </Step>  
-  <Step title="Step Four">  
-    If the **Android System WebView** is outdated, it will automatically update.  
-  </Step>  
-  <Step title="Step Five">  
-    Once updated, the **PADS4 Viewer** will restart. Press **Start** again.  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Open **PADS4ProDVX** and enter the **PADS4 Server Address**.
+  </Step>
+  <Step title="Step Two">
+    (Optional) Enter a **custom Viewer Name**.
+  </Step>
+  <Step title="Step Three">
+    Click **Start** to connect.
+  </Step>
+  <Step title="Step Four">
+    If the **Android System WebView** is outdated, it will automatically update.
+  </Step>
+  <Step title="Step Five">
+    Once updated, the **PADS4 Viewer** will restart. Press **Start** again.
+  </Step>
+</Steps>
 
 ---
 
-## **Adjusting PADS4 Viewer Settings**  
+## **Adjusting PADS4 Viewer Settings**
 
-You can configure additional settings in **PADS4ProDVX**.  
+You can configure additional settings in **PADS4ProDVX**.
 
-### **Accessing the Options Screen**  
+### **Accessing the Options Screen**
 
-**To access settings:**  
+**To access settings:**
 
-- **Hold the left mouse button** or **touch the screen** for **3 seconds**.  
-- Click **Launcher Settings** to return to the **PADS4ProDVX app**.  
-
----
-
-## **Updating PADS4 Viewer**  
-
-After installation, **PADS4 Viewer** will automatically update when the **PADS4 Server** is updated.  
+- **Hold the left mouse button** or **touch the screen** for **3 seconds**.
+- Click **Launcher Settings** to return to the **PADS4ProDVX app**.
 
 ---
 
-## **Accessing Android Menu When PADS4 Viewer is Running**  
+## **Updating PADS4 Viewer**
 
-**If you access the Android menu while PADS4 is running, the device will reboot after 30 seconds.**  
-
-To prevent this:  
- **Stop the PADS4ProDVX app within 30 seconds** before making changes.  
+After installation, **PADS4 Viewer** will automatically update when the **PADS4 Server** is updated.
 
 ---
 
-## **Supported Features & Limitations**  
+## **Accessing Android Menu When PADS4 Viewer is Running**
 
-### **General Features**  
+**If you access the Android menu while PADS4 is running, the device will reboot after 30 seconds.**
 
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Automatic PADS4 Software Updates** |  
-| ✅ | **Offline Mode (Plays scheduled content for 7 days)** |  
-| ✅ | **Supports HTTP & HTTPS Protocols** |  
-
-### **Device Capabilities**  
-
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Portrait Mode** (Automatically adjusts) |  
-| ✅ | **Turn off Display (Backlight Off when No Presentation)** |  
-| ✅ | **Volume Level Control** |  
-| ❌ | **Wake-on-LAN Not Supported** |  
-| ❌ | **Remote Shutdown Not Supported** |  
-
-### **Content Support**  
-
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **JPG, PNG, BMP, GIF Image Support** |  
-| ✅ | **Video (Max 1 per page, Landscape Mode Only)** |  
-| ❌ | **Seamless Video Playback Not Supported** |  
-| ❌ | **Video Rotation Not Supported** |  
-| ✅ | **Scrolling Text, Tables, Formatted Text Supported** |  
-| ✅ | **PowerPoint (Requires PADS4 Server Installation)** |  
-| ❌ | **Flash Content, Interactive Data Sorting Not Supported** |  
+To prevent this:\
+**Stop the PADS4ProDVX app within 30 seconds** before making changes.
 
 ---
 
-## **Troubleshooting**  
+## **Supported Features & Limitations**
 
-**Issue:** **Video transition effects not working**  
-**Reason:** Device hardware limitations.  
+### **General Features**
 
-**Issue:** **Device fails to connect to the network**  
-**Solution:** Ensure Wi-Fi or Ethernet is enabled.  
+| Feature | Description                                           |
+| :-----: | ----------------------------------------------------- |
+| ✅       | **Automatic PADS4 Software Updates**                  |
+| ✅       | **Offline Mode (Plays scheduled content for 7 days)** |
+| ✅       | **Supports HTTP & HTTPS Protocols**                   |
 
-**Issue:** **PADS4 Viewer restarts frequently**  
-**Solution:** Check **PADS4 Server connection** and **WebView updates**.  
+### **Device Capabilities**
+
+| Feature | Description                                               |
+| :-----: | --------------------------------------------------------- |
+| ✅       | **Portrait Mode** (Automatically adjusts)                 |
+| ✅       | **Turn off Display (Backlight Off when No Presentation)** |
+| ✅       | **Volume Level Control**                                  |
+| ❌       | **Wake-on-LAN Not Supported**                             |
+| ❌       | **Remote Shutdown Not Supported**                         |
+
+### **Content Support**
+
+| Feature | Description                                               |
+| :-----: | --------------------------------------------------------- |
+| ✅       | **JPG, PNG, BMP, GIF Image Support**                      |
+| ✅       | **Video (Max 1 per page, Landscape Mode Only)**           |
+| ❌       | **Seamless Video Playback Not Supported**                 |
+| ❌       | **Video Rotation Not Supported**                          |
+| ✅       | **Scrolling Text, Tables, Formatted Text Supported**      |
+| ✅       | **PowerPoint (Requires PADS4 Server Installation)**       |
+| ❌       | **Flash Content, Interactive Data Sorting Not Supported** |
+
+---
+
+## **Troubleshooting**
+
+**Issue:** **Video transition effects not working**\
+**Reason:** Device hardware limitations.
+
+**Issue:** **Device fails to connect to the network**\
+**Solution:** Ensure Wi-Fi or Ethernet is enabled.
+
+**Issue:** **PADS4 Viewer restarts frequently**\
+**Solution:** Check **PADS4 Server connection** and **WebView updates**.
