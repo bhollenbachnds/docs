@@ -212,6 +212,7 @@
             "group": "Getting Started",
             "pages": [
               "ctrl-centre/introduction",
+              "ctrl-centre/account-creation",
               "ctrl-centre/dashboard",
               "ctrl-centre/content",
               "ctrl-centre/schedules",
