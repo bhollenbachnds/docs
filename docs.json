@@ -200,6 +200,12 @@
                 "pages": [
                   "certified-devices/sony/BZxx-series"
                 ]
+              },
+              {
+                "group": "Windows",
+                "pages": [
+                  "certified-devices/windows/Windows-Viewer"
+                ]
               }
             ]
           }
