@@ -204,7 +204,8 @@
               {
                 "group": "Windows",
                 "pages": [
-                  "certified-devices/windows/Windows-Viewer"
+                  "certified-devices/windows/Windows-Viewer",
+                  "certified-devices/windows/Windows-HTML5-Viewer"
                 ]
               }
             ]
