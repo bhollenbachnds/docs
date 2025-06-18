@@ -117,6 +117,12 @@
                 ]
               },
               {
+                "group": "Generic Android Viewer",
+                "pages": [
+                  "certified-devices/generic-android-launcher/pads4-generic-android-viewer"
+                ]
+              },
+              {
                 "group": "HikVision",
                 "pages": [
                   "certified-devices/hikvision/DS-D60C-B",
