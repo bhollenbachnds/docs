@@ -1,0 +1,108 @@
+In our latest release, 2025.1, we are introducing our new user management system.
+
+This fundamental change moves the User Management settings from the System Management application to the PADS4 Web Portal.
+
+With this change, we have also introduced Roles to further refine the user management part of PADS4.
+
+Roles will allow you to quickly assign a certain set of licenses and permissions to a user.
+
+<Warning>
+  The new user management system is not yet compatible with Legacy CMS and Workspace
+</Warning>
+
+## How to use roles in PADS4
+
+<Info>
+  The System Management and License Management licenses are required to administer your users and roles
+</Info>
+
+- You can access it by logging in to your PADS4 Web Portal with your Adminstrator account. Go to Dashboard, and on the bottom left go to **Users**.
+
+![Users Pn](/images/ctrl-centre/administration/user-management/Users.png)
+
+- On the left-hand side you can switch between the Users and Roles
+
+![Users Overview Pn](/images/ctrl-centre/administration/user-management/Users-overview.png)
+
+- In the user's overview, you will see the users and their corresponding information as:
+  - Name
+  - Username
+  - Roles
+  - License
+
+![Single User Summary Pn](/images/ctrl-centre/administration/user-management/single-user-summary.png)
+
+- In the Roles section, you will get the following overview of the roles that are available, including the default roles, which are explained below.
+
+![Role Overview Pn](/images/ctrl-centre/administration/user-management/role-overview.png)
+
+## Default roles
+
+There are 5 default roles:
+
+### CMS Advanced users group
+
+| Application  | Access            | Inheritance         |
+| ------------ | ----------------- | ------------------- |
+| Web Designer | Read/Write/Delete |                     |
+| CMS          | Read              |                     |
+| Content      | Read/Write/Delete | Content users group |
+
+### CMS Manager group
+
+| Application | Access            | Inheritance         |
+| ----------- | ----------------- | ------------------- |
+| CMS         | Read/Write/Delete |                     |
+| Users       | Read/Write/Delete |                     |
+| Content     | Read/Write/Delete | Content users group |
+
+### CMS User group
+
+| Application | Access            | Inheritance         |
+| ----------- | ----------------- | ------------------- |
+| CMS         | Read              |                     |
+| Content     | Read/Write/Delete | Content users group |
+
+### Content Managers group
+
+| Application | Access                   | Inheritance |
+| ----------- | ------------------------ | ----------- |
+| Content     | Read/Write/Delete/Modify |             |
+
+### Content User group
+
+| Application | Access            | Inheritance |
+| ----------- | ----------------- | ----------- |
+| Content     | Read/Write/Delete |             |
+
+## Customizing roles
+
+- You can edit these roles to your preferred configuration, or you can make your own Roles where you can specify any other roles that it is a member of, or assign certain licenses.
+
+![New Roles Pn](/images/ctrl-centre/administration/user-management/new-roles.png)
+
+![Create Role Pn](/images/ctrl-centre/administration/user-management/create-role.png)
+
+- With these roles or the self-created roles, you can then further specify the access that you grant users with a certain role to application available in the PADS4 Web Portal.
+
+### Content library
+
+- Right click on the folder that you want to change/review access for and press **"Edit access"**
+
+![Content Access Pn](/images/ctrl-centre/administration/user-management/content-access.png)
+
+- An overview of the roles and users with their rights on this particular folder will show and allows you to add or remove roles and users.
+
+![Content Access 2 Pn](/images/ctrl-centre/administration/user-management/content-access-2.png)
+
+### Web designer category's
+
+- Click the 3 dots on the right of your category and click on **"Edit access"**
+
+![Webdesigner Category Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png)
+
+### Web designer templates
+
+- Hover your mouse on a template and click the three dots, click on **"Edit access"**
+
+![Webdesigner Template Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-template-access.png)

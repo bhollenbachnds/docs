@@ -249,6 +249,12 @@
                 "pages": [
                   "ctrl-centre/administration/meta/create-meta-app"
                 ]
+              },
+              {
+                "group": "User Management",
+                "pages": [
+                  "ctrl-centre/administration/user-management/Roles"
+                ]
               }
             ]
           },
