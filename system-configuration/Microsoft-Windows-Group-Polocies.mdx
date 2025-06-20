@@ -36,30 +36,31 @@ Select User configuration / Policies / Administrative Templates: Policy definiti
 
 PADS4 Property Table for the Desktop Viewer:
 
-Setting	Options	Type	Description
-PADS4 Backup Server	Backup Server Address	String	Name/IP address of the Backup PADS4 Server.
- 	Port Number	Number	Portnumber on which the PADS4 Server listens for incoming calls (default is 7237).
-PADS4 Domain	Domain	String	Custom Domain (default is PADS).
-Enable PADS4 Screensaver on startup	Screensaver timeout	Number	Interval in milliseconds after which the screensaver is started when the user did not hit the keyboard or mouse.
- 	Show logon screen on resume	Boolean	After the screensaver is active and the user moves the mouse or hits the keyboard, the logon screen can be shown.
-PADS4 Hostpath	Hostpath	String	The hostpath as specified in the PADS4 Server settings (default PADS4) which is used for the http synchronisation.
-Http portnumber	HTTP port number	Number	Portnumber used for synchronisation and specified in the PADS4 Server settings (default is 8080).
-Identification mode	Identification mode	Selection	Identification mode when connecting to the PADS4 Server.
-User permissions	User can view messages	Boolean	User can open the messages window.
- 	User can open options window	Boolean	User can open the options window to change settings (not recommended with group policies).
- 	User can exit application	Boolean	User can exit the application.
- 	User can check for software updates	Boolean	User can check for software updates (not recommended with group policies).
- 	User can start screensaver	Boolean	User can change the screen saver settings.
-Scale presentations to fit into the destination window	Scale presentations to fit into the destination window	Boolean	Resize the content to the window size.
- 	Maintain aspect ratio	Boolean	Preserve the aspect ratio.
-PADS4 Server	Server Connection	Selection	Configures how the clients connect to the Server. When set to automatic the Server Address must be left empty.
- 	Server Address	String	Name/IP address of the PADS4 Server.
- 	Port Number	Number	Portnumber on which the PADS4 Server listens for incoming calls (default is 7237).
-Content Library Synchronization	Synchronization Mode	Selection	When automatic is selected, the content is synchronized.
-Content Library storage folder	Mode	Selection	When set to Manual specify the destination. Use variables like %APPDATA% to change the location to user specific folders.
- 	Content library folder	String	folder location where the PADS4 content library is located.
-Tray icon appearance	Appearance	Selection	The way the Desktop Viewer is visible in the windows tray.
-Use local timezone for scheduled presentations	Use local timezone for scheduled presentations	Boolean	Use the timezone of the local system for determining when to show a message.
+| Setting | Options | Type | Description |
+| --- | --- | --- | --- |
+| PADS4 Backup Server | Backup Server Address | String | Name/IP address of the Backup PADS4 Server. |
+| | Port Number | Number | Portnumber on which the PADS4 Server listens for incoming calls (default is 7237). |
+| PADS4 Domain | Domain | String | Custom Domain (default is PADS). |
+| Enable PADS4 Screensaver on startup | Screensaver timeout | Number | Interval in milliseconds after which the screensaver is started when the user did not hit the keyboard or mouse. |
+| | Show logon screen on resume | Boolean | After the screensaver is active and the user moves the mouse or hits the keyboard, the logon screen can be shown. |
+| PADS4 Hostpath | Hostpath | String | The hostpath as specified in the PADS4 Server settings (default PADS4) which is used for the http synchronisation. |
+| Http portnumber | HTTP port number | Number | Portnumber used for synchronisation and specified in the PADS4 Server settings (default is 8080). |
+| Identification mode | Identification mode | Selection | Identification mode when connecting to the PADS4 Server. |
+| User permissions | User can view messages | Boolean | User can open the messages window. |
+| | User can open options window | Boolean | User can open the options window to change settings (not recommended with group policies). |
+| | User can exit application | Boolean | User can exit the application. |
+| | User can check for software updates | Boolean | User can check for software updates (not recommended with group policies). |
+| | User can start screensaver | Boolean | User can change the screen saver settings. |
+| Scale presentations to fit into the destination window | Scale presentations to fit into the destination window | Boolean | Resize the content to the window size. |
+| | Maintain aspect ratio | Boolean | Preserve the aspect ratio. |
+| PADS4 Server | Server Connection | Selection | Configures how the clients connect to the Server. When set to automatic the Server Address must be left empty. |
+| | Server Address | String | Name/IP address of the PADS4 Server. |
+| | Port Number | Number | Portnumber on which the PADS4 Server listens for incoming calls (default is 7237). |
+| Content Library Synchronization | Synchronization Mode | Selection | When automatic is selected, the content is synchronized. |
+| Content Library storage folder | Mode | Selection | When set to Manual specify the destination. Use variables like %APPDATA% to change the location to user specific folders. |
+| | Content library folder | String | folder location where the PADS4 content library is located. |
+| Tray icon appearance | Appearance | Selection | The way the Desktop Viewer is visible in the windows tray. |
+| Use local timezone for scheduled presentations | Use local timezone for scheduled presentations | Boolean | Use the timezone of the local system for determining when to show a message. |
  
 
  NOTE
