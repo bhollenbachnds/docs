@@ -1,47 +1,45 @@
 During the installation process, PADS4 will install the following prerequisites:
 
- 
-
 ### Included in PADS4 Installer
-*All the prerequisites will be installed/updated by the PADS4 Foundation installer. Do not pre-install these components beforehand on a server or workstation for white listing or other project related matters, this can disrupt the functional operation of the PADS4 Foundation product.*
 
-| Package | Description |
-| ----------- | ----------- |
-| NDS Package Manager | NDS Installation tool, which is used to install, update or remove the PADS4 installation. When this tool is uninstalled separately, you won’t be able to uninstall PADS4. |
-| Microsoft Visual C++ 2015-2022 Redistributable (x64 & x84) - 14.32.31332 | The Visual C++ Redistributable Packages install run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed by the PADS4 team. |
-| Microsoft .NET Runtime 6 | .Net framework which is used by PADS4 middleware |
-| Microsoft ASP.NET 6 | .Net framework which is used by PADS4 middleware |
-| Erlang 24.0 (deprecated from 2022.3) | Library to handle concurrency and fault tolerance to provide a robust system |
-| RabbitMQ Server 3.9.1 (deprecated from 2022.3) | Messaging broker mechanism used by PADS4 |
-| NDS Message Broker | New in PADS4 2022.3. Optional to replace RabbitMQ. |
-| NGinX webserver | High performance load balancer used by PADS4 |
-| Dokan 1.5.1.1000 bundle | Virtual Drive library used by PADS4 to create a connection to the new Content Library introduced with version 2021.3|
-| Microsoft Edge WebView2 Runtime | Web Element engine |
+_All the prerequisites will be installed/updated by the PADS4 Foundation installer. Do not pre-install these components beforehand on a server or workstation for white listing or other project related matters, this can disrupt the functional operation of the PADS4 Foundation product._
 
- 
+| Package                                                                    | Description                                                                                                                                                                                    |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NDS Package Manager                                                        | NDS Installation tool, which is used to install, update or remove the PADS4 installation. When this tool is uninstalled separately, you won’t be able to uninstall PADS4.                      |
+| Microsoft Visual C\+\+ 2015-2022 Redistributable (x64 & x84) - 14.32.31332 | The Visual C\+\+ Redistributable Packages install run-time components of Visual C\+\+ libraries. These components are required to run C\+\+ applications that are developed by the PADS4 team. |
+| Microsoft .NET Runtime 6 (deprecated since 2025.1)                         | .NET Framework, which is used by PADS4 middleware                                                                                                                                              |
+| Microsoft ASP.NET 6   (deprecated since 2025.1)                            | .NET Framework, which is used by PADS4 middleware                                                                                                                                              |
+| Microsoft .NET Runtime 8                                                   | .NET Framework, which is used by PADS4 middleware                                                                                                                                              |
+| Microsoft ASP.NET 8                                                        | .NET Framework, which is used by PADS4 middleware                                                                                                                                              |
+| Erlang 24.0 (deprecated from 2022.3)                                       | A library to handle concurrency and fault tolerance to provide a robust system                                                                                                                 |
+| RabbitMQ Server 3.9.1 (deprecated from 2022.3)                             | Messaging broker mechanism used by PADS4                                                                                                                                                       |
+| NDS Message Broker                                                         | New in PADS4 2022.3. Optional to replace RabbitMQ.                                                                                                                                             |
+| NGinx Reverse Proxy                                                        | High-performance load balancer used by PADS4                                                                                                                                                   |
+| PADS4 Reverse Proxy                                                        | New in PADS4 2025.1. YARP-based reverse proxy load balancer, which has improved performance over NGinx. Optional to replace NGinx.                                                             |
+| Dokan 1.5.1.1000 bundle                                                    | Virtual Drive library used by PADS4 to create a connection to the new Content Library introduced with version 2021.3                                                                           |
+| Microsoft Edge WebView2 Runtime                                            | Web Element engine                                                                                                                                                                             |
 
 ### Prerequisites that require internet connection for downloading during installation process
 
-| Package | Description |
-| ----------- | ----------- |
+| Package                        | Description                                                                                                                                                               |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Microsoft .NET Framework 4.7.2 | Framework component is most likely to be available on all systems. If on a certain old system this component is missing, PADS4 will try to download it from the internet. |
 | Microsoft .NET Framework 4.6.2 | Framework component is most likely to be available on all systems. If on a certain old system this component is missing, PADS4 will try to download it from the internet. |
-| Powershell 3.0 | Powershell 3.0 which is available on all windows operation systems except Windows 7 for which PADS4 will try to download it from the internet. |
- 	 
- 
+| Powershell 3.0                 | Powershell 3.0 which is available on all windows operation systems except Windows 7 for which PADS4 will try to download it from the internet.                            |
 
 ### Optional
+
 Some modules require additional software mentioned below.
 
-*Based on configuration settings, SQL Server could be required.*
+_Based on configuration settings, SQL Server could be required._
 
-| Package | Description |
-| ----------- | ----------- |
-| *IIS | Digital Signage CMS, Workspace, Wayfinding and Videowall require IIS. |
-| **SQL Server | Default database used after installation is SQLite. This does not need any additional software to be installed. |
+| Package              | Description                                                                                                                                                            |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*IIS                | Digital Signage CMS, Workspace, Wayfinding and Videowall require IIS.                                                                                                  |
+| \*\*SQL Server       | Default database used after installation is SQLite. This does not need any additional software to be installed.                                                        |
 | Microsoft Powerpoint | To be able to show Powerpoint presentations on HTML5 Viewers, installation of Microsoft Powerpoint on the PADS4 Server is required. Powerpoint is used for conversion. |
 
-**By default IIS is available on Windows Servers.*
+\*_By default IIS is available on Windows Servers._
 
-
-** *When preferred database is changed to SQL Server for PADS4 CMS, this will require SQL Server to be installed on the Server.*
+\*\* _When preferred database is changed to SQL Server for PADS4 CMS, this will require SQL Server to be installed on the Server._
