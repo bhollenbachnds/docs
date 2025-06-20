@@ -31,21 +31,6 @@
             ]
           },
           {
-            "group": "Upgrade Information",
-            "pages": [
-              "upgrade-info/Upgrading-to-PADS4-2025.1"
-            ]
-          },
-          {
-            "group": "System Configuration",
-            "pages": [
-              "system-configuration/PADS4-Configuration-Selection",
-              "system-configuration/Active-Directory-Configuration",
-              "system-configuration/PADS4-Hardware-Configuration-Guide",
-              "system-configuration/Microsoft-Windows-Group-Polocies"
-            ]
-          },
-          {
             "group": "Install PADS4",
             "pages": [
               "install-pads4/Downloads",
@@ -69,6 +54,21 @@
                   "install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-HTML5-Viewer",
                   "install-pads4/install-pads4-viewer/How-to-install-PADS4-Generic-Android-Viewer"
                 ]
+          },
+          {
+            "group": "System Configuration",
+            "pages": [
+              "system-configuration/PADS4-Configuration-Selection",
+              "system-configuration/Active-Directory-Configuration",
+              "system-configuration/PADS4-Hardware-Configuration-Guide",
+              "system-configuration/Microsoft-Windows-Group-Polocies"
+            ]
+          },
+          {
+            "group": "Upgrade Information",
+            "pages": [
+              "upgrade-info/Upgrading-to-PADS4-2025.1"
+            ]
               }
             ]
           },
