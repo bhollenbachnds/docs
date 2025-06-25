@@ -969,7 +969,13 @@
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/add-ons",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/scheduled-tasks"
                       ]
-                  }
+                    },
+                    {
+                  "group": "Monitoring & Alerts window",
+                    "pages": [
+                      "digital-signage/windows-applications/agent/monitoring-and-alerts/monitoring-and-alerts-window"
+                     ]
+                   } 
                 ]
               },
               "modules/digital-signage/licenses"
