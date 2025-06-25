@@ -940,7 +940,10 @@
                   {
                     "group": "Main Window",
                     "pages": [
-                      "digital-signage/windows-applications/agent/main-window/ribbon-bar"
+                      "digital-signage/windows-applications/agent/main-window/ribbon-bar",
+                      "digital-signage/windows-applications/agent/main-window/navigation-pane",
+                      "digital-signage/windows-applications/agent/main-window/information-area",
+                      "digital-signage/windows-applications/agent/main-window/tasks"
                       ]
                   }
                 ]

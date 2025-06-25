@@ -1,0 +1,19 @@
+After you have selected an information category of a server, viewer or black box in the [navigation pane](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm), the information will be retrieved and the results will be displayed in a window in the information area. The way the results are displayed in the information window depends on the chosen category.
+
+![EN Agent Viewerconnections Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Viewerconnections.png)
+
+For most categories, a number of context-sensitive functions will become available in the ribbon bar. The same context-sensitive functions can also be called by right-clicking the information window.
+
+By default, the PADS4 application uses one information window to display all results. This means that when you switch to another information category the same window will be reused to display the results. Optionally you can manually open additional information windows as described in [Working with multiple windows](https://pads4documentation.blob.core.windows.net/agent/Content/Advanced%20features/Working%20with%20multiple%20windows.htm) or use the [View options](https://pads4documentation.blob.core.windows.net/agent/Content/Tools/Options/View%20options.htm) of the application to have the system automatically open new information windows.
+
+ 
+
+#### **Refreshing data**
+
+The first time you select a certain information category, the information is always retrieved from the remote server or viewer. When later on you select the same information category in the navigation pane again, it depends on the selected category how the system will respond. For performance reasons, categories with information that will almost never change will display the locally cached, previous results. Categories with dynamic information will always retrieve their information from the remote server or viewer again. If the information is retrieved from the remote server or viewer you will see a new task appearing in the [tasks window.](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm) If no new task appears in the tasks window this means that the information is retrieved from the local cache.
+
+<Note>
+  To force the PADS4 Agent application to retrieve the requested information from the connected server or viewer, you must click **Refresh** on the **Home** tab of the ribbon bar of use the F5 shortcut key.
+</Note>
+
+For some information categories (like all black box categories) the **Refresh** function is not available, because the information of the category is always available and there is no need to refresh the information.

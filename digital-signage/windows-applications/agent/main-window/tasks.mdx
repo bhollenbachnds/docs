@@ -1,0 +1,46 @@
+Each function you call in PADS4 Agent (e.g. retrieving a screenshot of a Viewer) is automatically translated by the system into a task.
+
+When it's a server task that needs to be processed by your connected PADS4 Server, then the task is automatically forwarded to the right PADS4 Server. Here it is locally processed and when the task is ready, the results will be returned to the PADS4 Agent application.
+
+Viewer tasks are also automatically forwarded to the right PADS4 Server, where the PADS4 Server in its turn forwards the task to the right PADS4 Viewer. When the task is processed, the result is sent back to the PADS4 Server which returns it to the PADS4 Agent application.
+
+Beside executing a task instantly, you can also schedule a task to be executed at a later time.
+
+<Tip>
+  The automatic task forwarding system ensures that your task will be executed at the right place and on the right time, even when the system is temporarily offline.\
+  \
+  Tasks are processed asynchronously, enabling you to continue with other features of the application while your task is being processed.
+</Tip>
+
+#### **Tasks window**
+
+The tasks window gives you a complete overview of all running or finished tasks, including their status, duration and results.
+
+![EN Agent Tasks Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Tasks.png)
+
+**Task**\
+System defined description of your task.
+
+**Destination**\
+Destination where your task is executed. This can be the server of your system or a viewer. One exception is the Wake-on-LAN task, for which the Viewer is listed while the task is executed on the server.
+
+**Start Time**\
+Timestamp of the moment that your tasks was started.
+
+**Duration**\
+The hours, minutes, and seconds that it took to execute your task. When it took less than a second to execute your task a value of 1 second is displayed.
+
+**Status**\
+Indicates if your task is running or finished. When it's finished it shows wether the execution was successful or failed.
+
+**Message**\
+Shows information about the result of the task.\
+If the message is 'See details' then you can click the **Details** button in the tasks window to check the detailed results of the task. The way the detailed results are shown depends on the kind of task.
+
+To clear the displayed information in the tasks window, click the **Clear Log** button in the tasks window. Clearing the log will in no way affect the execution of your tasks.
+
+ 
+
+#### **Remarks**
+
+Some tasks are not listed in the tasks window (like retrieving the viewer connection information on a PADS4 Server), because this information is instantly available and not retrieved by executing a task.
