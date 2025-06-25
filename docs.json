@@ -947,7 +947,7 @@
                       ]
                   },
                   {
-                  "group": "Remote Management",
+                  "group": "Remote Management and Monitoring",
                     "pages": [
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/server-functions",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-functions",
