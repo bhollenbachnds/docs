@@ -933,8 +933,8 @@
                     "group": "Starting PADS4 Agent",
                     "pages": [
                       "digital-signage/windows-applications/agent/starting-PADS4-Agent/starting-the-application",
-                      "digital-signage/windows-applications/agent/starting-PADS4-Agent/Connecting-to-your-PADS4-Server"
-    
+                      "digital-signage/windows-applications/agent/starting-PADS4-Agent/Connecting-to-your-PADS4-Server",
+                      "digital-signage/windows-applications/agent/starting-PADS4-Agent/managing-your-connections"
                     ]
                   },
                   {
