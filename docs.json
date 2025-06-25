@@ -936,6 +936,12 @@
                       "digital-signage/windows-applications/agent/starting-PADS4-Agent/Connecting-to-your-PADS4-Server"
     
                     ]
+                  },
+                  {
+                    "group": "Main Window",
+                    "pages": [
+                      "digital-signage/windows-applications/agent/main-window/ribbon-bar"
+                      ]
                   }
                 ]
               },
