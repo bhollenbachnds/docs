@@ -1,0 +1,132 @@
+With the PADS4 software update functions, you can retrieve version information of the PADS4 files on your PADS4 Server, a PADS4 Viewer, or a black box file. The PADS4 software of your PADS4 Server or PADS4 Viewer can be remotely updated.
+
+ 
+
+#### **To retrieve version information of the PADS4 files on your PADS4 Server**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **PADS software** in the list of available server information categories.
+
+After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the PADS4 software window. If your PADS4 installation includes sub-servers, then you must first select a server before selecting the information category.
+
+ 
+
+#### **To retrieve version information of the PADS4 files on a PADS4 Viewer**
+
+1. Click on the **Viewer** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Select a Viewer from the list of available destinations.
+3. Click **PADS software** in the list of available viewer information categories.
+
+After this, the system will automatically connect to the connected PADS4 Server to retrieve the requested information from the selected Viewer and display the results in the PADS4 software window.
+
+<Warning>
+  The PADS4 application will only be able to start retrieving the requested viewer information when you have selected <u>both</u> a Viewer and a Category in the navigation pane.
+</Warning>
+
+ 
+
+#### **To view the PADS4 version information of a black box file**
+
+1. Make sure the black box has been [added](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) to the application.
+2. Click on the **Black Box** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Blackboxtab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Blackboxtab.png)
+3. Select the black box item in the list of available black boxes.
+4. Click **PADS software** in the list of available black box information categories.
+
+After this the system will automatically open the black box file to retrieve the requested information and display the results in the PADS4 software window.
+
+ 
+
+#### **PADS software window**
+
+The PADS4 software window shows the version information of the PADS4 software and all related files. This enables you to check if you are running with the right version of the software.
+
+![EN Agent Pads4software Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-PADS4Software.png)
+
+A the top of the window, you find the **Version number** and **Date** of the installed PADS4 software.
+
+**File Name**\
+Name of the file that has been installed in the \\Program Files folder of PADS4.
+
+**Version**\
+Version number of the installed file.
+
+**Size**\
+File size of the installed file.
+
+**Created**\
+Date and time at which the file was originally installed.
+
+**Last Modified**\
+Date and time at which the file was last updated.
+
+ 
+
+#### **Updating the PADS4 software**
+
+From the PADS4 software window you can remotely update the PADS4 software on your PADS4 Server or PADS4 Viewer.
+
+<Warning>
+  Before you start using the update function it's crucial to understand the difference between using this function for your PADS4 Server and PADS4 Viewer.\
+  \
+  When you call the update function for your PADS4 Server the system will check ONLINE if there is any new update of the PADS4 software available. If you call the update function for a PADS4 Viewer, then the system will ONLY check with your PADS4 server for the availability of a new update. This means that a PADS4 Viewer will only 'see' that there is a new version if this new version has earlier been downloaded by your PADS4 Server.
+</Warning>
+
+When checking the availability of software updates, the system will only look for the latest version you are entitled to. For example: You have a software contract that includes updates until December 31st 2015. New build versions of the PADS4 software have been released on December 12th 2015 and a next one on January 6th 2016. When you run the software update function on February 1st 2017 the system will only return the update of December 12th and will ignore the update of January 6th. To get access to this newer version you will have to renew your contract.
+
+<Tip>
+  When updating the PADS4 software it's strongly recommended first to update the software on your PADS4 Server, before updating the software of your PADS4 Viewers. It's also preferred to run with the same build version of the PADS4 software on all PCs of your PADS4 installation.
+</Tip>
+
+Optionally, you can split the download of an update from its installation. This enables you to download an update and install it at a later, more convenient moment.
+
+<Tip>
+  Updating the PADS4 software can also be performed as a scheduled task. This way you can fully automate the process of downloading and installing updates.
+</Tip>
+
+ 
+
+#### **To update the PADS4 software on your PADS4 Server**
+
+1. Make sure that the PADS4 software window refers to your PADS4 Server (The tab header of the window must contain the text 'PADS Software: Server').
+2. Click **Update** on the **Home** menu.
+
+   ![EN Agent Ribbon Updatesoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Updatesoftware.png)
+3. Select the **Action** you want to be executed.
+
+   ![EN Agent Updateserversoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Updateserversoftware.png)
+
+   | **Action**                  | **Description**                                                                                                                                                                                                                                                                                                                                                            |
+   | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Download Update             | Your PADS4 Server will check ONLINE if there is a new, updated version of the PADS4 software available.<br />If this is the case then the update will be automatically download and locally stored on your PADS4 Server PC.                                                                                                                                                |
+   | Install Downloaded Update   | Your PADS4 Server will check locally if there is a previously downloaded update available.<br />If this is the case then the update will be automatically installed on your PADS4 Server PC.  NOTE: If required the system will automatically perform a reboot after installing the update. As a result you may (temporarily) loose the connection with your PADS4 Server. |
+   | Download and Install Update | You PADS4 Server will do a combination of the above two actions.                                                                                                                                                                                                                                                                                                           |
+4. Click **Update** to start the selected action.
+
+After this, the system will automatically start the specified action. To see the results of this action, you have to consult the [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm) window.
+
+ 
+
+#### **To update the PADS4 software on your PADS4 Viewer**
+
+1. Make sure that the PADS4 software window refers to your PADS4 Viewer (The tab header of the window must contain the name of your PADS4 Viewer').
+2. Click **Update** on the **Home** menu.
+
+   ![EN Agent Ribbon Updatesoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Updatesoftware.png)
+3. Select the **Action** you want to be executed.
+
+   ![EN Agent Updateviewersoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Updateviewersoftware.png)
+
+   | **Action**                  | **Description**                                                                                                                                                                                                                                                                                                                                                                                                    |
+   | :-------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Download Update             | Your PADS4 Viewer will check with your PADS4 Server if there is a new, updated version of the PADS4 software available.<br /><br />If this is the case, then the update will be automatically downloaded and locally stored on your PADS4 Viewer PC.                                                                                                                                                               |
+   | Install Downloaded Update   | Your PADS4 Viewer will check locally if there is a previously downloaded update available.<br /><br />If this is the case, then the update will be automatically installed on your PADS4 Viewer PC.  Check **Reboot after installing update** if you want the system to automatically perform a reboot after installing the update. As a result, you may (temporarily) lose the connection with your PADS4 Viewer. |
+   | Download and Install Update | Your PADS4 Viewer will do a combination of the above two actions.                                                                                                                                                                                                                                                                                                                                                  |
+4. Click **Update** to start the selected action.
+
+After this, the system will automatically start the specified action. To see the results of this action, you have to consult the [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm) window.

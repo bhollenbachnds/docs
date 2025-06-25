@@ -1,0 +1,47 @@
+With the scheduled presentations functions, you can get an overview of the PADS4 presentations that have been scheduled for your PADS4 Viewer.
+
+ 
+
+#### **To retrieve the scheduled presentations of a PADS4 Viewer**
+
+1. Click on the **Viewer** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Select a Viewer from the list of available destinations.
+3. Click **Scheduled presentations** in the list of available viewer information categories.
+
+After this, the system will automatically connect to the connected PADS4 Server to retrieve the requested information from the selected Viewer and display the results in the scheduled presentations window.
+
+<Warning>
+  The PADS4 application will only be able to start retrieving the requested viewer information when you have selected <u>both</u> a Viewer and a Category in the navigation pane.
+</Warning>
+
+ 
+
+#### **Scheduled presentations window**
+
+The scheduled presentations window shows the locally stored timetable of scheduled PADS4 presentations of a PADS4 Viewer. With this timetable, you can check if your scheduled presentation has arrived on your viewer and if the viewer plays the presentation you expected.
+
+![EN Agent Scheduledpresentations Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Scheduledpresentations.png)
+
+When you have scheduled a PADS4 presentation with PADS4 Scheduler, then the presentation and schedule information is immediately forwarded to the PADS4 Viewers involved, where it is locally stored. This way, playback of your scheduled presentation is ensured, even when the PADS4 Viewer is temporarily offline. Each PADS4 Viewer can run without being connected to its PADS4 Server for a maximum of 1 week.
+
+<Warning>
+  The scheduled presentations window shows the so-called 'operational schedules' of a PADS4 Viewer. Each PADS4 Viewer uses the schedule information it receives from PADS4 Server, to generate its own timetable of presentations to be really played, called the operational schedules.\
+  \
+  When there are partially overlapping schedules, the viewer will automatically adjust the display period information of the schedules and only include the schedule with the highest priority for each period of time. When a scheduled presentation is completely overlapped by a scheduled presentation with a higher priority, it will not be included at all.\
+  \
+  **As a result, the information in the scheduled presentations window may differ from the information in the PADS4 scheduler application.**
+</Warning>
+
+**Start Date**\
+The calculated start date and time of the scheduled presentation.
+
+**End Date**\
+The calculated end date and time of the scheduled presentation.
+
+**Presentation**\
+The name of the scheduled presentation. When you have scheduled a playlist of presentations, the name of the first presentation in the playlist is listed.
+
+**Type**\
+Shows if the schedule presentation is part of a recurring schedule or not (Ad-hoc).

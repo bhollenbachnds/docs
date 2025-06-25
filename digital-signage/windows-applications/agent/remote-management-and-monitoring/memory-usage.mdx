@@ -1,0 +1,85 @@
+With the memory usage functions, you can analyze the memory usage of a PADS4 Viewer or the memory usage logged in a black box file. You can view the memory usage of the entire system or the individual PADS4 processes. The memory usage log of a PADS4 Viewer can be cleared or saved to a file, together with other black box information.
+
+ 
+
+#### **To view the memory usage log of a PADS4 Viewer**
+
+1. Click on the **Viewer** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Select a Viewer from the list of available destinations.
+3. Click **Memory usage** in the list of available viewer information categories.
+
+After this the system will automatically connect to the connected PADS4 Server to retrieve the requested information from the selected Viewer and display the results in the memory usage window.
+
+<Warning>
+  The PADS4 application will only be able to start retrieving the requested viewer information when you have selected <u>both</u> a Viewer and a Category in the navigation pane.
+</Warning>
+
+ 
+
+#### **To view the memory usage log of a black box file**
+
+1. Make sure the black box has been [added](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) to the application.
+2. Click on the **Black Box** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Blackboxtab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Blackboxtab.png)
+3. Select the black box item in the list of available black boxes.
+4. Click **Memory usage** in the list of available black box information categories.
+
+After this the system will automatically open the black box file to retrieve the requested information and display the results in the memory usage window.
+
+ 
+
+#### **Memory usage window**
+
+The memory usage window shows the memory usage of your PADS4 Viewer during the recent past. This enables you to quickly see if there is an increase of the used memory over time. A permanent increase of the memory used is usually an indication of a memory leak in one of the running processes of your PC and after a certain period of time may cause your PC to hang.
+
+![EN Agent Memoryusage Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Memoryusage.png)
+
+The PADS4 system automatically logs the memory usage on your Viewer PC every 15 minutes.
+
+When you select one of the listed memory usage items in the table, the system will automatically mark the corresponding point in the displayed chart. The other way around, if you click a point in the displayed chart, the system will automatically select the listed item in the table that belongs to this point.
+
+ 
+
+#### **Views**
+
+You can either view the memory usage of the entire Viewer PC or the memory usage of individual PADS4 processes. To change the view of the memory usage window, click one the following buttons on the **Home** menu of the ribbon bar:
+
+![EN Agent Ribbon System Memory Usage Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-SystemMemoryUsage.png)
+
+- Shows the memory usage of the entire Viewer PC. This includes not only PADS4 processes, but all running processes on your Viewer PC.
+
+  ![EN Agent Ribbon Process Memory Usage Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ProcessMemoryUsage.png)
+- Shows the memory usage of the individual PADS4 processes on the Viewer PC. In the memory usage window, select the **Process** for which you want to view the memory usage.
+
+In the **Process Memory Usage** view not only the used memory, but also information about the used number of handles and threads is given. Same as with the used memory, if the number of handles or threads permanently increases this may lead to problems like a Viewer no longer to respond.
+
+ 
+
+#### **Clearing the memory usage log**
+
+By clearing the memory usage log you can restart the logging process of your PADS4 Viewer. To clear the memory usage log:
+
+1. Click **Clear Log** on the **Home** menu.
+
+   ![EN Agent Ribbon Clear Log Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ClearLog.png)
+2. Click **Yes** to confirm that you want to clear the memory usage log.
+
+After this, all log messages for both the system memory usage and the process memory usage will be removed from the log on the PADS4 Viewer PC.
+
+ 
+
+#### **Saving the memory usage log**
+
+To save the memory usage log for analyzing or comparing it offline at a later moment, you can save it together with other [black box](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) information of your Viewer. To save the memory usage log:
+
+1. Click **Save Black Box** on the **Home** menu.
+2. Enter a **File name** and click **Save** to save the information.
+
+After this, the black box file will be saved on your computer.
+
+<Tip>
+  Each PADS4 Viewer automatically creates a so-called black box in which valuable information about PADS4 is stored. This includes system information and various logs. When you encounter a problem with a PADS4 Viewer, the black box is the ideal source of information to analyze the situation and trace the problem. So, when you contact support for a problem with a PADS4 Viewer it's suggested always to send the black box file.
+</Tip>

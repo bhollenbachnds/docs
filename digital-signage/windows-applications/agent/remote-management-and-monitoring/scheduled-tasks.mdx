@@ -1,0 +1,207 @@
+With the scheduled task functions, you can view the scheduled tasks of your PADS4 Server or PADS4 Viewer. On your server, scheduled tasks can be added, edited, or removed.
+
+ 
+
+#### **To view the scheduled tasks of your PADS4 Server**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **Scheduled tasks** in the list of available server information categories.
+
+After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the scheduled tasks window. If your PADS4 installation includes sub-servers, then the scheduled tasks window will always show the global results of your entire PADS4 installation, no matter what server you have selected.
+
+ 
+
+#### **To view the scheduled tasks of a PADS4 Viewer**
+
+1. Click on the **Viewer** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Select a Viewer from the list of available destinations.
+3. Click **Scheduled tasks** in the list of available viewer information categories.
+
+After this, the system will automatically connect to the connected PADS4 Server to retrieve the requested information from the selected Viewer and display the results in the scheduled tasks window.
+
+<Warning>
+  The PADS4 application will only be able to start retrieving the requested viewer information when you have selected <u>both</u> a Viewer and a Category in the navigation pane.
+</Warning>
+
+ 
+
+#### **Scheduled tasks window**
+
+The scheduled tasks window shows all tasks that have been scheduled for your PADS4 Server or PADS4 Viewer. This enables you to check when certain tasks will be executed and inspect the results of finished tasks.
+
+![EN Agent Scheduledtasks Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Scheduledtasks.png)
+
+In the scheduled tasks window of your PADS4 server all scheduled tasks of both your server and all its viewers are displayed. In the scheduled tasks window of a PADS4 Viewer only the tasks that are applicable to this viewer are shown.
+
+**Task**\
+System defined description of the scheduled task.
+
+**Schedule**\
+Generated description that shows when the task will be executed.
+
+**Status**\
+Shows if the task is waiting for executing, is currently running or has been finished.
+
+**Last Run**\
+If the tasks has been executed at least once, this information shows if the last execution was successful or failed.
+
+**Destinations**\
+Shows all destinations for which the task has been scheduled. For server tasks the value 'Server' will be displayed.
+
+ 
+
+#### **Task results**
+
+If you select a task in the scheduled tasks window that has been executed at least once, then the **Task Results** show details about the execution of the task.
+
+**Scheduled Time**\
+Date and time for which execution of the task was scheduled.
+
+**Destination**\
+\
+Destination where the task has been executed. This can be the server of your system or a viewer. One exception is the Wake-on-LAN task, for which the Viewer is listed while the task is executed on the server.
+
+**Start Time**\
+Timestamp of the moment that the task was started.
+
+**Duration**\
+\
+The hours, minutes, and seconds that it took to execute the task. When it took less than a second to execute your task a value of 1 second is displayed.
+
+**Status**\
+\
+Indicates if the task is running or finished. When it's finished it shows wether the execution was successful or failed.
+
+**Message**\
+Shows information about the result of the task.\
+If the message is 'See details' then you can click the **Details** button to check the detailed results of the task. The way the detailed results are shown depends on the kind of task.
+
+ 
+
+By default, finished scheduled tasks are automatically removed after 7 days. This option can be adjusted by changing the server settings of your PADS4 installation via the PADS4 System Management application.
+
+Wake-on-LAN tasks have a couple of exceptions. Although wake-on-LAN tasks are executed on your server, the viewer is listed as destination. Also, when you look at the scheduled tasks of a viewer, the wake-on-LAN task will be included in the list, while this task in reality resides on the server.
+
+In the task results pane you can see if the wake-on-LAN signal was successfully sent by PADS4 Server. This does NOT automatically mean that the wake-on-LAN function was successfully received by the viewer. If the viewer has been successfully switched on you normally will see its Viewer status and Controller status in the [viewer connections window](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Viewer%20connections.htm) being updated to 'connected'.
+
+ 
+
+#### **Managing scheduled tasks**
+
+From the scheduled tasks window you can remotely schedule new tasks, modify existing scheduled tasks or remove scheduled tasks. New scheduled tasks can be created from scratch or by duplicating and editing an existing task. Tasks can be disabled to temporarily switch them off.
+
+<Warning>
+  Scheduled tasks - not only server tasks, but also viewer tasks - can only be managed on your PADS4 Server. The functions for managing scheduled tasks are NOT available in the scheduled tasks window of a PADS4 Viewer.
+</Warning>
+
+When scheduling a tasks there is a distinction between server tasks and viewer tasks. When you schedule a server task that needs to be processed by your connected PADS4 Server, then the task is automatically forwarded to the right PADS4 Server where it is locally stored. Scheduled viewer tasks are also automatically forwarded to the right PADS4 Server, but the PADS4 Server in its turn forwards the task to the right PADS4 Viewer where it is locally stored. This automatic task forwarding system ensures that your task will be executed at the right place and on the right time, even when the system is temporarily offline.
+
+ 
+
+#### **To add a new scheduled task**
+
+1. Click **New Task** on the **Home** menu.
+
+   ![EN Agent Ribbon Newtask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Newtask.png)
+2. Select the task you want to schedule and click **Next** to continue.
+
+   ![EN Agent Taskwizard Choosetask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Choosetask.png)
+
+   You can choose between the following tasks:
+
+   | **Task**            | **Type**    | **Description**                                                                                                                                                                                                                                                                 |
+   | :------------------ | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | Update software     | Viewer task | Download and/or install the newest software update on one or more Viewer PCs.  For more details about the update software task, see the description of the [PADS Software](/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software) window. |
+   | Restart process     | Viewer task | Restart the PADS4 Viewer process on one or more Viewer PCs.  For more details about the restart process task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.          |
+   | Reboot              | Viewer task | Restart one or more Viewer PCs.  For more details about the reboot task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                                               |
+   | Shut down           | Viewer task | Turn off one or more Viewer PCs.  For more details about the shut down task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                                           |
+   | Wake-on-LAN         | Viewer task | Turn on one or more Viewer PCs via wake-on-LAN.  For more details about the wake-on-LAN task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                          |
+   | Install font        | Viewer task | Install fonts on one or more Viewer PCs.  For more details about the install font task, see the description of the [Fonts](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Fonts.htm) window.                             |
+   | Update software     | Server task | Download and/or install the newest software update on your Server PC.  For more details about the update software task, see the description of the [PADS Software](/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software) window.         |
+   | Restart process     | Server task | Restart the PADS4 Server process on your Server PC.                                                                                                                                                                                                                             |
+   | Alert status report | Server task | Generate a status report with details about generated alerts in a certain period.                                                                                                                                                                                               |
+3. Specify the task-specific settings and click **Next** to continue.
+
+   If you have selected the **Update software** task, you will be asked about the download and/or install action to be taken and if the system must automatically perform a reboot after installation. When you have selected the **Install font** task, you are asked to specify the font files that need to be installed.
+
+   If your selected task doesn't require specific settings, this step will automatically be skipped.
+4. Select the Viewers for whom you want to schedule the task and click **Next** to continue.
+
+   If you have selected a server task, this step will automatically be skipped.
+
+   ![EN Agent Taskwizard Selectdestinations Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Selectdestinations.png)
+
+   When you select a viewer group as a destination, then automatically all viewers who are members of this group will be included.
+5. Specify when your task must be executed.
+
+   ![EN Agent Taskwizard Specifyperiod Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Specifyperiod.png)
+
+   You can schedule your task to be executed at one specific moment by selecting **Now** or specifying a **Start Time**,
+
+   To make your task recurring, click the recurrence button. 
+
+   ![EN Agent Taskwizard Recurrencebutton Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Recurrencebutton.png)
+
+   Specify in the recurrence settings window when you want the occurrences of your scheduled task to take place and click **OK**.
+
+   ![EN Agent Taskwizard Recurrenceoptions Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Recurrenceoptions.png)
+6. Click **Finish** to complete the wizard.
+
+After this, your task will be created and forwarded to your PADS4 Server or PADS4 Viewer, where it is locally stored.
+
+ 
+
+#### **To duplicate a scheduled task**
+
+1. Click the scheduled task in the scheduled task window to select it.
+2. Click **Duplicate** on the **Home** menu.
+
+   ![EN Agent Ribbon Duplicatetask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Duplicatetask.png)
+
+After this an exact copy of the task will be created and forwarded to your PADS4 Server or PADS4 Viewer where it is locally stored.
+
+<Warning>
+  When you have created a duplicated task you always have to edit the scheduling of your duplicated task. Otherwise you will have to identical tasks running at the same moment for the same destinations, which may lead to conflicts.
+</Warning>
+
+ 
+
+#### **To edit a scheduled task**
+
+1. Click the scheduled task in the scheduled task window to select it.
+2. Click **Edit** on the **Home** menu.
+
+   ![EN Agent Ribbon Edittask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Edittask.png)
+3. Follow the instructions of the scheduled task wizard as described above.
+
+After finishing the wizard, the updated task will be forwarded to your PADS4 Server or PADS4 Viewer, where it is locally stored.
+
+ 
+
+#### **To delete a scheduled task**
+
+1. Click the scheduled task in the scheduled task window to select it.
+2. Click **Delete** on the **Home** menu.
+
+   ![EN Agent Ribbon Deletetask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Deletetask.png)
+3. Click **Yes** to confirm that you want to delete the task.
+
+After this, your task including all task results will be removed from your PADS4 Server or PADS4 Viewer.
+
+ 
+
+#### **To disable a scheduled task**
+
+1. Click the scheduled task in the scheduled task window to select it.\
+   The task status must have another value than 'disabled'.
+2. Click **Disable** on the **Home** menu.
+
+   ![EN Agent Ribbon Disabletask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Disabletask.png)
+
+After this, your task will be disabled on your PADS4 Server or PADS4 Viewer to prevent further execution.
+
+To enable the scheduled task again, you must select the task again and click **Enable** on the **Home** menu.

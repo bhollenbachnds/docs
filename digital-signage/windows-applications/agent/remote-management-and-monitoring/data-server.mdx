@@ -1,0 +1,52 @@
+With the Data Server functions, you can inspect the Data Provider settings and real-time data that is delivered by your PADS4 (Sub)Server.
+
+ 
+
+#### **To retrieve Data Server information of your PADS4 (Sub) Server**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **Data Server** in the list of available server information categories.
+
+After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the Data Server window. If your PADS4 installation includes sub-servers, then you must first select a server before selecting the information category.
+
+ 
+
+#### **Data Server window**
+
+The Data Server window shows the Data Providers & Data Vault Providers that are in use. This enables you to check the settings, performance, and delivered real-time data of each individual Data Provider.
+
+![EN Agent Dataserver 1196x712 Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Dataserver_1196x712.png)
+
+**Data Providers**
+
+- All defined Data Providers currently used by one or more PADS4 Viewers.
+- All defined Data Vault Providers currently active on the selected PADS4 (Sub) Server. The lock icon in front of the Data Provider type icon indicates that this is a Data Vault Provider.
+
+#### **Data Vault Providers**
+
+More information about using Data Vault Providers can be found in the PADS4 System Management documentation.\
+Data Vault Providers will allow you to specify system-defined Data Providers, which are not editable by Designer Users, and encrypt the data.
+
+If you hover above the item in the list, a tooltip with detailed information will be displayed.
+
+By selecting one of the listed Providers, PADS4 will show in the right area (Data Provider) detailed information, and at the bottom, the actual data.
+
+**Data Provider (right)**\
+Read timestamps, performance details, and configuration settings of the selected Provider. The configuration settings are read-only. To change the configuration settings of a Data Provider, you must adjust the Data Provider in your presentation with the PADS4 Designer application or by using the System Management application when the Provider is a Data Vault Provider.
+
+**Data Provider Results (bottom)**\
+The real-time data is delivered by the selected Data Provider. This is the data that PADS4 Data Server distributes to all connected PADS4 Viewers.
+
+ 
+
+<Tip>
+  If your Data Provider use PADS4 Data Server to collect and deliver real-time data, then you can use a combination of the [Data Providers](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Data%20Providers.htm) window and the Data Server window to check the delivery of real-time data. In the Data Server window you can check if the real-time data is collected correctly by PADS4 Data Server. In the Data Providers window you can check if the collected data is delivered correctly to your PADS4 Viewer by the Data Server.
+</Tip>
+
+<Info>
+  The information of which Viewers are connected to a Data Vault Provider is not available. Only Viewers who have a Data Provider connection to a Data Server are visible.\
+  \
+  If you connect to a PADS4 Server version 4.7 or lower, the GUI will show the older window layout.
+</Info>
