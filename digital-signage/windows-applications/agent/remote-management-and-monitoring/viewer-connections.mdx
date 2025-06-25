@@ -1,0 +1,131 @@
+With the viewer connection functions you can remotely check the connection status of your PADS4 Viewers. Viewers can be restarted, rebooted, switched off or on (wake-on-LAN) or you can save the black box of a Viewer.
+
+ 
+
+#### **To check the connection status of your PADS4 Viewers**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **Viewer Connections** in the list of available server information categories.
+
+After this the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the viewer connections window. If your PADS4 installation includes sub-servers then the viewer connections window will always show the global results of your entire PADS4 installation, no matter what server you have selected.
+
+ 
+
+#### **Viewer connections window**
+
+In the viewer connections window you can see at a glance which PADS4 Viewers are running fine and which PADS4 Viewer have lost their network connection.
+
+![EN Agent Viewerconnections Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Viewerconnections.png)
+
+<Tip>
+  For each listed PADS4 Viewer the icon in front of the icon reflects its connection status. To determine the connection status of a PADS4 Viewer the system looks at the status of both PADS4 Viewer and PADS4 Controller (=the background process for performing certain tasks). If only PADS4 Controller is disconnected you will get a warning icon instead of a error icon.
+</Tip>
+
+**Viewer**\
+The unique name that identifies the PADS4 Viewer within the PADS4 system.
+
+**Description**\
+The descriptive string that may have been specified to give additional information about the viewer.
+
+**Viewer Status**\
+The status of the PADS4 Viewer application. If the status is 'disconnected', then the viewer has no network connection with the PADS4 Server and will not be able to receive any updates about scheduled presentations or content. Previously scheduled presentations have been locally cached by PADS4 Viewer may still run correctly. PADS4 Viewers can run offline for a maximum period of one week.
+
+**IP Address**\
+The IP Address of the Viewer.
+
+**Connected Since**\
+The timestamp of the moment since when the viewer has had a working connection with PADS4 Server.
+
+**Disconnected Since**\
+The timestamp of the moment since when the viewer has lost its connection with PADS4 Server. If no timestamp is displayed, this means that the viewer was never connected successfully to PADS4 Server since the server was started.
+
+**License**\
+The license that has been assigned to this viewer. Viewers can only successfully connect to PADS4 Server when they have a valid license. Licenses can be assigned with the PADS4 System Management application.
+
+**Controller Status**\
+The status of the PADS4 Controller process.
+
+**MAC Address**\
+The unique MAC address of the Viewer.
+
+<Tip>
+  If the controller status is 'disconnected' while the viewer status is 'connected' then PADS4 Viewer may still work correctly, but you are unable to access the viewer via PADS4 Agent. The other way around if the Controller Status is 'connected' while the Viewer Status is 'disconnected' then PADS4 Viewer will not work correctly, but you can still use most PADS4 Agent functions to access the viewer..
+</Tip>
+
+When you select a viewer item in the viewer connections window then additional detailed information about this viewer is displayed at the bottom of the window.
+
+ 
+
+#### **View**
+
+Possibility to show Viewers or Desktop Viewers. The filter operates on both views.
+
+ 
+
+#### **Filter**
+
+Filtering Viewers can be used to show one or more Viewers based on a search criteria. This could be a fast way to find a certain Viewer.
+
+With the **dropdown (None)** the selection for Viewer or HTML Viewer can be made.
+
+Secondly it is possible to search for a Viewer by **specifying a substring in the textbox** and if needed **case sensitive**.\
+PADS4 will **search in the Viewer, Description, IP Address and MAC Address columns** if this contains the substring (substring means that the sequence of characters will be searched in the whole line of text).\
+All items that do not match the criteria will be hidden.
+
+ 
+
+#### **Restart Viewer, reboot, shut down and wake-on-LAN**
+
+From the viewer connections window you can remotely restart, reboot or switch on/off a PADS4 Viewer. When performing a Viewer restart only the Viewer process that's running on the Viewer PC will be restarted, while a reboot will result in a full restart of the Viewer PC. When performing a shut down for a Viewer the Viewer PC will be completely switched off. Viewer PCs can only be remotely switched on again when the Viewer PC has built-in support for wake-on-LAN and this feature has been enabled.
+
+<Tip>
+  Restart, reboot, shut down and wake-on-LAN tasks can also be performed as scheduled tasks. To extend the lifetime of your displays and save energy it's recommended to automatically have your Viewers switch off at the end of the day and switch on again in the morning if your displays are only used during daytime.
+</Tip>
+
+ 
+
+#### **To restart a viewer**
+
+1. Click the viewer item in the viewer connections window to select it. (or use the context menu by using the right mouse button above the viewer item)\
+   Optionally you can select multiple items by pressing and holding down the [Ctrl] or [Shift] key while clicking viewer items.
+2. Click **Restart Viewer** on the **Home** menu.
+3. Click **Yes** to confirm that you want to restart the viewer process.
+
+ 
+
+#### **To reboot or shut down a viewer**
+
+1. Click the viewer item in the viewer connections window to select it.\
+   Optionally you can select multiple items by pressing and holding down the [Ctrl] or [Shift] key while clicking viewer items.
+2. Click **Reboot** or **Shut down** on the **Home** menu.
+3. Click **Yes** to confirm that you want to reboot or shut down the viewer.
+
+If the reboot or shut down command has been successfully received by the viewer you are informed that the Viewer PC will be shut down in 10 seconds. As a result you will (temporarily) loose the connection.
+
+ 
+
+#### **To switch on a viewer via wake-on-LAN**
+
+1. Click the viewer item in the viewer connections window to select it.\
+   Optionally you can select multiple items by pressing and holding down the [Ctrl] or [Shift] key while clicking viewer items.
+2. Click **Wake-on-LAN** on the **Home** menu.
+
+In the tasks window you can see if the wake-on-LAN signal was successfully sent by PADS4 Server. This does NOT automatically mean that the wake-on-LAN function was successfully received by the viewer. If the viewer has been successfully switched on you normally will see its Viewer status and Controller status in the viewer connections window being updated to 'connected'.
+
+ 
+
+#### **Saving the black box of a viewer**
+
+To save the [black box](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) of your Viewer for analyzing or comparing it offline at a later moment:
+
+1. Click the viewer item in the viewer connections window to selected it.
+2. Click **Save Black Box** on the **Home** menu.
+3. Enter a **File name** and click **Save** to save the information.
+
+After this the black box file will be saved on your computer.
+
+<Tip>
+  Each PADS4 Viewer automatically creates a so-called black box in which valuable information about PADS4 is stored. This includes system information and various logs. When you encounter a problem with a PADS4 Viewer, the black box is the ideal source of information to analyze the situation and trace the problem. So, when you contact support for a problem with a PADS4 Viewer it's suggested always to send the black box file.
+</Tip>

@@ -1,0 +1,74 @@
+PADS has built-in features to automatically synchronize content files between your PADS4 Server and all its connected clients. With the synchronization queue functions you can remotely check the actual status of the content synchronization process on your PADS4 Server. You can see progress details of the clients that are currently uploading/downloading content files as well as the clients that are waiting for synchronization.
+
+ 
+
+#### **To check the synchronization queue of your PADS4 Server**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **Synchronization Queue** in the list of available server information categories.
+
+After this the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the synchronization queue window. If your PADS4 installation includes sub servers then you must first select a server before selecting the information category.
+
+ 
+
+#### **Synchronization queue window**
+
+If you have enabled content synchronization for your PADS4 installation, then the synchronization queue window shows at a glance what the actual status of the content synchronization process is. If there is no information displayed in the synchronization queue window, this means that the content libraries on all PCs of your installation are up-to-date or that content synchronization has not been enabled.
+
+![EN Agent Synchronization Queue Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-SynchronizationQueue.png)
+
+<Tip>
+  Only clients that are currently synchronizing or waiting for synchronization are included in the overview. As soon as a client has been fully synchronized, it will be removed from the list.
+</Tip>
+
+**Application**\
+\
+The client application that is synchronizing or waiting to be synchronized. Possible clients are: PADS4 Viewer, PADS4 Designer, PADS4 Scheduler, PADS4 Content Library and PADS4 Sub server.
+
+**Identification**\
+\
+The unique name to identify the client application within the PADS4 system. For PADS4 Viewers this is the Viewer name, for sub servers the Server name and for other applications the user name of the logged on user is displayed.
+
+**Status**\
+The status shows if the client application is currently synchronizing or waiting for synchronization.
+
+**Status Since**\
+\
+The timestamp of the moment since when the client application reached the current status. This gives a good indication about the performance of the synchronization process for this client.
+
+**Total Progress**\
+Shows the progress of the content synchronization for this client as a percentage. This percentage value is based on the number of files that have been synchronized compared to the total number of files that need to be synchronized.
+
+**Total Changes**\
+\
+The total number of items that need to be synchronized. A change can be the addition of a new file, a file rename or the replacement of a file.
+
+**Direction**\
+Indicates whether the file that is currently being synchronized concerns an upload to the PADS4 Server or a download from the PADS4 Server.
+
+**File**\
+The file in the content library that is currently being synchronized.
+
+**File progress**\
+The progress of the synchronization process for the current file.
+
+ 
+
+#### **Refreshing**
+
+By default, the information in the synchronization queue window is not automatically refreshed. To get the latest information you need to Click **Refresh** on the **Home** menu of press the F5 function key.
+
+Optionally, you can have the information automatically refreshed:
+
+1. Check **Automatic Refresh** on the **Home** menu.
+
+   ![EN Agent Ribbon Synchronization Queue Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-SynchronizationQueue.png)
+2. Select the frequency for refreshing the information.
+
+After this the information in the synchronization queue window will automatically be refreshed with the specified frequency.
+
+<Warning>
+  When you switch on automatic refreshing you must be aware that this will generate a significant amount of additional network traffic. A a result this may slow down the content synchronization process itself. Therefore it's recommended to only use the automatic refresh functions for a small period of time.
+</Warning>

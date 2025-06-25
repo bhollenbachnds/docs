@@ -1,0 +1,50 @@
+If your PADS4 installation besides a main server also includes sub servers or backup servers, then you can use the server connection functions to remotely check the connection status of your PADS4 Servers. For a PADS4 installation that only has one (main) server, the server connections window is not applicable and not available.
+
+ 
+
+#### **To check the connection status of your PADS4 Servers**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Select a **Server** from the list of available servers.
+
+   Because the server connections information is global information, it doesn't matter which server you select here.
+3. Click **Server Connections** in the list of available server information categories.
+
+After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the server connections window.
+
+ 
+
+#### **Server connections window**
+
+In the server connections window you can see at a glance which PADS4 Servers are running fine and which PADS4 Servers have lost the network connection with the main server.
+
+![EN Agent Server Connections Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ServerConnections.png)
+
+<Tip>
+  For each listed PADS4 Server the icon in front of the icon reflects its connection status. In the specific situation where you are connected to a sub server and this sub server cannot reach the main server, the sub server will show a warning icon, while the other servers will show an error icon. This does not necessarily mean that these servers will not run, but it means that your connected server is unable to determine the status of these servers.
+</Tip>
+
+**Server**\
+\
+The unique name that identifies the PADS4 Server within the PADS4 system.
+
+**Role**\
+The role of the server within the PADS4 system. Possible roles are: Main Server, Sub Server and Backup Server. Each PADS4 installation has exactly one main server.
+
+**Status**\
+The status of the PADS4 Server. If the status is 'disconnected' then the server most likely has no network connection with its parent PADS4 Server and will not be able to receive any updates about scheduled presentations or content. Previously received information has been locally cached by the PADS4 Server and as a result the server may still operate correctly. PADS4 Servers can run offline for a maximum period of one week. Within this period of time they need to be able to successfully reconnect to the main PADS4 Server, either directly or indirectly.
+
+**Connected Since**\
+\
+The timestamp of the moment since when the server has a working connection with the main PADS4 Server.
+
+**Disconnected Since**\
+\
+The timestamp of the moment since when the server has lost its connection with the main PADS4 Server. If no timestamp is displayed, this means that the server was never connected successfully to the main PADS4 Server since the server was started.
+
+**License**\
+The license that has been assigned to this server. Servers can only successfully connect to the main PADS4 Server when they have a valid license. Licenses can be assigned with the PADS4 System Management application.
+
+When you select a server item in the server connections window then additional detailed information about this server is displayed at the bottom of the window. This includes the **IP address** of the server.

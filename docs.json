@@ -945,6 +945,18 @@
                       "digital-signage/windows-applications/agent/main-window/information-area",
                       "digital-signage/windows-applications/agent/main-window/tasks"
                       ]
+                  },
+                  {
+                  "group": "Remote Management and Monitoring",
+                    "pages": [
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/server-functions",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-functions",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/blackbox-functions",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/server-connections",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/user-connections",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/synchronization-queue"
+                      ]
                   }
                 ]
               },
