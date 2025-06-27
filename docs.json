@@ -969,7 +969,8 @@
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/add-ons",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/scheduled-tasks",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/system-info",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/processes"
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/processes",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/services"
                       ]
                     },
                     {
