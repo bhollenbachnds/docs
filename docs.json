@@ -929,6 +929,7 @@
               {
                 "group": "Agent",
                 "pages": [
+                  "digital-signage/windows-applications/agent/introduction",
                   {
                     "group": "Starting PADS4 Agent",
                     "pages": [
