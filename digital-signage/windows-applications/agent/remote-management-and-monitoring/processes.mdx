@@ -1,0 +1,125 @@
+With the process functions, you can view the running processes on your PADS4 Server or PADS4 Viewer. Processes can be started, restarted, or stopped.
+
+ 
+
+#### **To view the running processes on your PADS4 Server**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **Processes** in the list of available server information categories.
+
+After this the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the processes window. If your PADS4 installation includes sub servers then you must first select a server before selecting the information category.
+
+ 
+
+#### **To view the running processes on a PADS4 Viewer**
+
+1. Click on the **Viewer** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Select a Viewer from the list of available destinations.
+3. Click **Processes** in the list of available viewer information categories.
+
+After this, the system will automatically connect to the connected PADS4 Server to retrieve the requested information from the selected Viewer and display the results in the processes window.
+
+<Warning>
+  The PADS4 application will only be able to start retrieving the requested viewer information when you have selected <u>both</u> a Viewer and a Category in the navigation pane.
+</Warning>
+
+ 
+
+#### **Processes window**
+
+The processes window shows a complete list of all running processes. This enables you to check if a certain process is running and how much CPU and memory it uses.
+
+![EN Agent Processes Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Processes.png)
+
+**Image Name**\
+File name (excluding the full path) of the running process. If you are running a 32-bit process on a 64-bit PC the suffix \*32 is added to the file name.
+
+**User Name**\
+The name of the user account that is used to start the process.
+
+**CPU**\
+The percentage of the processor time that is used by the process. This is a snapshot of the situation when the information was retrieved and does not reflect the current situation.
+
+**Memory**\
+The amount of memory that is used by the process. Same as with CPU this is a snapshot of the situation when the information was retrieved.
+
+**Description**\
+A descriptive name of the process.
+
+ 
+
+#### **Views**
+
+To view more details of the running processes, you can include additional columns:
+
+1. Click **Columns** on the **Home** menu.
+
+   ![EN Agent Ribbon Columns Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Columns.png)
+2. Check the columns you want to be included in your view.
+
+   ![EN Agent Columnswindow Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Columnswindow.png)
+3. Click **OK**.
+
+After this, the process info will be retrieved again from your server or viewer and displayed with the new column settings.
+
+ 
+
+#### **Managing processes**
+
+From the processes window, you can remotely start, restart, or stop processes.
+
+<Tip>
+  When you have a process that no longer responds or consumes an enormous amount of memory due to a memory leak problem, then restart the process to solve the problem.
+</Tip>
+
+When you start or restart a process on your PADS4 Server, the system will use the user account of the PADS4 Server process to start the process. On a PADS4 Viewer the system will use the user account of the PADS4 Controller process for this.
+
+When it comes to PADS4 processes, the restart and stop functions should be used with care. The following processes, PADSServer.exe, PADSDataServer.exe, and PADSViewer.exe, can be stopped or restarted without any risk. However, the processes PADSServerManager.exe and PADSController.exe should NOT be stopped or restarted, because this can make your PADS4 Server or PADS4 Viewer inaccessible.
+
+ 
+
+#### **To start a process**
+
+1. Click **Start** on the **Home** menu.
+
+   ![EN Agent Ribbon Start Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-RibbonStartProcess.png)
+2. Specify the file name (including the full path) of the application to start.
+
+   ![EN Agent Start Processwindow Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-StartProcesswindow.png)
+
+   <Warning>
+     The file name you specify here will be applied locally by your PADS4 Server or PADS4 Viewer. So, the path and application you specify here must be valid, seen from your PADS4 Server or PADS4 Viewer point of view.\
+     \
+     Optionally you can use the **Browse** button to specify a file name by browsing your computer. This also only works when the same file exists on your PADS4 Server or PADS4 Viewer.
+   </Warning>
+3. Click **OK**.
+
+After this the system will try to start the specified application on your PADS4 Server or PADS4 Viewer. To see the results of this action, you have to consult the [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm) window.
+
+ 
+
+#### **To restart a process**
+
+1. Click the process in the processes window to select it.
+2. Click **Restart** on the **Home** menu.
+
+   ![EN Agent Ribbon Restart Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-RestartProcess.png)
+3. Click **Yes** to confirm that you want to restart the process.
+
+After this, the system will try to restart the specified application on your PADS4 Server or PADS4 Viewer. To see the results of this action, you have to consult the [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm) window.
+
+ 
+
+#### **To stop a process**
+
+1. Click the process in the processes window to select it.
+2. Click **Stop** on the **Home** menu.
+
+   ![EN Agent Ribbon Stop Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-StopProcess.png)
+3. Click **Yes** to confirm that you want to stop the process.
+
+After this, the system will kill the process on your PADS4 Server or PADS4 Viewer. To see the results of this action, you have to consult the [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm) window.
