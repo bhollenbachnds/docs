@@ -1,0 +1,159 @@
+With the audit trail log functions, you can view the Audit logs that are stored on your PADS4 Server.
+
+With audit logs, the user is able to, for instance, identify the logon/logoff behaviour of users. Besides that, it is possible to find out which user scheduled a certain presentation, or changed some settings. If a user tries to use an unauthorized application, this improper activity is recorded in the audit trail.
+
+ 
+
+#### **To view the Audit Logs that is stored on your PADS4 Server**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **Audit Logs** in the list of available server information categories.
+
+After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the Audit log window. By default the period for the current month starting from the 1st is selected.
+
+<Warning>
+  By default Audit logs is disabled. use the System Management application to change the server settings to allow Audit logs to be saved.
+</Warning>
+
+ 
+
+#### **Audit logs window**
+
+The Audit Logs window shows Audit Log entries that have been stored on your PADS4 Server.
+
+![EN Agent Audit Window Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-AuditWindow.png)
+
+In the Audit logs window of your PADS4 Server you can view all log entries that have been recorded on your PADS4 Server.
+
+The **period** can be specified. Besides that, it is possible to **filter the data** by clicking on the filter icon in the column header. Click on **Export View** to export the data, including the filters set.
+
+ 
+
+**Timestamp**\
+Date and time at which the action was recorded.
+
+**Username**\
+Which user performed this action.
+
+**Application**\
+Which application was used by this user.
+
+**Description**\
+A description that describes the action performed by the user. ("Updated Schedule x","Updated Server Settings","Created new Schedule y" )
+
+**Details**\
+When the changes (update) affects one ore more property changes (example "Priority to High", or "StartDate to 01/01/2017"), these will be logged in the details column.\
+Each Property and new value pair is separated with a linefeed.
+
+**Usertype**\
+PADS or LDAP user from Active Directory.
+
+**Displayname**\
+Username entered in the System management application to identify a user or retrieved by LDAP.
+
+**EventType**\
+Type action performed.
+
+| Logon   | User tries to logon                                               |
+| :------ | :---------------------------------------------------------------- |
+| Logoff  | User tries to logoff                                              |
+| Create  | User creates an entry (entry is specific to the action performed) |
+| Update  | User updates an entry (entry is specific to the action performed) |
+| Delete  | User deletes an entry (entry is specific to the action performed) |
+| Execute | User executes an Agent task                                       |
+
+**IPAddress**\
+IP Address from which the user started the application.\
+Column contains [local] when the application is running on the same computer as the PADS4 Server.
+
+**Computername**\
+Name of the computer where the application is running.
+
+**HistoricalID**\
+Internal ID can be used to group so that actions based on the same destination can be investigated (for example edit schedule).
+
+**Servername**\
+At which server was this action performed.
+
+ 
+
+#### **Period**
+
+Specify the period from which the data must be retrieved. When thee is no data available, a message will be displayed.
+
+ 
+
+#### **Exporting Audit Logs information**
+
+To process the Audit Logs information in an external application (like Microsoft Excel), the information can be exported in various formats. This includes XML and the Microsoft Excel format.
+
+To export the Audit Logs information:
+
+1. Click **Export** on the **Home** menu.
+2. Enter the **Start** and **End** of the period for which you want to export the proof of play information.
+
+   ![EN Agent Audit Export Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-AuditExport.png)
+3. Select the type output, **XML** or **Excel**.
+4. Click **Browse** to specify the **File Name** of the file in which you want to save the export results.
+5. In the Save dialog box that appears, specify the file name and select the file format in which you want the information to be saved and click **Save**.
+6. Click **Export** to start saving all proof of play information for the specified period to the specified file.
+
+ 
+
+#### **What User information is Logged?**
+
+- Logon / Logoff attempts for each PADS4 application
+- Scheduler CRUD (Create/Read/Update/Delete) actions for scheduling presentations in the PADS4 Scheduler application\
+  Updates are logged in detail. (property level, what are the changes between the old and the new situation)
+- Messenger CRUD (Create/Read/Update/Delete) actions for scheduling presentations in the PADS4 Messenger application\
+  Updates are logged in detail. (property level, what are the changes between the old and the new situation)
+- Agent Retrieval of Server Information in the PADS4 Agent\
+  Viewer Connections, User Connections, Scheduled Tasks, Monitoring & Alerts, Synchronization Queue, Content Library, Data Server, PADS4 Software, System Info, Processes, Services, Windows logs, Viewer Variables, Television channels.
+- Agent Retrieval of Viewer information in the PADS4 Agent\
+  Screenshot, Viewer log, Memory usage, Content library, Synchronization log, Scheduled presentations, Data providers, Viewer settings, PADS4 software, Add-Ons, Scheduled tasks, Monitoring & alerts, System info, Processes, Services, Windows logs, Fonts, Proof of play, television.
+- Agent (server) Viewer connection actions: **restart/reboot/shutdown/wake-on-lan**
+- Agent (server)  User connection actions: **close connection**
+- Agent (server)  Scheduled task actions: **New/Edit/Duplicate/Delete/Enable/Disable**
+- Agent (server)  Monitoring & Alert actions: **Add/Edit/Duplicate/Delete/Enable/Disable/Pending/Resolved**
+- Agent (server)  PADS4 software action: **Update**
+- Agent (server)  Processes actions: **Start/Stop/Restart**
+- Agent (server)  Services actions: **Start/Pauze/Restart**
+- Agent (server)  Windows logs actions: **Clear log**
+- Agent (server)  Audit log actions: **Export**
+- Agent (server)  proof of play actions: **Export**
+- Agent (server)  Viewer variable actions: **Edit/Reset/Duplicate**
+- Agent (server)  Television channel actions: **Add/Edit/Delete/Merge**
+- Agent (viewer) Viewer log actions: **Clear log/Save blackbox**
+- Agent (viewer) Memory usage actions:**Clear log/Save blackbox** 
+- Agent (viewer) Synchronization log actions: **Clear log/Save blackbox**
+- Agent (viewer) Viewer settings actions: **Edit**
+- Agent (viewer) PADS4 software actions: **Update**
+- Agent (viewer) Add-Ons actions: **Installation Wizard**
+- Agent (viewer) Processes actions: **Start/Restart/Stop**
+- Agent (viewer) Services actions: **Start/Pauze/Restart**
+- Agent (viewer) Windows logs actions: **Clear log**
+- Agent (viewer) Fonts actions: **Install/Install from file/Uninstall**
+- Agent (viewer) Television actions: **Auto channel scan/copy to destinations/create channel name**
+- System Management Destinations actions: **Add/Edit/Delete/Viewer reactivation**
+- System Management Users actions: **Add/Edit/Delete/Reset password**
+- System Management User groups actions: **New/Edit/Delete**
+- System Management Permissions actions: **New/Edit/Delete**
+- System Management Priorities actions: **Add/Edit/Delete/increase level/decrease level**
+- System Management Content categories: **New/Edit/Delete**
+- System Management Servers actions: **New Sub server/New Backup server/Edit/Delete**
+- System Management Licenses actions: **Assign license/Withdraw License Wizard**
+- System Management Server settings actions: **Edit**
+- System Management Television settings actions: **Add/Edit/Delete/Merge**
+- System Management Viewer variables actions: **Add/Edit/Delete**
+- Content Organizer: folder and file content actions: **Add/Edit/Delete/Move**
+
+ 
+
+<Tip>
+  When exporting, you will receive two extra columns EventTypeID and ApplicationID which will contains the numeric value of EventType and Application.\
+  \
+  Besides that metadata is also stored which contains the following information:\
+  User, Period, Generation date and optionally filter used on the grid.
+</Tip>
