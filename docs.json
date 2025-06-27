@@ -1010,7 +1010,13 @@
              {
                 "group": "System Management",
                 "pages": [
-                  "digital-signage/windows-applications/system-management/introduction"
+                  "digital-signage/windows-applications/system-management/introduction",
+                  {
+                    "group": "Starting PADS4 System Management",
+                    "pages": [
+                      "digital-signage/windows-applications/system-management/starting-PADS4-system-management/starting-the-application"
+                    ]
+                  }
                 ]
               },
               "modules/digital-signage/licenses"
