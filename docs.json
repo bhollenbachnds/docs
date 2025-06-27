@@ -1005,9 +1005,9 @@
                       "digital-signage/windows-applications/agent/advanced-features/connecting-to-multiple-servers"
                      ]
                    }
-                  ]
-              },
-              {
+                ]
+             },
+             {
                 "group": "System Management",
                 "pages": [
                   "digital-signage/windows-applications/system-management/introduction"
