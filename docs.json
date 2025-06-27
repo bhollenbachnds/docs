@@ -975,7 +975,8 @@
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/fonts",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/audit-logs",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/proof-of-play",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-variables"
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-variables",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/closing-pads4-agent"
                       ]
                     },
                     {
