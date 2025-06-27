@@ -982,6 +982,12 @@
                   "group": "Monitoring & Alerts window",
                     "pages": [
                       "digital-signage/windows-applications/agent/monitoring-and-alerts/monitoring-and-alerts-window"
+                      ]
+                    },
+                    {
+                  "group": "Tools",
+                    "pages": [
+                      "digital-signage/windows-applications/agent/tools/graceful-degradation"         
                      ]
                    } 
                 ]
