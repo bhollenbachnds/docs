@@ -993,6 +993,14 @@
                       "digital-signage/windows-applications/agent/tools/check-for-updates",
                       "digital-signage/windows-applications/agent/tools/about",
                       "digital-signage/windows-applications/agent/tools/graceful-degradation"
+                      ]
+                    },
+                    {
+                  "group": "Advanced Features",
+                    "pages": [
+                      "digital-signage/windows-applications/agent/advanced-features/working-with-multiple-windows",
+                      "digital-signage/windows-applications/agent/advanced-features/working-with-sub-servers",
+                      "digital-signage/windows-applications/agent/advanced-features/connecting-to-multiple-servers"
                      ]
                    } 
                 ]
