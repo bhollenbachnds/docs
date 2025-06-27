@@ -967,7 +967,8 @@
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-settings",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/add-ons",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/scheduled-tasks"
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/scheduled-tasks",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/system-info"
                       ]
                     },
                     {
