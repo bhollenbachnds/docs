@@ -1,0 +1,145 @@
+With the proof of play functions, you can view the playback log entries that are stored on your PADS4 Server or PADS4 Viewer. On your server, proof of play information can be exported or removed.
+
+When designing your presentation in PADS4 Designer, you can specify that you want to collect proof of play information about your presentation, page, or page element. During playback each PADS4 Viewer will collect and locally cache proof of play information. Every full hour this information is forwarded to the main PADS4 Server where it is merged into a central proof of play database (Microsoft SQL Compact Edition). If the PADS4 Viewer application is stopped in a normal way, then all proof of play information that has not been forwarded yet will be sent to the server.
+
+ 
+
+#### **To view the proof of play information that is stored on your PADS4 Server**
+
+1. Click on the **Server** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Click **Proof of play** in the list of available server information categories.
+
+After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the proof of play window. If your PADS4 installation includes sub-servers, then you must first select a server before selecting the information category.
+
+ 
+
+#### **To view the proof of play information that is locally cached on a PADS4 Viewer**
+
+1. Click on the **Viewer** tab in the navigation pane.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Select a Viewer from the list of available destinations.
+3. Click **Proof of play** in the list of available viewer information categories.
+
+After this, the system will automatically connect to the connected PADS4 Server to retrieve the requested information from the selected Viewer and display the results in the proof of play window.
+
+<Warning>
+  The PADS4 application will only be able to start retrieving the requested viewer information when you have selected <u>both</u> a Viewer and a Category in the navigation pane.
+</Warning>
+
+ 
+
+#### **Proof of play window**
+
+The proof of play window shows playback log entries that have been stored on your PADS4 Server or PADS4 Viewer. This enables you to check if, when, where, and for how long specific content has been played.
+
+![EN Agent Proof Of Play Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ProofOfPlay.png)
+
+In the proof of play window of your PADS4 Server, you can view proof of play information on a daily basis. Select the **Date** for which you want to view data. Because of the possible large amount of data, this is limited to a daily basis. The **export** options allow the user to specify a period. It is also possible to use the Agent SDK / or a Web API to read proof of play information from the PADS4 system. Check out the SDK documentation.
+
+Proof of play entries that have been forwarded by the connected PADS4 Viewers are stored in the proof of play database on your PADS4 Server. In the proof of play window of a PADS4 Viewer (Viewer tab), you see only entries that have been locally cached on your Viewer and have not yet been forwarded to your PADS4 Server. Every full hour or when closing PADS4 Viewer, the application will forward its proof of play information to your PADS4 Server.
+
+<Tip>
+  The proof of play window of a PADS4 Viewer is intended to follow the actual logging process of a PADS4 Viewer, while the proof of play window of your PADS4 Server is intended to check the proof of play information of a closed period afterwards.
+</Tip>
+
+**Start Time**\
+Date and time at which the playback of the content has started. The display time uses the local time zone of your PADS4 system.
+
+**UTC Offset**\
+The time difference (in minutes) between the Greenwich Time (UTC) and the local time of the PADS4 Viewer. This information is typically used when your PADS4 installation includes PADS4 Viewers running in different time zones.
+
+**Viewer Name**\
+Unique name of the PADS4 Viewer that has played the content.
+
+**Level**\
+Level of the element that has played the content. Possible levels are presentation, page and element.
+
+**Element**\
+Identification of the element that has played the content.
+
+**Duration**\
+Duration that the content has played. In the overview the duration is rounded to seconds, while the information is stored in milliseconds accurate. When you export the proof of play information, then the value in milliseconds is included.
+
+**Completed**\
+Shows if the content has been fully played or has been aborted during playback. In this context fully played means that the content has been played for the entire duration that it was scheduled for. Some element (like streaming video) have no scheduled duration and therefore don't support this option.
+
+**Display Status**\
+Shows the status of the monitor during playback of the content. This can be used as proof that the content has really been visible for the audience. The display status information can only be collected when the PADS4 Viewer has been properly configured and supports the collection of this information.
+
+**Content**\
+Content that has been played by the element. For text elements this will be the text that has been shown, while for other elements like pictures and videos it will be the name of the file that contained the content.
+
+ 
+
+#### **Views**
+
+At your PADS4 Server proof of play information is stored in a proof of play database. The system automatically creates a new proof of play database at the start of a new month. When viewing the proof of play information of your PADS4 Server, you must select the **Proof of Play Date** (and thus implicit the proof of play database) for which you want to see the information. If a certain period is not listed, then this means that there is no proof of play information available for this period.
+
+ 
+
+#### **Exporting proof of play information**
+
+To process the proof of play information in an external application (like Microsoft Excel), the information can be exported in various formats. This includes XML (following the official proof of play formatting definitions of the POPAI organization) and the Microsoft Excel format.
+
+To export the proof of play information:
+
+1. Click **Export** on the **Home** menu.
+2. Enter the **Start** and **End** of the period for which you want to export the proof of play information.
+
+   ![EN Agent Proof Of Play Export Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ProofOfPlayExport.png)
+
+   <Tip>
+     When specifying the period for exporting here, you are not limited to the monthly periods of your physical proof of play databases. If necessary, the PADS4 system will automatically collect the proof of play information from multiple proof of play databases during execution of the export function.
+   </Tip>
+3. Select the type output, **XML** or **Excel**.
+4. Click **Browse** to specify the **File Name** of the file in which you want to save the export results.
+5. In the Save dialog box that appears, specify the file name and select the file format in which you want the information to be saved and click **Save**.
+6. Click **Export** to start saving all proof of play information for the specified period to the specified file.
+
+ 
+
+#### **Removing proof of play information**
+
+- After you have exported or processed your proof of play information, you need to remove the information from PADS4.
+
+  <Warning>
+    Proof of play information is not automatically removed by the PADS4 system, so you always need to remove it yourself. If you don't remove the proof of play information, you will have the risk that the proof of play information will consume all your hard disk space causing unpredictable problems.
+  </Warning>
+
+In PADS4 Agent you have the options to remove either individual proof of play entries or all item of an entire proof of play database.
+
+As an alternative, you can browse to the PADS4 proof of play folder on your PADS4 Server and manually remove the proof of play database files there. Finally, you can also use the PADS4 SDK to develop your own custom solution for processing and removing proof of play information.
+
+ 
+
+#### **To remove a proof of play log entry**
+
+1. Select the proof of play item in the proof of play window of your PADS4 Server.\
+   Optionally, you can select multiple items by pressing and holding down the [Ctrl] or [Shift] key while clicking items.
+2. Click **Remove** on the **Home** menu.
+
+   ![EN Agent Ribbon Proof Of Play Remove Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ProofOfPlayRemove.png)
+3. Click **Yes** to confirm that you want to remove the proof of play log entry.
+
+After this, the system will delete the proof of play item from the proof of play database on your PADS4 Server.
+
+<Tip>
+  The deletion of proof of play items is irreversible and normally should only be done after the item has been processed or exported. Because all proof of play items have a unique sequence number, you can always see in the exported information when one or more items have been removed.
+</Tip>
+
+ 
+
+#### **To remove all proof of play information of an entire period**
+
+1. Select the **Proof of Play Period** in the proof of play window of your PADS4 Server.
+2. Click **Remove All** on the **Home** menu.
+
+   ![EN Agent Ribbon Proof Of Play Remove All Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ProofOfPlayRemoveAll.png)
+3. Click **Yes** to confirm that you want to remove all proof of play information.
+
+After this, the system will delete all proof of play information for the specified period. Because each period exactly matches one proof of play database, this means in practice that the corresponding proof of play database will be deleted from the proof of play folder of your PADS4 system.
+
+Same as with the deletion of individual proof of play items, the deletion of a complete proof of play period is irreversible and normally should only be done after the items have been processed or exported.

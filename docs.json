@@ -973,7 +973,8 @@
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/services",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/windows-logs",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/fonts",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/audit-logs"
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/audit-logs",
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/proof-of-play"
                       ]
                     },
                     {
