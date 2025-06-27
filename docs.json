@@ -987,7 +987,12 @@
                     {
                   "group": "Tools",
                     "pages": [
-                      "digital-signage/windows-applications/agent/tools/graceful-degradation"         
+                      "digital-signage/windows-applications/agent/tools/general-options",
+                      "digital-signage/windows-applications/agent/tools/view-options",
+                      "digital-signage/windows-applications/agent/tools/alert-options",
+                      "digital-signage/windows-applications/agent/tools/check-for-updates",
+                      "digital-signage/windows-applications/agent/tools/about",
+                      "digital-signage/windows-applications/agent/tools/graceful-degradation"
                      ]
                    } 
                 ]
