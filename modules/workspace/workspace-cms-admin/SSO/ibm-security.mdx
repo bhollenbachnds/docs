@@ -8,31 +8,32 @@ This guide walks you through setting up **SAML 2.0 Single Sign-On (SSO)** using 
 
 Ensure the following items are ready:
 
-* ✅ Access to [IBM Security Verify Console](https://www.ibm.com/security/identity-access-management/verify)
-* ✅ Signing Certificate (.pem or .cer) from IBM Verify
-* ✅ PFX Certificate with Private Key for PADS4 (.pfx)
-* ✅ Federation Metadata URL (optional if importing manually)
-* ✅ PADS4 server URL (e.g., `https://domainone.pads365.com/crystal/domainone`)
+* Access to [IBM Security Verify Console](https://www.ibm.com/security/identity-access-management/verify)
+* Signing Certificate (.pem or .cer) from IBM Verify
+* PFX Certificate with Private Key for PADS4 (.pfx)
+* Federation Metadata URL (optional if importing manually)
+* PADS4 server URL (e.g., `https://pads4serverurl/crystal/domainone`)
 
 ---
 
 ## Step 1: IBM Security Verify – Application Configuration
 
-### ➤ Navigate to:
+### Navigate to:
 
 **Directory > Applications > Add Application > Custom Application**
 
-### ➤ Under the **Sign-on** tab:
+### Under the **Sign-on** tab:
 
 | Field                              | Value                                                       |
 | ---------------------------------- | ----------------------------------------------------------- |
 | **Sign-on method**                 | `SAML 2.0`                                                  |
-| **Provider ID**                    | `https://domainone.pads365.com/crystal/domainone/Saml2`     |
-| **Assertion Consumer Service URL** | `https://domainone.pads365.com/crystal/domainone/Saml2/ACS` |
-| **Service Provider SSO URL**       | `https://domainone.pads365.com/crystal/domainone/Saml2/ACS` |
+| **Provider ID**                    | `https://pads4serverurl/crystal/domainone/Saml2`     |
+| **Assertion Consumer Service URL** | `https://dpads4serverurl/crystal/domainone/Saml2/ACS` |
+| **Service Provider SSO URL**       | `https://pads4serverurl/crystal/domainone/Saml2/ACS` |
 | **SessionNotOnOrAfter**            | `7200` (2 hours)                                            |
 
-> ☑ Do NOT select “Use Identity provider-initiated single sign-on”
+
+<Warning>Do NOT select “Use Identity provider-initiated single sign-on</Warning>
 
 ---
 
@@ -40,12 +41,12 @@ Ensure the following items are ready:
 
 | Field                                  | Value                                 |
 | -------------------------------------- | ------------------------------------- |
-| **Sign authentication response**       | ☑ Enabled                             |
-| **Signature Algorithm**                | `RSA-SHA256`                          |
-| **Signing Certificate**                | Choose `Default personal certificate` |
-| **Validate SAML request signature**    | ☑ Enabled                             |
-| **Validate logout request signature**  | ☑ Enabled                             |
-| **Validate logout response signature** | ☑ Enabled                             |
+| **Sign authentication response**       | Enabled                             |
+| **Signature Algorithm**                | RSA-SHA256                          |
+| **Signing Certificate**                | Choose Default personal certificate |
+| **Validate SAML request signature**    | Enabled                             |
+| **Validate logout request signature**  | Enabled                             |
+| **Validate logout response signature** | Enabled                             |
 
 Leave **Service Provider Certificate** and **Encryption Options** blank unless encryption is required by your org.
 
@@ -94,15 +95,15 @@ In the **PADS4 Administration Portal**, configure the SSO Plugin as follows:
 | **SAML SSO URL**                             | `https://pads4.verify.ibm.com/saml/sps/saml20ip/saml20/login` |
 | **Federation Metadata URL** (optional)       | `https://pads4.verify.ibm.com/v1.0/saml/federations/saml2`    |
 | **Certificate of Federation Server**         | Upload the **IBM Verify signing certificate (.cer)**          |
-| **URL of Relying Party**                     | `https://domainone.pads365.com/crystal/domainone`             |
+| **URL of Relying Party**                     | `https://pads4serverurl/crystal/domainone`             |
 | **Relying Party Signing Certificate (.pfx)** | Upload your `.pfx` file with private key                      |
 | **Private Key Password**                     | Enter password for `.pfx`                                     |
 
-➡ Click **Download Configuration File** if required for IBM import.
+
 
 ---
 
-## 🔁 Step 3: Mapping Groups in PADS4
+## Step 3: Mapping Groups in PADS4
 
 Go to the **Relation Table** section of the SSO plugin and map incoming `groupIDs` from IBM to PADS4 profiles:
 
