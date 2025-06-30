@@ -1056,7 +1056,9 @@
               "modules/workspace/workspace-cms-admin/users",
               "modules/workspace/workspace-cms-admin/profiles",
               "modules/workspace/workspace-cms-admin/plugins",
-              {"pages": [
+              {
+                "group": "SSO Configurations",
+                "pages": [
                 "modules/workspace/workspace-cms-admin/SSO/ibm-security"
               ]
               }
