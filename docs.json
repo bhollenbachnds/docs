@@ -1059,7 +1059,7 @@
               {
                 "group": "SSO Configurations",
                 "pages": [
-                "modules/workspace/workspace-cms-admin/SSO/ibm-security"
+                "modules/workspace/workspace-cms-admin/SSO/IBM-Security"
               ]
               }
             ]
