@@ -1,0 +1,77 @@
+Ces propriétés définissent les **paramètres du port de communication RS-232**, garantissant une transmission de données réussie entre votre **système de présentation** et un **périphérique externe**.
+
+***
+
+## **Paramètres du Port de Communication**
+
+### **Port de Communication**
+
+* Sélectionnez le **COM (série)** ou **LPT (parallèle)** port utilisé pour la **communication RS-232**.
+
+### **Débit en Bauds**
+
+* Définit la **vitesse de transmission** en **symboles par seconde (bps)**.
+* Valeurs courantes : **1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200**.
+* Doit correspondre aux **paramètres du périphérique externe**.
+
+### **Parité**
+
+Détermine comment **la vérification de parité** est appliquée pour la **détection d'erreurs**.
+
+| **Option**  | **Description**                                             |
+| ----------- | ----------------------------------------------------------- |
+| **Aucune**  | Pas de vérification de parité (par défaut).                 |
+| **Paire**   | Assure un nombre pair de **1s** dans la trame de données.   |
+| **Impaire** | Assure un nombre impair de **1s** dans la trame de données. |
+| **Marque**  | Définit toujours le bit de parité à **1**.                  |
+| **Espace**  | Définit toujours le bit de parité à **0**.                  |
+
+### **Bits de Données**
+
+* Définit le nombre de **bits de données par trame**.
+* Valeurs standard : **5, 6, 7, ou 8 bits** (par défaut : **8**).
+* Doit correspondre aux **paramètres du périphérique externe**.
+
+### **Bits de Départ**
+
+* Spécifie les **bits d'introduction** avant la transmission effective des données.
+* Valeur standard : **1 bit**.
+
+### **Bits d'Arrêt**
+
+* Spécifie les **bits de fin de transmission**.
+* Valeurs standard : **1, 1,5, ou 2 bits** (par défaut : **1**).
+* Utilisés pour **séparer les paquets de données**.
+
+### **Contrôle de Flux**
+
+Définit le **contrôle de flux** entre l'émetteur et le récepteur pour éviter la **perte de données**.
+
+| **Option**   | **Description**                                                                                    |
+| ------------ | -------------------------------------------------------------------------------------------------- |
+| **Aucun**    | Pas de contrôle de flux (par défaut).                                                              |
+| **XOn/XOff** | Contrôle de flux logiciel. Utilise des caractères spéciaux pour contrôler le flux de données.      |
+| **RTS/CTS**  | Contrôle de flux matériel utilisant les signaux Ready-to-Send (RTS) et Clear-to-Send (CTS).        |
+| **DTR/DSR**  | Contrôle de flux matériel utilisant les signaux Data Terminal Ready (DTR) et Data Set Ready (DSR). |
+
+### **Délai de Lecture**
+
+* **Limite de temps (en millisecondes)** pour recevoir une **réponse du périphérique externe**.
+* Si aucune réponse n'est reçue dans ce délai, une **erreur de délai d'attente se produit**.
+
+### **Délai d'Écriture**
+
+* **Limite de temps (en millisecondes)** pour **envoyer une commande**.
+* Si les données ne peuvent pas être transmises dans ce délai, une **erreur de délai d'attente se produit**.
+
+***
+
+## **Remarques**
+
+* Les **paramètres RS-232 corrects** pour la communication avec votre **périphérique externe** se trouvent dans son **manuel d'utilisation**.
+* **Des paramètres de port incorrects** peuvent entraîner une **communication défaillante** ou un **comportement inattendu du périphérique**.
+
+### **Important**
+
+* Les paramètres du port de communication **doivent correspondre** à ceux du **périphérique externe**.
+* Ces paramètres s'appliquent **uniquement pendant la lecture**, donc **les commandes RS-232 ne seront envoyées que si le port spécifié est disponible sur le PC de lecture**.

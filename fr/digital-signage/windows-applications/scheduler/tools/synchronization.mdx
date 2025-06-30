@@ -1,0 +1,85 @@
+Lorsqu'elle est activée dans les **paramètres du serveur PADS4**, la synchronisation du contenu garantit que la **Content Library** locale sur votre PADS4 Scheduler reste synchronisée avec le serveur central. Cela s'applique à tous les types de médias, y compris les présentations PADS4, les fichiers vidéo, les images et autres contenus pris en charge.
+
+PADS4 prend en charge la **synchronisation bidirectionnelle** : toutes les modifications apportées localement ou sur le serveur — comme l'ajout, la modification ou la suppression de contenu — sont automatiquement ou manuellement synchronisées entre les systèmes.
+
+***
+
+## Configuration de la synchronisation du contenu
+
+Pour configurer la synchronisation :
+
+1. Ouvrez l'onglet **Tools** dans la barre de ruban.
+2. Dans la section **Synchronization**, cliquez sur **Options**.
+
+La fenêtre **Synchronization Settings** s'ouvrira.
+
+### Options de configuration
+
+* **Activation de la synchronisation de la Content Library**\
+  Choisissez l'un des modes de synchronisation suivants :
+  * **Automatically** – La synchronisation démarre lorsqu'un changement de contenu est détecté.
+  * **Manually** – Nécessite une synchronisation initiée par l'utilisateur.
+  * **Never** – Désactive complètement la synchronisation.
+
+* **Dossier de stockage de la Content Library PADS4**\
+  Définit le dossier local où le contenu synchronisé est stocké.
+  * **Automatic** est recommandé si vous n'utilisez pas plusieurs serveurs ou domaines.
+
+Cliquez sur **OK** pour appliquer les paramètres.
+
+> **Note:**\
+> Si **PADS4 Server** et **PADS4 Scheduler** sont installés sur le même ordinateur, assurez-vous de sélectionner **This Computer** dans les paramètres de connexion. Cela désactive automatiquement la synchronisation puisque les deux composants partagent le même contenu local.
+
+> Lorsque plusieurs applications PADS4 (par exemple, Scheduler, Designer) s'exécutent sur le même PC et se connectent au même serveur, elles partagent le même processus de synchronisation.
+
+***
+
+## Démarrage de la synchronisation du contenu
+
+Si la synchronisation **Automatic** est activée, le système lancera la synchronisation lorsqu'il détectera des modifications dans la bibliothèque de contenu.
+
+Si la synchronisation **Manual** est activée :
+
+1. Allez dans l'onglet **Tools**.
+2. Cliquez sur **Synchronize Now** dans la section **Synchronization**.
+
+La fenêtre **Synchronization Progress** s'ouvrira et affichera la progression de la session en cours.
+
+Une fois la synchronisation terminée, le journal affichera :
+
+> *"The synchronization session has finished."*
+
+Cliquez sur **Close** pour fermer la fenêtre.
+
+> Si vous utilisez la synchronisation automatique, cliquer sur **Synchronize Now** démarrera manuellement le processus ou affichera sa progression actuelle.
+
+***
+
+## Annulation de la synchronisation du contenu
+
+Pour arrêter une session de synchronisation en cours :
+
+1. Si la fenêtre **Synchronization Progress** est ouverte, vous pouvez simplement cliquer sur **Close**.
+2. Alternativement, cliquez sur **Cancel** dans la section **Tools > Synchronization**.
+
+> Si le bouton **Cancel** est désactivé, aucun processus de synchronisation n'est actuellement en cours.
+
+***
+
+## Affichage de la progression et des journaux de synchronisation
+
+Pour vérifier l'état de synchronisation en temps réel ou consulter les journaux récents :
+
+1. Dans l'onglet **Tools**, sous **Synchronization**, cliquez sur **Show Progress**.
+2. La fenêtre **Synchronization Progress** s'ouvrira.
+
+### Détail de la fenêtre
+
+* **État de la synchronisation**
+  * Barre de progression supérieure : montre la progression globale de la synchronisation.
+  * Barre de progression inférieure : montre la progression de l'élément actuel.
+  * Une fois terminé, une seule barre de progression est visible à 100%.
+
+* **Progression du téléchargement / Journal**
+  * Affiche les journaux de la session actuelle ou la plus récente.
+  * Cliquez sur **Refresh** pour mettre à jour l'affichage du journal avec les dernières informations.

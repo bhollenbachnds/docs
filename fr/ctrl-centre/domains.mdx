@@ -1,0 +1,90 @@
+## **Que sont les domaines dans PADS4 ?**
+
+Les domaines dans PADS4 vous permettent de gérer **plusieurs environnements clients séparés** sur un **serveur PADS4 unique**. Cela signifie que différentes organisations ou départements peuvent **fonctionner indépendamment** tout en partageant la même infrastructure.
+
+Avec **la prise en charge des domaines repensée**, tous les services et applications PADS4 sont désormais compatibles avec les domaines, et les domaines peuvent être **entièrement gérés dans PADS4 CTRL Center**.
+
+***
+
+## **Prérequis**
+
+✔ **Demander une licence pour votre domaine**\
+Avant d'ajouter un nouveau domaine, contactez l'**équipe commerciale PADS4** à [**sales@pads4.com**](mailto:sales@pads4.com) pour demander :
+
+* Une **licence serveur** pour votre domaine
+* Toutes **licences utilisateur ou Viewer** supplémentaires nécessaires
+
+✔ **Mettre à niveau vers PADS4 2023.1 ou ultérieur**\
+Les domaines nécessitent PADS4 **2023.1 ou supérieur**. Assurez-vous que votre système est **mis à jour avant de continuer**.
+
+***
+
+## **Étape 1 : Création d'un utilisateur root**
+
+Avant de configurer un domaine, un **utilisateur root** doit être configuré.
+
+1. **Ouvrez** l'**outil de configuration PADS4 Foundation**.
+2. **Définissez un mot de passe** pour l'**utilisateur root**.
+3. Cliquez sur **Appliquer** pour créer l'utilisateur root.
+4. **Conservez le mot de passe en lieu sûr**.
+
+***
+
+## **Étape 2 : Connexion à PADS4 CTRL Center en tant que Root**
+
+Maintenant que l'**utilisateur root** est créé, connectez-vous avec :
+
+* **Username:** `su\root`
+* **Password:** `******` *(Votre mot de passe choisi)*
+
+Après vous être connecté, vous verrez un **tableau de bord vide**, similaire à une connexion Administrateur, mais avec un **onglet Domaines supplémentaire**.
+
+***
+
+## **Étape 3 : Configuration des domaines**
+
+Vous pouvez maintenant **ajouter un nouveau domaine** ou **modifier le domaine par défaut existant ("pads")**.
+
+### **Création d'un nouveau domaine**
+
+1. Cliquez sur **+ Nouveau** dans le tableau de bord Domaines.
+2. **Saisissez les détails du domaine** :
+   * **Nom de domaine personnalisé** (par exemple, "EntrepriseA" ou "Succursale1").
+   * **Nom d'hôte DNS** – Spécifiez le **nom d'hôte DNS** du domaine.
+   * **Fichier de certificat** – Téléchargez le **certificat SSL signé par un tiers** (`.CRT format`).
+   * **Fichier de clé privée** – Téléchargez la **clé privée signée par un tiers** (`.KEY format`).
+3. Cliquez sur **Créer**.
+   * Cela va **redémarrer les services PADS4** et appliquer les paramètres du domaine.
+
+***
+
+## **Étape 4 : Connexion au nouveau domaine**
+
+Une fois le domaine créé, vous pouvez vous connecter en utilisant :
+
+* **Username:** `DomainName\user1` (par exemple, `Test123\user1`)
+* **Password:** `*****`
+
+Après vous être connecté, **activez le nouveau domaine** en utilisant le mécanisme **Activer le serveur PADS4** en haut de l'écran.
+
+***
+
+## **Étape 5 : Gestion des utilisateurs et des configurations**
+
+Maintenant que votre **nouveau domaine est actif**, vous pouvez :
+
+* **Vous connecter à PADS4 System Management** avec `user1` les identifiants.
+* **Configurer des utilisateurs et des permissions supplémentaires**.
+* **Attribuer des licences Viewer** pour la gestion de contenu basée sur le domaine.
+
+***
+
+## **Points clés à retenir**
+
+✔ **Exécuter plusieurs clients indépendants** sur un **serveur PADS4 unique**.\
+✔ **Gérer les domaines et les certificats** dans **PADS4 CTRL Center**.\
+✔ **Demander une licence de domaine** auprès de **PADS4 Sales**.\
+✔ **Créer et configurer des domaines** avec des certificats SSL personnalisés.\
+✔ **Attribuer des utilisateurs et des licences** au sein de chaque domaine.
+
+Pour une configuration plus détaillée, consultez l'**aide de PADS4 System Management**.

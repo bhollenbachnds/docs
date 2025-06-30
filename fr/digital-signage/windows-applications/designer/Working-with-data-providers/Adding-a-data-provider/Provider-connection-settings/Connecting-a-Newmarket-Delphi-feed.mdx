@@ -1,0 +1,87 @@
+Le fournisseur **Newmarket Delphi** dans **PADS4** vous permet de vous connecter aux **Delphi hospitality feeds** pour récupérer des informations relatives aux emplacements, réservations et fonctions des salles.
+
+***
+
+### **Étapes pour ajouter ou modifier une connexion Newmarket Delphi Feed**
+
+#### **1. Démarrer l'Assistant de fournisseur de données**
+
+* Ouvrez **PADS4** et accédez à **Data Provider Wizard**.
+* Sélectionnez **Newmarket Delphi Feed** comme **provider type**.
+* Cliquez sur **Next** pour continuer.
+
+#### **2. Sélectionner la version du serveur**
+
+* Choisissez la **server version** :
+  * **Older versions** nécessitent des identifiants différents.
+  * **Newer versions** peuvent offrir de meilleures performances et sécurité.
+
+#### **3. S'authentifier auprès de Newmarket Delphi**
+
+* Entrez les **Delphi NWS (Newmarket Web Services) credentials**.
+* Cliquez sur **Connect** (si les identifiants sont enregistrés, le système peut se connecter automatiquement).
+
+#### **4. Choisir le type de données à récupérer**
+
+* **Get Location**
+  * Sélectionnez le **Location ID** dans la liste déroulante.
+
+* **Booking Events**
+  * Sélectionnez le **Location ID**.
+  * Définissez la **time period** *(From/Until)*.
+  * Activez **Only show posted events** *(optional)*.
+  * Activez **Include location data** *(adds location-related columns)*.
+  * Activez **Include room data** *(adds room-related columns, may impact performance)*.
+
+* **Room Functions / Room Group Functions**
+  * Sélectionnez un ou plusieurs **Locations**.
+  * Cochez **External ID** si vous utilisez des Location IDs externes.
+  * Activez **Include location data** *(adds location-related columns, may impact performance)*.
+
+#### **5. Configurer les paramètres Delphi Feed plus anciens (version 9.6 et antérieures)**
+
+* Entrez l'**Delphi Service URL** *(e.g., [http://your-ip-address/MeetingSpaceServices/Request.asmx](http://your-ip-address/MeetingSpaceServices/Request.asmx))*.
+* Entrez la **Property Key** *(building ID number)*.
+* Fournissez un **Username** *(Vendor System)* et un **Password** *(License Key)*.
+* Choisissez entre :
+  * **Get Room Characteristics** *(retrieves room details: name, floor, description, etc.)*.
+  * **Get Room Information** *(retrieves room availability details)*.
+  * **Include Characteristics** *(matches room details automatically)*.
+
+#### **6. Appliquer des filtres optionnels**
+
+* **Event Key** – Filtrer par nom d'événement.
+* **Room Group** – Filtrer par groupe de salles *(case-sensitive)*.
+* **Exhibit** – Filtrer les salles avec des expositions programmées.
+* **Postable** – Filtrer selon le statut publiable.
+* **Alternate Language** – Sélectionner un modèle de langue alternative.
+
+#### **7. Définir la plage de date/heure pour la récupération des données**
+
+* **Today** – Récupère les données pour le jour actuel.
+  * Optionnellement, définissez un **offset in days**.
+* **Now** – Récupère les données actuelles.
+  * Optionnellement, spécifiez un **offset before or after the current time**.
+* **Date and Time** – Définissez une **fixed period**.
+* **Predefined** – Sélectionnez **Week, Next Week, or Month**.
+
+Cliquez sur **Next** pour continuer.
+
+#### **8. Terminer la configuration**
+
+* **Review** les paramètres de connexion.
+* Cliquez sur **Finish** pour enregistrer le fournisseur de données.
+
+***
+
+### **Notes importantes**
+
+* **Considérations de performance** :
+  * L'activation de **Include Room Data** peut **performances lentes** en raison d'un traitement supplémentaire.
+  * Les versions plus anciennes de Delphi nécessitent **une saisie manuelle** des URLs de service.
+* **Sécurité & Authentification**:
+  * Assurez-vous que **les identifiants Delphi** sont corrects pour une intégration fluide.
+* **Personnalisation**:
+  * Utilisez **des filtres** pour **limiter la récupération de données**, évitant ainsi **des charges importantes en mémoire**.
+
+Cette configuration garantit que **PADS4** peut récupérer efficacement **des données d'hôtellerie en temps réel**, ce qui est utile pour **la gestion d'événements, la planification des salles et les informations opérationnelles**.

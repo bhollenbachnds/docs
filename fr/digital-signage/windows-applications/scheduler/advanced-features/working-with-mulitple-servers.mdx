@@ -1,0 +1,60 @@
+PADS4 Scheduler prend en charge les connexions à **multiple PADS4 Servers** simultanément. Cette fonctionnalité vous permet de visualiser et de gérer les planifications de différents serveurs au sein d'une seule instance de l'application—idéal pour les environnements avec des déploiements distribués ou segmentés.
+
+***
+
+## Connexion à un serveur PADS4 supplémentaire
+
+En supposant que vous avez déjà une connexion active (par exemple, **MyPADSServer**), et qu'une autre connexion de serveur a été configurée (par exemple, **AnotherPADSServer**) via les **Connection Properties** settings:
+
+Pour établir une connexion à un second serveur :
+
+1. Allez à l'onglet **Home** dans la barre de ruban.
+2. Dans le groupe **Connections**, cliquez sur le bouton fractionné **Connect**.
+3. Dans la liste déroulante, sélectionnez la connexion de serveur supplémentaire (par exemple, **AnotherPADSServer**).
+
+Une fois connecté, les deux connexions de serveur apparaîtront dans le **volet de navigation** en bas à gauche de l'interface. Le serveur nouvellement sélectionné devient le serveur **actif**, indiqué par :
+
+* Nom du serveur mis en surbrillance dans le volet de navigation
+* Affichage du nom du serveur au-dessus du calendrier
+* Informations mises à jour dans la barre d'état
+
+> **Note:** Les volets de navigation ne sont affichés que lorsque deux connexions de serveur ou plus sont actives. Si un seul serveur est connecté, le volet reste masqué.
+
+***
+
+## Visualisation des planifications de plusieurs serveurs
+
+Vous pouvez maintenant ouvrir des **fenêtres séparées** pour différents PADS4 Servers et comparer les planifications côte à côte.
+
+Pour ce faire :
+
+* Utilisez le bouton **New Window** sous l'onglet **View** (voir la section *Working with Multiple Windows*).
+* Assignez chaque fenêtre à une **Destination** différente sur un serveur distinct.
+
+Cette disposition permet une visibilité simultanée des planifications des deux serveurs.
+
+***
+
+## Déconnexion des serveurs PADS4
+
+Pour vous déconnecter d'une ou plusieurs connexions de serveur :
+
+### Déconnecter un seul serveur
+
+1. Allez à l'onglet **Home**.
+2. Dans le groupe **Connections**, cliquez sur le bouton fractionné **Disconnect**.
+3. Sélectionnez la connexion de serveur spécifique que vous souhaitez déconnecter.
+
+Cela va :
+
+* Fermer la connexion sélectionnée
+* Supprimer son volet de navigation
+* Fermez toutes les fenêtres associées à ce serveur
+
+### Déconnecter tous les serveurs
+
+Pour fermer toutes les connexions de serveur actives en même temps :
+
+* Dans l'onglet **Home**, sous **Connections**, cliquez sur **Disconnect All**.
+
+Tous les serveurs connectés et les fenêtres associées seront fermés.

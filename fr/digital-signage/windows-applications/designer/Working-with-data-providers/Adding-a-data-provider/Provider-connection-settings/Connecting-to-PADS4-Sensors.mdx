@@ -1,0 +1,53 @@
+Le fournisseur de données PADS4 Sensors vous permet de récupérer toutes les informations liées aux caméras enregistrées sur le PADS4 Server. Utilisez le PADS4 CTRL Center pour ajouter des capteurs à PADS4.
+
+### Étapes pour ajouter ou modifier un fournisseur de données de capteurs
+
+#### 1. Démarrer l'assistant de fournisseur de données
+
+* Ouvrez le **Data Provider Wizard** dans **PADS4**.
+* Suivez les étapes pour **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
+* Sélectionnez **PADS4 Sensors** comme **type de fournisseur**.
+
+***
+
+#### 2. Configurer les paramètres d'information du capteur
+
+* **Sélectionnez le type d'information à récupérer :**
+  * **Events** : Données en temps réel fournies par le capteur.
+  * **Incidents** : Notifications déclenchées lorsqu'une condition prédéfinie est remplie.
+  * **Areas** : Données en temps réel sur le nombre de personnes dans une zone.
+  * **Statistics** : Aperçus statistiques sur les incidents et les zones.
+
+***
+
+#### 3. Configurer les options de récupération de données
+
+* **Si Events est sélectionné :**
+  * Choisissez le type d'événement spécifique que vous souhaitez récupérer.
+  * Toutes les caméras ne prennent pas en charge tous les types d'événements ; vérifiez la compatibilité avec votre caméra.
+
+* **Si Incidents est sélectionné :**
+  * Définissez un filtre pour récupérer les incidents des dernières **x** secondes.
+  * Optionnellement, sélectionnez une zone spécifique pour filtrer les incidents.
+
+* **Si Areas est sélectionné :**
+  * Récupérez des données d'occupation en temps réel pour une zone spécifiée.
+
+* **Si Statistics est sélectionné :**
+  * Sélectionnez le **type de vue** (jour, semaine ou mois).
+  * Définir la **période de temps** pour la récupération des données.
+
+***
+
+#### 4. Finaliser la configuration
+
+* Complétez les étapes restantes dans l'**Data Provider Wizard**.
+* Cliquez sur **Finish** pour finaliser la configuration.
+
+***
+
+### Notes supplémentaires
+
+* **Vérifier la compatibilité des caméras** : Tous les capteurs ne prennent pas en charge toutes les fonctions. Consultez la page **Certified Sensors** pour plus de détails.
+* **Utiliser des filtres** : La définition de filtres optimise la récupération des données et minimise la charge de données inutile.
+* **Vérifier les autorisations d'accès** : Assurez-vous que les paramètres d'autorisation et de connectivité sont corrects pour récupérer les données des capteurs avec succès.

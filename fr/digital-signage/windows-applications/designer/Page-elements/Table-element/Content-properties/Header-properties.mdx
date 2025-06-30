@@ -1,0 +1,50 @@
+L'**header** est la **topmost section** de l'élément de tableau, généralement utilisée pour afficher **titles, column headers, or dynamic data like the current date/time**. Ces propriétés vous permettent de personnaliser **header's visibility, content, and size adjustments**.
+
+***
+
+## **Paramètres d'En-tête**
+
+### **Afficher l'En-tête**
+
+* Activer ou désactiver la **visibility** de l'en-tête du tableau.
+
+### **Modifier le Contenu de l'En-tête**
+
+* Permet une personnalisation complète de l'en-tête en ajoutant des **page elements**.
+* Les éléments peuvent inclure **text, images, formatted date/time, and data from external sources**.
+
+#### **Pour modifier l'en-tête :**
+
+1. Cliquez sur **Edit** pour ouvrir la fenêtre **Edit Header**.
+2. Ajoutez et configurez les **page elements** selon vos besoins.
+3. Cliquez sur **Close** dans le menu Fichier.
+4. Confirmez les modifications en cliquant sur **Yes**.
+5. Appliquez les modifications en sélectionnant **OK** ou **Apply** dans la fenêtre des propriétés du tableau.
+
+### **Rétrécissement/Agrandissement Automatique**
+
+* **Ajuste automatiquement** la hauteur de l'en-tête en fonction de son contenu.
+* Garantit que les **variable-sized elements** (par exemple, le texte à taille automatique) ne provoquent pas de débordement ou d'espaces vides.
+
+***
+
+## **Comportement et Remarques**
+
+* **Editing the header** fonctionne comme la conception d'une page standard mais **excludes nested table elements**.
+* **Page properties** sont remplacées par **Header properties**, permettant la personnalisation de la **background color and height**.
+* La **header width** est automatiquement définie pour correspondre à la **table element width**.
+
+### **Détails du Rétrécissement/Agrandissement Automatique**
+
+* Le système **adjusts header height dynamically** en fonction de l'élément visible le plus bas.
+* Si un élément **resizes or disappears**, l'en-tête **shrinks or grows accordingly**.
+* Si **all elements in the header become invisible**, l'**entire header disappears**.
+* Les ajustements de taille de l'en-tête **impact the table body's layout** en fonction de ses paramètres de hauteur.
+
+***
+
+### **Cas d'Utilisation**
+
+* Afficher des **real-time data** (par exemple, un horodatage qui se met à jour dynamiquement).
+* Créer un **responsive header** qui **shrinks when content is hidden** (par exemple, des en-têtes de colonnes conditionnels).
+* Ajouter une **branding section** avec **logos and static text** en haut d'un **data-driven table**.

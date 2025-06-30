@@ -1,0 +1,46 @@
+Chaque fonction que vous appelez dans PADS4 Agent (par exemple, récupérer une capture d'écran d'un Viewer) est automatiquement traduite par le système en une tâche.
+
+Lorsqu'il s'agit d'une tâche serveur qui doit être traitée par votre PADS4 Server connecté, la tâche est automatiquement transmise au bon PADS4 Server. Elle y est traitée localement et lorsque la tâche est prête, les résultats sont renvoyés à l'application PADS4 Agent.
+
+Les tâches du Viewer sont également automatiquement transmises au bon PADS4 Server, où le PADS4 Server à son tour transmet la tâche au bon PADS4 Viewer. Lorsque la tâche est traitée, le résultat est renvoyé au PADS4 Server qui le retourne à l'application PADS4 Agent.
+
+En plus d'exécuter une tâche instantanément, vous pouvez également planifier une tâche pour qu'elle soit exécutée ultérieurement.
+
+<Tip>
+  Le système de transmission automatique des tâches garantit que votre tâche sera exécutée au bon endroit et au bon moment, même lorsque le système est temporairement hors ligne.\
+  \
+  Les tâches sont traitées de manière asynchrone, ce qui vous permet de continuer à utiliser d'autres fonctionnalités de l'application pendant que votre tâche est en cours de traitement.
+</Tip>
+
+#### **Fenêtre des tâches**
+
+La fenêtre des tâches vous donne un aperçu complet de toutes les tâches en cours ou terminées, y compris leur statut, leur durée et leurs résultats.
+
+![EN Agent Tasks Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Tasks.png)
+
+**Task**\
+Description définie par le système de votre tâche.
+
+**Destination**\
+Destination où votre tâche est exécutée. Il peut s'agir du serveur de votre système ou d'un viewer. Une exception est la tâche Wake-on-LAN, pour laquelle le Viewer est répertorié alors que la tâche est exécutée sur le serveur.
+
+**Start Time**\
+Horodatage du moment où votre tâche a été démarrée.
+
+**Duration**\
+Les heures, minutes et secondes qu'il a fallu pour exécuter votre tâche. Lorsqu'il a fallu moins d'une seconde pour exécuter votre tâche, une valeur de 1 seconde est affichée.
+
+**Status**\
+Indique si votre tâche est en cours d'exécution ou terminée. Lorsqu'elle est terminée, elle indique si l'exécution a réussi ou échoué.
+
+**Message**\
+Affiche des informations sur le résultat de la tâche.\
+Si le message est 'See details', vous pouvez cliquer sur le bouton **Details** dans la fenêtre des tâches pour vérifier les résultats détaillés de la tâche. La façon dont les résultats détaillés sont affichés dépend du type de tâche.
+
+Pour effacer les informations affichées dans la fenêtre des tâches, cliquez sur le bouton **Clear Log** dans la fenêtre des tâches. L'effacement du journal n'affectera en aucune façon l'exécution de vos tâches.
+
+ 
+
+<Tip>
+  Certaines tâches ne sont pas répertoriées dans la fenêtre des tâches (comme la récupération des informations de connexion du visualiseur sur un serveur PADS4), car ces informations sont instantanément disponibles et ne sont pas récupérées par l'exécution d'une tâche.
+</Tip>

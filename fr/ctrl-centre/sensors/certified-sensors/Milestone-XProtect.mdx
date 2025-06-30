@@ -1,0 +1,123 @@
+Ce guide explique comment intégrer **Milestone XProtect** avec **PADS4** pour récupérer des alarmes. PADS4 lit les données directement depuis la **Milestone SQL Server database**, permettant des **real-time push notifications** pour des performances optimisées.
+
+Pour plus de détails sur Milestone XProtect, visitez : [www.milestonesys.com](https://www.milestonesys.com).
+
+***
+
+## **Étape 1 : Créer des alarmes dans Milestone XProtect**
+
+Pour permettre à PADS4 de récupérer des alarmes :
+
+1. **Ouvrez XProtect Management Client**.
+2. Naviguez vers la catégorie **Alarms**.
+3. **Créez une ou plusieurs définitions d'alarme**.
+4. **Spécifiez le déclencheur** qui déclenchera l'alarme (par ex., détection de franchissement, alerte de température).
+5. Assurez-vous que le **Alarm Definition name** correspond au nom utilisé dans **PADS4 CTRL Center** sous **Sensors** pour déclencher des incidents.
+
+Pour plus de détails sur la création d'incidents, consultez la section **How to Use Sensors**.
+
+***
+
+## **Étape 2 : Configurer SQL Server pour permettre l'accès à PADS4**
+
+PADS4 ne se connecte pas directement à Milestone ; au lieu de cela, il **reads data from the SQL Server database**. Cette approche permet à SQL Server d'**send push notifications** lorsque les données changent, améliorant ainsi les performances du système.
+
+### **Autoriser les connexions réseau SQL Server**
+
+1. Assurez-vous que l'instance SQL Server utilisée par Milestone **allows network connections**.
+2. Vérifiez les **firewall settings** qui pourraient bloquer l'accès.
+
+### **Tester la connectivité SQL Server**
+
+1. Installez **Microsoft SQL Server Management Studio (SSMS)** sur le serveur PADS4.
+2. Essayez de **connecting to the Milestone database** en utilisant SSMS.
+3. Si la connexion réussit, **SQL Server and firewall settings are correctly configured**.
+
+***
+
+## **Étape 3 : Activer l'authentification SQL Server pour PADS4**
+
+Pour permettre à PADS4 de se connecter à SQL Server, activez **Mixed Mode Authentication** :
+
+1. **Connectez-vous à SQL Server** en utilisant **SSMS** et **Windows Authentication**.
+2. **Faites un clic droit** sur l'instance SQL Server et **select Properties**.
+3. Naviguez vers la **Security** page.
+4. Sous **Server Authentication**, sélectionnez **SQL Server and Windows Authentication Mode**.
+5. **Restart SQL Server** pour que les changements prennent effet.
+
+***
+
+## **Étape 4 : Créer un compte utilisateur SQL pour PADS4**
+
+Un **SQL user account** est nécessaire pour accéder à la base de données Milestone. Vous pouvez en créer un en utilisant **SSMS** (Interface utilisateur graphique) ou **SQL scripts**.
+
+### **Option 1 : Créer un utilisateur SQL en utilisant SSMS**
+
+1. **Connect to SQL Server** via SSMS.
+2. Développez **Security** > **Logins**.
+3. **Right-click** sur **Logins** et sélectionnez **New Login**.
+4. **Enter a Login Name** (par ex., `PADS4Reader`).
+5. Sélectionnez **SQL Server Authentication** et **set a password**.
+6. **Uncheck "Enforce password policy"**.
+7. Définissez la **default database** à `Surveillance`.
+
+#### **Grant Database Permissions**
+
+1. Naviguez vers **User Mapping**.
+2. Sélectionnez la **Surveillance database**.
+3. Attribuez le rôle **db\_owner** (pour permettre un accès complet).
+4. Optionnellement, attribuez **db\_denydatawriter** (pour empêcher les modifications).
+
+***
+
+### **Option 2 : Créer un utilisateur SQL en utilisant un script**
+
+Alternativement, vous pouvez créer un utilisateur avec **read-only access** en utilisant le script SQL suivant :
+
+```sql
+USE [master]
+CREATE LOGIN [PADS4Reader] WITH PASSWORD=N'<password>', DEFAULT_DATABASE=[Surveillance], CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+USE [Surveillance]
+CREATE USER [PADS4Reader] FOR LOGIN [PADS4Reader]
+ALTER ROLE [db_datareader] ADD MEMBER [PADS4Reader]
+GRANT ALTER ON SCHEMA::[dbo] TO [PADS4Reader]
+GRANT CONTROL ON SCHEMA::[dbo] TO [PADS4Reader];
+GRANT IMPERSONATE ON USER::[dbo] TO [PADS4Reader];
+GRANT CREATE PROCEDURE TO [PADS4Reader]
+GRANT CREATE QUEUE TO [PADS4Reader]
+GRANT CREATE SERVICE TO [PADS4Reader]
+GRANT REFERENCES ON CONTRACT::[http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification] TO [PADS4Reader]
+GRANT SUBSCRIBE QUERY NOTIFICATIONS TO [PADS4Reader]
+GRANT RECEIVE ON QueryNotificationErrorsQueue TO [PADS4Reader]
+```
+
+1. **Replace** `<password>` avec un mot de passe sécurisé.
+2. **Execute the script** dans SSMS.
+
+Après l'exécution, le compte `PADS4Reader` est **created and configured**.
+
+***
+
+## **Étape 5 : Configurer PADS4 CTRL Center pour l'intégration Milestone**
+
+1. **Open PADS4 CTRL Center**.
+2. **Naviguez vers la section Sensors**.
+3. **Add a new Milestone sensor**.
+4. Entrez l'**SQL Server address, database name, username (`PADS4Reader`), and password**.
+
+Une fois configuré, **PADS4 can retrieve alarms from Milestone XProtect**.
+
+***
+
+## **Conclusion**
+
+Cette configuration permet **real-time alarm retrieval** depuis **Milestone XProtect** en utilisant **SQL Server notifications**. L'intégration permet **automated incident creation** dans PADS4 basé sur **alarm triggers from connected cameras**.
+
+Pour le dépannage, vérifiez :
+
+* SQL Server **network access**.
+* **Firewall settings**.
+* SQL **authentication mode**.
+* User **permissions** dans SQL Server.
+
+En suivant ces étapes, votre **PADS4 system will effectively monitor and respond to Milestone alarms**.

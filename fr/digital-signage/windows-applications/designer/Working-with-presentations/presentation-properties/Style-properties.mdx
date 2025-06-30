@@ -1,0 +1,39 @@
+Les **propriétés de style** définissent comment votre présentation sera lue, y compris les options pour synchroniser la lecture sur plusieurs Viewers.
+
+***
+
+## **Synchroniser les Viewers**
+
+### **Calculer l'heure du changement de page en fonction de l'heure planifiée**
+
+* **Lorsqu'elle est activée**, cette option garantit que la présentation est **lue de manière synchrone** sur tous les écrans (Viewers) auxquels elle a été planifiée.
+* **Lorsqu'elle est activée**, les comportements dynamiques des pages tels que **le saut conditionnel de pages** (par exemple, sauter une page lorsqu'aucune donnée n'est disponible) **ne fonctionneront plus**, car la synchronisation est prioritaire.
+
+***
+
+## **Exemple de lecture synchronisée**
+
+Si une présentation est programmée pour démarrer à **10:00** et contient **deux pages**, chacune affichée pendant **1 minute**, la lecture se déroulerait comme suit:
+
+* **10:00 - 10:01**: La page 1 est affichée
+* **10:01 - 10:02**: La page 2 est affichée
+* **10:02 - 10:03**: La page 1 est affichée
+* **10:03 - 10:04**: La page 2 est affichée
+* **10:04 - 10:05**: La page 1 est affichée
+* **10:05 - 10:06**: La page 2 est affichée
+
+Si le **PADS4 Viewer** est redémarré à **10:03**, la présentation **reprendra** en affichant **la Page 2** pour le temps restant jusqu'à **10:04**, moment où elle passera à la Page 1.
+
+***
+
+## **Remarques**
+
+* **La synchronisation est basée sur l'horloge système** de chaque PC PADS4 Viewer. Le Viewer utilise cette horloge pour déterminer le moment précis d'affichage de chaque page, assurant l'alignement avec les autres Viewers.
+* Comme la synchronisation est **basée sur le temps**, **la présentation peut ne pas toujours commencer par la Page 1**.
+* La synchronisation fonctionne au **niveau de la page**, ce qui signifie que tous les écrans participants passent à la page suivante **simultanément**.
+* Le système **se resynchronise automatiquement à chaque changement de page**.
+* La synchronisation nécessite que la présentation contienne au moins **deux pages**.
+* La synchronisation **dépend de la durée des pages**. Elle **ne fonctionnera pas** if:
+  * Les durées des pages sont désactivées ou ignorées.
+  * La présentation utilise des règles ou des options qui contournent le minutage des pages.
+* **Des facteurs externes** tels qu'une utilisation élevée du CPU sur un PC Viewer peuvent affecter la synchronisation parfaite, bien que le système tentera de se resynchroniser à chaque transition de page.

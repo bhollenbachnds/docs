@@ -1,0 +1,60 @@
+Ces propriétés contrôlent comment un élément passe d'un élément à l'autre dans sa liste de lecture pendant la lecture.
+
+### Lire la liste de lecture entière
+
+* **Si désactivé** :\
+  Seul le **premier élément de la liste de lecture** sera lu.
+
+* **Si activé** :\
+  Tous les éléments de la liste de lecture seront lus selon l'une des méthodes suivantes :
+
+#### Méthodes de lecture (lorsque "Lire la liste de lecture entière" est activé)
+
+1. **Lire en utilisant les durées de la liste de lecture** :\
+   Chaque élément de la liste de lecture sera lu pendant la durée **définie dans la liste de lecture** elle-même.
+
+2. **Lire en utilisant l'intervalle d'alternance de page** :\
+   Tous les éléments de la liste de lecture seront lus pendant la **même durée fixe**, comme spécifié dans l'**Intervalle d'alternance** des propriétés de la page.
+
+   **Note importante** :
+
+   * Lorsque cette option est utilisée, **plusieurs éléments** l'utilisant vont **synchroniser** leur changement de playlist.
+   * Si les éléments ont un nombre différent d'éléments de playlist, le système calculera quel élément doit s'afficher à chaque moment, afin qu'ils restent alignés.
+
+***
+
+### Exemple de Synchronisation
+
+Considérez **deux éléments** avec différentes longueurs de playlist :
+
+| **Élément 1 (4 éléments)** | **Élément 2 (2 éléments)** |
+| -------------------------- | -------------------------- |
+| Élément de playlist 1      | Élément de playlist 1      |
+| Élément de playlist 2      | Élément de playlist 2      |
+| Élément de playlist 3      | Élément de playlist 1      |
+| Élément de playlist 4      | Élément de playlist 2      |
+| Élément de playlist 1      | Élément de playlist 1      |
+| Élément de playlist 2      | Élément de playlist 2      |
+
+Dans cet exemple :
+
+* **Élément de playlist 1** des deux éléments sera **toujours affiché en même temps**.
+* Le système aligne automatiquement les cycles, même avec des longueurs de liste différentes.
+
+***
+
+### Lecture Synchronisée Sur Tous les Viewers
+
+Lorsque **Play using Page Alternate Interval** est actif, l'alternance des éléments de playlist est **synchronisée sur tous les Viewers** (écrans/lecteurs).
+
+* Cela assure **une alternance simultanée** sur tous les écrans connectés.
+* Assurez-vous que les paramètres de synchronisation du système sont correctement configurés pour prendre en charge ce comportement.
+
+***
+
+### Résumé
+
+* **Play Entire Play List** : Permet de parcourir tous les éléments de la playlist.
+* Choisissez entre **les durées individuelles des éléments** ou un **intervalle d'alternance uniforme**.
+* La synchronisation maintient plusieurs éléments et appareils en synchronisation.
+* Utile pour l'affichage coordonné de contenu sur plusieurs zones ou écrans.

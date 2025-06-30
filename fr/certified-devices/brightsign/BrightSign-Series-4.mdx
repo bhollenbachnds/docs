@@ -1,0 +1,209 @@
+Ce guide fournit des instructions étape par étape pour l'installation et la configuration de **PADS4 Viewer** sur **BrightSign Series 4** players.
+
+***
+
+## **Avant de commencer**
+
+### **Lecteurs BrightSign Series-4 pris en charge**
+
+Les **Series-4 BrightSign players** suivants sont pris en charge :
+
+* **BrightSign LS4**
+* **BrightSign HD4**
+* **BrightSign XD4**
+* **BrightSign XT4**\*
+
+<Warning>
+  *****Note: HDMI-in on the XT1144 is not supported.*****
+</Warning>
+
+***
+
+## **Exigences minimales**
+
+### **Version du serveur PADS4**
+
+Avant l'installation, assurez-vous que votre **PADS4 Server** exécute **PADS4 version 2022.2** ou supérieure.
+
+<Note>
+  Il est recommandé de **terminer l'installation du PADS4 Server d'abord** avant de configurer votre lecteur BrightSign.
+</Note>
+
+### **Version du système d'exploitation BrightSign**
+
+Votre **BrightSign player** doit exécuter **BrightSign OS 8.5.47 ou ultérieur**.
+
+Si votre appareil BrightSign ne répond pas à cette exigence, mettez à jour le système d'exploitation en utilisant l'une des méthodes suivantes :
+
+1. **BNS.cloud** – Une plateforme de gestion de réseau BrightSign basée sur le cloud pour les mises à jour de firmware à distance.
+2. **BrightAuthor:connected** – Permet les mises à jour du firmware directement depuis votre PC.
+
+***
+
+## **Exigences de stockage**
+
+* Le seul **périphérique de stockage pris en charge** pour **PADS4 on BrightSign players** est une **carte microSD**.
+* Assurez-vous d'avoir une **carte microSD compatible** insérée avant de procéder à l'installation.
+* Nous recommandons d'utiliser des cartes microSD de classe industrielle pour assurer une longue durabilité.
+
+***
+
+## **Génération du PADS4 Viewer pour les lecteurs BrightSign**
+
+L'**application PADS4 Viewer** pour les lecteurs BrightSign peut être générée directement à partir du **PADS4 Server**.
+
+### **Étapes pour générer le PADS4 Viewer**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez un **navigateur web** sur votre ordinateur.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Naviguez vers l'**Assistant PADS4 BrightSign Player** en utilisant le format suivant :
+
+    ```
+    https://[yourPADS4Server]/[domain]/Apps/Brightsign  
+    ```
+
+    * Remplacez **\[yourPADS4Server]** par le **nom DNS ou l'adresse IP** de votre **PADS4 Server**.
+    * Remplacez **\[domain]** par votre **nom de domaine PADS4**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Exemple d'URL :
+
+    ```
+    https://example.pads365.com/PADS4/Apps/Brightsign  
+    ```
+  </Step>
+
+  <Step title="Quatrième étape">
+    Appuyez sur **Entrée** pour lancer l'**Assistant PADS4 BrightSign Player**.
+  </Step>
+</Steps>
+
+***
+
+## **Utilisation de l'Assistant PADS4 BrightSign Player**
+
+L'**Assistant PADS4 BrightSign Player** comprend **trois étapes** :
+
+### **Étape 1 : Configurer le serveur PADS4**
+
+* L'**URL du serveur PADS4** sera **automatiquement renseignée** en fonction de l'adresse saisie dans votre navigateur.
+* Vérifiez que l'URL est correcte et cliquez sur **Suivant** pour continuer.
+
+### **Étape 2 : Télécharger les fichiers du lecteur BrightSign**
+
+* Cliquez sur le bouton **Télécharger** pour télécharger un **fichier ZIP** contenant l'**application BrightSign Player**.
+* Une fois le téléchargement terminé, cliquez sur **Suivant** pour continuer.
+
+### **Étape 3 : Extraire et déployer les fichiers**
+
+<Steps>
+  <Step title="Première étape">
+    Extrayez le **fichier ZIP téléchargé**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Insérez une **carte microSD** dans le lecteur de carte de votre ordinateur.\\
+
+    <Note>
+      Assurez-vous que la carte microSD est **vide** avant de continuer.
+    </Note>
+  </Step>
+
+  <Step title="Troisième étape">
+    Copiez le **contenu extrait** du fichier ZIP sur la **carte microSD**.
+  </Step>
+</Steps>
+
+***
+
+## **Finalisation de l'installation sur votre lecteur BrightSign**
+
+Une fois la **carte microSD** préparée, procédez à l'installation sur votre **BrightSign player**.
+
+<Steps>
+  <Step title="Première étape">
+    Retirez la **carte microSD** de votre ordinateur.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Insérez la **carte microSD** dans le **slot microSD désigné** sur votre **BrightSign player**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Si le **BrightSign player** est déjà sous tension, il devrait **détecter et démarrer automatiquement** l'**application PADS4 Viewer** après l'insertion de la carte microSD.
+  </Step>
+
+  <Step title="Quatrième étape - *Si PADS4 Viewer ne se lance pas automatiquement*">
+    Appuyez sur le bouton **Reset** sur le **BrightSign player** pour redémarrer l'appareil.
+  </Step>
+
+  <Step title="Cinquième étape">
+    Au redémarrage, le **PADS4 Viewer** devrait **se lancer automatiquement**.
+  </Step>
+</Steps>
+
+**Félicitations !** Vous avez installé avec succès le **PADS4 Viewer** sur votre **BrightSign player**.
+
+***
+
+## **Finalisation de la configuration de votre PADS4 BrightSign Player**
+
+* Au premier lancement, le **PADS4 Viewer** sur votre **BrightSign player** affichera un nom par défaut, tel que :
+
+  ```
+  BrightSign0002  
+  ```
+* Pour attribuer un **nom personnalisé**, utilisez le **PADS4 CTRL Center** pour mettre à jour le **Viewer Name**.
+
+***
+
+## **Fonctionnalités prises en charge et limitations**
+
+### **Fonctionnalités générales**
+
+| Fonctionnalité | Description                                                                                                                 |
+| :------------: | --------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Automatic PADS4 Software Updates** – Le **PADS4 Viewer** se mettra à jour automatiquement.                                |
+|        ✅       | **Offline Mode** – L'appareil continuera à diffuser les **scheduled presentations** pendant **7 days** s'il est hors ligne. |
+
+### **Capacités de stockage et matérielles**
+
+| Fonctionnalité | Description                                                                         |
+| :------------: | ----------------------------------------------------------------------------------- |
+|        ✅       | **Supports microSD storage** – Nécessaire pour l'installation et le fonctionnement. |
+|        ✅       | **Supports BrightSign OS 8.5.47+** – Nécessaire pour la compatibilité.              |
+|        ❌       | **USB storage support** – Non pris en charge.                                       |
+
+### **Prise en charge des données et du contenu**
+
+| Fonctionnalité | Description                                                                                        |
+| :------------: | -------------------------------------------------------------------------------------------------- |
+|        ✅       | **Real-time Data Providers** – Prend en charge l'intégration avec des sources de données externes. |
+|        ✅       | **Video, Images, Text, Tables, and Interactive Elements** – Pris en charge dans les présentations. |
+|        ❌       | **Flash Content, Seamless Video Playback** – Non pris en charge.                                   |
+
+### **Gestion des appareils**
+
+| Fonctionnalité | Description                                             |
+| :------------: | ------------------------------------------------------- |
+|        ✅       | **Remote Management via PADS4 CTRL Center**             |
+|        ✅       | **Connection State Monitoring & Alerts**                |
+|        ❌       | **Reboot, Shutdown, Wake-on-LAN** – Non pris en charge. |
+|        ✅       | **Restart Viewer, Retrieve Logs, Edit Viewer Settings** |
+
+***
+
+## **Remarques importantes**
+
+<Warning>
+  **Content File Integrity** – La **PADS4 Content Library** vérifie l'intégrité des fichiers à l'aide de **MD5 checksum** pendant la synchronisation.
+</Warning>
+
+<Warning>
+  **Proof of Play Limitations** – Un maximum de **50,000 records** peuvent être stockés localement. Les enregistrements plus anciens seront supprimés une fois la limite atteinte.
+</Warning>

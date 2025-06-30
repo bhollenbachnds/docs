@@ -1,0 +1,19 @@
+Après avoir sélectionné une catégorie d'information d'un serveur, visualiseur ou boîtier noir dans le [navigation pane](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm), les informations seront récupérées et les résultats seront affichés dans une fenêtre dans la zone d'information. La façon dont les résultats sont affichés dans la fenêtre d'information dépend de la catégorie choisie.
+
+![EN Agent Viewerconnections Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Viewerconnections.png)
+
+Pour la plupart des catégories, un certain nombre de fonctions contextuelles deviendront disponibles dans la ribbon bar. Ces mêmes fonctions contextuelles peuvent également être appelées en faisant un clic droit sur la fenêtre d'information.
+
+Par défaut, l'application PADS4 utilise une fenêtre d'information pour afficher tous les résultats. Cela signifie que lorsque vous passez à une autre catégorie d'information, la même fenêtre sera réutilisée pour afficher les résultats. Vous pouvez éventuellement ouvrir manuellement des fenêtres d'information supplémentaires comme décrit dans [Working with multiple windows](https://pads4documentation.blob.core.windows.net/agent/Content/Advanced%20features/Working%20with%20multiple%20windows.htm) ou utiliser les [View options](https://pads4documentation.blob.core.windows.net/agent/Content/Tools/Options/View%20options.htm) de l'application pour que le système ouvre automatiquement de nouvelles fenêtres d'information.
+
+ 
+
+#### **Actualisation des données**
+
+La première fois que vous sélectionnez une certaine catégorie d'information, l'information est toujours récupérée à partir du serveur ou visualiseur distant. Lorsque plus tard vous sélectionnez à nouveau la même catégorie d'information dans le volet de navigation, la réponse du système dépend de la catégorie sélectionnée. Pour des raisons de performance, les catégories contenant des informations qui ne changeront presque jamais afficheront les résultats précédents mis en cache localement. Les catégories avec des informations dynamiques récupéreront toujours leurs informations à partir du serveur ou visualiseur distant. Si les informations sont récupérées à partir du serveur ou visualiseur distant, vous verrez une nouvelle tâche apparaître dans la [tasks window.](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm) Si aucune nouvelle tâche n'apparaît dans la fenêtre des tâches, cela signifie que les informations sont récupérées à partir du cache local.
+
+<Note>
+  Pour forcer l'application PADS4 Agent à récupérer les informations demandées à partir du serveur ou visualiseur connecté, vous devez cliquer sur **Refresh** dans l'onglet **Home** de la ribbon bar ou utiliser la touche de raccourci F5.
+</Note>
+
+Pour certaines catégories d'information (comme toutes les catégories de boîtier noir), la fonction **Refresh** n'est pas disponible, car l'information de la catégorie est toujours disponible et il n'est pas nécessaire d'actualiser l'information.

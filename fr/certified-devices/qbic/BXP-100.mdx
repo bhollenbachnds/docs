@@ -1,0 +1,239 @@
+Ce guide fournit des **instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur les **appareils Qbic BXP-100** fonctionnant sous **Android 10 et Android 12**.
+
+***
+
+## **Avant de commencer**
+
+### **Appareils Qbic BXP-100 pris en charge**
+
+Les appareils **Qbic BXP-100** suivants sont pris en charge :
+
+* **BXP-100 (Android 10)**
+* **BXP-100 (Android 12)**
+
+**Important:** Assurez-vous que votre **PADS4 Server** est installé et configuré avant de configurer votre appareil Qbic.
+
+***
+
+## **Exigences minimales**
+
+**Version du serveur PADS4 :** **2023.1 ou ultérieure**
+
+**Version du firmware :**
+
+| Version Android | Version minimale du firmware |
+| :-------------: | :--------------------------: |
+|  **Android 10** |           **1.0.4**          |
+|  **Android 12** |           **2.12**           |
+
+<Note>
+  Assurez-vous que le **firmware de votre appareil Qbic** répond aux **exigences minimales** avant de procéder à l'installation.
+</Note>
+
+***
+
+## **Déploiement en masse des appareils Qbic**
+
+Pour déployer **PADS4 Viewer** sur plusieurs **appareils Qbic simultanément**, consultez le guide **Bulk Deployment of PADS4 Viewer for Qbic Devices**.
+
+**Une fois PADS4 installé, passez à la configuration du BXP-100.**
+
+***
+
+## **Installation de PADS4 Viewer via clé USB**
+
+Cette méthode permet une **installation manuelle** de l'application **PADS4 Viewer** à l'aide d'une **clé USB**.
+
+### **Étape 1 : Télécharger l'APK PADS4 Viewer**
+
+**Emplacements de téléchargement :**
+
+**Répertoire du serveur PADS4 :**
+
+```
+https://[YourPADS4Server]/PADS4/apps
+```
+
+**Lien de téléchargement officiel :**\
+[Télécharger PADS4Qbic APK](https://github.com/PADS4/PADS4-Viewer-Qbic/releases/latest)
+
+**Transfert vers une clé USB :**
+
+<Steps>
+  <Step title="Première étape">
+    Copiez le **PADS4Qbic.apk** fichier sur une **clé USB**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Insérez la **clé USB** dans l'**appareil Qbic BXP-100**.
+  </Step>
+</Steps>
+
+***
+
+### **Étape 2 : Activer le mode Android natif**
+
+Pour installer l'application, l'appareil doit être mis en **Native Android Mode**.
+
+<Steps>
+  <Step title="Première étape">
+    Allumez l'**Qbic BXP-100**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Naviguez vers **Settings → Player Settings**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Sous **Android System**, activez **Switch to Native Android Mode**.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Quittez **Settings**. Vous devriez maintenant voir l'**écran d'accueil Android**.
+  </Step>
+</Steps>
+
+***
+
+### **Étape 3 : Installer l'APK PADS4 Viewer**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez l'**Files App** sur votre **Qbic BXP-100**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Naviguez vers l'emplacement **USB Storage**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Localisez et **appuyez sur** le fichier **PADS4Qbic.apk**.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Si vous y êtes invité, **autorisez l'installation depuis des sources inconnues**.
+  </Step>
+
+  <Step title="Cinquième étape">
+    Cliquez sur **Install**, puis sur **Done** une fois l'installation terminée.
+  </Step>
+</Steps>
+
+***
+
+### **Étape 4 : Désactiver le mode Android natif**
+
+Une fois l'installation terminée, **revenez au mode de configuration Qbic**.
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez **Settings → Player Settings**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Sous **Android System**, désactivez **Switch to Native Android Mode**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Quittez **Settings**. L'**écran de configuration Qbic** devrait apparaître.
+  </Step>
+</Steps>
+
+***
+
+## **Configuration du BXP-100**
+
+Cette section vous guide pour **configurer le Qbic BXP-100** afin de **lancer automatiquement PADS4 Viewer** au démarrage.
+
+### **Étape 1 : Définir l'URL du contenu (installation USB uniquement)**
+
+Si PADS4 Viewer a été installé via USB :
+
+<Steps>
+  <Step title="Première étape">
+    Localisez le champ **Content URL** dans **Settings**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Entrez la valeur suivante :
+
+    ```
+    com.pads4.viewer.qbic/.MainActivity
+    ```
+  </Step>
+</Steps>
+
+***
+
+### **Étape 2 : Configurer l'affichage du navigateur et les paramètres d'écran**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez **Settings → Player Settings**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Ajustez les **Browser Settings** :
+
+    * **Request Desktop Site :** On
+    * **Show Security Warnings :** Off
+    * **Block Pop-ups :** On
+    * **Keep Cookies :** Off
+  </Step>
+
+  <Step title="Troisième étape">
+    Ajustez les **Screen Settings** :
+
+    * **Full Screen :** On
+    * **Adjust window for input method :** On
+  </Step>
+</Steps>
+
+**Le PADS4 Viewer démarrera automatiquement après 20 secondes.**
+
+***
+
+## **Connexion au serveur PADS4**
+
+### **Étape 1 : Configurer la connexion au serveur**
+
+**Format:**
+
+```
+https://[YourPADS4Server]/PADS4/
+```
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez l'application **PADS4 Viewer**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Entrez l'**adresse du serveur PADS4**.
+  </Step>
+
+  <Step title="Troisième étape">
+    (Facultatif) Entrez un **nom de Viewer personnalisé**, ou laissez vide pour générer automatiquement.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Cliquez sur **Start** pour établir la connexion.
+  </Step>
+</Steps>
+
+**Si vous y êtes invité, accordez les autorisations pour l'application PADS4 Viewer.**
+
+**Une fois connecté, l'écran de démarrage PADS4 devrait apparaître.**
+
+***
+
+## **Dépannage**
+
+**Issue:** PADS4 Viewer ne se lance pas automatiquement.\
+**Solution:** Assurez-vous que **PADS4 Viewer** est défini comme **Content URL** dans **Settings**.
+
+**Issue:** L'appareil ne parvient pas à se connecter au serveur PADS4.\
+**Solution:** Vérifiez l'**URL du serveur** et assurez-vous que le **serveur PADS4 est en cours d'exécution**.
+
+**Issue:** L'installation de l'application est bloquée.\
+**Solution:** Activez **Install from Unknown Sources** dans **Settings**.

@@ -1,0 +1,269 @@
+Ce guide fournit des **instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur les appareils **Samsung Tizen 7.0 (SSSP10)**.
+
+***
+
+## **Avant de commencer**
+
+### **Appareils Samsung Tizen 7.0 pris en charge**
+
+L'appareil **Samsung SSSP10 (Tizen 7.0)** suivant est pris en charge :
+
+* **SSSP10 (Tizen 7.0)**
+
+**Assurez-vous que votre serveur PADS4 est installé et configuré avant de continuer.**
+
+***
+
+## **Exigences minimales**
+
+**Version du serveur PADS4 :** **2023.1.1 ou ultérieure**\
+**Version du firmware :** **1030.x ou ultérieure**
+
+**Assurez-vous que le firmware de votre appareil répond aux exigences minimales avant de procéder à l'installation.**
+
+***
+
+## **Configuration initiale**
+
+Lorsque vous **allumez** le Samsung SSSP10 pour la première fois, un **assistant de configuration** démarrera.
+
+**Si l'assistant de configuration ne démarre pas, effectuez une réinitialisation d'usine avant de continuer.**
+
+***
+
+## **Effectuer une réinitialisation d'usine**
+
+<Steps>
+  <Step title="Première étape">
+    Éteignez **l'écran**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Sur la télécommande, appuyez sur :\
+    `Mute + 1 + 8 + 2 + ON`
+  </Step>
+
+  <Step title="Troisième étape">
+    Naviguez vers **Option** → Sélectionnez **Factory Reset**.
+  </Step>
+</Steps>
+
+**L'appareil redémarrera et affichera l'écran d'accueil.**
+
+***
+
+## **Désinstallation d'une application (si nécessaire)**
+
+**Si vous ne pouvez pas accéder au menu de l'appareil, désinstallez d'abord l'application existante.**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrir **Menu d'accueil**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Naviguez vers **Paramètres du lanceur d'URL**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Sélectionnez **Désinstaller**.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Confirmez la désinstallation.
+  </Step>
+</Steps>
+
+***
+
+## **Installation de PADS4 Viewer**
+
+### **Étape 1 : Exécuter l'assistant d'installation**
+
+<Steps>
+  <Step title="Première étape">
+    Sélectionnez **Langue** et appuyez sur **Suivant**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Sélectionnez **Configuration manuelle** et appuyez sur **Suivant**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Choisissez **Paysage** comme orientation d'affichage.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Sous **Sélection du lecteur**, sélectionnez **Application personnalisée**.
+  </Step>
+</Steps>
+
+**Spécifiez l'URL de votre serveur PADS4 :**
+
+```
+http://<server>/PADS4/apps/tizen  
+https://<server>/PADS4/apps/tizen  
+```
+
+**Remplacez `<server>`** par **l'adresse IP** ou le **nom de domaine** de votre **PADS4 Server**.\
+**Assurez-vous que "PADS4" est en lettres MAJUSCULES, sinon la connexion échouera en raison de la sensibilité à la casse.**
+
+<Steps>
+  <Step title="Étape Cinq">
+    Sélectionnez**Ignorer** pour **RM Server** (si non utilisé).
+  </Step>
+
+  <Step title="Étape Six">
+    Désactivez **Auto Power Off**.
+  </Step>
+
+  <Step title="Étape Sept">
+    Réglez l'**heure actuelle**.
+  </Step>
+
+  <Step title="Étape Huit">
+    (Optionnel) Définissez un **PIN** (par défaut est `000000`).
+  </Step>
+
+  <Step title="Étape Neuf">
+    Terminez l'**Assistant de Configuration**.
+  </Step>
+</Steps>
+
+**Pour lancer le visualiseur manuellement :**
+
+* Ouvrez **Home Menu** → Sélectionnez **Custom App**.
+* Si l'assistant de configuration ne démarre pas automatiquement, passez à **HDMI**, puis appuyez sur **Menu** sur la télécommande et naviguez vers **System → Setup**.
+
+**Une fois configuré, le PADS4 HTML5 Viewer se téléchargera et démarrera automatiquement.**
+
+***
+
+## **Vérification du Firmware de l'Appareil**
+
+**Assurez-vous que le firmware de votre Samsung SSSP10 est à jour avant d'exécuter PADS4.**
+
+<Steps>
+  <Step title="Étape Un">
+    Allumez l'écran et appuyez sur **Home** sur la télécommande.
+  </Step>
+
+  <Step title="Étape Deux">
+    Ouvrez **Settings** → **All Settings**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Naviguez vers **Support** → **Software Update**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Vérifiez que la **Software Version** est **1030.x ou ultérieure**.
+  </Step>
+</Steps>
+
+***
+
+## **Mise à Jour du Firmware**
+
+<Steps>
+  <Step title="Étape Un">
+    Insérez une **Clé USB** avec le dernier firmware.
+  </Step>
+
+  <Step title="Étape Deux">
+    Appuyez sur **Menu** sur la télécommande.
+  </Step>
+
+  <Step title="Étape Trois">
+    Naviguez vers **Support** → **Software Update**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Sélectionnez **Update Now** et suivez les instructions à l'écran.
+  </Step>
+</Steps>
+
+***
+
+## **Ajustement des Paramètres du PADS4 Viewer**
+
+**Pour accéder aux paramètres du visualiseur :** Maintenez le **bouton gauche de la souris** ou **touchez l'écran** pendant **3 secondes**.
+
+***
+
+## **Activation du Mode Vidéo 4K**
+
+**Activez Ultra HD/4K via PADS4 CTRL Center :**
+
+<Steps>
+  <Step title="Étape Un">
+    Ouvrez **PADS4 CTRL Center** et connectez-vous.
+  </Step>
+
+  <Step title="Étape Deux">
+    Allez à **Viewers** → Sélectionnez votre **Samsung Tizen Viewer**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Cliquez sur le **menu à 3 points** → Sélectionnez **View Details**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Cliquez sur la **Roue dentée des Paramètres** pour ouvrir **Screen Settings**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Ouvrez l'**Onglet Style** et activez **Ultra HD/4K Mode**.
+  </Step>
+</Steps>
+
+**Vous ne pouvez lire qu'UNE SEULE vidéo 4K par page.**
+
+***
+
+## **Fonctionnalités Prises en Charge & Limitations**
+
+### **Fonctionnalités Générales**
+
+| Fonctionnalité | Description                                                                         |
+| :------------: | ----------------------------------------------------------------------------------- |
+|        ✅       | **Automatic Software Updates** – Le HTML5 Viewer se met à jour automatiquement.     |
+|        ✅       | **Offline Mode** – Lit le contenu programmé pendant **7 jours** en mode hors ligne. |
+
+### **Fonctionnalités de l'Appareil**
+
+| Fonctionnalité | Description                                                                                                          |
+| :------------: | -------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Portrait Mode** – Réglez la rotation à **270°** dans les Paramètres du Viewer. N'utilisez **PAS** la rotation SSP. |
+|        ✅       | **Cluster Viewer** – Peut être utilisé dans une **configuration en cluster**.                                        |
+|        ✅       | **Block Remote Control** – Empêche le contrôle non autorisé de l'écran.                                              |
+|        ✅       | **Wake on LAN** – Pris en charge.                                                                                    |
+|        ❌       | **Turn Off Display** – Non pris en charge.                                                                           |
+
+### **Prise en Charge Vidéo & Contenu**
+
+| Fonctionnalité | Description                                                           |
+| :------------: | --------------------------------------------------------------------- |
+|        ✅       | **4K Video Mode** – Activé via **PADS4 CTRL Center**.                 |
+|        ✅       | **Seamless Video Playback** – **Pris en charge** en **Mode Paysage**. |
+|        ✅       | **Streaming** – Prend en charge **HTTP, HLS, RTP, UDP**.              |
+|        ❌       | **Playback Speed Adjustment** – Non pris en charge.                   |
+
+### **Gestion des Appareils**
+
+| Fonctionnalité | Description                                 |
+| :------------: | ------------------------------------------- |
+|        ✅       | **Remote Management via PADS4 CTRL Center** |
+|        ✅       | **Connection State Monitoring & Alerts**    |
+|        ✅       | **Reboot Support** – Pris en charge.        |
+|        ❌       | **Shutdown Support** – Not supported.       |
+
+***
+
+## **Troubleshooting**
+
+| **Issue**                     | **Solution**                                 |
+| ----------------------------- | -------------------------------------------- |
+| **Viewer does not start**     | Check firmware version.                      |
+| **Network connection issues** | Verify **PADS4 Server URL** is correct.      |
+| **Playback issues with 4K**   | Ensure **only 1** 4K video is used per page. |

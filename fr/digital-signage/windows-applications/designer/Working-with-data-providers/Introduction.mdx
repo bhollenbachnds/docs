@@ -1,0 +1,103 @@
+Les fournisseurs de données permettent aux **présentations PADS4** d'afficher des **données en temps réel** provenant de diverses sources, garantissant que le contenu reste **dynamique et automatiquement mis à jour**. Ces fournisseurs permettent aux éléments d'extraire des données de **bases de données, flux XML, feuilles de calcul, fichiers texte et autres sources externes** sans intervention manuelle.
+
+***
+
+## **Définition des fournisseurs de données**
+
+### **Fonctionnalités clés**
+
+* **Connecte les présentations à des sources de données en temps réel**
+* **Plusieurs fournisseurs de données** peuvent être liés à une seule présentation
+* **Défilement des données** permet le parcours automatique de plusieurs lignes de données
+* **Liaisons de propriétés** permettent le contrôle dynamique des propriétés des éléments
+* **Rules** déclencher des changements de contenu basés sur des conditions en temps réel
+
+### **Sources de données prises en charge**
+
+A **Data Provider** peut récupérer des informations à partir de :
+
+* **Bases de données SQL** – requêtes, vues, procédures stockées
+* **Fichiers XML** – flux de données structurées
+* **Feuilles de calcul Microsoft Excel**
+* **Fichiers texte** – CSV, JSON et autres formats structurés
+* **Services Web et API** – intégrations personnalisées
+
+***
+
+## **Utilisation des Data Vault Providers**
+
+Les Data Vault Providers sont gérés via **PADS4 System Management** et offrent une sécurité et une efficacité supplémentaires :
+
+* **Données cryptées** – assure une transmission sécurisée
+* **Disponibilité continue** – stocke et met à jour les données automatiquement
+* **Utilisation optimisée de la bande passante** – réduit les demandes de données en double
+* **Gestion simplifiée des identifiants** – le stockage côté serveur élimine la gestion locale des mots de passe
+* **Accès contrôlé**
+  * **PADS4 Designers** peuvent accéder aux données mais **ne peuvent pas modifier les identifiants**
+  * **Tri, filtrage et expressions** restent configurables
+
+***
+
+## **Gestion des Data Providers**
+
+### **Ajout d'un Data Provider**
+
+* Créer un nouveau **Data Provider** dans une **présentation**
+* Sélectionner le **type de source** et configurer les **paramètres de connexion**
+* Définir les **intervalles de mise à jour** pour la synchronisation automatique
+
+### **Modification d'un Data Provider**
+
+* Modifier les **sources de données existantes**, y compris les requêtes, les options de tri et de filtrage
+
+### **Suppression d'un Data Provider**
+
+* **Supprimer** les data providers inutilisés de la présentation
+
+### **Duplication d'un Data Provider**
+
+* **Copier un provider existant** pour le réutiliser avec des **paramètres modifiés**
+
+### **Importation d'un Data Provider**
+
+* **Transférer des providers** entre différentes présentations
+
+### **Prévisualisation d'un Data Provider**
+
+* **Tester** le provider pour assurer **l'intégrité et le formatage des données** avant de l'utiliser
+
+### **Réutilisation des Data Providers stockés**
+
+* Enregistrer les **data providers fréquemment utilisés** pour une utilisation future dans plusieurs présentations
+
+***
+
+## **Intégration des Data Providers dans les présentations**
+
+### **Liaison des données aux éléments**
+
+* Connecter les **textes, images, tableaux et éléments défilants** aux **champs de données spécifiques**
+* Assigner **dynamiquement des colonnes et des lignes** pour mettre à jour automatiquement le contenu
+
+### **Utilisation du défilement de données**
+
+* Configurer les éléments pour **parcourir plusieurs lignes de données**
+* Définir **l'intervalle de défilement** et définir **combien de lignes sont affichées**
+
+### **Application des liaisons de propriétés**
+
+* Ajuster automatiquement les **propriétés** en fonction des données entrantes (par ex., **couleur, taille, transparence**)
+
+### **Définition de règles pour le contenu dynamique**
+
+* Définir des conditions qui modifient la **visibilité, le formatage ou la mise en page** en fonction des données
+* Example: If a **le cours de l'action tombe en dessous d'un seuil**, afficher un **message d'avertissement rouge**
+
+***
+
+## **Avantages de l'utilisation des Data Providers**
+
+* **Mises à jour du contenu en temps réel** sans intervention manuelle
+* **Évolutivité** – s'intègre facilement à plusieurs sources de données
+* **Options d'affichage personnalisées** utilisant le défilement, le filtrage et le formatage
+* **Performance sécurisée et efficace** avec les **Data Vault Providers**

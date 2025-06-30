@@ -1,0 +1,90 @@
+Le **Scrolling Text Element** inclut des propriétés spéciales qui peuvent être appliquées au **item level**, plutôt qu'uniquement au **element level**. Cela permet un **customized styling and behavior** pour les éléments de texte individuels à l'intérieur du texte défilant.
+
+Ces **item-level rules** permettent des changements dynamiques, comme la modification de la **foreground color** d'un élément de texte spécifique ou **changing the separator** basé sur une **data condition**.
+
+***
+
+## **Application de règles aux éléments individuels de texte défilant**
+
+Lorsqu'une **rule** est déclenchée, elle peut modifier plusieurs propriétés, notamment :
+
+* Rendre **entire scrolling text element invisible**
+* Ajouter une **border around the scrolling text**
+* Ajuster la **position or size**
+* **Changing font or foreground color** pour les éléments individuels
+
+Les règles peuvent être utilisées sur :
+
+1. **Une liste de lecture de plusieurs éléments de texte**
+2. **Un élément de texte défilant lié à un fournisseur de données** (par exemple, affichant plusieurs lignes de données)
+
+Chaque **separate item** dans le texte défilant peut être **validé indépendamment** basé sur la **sélection de données actuelle**.
+
+***
+
+## **Propriétés spéciales pour les éléments de playlist et les règles**
+
+### **Changer la police et la couleur de premier plan en fonction d'une règle**
+
+Une **règle** peut être ajoutée pour valider le contenu du texte et appliquer un **changement de police et de couleur de premier plan** lorsqu'une condition est remplie.
+
+#### **Example: Highlighting a Specific Line in a Scrolling Text**
+
+1. **Exemple de source de données**
+   ```
+   Line one  
+   Line two  
+   Line three  
+   ```
+2. **Étapes de mise en œuvre**:
+   * Connecter un **Scrolling Text Element** à un **static data provider** contenant les **données textuelles**.
+   * Activer **Data Scrolling**.
+   * Définir **Scroll Options** sur **Directly after previous text**.
+   * Ajouter une **règle**:\
+     **SI Current Data Equals 'Line two'**
+   * Cliquer sur **Set Properties** → **Change Foreground Color** (par exemple, le rendre rouge).
+   * **Appuyer sur F2** pour prévisualiser → **Line two s'affichera en rouge**, tandis que le reste demeure inchangé.
+
+#### **Example: Applying a Rule to Multiple Lines**
+
+* Si la règle est plutôt :\
+  **SI Current Data Starts With 'Line'**,\
+  **toutes les lignes** seraient affectées et affichées dans la même couleur.
+
+***
+
+## **Changer le séparateur en fonction d'une règle**
+
+Cet exemple démontre comment créer un **ticker de bourse** en utilisant le **Scrolling Text Element** avec des **images de séparateur dynamiques** basées sur le mouvement du cours des actions.
+
+#### **Exemple de source de données**
+
+| Stock     | CurrentPrice | OldPrice | Description     |
+| --------- | ------------ | -------- | --------------- |
+| Coca Cola | 42.40        | 41.30    | Coca Cola 42.40 |
+| Microsoft | 65.22        | 67.43    | Microsoft 65.22 |
+| Google    | 820.19       | 834.11   | Google 820.19   |
+
+#### **Étapes de mise en œuvre**
+
+1. **Connecter un Scrolling Text Element** à un **static data provider** avec des données boursières.
+2. **Activer Data Scrolling**.
+3. Définir **Scroll Options** sur **Directly after previous text** et **sélectionner la colonne Description** pour le texte défilant.
+4. Ajouter une **règle**:
+   * **SI** `CurrentPrice` **est supérieur à** `OldPrice` → **Définir une image de séparateur verte** (▲ Tendance à la hausse).
+   * **SI** `CurrentPrice` **est inférieur ou égal à** `OldPrice` → **Définir une image de séparateur rouge** (▼ Tendance à la baisse).
+
+#### **Résultats**
+
+* **Coca Cola 42.40** (Prix augmenté) → **Séparateur vert**
+* **Microsoft 65.22** (Prix diminué) → **Séparateur rouge**
+* **Google 820.19** (Prix diminué) → **Séparateur rouge**
+
+***
+
+## **Points clés à retenir**
+
+* **Les règles permettent une personnalisation au niveau des éléments** dans le texte défilant.
+* **Les éléments de texte individuels** peuvent avoir **différentes polices, couleurs et séparateurs** basés sur **la validation des données en temps réel**.
+* **Les valeurs de base de données** peuvent contrôler comment **le contenu du texte et les séparateurs** apparaissent dynamiquement.
+* **Plusieurs colonnes peuvent être utilisées** pour la validation des règles, pas seulement celle affichée.

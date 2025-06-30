@@ -1,0 +1,75 @@
+Lors de l'installation initiale de PADS4, l'activation est effectuée à l'aide de l'**Assistant de licence PADS4**. Ce processus génère une **clé de produit liée au matériel**, qui est vérifiée par rapport au profil matériel de votre système.
+
+***
+
+## Période de dégradation progressive : 7 jours
+
+Si **des changements matériels** sont détectés (par exemple, remplacement de l'adaptateur réseau ou modifications des identifiants système), PADS4 entre dans une **période de dégradation progressive**.
+
+* **Durée** : 7 jours
+* Pendant cette période, le système **continue de fonctionner normalement**
+* Un **message d'avertissement** s'affiche lors de la connexion pour les applications suivantes :
+  * PADS4 Agent
+  * PADS4 Messenger
+  * System Management
+  * Scheduler
+  * Designer
+
+> Vous pouvez configurer une alerte dans le **PADS4 Agent** pour informer les administrateurs par e-mail lorsque des changements matériels sont détectés et qu'une réactivation est nécessaire.
+
+***
+
+## Réactivation du serveur PADS4
+
+Pour éviter que PADS4 ne s'arrête après la période de grâce de 7 jours, suivez ces étapes :
+
+### Processus de réactivation étape par étape :
+
+1. **Contactez votre revendeur** pour signaler le changement matériel et demander une réactivation.
+   * Fournissez votre **clé produit PADS4**.
+2. Le revendeur contactera **Net Display Systems** pour vérifier votre licence et autoriser la réactivation.
+3. Vous recevrez une **confirmation par e-mail** une fois que votre licence aura été approuvée pour la réactivation.
+
+### Réactivation via l'Assistant de licence :
+
+1. Lancez l'**Assistant de licence** sur le serveur PADS4.
+2. Sélectionnez le **Server** et cliquez sur **Next**.
+3. Vérifiez les détails de la licence actuelle et cliquez sur **Next** à nouveau.
+4. Dans la fenêtre **Select an Action**, choisissez :
+   * **Reactivate current installation**
+5. L'assistant se connectera au serveur de licences PADS4 pour vérifier votre clé.
+6. Après validation réussie, le profil matériel est réinitialisé et la période de dégradation prend fin.
+
+> Note: An **Une connexion internet** est nécessaire pour la réactivation en ligne.
+
+### Activation hors ligne :
+
+Si votre serveur n'a pas accès à Internet :
+
+* Sélectionnez **Activate installation offline** dans l'Assistant de licence
+* Suivez les instructions guidées pour terminer l'activation manuellement
+
+[Cliquez ici pour ouvrir l'article Zendesk de Net Display Systems pour l'activation hors ligne](#)
+
+***
+
+## Bonnes pratiques et recommandations
+
+* **PADS4 cessera de fonctionner** après 7 jours si la réactivation n'est pas effectuée.
+* Si vous utilisez une **machine virtuelle**, assurez-vous que l'**adresse MAC est fixe** pour éviter des changements matériels involontaires.
+* Évitez d'activer ou de partager des **périphériques Bluetooth** sur les machines virtuelles, car cela peut déclencher une détection de changement matériel.
+* Utilisez des **alertes par e-mail** via le PADS4 Agent pour rester informé des exigences de réactivation en attente.
+
+***
+
+## Qu'est-ce qui déclenche une détection de changement matériel ?
+
+PADS4 compare plusieurs identifiants matériels aux données d'activation d'origine. Si l'un des éléments suivants change, une réactivation peut être nécessaire :
+
+* Système d'exploitation
+* ID du processeur
+* Date d'installation du système d'exploitation
+* Numéro de série du système d'exploitation
+* Numéro de série et version du BIOS
+* Adaptateur réseau et adresse MAC
+* Code d'activation Windows

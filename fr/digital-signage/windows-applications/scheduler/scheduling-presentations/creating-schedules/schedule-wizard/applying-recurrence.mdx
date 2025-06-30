@@ -1,0 +1,93 @@
+Comme indiqué dans le *Récurrence* aperçu, PADS4 Scheduler vous permet de définir **des planifications répétitives** en utilisant des modèles de récurrence personnalisables. La récurrence peut être appliquée aux planifications **Simple**, **Playlist**, et **Advanced** et garantit que le contenu est affiché de manière répétée sur des intervalles définis sans avoir besoin de créer des planifications en double.
+
+***
+
+## Accès aux paramètres de récurrence
+
+Vous pouvez appliquer la récurrence de deux façons :
+
+* Pendant la création de la planification dans l'**Assistant de planification** en cliquant sur le bouton **Recurrence**.
+* Depuis la **Ribbon Bar** en sélectionnant la fonction **Recurrence** (voir le sujet *Recurrence* pour plus de détails).
+
+Une fois accessible, la fenêtre **Recurrence Settings** apparaîtra.
+
+***
+
+## Fenêtre des paramètres de récurrence
+
+Cette fenêtre est divisée en quatre sections principales :
+
+1. **Period**
+2. **Type**
+3. **Within One Day**
+4. **Description**
+
+Chacune est décrite ci-dessous.
+
+***
+
+### 1. Period : Définition de la période
+
+Dans cette section, vous définissez les **conditions de début et de fin** du modèle de récurrence.
+
+* **Start Date** : Spécifie quand la récurrence commence.
+* **End Options** :
+  * **By End Date** : Se termine à une date spécifique.
+  * **By Number of Occurrences** : Se termine après un nombre défini de répétitions.
+  * **No End Date** : Se répète indéfiniment.
+
+***
+
+### 2. Type : Définition du modèle de récurrence
+
+PADS4 Scheduler offre **quatre types de récurrence**, chacun avec des options de configuration flexibles :
+
+#### **Daily**
+
+* Se répète tous les *X* jours
+* En option, restreindre aux jours de semaine uniquement
+
+#### **Weekly**
+
+* Sélectionnez des jours spécifiques de la semaine (par ex., lun, mer, ven)
+* Choisissez l'intervalle de répétition en semaines (par ex., toutes les 2 semaines)
+
+#### **Monthly**
+
+* Deux options de configuration :
+  * **By Date** : par ex., chaque 15 du mois
+  * **By Pattern** : par ex., *Second Tuesday* tous les 3 mois
+    * Choose: `first`, `second`, `third`, `fourth`, `last`
+    * Puis sélectionnez : `day`, `weekday`, `weekend day`, ou un jour spécifique (par ex., lundi)
+
+#### **Yearly**
+
+* Similaire à Monthly, avec deux options :
+  * **By Date** : par ex., 23 mars chaque année
+  * **By Pattern** : par ex., *Last Friday* d'avril
+    * Définissez l'ordinal, le jour de la semaine et le mois
+
+***
+
+### 3. Within One Day : Répétition basée sur le temps
+
+Cette section définit **quand, au cours d'une journée**, le contenu doit être affiché :
+
+* **From / Until** : Définissez la fenêtre horaire quotidienne (par ex., 08:00–18:00)
+
+Vous pouvez également spécifier une granularité plus fine dans cette fenêtre :
+
+* **Uninterrupted** : Affichage continu dans la fenêtre horaire
+* **Several minutes per hour**
+* **Several minutes per X minutes**
+
+> Ceci est utile lorsque vous souhaitez que le contenu n'apparaisse qu'à intervalles, comme 10 minutes toutes les heures.
+
+***
+
+### 4. Description : Examen du résumé de récurrence
+
+La section **Description** se met à jour dynamiquement lorsque vous ajustez les paramètres. Elle fournit un **résumé lisible** du modèle de récurrence pour une vérification facile.
+
+Exemple de sortie :\
+*"Se produit chaque lundi et mercredi, de 08:00 à 18:00, à partir du 1er mars, se terminant après 10 occurrences."*

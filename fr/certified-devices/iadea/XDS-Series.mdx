@@ -1,0 +1,248 @@
+Ce guide fournit des instructions étape par étape pour **installing and configuring PADS4 Viewer** sur les **IAdea XDS Series (Android 7.1)** appareils, notamment :
+
+* **XDS-XX22 (A/H)**
+* **XDS-1078**
+* **XDS-1088 (A/H)**
+* **XDS-1588 (A/H)**
+
+***
+
+## **1. Première utilisation**
+
+Avant l'installation, assurez-vous que le **PADS4 Server is set up and configured properly**.
+
+<Note>
+  La version minimale **PADS4 Server version** requise est **PADS4 Foundation 2021.3**.
+</Note>
+
+***
+
+### **1.1 Prérequis**
+
+Avant d'installer **PADS4IAdea** sur le **XDS Series**, assurez-vous que les conditions suivantes sont remplies :
+
+* **Android version:** 7.1
+* **Firmware version:** 2.2.3
+* **L'appareil est connecté à un réseau**
+
+***
+
+### **1.2 Réinitialisation de l'appareil**
+
+Si l'appareil a été utilisé précédemment, effectuez une **factory reset** pour effacer le stockage et éviter les conflits logiciels.
+
+<Steps>
+  <Step title="Étape Un">
+    Ouvrez **IAdea Basic Settings**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Cliquez sur **Advanced**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Sélectionnez **System → Factory Default**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Appuyez sur **OK** pour confirmer la réinitialisation d'usine.
+  </Step>
+</Steps>
+
+Après la réinitialisation, l'écran **Basic Settings screen** apparaîtra.
+
+***
+
+## **2. Installation de PADS4 Viewer**
+
+Suivez les étapes ci-dessous pour installer et configurer **PADS4 Viewer on the IAdea XDS Series**.
+
+***
+
+### **2.1 Vérification du firmware de l'appareil**
+
+Pour assurer une **PADS4 Viewer compatibility** complète, vérifiez que l'appareil exécute la version du firmware **2.2.3**.
+
+<Steps>
+  <Step title="Étape Un">
+    Ouvrez **IAdea Basic Settings**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Cliquez sur **Advanced**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Sélectionnez **Information**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    La **Firmware Version** est affichée sur le côté droit de l'écran.
+  </Step>
+</Steps>
+
+***
+
+### **2.2 Mise à jour du firmware de l'appareil**
+
+Pour mettre à jour le firmware, suivez les instructions fournies par **IAdea** :
+
+* **Télécharger les mises à jour du firmware** from: [**IAdea Support Page**](https://support.iadea.com/).
+
+***
+
+### **2.3 Installation de PADS4IAdea à partir d'une clé USB**
+
+Le fichier **PADS4IAdea.apk** est disponible sur le **PADS4 Server** at:
+
+```
+C:\Program Files\PADS4\Foundation\Apps
+```
+
+Alternativement, téléchargez la dernière version depuis [**here**](https://github.com/PADS4/PADS4-Viewer-IAdea/releases/latest) et placez-la dans le **PADS4 Server apps directory**.
+
+#### **Étapes d'installation**
+
+<Steps>
+  <Step title="Étape Un">
+    Copiez le **PADS4IAdea.apk** sur une **USB stick**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Insérez la **USB stick** dans l'appareil **IAdea XDS Series**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Ouvrez **IAdea Basic Settings**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Cliquez sur **Advanced**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Cliquez **three times** dans le **lower right corner** du **Advanced menu** pour accéder à Android.
+  </Step>
+
+  <Step title="Étape Six">
+    L'**Android Home Screen** sera maintenant visible.
+  </Step>
+
+  <Step title="Étape Sept">
+    Ouvrez l'application **File Manager app**.
+  </Step>
+
+  <Step title="Étape Huit">
+    Sélectionnez **USB** et cliquez sur **PADS4IAdea.apk**.
+  </Step>
+
+  <Step title="Étape Neuf">
+    Si vous êtes invité à propos des **unknown sources**, activez le paramètre dans **Security Settings** et retournez au **File Manager**.
+  </Step>
+
+  <Step title="Étape Dix">
+    Appuyez sur **Install**, puis **Open** lorsque l'installation est terminée.
+  </Step>
+</Steps>
+
+***
+
+### **2.4 Configuration de PADS4IAdea pour le démarrage automatique**
+
+<Steps>
+  <Step title="Étape Un">
+    Ouvrez l'application **PADS4IAdea app** et cliquez sur **System Setting**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Cliquez sur **Advanced**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Sélectionner**Content → AppStart**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Ouvrez le **Advanced Sub Menu**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Dans **Package Name**, entrez :
+
+    ```
+    com.pads4.viewer.iadea  
+    ```
+  </Step>
+
+  <Step title="Étape Six">
+    Cliquez sur **Set** pour sauvegarder le paramètre.
+  </Step>
+</Steps>
+
+***
+
+### **2.5 Connexion au PADS4 Server**
+
+**Format d'adresse du PADS4 Server :**
+
+```
+protocol://host:port/hostpath/  
+```
+
+* **Protocol:** `http` ou `https` (dépend du certificat SSL).
+* **Host:** Nom DNS ou **adresse IP** du **PADS4 Server**.
+* **Port:** *(Optionnel - à spécifier uniquement si vous utilisez des ports non standard).*
+* **Chemin d'hôte :** Configuré dans **System Management** *`(default: PADS4)`*.
+
+#### **Étapes de connexion**
+
+<Steps>
+  <Step title="Étape Une">
+    Entrez l'**PADS4 Server Location**.
+  </Step>
+
+  <Step title="Étape Deux - *Optionnel*">
+    Spécifiez un **Viewer Name** (si laissé vide, PADS4 en générera un).
+  </Step>
+
+  <Step title="Étape Trois">
+    Appuyez sur **Start**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Accordez la **permission d'accéder aux médias et fichiers** lorsque demandé.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Le **PADS4 Viewer** sera **téléchargé et installé**.
+  </Step>
+</Steps>
+
+***
+
+## **3. Fonctionnalités prises en charge et limitations**
+
+| Fonctionnalité | Description                                                                                                    |
+| :------------: | -------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel** – Mises à jour lorsque le **PADS4 Server** se met à jour.            |
+|        ✅       | **Mode hors ligne** – L'appareil continue d'exécuter les présentations pendant **7 jours** en mode hors ligne. |
+|        ✅       | **Prend en charge HTTP & HTTPS**                                                                               |
+|        ✅       | **Maximum 2 vidéos par page**                                                                                  |
+|        ✅       | **Cluster Viewer Mode** – Pris en charge.                                                                      |
+|        ✅       | **Interactive Button, Text, Scrolling Text, Image, Table**                                                     |
+|        ✅       | **PowerPoint & PDF Elements** – *(PowerPoint nécessite une installation sur PADS4 Server)*.                    |
+|        ✅       | **Gestion des appareils** – Contrôle à distance via **PADS4 CTRL Center & PADS4 Agent**.                       |
+|        ✅       | **Redémarrage & Relance du Viewer** – Pris en charge.                                                          |
+|        ❌       | **Wake-on-LAN** – Non pris en charge.                                                                          |
+|        ✅       | **Proof of Play Tracking** – Surveille l'historique de lecture du contenu.                                     |
+
+***
+
+## **4. Dépannage**
+
+| **Problème**                                                     | **Solution**                                              |
+| ---------------------------------------------------------------- | --------------------------------------------------------- |
+| **Le navigateur ne s'exécute pas en plein écran**                | Vérifiez la version du firmware – peut être incompatible. |
+| **L'appareil ne parvient pas à se connecter via Ethernet**       | La mise à jour du firmware peut résoudre le problème.     |
+| **La barre de navigation est visible**                           | La mise à jour du firmware peut corriger cela.            |
+| **Invites répétées d'autorisation pour le stockage de fichiers** | Vérifiez la version du firmware – peut être incompatible. |

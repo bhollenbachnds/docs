@@ -1,0 +1,106 @@
+**Variables de Viewer** sont des outils puissants qui permettent un contenu dynamique et contextuel dans les présentations PADS4. Ce sont des **variables personnalisables** attribuées à chaque Viewer et automatiquement remplies pendant l'affichage des présentations. Ces variables permettent la personnalisation du contenu **sans avoir besoin de créer plusieurs présentations** pour différents emplacements ou appareils.
+
+***
+
+## **Que sont les Variables de Viewer ?**
+
+* **Des espaces réservés spécifiques au Viewer** qui peuvent ajuster dynamiquement le contenu affiché dans les présentations.
+* Utilisées dans **le texte, les fournisseurs de données, les filtres, les règles, les liaisons de propriétés**, et plus encore.
+* **Identifiées** dans le contenu en utilisant le format :\
+  `#<Viewer Variable name>#`\
+  *(Exemple : `#Store Name#`)*
+
+***
+
+## **Où définir les Variables de Viewer ?**
+
+### **1. Application System Management (Recommandé)**
+
+* **Ajouter et gérer** les Variables de Viewer.
+* Attribuer des **valeurs par défaut** qui s'appliquent à tous les Viewers.
+* Assure un **contrôle centralisé** et empêche la création ou la suppression non autorisée via PADS4 Agent.
+
+### **2. PADS4 Agent**
+
+* Ajuster les **valeurs pour les Viewers individuels** sous l'onglet **Server**.
+* Remplace la valeur par défaut attribuée dans System Management.
+
+### **3. Fenêtre des Options du Viewer (sur l'appareil Viewer)**
+
+* Ajuster les Variables de Viewer directement sur le Viewer pour des **ajustements locaux**.
+
+***
+
+## **Example: Personalized Text with Viewer Variables**
+
+Si vous définissez une Variable de Viewer `#Store Name#` avec la valeur par défaut **"New York Health"**, et utilisez ce texte dans un Élément de Texte :
+
+> **Welcome to the #Store Name#.**
+
+Pendant la lecture, il affichera automatiquement :
+
+> **Welcome to the New York Health.**
+
+Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (par exemple, vers "Chicago Health"), le contenu s'ajustera **sans modifier la présentation**.
+
+***
+
+## **Où les Variables de Viewer peuvent-elles être utilisées ?**
+
+* **Champs de texte** dans les éléments.
+* **Data Providers** (requêtes, filtres, expressions, tri, chemins de fichiers).
+* **Rules** pour le comportement dynamique du contenu.
+* **Property bindings**.
+* **Playlists** pour les séquences de médias.
+* **Références de fichiers** (par exemple, sélectionner dynamiquement des images en fonction de l'emplacement du Viewer).
+
+***
+
+## **Exemples d'automatisation utilisant les Variables de Viewer**
+
+| **Cas d'utilisation**                                | **Exemple**                                                                                 |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Informations personnalisées du magasin               | Afficher le nom et l'adresse spécifiques du magasin par Viewer.                             |
+| Sélection de produits basée sur la taille du magasin | Filtrer les produits en fonction d'une Variable de Viewer comme `#StoreSize#`.              |
+| Données spécifiques à la région                      | Utiliser `#Country#` ou des Variables de Viewer basées sur le GPS pour du contenu localisé. |
+| Affichage dynamique de carte                         | Afficher différentes cartes en fonction de la variable d'emplacement.                       |
+
+***
+
+## **Quand les Variables de Viewer sont-elles transformées en valeurs réelles ?**
+
+| **Contexte**                                                     | **Quand remplacées**                                                                                             |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Dans les sources de données (SQL, XML, JSON, RSS)**            | Lorsque le Viewer lit ou reçoit des données de la source.                                                        |
+| **Dans les Data Providers (filtre, tri, expressions)**           | Au début de la récupération des données. Les nouvelles valeurs de variables affectent la prochaine récupération. |
+| **Dans les présentations (texte, image, vidéo)**                 | Au démarrage de la présentation.                                                                                 |
+| **Dans les règles (règles d'élément, de page, de présentation)** | Au moment où la règle est vérifiée (pas de mise à jour automatique si la variable change).                       |
+| **Property bindings (avec data provider)**                       | Lors de la lecture programmée des données.                                                                       |
+| **Playlists**                                                    | Remplacées lors du chargement. Pour les playlists alternées, mises à jour au cycle suivant.                      |
+
+***
+
+## **Gestion des Playlists avec les Variables de Viewer**
+
+* **Playlist à élément unique, non alternante** :\
+  La Variable de Viewer est remplacée au moment du chargement et **reste statique** jusqu'au prochain chargement.
+* **Playlist alternante** :\
+  La Variable de Viewer est mise à jour **à chaque intervalle**, permettant des changements dynamiques.
+
+***
+
+## **Remarques importantes**
+
+* **N'utilisez PAS les Variables de Viewer pour des valeurs qui changent constamment.**\
+  Les Variables de Viewer **ne sont pas conçues** pour fonctionner comme des sources de données à haute fréquence (utilisez les Data Providers pour cela).
+* Les changements dans les Variables de Viewer **ne déclenchent pas automatiquement** la réévaluation de toutes les règles ou l'actualisation du contenu à moins d'être rechargés.
+* **Fichiers en dehors de la Content Library** référencés avec des Variables de Viewer peuvent **ne pas se synchroniser correctement**—gardez les fichiers dans la Content Library.
+
+***
+
+## **Avantages clés**
+
+* **Gestion centralisée du contenu** avec personnalisation locale dynamique.
+* **Présentation unique** desservant plusieurs Viewers avec un contenu unique.
+* Facile à mettre à jour et à maintenir—**changez la valeur de la variable, pas la présentation**.
+* Améliore **l'automatisation et la communication ciblée** sans refonte complexe.

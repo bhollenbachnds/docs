@@ -1,0 +1,60 @@
+Ces propriétés définissent le **contenu textuel** affiché par un **élément basé sur du texte**. Vous pouvez ajouter un **élément textuel unique** ou créer une **liste de lecture d'éléments textuels** qui seront affichés en séquence.
+
+***
+
+## **Gestion de la liste de lecture**
+
+Vous pouvez :
+
+* **Ajouter, modifier ou supprimer** des éléments textuels.
+* **Réorganiser** l'ordre des éléments de la liste de lecture.
+* **Utiliser les boutons de navigation** pour parcourir les éléments de la liste de lecture.
+* Voir la **durée totale** de tous les éléments de la liste de lecture.
+
+***
+
+## **Options des éléments de liste de lecture basés sur du texte**
+
+| **Type**                      | **Description**                                                                                                                                          |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Text**                      | Affiche du **texte statique** directement saisi dans l'élément.                                                                                          |
+| **Text from Content Library** | Fait référence à un **fichier texte** stocké dans la **PADS4 content library** (recommandé). Le contenu est automatiquement synchronisé sur tous les PC. |
+| **Text from File**            | Fait référence à un **fichier texte en dehors de la bibliothèque de contenu**. Ces fichiers **doivent être distribués manuellement** sur les PC.         |
+| **No Text**                   | Crée une **pause** dans la liste de lecture, utile pour les ajustements de timing.                                                                       |
+
+***
+
+## **Content**
+
+* **Saisissez directement du texte statique** ou fournissez une **référence de fichier** selon le type choisi.
+* Si vous utilisez **Text from File**, assurez-vous que le chemin du fichier est **correct et accessible**.
+
+***
+
+## **Duration**
+
+* Spécifie le **temps d'affichage (en secondes)** pour chaque élément textuel ou pause dans la liste de lecture.
+* Le timing détermine combien de temps le texte reste visible avant de passer à l'élément suivant.
+
+***
+
+## **Effect**
+
+* Sélectionnez un **effet de transition d'entrée** pour chaque élément de la liste de lecture.
+* Définissez la **durée de l'effet (en secondes)**.
+
+***
+
+## **Considérations supplémentaires**
+
+* **Gestion du texte multi-lignes** :
+  * Si vous saisissez plusieurs lignes manuellement, appuyez sur **\[Enter]** pour séparer les lignes.
+  * Pour les fichiers texte, **Data Source Text Conversion Properties**déterminer comment le texte multi-lignes est traité.
+
+* **Gestion des données en temps réel**:
+  * Si l'élément de texte est connecté à une **data source**, **les propriétés de la liste de lecture sont désactivées**.
+  * Le contenu de l'élément sera plutôt déterminé par le **real-time data feed**.
+
+* **Mise à jour des fichiers texte**:
+  * Lors de l'utilisation de fichiers texte, **seules les références aux fichiers** sont incluses dans la présentation.
+  * Si le **fichier texte est mis à jour**, le nouveau contenu sera utilisé pendant la lecture **sans modifier la présentation elle-même**.

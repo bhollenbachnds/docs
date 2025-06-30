@@ -1,0 +1,42 @@
+Dans **PADS4 Scheduler**, chaque présentation programmée se voit attribuer une **priority**. Cette priorité détermine quelle présentation est affichée dans les cas où plusieurs planifications se chevauchent dans le temps pour la même destination.
+
+Par défaut, les niveaux de priorité comprennent **High**, **Medium**, et **Low**, mais des niveaux personnalisés peuvent être définis et modifiés à l'aide de l'application **PADS4 System Management**.
+
+> L'accès à des niveaux de priorité spécifiques peut également être contrôlé par les **user permissions**.
+
+***
+
+## Priorité
+
+* Lorsque plusieurs présentations sont programmées pour la **same time period**, celle ayant la **highest priority** sera affichée.
+* La priorité est un **required field** lors de la création d'une planification.
+* Vous pouvez **modify the priority** d'une présentation programmée à tout moment après sa création.
+
+> Par exemple : Si une présentation à **High priority** chevauche une présentation à **Medium priority**, seul le contenu à **High priority** sera affiché.
+
+***
+
+## Sous-priorité
+
+Si plusieurs présentations programmées ont le **same priority level** et **overlap in time**, PADS4 utilise un système interne appelé **sub priority** pour décider quelle présentation est affichée.
+
+### Comment fonctionne la sous-priorité :
+
+* La **sub priority** est automatiquement définie en fonction de l'**creation time** de la planification.
+* La présentation programmée **most recently** aura la **highest sub priority** et sera affichée.
+* **La sous-priorité n'est pas mise à jour** lors de la modification de la présentation ou de la planification. Elle reflète uniquement l'horodatage de création original.
+
+***
+
+## Ajustement de la sous-priorité
+
+Bien que la sous-priorité ne soit pas directement visible, vous pouvez **manually adjust it** à l'aide de l'interface du Scheduler.
+
+Pour modifier l'importance d'une présentation :
+
+1. Allez dans l'onglet **Home** dans la barre de ruban du Scheduler.
+2. Dans le groupe **Priority**, utilisez :
+   * **Increase Priority** : Augmente la sous-priorité, lui donnant la préférence sur les autres ayant la même priorité principale.
+   * **Decrease Priority** : Diminue la sous-priorité, réduisant sa chance de remplacer des présentations de priorité similaire.
+
+Cela permet un contrôle plus fin dans les conflits de planification sans changer le niveau de priorité principal.

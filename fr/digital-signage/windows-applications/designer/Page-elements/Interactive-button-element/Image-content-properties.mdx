@@ -1,0 +1,41 @@
+Ces propriétés définissent **l'image affichée** sur la surface du bouton d'un élément de bouton interactif.
+
+***
+
+### **Options de source d'image**
+
+Pour spécifier **l'origine** ou **le type d'image**, choisissez l'une des options suivantes :
+
+| **Option**                         | **Description**                                                                                                                                                                                                     |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Content Library**                | Référencer un fichier image existant depuis la **PADS4 Content Library** (recommandé). Les éléments de la Content Library sont **automatiquement synchronisés sur tous les PC**, avec des **références relatives**. |
+| **File Name**                      | Référencer un fichier image existant situé **en dehors de la Content Library**. Les fichiers doivent être distribués manuellement et référencés avec des **chemins de fichiers absolus**.                           |
+| **External Data from Data Source** | Connecter l'élément à un **Data Provider** et spécifier quelle ligne et colonne de données fourniront l'image de manière dynamique.                                                                                 |
+
+***
+
+### **Paramètres du Data Provider** (Lors de l'utilisation de données externes)
+
+| **Propriété**     | **Description**                                                                                                                                                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Data Provider** | Connectez-vous à une source telle qu'une table, une requête, une procédure stockée, un fichier XML, un flux RSS, etc. Vous pouvez créer de nouveaux fournisseurs à la volée. Voir *Working with Data Providers* pour plus d'informations. |
+| **Column**        | Sélectionnez la colonne contenant la référence de l'image.                                                                                                                                                                                |
+| **Content Type**  | Spécifiez comment le contenu doit être interprété (par exemple, chemin du fichier image, URL, etc.).                                                                                                                                      |
+| **Row**           | Spécifiez quelle ligne de la source de données lier à l'élément.                                                                                                                                                                          |
+
+***
+
+### **Options d'affichage d'image**
+
+| **Propriété**             | **Description**                                                                                     |
+| ------------------------- | --------------------------------------------------------------------------------------------------- |
+| **Stretch**               | Si activé, l'image sera automatiquement redimensionnée pour **s'adapter aux limites de l'élément**. |
+| **Maintain Aspect Ratio** | Si activé, l'image **conservera son rapport largeur/hauteur d'origine** lors de l'étirement.        |
+
+***
+
+### **Remarques**
+
+* Seules les **références** aux fichiers image sont stockées dans la présentation, **pas les images elles-mêmes**. Si le fichier image est mis à jour, **la nouvelle version sera automatiquement utilisée** pendant la lecture.
+* Si la **ligne** spécifiée n'existe pas dans la source de données, **aucune image** ne sera affichée.
+* **CONSEIL** : Pour une meilleure qualité visuelle, essayez d'afficher les images à leur **taille d'origine** lorsque c'est possible.

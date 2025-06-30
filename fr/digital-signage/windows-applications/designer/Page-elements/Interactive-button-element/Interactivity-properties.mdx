@@ -1,0 +1,72 @@
+Ces propriétés déterminent **comment un bouton interactif répond aux actions de l'utilisateur**, y compris les clics, les combinaisons de touches, et plus encore.
+
+***
+
+### **Touche de raccourci**
+
+Définir un **raccourci clavier** pour activer le bouton :
+
+* **Configuration de la touche de raccourci** :
+  * Utilisez le bouton à droite pour ouvrir **Paramètres avancés**.
+  * Dans les Paramètres avancés, vous pouvez :
+    * Saisir manuellement n'importe quelle combinaison de touches en utilisant les **valeurs ASCII**.
+    * Utiliser **Détection automatique** pour capturer automatiquement la combinaison de touches lorsqu'elle est tapée.
+
+⚙️ **Remarque sur les codes ASCII et les codes de touche** :
+
+* **Les valeurs ASCII** distinguent les minuscules et les majuscules (par ex., `65 = 'A'`, `97 = 'a'`).
+* **Les codes de touche** ne font pas la différence entre les casses. Pour utiliser 'A', spécifiez ASCII `65` et ajoutez `[Shift]` si la majuscule est nécessaire.
+
+***
+
+### **Action de page**
+
+Choisissez une **action unique liée à la page** (une seule autorisée par bouton) :
+
+| **Option**                                             | **Description**                                                      |
+| ------------------------------------------------------ | -------------------------------------------------------------------- |
+| **Aller à la page précédente**                         | Aller à la page visible précédente.                                  |
+| **Aller à la page suivante**                           | Aller à la page visible suivante.                                    |
+| **Première page**                                      | Aller à la première page.                                            |
+| **Dernière page**                                      | Aller à la dernière page.                                            |
+| **Aller à la page...**                                 | Sauter à une page spécifique (rend les pages invisibles visibles).   |
+| **Afficher la boîte de dialogue de tri des données**   | L'utilisateur définit l'ordre de tri pour un fournisseur de données. |
+| **Afficher la boîte de dialogue de filtre de données** | L'utilisateur définit un filtre pour un fournisseur de données.      |
+| **Quitter l'application**                              | Fermer l'application PADS Viewer.                                    |
+
+***
+
+### **Actions**
+
+Ajouter **une ou plusieurs actions** à exécuter lorsque le bouton est cliqué ou la touche de raccourci est pressée.\
+Les actions sont exécutées dans l'ordre où elles sont ajoutées.
+
+| **Option d'action**                                                              | **Description**                                                                                                                           |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Envoyer une commande de requête Web**                                          | Envoyer une requête HTTP (GET, POST, PUT, PATCH, DELETE) et éventuellement changer de page.                                               |
+| **Modifier la variable du Viewer**                                               | Modifier ou réinitialiser la valeur d'une variable du Viewer jusqu'à la fin de la présentation.                                           |
+| **Faire défiler les données (haut/bas/page précédente/page suivante/début/fin)** | Faire défiler un fournisseur de données de différentes manières. *Note: Resets on page change.*                                           |
+| **Définir un filtre de données (avec changement de page)**                       | Appliquer un filtre dynamique à un fournisseur de données et éventuellement changer de page.                                              |
+| **Effacer le filtre de données (avec changement de page)**                       | Effacer les filtres dynamiques précédemment appliqués.                                                                                    |
+| **Appliquer le tri des données pour cette page**                                 | Trier les données du fournisseur de données. Se réinitialise lors du changement de page.                                                  |
+| **Appliquer un filtre de données pour cette page**                               | Appliquer un filtre spécifique à la page. Se réinitialise lors du changement de page.                                                     |
+| **Envoyer un message à l'élément Web**                                           | Contrôler un élément Web (activer/désactiver le microphone/la caméra, rejoindre/quitter une réunion, envoyer une commande personnalisée). |
+| **Ouvrir une page web dans une fenêtre externe**                                 | Ouvrir une URL dans une fenêtre de navigateur séparée.                                                                                    |
+
+***
+
+### **Remarques importantes sur le défilement et les filtres**
+
+* **Le défilement avec des boutons interactifs** peut entrer en conflit avec le **défilement automatique** — peut provoquer un double défilement.
+* **Les filtres et les tris** appliqués via des boutons **se réinitialisent lors du changement de page**, sauf indication contraire (par ex., les filtres dynamiques restent actifs jusqu'à ce qu'ils soient effacés).
+* Lors du **défilement ou du filtrage des données**, assurez-vous que le bouton interactif cible le **même fournisseur de données** utilisé par les éléments de la page.
+
+***
+
+### **Remarques spéciales**
+
+* **Mode de synchronisation** : Si la **synchronisation de présentation** est activée, les **fonctionnalités interactives (par ex., la navigation dans les pages)** ne **fonctionneront pas** pour maintenir la synchronisation.
+* **Configuration des touches de raccourci** :
+  * **La valeur ASCII** est sensible à la casse.
+  * **Le code de touche** n'est pas sensible à la casse.
+  * Utilisez la Détection automatique pour une configuration facile des touches de raccourci.

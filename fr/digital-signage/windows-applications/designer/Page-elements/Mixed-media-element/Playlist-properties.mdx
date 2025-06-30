@@ -1,0 +1,44 @@
+Ces propriétés définissent **les éléments média (images, vidéos, flux)** qui seront affichés dans votre Mixed Media element. Vous pouvez créer un **affichage à élément unique** ou une **liste de lecture** qui exécute les fichiers média séquentiellement.
+
+***
+
+### **Gestion de la liste de lecture**
+
+* **Ajouter**, **modifier**, **réorganiser** ou **supprimer** des éléments dans votre liste de lecture.
+* Les éléments de la liste de lecture peuvent être gérés en **vue détaillée** ou en **vue liste**.
+* **Les boutons de navigation** au bas de la fenêtre de liste de lecture vous permettent de vous déplacer dans la liste.
+* **Durée totale** affiche la durée cumulée de tous les éléments de la liste de lecture.
+
+> **Important:**\
+> Pour des conseils détaillés sur la gestion des listes de lecture, consultez **Working with Play Lists**.
+
+***
+
+### **Élément de liste de lecture : Options de type**
+
+| **Type**                       | **Description**                                                                                                                                                                               |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Media from Content Library** | Fait référence à un **fichier image ou vidéo** existant stocké dans la **PADS4 Content Library** (recommandé). Les fichiers sont **automatiquement synchronisés** sur tous les PC du système. |
+| **Media from URL**             | Une **référence URL** directe vers une source média (par exemple, une image ou une vidéo hébergée sur le web).                                                                                |
+| **Video Stream**               | Une référence **URL de flux** (par exemple, caméra IP ou service de diffusion en direct).                                                                                                     |
+| **Separator**                  | Un élément de liste de lecture **vide**, utilisé pour créer une **pause** dans la séquence.                                                                                                   |
+
+***
+
+### **Propriétés de chaque élément de liste de lecture**
+
+| **Propriété**                  | **Description**                                                                                                                     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Media from Content Library** | Contient la **référence de fichier relative** à un élément de la bibliothèque de contenu.                                           |
+| **Media from URL**             | Contient l'**URL** pointant vers la source média.                                                                                   |
+| **Video Stream**               | Contient la référence **URL du flux**.                                                                                              |
+| **Duration**                   | Durée (en secondes) pendant laquelle l'élément sera affiché. S'il s'agit d'une **vidéo**, sa durée naturelle est utilisée.          |
+| **Effect**                     | **Effet de transition** appliqué lorsque l'élément apparaît (par exemple, fondu, glissement) et **durée de l'effet** (en secondes). |
+
+***
+
+### **Remarques clés**
+
+* **Uniquement des références** aux fichiers média sont incluses, **pas** les médias eux-mêmes. Cela permet des **mises à jour automatiques** pendant la lecture si le fichier source change.
+* **Play List properties** sont **désactivées** lorsque l'élément est lié à une **source de données**. Dans ces cas, le contenu média est contrôlé par des **données en temps réel**.
+* **Separators** sont un moyen utile d'**insérer des pauses** sans média entre les éléments d'une séquence.

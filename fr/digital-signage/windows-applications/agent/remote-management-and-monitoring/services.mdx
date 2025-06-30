@@ -1,0 +1,111 @@
+Avec les fonctions de services, vous pouvez visualiser les services Windows sur votre PADS4 Server ou PADS4 Viewer. Les services peuvent être démarrés, mis en pause ou redémarrés.
+
+ 
+
+#### **Pour afficher les services Windows sur votre PADS4 Server**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Services** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le PADS4 Server connecté et affichera les résultats dans la fenêtre des services. Si votre installation PADS4 inclut des sous-serveurs, vous devez d'abord sélectionner un serveur avant de sélectionner la catégorie d'informations.
+
+ 
+
+#### **Pour afficher les services Windows sur un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Services** dans la liste des catégories d'informations de viewer disponibles.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées depuis le Viewer sélectionné et affichera les résultats dans la fenêtre des services.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre des services**
+
+La fenêtre des services affiche une liste complète de tous les services en cours d'exécution. Cela vous permet de vérifier à distance l'état et le type de démarrage des services individuels.
+
+![EN Agent Services Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Services.png)
+
+**Nom d'affichage**\
+Titre du service.
+
+**État**\
+Indique si le service est en cours d'exécution ou arrêté.
+
+**Type de démarrage**\
+Indique si le service démarrera automatiquement ou manuellement, ou s'il a été désactivé.
+
+**Compte**\
+Le nom du compte utilisateur utilisé pour démarrer le service.
+
+**Description**\
+Un texte descriptif décrivant la fonction du service.
+
+ 
+
+#### **Gestion des services**
+
+Depuis la fenêtre des services, vous pouvez démarrer, redémarrer, mettre en pause ou arrêter des services à distance.
+
+Lorsque vous démarrez ou redémarrez un service sur votre PADS4 Server ou PADS4 Viewer, le système utilisera les paramètres de compte du service pour le démarrer.
+
+Sur votre PADS4 Server, le service PADS4 Server NE DOIT PAS être arrêté ou redémarré, car cela peut rendre votre PADS4 Server inaccessible.
+
+ 
+
+#### **Pour démarrer un service**
+
+1. Cliquez sur le service dans la fenêtre des services pour le sélectionner.
+2. Cliquez sur **Start** dans le menu **Home**.
+
+   ![EN Agent Ribbon Start Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-RibbonStartProcess.png)
+
+Après cela, le système essaiera de démarrer le service sur votre PADS4 Server ou PADS4 Viewer. Pour voir l'état mis à jour du service dans la fenêtre des services, vous devrez peut-être cliquer sur **Refresh** dans le menu **Home**. Pour voir les résultats de cette action, vous pouvez également consulter la fenêtre des [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).
+
+ 
+
+#### **Pour mettre en pause un service**
+
+1. Cliquez sur le service dans la fenêtre des services pour le sélectionner.
+2. Cliquez sur **Pause** dans le menu **Home**.
+
+   ![EN Agent Ribbon Pause Service Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-PauseService.png)
+
+Après cela, le système mettra en pause le service sur votre PADS4 Server ou PADS4 Viewer. Pour voir l'état mis à jour du service dans la fenêtre des services, vous devrez peut-être cliquer sur **Refresh** dans le menu **Home**. Pour voir les résultats de cette action, vous pouvez également consulter la fenêtre des [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).
+
+<Tip>
+  Un service ne peut être mis en pause que lorsque cette fonctionnalité est prise en charge par le service.
+</Tip>
+
+ 
+
+#### **Pour redémarrer un serveur**
+
+1. Cliquez sur le service dans la fenêtre des services pour le sélectionner.
+2. Cliquez sur **Restart** dans le menu **Home**.
+
+   ![EN Agent Ribbon Restart Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-RestartProcess.png)
+3. Cliquez sur **Yes** pour confirmer que vous souhaitez redémarrer le service.
+
+Après cela, le système essaiera de redémarrer le service spécifié sur votre PADS4 Server ou PADS4 Viewer. Pour voir le statut mis à jour du service dans la fenêtre des services, vous devrez peut-être cliquer sur **Refresh** dans le menu **Home**. Pour voir les résultats de cette action, vous pouvez également consulter la fenêtre [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).
+
+ 
+
+#### **Pour arrêter un service**
+
+1. Cliquez sur le service dans la fenêtre des services pour le sélectionner.
+2. Cliquez sur **Stop** dans le menu **Home**.
+
+   ![EN Agent Ribbon Stop Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-StopProcess.png)
+3. Cliquez sur **Yes** pour confirmer que vous voulez arrêter le service.
+
+Après cela, le système arrêtera le service sur votre PADS4 Server ou PADS4 Viewer. Pour voir le statut mis à jour du service dans la fenêtre des services, vous devrez peut-être cliquer sur **Refresh** dans le menu **Home**. Pour voir les résultats de cette action, vous pouvez également consulter la fenêtre [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).
