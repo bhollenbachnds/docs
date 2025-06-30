@@ -244,6 +244,7 @@
               "ctrl-centre/administration/credentials",
               "ctrl-centre/administration/teams",
               "ctrl-centre/administration/Power-BI",
+              "ctrl-centre/administration/credentials/active-directory",
               {
                 "group": "Meta",
                 "pages": [
