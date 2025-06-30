@@ -1,0 +1,62 @@
+Les **propriétés des séparateurs** définissent comment **les séparateurs** sont affichés entre les lignes d'un tableau. **Les séparateurs** peuvent être utilisés pour indiquer visuellement **les changements de catégorie, les transitions de groupe ou les ruptures significatives dans les données** (par exemple, **un nouveau jour, un département différent ou un changement de catégorie**).
+
+***
+
+## **Configuration d'un séparateur**
+
+### **Ajouter ou modifier un séparateur**
+
+1. Cliquez sur **Ajouter** pour créer un nouveau séparateur ou **Modifier** pour modifier un séparateur existant.
+2. Définissez la **condition (clause IF)** qui détermine **quand** le séparateur apparaît.
+3. Cliquez sur **Afficher le séparateur (clause THEN)** pour concevoir les propriétés visuelles du séparateur.
+4. Ajoutez **des éléments de page, du texte, des images ou des lignes** au séparateur.
+5. Cliquez sur **Fermer > Oui pour Enregistrer > OK** pour appliquer les modifications.
+
+***
+
+## **Conditions des séparateurs (clause IF)**
+
+* Un séparateur apparaît **uniquement si sa condition est remplie** pour une ligne spécifique.
+* **Exemples de conditions :**
+  * **Changement de date :** Afficher un séparateur lorsque la **date** dans la ligne suivante est différente.
+  * **Changement de catégorie :** Afficher un séparateur lorsqu'une **catégorie de produit** change.
+  * **Changement de lieu :** Afficher un séparateur lorsque **le lieu ou le nom du département** change.
+
+> **Exemple de cas d'utilisation :**
+>
+> * **Tableau de programme d'événements :** Afficher un séparateur lors du passage des **Événements du matin aux Événements de l'après-midi**.
+> * **Ticker de marché boursier :** Insérer un séparateur lors du passage des **Actions technologiques aux Actions de santé**.
+
+***
+
+## **Gestion de plusieurs séparateurs**
+
+* **Un seul séparateur est appliqué à la fois** en fonction de la première **condition valide**.
+* L'**ordre des séparateurs est important**—le système **vérifie les séparateurs dans l'ordre** de **haut en bas**.
+* Utilisez **Monter / Descendre** pour **prioriser les séparateurs**.
+
+***
+
+## **Suppression d'un séparateur**
+
+* Cliquez sur **Supprimer** pour effacer un séparateur existant.
+
+***
+
+## **Considérations importantes**
+
+* **Logique basée sur les lignes :**
+  * La condition du séparateur **s'applique à la première ligne** dans une comparaison.
+  * Le **numéro de ligne est déterminé à l'exécution**—il **s'ajuste automatiquement** au fur et à mesure que les lignes sont traitées.
+* **Conception du séparateur :**
+  * Vous pouvez utiliser **du texte, des lignes, des images ou des arrière-plans colorés** pour créer une rupture visuelle.
+  * **Alignez les éléments horizontalement ou empilez-les sur deux lignes** pour plus de clarté.
+  * Vous **ne pouvez pas** inclure **un autre élément de tableau** à l'intérieur d'un séparateur.
+
+***
+
+## **Ajustements dynamiques**
+
+* **Ajustements de la hauteur du séparateur :**
+  * Si des **éléments à l'intérieur du séparateur deviennent invisibles**, le système **redimensionne automatiquement** la hauteur du séparateur.
+  * La **largeur est automatiquement définie** pour correspondre à la largeur du tableau.

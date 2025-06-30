@@ -1,0 +1,117 @@
+Ce guide vous explique comment configurer **SAML 2.0 Single Sign-On (SSO)** en utilisant **IBM Security Verify** comme fournisseur d'identité (IdP) pour **PADS4 Workspace**.
+
+***
+
+## Prérequis
+
+Assurez-vous que les éléments suivants sont prêts :
+
+* Accès à [IBM Security Verify Console](https://www.ibm.com/security/identity-access-management/verify)
+* Certificat de signature (.pem ou .cer) d'IBM Verify
+* Certificat PFX avec clé privée pour PADS4 (.pfx)
+* URL des métadonnées de fédération (optionnel si importation manuelle)
+* URL du serveur PADS4 (par exemple, `https://pads4serverurl/crystal/domainone`)
+
+***
+
+## Étape 1 : IBM Security Verify – Configuration de l'application
+
+### Naviguez vers :
+
+**Directory > Applications > Add Application > Custom Application**
+
+### Sous le **Sign-on** tab:
+
+| Champ                              | Valeur                                                |
+| ---------------------------------- | ----------------------------------------------------- |
+| **Sign-on method**                 | `SAML 2.0`                                            |
+| **Provider ID**                    | `https://pads4serverurl/crystal/domainone/Saml2`      |
+| **Assertion Consumer Service URL** | `https://dpads4serverurl/crystal/domainone/Saml2/ACS` |
+| **Service Provider SSO URL**       | `https://pads4serverurl/crystal/domainone/Saml2/ACS`  |
+| **SessionNotOnOrAfter**            | `7200` (2 heures)                                     |
+
+<Warning>Ne PAS sélectionner "Use Identity provider-initiated single sign-on</Warning>
+
+***
+
+### Paramètres de signature
+
+| Champ                                  | Valeur                               |
+| -------------------------------------- | ------------------------------------ |
+| **Sign authentication response**       | Activé                               |
+| **Signature Algorithm**                | RSA-SHA256                           |
+| **Signing Certificate**                | Choisir Default personal certificate |
+| **Validate SAML request signature**    | Activé                               |
+| **Validate logout request signature**  | Activé                               |
+| **Validate logout response signature** | Activé                               |
+
+Laissez **Service Provider Certificate** et **Encryption Options** vides, sauf si le chiffrement est requis par votre organisation.
+
+***
+
+### SAML Subject
+
+| Champ               | Valeur               |
+| ------------------- | -------------------- |
+| **NameID Format**   | `Unspecified`        |
+| **Name Identifier** | `preferred_username` |
+
+***
+
+### Mappage d'attributs
+
+Enable: ☑ **Send all known user attributes in the SAML assertion**
+
+| Attribute Name (URN)                                      | Format | Source        |
+| --------------------------------------------------------- | ------ | ------------- |
+| `urn:oasis:names:tc:SAML:2.0:attrname-format:email`       | email  | `email`       |
+| `urn:oasis:names:tc:SAML:2.0:attrname-format:family_name` | text   | `family_name` |
+| `urn:oasis:names:tc:SAML:2.0:attrname-format:given_name`  | text   | `given_name`  |
+| `urn:oasis:names:tc:SAML:2.0:attrname-format:uid`         | text   | `uid`         |
+| `http://schemas.xmlsoap.org/claims/group`                 | text   | `groupIDs`    |
+
+> Ces attributs seront mappés dans PADS4 pour attribuer des rôles/groupes.
+
+***
+
+### Politique d'accès
+
+* Définir sur : ☑ **Use default policy**
+* Allow from: `All devices`
+
+***
+
+## Étape 2 : PADS4 Workspace – Configuration SSO
+
+Dans le **PADS4 Administration Portal**, configurez le plugin SSO comme suit :
+
+| Champ                                        | Valeur                                                        |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| **Type**                                     | `Azure AD` (ou `Custom` / `SAML` selon le cas)                |
+| **Federation Service Identifier**            | `https://pads4.verify.ibm.com/saml/sps/saml20ip/saml20`       |
+| **SAML SSO URL**                             | `https://pads4.verify.ibm.com/saml/sps/saml20ip/saml20/login` |
+| **Federation Metadata URL** (optionnel)      | `https://pads4.verify.ibm.com/v1.0/saml/federations/saml2`    |
+| **Certificate of Federation Server**         | Téléchargez le **IBM Verify signing certificate (.cer)**      |
+| **URL of Relying Party**                     | `https://pads4serverurl/crystal/domainone`                    |
+| **Relying Party Signing Certificate (.pfx)** | Téléchargez votre `.pfx` fichier avec clé privée              |
+| **Private Key Password**                     | Entrez le mot de passe pour `.pfx`                            |
+
+***
+
+## Étape 3 : Mappage des groupes dans PADS4
+
+Allez à la section **Relation Table** du plugin SSO et mappez les `groupIDs` entrants d'IBM aux profils PADS4 :
+
+| Active Directory Group ID | Profile        |
+| ------------------------- | -------------- |
+| `admin`                   | Administration |
+| `admin`                   | Default        |
+| `developer`               | Default        |
+
+***
+
+## Vérifications finales
+
+* Testez la connexion via PADS4 en utilisant un utilisateur vérifié par IBM.
+* Assurez-vous que les revendications sont correctement reçues et analysées dans PADS4.
+* Ajustez le mappage des attributs ou les règles de revendication si les utilisateurs ne sont pas correctement assignés.

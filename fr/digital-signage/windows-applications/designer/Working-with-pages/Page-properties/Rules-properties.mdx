@@ -1,0 +1,69 @@
+Page rules allow your page to **automatically respond to predefined situations** during playback. This enables dynamic content handling, such as skipping a page when there's no data or proceeding to the next page after videos have finished.
+
+***
+
+## **Predefined Rules**
+
+### 1. **Skip this Page when there is No External Data**
+
+If enabled, **the page will be skipped** when:
+
+* **All connected data providers return no data.**
+* Filters applied to data providers result in **empty datasets**.
+* Row settings on elements **do not match** available data rows.
+* Data scrolling is enabled but **no data is available**.
+
+**Key behaviors:**
+
+* All data providers, filters, rows, and scrolling settings are checked.
+* If **no valid data is found**, the page will **automatically skip to the next one**.
+* **Warning**: If the presentation contains **only one page**, and that page is skipped due to this rule, **the entire presentation may become invisible** during playback.
+
+***
+
+### 2. **Play all Videos once and Show the Next Page**
+
+When enabled, **all video/sound elements on the page will play fully**, and then **the next page will be shown** automatically.
+
+**Key behaviors:**
+
+* **Ignores the page's Duration** property.
+* Plays **entire video/audio playlists** before proceeding.
+* If video/audio elements are linked to data sources, only the **initial retrieved playlist** will be used — **updated data won't affect current playback**.
+* **Preferred** for pages with multiple media elements to ensure **synchronized playback and transition**.
+* **Note**: If set at the page level, individual "Play once and go to next page" settings on elements are ignored.
+
+**Tip**: Ideal for ensuring **advertiser commercials** or **promotional content** is fully shown before moving to the next screen.
+
+***
+
+### 3. **Scroll Data Once and Show the Next Page**
+
+When enabled, once the page's **data scrolling** completes (i.e., **all rows are shown**), the page will **automatically advance** to the next one.
+
+**Key behaviors:**
+
+* Only works when **data scrolling is handled at the page level** (general timer option).
+* **Not compatible** with elements that have **their own duration cycles**.
+* When multiple elements on the page have this setting, **PADS4 will wait until all are finished** before proceeding.
+* If used with other timed elements (like video playlists), **combine rules appropriately** to avoid conflicts.
+
+***
+
+## **Custom Rules (Rules Section)**
+
+* **Define custom page rules** to adjust page properties dynamically based on certain conditions (e.g., show page only when specific data is present).
+* **Custom rules** allow complex logic and greater control over how and when a page is displayed or hidden.
+
+**Important**:\
+For detailed information about creating custom rules, see **Working with rules** in the documentation.
+
+***
+
+## **Summary of Predefined Rules:**
+
+| Rule                                              | Description                                         | When to Use                                  |
+| ------------------------------------------------- | --------------------------------------------------- | -------------------------------------------- |
+| **Skip this Page when there is No External Data** | Skips page if data providers return no data.        | To avoid empty data pages.                   |
+| **Play all Videos once and Show the Next Page**   | Shows page until all videos/sounds finish playing.  | For media-heavy pages, e.g., advertisements. |
+| **Scroll Data Once and Show the Next Page**       | Advances when all data rows are scrolled/displayed. | For dynamic lists or data tables.            |

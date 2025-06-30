@@ -1,0 +1,48 @@
+Ces propriétés définissent les **RS-232 commands** qui seront envoyées par votre **RS-232 communication element**. Vous pouvez saisir une **single command** ou créer une **play list** de commandes qui seront exécutées séquentiellement.
+
+Vous pouvez **add, edit, reorder, or remove** des commandes de la play list. Les boutons de navigation vous permettent de parcourir les éléments de la play list. La **total duration** affiche le temps d'exécution combiné pour toutes les commandes.
+
+***
+
+## **RS-232 Command Play List Item**
+
+### **Type**
+
+Définit l'**origin** ou le **format** de la commande RS-232.
+
+| **Option**                              | **Description**                                                                                                                                                               |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **RS-232 Command (Text)**               | Commande statique saisie en texte brut.                                                                                                                                       |
+| **RS-232 Command (Hexadecimal)**        | Commande saisie en **hexadecimal format**.                                                                                                                                    |
+| **RS-232 Command from Content Library** | Référence à un **predefined text file** stocké dans la **PADS4 content library** (recommandé). Les éléments sont **automatically synchronized** sur tous les PC.              |
+| **RS-232 Command from File**            | Référence à un fichier texte **outside the PADS4 content library**. Ces fichiers ne sont **not synchronized** automatiquement, donc une distribution manuelle est nécessaire. |
+| **No RS-232 Command**                   | Aucune commande n'est incluse. Ceci est utilisé pour **pause** entre les commandes.                                                                                           |
+
+***
+
+### **Content**
+
+Définit la **command** à exécuter.
+
+* Si vous utilisez une **manual entry**, tapez directement la **text or hexadecimal command**.
+* Si vous utilisez une **file reference**, naviguez pour **select the file** contenant les commandes.
+* Les références de fichiers **must include the full file path** si elles sont stockées en dehors de la bibliothèque de contenu.
+
+***
+
+### **Duration**
+
+Spécifie combien de temps (en **seconds**) **wait** avant d'envoyer la commande suivante ou de **pausing** la lecture.
+
+***
+
+### **Effect**
+
+Définit l'**incoming transition effect** pour l'élément de la play list et la **duration** (en secondes).
+
+***
+
+## **Remarks**
+
+* **Only file references are stored**, pas le contenu réel de la commande. Si le **text file is updated**, les dernières commandes seront utilisées automatiquement.
+* Les **play list properties** seront **disabled** si l'**element is connected to a data source**. Dans ce cas, la **real-time data source** détermine quelles commandes sont exécutées.

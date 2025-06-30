@@ -1,0 +1,108 @@
+The **homepage** of the PADS4 Visitor Management System (VMS) provides an overview of active and pre-registered visitors, system actions, and access to core features such as **user creation**, **archives**, and **settings**.
+
+This central dashboard serves as your starting point for managing guest entries, configuring the environment, and handling day-of check-ins.
+
+***
+
+## Getting Started
+
+From the homepage, you can:
+
+* **Create a new visitor entry**
+* **View archived guest records**
+* **Access system settings**
+
+We’ll begin by walking through the process of creating a new user.
+
+***
+
+## Upper-Right Dashboard Options
+
+* **Language Selection**: PADS4 VMS supports **English** and **French**.
+* **Logout**: Use the **user icon** in the top-right corner to safely log out of the system.
+
+***
+
+## Creating a New Visitor Entry
+
+To create a new visitor, the following fields are **required**:
+
+* **Email Address**
+* **Assigned Host** (from Workspace)
+* **Assigned Building** (from Workspace)
+
+### Optional Fields:
+
+* First Name / Last Name
+* Company Name
+* Visit Purpose
+* Expected Arrival and Departure Time
+
+### Email Notification & Self-Registration
+
+Once the visitor is created:
+
+* They receive an **automated email** with check-in instructions.
+* The email includes a **pre-registration link**, allowing them to:
+  * Edit their personal information (name, company, etc.)
+  * Confirm their attendance
+* Pre-registered visitors can **validate themselves** on-site using a QR code or pincode.
+
+***
+
+## On-Site Registration (VMS Kiosk Link)
+
+For on-site self-check-in:
+
+Deploy **interactive tablets, laptops, or PADS4 Viewers** with browsers configured to open the **VMS Kiosk URL**:
+
+```
+https://yourpads4domain.com/VMS/Kiosk/welcome
+```
+
+or
+
+```
+http://<public-ip>/VMS/Kiosk/welcome
+```
+
+> **Important (PADS4 version 2022.3 and newer):**\
+> Use the **correct domain-specific URL structure** to avoid licensing issues in multi-domain environments:
+
+```
+https://serverlocation/VMS/Kiosk/domain
+```
+
+For single-domain environments:
+
+```
+https://serverlocation/VMS/Kiosk/pads
+```
+
+***
+
+## QR Code or PIN Check-In
+
+Visitors can check in using either:
+
+* A **QR Code** (camera-enabled devices required)
+* A **randomly assigned PIN**
+
+> Browsers will request permission to access the camera if QR code scanning is used. Supported browsers: Chrome, Edge, Firefox, Internet Explorer.
+
+***
+
+## Dashboard Action Buttons
+
+Once a user is registered, the following actions are available via the **Action Button**:
+
+### For All Registered Users:
+
+* **Manual Check-In** – Directly check the user in from the dashboard.
+* **Edit User** – Update personal details and contact information.
+* **Delete User** – Remove the user from the system.
+
+### For Checked-In Users:
+
+* **Print ID Badge** – Download or print a custom-designed visitor badge. Badge styling can be configured under the **Settings** tab.
+* **Manual Check-Out** – Log out the user when their visit is complete.

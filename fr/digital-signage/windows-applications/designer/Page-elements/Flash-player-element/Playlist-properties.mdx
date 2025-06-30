@@ -1,0 +1,53 @@
+Ces propriétés définissent le **Flash content** qui sera lu par votre élément Flash player. Vous pouvez ajouter **un seul fichier Flash** ou créer une **liste de lecture de plusieurs fichiers Flash** qui seront lus en séquence.
+
+### **Gestion des éléments de la liste de lecture**
+
+* **Ajouter** de nouveaux éléments Flash à la liste de lecture.
+* **Modifier** les éléments existants de la liste de lecture.
+* **Réorganiser** les éléments à l'aide des outils d'ajustement de séquence.
+* **Supprimer** des éléments de la liste si nécessaire.
+* Utilisez les **boutons de navigation** (en bas de la boîte de dialogue) pour parcourir les éléments de la liste de lecture.
+* La **durée totale** indique le temps de lecture combiné de tous les éléments listés.
+* Les propriétés des éléments de la liste de lecture dépendent du type de contenu dans votre élément.
+
+> **IMPORTANT**:\
+> Pour des informations détaillées sur la gestion des listes de lecture, voir **Working with play lists**.
+
+***
+
+### **Propriétés des éléments de la liste de lecture Flash**
+
+#### **Type**
+
+Définit la **source** du fichier Flash. Les options incluent :
+
+| Option                         | Description                                                                                                                                                                                                                             |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Flash from Content Library** | Référence à un fichier Flash stocké dans la **PADS4 content library** (recommandé). Automatiquement synchronisé sur tous les systèmes PADS4. Les références sont **relatives** et restent valides même si la bibliothèque est déplacée. |
+| **Flash from File**            | Référence à un fichier Flash stocké **en dehors de la bibliothèque de contenu**. **Non synchronisé**—vous devez gérer la distribution vous-même. Les références sont **absolues** et doivent être valides sur les PC de lecture.        |
+| **No Flash**                   | Aucun fichier Flash inclus. Utilisé pour créer une **pause** dans la liste de lecture.                                                                                                                                                  |
+
+***
+
+#### **Contenu**
+
+Spécifie le **chemin du fichier Flash**, en fonction du **Type** sélectionné.
+
+* Utilisez le **bouton parcourir** pour sélectionner des fichiers depuis la **Content Library** ou le système de fichiers local.
+* Si **Flash from File** est sélectionné, fournissez le **chemin complet du fichier**.
+
+***
+
+#### **Duration**
+
+Définit la **durée (en secondes)** pendant laquelle le contenu Flash sera affiché.
+
+* Si **No Flash** est sélectionné, cela définit la durée de la pause.
+
+***
+
+### **Remarques**
+
+* Seules les **références** aux fichiers Flash sont stockées dans votre présentation, **pas les fichiers réels**.
+* Si le fichier Flash est mis à jour, la **dernière version** sera utilisée pendant la lecture.
+* **Les propriétés de la liste de lecture sont désactivées** lorsque l'élément est connecté à un **data provider** — dans ce cas, le contenu est déterminé dynamiquement par des données en temps réel.

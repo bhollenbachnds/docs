@@ -1,0 +1,70 @@
+Le **type de fournisseur Microsoft Access** permet à **PADS4** de se connecter à **Bases de données Microsoft Access** (**Office 2010 ou antérieur**).
+
+***
+
+### **Exigences**
+
+* **Pilotes Office System**
+  * Si vous utilisez **Windows 7** ou certaines autres versions de Windows, vous pourriez avoir besoin d'**installer les pilotes Office System** avant de vous connecter à une **base de données Microsoft Access**.
+  * Ces pilotes sont disponibles **gratuitement** sur le **site web de Microsoft**.
+
+***
+
+### **Étapes pour se connecter à une base de données Microsoft Access**
+
+#### **1. Démarrer l'Assistant Fournisseur de données**
+
+* Ouvrez l'**Assistant Fournisseur de données** en suivant les instructions dans **Ajouter un Fournisseur de données** ou **Modifier un Fournisseur de données**.
+* Sélectionnez **Microsoft Access** comme **type de fournisseur**.
+
+***
+
+#### **2. Spécifier l'emplacement du fichier de base de données Access**
+
+* Choisissez entre :
+  * **Bibliothèque de contenu** (Recommandé) → Utilise une base de données stockée dans la **PADS4 Content Library**.
+  * **Nom de fichier** → Utilise une base de données **en dehors de la Bibliothèque de contenu** (doit spécifier le chemin complet du fichier).
+* Cliquez sur **Parcourir** pour localiser et sélectionner le fichier **.mdb** ou **.accdb**.
+
+**Pour les bases de données protégées :**
+
+* Si votre base de données nécessite une authentification, entrez le **Nom d'utilisateur** et le **Mot de passe**.
+* Cliquez sur **Test** pour vérifier la connexion.
+
+***
+
+#### **3. Sélectionner la source de données**
+
+* Choisissez le type de données à récupérer :
+  * **Tables** – Sélectionnez une table dans la liste déroulante.
+  * **Requêtes** – Sélectionnez une requête qui existe déjà dans la base de données.
+  * **Requêtes paramétrées** – Si votre requête nécessite des paramètres, configurez-les en conséquence.
+  * **Instruction SQL** – Saisissez manuellement une **requête SQL** (À utiliser uniquement si aucune table ou requête prédéfinie ne répond à vos besoins).
+
+**Tip:**\
+L'utilisation d'**instructions SQL** peut réduire les performances car elles doivent être **validées à chaque fois** que les données sont récupérées.
+
+***
+
+#### **4. Terminer la configuration**
+
+* Cliquez sur **Suivant** pour continuer.
+* Terminez la configuration en complétant l'**Assistant Fournisseur de données**.
+
+***
+
+### **Considérations importantes**
+
+* **Utilisation d'un PADS4 Data Server**
+  * Si un **PADS4 Data Server** est utilisé, assurez-vous que les **pilotes Office System** sont **installés sur le serveur**.
+  * La **base de données Access doit être accessible** du **point de vue du serveur**.
+* **Sans PADS4 Data Server**
+  * Assurez-vous que **PADS4 Designer** (pour la prévisualisation) et **PADS4 Viewers** ont les **pilotes Office System installés**.
+  * Confirmez que **chaque Viewer peut accéder à la base de données**.
+* **Éviter d'utiliser des dossiers réseau partagés**
+  * **L'utilisation d'un dossier réseau partagé** (via un **lecteur mappé** ou un **chemin UNC**) pour une **base de données Access** peut provoquer un **trafic réseau élevé** chaque fois que les données sont actualisées.
+  * Il est **recommandé** de **stocker la base de données dans la PADS4 Content Library** ou d'utiliser **une base de données SQL centralisée** pour de meilleures performances.
+
+***
+
+En suivant ces étapes, PADS4 peut se connecter avec succès à une **base de données Microsoft Access** et récupérer des données en temps réel.

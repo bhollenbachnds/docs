@@ -1,0 +1,82 @@
+Le **fournisseur .NET framework** permet des **connexions haute performance** à **MySQL, Oracle, SQL Server** et autres bases de données. Il réduit les frais généraux tout en maintenant une fonctionnalité complète.
+
+***
+
+## **Prérequis**
+
+* Installez le **pilote .NET** pour votre base de données avant de continuer.
+* Assurez-vous que votre base de données est **accessible** depuis le **PADS4 Data Server** ou les Viewers individuels.
+
+***
+
+## **Étapes pour connecter une base de données via .NET Framework**
+
+### **1. Démarrer l'Assistant de fournisseur de données**
+
+* Suivez les étapes dans **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
+* Choisissez **.NET Framework** comme type de fournisseur.
+
+### **2. Configurer les paramètres de connexion .NET**
+
+* Sélectionnez le **Fournisseur de données .NET** dans la liste des fournisseurs installés.
+  * Si votre fournisseur est manquant, assurez-vous que le **pilote .NET** correct est installé.
+* Saisissez la **Chaîne de connexion** pour vous connecter à votre base de données.
+  * Référez-vous à la **documentation de votre fournisseur .NET** ou consultez **[www.connectionstrings.com](http://www.connectionstrings.com)** pour des exemples.
+* Sécuriser la chaîne de connexion (Optionnel)
+  * Utilisez **"Mot de passe optionnel"** pour masquer la chaîne de connexion lors de l'édition.
+
+**Exemple de chaîne de connexion pour MySQL :**
+
+```
+Server=192.168.1.10;Port=3306;Database=mysampledb;Uid=root;Pwd=mypassword;pooling=false;
+```
+
+### **3. Saisir une requête SQL pour récupérer les données**
+
+* Définissez une **instruction SQL** spécifiant les données à récupérer.
+
+**Exemple de requête pour sélectionner toutes les données :**
+
+```sql
+SELECT * FROM MyTable
+```
+
+* Personnalisez la requête en fonction des filtres, du tri ou des jointures.
+
+### **4. Tester la connexion**
+
+* Cliquez sur **Test** pour vérifier la connexion.
+
+### **5. Terminer l'Assistant**
+
+* Cliquez sur **Suivant** pour continuer.
+* Terminez l'assistant comme décrit dans **Ajouter un fournisseur de données**.
+
+***
+
+## **Considérations importantes**
+
+* **Si vous utilisez PADS4 Data Server :**
+  * Assurez-vous que le **pilote .NET est installé** sur le **serveur**.
+  * La **base de données doit être accessible** depuis le **réseau du PADS4 Data Server**.
+
+* **Si vous n'utilisez pas PADS4 Data Server :**
+  * Installez le **pilote .NET** sur **tous les PADS4 Viewers** et **PADS4 Designer** machines.
+  * Vérifiez que **chaque Viewer** peut accéder à la **base de données** directement.
+
+***
+
+## **Dépannage**
+
+* **La connexion à la base de données échoue ?**
+  * Vérifiez les **paramètres du pare-feu** et les **identifiants de la base de données**.
+  * Assurez-vous de l'**accès réseau** au **serveur de base de données**.
+  * Vérifiez que le **pilote .NET** est **correctement installé**.
+
+* **La requête ne renvoie aucune donnée ?**
+  * Exécutez la **requête SQL manuellement** dans un outil de base de données pour vérifier les erreurs.
+  * Vérifiez que les **noms de table et de colonne** sont corrects.
+
+***
+
+Votre base de données est maintenant connectée. Si vous avez besoin de filtrage avancé, de tri ou de mises à jour en temps réel, explorez les **options du fournisseur de données** dans PADS4.

@@ -1,0 +1,62 @@
+Les liaisons de propriétés vous permettent de **lier dynamiquement les propriétés de page** à des sources de données externes. Lorsque la source de données est mise à jour, la propriété de page correspondante sera automatiquement mise à jour pendant la lecture.
+
+Par exemple, si vous **liez la couleur d'arrière-plan** d'une page à un fichier XML, **la couleur d'arrière-plan changera automatiquement** lorsque la valeur dans le fichier XML change.
+
+***
+
+## **Aperçu des liaisons de propriétés**
+
+Cette section contient une **liste des propriétés de page** qui peuvent être liées à une source de données externe.\
+Pour créer une liaison, vous devez définir au minimum :
+
+* **Data Provider**
+* **Column (Field)**
+* **Row (Record)**
+
+***
+
+### **Property**
+
+* La **propriété de page spécifique** à lier (par exemple, **Background Color**, **Visible**, etc.).
+* **System-defined** — ne peut pas être modifié.
+
+### **Type**
+
+* Le **type de données** de la propriété (par exemple, **Color**, **Boolean**, **Integer**).
+* **System-defined** — ne peut pas être modifié.
+
+### **Data Provider**
+
+* Choisissez le **data provider** qui fournit les données (par exemple, XML, Excel, SQL, JSON).
+* Si aucun data provider n'est disponible, **créez-en un d'abord** dans la configuration du data provider.
+
+### **Column**
+
+* Sélectionnez le **champ de données** (colonne) dans le data provider qui contient la valeur pour la propriété.
+
+### **Row**
+
+* Sélectionnez l'**enregistrement (ligne)** dans le data provider qui contient la valeur souhaitée.
+
+### **Scroll**
+
+* **Activez cette option** si le défilement des données doit être appliqué.
+* Lorsqu'elle est activée, les **Data Scrolling Properties** détermineront comment les données défilent pendant la lecture.
+
+***
+
+## **Exemple de cas d'utilisation : Visibilité dynamique de page**
+
+* Liez la propriété **Visible** d'une page à une **cellule dans un fichier Excel**.
+* Si la valeur Excel est "1", la page sera affichée.
+* Si la valeur Excel est "0", la page sera masquée.
+* Cela permet **un contrôle dynamique** sur les pages qui sont affichées, simplement en modifiant le fichier Excel — utile pour le contenu basé sur un calendrier.
+
+***
+
+> **Conseil**:\
+> Les liaisons de propriétés sont puissantes pour **le contenu adaptatif en temps réel**. Par exemple:
+
+* Changer la couleur d'arrière-plan en fonction des données de capteur en temps réel.
+* Afficher ou masquer des pages en fonction de fichiers de planification externes.
+* Ajuster dynamiquement les effets de transition.

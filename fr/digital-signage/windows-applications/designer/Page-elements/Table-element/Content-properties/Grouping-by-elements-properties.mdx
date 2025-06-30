@@ -1,0 +1,37 @@
+Le **regroupement par propriétés** vous permet d'organiser les lignes du tableau en **masquant les valeurs dupliquées** dans les colonnes sélectionnées. Lorsque **deux ou plusieurs lignes consécutives** contiennent la même valeur pour un **élément groupé**, cette valeur est **affichée uniquement dans la première ligne**.
+
+⚠ **Important:** Cette fonctionnalité **ne** regroupe pas réellement les données dans le tableau comme l'option **"Scroll Data, Grouped By"**. Au lieu de cela, elle **masque simplement les valeurs dupliquées** pour améliorer la lisibilité.
+
+***
+
+## **Définition des éléments de regroupement dans un tableau**
+
+1. Ouvrez la fenêtre **Table Properties**.
+2. Naviguez jusqu'à la section **Row Properties**.
+3. Cliquez sur **Edit** pour modifier la **Row Definition**.
+4. Dans l'**onglet Home** du ruban, cliquez sur **Group By**.
+5. Sélectionnez les **éléments** que vous souhaitez regrouper.
+6. (Facultatif) Utilisez **Move Up** ou **Move Down** pour ajuster la **priorité de regroupement**.
+7. Cliquez sur **OK** pour enregistrer les **paramètres de regroupement**.
+8. Dans le **menu File**, cliquez sur **Close**.
+9. Cliquez sur **Yes** pour confirmer les modifications.
+10. Cliquez sur **OK** ou **Apply** pour mettre à jour la présentation.
+
+***
+
+## **Options de regroupement supplémentaires**
+
+* Si vous avez besoin d'**afficher des données regroupées ensemble** au lieu de simplement **masquer les valeurs dupliquées**, utilisez l'option **"Scroll Data, Grouped By"** dans **Scroll Options**.
+
+***
+
+## **Remarques et bonnes pratiques**
+
+* **Tous les éléments** dans la définition de ligne **peuvent être utilisés pour le regroupement**, mais **les éléments de texte et les éléments d'image** sont les plus **couramment utilisés**.
+* **Lorsque plusieurs éléments sont regroupés**, le système les traite par **ordre de priorité** :
+  * Il **vérifie d'abord le premier élément de regroupement**.
+  * Si sa valeur **correspond à celle de la ligne précédente**, elle est **masquée**.
+  * Le système vérifie ensuite **l'élément de regroupement suivant**, continuant jusqu'à ce que :
+    * Une **valeur différente soit trouvée**, ou
+    * Tous les **éléments de regroupement** sélectionnés aient été traités.
+* **Il n'y a pas de limite** au nombre d'**éléments de regroupement** que vous pouvez définir.

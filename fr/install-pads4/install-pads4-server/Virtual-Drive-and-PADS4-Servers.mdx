@@ -1,0 +1,83 @@
+Voici une version plus professionnelle et soignée de votre texte :
+
+***
+
+# Mise à niveau vers PADS4 Version 2021.3 et supérieure
+
+Avec la sortie de **PADS4 version 2021.3**, un nouveau **Système de Bibliothèque de Contenu Avancé** a été introduit. Cette mise à jour améliore la fonctionnalité et la sécurité en passant d'une structure de dossiers ouverte à un environnement contrôlé. Par conséquent, les installations existantes peuvent nécessiter des ajustements mineurs pour s'adapter à ce changement.
+
+***
+
+## Bibliothèque de Contenu Avancée PADS4
+
+À partir de **PADS4 version 2021.3**, la bibliothèque de contenu n'est plus stockée dans le chemin de répertoire traditionnel :
+
+```
+C:\ProgramData\PADS\Content\...
+```
+
+Au lieu de cela, elle est désormais gérée dans un **environnement fermé**, permettant à PADS4 d'introduire des fonctionnalités avancées et une sécurité améliorée tout en maintenant une gestion de contenu transparente.
+
+***
+
+## Lecteur Virtuel PADS4 sur les Serveurs PADS4 (Sous/Sauvegarde)
+
+Lors de l'utilisation de **PADS4 Designer**, **Data Folder Data Providers**, **PADS4 CMS**, ou **PADS4 Workspace**, le système utilise désormais un **Lecteur Virtuel** comme passerelle vers le nouvel environnement de contenu fermé.
+
+Pour les installations existantes qui s'appuient sur le **dossier de Bibliothèque de Contenu** traditionnel, la compatibilité est maintenue grâce à ce mécanisme. Le **Lecteur Virtuel** est automatiquement installé pendant le processus de mise à niveau.
+
+### Considérations de performance
+
+Les utilisateurs peuvent constater un léger changement de performance, car le **Virtual Drive** récupère dynamiquement le contenu de l'environnement fermé au lieu d'une structure de système de fichiers directe.
+
+***
+
+## Comment ça fonctionne ?
+
+Lors de l'installation de **PADS4 Server version 2021.3 ou supérieure**, un **Virtual Drive Service** est automatiquement déployé. Ce service fournit une intégration transparente avec la nouvelle **Advanced Content Library**.
+
+### Navigation dans le Virtual Drive
+
+Après la mise à niveau, vous remarquerez peut-être que le dossier de bibliothèque de contenu précédent :
+
+```
+C:\ProgramData\PADS\Content\...
+```
+
+est maintenant représenté comme un **Virtual Folder** (indiqué par une flèche sur l'icône du dossier). Vous pouvez toujours l'ouvrir et interagir avec lui comme vous le feriez avec un dossier normal.
+
+### Fonctionnalité
+
+Bien que le dossier semble contenir des fichiers, aucune donnée réelle n'est stockée localement. Au lieu de cela, le système récupère et affiche dynamiquement les informations des fichiers depuis le **PADS4 Server**. Les utilisateurs peuvent :
+
+* **Ajouter, modifier et supprimer des fichiers**
+* **Ouvrir des fichiers pour les modifier et enregistrer les changements directement**
+* **Synchroniser automatiquement les modifications avec le PADS4 Server**
+
+De plus, tous les nouveaux fichiers téléchargés via le **PADS4 Web Portal** apparaîtront dans le dossier **Virtual Drive**.
+
+***
+
+## Emplacement du fichier journal
+
+Pour le dépannage et l'analyse des journaux, le **Virtual Drive Service** maintient un fichier journal dédié. Vous pouvez le trouver ici :
+
+```
+C:\Program Files\NDS\PADS4 Foundation\NDS.Content.FileSystem.Service\NDS.Content.FileSystem.Service.log
+```
+
+***
+
+## API pour la gestion de contenu
+
+Avec **PADS4 version 2021.3**, une nouvelle **Content Management API** a été introduite, remplaçant le précédent **Agent SDK**. Cette API offre une fonctionnalité et une flexibilité améliorées pour la gestion programmatique du contenu.
+
+Pour plus de détails et des exemples d'implémentation, consultez la **PADS4 API Documentation on GitHub**.
+
+***
+
+## Bibliothèque de contenu et Viewers
+
+Le mécanisme de synchronisation des **Viewers** reste inchangé dans cette mise à jour. Les processus existants pour la synchronisation et la lecture du contenu continueront à fonctionner comme avant.
+
+***

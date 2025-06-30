@@ -1,0 +1,85 @@
+PADS4 Designer inclut **la mise en cache des données** fonctionnalité pour les fournisseurs de données, facilitant et accélérant la conception de présentations pilotées par les données — même lorsque la source de données est lente ou temporairement indisponible.
+
+***
+
+## **Objectif de la mise en cache des données**
+
+* **Accélérer le temps de conception** lorsque les fournisseurs de données sont lents à charger.
+* **Permettre le travail de conception hors ligne** lorsque la source de données ne peut pas être atteinte (par exemple, équipes externes ou sites distants).
+* Permettre **le partage de présentations** avec des données mises en cache afin que d'autres puissent concevoir et tester sans avoir besoin d'un accès direct à la source de données.
+
+***
+
+## **Activation de la mise en cache des données pour un fournisseur de données**
+
+1. **Ouvrez** les paramètres de votre fournisseur de données dans PADS4 Designer.
+2. Sur la **première page de la configuration du fournisseur de données**, localisez l'option **"Use Design Cache"**.
+3. **Activez** cette option pour activer la mise en cache.
+4. Optionnellement, **limitez le nombre de lignes** (jusqu'à 999 lignes) pour contrôler la taille du cache.
+5. Si vous **ne souhaitez pas stocker les données originales** dans le cache, vous pouvez activer **"Generate sample values"** pour permettre à PADS4 de créer des données d'exemple artificielles à des fins de conception.
+
+> **Note:** Les valeurs d'exemple suivront le format : `Value_<row number>`
+
+***
+
+## **Avantages de l'utilisation du cache de conception**
+
+* **Plus rapide** expérience de conception graphique, en particulier avec des sources de données à chargement lent.
+* **Capacité hors ligne** pour les concepteurs qui n'ont pas accès à la source de données originale.
+* Capacité à **partager des présentations avec des données préchargées**, permettant à des tiers de travailler sur la mise en page et la conception sans avoir besoin d'accéder aux données.
+* Rendu **immédiat de la page au chargement** sans attendre les données en direct.
+
+***
+
+## **Données mises en cache et comportement d'actualisation**
+
+* **Les données mises en cache sont statiques** jusqu'à leur actualisation.
+* PADS4 Designer **ne met pas automatiquement à jour les données mises en cache** — il affiche ce qui a été stocké au moment de la mise en cache.
+* Pour **mettre à jour** les données, vous devez actualiser manuellement le cache à partir du fournisseur de données.
+
+***
+
+## **Mode aperçu et mise en cache**
+
+* Lors de la prévisualisation d'une présentation dans PADS4 Designer, vous pouvez choisir d'utiliser **des données mises en cache ou des données en direct**.
+* **La barre de ruban** contient un bouton pour **activer/désactiver le cache de données** pendant l'aperçu :
+  * **Enabled:** Chargement plus rapide en utilisant les données mises en cache.
+  * **Disabled:** Récupération directe des données en direct pour un aperçu en temps réel.
+
+***
+
+## **Comportement lors du chargement de la présentation**
+
+* Si la mise en cache est activée, **les données mises en cache sont utilisées en premier** pour afficher rapidement la présentation.
+* Pendant ce temps, **PADS4 tentera de charger des données fraîches en arrière-plan**.
+* **Les nouvelles données remplaceront les données mises en cache** lorsqu'elles seront récupérées — cette mise à jour se produit **une fois lors du chargement**.
+* Les mises à jour ultérieures nécessitent une **actualisation manuelle** des données.
+
+***
+
+## **Partage de présentations avec des données mises en cache**
+
+* **Concevez des présentations avec des fournisseurs de données et le cache activé**.
+* Partagez le `.padsx` fichier avec des tiers.
+* Les destinataires peuvent **ouvrir et concevoir en utilisant les données mises en cache** — même s'ils **n'ont pas accès à la source de données en direct**.
+* Les données mises en cache permettent une utilisation complète des **connexions de données, des règles et des tests de mise en page**.
+
+***
+
+## **Remarques importantes**
+
+* **La mise en cache est uniquement pour la phase de conception.**
+* **Les visionneuses PADS4 N'utilisent PAS les données mises en cache.** Elles récupèrent toujours **données en direct** à l'exécution.
+
+***
+
+## **Résumé des points clés**
+
+| **Fonctionnalité**                        | **Comportement/Avantage**                                                                                  |
+| ----------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Utiliser le cache de conception**       | Stocker les données localement pour un accès rapide et une conception hors ligne                           |
+| **Valeurs d'exemple**                     | Utiliser des données d'espace réservé générées pour éviter de stocker des données réelles                  |
+| **Basculement du cache en mode aperçu**   | Basculer entre les données mises en cache et les données en direct pour un aperçu plus rapide              |
+| **Actualisation automatique des données** | Les données mises en cache se chargent d'abord, l'actualisation en arrière-plan se produit une fois        |
+| **Partage avec des tiers**                | Les données mises en cache permettent à d'autres de concevoir sans accéder aux données en direct           |
+| **Comportement du visualiseur**           | **Les visualiseurs n'utilisent pas les données mises en cache** ; ils nécessitent des connexions en direct |

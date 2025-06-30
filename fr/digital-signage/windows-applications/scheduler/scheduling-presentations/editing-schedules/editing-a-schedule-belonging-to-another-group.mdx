@@ -1,0 +1,43 @@
+Dans les environnements avec des **structures de Destination hiérarchiques complexes**, il peut être difficile de suivre où un planning a été initialement créé—particulièrement lors de la visualisation de **Viewers** individuels au sein d'un **Viewer Group**.
+
+Pour simplifier cela, **PADS4 Scheduler** fournit un mécanisme rapide pour identifier et naviguer vers la **Destination d'origine** où réside un planning, rendant l'édition rapide et efficace.
+
+***
+
+## Exemple de scénario
+
+* Un planning a été créé pour un **Viewer Group** appelé **1stFloor**.
+* Un **Viewer** nommé **1stFloorViewer01** fait partie de ce groupe.
+
+Lorsque vous sélectionnez le **1stFloorViewer01** dans l'**arborescence des Destinations**, vous verrez que le **planning au niveau du groupe** (de *1stFloor*) est **visible** dans la vue Calendrier ou Tableau.
+
+> Vous pouvez voir que le planning appartient à un groupe et **non** au Viewer individuel car le planning **affiche le nom de la Destination d'origine** dans sa description (par exemple, "1stFloor").
+
+***
+
+## Tentative de modification du planning
+
+Si vous tentez de **modifier directement le planning** depuis le niveau du Viewer (par exemple, 1stFloorViewer01), l'action sera **bloquée**, car le planning **n'appartient pas** à ce Viewer—il appartient au Viewer Group.
+
+***
+
+## Naviguer rapidement vers la Destination correcte
+
+Pour modifier le planning, vous devez naviguer vers le **Viewer Group** où le planning a été initialement créé.
+
+### Steps:
+
+1. **Faites un clic droit** sur le planning qui appartient à un autre groupe.
+2. Sélectionnez **Go to Destination of Schedule** dans le menu contextuel.
+
+PADS4 Scheduler basculera automatiquement la sélection vers le **Viewer Group** correct (par exemple, 1stFloor).
+
+À partir de là, vous pouvez :
+
+* **Modifier le planning**
+* **Changer son contenu, sa destination, son heure ou sa priorité**
+* **Appliquer ou mettre à jour les paramètres de récurrence**
+
+***
+
+Cette fonctionnalité améliore considérablement l'efficacité lors du travail dans des systèmes avec des structures de destination imbriquées ou à plusieurs niveaux, aidant à garantir que les modifications sont effectuées dans le bon contexte.

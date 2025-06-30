@@ -1,0 +1,44 @@
+Lorsque **PADS4 Scheduler** démarre, il tente d'établir une connexion à un **PADS4 Server** configuré. Le comportement de l'application au démarrage dépend de la façon dont les **propriétés de connexion** sont définies.
+
+***
+
+## Connexion pour la première fois
+
+Si c'est la **première fois** que vous démarrez PADS4 Scheduler et qu'aucune propriété de connexion n'a été configurée :
+
+* Vous recevrez un **message de notification** vous invitant à configurer la connexion.
+* Cliquez sur **OK** pour ouvrir la fenêtre **PADS4 Server Connections**.
+* Dans cette fenêtre, vous pouvez spécifier les paramètres requis pour vous connecter à votre PADS4 Server, y compris l'adresse du serveur, le port et les identifiants.
+
+Une fois complété et enregistré, le Scheduler tentera d'établir une connexion.
+
+***
+
+## Connexion manuelle
+
+Si vous avez choisi de **gérer manuellement les connexions au serveur**, la fenêtre principale restera vide au démarrage.
+
+Pour vous connecter manuellement :
+
+### Option 1 : Utiliser le bouton de connexion réseau
+
+1. Localisez le **bouton de connexion réseau** dans la barre de ruban.
+2. Cliquez dessus pour initier une connexion au serveur par défaut ou précédemment utilisé.
+
+### Option 2 : Utiliser le bouton fractionné de connexion au serveur
+
+1. Cliquez sur le **PADS4 Server Connection Split Button** dans le ruban.
+2. Une liste déroulante des connexions de serveur disponibles apparaîtra.
+3. Survolez le serveur auquel vous souhaitez vous connecter, et cliquez dessus.
+4. PADS4 Scheduler tentera de se connecter au serveur sélectionné.
+
+***
+
+## Connexion automatique
+
+Si vous avez configuré une **connexion automatique au serveur**, PADS4 Scheduler va :
+
+* Tenter de se connecter au PADS4 Server spécifié **immédiatement au lancement**
+* Charger l'interface une fois la connexion réussie
+
+Aucune interaction supplémentaire n'est requise, sauf si la connexion échoue, auquel cas vous serez invité à vérifier ou à saisir à nouveau les paramètres de connexion.

@@ -1,0 +1,45 @@
+Le **Video Stream URL Editor** aide à **structuring and configuring** le format d'URL correct pour les médias en streaming. Il assure la compatibilité avec les **entertainment and communication systems** en gérant efficacement les connexions aux serveurs de streaming.
+
+***
+
+## **Aperçu**
+
+* Affiche l'**complete URL** basée sur les **settings entered**.
+* Se met à jour dynamiquement à mesure que les paramètres sont modifiés.
+
+***
+
+## **Informations de connexion**
+
+| **Champ**          | **Description**                                                                            |
+| ------------------ | ------------------------------------------------------------------------------------------ |
+| **Server IP/Name** | Saisissez l'**IP address** ou le **hostname** du serveur de streaming.                     |
+| **Port Number**    | Définissez le **port used for broadcasting** (par ex., `554` pour RTSP, `8080` pour HTTP). |
+| **Stream Path**    | Spécifiez le **optional path** où le flux est hébergé (par ex., `/live/stream1`).          |
+| **Protocol**       | Choisissez le **streaming protocol** (RTSP, RTP, UDP, MMS, HTTP).                          |
+
+***
+
+## **Identifiants**
+
+Si le flux **requires authentication**, saisissez :
+
+* **Username**
+* **Password**
+
+Cela garantit un **secure access** aux flux protégés.
+
+***
+
+## **Options**
+
+| **Option**                | **Description**                                                                                                                                      |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ignorer l'audio**       | Empêche PADS4 d'attendre un **signal audio** si un **n'est pas disponible**. Utile lorsqu'un flux **indique une piste audio mais n'en possède pas**. |
+| **Paramètres de requête** | Ajouter **des paramètres de requête personnalisés** requis par le flux.                                                                              |
+
+***
+
+### **Conseil de dépannage**
+
+Si le **flux vidéo ne s'affiche pas**, essayez **d'activer "Ignorer l'audio"**. Certains flux signalent faussement un signal audio, provoquant **des retards ou des échecs de lecture**.

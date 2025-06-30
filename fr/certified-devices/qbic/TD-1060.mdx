@@ -1,0 +1,259 @@
+Ce guide fournit **des instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur **Qbic TD-1060** appareils fonctionnant sous Android.
+
+***
+
+## **Avant de commencer**
+
+### **Appareils Qbic TD-1060 pris en charge**
+
+L'appareil **Qbic TD-1060** suivant est pris en charge :
+
+* **TD-1060 (Android 10)**
+
+**Assurez-vous que votre PADS4 Server est installé et configuré avant de continuer.**
+
+***
+
+## **Exigences minimales**
+
+**Version PADS4 Server :** **2022.3 ou ultérieure**\
+**Version du firmware :** **Kernel 4.19.1111+ Build v2.0.1**
+
+**Assurez-vous que le firmware de votre appareil répond aux exigences minimales avant de procéder à l'installation.**
+
+***
+
+## **Configuration initiale**
+
+Lorsque vous **allumez** le Qbic TD-1060 pour la première fois, un **assistant de configuration** démarrera.
+
+**Si l'assistant de configuration ne démarre pas, effectuez une réinitialisation d'usine avant de continuer.**
+
+***
+
+## **Effectuer une réinitialisation d'usine**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez **Paramètres → Options de réinitialisation**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Sélectionnez **Effacer toutes les données (Réinitialisation d'usine)**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Appuyez sur **Effacer toutes les données** pour confirmer.
+  </Step>
+</Steps>
+
+**Une fois terminé, l'appareil redémarrera et affichera l'écran d'accueil.**
+
+***
+
+## **Installation de PADS4 Viewer**
+
+Pour installer le **PADS4 Viewer**, accédez au **menu Android** sur l'appareil.
+
+### **Étape 1 : Vérifier le firmware de l'appareil**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez **Paramètres**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Naviguez vers **À propos de l'appareil**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Vérifiez que le **Numéro de build** correspond à **Kernel 4.19.1111+ Build v2.0.1**.
+  </Step>
+</Steps>
+
+**Si le firmware est obsolète, contactez Qbic pour les mises à jour du firmware.**
+
+***
+
+### **Étape 2 : Installer PADS4Qbic depuis une clé USB**
+
+**Télécharger l'APK PADS4Qbic :**
+
+```
+https://github.com/PADS4/PADS4-Viewer-Qbic/releases/latest
+```
+
+<Steps>
+  <Step title="Première étape">
+    Copiez **PADS4Qbic.apk** sur une **clé USB**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Insérez la **clé USB** dans le **Qbic TD-1060**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Ouvrez **Paramètres Android → Paramètres du lecteur**.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Activez **Passer au mode Android natif**.
+  </Step>
+
+  <Step title="Cinquième étape">
+    Fermez **Paramètres** pour accéder à l'**Écran d'accueil Android**.
+  </Step>
+
+  <Step title="Sixième étape">
+    Ouvrez **l'application Explorer** → Appuyez sur **Bouton USB** → Sélectionnez **PADS4Qbic.apk**.
+  </Step>
+
+  <Step title="Septième étape">
+    Autorisez l'installation depuis **Sources inconnues** si demandé.
+  </Step>
+
+  <Step title="Huitième étape">
+    Confirmez l'installation en appuyant sur **Installer**.
+  </Step>
+</Steps>
+
+**N'ouvrez pas PADS4Qbic après l'installation.**
+
+***
+
+## **Configuration du Qbic TD-1060 pour PADS4Qbic**
+
+### **Étape 1 : Définir PADS4 comme application par défaut**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez **Paramètres Android → Paramètres du lecteur**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Désactivez **Passer au mode Android natif**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Activez **Mode Kiosque**.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Sélectionnez **Activité lancée ou URL de page Web**.
+  </Step>
+
+  <Step title="Cinquième étape">
+    Appuyez sur **Sélectionner l'application** → Choisissez **PADS4Qbic**.
+  </Step>
+
+  <Step title="Sixième étape">
+    Appuyez sur **Définir**.
+  </Step>
+</Steps>
+
+**Assurez-vous que les paramètres ci-dessous sont correctement configurés :**
+
+| **Paramètre**                               | **Valeur** |
+| ------------------------------------------- | ---------- |
+| **Demander le site de bureau**              | ❌ Non      |
+| **Afficher les avertissements de sécurité** | ❌ Non      |
+| **Ignorer les options X-Frame**             | ✅ Oui      |
+| **Bloquer les pop-ups**                     | ✅ Oui      |
+| **Conserver les cookies**                   | ❌ Non      |
+
+***
+
+## **Connexion au PADS4 Server**
+
+### **Étape 1 : Saisir les détails du PADS4 Server**
+
+<Steps>
+  <Step title="Première étape">
+    Ouvrez **PADS4Qbic** et spécifiez l'**Adresse du serveur**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    (Facultatif) Spécifiez un **Nom de visionneuse**.
+  </Step>
+
+  <Step title="Troisième étape">
+    Appuyez sur **Démarrer**.
+  </Step>
+</Steps>
+
+**Si Chrome est manquant, il sera téléchargé automatiquement.**
+
+***
+
+## **Ajustement des paramètres de PADS4 Viewer**
+
+**Pour accéder aux paramètres, maintenez le bouton gauche de la souris pendant 3 secondes.**
+
+**Vous pouvez également configurer les paramètres à distance en utilisant :**\
+**PADS4 CTRL Center**\
+**PADS4 Agent**
+
+***
+
+## **Mise à jour de PADS4 Viewer et de l'application PADS4Qbic**
+
+**Après l'installation, les mises à jour seront appliquées automatiquement lorsque le PADS4 Server est mis à jour.**
+
+***
+
+## **Accès au menu Android**
+
+**Pour accéder au menu Android pendant que PADS4 est en cours d'exécution :**\
+Appuyez sur **Bouton Accueil + Volume bas** en séquence.
+
+**Pour éviter un redémarrage, ouvrez d'abord les paramètres PADS4Qbic.**
+
+***
+
+## **Fonctionnalités prises en charge et limitations**
+
+### **Fonctionnalités générales**
+
+| Fonctionnalité | Description                                                                                |
+| :------------: | ------------------------------------------------------------------------------------------ |
+|        ✅       | **Mises à jour automatiques du logiciel** – L'application se met à jour automatiquement.   |
+|        ✅       | **Mode hors ligne** – Diffuse le contenu programmé pendant **7 jours** en mode hors ligne. |
+
+### **Fonctionnalités de l'appareil**
+
+| Fonctionnalité | Description                                                                  |
+| :------------: | ---------------------------------------------------------------------------- |
+|        ✅       | **Mode portrait** – Ajuste automatiquement la rotation de l'écran.           |
+|        ✅       | **Blocage de la télécommande** – Empêche l'utilisation non autorisée.        |
+|        ✅       | **Support Cluster Viewer** – Permet la synchronisation avec d'autres écrans. |
+|        ✅       | **Barre lumineuse LED** – Spectre complet de couleurs pris en charge.        |
+|        ❌       | **Éteindre l'écran** – Non pris en charge.                                   |
+
+### **Support de contenu et de données**
+
+| Fonctionnalité | Description                                                 |
+| :------------: | ----------------------------------------------------------- |
+|        ✅       | **Images (JPG, PNG, BMP, GIF)**                             |
+|        ✅       | **Texte défilant, tableaux et éléments interactifs**        |
+|        ❌       | **Flash et vidéos sans interruption** – Non pris en charge. |
+|        ✅       | **Streaming via HTTP**                                      |
+
+### **Gestion des appareils**
+
+| Fonctionnalité | Description                                                                 |
+| :------------: | --------------------------------------------------------------------------- |
+|        ✅       | **Gestion à distance via PADS4 CTRL Center**                                |
+|        ✅       | **Surveillance de l'état de connexion et alertes**                          |
+|        ❌       | **Redémarrage, arrêt, Wake-on-LAN** – Non pris en charge.                   |
+|        ✅       | **Récupération des journaux et modification des paramètres du visualiseur** |
+
+***
+
+## **Dépannage**
+
+| **Problème**                                                     | **Solution**                     |
+| ---------------------------------------------------------------- | -------------------------------- |
+| **Le navigateur n'est pas en plein écran**                       | Vérifiez la version du firmware. |
+| **L'appareil ne se connecte pas via Ethernet**                   | Mettez à jour le firmware.       |
+| **La barre de navigation est visible**                           | Mettez à jour le firmware.       |
+| **Le visualiseur demande sans cesse l'autorisation de stockage** | Vérifiez la version du firmware. |

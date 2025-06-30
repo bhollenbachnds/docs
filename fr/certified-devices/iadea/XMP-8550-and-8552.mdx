@@ -1,0 +1,254 @@
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on the **IAdea XMP-8550 / XMP-8552 (Android 12)** device.
+
+***
+
+## **1. First-Time Use**
+
+Before installation, ensure that the **PADS4 Server is set up and configured properly**.
+
+<Note>
+  The minimum **PADS4 Server version** required is **PADS4 Foundation 2023.1**.
+</Note>
+
+When you turn on the device for the first time, it will display the **Basic Settings** screen. ***(If not, reset the device as described in section 1.2 Resetting the Device.)***
+
+***
+
+### **1.1 Prerequisites**
+
+Before installing **PADS4IAdea** on the **IAdea XMP-8550 / XMP-8552**, ensure the following conditions are met:
+
+* **OS:** Android 12
+* **Firmware Version:** `4.0.2-48`
+* **Network Connectivity:** Device must be connected to a network
+
+***
+
+### **1.2 Resetting the Device**
+
+If the device was used previously, perform a **factory reset** to clear storage and prevent software conflicts.
+
+<Steps>
+  <Step title="Step One">
+    Open the **Basic Settings** on IAdea.
+  </Step>
+
+  <Step title="Step Two">
+    Click on **Advanced**.
+  </Step>
+
+  <Step title="Step Three">
+    Select **System → Factory Default**.
+  </Step>
+
+  <Step title="Step Four">
+    Press **OK** to start the factory reset.
+  </Step>
+</Steps>
+
+After resetting, the **Basic Settings screen** will appear.
+
+***
+
+### **1.3 Checking Device Firmware**
+
+To ensure full **PADS4 Viewer compatibility**, verify that the device is running firmware version **4.0.2-48**.
+
+<Steps>
+  <Step title="Step One">
+    Open the **Basic Settings** menu.
+  </Step>
+
+  <Step title="Step Two">
+    Click on **Advanced**.
+  </Step>
+
+  <Step title="Step Three">
+    Select **Information**.
+  </Step>
+
+  <Step title="Step Four">
+    The **Firmware Version** is displayed on the right side of the screen.
+  </Step>
+</Steps>
+
+***
+
+### **1.4 Updating Device Firmware**
+
+If the firmware is outdated, update it following **IAdea's official instructions**.
+
+Firmware updates are available on the [**IAdea Support Page**](https://support.iadea.com/).
+
+***
+
+## **2. Installing PADS4 Viewer**
+
+Follow the steps below to install and configure **PADS4 Viewer on the IAdea XMP-8550 / XMP-8552**.
+
+***
+
+### **2.1 Installing PADS4IAdea from USB Stick**
+
+The **PADS4IAdea.apk** file is available on the **PADS4 Server** at:
+
+```
+https://[YourPADS4Server]/PADS4/apps  
+```
+
+Alternatively, download the latest version from [**here**](https://github.com/PADS4/PADS4-Viewer-IAdea/releases/latest) and place it in the **PADS4 Server apps directory**.
+
+#### **Installation Steps**
+
+<Steps>
+  <Step title="Step One">
+    Copy the **PADS4IAdea.apk** onto a **USB stick**.
+  </Step>
+
+  <Step title="Step Two">
+    Insert the **USB stick** into the **IAdea XMP-8550 / XMP-8552** device.
+  </Step>
+
+  <Step title="Step Three">
+    Open **Basic Settings**.
+  </Step>
+
+  <Step title="Step Four">
+    Click on **Advanced**.
+  </Step>
+
+  <Step title="Step Five">
+    Click **three times** in the **lower right corner** of the **Advanced menu** to access Android.
+  </Step>
+
+  <Step title="Step Six">
+    The **Android Home Screen** will now be visible.
+  </Step>
+
+  <Step title="Step Seven">
+    Open the **File Manager app**.
+  </Step>
+
+  <Step title="Step Eight">
+    Allow **storage and USB permissions** if prompted.
+  </Step>
+
+  <Step title="Step Nine">
+    Click on **Internal Storage** (top left), then select **USB Storage**.
+  </Step>
+
+  <Step title="Step Ten">
+    Select **PADS4IAdea.apk** and click **Install**.
+  </Step>
+
+  <Step title="Step Eleven">
+    Once installed, press **Open**.
+  </Step>
+</Steps>
+
+***
+
+## **3. Configuring the Device for PADS4IAdea**
+
+To ensure **PADS4 Viewer starts automatically**, update the device settings.
+
+***
+
+### **3.1 Setting Automatic Start**
+
+<Steps>
+  <Step title="Step One">
+    Open the **PADS4IAdea app** and click on **System Settings**.
+  </Step>
+
+  <Step title="Step Two">
+    Click on **Avancé**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Sélectionnez **Content → AppStart**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Ouvrez le **sous-menu Advanced**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Dans **Package Name**, saisissez :
+
+    ```
+    com.pads4.viewer.iadea  
+    ```
+  </Step>
+
+  <Step title="Étape Six">
+    Cliquez sur **Set** pour enregistrer le paramètre.
+  </Step>
+
+  <Step title="Étape Sept">
+    Cliquez sur le **bouton Back** pour revenir aux **Basic Settings**.
+  </Step>
+</Steps>
+
+***
+
+### **3.2 Connexion au PADS4 Server**
+
+**Format d'adresse du PADS4 Server :**
+
+```
+protocol://host:port/hostpath/  
+```
+
+* **Protocol:** `http` ou `https` (dépend du certificat SSL).
+* **Host:** Nom DNS ou **adresse IP** du **PADS4 Server**.
+* **Port:** *(Optionnel - à spécifier uniquement si vous utilisez des ports non standard).*
+* **Chemin d'hôte :** Configuré dans **System Management** *`(default: PADS4)`*.
+
+#### **Étapes de connexion**
+
+<Steps>
+  <Step title="Étape Une">
+    Saisissez l'**emplacement du PADS4 Server**.
+  </Step>
+
+  <Step title="Étape Deux - *Optionnel*">
+    Spécifiez un **Viewer Name** (si laissé vide, PADS4 en générera un).
+  </Step>
+
+  <Step title="Étape Trois">
+    Appuyez sur **Start**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Accordez la **permission de stocker définitivement le contenu** lorsque vous y êtes invité.
+  </Step>
+
+  <Step title="Étape Cinq">
+    **Chrome se mettra à jour** en arrière-plan, et l'application redémarrera.
+  </Step>
+</Steps>
+
+***
+
+## **4. Mise à jour de PADS4 Viewer & PADS4IAdea App**
+
+L'application **PADS4 Viewer & PADS4IAdea app** se **mettra à jour automatiquement** lorsque le **PADS4 Server** est mis à jour.
+
+***
+
+## **5. Fonctionnalités et capacités prises en charge**
+
+| Fonctionnalité | Description                                                                                                    |
+| :------------: | -------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel** – Se met à jour lorsque le **PADS4 Server** est mis à jour.          |
+|        ✅       | **Mode hors ligne** – L'appareil continue d'exécuter les présentations pendant **7 jours** en mode hors ligne. |
+|        ✅       | **Support HTTP & HTTPS**                                                                                       |
+|        ✅       | **Support Cluster Viewer**                                                                                     |
+|        ✅       | **Maximum 2 vidéos par page** – Prend en charge **Seamless Video, Rotation, Reflection, Skew, Flip**.          |
+|        ❌       | **Streaming Video** – Non pris en charge.                                                                      |
+|        ✅       | **Éléments PowerPoint & PDF** – *(PowerPoint nécessite une installation sur le PADS4 Server)*.                 |
+|        ✅       | **Gestion des appareils** – Contrôle à distance via **PADS4 CTRL Center & PADS4 Agent**.                       |
+|        ✅       | **Redémarrage & Relance du Viewer** – Pris en charge.                                                          |
+|        ❌       | **Wake-on-LAN** – Non pris en charge.                                                                          |
+|        ✅       | **Suivi Proof of Play** – Surveille l'historique de lecture du contenu.                                        |

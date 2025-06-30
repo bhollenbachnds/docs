@@ -1,0 +1,37 @@
+---
+- title: Blocs de code
+- description: Afficher du code en ligne et des blocs de code
+- icon: code
+---
+
+## Basique
+
+### Code en ligne
+
+Pour désigner un `word` ou `phrase` comme code, entourez-le d'accents graves (\`).
+
+```
+To denote a `word` or `phrase` as code, enclose it in backticks (`).
+```
+
+### Bloc de code
+
+Utilisez [des blocs de code délimités](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) en entourant le code de trois accents graves et en faisant suivre les accents graves de début par le langage de programmation de votre extrait pour obtenir la coloration syntaxique. Vous pouvez également, de manière facultative, écrire le nom de votre code après le langage de programmation.
+
+```java HelloWorld.java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+````md
+```java HelloWorld.java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+````

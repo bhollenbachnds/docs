@@ -1,0 +1,84 @@
+Le **Timetable** fonctionnalité dans PADS4 Scheduler vous permet de gérer plusieurs entrées programmées au sein d'un seul planning. En activant **Advanced Mode**, même un Simple ou Playlist Schedule peut être modifié et étendu en un **multi-destination, multi-period** planning—le transformant essentiellement en un **Advanced Schedule**.
+
+***
+
+## Accéder au Timetable
+
+Pour modifier le timetable d'un planning :
+
+1. Ouvrez la fenêtre **Edit Schedule** pour le planning souhaité.
+2. Naviguez vers l'onglet **Timetable**.
+3. Cliquez sur **Switch to Advanced Mode**.
+
+Cela révélera la **Timetable view**, permettant une gestion détaillée des entrées du planning.
+
+> **Note:** Si des permissions d'accès sont appliquées, certaines destinations ou niveaux de priorité peuvent être masqués ou désactivés selon vos droits d'utilisateur.
+
+***
+
+## Aperçu de l'écran Timetable
+
+L'écran est divisé en deux zones principales :
+
+***
+
+### 1. **Le Timetable (Section supérieure)**
+
+Affiche une liste des entrées programmées avec les colonnes suivantes :
+
+* **From / Until** (période d'affichage)
+* **Destination**
+* **Priority**
+* **Recurrence** (si applicable)
+
+#### Options de la barre d'outils :
+
+| **Icône** | **Fonction**                                    |
+| --------- | ----------------------------------------------- |
+| ➕         | **Add New Item**                                |
+| ❌         | **Remove Selected Item**                        |
+| 📄        | **Copy Selected Item**                          |
+| ⏮️        | Aller à **First Entry**                         |
+| ◀️        | Aller à **Previous Entry**                      |
+| ▶️        | Aller à **Next Entry**                          |
+| ⏭️        | Aller à **Last Entry**                          |
+| 🔼        | **Maximize** zone du timetable                  |
+| 🔽        | **Minimize** zone du timetable                  |
+| 🔁        | **Restore** taille par défaut de la vue divisée |
+
+Utilisez ces outils pour naviguer et gérer efficacement plusieurs entrées de planning.
+
+***
+
+### 2. **Entrée de planning individuelle (Section inférieure)**
+
+Lorsque vous sélectionnez un élément dans le timetable, ses détails apparaissent ci-dessous :
+
+* **Destination** : Sélectionnez le Viewer ou Viewer Group
+* **Display Period** : Définissez l'heure de début et de fin
+* **Priority** : Choisissez la priorité d'affichage
+* **Recurrence** : (Optionnel) Ajoutez ou modifiez les modèles de récurrence
+
+Cette section fournit les mêmes contrôles et mise en page que ceux utilisés dans les **Simple** et **Playlist Schedules**.
+
+> Vous pouvez gérer autant d'entrées de timetable que nécessaire, permettant à un seul planning de cibler différents contenus, destinations, horaires, ou même priorités.
+
+***
+
+## Permissions et contrôle d'accès
+
+* Si des **user permissions** sont appliquées, seules les destinations avec au moins un **read access** seront affichées.
+* Vous ne pouvez attribuer qu'aux destinations pour lesquelles vous avez un **write access**.
+* Vous ne verrez que les **priority levels** que votre compte utilisateur est autorisé à utiliser.
+
+***
+
+## Exemple de cas d'utilisation
+
+Votre Timetable finalisé pourrait ressembler à ceci :
+
+| From  | Until | Destination      | Priority | Recurrence         |
+| ----- | ----- | ---------------- | -------- | ------------------ |
+| 08:00 | 12:00 | Lobby Display    | High     | Daily, Weekdays    |
+| 17:00 | 20:00 | Breakroom Screen | Medium   | Weekly, Fridays    |
+| 10:00 | 11:00 | Office Entrance  | Low      | Monthly, First Mon |
