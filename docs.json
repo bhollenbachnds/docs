@@ -929,7 +929,6 @@
               {
                 "group": "Agent",
                 "pages": [
-                  "digital-signage/windows-applications/agent/introduction",
                   {
                     "group": "Starting PADS4 Agent",
                     "pages": [
@@ -968,64 +967,15 @@
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-settings",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software",
                       "digital-signage/windows-applications/agent/remote-management-and-monitoring/add-ons",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/scheduled-tasks",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/system-info",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/processes",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/services",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/windows-logs",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/fonts",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/audit-logs",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/proof-of-play",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-variables",
-                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/closing-pads4-agent"
+                      "digital-signage/windows-applications/agent/remote-management-and-monitoring/scheduled-tasks"
                       ]
                     },
                     {
                   "group": "Monitoring & Alerts window",
                     "pages": [
                       "digital-signage/windows-applications/agent/monitoring-and-alerts/monitoring-and-alerts-window"
-                      ]
-                    },
-                    {
-                  "group": "Tools",
-                    "pages": [
-                      "digital-signage/windows-applications/agent/tools/general-options",
-                      "digital-signage/windows-applications/agent/tools/view-options",
-                      "digital-signage/windows-applications/agent/tools/alert-options",
-                      "digital-signage/windows-applications/agent/tools/check-for-updates",
-                      "digital-signage/windows-applications/agent/tools/about",
-                      "digital-signage/windows-applications/agent/tools/graceful-degradation"
-                      ]
-                    },
-                    {
-                  "group": "Advanced Features",
-                    "pages": [
-                      "digital-signage/windows-applications/agent/advanced-features/working-with-multiple-windows",
-                      "digital-signage/windows-applications/agent/advanced-features/working-with-sub-servers",
-                      "digital-signage/windows-applications/agent/advanced-features/connecting-to-multiple-servers"
                      ]
-                   }
-                ]
-             },
-             {
-                "group": "System Management",
-                "pages": [
-                  "digital-signage/windows-applications/system-management/introduction",
-                  {
-                    "group": "Starting PADS4 System Management",
-                    "pages": [
-                      "digital-signage/windows-applications/system-management/starting-pads4-system-management/starting-the-application",
-                      "digital-signage/windows-applications/system-management/starting-pads4-system-management/connecting-to-your-pads4-server",
-                      "digital-signage/windows-applications/system-management/starting-pads4-system-management/managing-your-connections",
-                      "digital-signage/windows-applications/system-management/starting-pads4-system-management/graceful-degradation"
-                    ]
-                  },
-                {
-                    "group": "Main Window",
-                    "pages": [
-                      "digital-signage/windows-applications/system-management/main-window/ribbon-bar"
-                    ]
-                  }
+                   } 
                 ]
               },
               "modules/digital-signage/licenses"
@@ -1105,7 +1055,11 @@
               "modules/workspace/workspace-cms-admin/introduction",
               "modules/workspace/workspace-cms-admin/users",
               "modules/workspace/workspace-cms-admin/profiles",
-              "modules/workspace/workspace-cms-admin/plugins"
+              "modules/workspace/workspace-cms-admin/plugins",
+              {"pages": [
+                "modules/workspace/workspace-cms-admin/SSO/ibm-security"
+              ]
+              }
             ]
           }
         ]
