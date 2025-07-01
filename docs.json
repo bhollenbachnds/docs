@@ -256,7 +256,8 @@
                 "pages": [
                   "ctrl-centre/administration/user-management/Roles"
                 ]
-              }
+              },
+              "ctrl-centre/administration/Enable-SSO"
             ]
           },
           {
