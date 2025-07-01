@@ -1,0 +1,56 @@
+PADS4 Scheduler offre une fonctionnalité de presse-papiers qui vous permet de **couper**, **copier**, et **coller** des planifications entre différents **Viewers** ou **Viewer Groups**. Cette fonctionnalité permet de rationaliser les flux de travail lors de la duplication ou du déplacement des planifications dans votre réseau d'affichage.
+
+***
+
+## Couper et coller une planification
+
+Couper une planification la supprime de son emplacement actuel et la place dans le presse-papiers. Une fois collée, elle devient une **nouvelle planification autonome** à la nouvelle destination.
+
+### Steps:
+
+1. Dans la **vue arborescente des destinations**, sélectionnez le **Viewer** ou **Viewer Group** qui contient la planification existante.
+2. Dans la vue **Calendar** ou **Table**, sélectionnez la planification que vous souhaitez déplacer.
+3. Naviguez vers l'onglet **Home** dans la barre de ruban.
+4. Dans le groupe **Clipboard**, cliquez sur **Cut**.
+5. Un message de confirmation apparaîtra. Confirmez l'action pour supprimer la planification d'origine.
+6. Naviguez vers le nouveau **Viewer** ou **Viewer Group**, et sélectionnez l'emplacement souhaité.
+7. Cliquez sur **Paste** dans le groupe **Clipboard**.
+
+La planification sera ajoutée au nouvel emplacement en tant que nouvelle planification indépendante.
+
+Pour vérifier :
+
+* Faites un clic droit sur la planification nouvellement collée
+* Choisissez **Edit > Schedule**
+* La fenêtre **Edit Schedule** affichera un horaire à entrée unique
+
+***
+
+## Copier et coller une planification
+
+Copier une planification conserve l'original intact et ajoute une **nouvelle occurrence** à la même planification, créant ou élargissant un **horaire à entrées multiples**, similaire à une **Advanced Schedule**.
+
+### Steps:
+
+1. Dans la **vue arborescente des destinations**, sélectionnez le Viewer ou Viewer Group avec la planification que vous souhaitez copier.
+2. Dans la vue **Calendar** ou **Table**, sélectionnez la planification.
+3. Dans l'onglet **Home**, cliquez sur **Copy** dans le groupe **Clipboard**.
+4. Naviguez vers la destination et la position souhaitées.
+5. Cliquez sur **Paste**.
+
+La planification copiée est maintenant une entrée supplémentaire dans le même objet de planification.
+
+Pour vérifier :
+
+* Faites un clic droit sur la planification collée
+* Choisissez **Edit > Schedule**
+* La fenêtre **Edit Schedule** affichera plusieurs entrées d'horaire
+
+***
+
+## Résumé
+
+| Action       | Résultat                                                                       |
+| ------------ | ------------------------------------------------------------------------------ |
+| Cut + Paste  | Crée une **nouvelle** planification à la destination ; l'original est supprimé |
+| Copy + Paste | Ajoute une **nouvelle entrée** à l'**horaire existant** de la planification    |

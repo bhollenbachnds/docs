@@ -1,0 +1,66 @@
+## Télécharger le programme d'installation de PADS4
+
+Veuillez télécharger l'installateur PADS4 depuis **[here](http://go.pads4.com/?fwlink=1010)**.
+
+Avant de commencer l'installation du produit PADS4, vous devez prendre en compte les éléments suivants :
+
+1. Si vous souhaitez utiliser Workspace et/ou CMS, vérifiez si Internet Information Services (IIS) est installé sur le serveur.
+2. Si vous souhaitez stocker les données Workspace et/ou CMS dans une base de données SQL Server, vérifiez si celle-ci est installée sur le serveur.
+
+<Note>Veuillez désactiver les antivirus avant de commencer le processus d'installation ou de mise à jour. Il est possible que vous receviez un message "could not lock file" pendant la mise à jour en raison d'un antivirus.</Note>
+
+## Processus d'installation
+
+<Steps>
+  <Step title="Première étape">
+    Exécutez le fichier d'installation (en tant qu'Administrateur). Pour ce faire, faites un clic droit avec la souris sur le fichier d'installation et sélectionnez exécuter en tant qu'administrateur.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Modifiez le dossier racine d'installation si nécessaire. Par défaut, c'est C:\Program Files\PADS4
+  </Step>
+
+  <Step title="Troisième étape">
+    Assurez-vous de lire le document d'installation et le contrat de licence avant de cocher les cases et d'installer le logiciel.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Cochez les cases pour confirmer et appuyez sur Installer pour démarrer le processus d'installation.
+  </Step>
+
+  <Step title="Cinquième étape">
+    Pendant la configuration, PADS4 Configuration s'ouvrira. Veuillez effectuer les configurations nécessaires selon vos besoins d'installation et types de licence.
+  </Step>
+
+  <Step title="Sixième étape">
+    Lorsque l'installation est terminée, vous devriez voir le message PADS4 Foundation installé avec succès comme sur l'image ci-dessus.
+  </Step>
+
+  <Step title="Septième étape - *Facultatif*">
+    Si vous souhaitez installer des programmes PADS4 Windows supplémentaires sur ce PC, tels que PADS4 Scheduler, PADS4 Designer, etc., cochez la case pour démarrer la configuration après que l'installation de PADS4 Foundation soit terminée. Cette configuration vous permet de sélectionner les composants clients Windows qui doivent être installés.
+  </Step>
+</Steps>
+
+### Erreur pendant l'installation
+
+En cas d'erreur, une fenêtre contextuelle apparaîtra. Cette fenêtre contient un lien cliquez ICI vers le fichier journal créé.
+Si vous rencontrez des problèmes, ce fichier journal peut aider à rechercher la cause du problème. Chaque étape du processus d'installation est écrite dans ce journal.
+
+### Emplacements des fichiers journaux
+
+Consultez cette page Fichiers journaux d'application pour plus de détails sur les fichiers journaux. Ces fichiers journaux peuvent être utiles lorsque vous rencontrez des problèmes lors de l'exécution.
+
+### Ports réseau utilisés par PADS4
+
+Consultez la page Configurations des ports réseau pour plus d'informations sur les ports réseau utilisés par PADS4.
+
+Consultez la page Réplication avec des serveurs secondaires et/ou de sauvegarde pour plus d'informations sur la synchronisation.
+
+### Changer la base de données des capteurs
+
+Option pour changer le type de base de données utilisée pour le stockage des données de capteurs.
+Cliquez ici pour afficher plus d'informations.
+
+Important
+
+<Warning>Il est d'une importance vitale que vous n'installiez pas PADS4 Foundation sur un poste de travail / PC Viewer (qui est uniquement configuré pour Designer/Scheduler/Messenger, etc.). Cela installerait les fonctionnalités du serveur PADS4 sur votre poste de travail / PC Viewer, ce qui entraînerait la configuration en tant que PC Serveur. Il est cependant possible d'installer le logiciel PADS4 Clients après avoir installé PADS4 Foundation, car la machine est alors déjà classée comme PC Serveur.</Warning>

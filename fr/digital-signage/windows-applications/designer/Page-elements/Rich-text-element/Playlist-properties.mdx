@@ -1,0 +1,59 @@
+Ces propriétés définissent le **contenu textuel** affiché par l'élément **Rich Text**. Vous pouvez saisir un **élément de texte unique** ou créer une **playlist d'éléments textuels** qui seront lus séquentiellement.
+
+***
+
+### **Éditeur de texte enrichi avancé**
+
+* **Le formatage de base** (gras, italique, souligné, etc.) est disponible dans la barre d'outils.
+* Pour accéder aux **fonctionnalités avancées** (intégration de fournisseur de données, règles et plus), cliquez sur l'icône **Advanced Editor**.
+
+***
+
+### **Gestion des éléments de la playlist**
+
+* **Ajouter** de nouveaux éléments textuels.
+* **Modifier** les éléments existants.
+* **Changer l'ordre** des éléments textuels.
+* **Supprimer** des éléments textuels.
+* **Naviguer** à travers les éléments de la playlist à l'aide des boutons en bas.
+* **La durée totale** de la playlist est affichée.
+
+**Important:** Pour la gestion générale des playlists, consultez **Working with Playlists**.
+
+***
+
+### **Propriétés des éléments de playlist basés sur du texte**
+
+| **Option**                                  | **Description**                                                                                                                                     |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Texte**                                   | Texte statique directement saisi dans l'élément.                                                                                                    |
+| **Texte depuis la bibliothèque de contenu** | Utilise un fichier texte stocké dans la **Content Library** de PADS4 (recommandé).                                                                  |
+| **Texte depuis un fichier**                 | Fait référence à un fichier texte externe en dehors de la Content Library. **Non synchronisé automatiquement**—nécessite une distribution manuelle. |
+| **Pas de texte**                            | Insère une entrée vide, créant une pause dans la playlist.                                                                                          |
+
+***
+
+### **Propriété de contenu**
+
+* Affiche le **contenu textuel** ou la **référence au fichier texte** selon le type sélectionné.
+* **Parcourir la Content Library** ou le **système de fichiers local** pour sélectionner des fichiers.
+* Si **Texte depuis un fichier** est choisi, assurez-vous que le **chemin complet du fichier** est inclus.
+
+***
+
+### **Propriétés supplémentaires de la playlist**
+
+| **Propriété** | **Description**                                                              |
+| ------------- | ---------------------------------------------------------------------------- |
+| **Durée**     | Spécifie combien de temps le texte sera affiché (en secondes).               |
+| **Effet**     | Applique un **effet de transition d'entrée** et définit la durée de l'effet. |
+
+***
+
+### **Remarques**
+
+* **Texte multi-lignes :** Utilisez la touche **\[Enter]** pour séparer les lignes. Le retour à la ligne automatique dans l'éditeur **ne signifie pas automatiquement** un affichage multi-lignes.
+* **Fichiers texte brut :** Les paramètres **Data Source Text Conversion** déterminent comment le texte multi-lignes est traité.
+* **Formats pris en charge :** L'élément Rich Text peut lire les formats **Plain Text (TXT), Rich Text Format (RTF), et HTML**.
+* **Références de fichiers uniquement :** Si vous utilisez des fichiers texte externes, seules les **références** sont stockées. Si le fichier texte est mis à jour, la **dernière version** sera utilisée pendant la lecture.
+* **Contenu piloté par les données :** Lorsqu'il est lié à une **source de données**, les propriétés de la playlist deviennent **désactivées**, car les données en temps réel déterminent dynamiquement le contenu.

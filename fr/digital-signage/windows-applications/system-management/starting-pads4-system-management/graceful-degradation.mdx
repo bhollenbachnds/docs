@@ -1,0 +1,47 @@
+When PADS4 is installed for the first time, the user activates the installation with the PADS4 License Wizard application. During this process hardware-related information is collected to create a PADS4 product key that has been verified.
+
+#### **Graceful Degradation period of 7 days**
+
+When one or more hardware changes are made, PADS4 will detect this and allow the system to function for a 7 days period from that point on. During these 7 days the user will be notified during log-on that the system needs to be reactivated. This message pops up when starting the PADS4 Agent, Messenger, System Management, Scheduler or Designer application. It is possible to create an alert that automatically notifies someone by e-mail when this is detected.
+
+ 
+
+#### **Reactivation of the PADS4 Server**
+
+When a graceful degradation period is detected and you need to reactivate the PADS4 System follow the next steps:
+
+1. Contact your reseller and explain that hardware has changed on the PADS4 Server computer and the system needs to be reactivated. Please provide the PADS4 product key.
+2. The reseller will contact Net Display Systems who will check your license and enables the PADS4 product key to be reactivated.
+3. You will be notified by e-mail when the change has been made. Be aware that this is a manual process that takes place during working hours only.
+4. Start the License Wizard which is, in most cases, installed on the PADS4 Server computer and select the Server and press the Next button.
+5. It will show the current license details now. Please press the Next button to show the 'Select an action' window.
+6. Select the 'Reactivate current installation' option. The wizard will make connection to the PADS4 License server and check your PADS4 product key.\
+   When validation is performed, the system will reset your hardware changes and abort the degradation period. Be aware that the Server will need an internet connection for this.\
+   \
+   If an internet connection is not available, use the offline activation method instead by selecting the 'Activate installation offline' option in the License Wizard, which will guide you through the process.\
+   More information on how to perform an offline activation [can be found here.](/fr/ctrl-centre/licenses)
+
+Quickview:
+
+* When hardware changes are detected, PADS4 will stop working after a **grace period of 7 days**.
+* When the PADS4 Server is running on a **Virtual Server,** be aware that the **MAC address must be locked** to prevent hardware changes.
+* When the user logs on during a grace period, a message will be displayed to inform the user that an action must be performed before the end of the grace period.
+* **Disable sharing Bluetooth devices** on the Virtual Server to prevent PADS4 from detecting a different network adapter.
+* With the **PADS Agent application,** it is possible to **add an Alert** that **automatically notifies** a person when hardware changes are detected and an action is needed.
+
+ 
+
+#### **Change in PADS4 Server hardware components**
+
+When one or more PADS4 Server hardware components are changed after activations, PADS4 may detect a change and force a reactivation is needed for this PADS4 Server. In the meantime, PADS4 will continue to work for a period of 7 days. After this period, the PADS4 Server stops working. Reactivate the system before the 7 days period ends!\
+The detection of hardware changes is based on:
+
+* Operating system
+* Processor ID
+* OS Install date
+* OS serial number
+* BIOS serial number
+* Bios version
+* Network adapter
+* MAC address
+* Windows Activation code

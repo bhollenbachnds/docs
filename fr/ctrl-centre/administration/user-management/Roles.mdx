@@ -1,0 +1,108 @@
+Dans notre dernière version, 2025.1, nous introduisons notre nouveau système de gestion des utilisateurs.
+
+Ce changement fondamental déplace les paramètres de gestion des utilisateurs de l'application System Management vers le PADS4 Web Portal.
+
+Avec ce changement, nous avons également introduit des Rôles pour affiner davantage la partie gestion des utilisateurs de PADS4.
+
+Les Rôles vous permettront d'attribuer rapidement un certain ensemble de licences et de permissions à un utilisateur.
+
+<Warning>
+  Le nouveau système de gestion des utilisateurs n'est pas encore compatible avec Legacy CMS et Workspace
+</Warning>
+
+## Comment utiliser les rôles dans PADS4
+
+<Info>
+  Les licences System Management et License Management sont nécessaires pour administrer vos utilisateurs et rôles
+</Info>
+
+* Vous pouvez y accéder en vous connectant à votre PADS4 Web Portal avec votre compte Administrateur. Allez au Dashboard, et en bas à gauche, accédez à **Users**.
+
+![Users Pn](/images/ctrl-centre/administration/user-management/Users.png)
+
+* Sur le côté gauche, vous pouvez basculer entre les Utilisateurs et les Rôles
+
+![Users Overview Pn](/images/ctrl-centre/administration/user-management/Users-overview.png)
+
+* Dans l'aperçu des utilisateurs, vous verrez les utilisateurs et leurs informations correspondantes comme :
+  * Name
+  * Username
+  * Roles
+  * License
+
+![Single User Summary Pn](/images/ctrl-centre/administration/user-management/single-user-summary.png)
+
+* Dans la section Rôles, vous obtiendrez l'aperçu suivant des rôles disponibles, y compris les rôles par défaut, qui sont expliqués ci-dessous.
+
+![Role Overview Pn](/images/ctrl-centre/administration/user-management/role-overview.png)
+
+## Rôles par défaut
+
+Il y a 5 rôles par défaut :
+
+### CMS Advanced users group
+
+| Application  | Access            | Inheritance         |
+| ------------ | ----------------- | ------------------- |
+| Web Designer | Read/Write/Delete |                     |
+| CMS          | Read              |                     |
+| Content      | Read/Write/Delete | Content users group |
+
+### CMS Manager group
+
+| Application | Access            | Inheritance         |
+| ----------- | ----------------- | ------------------- |
+| CMS         | Read/Write/Delete |                     |
+| Users       | Read/Write/Delete |                     |
+| Content     | Read/Write/Delete | Content users group |
+
+### CMS User group
+
+| Application | Access            | Inheritance         |
+| ----------- | ----------------- | ------------------- |
+| CMS         | Read              |                     |
+| Content     | Read/Write/Delete | Content users group |
+
+### Content Managers group
+
+| Application | Access                   | Inheritance |
+| ----------- | ------------------------ | ----------- |
+| Content     | Read/Write/Delete/Modify |             |
+
+### Content User group
+
+| Application | Access            | Inheritance |
+| ----------- | ----------------- | ----------- |
+| Content     | Read/Write/Delete |             |
+
+## Personnalisation des rôles
+
+* Vous pouvez modifier ces rôles selon votre configuration préférée, ou vous pouvez créer vos propres Rôles où vous pouvez spécifier d'autres rôles dont il est membre, ou attribuer certaines licences.
+
+![New Roles Pn](/images/ctrl-centre/administration/user-management/new-roles.png)
+
+![Create Role Pn](/images/ctrl-centre/administration/user-management/create-role.png)
+
+* Avec ces rôles ou les rôles que vous avez créés, vous pouvez ensuite préciser davantage l'accès que vous accordez aux utilisateurs ayant un certain rôle aux applications disponibles dans le PADS4 Web Portal.
+
+### Bibliothèque de contenu
+
+* Faites un clic droit sur le dossier pour lequel vous souhaitez modifier/examiner l'accès et appuyez sur **"Edit access"**
+
+![Content Access Pn](/images/ctrl-centre/administration/user-management/content-access.png)
+
+* Un aperçu des rôles et des utilisateurs avec leurs droits sur ce dossier particulier s'affichera et vous permettra d'ajouter ou de supprimer des rôles et des utilisateurs.
+
+![Content Access 2 Pn](/images/ctrl-centre/administration/user-management/content-access-2.png)
+
+### Catégories du Web designer
+
+* Cliquez sur les 3 points à droite de votre catégorie et cliquez sur **"Edit access"**
+
+![Webdesigner Category Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png)
+
+### Modèles du Web designer
+
+* Passez votre souris sur un modèle et cliquez sur les trois points, cliquez sur **"Edit access"**
+
+![Webdesigner Template Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-template-access.png)

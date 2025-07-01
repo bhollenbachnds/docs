@@ -1,0 +1,141 @@
+L'outil **PADS4 Configuration** vous permet de définir et de gérer les paramètres système critiques pour votre installation PADS4.
+
+***
+
+![Pads4foundationconfiguration Pn](/images/install-pads4/install-pads4-server/PADS4Foundationconfiguration.png)
+
+## **Configuration d'hébergement**
+
+Spécifiez les paramètres de port pour l'hébergement de **PADS4** et activez éventuellement **HTTPS**.
+
+### **Paramètres de port**
+
+* **HTTP Port:** Le port utilisé pour héberger le **PADS4 CTRL Center** (par défaut : **80**).
+* **HTTPS Port (SSL):** Port sécurisé pour la communication **SSL-encrypted** (par défaut : **443**).
+
+### **Configuration SSL**
+
+Pour activer **SSL**, configurez les éléments suivants :
+
+* **DNS Host Name** – Nom de domaine enregistré.
+* **Certificate File** – Fournissez le fichier de certificat SSL (`.certificate`).
+* **Private Key File** – Spécifiez le fichier de clé privée correspondant (`.private`).
+
+### **Paramètres de sécurité supplémentaires**
+
+* **Enable HSTS:** Impose des connexions **HTTPS-only** pour une communication sécurisée.
+* **TLS Version:** Choisissez la **TLS version** requise (**1.0, 1.1, 1.2, or 1.3**) lors de l'utilisation de **SSL certificates** avec les domaines PADS4.
+
+### **Configuration du Message Broker**
+
+À partir de **PADS4 version 2022.3**, les utilisateurs peuvent sélectionner le **message broker**:
+
+* **Default:** **NDS Message Broker** (nouveau par défaut à partir de la version **2022.3**).
+* **Alternative:** **RabbitMQ** (disponible pour la compatibilité ascendante).
+
+### **Configuration du proxy inverse**
+
+À partir de **PADS4 version 2025.1**, les utilisateurs peuvent sélectionner le **proxy inverse préféré.**
+
+* **Default: PADS4 Reverse Proxy** (nouveau par défaut à partir de la version **2025.1**).
+* **Alternative: NGinx** (disponible pour la compatibilité ascendante).
+
+***
+
+## **Configuration de l'utilisateur root**
+
+* **Username:** Par défaut **`su\root`**.
+* **Password:** Sélectionnez un mot de passe lors de la mise à niveau vers **PADS4 version 2023.1 ou supérieure**.
+
+***
+
+## **Paramètres du serveur PADS4**
+
+* **Adresse IP :** Par défaut, le **PADS4 Server** fonctionne sur **localhost (127.0.0.1)**. Généralement, **PADS4 Foundation** et **PADS4 Server** sont installés sur la même machine.
+* **Port HTTP :** Le port de communication par défaut pour **PADS4 Server** est **9005**.
+
+***
+
+## **Services PADS4 Foundation**
+
+* **Emplacement de stockage personnalisé :** Si nécessaire, modifiez l'**emplacement de stockage par défaut** pour les **PADS4 Foundation Services**.
+* **Note:** Ce paramètre **n'affecte pas** le **dossier de contenu**. L'emplacement du **dossier de contenu** peut être défini à l'aide de **PADS4 System Management** pour chaque **domaine**.
+
+***
+
+## **PADS4 CMS (Hérité)**
+
+* **Langue par défaut :** Définissez la **langue par défaut** pour PADS4 CMS.
+* **Hôte public (FQDN) :** Abandonné dans **PADS4 2023.1** en raison de l'introduction des **PADS4 Domains**.
+* **Configuration de la base de données :** Sélectionnez le type de base de données pour le stockage :
+  * **SQLite**
+  * **SQL Server**
+
+***
+
+## **Sélection des services**
+
+Pour optimiser les performances du système, désactivez les **microservices inutilisés** sur le **PADS4 Server**. Voici une liste des **microservices** configurables :
+
+* **NDS.PADS4.FIDS.Server**
+* **NDS.Services.CMS**
+* **NDS.Services.Content**
+* **NDS.Services.Crystal**
+* **NDS.Services.Device**
+* **NDS.Services.Email**
+* **NDS.Services.Engine**
+* **NDS.Services.FIDS.Connector**
+* **NDS.Services.Globalization**
+* **NDS.Services.License**
+* **NDS.Services.Location**
+* **NDS.Services.Messaging**
+* **NDS.Services.Package**
+* **NDS.Services.PDF.ToImage**
+* **NDS.Services.PowerBI**
+* **NDS.Services.Powerpoint.ToVideo**
+* **NDS.Services.Process**
+* **NDS.Services.Replication**
+* **NDS.Services.Schedule**
+* **NDS.Services.Sensor**
+* **NDS.Services.Teams.Integration**
+* **NDS.Services.User.Scim**
+* **NDS.Services.UserProfile**
+* **NDS.Services.Video.Conversion**
+* **NDS.Services.Viewer**
+* **NDS.Visitor.Management**
+* **NDS.Web.DAV**
+* **NDS.Windows.Gateway**
+
+***
+
+## **Modifier la base de données des capteurs**
+
+Cliquez [**ici**](#) pour modifier la **sélection du type de base de données des capteurs**.
+
+***
+
+## **Application des modifications et redémarrage des services**
+
+Après avoir appliqué les modifications de configuration, **PADS4 redémarrera tous les services** pour appliquer les nouveaux paramètres.
+
+⚠ **Important:** Le redémarrage des **processus PADS4** peut prendre jusqu'à **30 secondes**, selon les spécifications de votre matériel.
+
+***
+
+## **Conseils et dépannage**
+
+### **Vérifier que PADS4 Server est en cours d'exécution**
+
+Pour vérifier si **PADS4 Server** est opérationnel :
+
+1. Ouvrez un **navigateur web**.
+2. Saisissez l'URL suivante en fonction de vos **paramètres** :
+
+   ```
+   http(s)://localhost:<port>  
+   ```
+
+   * Utilisez **`http`** ou **`https`** selon votre configuration.
+   * Remplacez `<port>` par le **port du serveur PADS4** réel (par exemple, **80, 443, ou 9005**).
+
+Si la **page de connexion PADS4 CTRL Center** apparaît, le serveur fonctionne correctement.

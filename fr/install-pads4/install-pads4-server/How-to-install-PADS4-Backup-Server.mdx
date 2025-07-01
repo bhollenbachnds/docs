@@ -1,0 +1,107 @@
+Voici votre version révisée avec la mise en forme préférée et le ton professionnel :
+
+***
+
+## **Télécharger le PADS4 Foundation Setup**
+
+Veuillez télécharger **PADS4 Foundation** depuis **[ici](http://go.pads4.com/?fwlink=1010)**.
+
+***
+
+## **Considérations préalables à l'installation**
+
+Avant de commencer l'installation de PADS4, assurez-vous que les conditions préalables suivantes sont remplies :
+
+1. Si vous prévoyez d'utiliser **Workspace** et/ou **CMS**, vérifiez que **Internet Information Services (IIS)** est installé sur le serveur.
+2. Si vous avez l'intention de stocker **Workspace** et/ou **CMS data** dans une **SQL Server database**, assurez-vous que SQL Server est installé et configuré.
+
+<Note>Il est recommandé de désactiver les scanners antivirus avant de commencer le processus d'installation ou de mise à jour. Certains programmes antivirus peuvent interférer avec l'installation, entraînant des erreurs de type "could not lock file".</Note>
+
+***
+
+## **Processus d'installation**
+
+<Steps>
+  <Step title="Étape Un">
+    Exécutez le fichier d'installation en tant qu'**Administrator**. Pour ce faire, faites un clic droit sur le fichier d'installation et sélectionnez **"Run as Administrator."**
+  </Step>
+
+  <Step title="Étape Deux">
+    Modifiez le dossier racine d'installation si nécessaire. L'emplacement par défaut est :
+
+    ```
+    C:\Program Files\PADS4  
+    ```
+  </Step>
+
+  <Step title="Étape Trois">
+    Lisez attentivement la **documentation d'installation** et le **contrat de licence** avant de continuer. Cochez les cases requises pour confirmer.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Vérifiez les options nécessaires et appuyez sur **"Install"** pour commencer le processus d'installation.
+  </Step>
+
+  <Step title="Étape Cinq">
+    La fenêtre **PADS4 Configuration** s'ouvrira pendant la configuration. Configurez les paramètres selon les exigences de votre installation et le type de licence.
+  </Step>
+
+  <Step title="Étape Six">
+    Une fois l'installation réussie, un message de confirmation apparaîtra indiquant que **PADS4 Foundation a été installé avec succès.**
+  </Step>
+
+  <Step title="Étape Sept - *Optionnel*">
+    Si vous souhaitez installer des **programmes PADS4 basés sur Windows** supplémentaires (tels que **PADS4 Scheduler, PADS4 Designer, etc.**), cochez la case pour **démarrer la configuration après la fin de l'installation de PADS4 Foundation.** La configuration vous permettra de sélectionner les **composants clients** requis.
+  </Step>
+</Steps>
+
+***
+
+## **Gestion des erreurs d'installation**
+
+### **Erreur pendant l'installation**
+
+Si une erreur se produit, une **fenêtre pop-up** apparaîtra contenant un lien **"click HERE"** vers le fichier journal d'installation.
+
+* Ce fichier journal enregistre chaque étape du processus d'installation et peut aider à diagnostiquer les problèmes d'installation.
+
+### **Emplacements des fichiers journaux**
+
+Pour plus de détails sur les fichiers journaux, consultez la **Application Log Files** page. Ces fichiers sont utiles pour résoudre les problèmes d'exécution.
+
+***
+
+## **Configuration d'un Backup Server**
+
+Si vous installez un **Backup Server**, suivez ces étapes en utilisant **PADS4 System Management** sur le **Main Server** :
+
+1. Ouvrez **PADS4 System Management**.
+2. Sélectionnez **Servers** dans le menu de gauche.
+3. Cliquez sur **"Add Backup Server"** dans la barre de ruban.
+4. Entrez un **display name** pour le Backup Server dans **PADS4 Agent**.
+5. Configurez les **network settings** pour que le **Main Server** communique avec le Backup Server.
+6. Assurez-vous qu'une **valid license** est attribuée au Backup Server.
+
+Pour plus de détails, consultez le **PADS4 System Management Manual**, disponible lors de l'**Windows Clients installation**.
+
+***
+
+## **Configuration Réseau**
+
+### **Ports Réseau Utilisés par PADS4**
+
+Pour une liste des ports requis et des paramètres réseau, consultez la page **[Network Ports Configuration](#)**.
+
+Pour des informations sur la **synchronization**, consultez la page **[Replication with Sub and/or Backup Servers](#)**.
+
+***
+
+## **Considérations Importantes pour l'Installation**
+
+<Warning>
+  ⚠ **N'installez PAS PADS4 Foundation sur un poste de travail ou un PC Viewer.**
+
+  * **PADS4 Foundation** doit être installé uniquement sur des **server machines**.
+  * L'installation de **PADS4 Foundation** sur un **workstation/Viewer PC** (configuré uniquement pour **PADS4 Designer, Scheduler, or Messenger**) activera la **server functionality**, modifiant sa configuration.
+  * Cependant, une fois que **PADS4 Foundation** est installé sur un **server**, vous pouvez installer le **PADS4 Client software** (par exemple, **Scheduler, Designer, Messenger**) sur la même machine si nécessaire.
+</Warning>

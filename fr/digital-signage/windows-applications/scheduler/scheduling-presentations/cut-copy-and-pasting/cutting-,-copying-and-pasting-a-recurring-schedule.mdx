@@ -1,0 +1,67 @@
+PADS4 Scheduler vous permet d'utiliser **cut**, **copy**, et **paste** opérations sur **recurring schedules**, ce qui facilite leur déplacement ou leur duplication entre différents **Viewers** ou **Viewer Groups**. Le comportement de ces actions diffère légèrement des planifications régulières (non récurrentes).
+
+***
+
+## Couper et coller une planification récurrente
+
+Lorsque vous **cut and paste** une planification récurrente, une **new schedule** est créée à la destination, et l'originale est supprimée.
+
+### Steps:
+
+1. Dans la **Destinations tree view**, sélectionnez le **Viewer** ou **Viewer Group** qui contient la planification récurrente.
+
+2. Dans la vue **Calendar** ou **Table**, sélectionnez la planification récurrente.
+
+3. Naviguez vers l'onglet **Home** dans la barre de ruban et cliquez sur **Cut** dans le groupe **Clipboard**.
+
+4. Une boîte de dialogue de confirmation apparaîtra. Confirmez que vous souhaitez supprimer la planification récurrente.
+
+   * La planification est supprimée de l'emplacement d'origine.
+   * Une copie reste dans le presse-papiers, prête à être collée.
+
+5. Naviguez vers la nouvelle destination et sélectionnez la position souhaitée.
+
+6. Cliquez sur **Paste** dans le groupe **Clipboard**.
+
+La planification récurrente est maintenant créée comme une **new, independent schedule** à la destination.
+
+Pour confirmer :
+
+* Faites un clic droit sur la planification collée
+* Sélectionnez **Edit > Schedule**
+* La fenêtre **Edit Schedule** montrera qu'il s'agit d'une nouvelle définition de récurrence
+
+***
+
+## Copier et coller une planification récurrente
+
+Lorsque vous **copy and paste** une planification récurrente, cela crée une **new timetable entry** dans l'objet de planification d'origine, à condition que le type de planification prenne en charge plusieurs destinations ou créneaux horaires (par exemple, une Advanced Schedule).
+
+### Steps:
+
+1. Dans la **Destinations tree view**, sélectionnez le **Viewer** ou **Viewer Group** qui contient la planification récurrente.
+
+2. Dans la vue **Calendar** ou **Table**, sélectionnez la planification récurrente.
+
+3. Cliquez sur **Copy** dans le groupe **Clipboard** de la barre de ruban.
+
+4. Naviguez vers la nouvelle date ou le Viewer où la planification doit être dupliquée.
+
+5. Cliquez sur **Paste**.
+
+La planification récurrente est maintenant ajoutée comme **new entry in the schedule's timetable**.
+
+Pour confirmer :
+
+* Faites un clic droit sur la planification collée
+* Sélectionnez **Edit > Schedule**
+* La fenêtre **Edit Schedule** affichera plusieurs entrées, y compris la nouvelle
+
+***
+
+## Résumé
+
+| Action       | Résultat                                                      |
+| ------------ | ------------------------------------------------------------- |
+| Cut + Paste  | Supprime l'original et crée une **new recurring schedule**    |
+| Copy + Paste | Ajoute une **new recurring entry** à la **existing schedule** |

@@ -1,0 +1,43 @@
+Les **Zone Viewer Properties** définissent comment le **Zone Viewer** est reconnu dans le **PADS4 system**. Pendant la lecture, le zone viewer affichera les **scheduled presentations** assignées à sa destination.
+
+***
+
+## **Méthodes d'identification**
+
+### **Manual Zone Viewer Name**
+
+* Entrez un **Viewer Name** que le **PADS4 system** utilisera pour identifier le **Zone Viewer**.
+* Ce nom permet un **targeted scheduling** pour des zones spécifiques.
+
+### **Zone Viewer Name Provided by Data Provider**
+
+* Le **Viewer Name** peut être attribué dynamiquement par un **data provider**.
+* Cela permet une **real-time assignment** du contenu basée sur des données externes.
+
+***
+
+## **Intégration du Data Provider**
+
+### **Data Provider**
+
+* Représente une **connection to an external data source** telle que :
+  * **Table de base de données, requête ou procédure stockée**
+  * **Fichier XML ou flux RSS**
+  * **Autres sources de contenu dynamique prises en charge**
+* Les data providers sont définis au **presentation level**, les rendant disponibles pour tous les éléments.
+
+### **Sélection de colonne**
+
+* Choisissez une **specific column** du **data provider** à lier au Zone Viewer.
+
+### **Sélection de ligne**
+
+* Définissez la **specific row** du data provider qui sera liée au Zone Viewer.
+
+***
+
+## **Considérations importantes**
+
+* **Shared Viewer Names** – Contrairement aux **Viewers** ordinaires, le **Zone Viewer Name** ne **not** doit pas nécessairement être **unique**.
+* **Multiple Displays** – Si le même **Zone Viewer Name** est utilisé à plusieurs endroits, toutes les instances **display the same scheduled content**.
+* **Group Scheduling** – Lorsqu'un **Zone Viewer** est programmé au sein d'un **Viewer Group**, tous les Viewers de ce groupe afficheront le **same content** pour la Zone.

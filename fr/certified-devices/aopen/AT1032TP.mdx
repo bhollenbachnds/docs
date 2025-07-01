@@ -1,0 +1,221 @@
+## **Première utilisation**
+
+Pendant l'installation, vous devrez configurer l'emplacement du **PADS4 Server location**. Il est recommandé de **complete the installation of the PADS4 Server first** avant de configurer l'appareil.
+
+<Note>La version minimale requise du **PADS4 Server version** pour l'**PADS4 AOpen App** est **2024**.</Note>
+
+***
+
+## **Installation du PADS4 AOpen Viewer**
+
+Le fichier **PADS4AOpen.apk** est disponible sur le **PADS4 Server** dans le dossier **Apps** du répertoire d'installation :
+
+```
+C:\Program Files\PADS4\Foundation\Apps  
+```
+
+Alternativement, téléchargez la dernière version **[here](#)**.
+
+<Note> Si vous téléchargez la dernière version, assurez-vous que l'APK est également placé dans le répertoire **Apps** sur le **PADS4 Server**. Si le serveur contient une version différente, il installera cette version lors de la connexion.</Note>
+
+### **Étapes d'installation**
+
+<Steps>
+  <Step title="Première étape">
+    Copiez le **PADS4AOpen.apk** sur une **clé USB**.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Insérez la **clé USB** dans l'appareil.
+  </Step>
+
+  <Step title="Troisième étape">
+    Ouvrez l'**File Manager app** sur l'appareil.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Naviguez jusqu'à la **clé USB** et ouvrez **PADS4AOpen.apk**.
+  </Step>
+
+  <Step title="Cinquième étape">
+    Un avertissement apparaîtra indiquant que l'installation à partir de sources inconnues n'est pas autorisée.
+  </Step>
+
+  <Step title="Sixième étape">
+    Allez à **Paramètres** et autorisez l'installation à partir de cette source.
+  </Step>
+
+  <Step title="Étape Sept">
+    Appuyez sur le bouton **Retour** et installez l'application.
+  </Step>
+
+  <Step title="Étape Huit">
+    Après l'installation, ouvrez l'application **PADS4 AOpen**.
+  </Step>
+</Steps>
+
+***
+
+## **Connexion au PADS4 Server**
+
+Une fois installé, le **PADS4 Viewer** doit être connecté au **PADS4 Server**.
+
+### **Format d'adresse du PADS4 Server :**
+
+```
+protocol://host:port/hostpath/  
+```
+
+* **Protocol:** Utilisez `http` ou `https` selon qu'un certificat SSL est appliqué ou non.
+* **Host:** Le nom DNS ou l'adresse IP du **PADS4 Server**.
+* **Port:** À spécifier uniquement si le **PADS4 Server** n'utilise pas les ports HTTP/HTTPS par défaut.
+* **Chemin d'hôte :** Configuré dans **System Management** (par défaut : `PADS4`).
+
+**Example:**
+
+```
+http://localhost/pads4  
+```
+
+### **Étapes de connexion**
+
+<Steps>
+  <Step title="Étape Un">
+    Entrez l'emplacement du **PADS4 Server Location**.
+  </Step>
+
+  <Step title="Étape Deux">
+    (Facultatif) Spécifiez un **Viewer Name**. Si laissé vide, le **PADS4 Server** en générera un.
+  </Step>
+
+  <Step title="Étape Trois">
+    Définissez **PADS4 AOpen Viewer** comme **Home app** et sélectionnez **Always**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Appuyez sur **Start**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Autorisez l'application **PADS4 AOpen application** à modifier les paramètres système.
+  </Step>
+
+  <Step title="Étape Six">
+    Activez **"Allow to modify system settings"** et appuyez sur le bouton **Back**.
+  </Step>
+
+  <Step title="Étape Sept">
+    Appuyez sur **Start** à nouveau.
+  </Step>
+
+  <Step title="Étape Huit">
+    Accordez la **permission to store content** sur l'appareil lorsque vous y êtes invité.
+  </Step>
+</Steps>
+
+Une fois terminé, le **PADS4 Viewer** devrait se connecter au **PADS4 Server**. Des paramètres supplémentaires tels que **screen orientation** et **remote control restrictions** peuvent être configurés à l'aide de **PADS4 Agent** ou **Viewer Settings**.
+
+***
+
+## **Ajustement des options du PADS4 Viewer**
+
+* **Appuyez longuement sur l'écran** pour ouvrir le menu.
+* Alternativement, les options peuvent être modifiées à distance via **PADS4 CTRL Center** ou **PADS4 Agent**.
+
+***
+
+## **Accès au menu Android**
+
+1. Ouvrez **Viewer Menu**.
+2. Cliquez sur **Launcher Settings**.
+3. Cliquez sur l'icône **Gear Icon** dans le coin inférieur droit.
+4. Le menu **Android Settings** s'ouvrira.
+
+<Note>Si **"Hide Status Bar"** est activé, la seule façon de quitter les paramètres Android est de **restart the device** en déconnectant l'alimentation.</Note>
+
+***
+
+## **Désactivation de la barre de navigation Android**
+
+(Facultatif) La barre de navigation peut être désactivée pour empêcher toute interaction non autorisée.
+
+### **Steps:**
+
+1. Ouvrez **Viewer Options**.
+2. Cliquez sur **Launcher Settings**.
+3. Cliquez sur l'icône **Gear Icon** dans le coin inférieur droit.
+4. Sélectionnez **System Tools**.
+5. Cliquez sur **Disable Navigation Bar**.
+
+<Note>Si désactivé, la seule façon de quitter les paramètres est de **restart the device** en déconnectant l'alimentation.</Note>
+
+***
+
+## **Effectuer une réinitialisation d'usine**
+
+Pour restaurer l'appareil aux paramètres d'usine :
+
+1. Ouvrez **Android Settings**.
+2. Naviguez vers **Backup & Reset**.
+3. Sélectionnez **Factory Data Reset**.
+4. (Facultatif) Sélectionnez **Erase SD Card**.
+5. Appuyez sur **Reset Tablet**.
+6. Confirmez avec **Erase Everything**.
+
+***
+
+## **Fonctionnalités prises en charge et limitations**
+
+### **Fonctionnalités générales**
+
+| Fonctionnalité | Description                                                                                                                                        |
+| :------------: | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Automatic PADS4 Software Updates** – HTML5 Viewer se met à jour automatiquement.                                                                 |
+|        ✅       | **Offline Mode** – L'appareil continuera à diffuser des présentations et à mettre à jour les planifications pendant **7 days** en mode hors ligne. |
+
+### **Capacités de l'appareil**
+
+| Fonctionnalité | Description                                                                                              |
+| :------------: | -------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Portrait Mode** – L'appareil pivote automatiquement.                                                   |
+|        ✅       | **Block Remote Control** – Empêche l'utilisation non autorisée.                                          |
+|        ✅       | **Supports HTTP & HTTPS**                                                                                |
+|        ❌       | **Turn Off Display** – Non pris en charge.                                                               |
+|        ✅       | **Cluster Viewer** – Peut être utilisé dans le cadre d'une configuration en cluster.                     |
+|        ✅       | **LED Light Bar** – Prend en charge plusieurs couleurs (Rouge, Vert, Bleu, Cyan, Jaune, Magenta, Blanc). |
+
+### **Éléments pris en charge**
+
+| Fonctionnalité | Description                                                                                                                         |
+| :------------: | ----------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Élément Vidéo** – Prend en charge **1 vidéo** à la fois.                                                                          |
+|        ❌       | **Rotation vidéo, Vidéos sans couture, Réflexion, Inclinaison, Retournement** – Non pris en charge.                                 |
+|        ✅       | **Streaming HTTP, Images (JPG, PNG, BMP, GIF), Texte, Ligne, Formes, Texte défilant, Texte formaté, Tableaux, Boutons interactifs** |
+|        ❌       | **Effets Flash & Découpage** – Non pris en charge.                                                                                  |
+|        ✅       | **Affichage PDF** – Nécessite une licence Xpert.                                                                                    |
+
+### **Connexions de données**
+
+**Connexions de données** permettent l'intégration avec des sources de données externes.
+
+| Fonctionnalité | Description                                                                                  |
+| :------------: | -------------------------------------------------------------------------------------------- |
+|        ✅       | **Prend en charge plus de 70 fournisseurs de données** – Récupère des données en temps réel. |
+|        ✅       | **Variables Viewer** – Gestion centralisée du contenu.                                       |
+|        ✅       | **Liaisons de propriétés** – Modifie dynamiquement les éléments en fonction des données.     |
+
+### **Gestion des appareils**
+
+| Fonctionnalité | Description                                                                                                                                                         |
+| :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Surveillance de l'état de connexion & Alertes**                                                                                                                   |
+|        ❌       | **Redémarrage, Arrêt, Wake-On-LAN** – Non pris en charge.                                                                                                           |
+|        ✅       | **Redémarrer Viewer, Prendre des captures d'écran, Récupérer des journaux, Modifier les paramètres du Viewer, Installer des polices, Suivi de preuve de diffusion** |
+
+***
+
+## **Remarques importantes**
+
+<Warning> **Intégrité des fichiers de contenu** – La **PADS4 Content Library** vérifie l'intégrité des fichiers en utilisant **MD5 checksum** pendant la synchronisation. </Warning>
+
+<Warning> **Limitations de preuve de diffusion** – Un maximum de **50,000 records** peuvent être stockés localement pendant les périodes hors ligne. Lorsqu'ils sont pleins, les enregistrements les plus anciens sont supprimés en premier. </Warning>

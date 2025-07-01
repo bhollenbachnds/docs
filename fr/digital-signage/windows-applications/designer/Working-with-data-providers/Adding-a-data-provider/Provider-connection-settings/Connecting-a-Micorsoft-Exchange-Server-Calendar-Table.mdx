@@ -1,0 +1,58 @@
+La **Calendar table** dans Microsoft Exchange Server contient des informations détaillées sur les **événements programmés, réunions et rendez-vous**. Voici une ventilation des **colonnes et types de données** de la table.
+
+***
+
+### **Colonnes et descriptions de la table Calendar**
+
+| **Nom de colonne**         | **Type de données** | **Description**                                                                           |
+| -------------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
+| **Subject**                | String              | Titre de l'événement.                                                                     |
+| **Body**                   | String              | Description de l'événement (*Inclus en option*).                                          |
+| **UniqueBody**             | String              | Affiche la partie du corps qui est unique à la conversation dont cet élément fait partie. |
+| **Importance**             | String              | Priorité de l'événement (**High, Normal, Low**).                                          |
+| **Start**                  | Date                | Date et heure de début de l'événement.                                                    |
+| **Start\_DayOfWeek**       | Integer             | Représentation numérique du jour de début de la semaine.                                  |
+| **End**                    | Date                | Date et heure de fin de l'événement.                                                      |
+| **End\_DayOfWeek**         | Integer             | Représentation numérique du jour de fin de la semaine.                                    |
+| **Location**               | String              | Emplacement physique ou virtuel où se déroule l'événement.                                |
+| **Duration**               | Integer             | Durée de l'événement (unité par défaut : minutes).                                        |
+| **DurationInSeconds**      | Integer             | Durée de l'événement en secondes.                                                         |
+| **DurationInMinutes**      | Integer             | Durée de l'événement en minutes.                                                          |
+| **DurationInHours**        | Integer             | Durée de l'événement en heures.                                                           |
+| **DurationInDays**         | Integer             | Durée de l'événement en jours.                                                            |
+| **MinutesLeftBeforeStart** | Integer             | Nombre de minutes restantes avant le début de l'événement.                                |
+| **MinutesLeftBeforeEnd**   | Integer             | Nombre de minutes restantes avant la fin de l'événement.                                  |
+| **Organizer**              | String              | Nom de la personne qui a organisé l'événement.                                            |
+| **IsAllDayEvent**          | Boolean             | Indique si l'événement dure toute la journée (**True/False**).                            |
+| **IsAssociated**           | Boolean             | Indique si l'événement est associé à un autre élément (**True/False**).                   |
+| **IsMeeting**              | Boolean             | Indique si l'événement est une réunion (**True/False**).                                  |
+| **IsOnlineMeeting**        | Boolean             | Indique si l'événement est une réunion en ligne (**True/False**).                         |
+| **IsRecurring**            | Boolean             | Indique si l'événement est un événement récurrent (**True/False**).                       |
+| **RecurrentStartDate**     | Date                | Date de début de la **série d'événements récurrents**.                                    |
+| **RecurrentEndDate**       | Date                | Date de fin de la **série d'événements récurrents**.                                      |
+| **IsReminderSet**          | Boolean             | Indique si un rappel est défini pour cet événement (**True/False**).                      |
+| **NetShowUrl**             | Chaîne              | URL de la **Microsoft NetShow** réunion en ligne.                                         |
+| **OriginalStart**          | Date                | La date de début originale avant que des modifications ne soient apportées.               |
+| **DateTimeCreated**        | Date                | La date et l'heure de création de l'événement.                                            |
+| **DateTimeSent**           | Date                | La date et l'heure d'envoi de l'invitation à l'événement.                                 |
+| **DateTimeReceived**       | Date                | La date et l'heure de réception de l'invitation à l'événement.                            |
+| **AppointmentType**        | Chaîne              | Type de rendez-vous (**Single, RecurringMaster, Occurrence, Exception**).                 |
+| **HasAttachments**         | Booléen             | Indique si l'événement a des pièces jointes (**True/False**).                             |
+| **Sensitivity**            | Chaîne              | Visibilité de l'événement (**Normal, Personal, Private, Confidential**).                  |
+| **Status**                 | Chaîne              | **Statut de disponibilité hérité** de l'événement.                                        |
+| **Categories**             | Chaîne              | Catégories associées à cet événement.                                                     |
+| **IsUnmodified**           | Booléen             | Indique si l'événement a été modifié après sa création (**True/False**).                  |
+| **LastModifiedTime**       | Date                | La date et l'heure de la dernière modification de l'événement.                            |
+| **LastModifiedName**       | Chaîne              | Le nom de la personne qui a modifié l'événement en dernier.                               |
+| **RequiredAttendees**      | Chaîne              | Liste des **mandatory** participants.                                                     |
+| **OptionalAttendees**      | Chaîne              | Liste des **optional** participants.                                                      |
+| **Resources**              | Chaîne              | Liste des **resources** (salles, équipements) réservés pour cette réunion.                |
+
+***
+
+### **Notes:**
+
+* Cette structure de tableau est utilisée dans **PADS4** lors de la récupération des données de calendrier depuis **Microsoft Exchange Server**.
+* Certains champs (comme **Body, UniqueBody**) peuvent être **optional** selon vos paramètres Exchange.
+* **Recurring events** ont des propriétés supplémentaires comme **RecurrentStartDate, RecurrentEndDate**.
+* **Online meetings** ont des attributs spécifiques comme **IsOnlineMeeting and NetShowUrl**.

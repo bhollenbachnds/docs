@@ -1,0 +1,47 @@
+Avec les fonctions de présentations programmées, vous pouvez obtenir un aperçu des présentations PADS4 qui ont été programmées pour votre PADS4 Viewer.
+
+ 
+
+#### **Pour récupérer les présentations programmées d'un PADS4 Viewer**
+
+1. Cliquez sur le **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez **Scheduled presentations** dans la liste des catégories d'informations disponibles pour le viewer.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées du Viewer sélectionné et afficher les résultats dans la fenêtre des présentations programmées.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre des présentations programmées**
+
+La fenêtre des présentations programmées affiche le calendrier stocké localement des présentations PADS4 programmées d'un PADS4 Viewer. Avec ce calendrier, vous pouvez vérifier si votre présentation programmée est arrivée sur votre viewer et si le viewer diffuse la présentation que vous attendiez.
+
+![EN Agent Scheduledpresentations Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Scheduledpresentations.png)
+
+Lorsque vous avez programmé une présentation PADS4 avec PADS4 Scheduler, les informations de présentation et de programmation sont immédiatement transmises aux PADS4 Viewers concernés, où elles sont stockées localement. De cette façon, la lecture de votre présentation programmée est assurée, même lorsque le PADS4 Viewer est temporairement hors ligne. Chaque PADS4 Viewer peut fonctionner sans être connecté à son PADS4 Server pendant une durée maximale d'une semaine.
+
+<Warning>
+  La fenêtre des présentations programmées affiche ce qu'on appelle les "calendriers opérationnels" d'un PADS4 Viewer. Chaque PADS4 Viewer utilise les informations de programmation qu'il reçoit du PADS4 Server pour générer son propre calendrier des présentations à diffuser réellement, appelé calendriers opérationnels.\
+  \
+  Lorsqu'il y a des programmations qui se chevauchent partiellement, le viewer ajustera automatiquement les informations de période d'affichage des programmations et n'inclura que la programmation avec la priorité la plus élevée pour chaque période de temps. Lorsqu'une présentation programmée est complètement chevauchée par une présentation programmée avec une priorité plus élevée, elle ne sera pas incluse du tout.\
+  \
+  **Par conséquent, les informations dans la fenêtre des présentations programmées peuvent différer des informations dans l'application PADS4 scheduler.**
+</Warning>
+
+**Date de début**\
+La date et l'heure de début calculées de la présentation programmée.
+
+**Date de fin**\
+La date et l'heure de fin calculées de la présentation programmée.
+
+**Presentation**\
+Le nom de la présentation programmée. Lorsque vous avez programmé une playlist de présentations, le nom de la première présentation dans la playlist est répertorié.
+
+**Type**\
+Indique si la présentation programmée fait partie d'une programmation récurrente ou non (Ad-hoc).

@@ -1,0 +1,52 @@
+Avec les fonctions Data Server, vous pouvez inspecter les paramètres du Fournisseur de données et les données en temps réel fournies par votre PADS4 (Sous)Serveur.
+
+ 
+
+#### **Pour récupérer les informations du Data Server de votre PADS4 (Sous) Serveur**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Data Server** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées du PADS4 Server connecté et affichera les résultats dans la fenêtre Data Server. Si votre installation PADS4 inclut des sous-serveurs, vous devez d'abord sélectionner un serveur avant de sélectionner la catégorie d'informations.
+
+ 
+
+#### **Fenêtre Data Server**
+
+La fenêtre Data Server affiche les Fournisseurs de données et les Fournisseurs Data Vault qui sont utilisés. Cela vous permet de vérifier les paramètres, les performances et les données en temps réel fournies par chaque Fournisseur de données individuel.
+
+![EN Agent Dataserver 1196x712 Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Dataserver_1196x712.png)
+
+**Fournisseurs de données**
+
+* Tous les Fournisseurs de données définis actuellement utilisés par un ou plusieurs PADS4 Viewers.
+* Tous les Fournisseurs Data Vault définis actuellement actifs sur le PADS4 (Sous) Serveur sélectionné. L'icône de verrouillage devant l'icône du type de Fournisseur de données indique qu'il s'agit d'un Fournisseur Data Vault.
+
+#### **Fournisseurs Data Vault**
+
+Plus d'informations sur l'utilisation des Fournisseurs Data Vault peuvent être trouvées dans la documentation PADS4 System Management.\
+Les Fournisseurs Data Vault vous permettront de spécifier des Fournisseurs de données définis par le système, qui ne sont pas modifiables par les Utilisateurs Designer, et de chiffrer les données.
+
+Si vous survolez l'élément dans la liste, une infobulle avec des informations détaillées s'affichera.
+
+En sélectionnant l'un des Fournisseurs listés, PADS4 affichera dans la zone de droite (Fournisseur de données) des informations détaillées, et en bas, les données réelles.
+
+**Fournisseur de données (droite)**\
+Horodatages de lecture, détails de performance et paramètres de configuration du Fournisseur sélectionné. Les paramètres de configuration sont en lecture seule. Pour modifier les paramètres de configuration d'un Fournisseur de données, vous devez ajuster le Fournisseur de données dans votre présentation avec l'application PADS4 Designer ou en utilisant l'application System Management lorsque le Fournisseur est un Fournisseur Data Vault.
+
+**Résultats du Fournisseur de données (bas)**\
+Les données en temps réel sont fournies par le Fournisseur de données sélectionné. Ce sont les données que PADS4 Data Server distribue à tous les PADS4 Viewers connectés.
+
+ 
+
+<Tip>
+  Si votre Fournisseur de données utilise PADS4 Data Server pour collecter et fournir des données en temps réel, vous pouvez utiliser une combinaison de la fenêtre [Fournisseurs de données](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Data%20Providers.htm) et de la fenêtre Data Server pour vérifier la livraison des données en temps réel. Dans la fenêtre Data Server, vous pouvez vérifier si les données en temps réel sont correctement collectées par PADS4 Data Server. Dans la fenêtre Fournisseurs de données, vous pouvez vérifier si les données collectées sont correctement livrées à votre PADS4 Viewer par le Data Server.
+</Tip>
+
+<Info>
+  L'information concernant quels Viewers sont connectés à un Fournisseur Data Vault n'est pas disponible. Seuls les Viewers qui ont une connexion Fournisseur de données à un Data Server sont visibles.\
+  \
+  Si vous vous connectez à une version PADS4 Server 4.7 ou inférieure, l'interface graphique affichera l'ancienne disposition de fenêtre.
+</Info>

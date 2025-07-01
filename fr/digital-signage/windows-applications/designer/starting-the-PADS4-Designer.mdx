@@ -1,0 +1,144 @@
+## **Introduction**
+
+PADS4 Designer est l'application utilisée pour créer et gérer les présentations pour votre système PADS4. Ce guide explique comment démarrer PADS4 Designer, le connecter à votre serveur PADS4, gérer les connexions et traiter les problèmes potentiels comme les changements de matériel.
+
+***
+
+## **Démarrer PADS4 Designer**
+
+Vous pouvez démarrer **PADS4 Designer** de plusieurs façons :
+
+### **Option 1 : Depuis le menu Démarrer de Windows**
+
+* Cliquez sur le bouton **Démarrer** dans la barre des tâches Windows.
+* Naviguez vers **Programmes** > **PADS4**.
+* Sélectionnez **Designer**.
+
+### **Option 2 : Depuis l'Explorateur Windows (Program Files)**
+
+* Allez dans le dossier où PADS4 Designer est installé.
+* Double-cliquez sur `PADSDesigner.exe`.
+
+### **Option 3 : Ouvrir un fichier de présentation**
+
+* Localisez un `.padsx` fichier de présentation.
+* Double-cliquez pour l'ouvrir dans PADS4 Designer.
+* Si Designer est en cours d'exécution, le fichier s'ouvrira dans un nouvel onglet. Sinon, il lancera Designer et ouvrira le fichier.
+
+***
+
+## **Connexion à votre serveur PADS4**
+
+### **Première connexion**
+
+1. Démarrez PADS4 Designer.
+2. Si aucune connexion n'est configurée, un message vous invitera à en configurer une. Cliquez sur **OK**.
+3. Dans la fenêtre **PADS4 Server Connection**, cliquez sur **Add**.
+4. Remplissez les propriétés de connexion (voir Gestion des connexions ci-dessous).
+5. Cliquez sur **Connect** pour établir la connexion.
+6. Si nécessaire, entrez **Username** et **Password**, et cliquez sur **Log On**.
+
+> **Note** : Même avec la connexion automatique activée, la première connexion doit être manuelle.
+
+### **Connexions ultérieures**
+
+* Si la connexion automatique est activée, PADS4 Designer se connectera automatiquement au démarrage.
+* Sinon, allez dans l'**onglet Home** dans le ruban, cliquez sur le bouton **Connect** et sélectionnez une connexion.
+* Pour vous déconnecter, cliquez sur **Disconnect** dans l'onglet Home.
+* Pour vous reconnecter, cliquez à nouveau sur **Connect**.
+
+***
+
+## **Travailler hors ligne**
+
+Si vous ne pouvez pas vous connecter mais que vous vous êtes connecté avec succès dans le passé :
+
+* Cliquez sur **Work Offline** dans la fenêtre **PADS4 Server Connections**.
+* Vous pouvez continuer à travailler pendant **7 jours** maximum avant qu'une reconnexion ne soit nécessaire.
+* Les modifications effectuées hors ligne se synchroniseront automatiquement lors de la reconnexion.
+
+> **Note** : Le mode hors ligne stocke les modifications localement jusqu'à la synchronisation.
+
+***
+
+## **Gestion des connexions**
+
+### **Affichage des connexions**
+
+* Allez dans **onglet Home > Manage (Connections)**.
+* Cela ouvre la fenêtre **PADS4 Server Connections** affichant toutes les connexions définies.
+
+### **Ajout d'une nouvelle connexion**
+
+1. Cliquez sur **Add**.
+2. Sur l'**onglet Connection**, remplissez :
+   * **Connection Name** : Identifiant unique.
+   * **Automatic Connection** : Si la connexion doit être automatique au démarrage.
+   * **Server Connection** : Choisissez parmi :
+     * **Automatic** : Détecte le serveur (nécessite que le port UDP 3702 soit ouvert et que le serveur soit en cours d'exécution).
+     * **This Computer** : Pour les installations locales.
+     * **Other** : Spécifiez manuellement l'IP, le nom DNS ou le nom d'hôte du serveur.
+3. Paramètres **HTTP Settings** optionnels pour les ajustements manuels du chemin/port de l'hôte.
+4. Sur l'**onglet Credentials**, spécifiez **Username** et **Password**, et **Automatic Login** si désiré.
+5. **Synchronization tab** : Définissez le mode de synchronisation (Automatic, Manual, None), le dossier de stockage du contenu et le domaine si applicable.
+6. Cliquez sur **OK** pour enregistrer.
+
+### **Modification d'une connexion**
+
+* Assurez-vous que la connexion est déconnectée.
+* Sélectionnez la connexion et cliquez sur **Edit**.
+* Effectuez les modifications et cliquez sur **OK**.
+
+### **Suppression d'une connexion**
+
+* Sélectionnez la connexion et cliquez sur **Remove**.
+
+> **Conseil** : La gestion de plusieurs connexions est utile pour les agences qui soutiennent différents clients.
+
+***
+
+## **Dégradation progressive et changements matériels**
+
+### **Période de grâce**
+
+* Si des changements matériels sont détectés, PADS4 accorde une **période de grâce de 7 jours** pour réactiver le système.
+* Pendant cette période, un message apparaîtra lors de la connexion vous invitant à réactiver.
+
+### **Processus de réactivation**
+
+1. Contactez votre revendeur avec votre **clé de produit PADS4**.
+2. Le revendeur coordonnera avec **Net Display Systems (NDS)** pour approbation.
+3. Après approbation, utilisez **License Wizard** sur le serveur PADS4 :
+   * Sélectionnez **Reactivate current installation**.
+   * Le système se connectera à NDS et réinitialisera les modifications matérielles.
+4. Si aucune connexion Internet n'est disponible, utilisez **offline activation** via License Wizard.
+
+> **Important** : Réactivez avant la fin de la période de grâce, ou PADS4 cessera de fonctionner.
+
+### **Paramètres de détection du matériel**
+
+PADS4 surveille :
+
+* Système d'exploitation
+* ID du processeur
+* Date d'installation et numéro de série du système d'exploitation
+* Numéro de série et version du BIOS
+* Adaptateur réseau et adresse MAC
+* Code d'activation Windows
+
+### **Prévention des problèmes sur les serveurs virtuels**
+
+* Assurez-vous que **l'adresse MAC est fixe**.
+* Évitez **le partage de périphériques Bluetooth** pour éviter les changements d'adaptateur virtuel.
+
+***
+
+## **Conseils rapides**
+
+* Utilisez **Alerts via PADS4 Agent** pour notifier les administrateurs lorsque des changements matériels sont détectés.
+* Vérifiez régulièrement les paramètres de connexion, surtout après des modifications du réseau ou du serveur.
+* Stockez **PADS4 product keys and connection credentials** de manière sécurisée.
+
+***
+
+Faites-moi savoir si vous souhaitez que ce contenu soit formaté dans un document téléchargeable !

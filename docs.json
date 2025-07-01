@@ -1,19 +1,30 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "contextual": {
-    "options": [
-      "chatgpt",
-      "claude"
-    ]
-  },
+  "$schema": "https://mintlify.com/docs.json",
   "name": "PADS4 Platform",
   "colors": {
     "primary": "#00ADBA",
     "light": "#74c9c3",
     "dark": "#00ADBA"
   },
+  "logo": {
+    "light": "/logo/PADS4.png",
+    "dark": "/logo/PADS4-dark.png"
+  },
   "favicon": "/favicon.svg",
+  "navbar": {
+    "links": [
+      {
+        "label": "Contact",
+        "href": "mailto:support@pads4.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Support Portal",
+      "href": "https://support.pads4.com"
+    }
+  },
   "navigation": {
     "dropdowns": [
       {
@@ -256,8 +267,7 @@
                 "pages": [
                   "ctrl-centre/administration/user-management/Roles"
                 ]
-              },
-              "ctrl-centre/administration/Enable-SSO"
+              }
             ]
           },
           {
@@ -1280,5 +1290,11 @@
     "socials": {
       "linkedin": "https://linkedin.com/company/pads-4"
     }
+  },
+  "contextual": {
+    "options": [
+      "chatgpt",
+      "claude"
+    ]
   }
 }
