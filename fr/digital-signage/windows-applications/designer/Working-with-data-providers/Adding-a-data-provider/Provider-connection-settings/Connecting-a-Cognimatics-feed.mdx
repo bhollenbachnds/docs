@@ -1,10 +1,10 @@
-Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics devices** pour les **données de mesure d'audience**, comme le **comptage de personnes**, la **surveillance des files d'attente**, et l'**analyse démographique**.
+Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics devices** pour les **données de mesure d'audience**, telles que le **comptage de personnes**, la **surveillance des files d'attente** et l'**analyse démographique**.
 
 ***
 
-## **Étapes pour ajouter ou modifier un fournisseur de données Cognimatics**
+## **Étapes pour ajouter ou modifier un Cognimatics Data Provider**
 
-### **1. Démarrer l'assistant de fournisseur de données**
+### **1. Démarrer l'Assistant Data Provider**
 
 * Suivez les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
 * Choisissez **Cognimatics** comme type de fournisseur.
@@ -16,9 +16,9 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 
 ### **3. Sélectionner la source active**
 
-* Choisissez la **source installée et active** de la liste.
+* Choisissez la **source installée et active** dans la liste.
 * Seulement **une source** peut être active à la fois.
-* Sélectionner une **source inactive** entraînera une **erreur 404** lors du test.
+* La sélection d'une **source inactive** entraînera une **erreur 404** lors du test.
 
 ### **4. Sélectionner le type de données : Temps réel ou Période**
 
@@ -32,10 +32,10 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 
 | Option de période | Description                                   |
 | ----------------- | --------------------------------------------- |
-| **Aucune**        | Aucune plage de temps n'est appliquée.        |
-| **Aujourd'hui**   | Données pour **aujourd'hui** uniquement.      |
-| **Hier**          | Données pour **hier** uniquement.             |
-| **Manuel**        | Sélection personnalisée de la plage de dates. |
+| **None**          | Aucune plage de temps n'est appliquée.        |
+| **Today**         | Données pour **aujourd'hui** uniquement.      |
+| **Yesterday**     | Données pour **hier** uniquement.             |
+| **Manual**        | Sélection personnalisée de la plage de dates. |
 
 ***
 
@@ -43,27 +43,27 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 
 ### **Compteur de personnes**
 
-| Champ             | Type      | Description                         |
-| ----------------- | --------- | ----------------------------------- |
-| **Name**          | String    | Nom du lecteur.                     |
-| **Serial**        | String    | Numéro de série du logiciel.        |
-| **In**            | Integer   | Nombre de personnes entrées.        |
-| **Out**           | Integer   | Nombre de personnes sorties.        |
-| **People Inside** | Integer   | Différence entre `In`In`Out`Out     |
-| **Timestamp**     | Date/Time | Heure d'enregistrement des données. |
+| Champ             | Type      | Description                                 |
+| ----------------- | --------- | ------------------------------------------- |
+| **Name**          | String    | Nom du lecteur.                             |
+| **Serial**        | String    | Numéro de série du logiciel.                |
+| **In**            | Integer   | Nombre de personnes entrées.                |
+| **Out**           | Integer   | Nombre de personnes sorties.                |
+| **People Inside** | Integer   | Différence entre les valeurs `In`In`Out`Out |
+| **Timestamp**     | Date/Time | Heure d'enregistrement des données.         |
 
 ### **Surveillance de flux unidirectionnel**
 
-| Champ             | Type      | Description                         |
-| ----------------- | --------- | ----------------------------------- |
-| **Name**          | String    | Nom du lecteur.                     |
-| **Serial**        | String    | Numéro de série du logiciel.        |
-| **In**            | Integer   | Nombre de personnes entrées.        |
-| **Out**           | Integer   | Nombre de personnes sorties.        |
-| **People Inside** | Integer   | Différence entre `In`In`Out`Out     |
-| **Timestamp**     | Date/Time | Heure d'enregistrement des données. |
+| Champ             | Type      | Description                             |
+| ----------------- | --------- | --------------------------------------- |
+| **Name**          | String    | Nom du lecteur.                         |
+| **Serial**        | String    | Numéro de série du logiciel.            |
+| **In**            | Integer   | Nombre de personnes qui sont entrées.   |
+| **Out**           | Integer   | Nombre de personnes qui sont sorties.   |
+| **People Inside** | Integer   | Différence entre `In` et `Out` valeurs. |
+| **Timestamp**     | Date/Time | Heure d'enregistrement des données.     |
 
-### **Surveillance de file d'attente**
+### **Queue Monitoring**
 
 | Champ               | Type      | Description                                        |
 | ------------------- | --------- | -------------------------------------------------- |
@@ -78,18 +78,18 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 | **Region 3 People** | Integer   | Personnes dans **Region 3**.                       |
 | **Timestamp**       | Date/Time | Heure d'enregistrement des données.                |
 
-### **Surveillance d'occupation**
+### **Occupancy Monitoring**
 
-| Champ             | Type      | Description                         |
-| ----------------- | --------- | ----------------------------------- |
-| **Name**          | String    | Nom du lecteur.                     |
-| **Serial**        | String    | Numéro de série du logiciel.        |
-| **In**            | Integer   | Nombre de personnes entrées.        |
-| **Out**           | Integer   | Nombre de personnes sorties.        |
-| **People Inside** | Integer   | Différence entre `In`In`Out`Out     |
-| **Timestamp**     | Date/Time | Heure d'enregistrement des données. |
+| Champ             | Type      | Description                             |
+| ----------------- | --------- | --------------------------------------- |
+| **Name**          | String    | Nom du lecteur.                         |
+| **Serial**        | String    | Numéro de série du logiciel.            |
+| **In**            | Integer   | Nombre de personnes qui sont entrées.   |
+| **Out**           | Integer   | Nombre de personnes qui sont sorties.   |
+| **People Inside** | Integer   | Différence entre `In` et `Out` valeurs. |
+| **Timestamp**     | Date/Time | Heure d'enregistrement des données.     |
 
-### **Analyse démographique**
+### **Demographics Analysis**
 
 | Champ               | Type      | Description                                  |
 | ------------------- | --------- | -------------------------------------------- |
@@ -98,9 +98,9 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 | **Gender Average**  | Integer   | -1 = Femme, 1 = Homme.                       |
 | **Age Average**     | Integer   | Âge moyen estimé.                            |
 | **Boxsize Average** | Integer   | Taille moyenne estimée de **face box size**. |
-| **Gender Last**     | Integer   | Dernier **genre** enregistré.                |
-| **Age Last**        | Integer   | Dernier **âge** enregistré.                  |
-| **Boxsize Last**    | Integer   | Dernière **taille de boîte** enregistrée.    |
+| **Gender Last**     | Integer   | Dernier **gender** enregistré.               |
+| **Age Last**        | Integer   | Dernier **age** enregistré.                  |
+| **Boxsize Last**    | Integer   | Dernière **box size** enregistrée.           |
 
 ***
 
@@ -114,14 +114,14 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 ## **Considérations importantes**
 
 * **Assurez-vous que la source correcte est sélectionnée :**
-  * Si une **source inactive** est sélectionnée, le bouton **Preview** renverra une erreur **404 error**.
+  * Si une **inactive source** est sélectionnée, le bouton **Preview** renverra une **404 error**.
 
 * **Vérifiez l'accès réseau :**
-  * Si vous utilisez **PADS4 Data Server**, assurez-vous que le flux **Cognimatics feed** est **accessible** depuis le **réseau du serveur**.
-  * Si **vous n'utilisez pas** un **Data Server**, chaque **PADS4 Viewer** doit avoir **un accès direct** au flux Cognimatics.
+  * Si vous utilisez **PADS4 Data Server**, assurez-vous que le **Cognimatics feed** est **accessible** depuis le **server's network**.
+  * Si **not** vous n'utilisez pas de **Data Server**, chaque **PADS4 Viewer** doit avoir **direct access** au flux Cognimatics.
 
 * **Consultez la documentation Cognimatics :**
-  * Pour les **descriptions détaillées des champs** et les **configurations des appareils**, référez-vous à la **documentation officielle de Cognimatics**.
+  * Pour les **detailed field descriptions** et les **device configurations**, consultez la **Cognimatics official documentation**.
 
 ***
 
@@ -129,13 +129,13 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 
 * **Aucune donnée n'apparaît ?**
   * Vérifiez que l'**HTTP Address/IP** est correcte.
-  * Assurez-vous que l'**appareil Cognimatics** est allumé et actif.
-  * Vérifiez si la **source correcte** est sélectionnée.
+  * Assurez-vous que l'**Cognimatics device** est allumé et actif.
+  * Vérifiez si la **correct source** est sélectionnée.
 
 * **Valeurs de données inattendues ?**
-  * Confirmez que la **plage de temps sélectionnée** correspond aux données que vous attendez.
-  * Si vous utilisez le **Real-Time Mode**, assurez-vous que le flux de données est en cours de mise à jour.
+  * Confirmez que la **selected time range** correspond aux données que vous attendez.
+  * Si vous utilisez le **Real-Time Mode**, assurez-vous que le flux de données est mis à jour.
 
 ***
 
-En configurant un **Cognimatics data feed** dans **PADS4**, les entreprises peuvent **analyser le flux de clients, les temps d'attente et les informations démographiques** en **temps réel**, optimisant ainsi leur **contenu d'affichage dynamique et leurs opérations**.
+En configurant un **Cognimatics data feed** dans **PADS4**, les entreprises peuvent **analyser le flux de clients, les temps d'attente et les informations démographiques** en **real-time**, optimisant leurs **contenu et opérations d'affichage dynamique**.

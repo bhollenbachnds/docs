@@ -1,6 +1,6 @@
 ## **Introduction**
 
-PADS4 Designer est l'application utilisée pour créer et gérer les présentations pour votre système PADS4. Ce guide explique comment démarrer PADS4 Designer, le connecter à votre serveur PADS4, gérer les connexions et traiter les problèmes potentiels comme les changements de matériel.
+PADS4 Designer est l'application utilisée pour créer et gérer les présentations pour votre système PADS4. Ce guide explique comment démarrer PADS4 Designer, le connecter à votre PADS4 Server, gérer les connexions et traiter les problèmes potentiels comme les changements de matériel.
 
 ***
 
@@ -21,13 +21,13 @@ Vous pouvez démarrer **PADS4 Designer** de plusieurs façons :
 
 ### **Option 3 : Ouvrir un fichier de présentation**
 
-* Localisez un `.padsx` fichier de présentation.
+* Localisez un fichier de`.padsx` présentation.
 * Double-cliquez pour l'ouvrir dans PADS4 Designer.
 * Si Designer est en cours d'exécution, le fichier s'ouvrira dans un nouvel onglet. Sinon, il lancera Designer et ouvrira le fichier.
 
 ***
 
-## **Connexion à votre serveur PADS4**
+## **Connexion à votre PADS4 Server**
 
 ### **Première connexion**
 
@@ -38,12 +38,12 @@ Vous pouvez démarrer **PADS4 Designer** de plusieurs façons :
 5. Cliquez sur **Connect** pour établir la connexion.
 6. Si nécessaire, entrez **Username** et **Password**, et cliquez sur **Log On**.
 
-> **Note** : Même avec la connexion automatique activée, la première connexion doit être manuelle.
+> **Remarque** : Même avec la connexion automatique activée, la première connexion doit être manuelle.
 
 ### **Connexions ultérieures**
 
 * Si la connexion automatique est activée, PADS4 Designer se connectera automatiquement au démarrage.
-* Sinon, allez dans l'**onglet Home** dans le ruban, cliquez sur le bouton **Connect** et sélectionnez une connexion.
+* Sinon, allez dans l'**onglet Home** du ruban, cliquez sur le bouton **Connect** et sélectionnez une connexion.
 * Pour vous déconnecter, cliquez sur **Disconnect** dans l'onglet Home.
 * Pour vous reconnecter, cliquez à nouveau sur **Connect**.
 
@@ -57,7 +57,7 @@ Si vous ne pouvez pas vous connecter mais que vous vous êtes connecté avec suc
 * Vous pouvez continuer à travailler pendant **7 jours** maximum avant qu'une reconnexion ne soit nécessaire.
 * Les modifications effectuées hors ligne se synchroniseront automatiquement lors de la reconnexion.
 
-> **Note** : Le mode hors ligne stocke les modifications localement jusqu'à la synchronisation.
+> **Remarque** : Le mode hors ligne stocke les modifications localement jusqu'à la synchronisation.
 
 ***
 
@@ -65,22 +65,22 @@ Si vous ne pouvez pas vous connecter mais que vous vous êtes connecté avec suc
 
 ### **Affichage des connexions**
 
-* Allez dans **onglet Home > Manage (Connections)**.
+* Allez dans **Home tab > Manage (Connections)**.
 * Cela ouvre la fenêtre **PADS4 Server Connections** affichant toutes les connexions définies.
 
 ### **Ajout d'une nouvelle connexion**
 
 1. Cliquez sur **Add**.
-2. Sur l'**onglet Connection**, remplissez :
+2. Dans l'**onglet Connection**, remplissez :
    * **Connection Name** : Identifiant unique.
    * **Automatic Connection** : Si la connexion doit être automatique au démarrage.
    * **Server Connection** : Choisissez parmi :
      * **Automatic** : Détecte le serveur (nécessite que le port UDP 3702 soit ouvert et que le serveur soit en cours d'exécution).
      * **This Computer** : Pour les installations locales.
      * **Other** : Spécifiez manuellement l'IP, le nom DNS ou le nom d'hôte du serveur.
-3. Paramètres **HTTP Settings** optionnels pour les ajustements manuels du chemin/port de l'hôte.
-4. Sur l'**onglet Credentials**, spécifiez **Username** et **Password**, et **Automatic Login** si désiré.
-5. **Synchronization tab** : Définissez le mode de synchronisation (Automatic, Manual, None), le dossier de stockage du contenu et le domaine si applicable.
+3. Paramètres **HTTP Settings** optionnels pour les ajustements manuels du chemin/port d'hôte.
+4. Dans l'**onglet Credentials**, spécifiez **Username** et **Password**, et **Automatic Login** si souhaité.
+5. **Onglet Synchronization** : Définissez le mode de synchronisation (Automatic, Manual, None), le dossier de stockage du contenu et le domaine si applicable.
 6. Cliquez sur **OK** pour enregistrer.
 
 ### **Modification d'une connexion**
@@ -102,20 +102,20 @@ Si vous ne pouvez pas vous connecter mais que vous vous êtes connecté avec suc
 ### **Période de grâce**
 
 * Si des changements matériels sont détectés, PADS4 accorde une **période de grâce de 7 jours** pour réactiver le système.
-* Pendant cette période, un message apparaîtra lors de la connexion vous invitant à réactiver.
+* Pendant cette période, un message apparaîtra lors de la connexion invitant à la réactivation.
 
 ### **Processus de réactivation**
 
-1. Contactez votre revendeur avec votre **clé de produit PADS4**.
+1. Contactez votre revendeur avec votre **PADS4 product key**.
 2. Le revendeur coordonnera avec **Net Display Systems (NDS)** pour approbation.
-3. Après approbation, utilisez **License Wizard** sur le serveur PADS4 :
+3. Après approbation, utilisez **License Wizard** sur le PADS4 Server:
    * Sélectionnez **Reactivate current installation**.
-   * Le système se connectera à NDS et réinitialisera les modifications matérielles.
-4. Si aucune connexion Internet n'est disponible, utilisez **offline activation** via License Wizard.
+   * Le système se connectera à NDS et réinitialisera les changements matériels.
+4. Si aucune connexion internet n'est disponible, utilisez **offline activation** via License Wizard.
 
-> **Important** : Réactivez avant la fin de la période de grâce, ou PADS4 cessera de fonctionner.
+> **Important** : Réactivez avant la fin de la période de grâce, sinon PADS4 cessera de fonctionner.
 
-### **Paramètres de détection du matériel**
+### **Paramètres de détection matérielle**
 
 PADS4 surveille :
 

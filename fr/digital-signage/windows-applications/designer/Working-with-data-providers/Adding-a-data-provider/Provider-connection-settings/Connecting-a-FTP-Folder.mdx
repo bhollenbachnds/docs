@@ -1,24 +1,24 @@
-Le **FTP folder provider** dans **PADS4** vous permet de vous connecter à un **remote FTP server** et d'accéder à ses fichiers pour les utiliser dans vos **digital signage presentations**.
+Le **FTP folder provider** dans **PADS4** vous permet de vous connecter à un **serveur FTP distant** et d'accéder à ses fichiers pour les utiliser dans vos **présentations d'affichage dynamique**.
 
 ***
 
-## **Étapes pour Ajouter/Modifier une Connexion de Dossier FTP dans PADS4**
+## **Étapes pour ajouter/modifier une connexion à un dossier FTP dans PADS4**
 
-### **1. Démarrer l'Assistant de Fournisseur de Données**
+### **1. Démarrer l'Assistant de fournisseur de données**
 
-* Ouvrez l'**Data Provider Wizard** en suivant les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
-* Sélectionnez **FTP Folder** comme **provider type**.
+* Ouvrez l'**Assistant de fournisseur de données** en suivant les étapes dans **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**.
+* Sélectionnez **FTP Folder** comme **type de fournisseur**.
 
-### **2. Spécifier le Serveur FTP et les Paramètres de Connexion**
+### **2. Spécifier les paramètres du serveur FTP et de connexion**
 
 * **Saisissez l'URL FTP** (par exemple, `ftp://yourserver.com/folder/`).
 * **Authentification (si nécessaire) :**
-  * Saisissez le **username** et le **password** si le serveur FTP nécessite des identifiants de connexion.
-* **Paramètres de proxy (si nécessaire) :**
+  * Saisissez le **nom d'utilisateur** et le **mot de passe** si le serveur FTP nécessite des identifiants de connexion.
+* **Paramètres du proxy (si nécessaire) :**
   * Configurez un serveur proxy si nécessaire pour l'accès à Internet.
 * **Options de sécurité :**
-  * Activer **Utiliser SSL** pour les connexions FTP sécurisées (**FTPS**).
-  * Activer **Passive Mode** si le client doit utiliser un port supérieur à **1024** lors de la connexion au port **21**.
+  * Activez **Use SSL** pour les connexions FTP sécurisées (**FTPS**).
+  * Activez **Passive Mode** si le client doit utiliser un port supérieur à **1024** lors de la connexion au port **21**.
 
 Cliquez sur **Next** pour continuer.
 
@@ -30,16 +30,16 @@ Cliquez sur **Next** pour continuer.
 * **Filtrage de fichiers :**
   * Utilisez **Search Extension Restriction** pour filtrer les fichiers par type (par exemple, `.jpg`, `.pdf`).
 * **Options de tri :**
-  * Choisissez les préférences de tri pour **file retrieval order**.
+  * Choisissez les préférences de tri pour **l'ordre de récupération des fichiers**.
 
 Cliquez sur **Next** pour continuer.
 
 ***
 
-### **4. Terminer l'assistant**
+### **4. Terminer l'Assistant**
 
 * Cliquez sur **Finish** pour finaliser la connexion FTP.
-* Le **PADS4 Viewer** récupérera désormais **files** depuis le dossier FTP en temps réel.
+* Le **PADS4 Viewer** récupérera désormais les **fichiers** du dossier FTP en temps réel.
 
 ***
 
@@ -47,8 +47,8 @@ Cliquez sur **Next** pour continuer.
 
 * **Accès au PADS4 Data Server :**
   * Si vous utilisez un **PADS4 Data Server**, le dossier FTP **doit être accessible** depuis **l'emplacement du serveur**.
-  * Si **vous n'utilisez pas de Data Server**, assurez-vous que chaque **PADS4 Designer and Viewer** a **accès à Internet** pour accéder au **dossier FTP**.
+  * Si **vous n'utilisez pas de Data Server**, assurez-vous que chaque **PADS4 Designer et Viewer** a **accès à Internet** pour le **dossier FTP**.
 * **Comportement de tri :**
-  * Les **options de tri** génériques dans les **dernières étapes** de l'assistant **remplaceront** les paramètres de tri spécifiques aux dossiers.
+  * Les **options de tri génériques** dans les **dernières étapes** de l'assistant **remplaceront** les paramètres de tri spécifiques au dossier.
 
 En suivant ces étapes, vous pouvez **intégrer avec succès le contenu d'un dossier FTP** dans vos **présentations d'affichage dynamique PADS4**.

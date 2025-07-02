@@ -4,7 +4,7 @@ Le **Microsoft Excel provider** dans **PADS4** vous permet de vous connecter à 
 
 ### **Étapes pour ajouter ou modifier une connexion Microsoft Excel**
 
-#### **1. Démarrer l'Assistant Fournisseur de données**
+#### **1. Démarrer l'Assistant Fournisseur de Données**
 
 * Ouvrez l'**Data Provider Wizard** dans **PADS4**.
 * Suivez les étapes pour **Adding a Data Provider** ou **Editing a Data Provider**.
@@ -23,7 +23,7 @@ Le **Microsoft Excel provider** dans **PADS4** vous permet de vous connecter à 
 * **Sélectionner le fichier**
   * Cliquez sur **Browse** pour localiser le **Excel file**.
 
-* **Activer "La première ligne contient des informations de colonne"**
+* **Activer "First Row Contains Column Information"**
   * Si votre feuille Excel **includes column headers**, activez cette option pour supprimer la première ligne de votre ensemble de données.
 
 Cliquez sur **Next** pour continuer.
@@ -41,7 +41,7 @@ Cliquez sur **Next** pour continuer.
 
 #### **4. Terminer la configuration**
 
-* Suivez les étapes restantes dans l'**Data Provider Wizard**.
+* Suivez les étapes restantes dans le **Data Provider Wizard**.
 * Cliquez sur **Finish** pour finaliser la configuration.
 
 ***
@@ -50,18 +50,18 @@ Cliquez sur **Next** pour continuer.
 
 * **Utilisation d'un PADS4 Data Server ?**
   * Assurez-vous que les **Office System drivers** sont installés sur le **PADS4 Server**.
-  * L'**Excel file location must be accessible** du **Data Server's point of view**.
+  * L'**Excel file location must be accessible** depuis le **Data Server's point of view**.
 
 * **Pas d'utilisation d'un PADS4 Data Server ?**
   * Assurez-vous que **PADS4 Designer** (pour la prévisualisation) et tous les **PADS4 Viewers** have:
     * Les **Office System drivers** installés.
-    * **Access** à l'emplacement du **Excel file** spécifié.
+    * **Accès** à l'emplacement du **Excel file** spécifié.
 
 * **Éviter les dossiers réseau partagés**
   * Référencer un **Excel file in a shared network folder** peut causer :
     * **High network traffic** lors de l'actualisation des données.
     * **File locking issues** si plusieurs utilisateurs accèdent au fichier simultanément.
 
-* **Copie automatique de fichiers**
+* **Copie automatique de fichier**
   * PADS4 **creates an internal copy** du fichier Excel avant de lire les données.
   * Cela empêche les **file locking conflicts** et assure une **smooth data retrieval**.

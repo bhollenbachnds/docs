@@ -1,44 +1,44 @@
-Les **options de défilement** définissent comment **le défilement des données** est géré dans l'élément de tableau, y compris **les lignes non défilantes, l'affichage des données groupées et les transitions automatiques de pages**.
+Le **scroll options** définissent comment **data scrolling** est géré dans l'élément tableau, y compris **non-scrolling rows, grouped data display, and automatic page transitions**.
 
 ***
 
-## **Faire défiler les données une fois et afficher la page suivante**
+## **Scroll Data Once and Show the Next Page**
 
-* **Enabled:** Le tableau fait défiler toutes les **lignes de données une fois**. Après l'affichage de la dernière ligne, la présentation **passe automatiquement à la page suivante**.
-* **Disabled:** Le tableau continue de défiler **indéfiniment**, en bouclant à travers les données disponibles.
+* **Enabled:** Le tableau fait défiler toutes les **data rows once**. Après l'affichage de la dernière ligne, la présentation **automatically switches to the next page**.
+* **Disabled:** Le tableau continue de défiler **indefinitely**, en bouclant à travers les données disponibles.
 
-> **Meilleur cas d'utilisation :**
+> **Best Use Case:**
 >
-> * Lorsque le nombre de **lignes de données est inconnu**, mais vous devez vous assurer **que chaque ligne est affichée exactement une fois** avant de passer à la page suivante.
+> * Lorsque le nombre de **data rows is unknown**, mais que vous devez vous assurer que **each row is displayed exactly once** avant de passer à la page suivante.
 
 ***
 
-## **Ne pas faire défiler les X premières lignes**
+## **Don't Scroll the First X Rows**
 
-* **Définir un nombre fixe de lignes** qui **resteront toujours visibles** pendant que les autres lignes défilent.
-* Utile pour **afficher des informations critiques ou de haute priorité** en haut du tableau.
+* **Define a fixed number of rows** qui **always remain visible** pendant que les autres lignes défilent.
+* Utile pour **displaying critical or high-priority information** en haut du tableau.
 
-> **Exemple de cas d'utilisation :**
+> **Example Use Case:**
 >
-> * **Aéroports** : Les **cinq premières lignes** restent statiques pour afficher les vols qui partent bientôt, tandis que les autres vols défilent en dessous.
-> * **Marchés boursiers** : Les **principales entreprises** restent visibles, avec **les actions moins critiques qui défilent**.
+> * **Airports**: Les **first five rows** restent statiques pour afficher les vols qui partent bientôt, tandis que les autres vols défilent en dessous.
+> * **Stock Markets**: Les **top companies** restent visibles, avec **less critical stocks scrolling**.
 
 ***
 
-## **Défilement des données, Regroupement par**
+## **Scroll Data, Group By**
 
-* Affiche **des ensembles de données groupées** un à la fois avant de passer au groupe suivant.
-* **Sélectionnez une colonne** qui contient les informations de regroupement.
-* Le **Fournisseur de données doit déjà être trié** par la colonne de groupe sélectionnée.
+* Affiche **grouped data sets** un à la fois avant de passer au groupe suivant.
+* **Select a column** qui contient les informations de regroupement.
+* Le **Data Provider must already be sorted** par la colonne de groupe sélectionnée.
 
-> **Exemple de cas d'utilisation :**
+> **Example Use Case:**
 >
-> * **Réservations de chambres d'hôtel** : Affiche d'abord **les réservations de la Chambre 101**, puis passe à **la Chambre 102**, puis **la Chambre 103**, etc.
-> * **Rapports de ventes d'entreprise** : Affiche les données de ventes **regroupées par département**, garantissant que les données de chaque département sont affichées séparément.
+> * **Hotel Room Reservations**: Affiche d'abord **Room 101 bookings**, puis passe à **Room 102**, puis **Room 103**, etc.
+> * **Company Sales Reports**: Affiche les données de vente **grouped by department**, en s'assurant que les données de chaque département sont affichées séparément.
 
 ***
 
-## **Remarques importantes**
+## **Important Notes**
 
-* **Chaque élément d'une ligne doit avoir le défilement des données activé** pour qu'il puisse défiler dans le tableau.
-* **Le tri doit être configuré dans les paramètres du Fournisseur de données**—l'élément de tableau ne **trie pas** les données automatiquement.
+* **Each element in a row must have data scrolling enabled** pour qu'il défile dans le tableau.
+* **Sorting must be configured within the Data Provider settings**—l'élément tableau ne **not** trie pas les données automatiquement.

@@ -1,38 +1,38 @@
-À la **deuxième étape** de l'**Assistant de fournisseur de données**, vous définissez un **nom unique** pour votre fournisseur de données et configurez les paramètres pour **la récupération de données en temps réel**.
+À la **deuxième étape** du **Data Provider Wizard**, vous définissez un **nom unique** pour votre fournisseur de données et configurez les paramètres pour **la récupération de données en temps réel**.
 
 ***
 
 ## **Étapes pour configurer les paramètres généraux du fournisseur**
 
-1. **Démarrer l'Assistant de fournisseur de données**
-   * Suivez les étapes dans **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**
+1. **Démarrer le Data Provider Wizard**
+   * Suivez les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**
 2. **Saisir un nom unique pour le fournisseur**
-   * Attribuez un **Nom de fournisseur** (doit être unique dans votre présentation)
+   * Attribuez un **Provider Name** (doit être unique dans votre présentation)
    * Facultativement, saisissez une **Description**
-3. **Décider d'utiliser ou non le serveur de données PADS4**
+3. **Décider d'utiliser ou non le PADS4 Data Server**
    * **Activer ou désactiver** l'option :\
-     **"Utiliser le serveur de données pour la récupération des données"**
-   * Si **activé**, les données en temps réel sont récupérées de manière centralisée via le **serveur de données PADS4**
+     **"Make use of the Data Server for retrieval of Data"**
+   * Si **activé**, les données en temps réel sont récupérées de manière centralisée via le **PADS4 Data Server**
    * Si **désactivé**, chaque **PADS4 Viewer** récupère les données **individuellement**
-4. **Activer la mise en cache (Optionnel)**
-   * **Utiliser le cache de conception**: Stocke les données de la source pour **design-time preview**
-   * **Générer des valeurs d'exemple**: Crée **placeholder values** si la source de données n'est pas disponible
+4. **Activer la mise en cache (Facultatif)**
+   * **Use Design Cache** : Stocke les données de la source pour **l'aperçu en phase de conception**
+   * **Generate Sample Values** : Crée des **valeurs d'espace réservé** si la source de données n'est pas disponible
 5. **Passer à l'étape suivante**
 
 ***
 
 ## **Utilisation du PADS4 Data Server**
 
-Le **PADS4 Data Server** récupère et distribue **real-time data** à tous les Viewers connectés.
+Le **PADS4 Data Server** récupère et distribue **des données en temps réel** à tous les Viewers connectés.
 
 ### **Comparaison des méthodes de récupération de données**
 
-| **Fonctionnalité**           | **Utilisation du PADS4 Data Server**                   | **Récupération des données individuellement**                        |
-| ---------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------- |
-| **Récupération des données** | Requête unique pour tous les Viewers                   | Chaque Viewer récupère les données séparément                        |
-| **Performance**              | Optimisée (réduit les requêtes de base de données)     | Plus de charge sur la source de données                              |
-| **Cas d'utilisation**        | Réseaux à grande échelle, sources de données lentes    | Requêtes spécifiques au Viewer (par ex., filtrage par nom de Viewer) |
-| **Support de basculement**   | Bascule vers un serveur PADS4 de secours si nécessaire | Pas de redondance intégrée                                           |
+| **Fonctionnalité**           | **Utilisation du PADS4 Data Server**                   | **Récupération individuelle des données**                          |
+| ---------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------ |
+| **Récupération des données** | Une seule requête pour tous les Viewers                | Chaque Viewer récupère les données séparément                      |
+| **Performance**              | Optimisée (réduit les requêtes de base de données)     | Plus de charge sur la source de données                            |
+| **Cas d'utilisation**        | Réseaux à grande échelle, sources de données lentes    | Requêtes spécifiques au Viewer (par ex., filtrage par Viewer Name) |
+| **Support de basculement**   | Bascule vers un serveur PADS4 de secours si nécessaire | Pas de redondance intégrée                                         |
 
 ### **Quand activer le PADS4 Data Server**
 
@@ -56,12 +56,12 @@ La mise en cache peut **améliorer les performances** et **permettre la concepti
 | **Option de mise en cache** | **Fonction**                                                                 |
 | --------------------------- | ---------------------------------------------------------------------------- |
 | **Use Design Cache**        | Enregistre **jusqu'à 999 lignes** de données pour une utilisation hors ligne |
-| **Generate Sample Values**  | Remplace les données manquantes par du **texte de substitution**             |
+| **Generate Sample Values**  | Remplace les données manquantes par du **texte d'espace réservé**            |
 | **Idéal pour**              | Concevoir des présentations **sans accès aux données en direct**             |
 
 ### **Exemple de cas d'utilisation**
 
-Un **designer** doit créer une **mise en page basée sur des données** mais n'a pas **d'accès à la base de données**. En utilisant des **données mises en cache**, il peut toujours **concevoir et tester** la mise en page.
+Un **concepteur** doit créer une **mise en page basée sur des données** mais n'a pas **d'accès à la base de données**. En utilisant des **données mises en cache**, il peut toujours **concevoir et tester** la mise en page.
 
 ***
 
@@ -74,5 +74,5 @@ Un **designer** doit créer une **mise en page basée sur des données** mais n'
 
 ## **Étapes finales**
 
-* **Cliquez sur Suivant** pour passer aux **Paramètres de connexion**
-* Complétez l'**Assistant de fournisseur de données**
+* **Cliquez sur Next** pour passer aux **Connection Settings**
+* Complétez le **Data Provider Wizard**

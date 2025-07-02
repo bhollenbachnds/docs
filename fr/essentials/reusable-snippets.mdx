@@ -1,5 +1,5 @@
 ---
-- title: Extraits Réutilisables
+- title: Extraits réutilisables
 - description: Extraits personnalisés réutilisables pour maintenir le contenu synchronisé
 - icon: recycle
 ---
@@ -10,7 +10,7 @@ import SnippetIntro from '/snippets/snippet-intro.mdx';
 
 ## Création d'un extrait personnalisé
 
-**Pré-condition** : Vous devez créer votre fichier d'extrait dans le répertoire `snippets`.
+**Condition préalable** : Vous devez créer votre fichier d'extrait dans le répertoire `snippets`.
 
 <Note>
   Toute page dans le répertoire `snippets` sera traitée comme un extrait et ne sera pas rendue en tant que page autonome. Si vous souhaitez créer une page autonome à partir de l'extrait, importez l'extrait dans un autre fichier et appelez-le comme un composant.
@@ -71,7 +71,7 @@ Hello, my name is {myName} and I like {myObject.fruit}.
 
 ### Composants réutilisables
 
-1. Dans votre fichier d'extrait, créez un composant qui prend des props en exportant votre composant sous forme de fonction fléchée.
+1. Dans votre fichier d'extrait, créez un composant qui accepte des props en exportant votre composant sous forme de fonction fléchée.
 
 ```mdx snippets/custom-component.mdx
 export const MyComponent = ({ title }) => (
@@ -83,7 +83,7 @@ export const MyComponent = ({ title }) => (
 ```
 
 <Warning>
-  MDX ne se compile pas à l'intérieur du corps d'une fonction fléchée. Tenez-vous en à la syntaxe HTML quand vous le pouvez ou utilisez un export par défaut si vous avez besoin d'utiliser MDX.
+  MDX ne se compile pas dans le corps d'une fonction fléchée. Tenez-vous-en à la syntaxe HTML quand vous le pouvez ou utilisez un export par défaut si vous avez besoin d'utiliser MDX.
 </Warning>
 
 2. Importez l'extrait dans votre fichier de destination et passez les props

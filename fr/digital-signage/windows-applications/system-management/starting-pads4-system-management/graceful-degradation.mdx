@@ -1,47 +1,47 @@
-When PADS4 is installed for the first time, the user activates the installation with the PADS4 License Wizard application. During this process hardware-related information is collected to create a PADS4 product key that has been verified.
+Lorsque PADS4 est installé pour la première fois, l'utilisateur active l'installation avec l'application PADS4 License Wizard. Au cours de ce processus, des informations relatives au matériel sont collectées pour créer une clé de produit PADS4 qui a été vérifiée.
 
-#### **Graceful Degradation period of 7 days**
+#### **Période de dégradation progressive de 7 jours**
 
-When one or more hardware changes are made, PADS4 will detect this and allow the system to function for a 7 days period from that point on. During these 7 days the user will be notified during log-on that the system needs to be reactivated. This message pops up when starting the PADS4 Agent, Messenger, System Management, Scheduler or Designer application. It is possible to create an alert that automatically notifies someone by e-mail when this is detected.
+Lorsqu'un ou plusieurs changements matériels sont effectués, PADS4 le détectera et permettra au système de fonctionner pendant une période de 7 jours à partir de ce moment. Pendant ces 7 jours, l'utilisateur sera informé lors de la connexion que le système doit être réactivé. Ce message apparaît lors du démarrage des applications PADS4 Agent, Messenger, System Management, Scheduler ou Designer. Il est possible de créer une alerte qui notifie automatiquement quelqu'un par e-mail lorsque cela est détecté.
 
  
 
-#### **Reactivation of the PADS4 Server**
+#### **Réactivation du Serveur PADS4**
 
-When a graceful degradation period is detected and you need to reactivate the PADS4 System follow the next steps:
+Lorsqu'une période de dégradation progressive est détectée et que vous devez réactiver le Système PADS4, suivez les étapes suivantes :
 
-1. Contact your reseller and explain that hardware has changed on the PADS4 Server computer and the system needs to be reactivated. Please provide the PADS4 product key.
-2. The reseller will contact Net Display Systems who will check your license and enables the PADS4 product key to be reactivated.
-3. You will be notified by e-mail when the change has been made. Be aware that this is a manual process that takes place during working hours only.
-4. Start the License Wizard which is, in most cases, installed on the PADS4 Server computer and select the Server and press the Next button.
-5. It will show the current license details now. Please press the Next button to show the 'Select an action' window.
-6. Select the 'Reactivate current installation' option. The wizard will make connection to the PADS4 License server and check your PADS4 product key.\
-   When validation is performed, the system will reset your hardware changes and abort the degradation period. Be aware that the Server will need an internet connection for this.\
+1. Contactez votre revendeur et expliquez que le matériel a changé sur l'ordinateur du Serveur PADS4 et que le système doit être réactivé. Veuillez fournir la clé de produit PADS4.
+2. Le revendeur contactera Net Display Systems qui vérifiera votre licence et permettra la réactivation de la clé de produit PADS4.
+3. Vous serez informé par e-mail lorsque le changement aura été effectué. Sachez qu'il s'agit d'un processus manuel qui a lieu uniquement pendant les heures de travail.
+4. Démarrez le License Wizard qui est, dans la plupart des cas, installé sur l'ordinateur du Serveur PADS4 et sélectionnez le Serveur puis appuyez sur le bouton Suivant.
+5. Il affichera maintenant les détails de la licence actuelle. Veuillez appuyer sur le bouton Suivant pour afficher la fenêtre 'Sélectionner une action'.
+6. Sélectionnez l'option 'Réactiver l'installation actuelle'. L'assistant se connectera au serveur de licences PADS4 et vérifiera votre clé de produit PADS4.\
+   Une fois la validation effectuée, le système réinitialisera vos changements matériels et annulera la période de dégradation. Sachez que le Serveur aura besoin d'une connexion Internet pour cela.\
    \
-   If an internet connection is not available, use the offline activation method instead by selecting the 'Activate installation offline' option in the License Wizard, which will guide you through the process.\
-   More information on how to perform an offline activation [can be found here.](/fr/ctrl-centre/licenses)
+   Si une connexion Internet n'est pas disponible, utilisez plutôt la méthode d'activation hors ligne en sélectionnant l'option 'Activer l'installation hors ligne' dans le License Wizard, qui vous guidera tout au long du processus.\
+   Plus d'informations sur la façon d'effectuer une activation hors ligne [peuvent être trouvées ici.](/fr/ctrl-centre/licenses)
 
 Quickview:
 
-* When hardware changes are detected, PADS4 will stop working after a **grace period of 7 days**.
-* When the PADS4 Server is running on a **Virtual Server,** be aware that the **MAC address must be locked** to prevent hardware changes.
-* When the user logs on during a grace period, a message will be displayed to inform the user that an action must be performed before the end of the grace period.
-* **Disable sharing Bluetooth devices** on the Virtual Server to prevent PADS4 from detecting a different network adapter.
-* With the **PADS Agent application,** it is possible to **add an Alert** that **automatically notifies** a person when hardware changes are detected and an action is needed.
+* Lorsque des changements matériels sont détectés, PADS4 cessera de fonctionner après une **période de grâce de 7 jours**.
+* Lorsque le Serveur PADS4 fonctionne sur un **Serveur Virtuel,** sachez que l'**adresse MAC doit être verrouillée** pour empêcher les changements matériels.
+* Lorsque l'utilisateur se connecte pendant une période de grâce, un message s'affichera pour informer l'utilisateur qu'une action doit être effectuée avant la fin de la période de grâce.
+* **Désactiver le partage des périphériques Bluetooth** sur le Serveur Virtuel pour empêcher PADS4 de détecter un adaptateur réseau différent.
+* Avec l' **application PADS Agent,** il est possible d'**ajouter une Alerte** qui **notifie automatiquement** une personne lorsque des changements matériels sont détectés et qu'une action est nécessaire.
 
  
 
-#### **Change in PADS4 Server hardware components**
+#### **Changement dans les composants matériels du Serveur PADS4**
 
-When one or more PADS4 Server hardware components are changed after activations, PADS4 may detect a change and force a reactivation is needed for this PADS4 Server. In the meantime, PADS4 will continue to work for a period of 7 days. After this period, the PADS4 Server stops working. Reactivate the system before the 7 days period ends!\
-The detection of hardware changes is based on:
+Lorsqu'un ou plusieurs composants matériels du Serveur PADS4 sont modifiés après l'activation, PADS4 peut détecter un changement et forcer une réactivation nécessaire pour ce Serveur PADS4. Entre-temps, PADS4 continuera à fonctionner pendant une période de 7 jours. Après cette période, le Serveur PADS4 cesse de fonctionner. Réactivez le système avant la fin de la période de 7 jours !\
+La détection des changements matériels est basée sur :
 
-* Operating system
-* Processor ID
-* OS Install date
-* OS serial number
-* BIOS serial number
-* Bios version
-* Network adapter
-* MAC address
-* Windows Activation code
+* Système d'exploitation
+* ID du processeur
+* Date d'installation du système d'exploitation
+* Numéro de série du système d'exploitation
+* Numéro de série du BIOS
+* Version du BIOS
+* Adaptateur réseau
+* Adresse MAC
+* Code d'activation Windows

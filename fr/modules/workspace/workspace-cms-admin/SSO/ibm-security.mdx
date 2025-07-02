@@ -1,4 +1,4 @@
-Ce guide vous explique comment configurer **SAML 2.0 Single Sign-On (SSO)** en utilisant **IBM Security Verify** comme fournisseur d'identité (IdP) pour **PADS4 Workspace**.
+Ce guide vous accompagne dans la configuration de **SAML 2.0 Single Sign-On (SSO)** en utilisant **IBM Security Verify** comme fournisseur d'identité (IdP) pour **PADS4 Workspace**.
 
 ***
 
@@ -24,7 +24,7 @@ Assurez-vous que les éléments suivants sont prêts :
 
 | Champ                              | Valeur                                                |
 | ---------------------------------- | ----------------------------------------------------- |
-| **Sign-on method**                 | `SAML 2.0`                                            |
+| **Méthode de connexion**           | `SAML 2.0`                                            |
 | **Provider ID**                    | `https://pads4serverurl/crystal/domainone/Saml2`      |
 | **Assertion Consumer Service URL** | `https://dpads4serverurl/crystal/domainone/Saml2/ACS` |
 | **Service Provider SSO URL**       | `https://pads4serverurl/crystal/domainone/Saml2/ACS`  |
@@ -36,33 +36,33 @@ Assurez-vous que les éléments suivants sont prêts :
 
 ### Paramètres de signature
 
-| Champ                                  | Valeur                               |
-| -------------------------------------- | ------------------------------------ |
-| **Sign authentication response**       | Activé                               |
-| **Signature Algorithm**                | RSA-SHA256                           |
-| **Signing Certificate**                | Choisir Default personal certificate |
-| **Validate SAML request signature**    | Activé                               |
-| **Validate logout request signature**  | Activé                               |
-| **Validate logout response signature** | Activé                               |
+| Champ                                                 | Valeur                                     |
+| ----------------------------------------------------- | ------------------------------------------ |
+| **Signer la réponse d'authentification**              | Activé                                     |
+| **Algorithme de signature**                           | RSA-SHA256                                 |
+| **Certificat de signature**                           | Choisir le certificat personnel par défaut |
+| **Valider la signature de la requête SAML**           | Activé                                     |
+| **Valider la signature de la requête de déconnexion** | Activé                                     |
+| **Valider la signature de la réponse de déconnexion** | Activé                                     |
 
-Laissez **Service Provider Certificate** et **Encryption Options** vides, sauf si le chiffrement est requis par votre organisation.
+Laissez **Service Provider Certificate** et **Encryption Options** vides sauf si le chiffrement est requis par votre organisation.
 
 ***
 
-### SAML Subject
+### Sujet SAML
 
 | Champ               | Valeur               |
 | ------------------- | -------------------- |
-| **NameID Format**   | `Unspecified`        |
+| **Format NameID**   | `Unspecified`        |
 | **Name Identifier** | `preferred_username` |
 
 ***
 
 ### Mappage d'attributs
 
-Enable: ☑ **Send all known user attributes in the SAML assertion**
+Enable: ☑ **Envoyer tous les attributs utilisateur connus dans l'assertion SAML**
 
-| Attribute Name (URN)                                      | Format | Source        |
+| Nom d'attribut (URN)                                      | Format | Source        |
 | --------------------------------------------------------- | ------ | ------------- |
 | `urn:oasis:names:tc:SAML:2.0:attrname-format:email`       | email  | `email`       |
 | `urn:oasis:names:tc:SAML:2.0:attrname-format:family_name` | text   | `family_name` |
@@ -77,7 +77,7 @@ Enable: ☑ **Send all known user attributes in the SAML assertion**
 ### Politique d'accès
 
 * Définir sur : ☑ **Use default policy**
-* Allow from: `All devices`
+* Autoriser depuis : `All devices`
 
 ***
 
@@ -102,11 +102,11 @@ Dans le **PADS4 Administration Portal**, configurez le plugin SSO comme suit :
 
 Allez à la section **Relation Table** du plugin SSO et mappez les `groupIDs` entrants d'IBM aux profils PADS4 :
 
-| Active Directory Group ID | Profile        |
-| ------------------------- | -------------- |
-| `admin`                   | Administration |
-| `admin`                   | Default        |
-| `developer`               | Default        |
+| ID de groupe Active Directory | Profil         |
+| ----------------------------- | -------------- |
+| `admin`                       | Administration |
+| `admin`                       | Default        |
+| `developer`                   | Default        |
 
 ***
 

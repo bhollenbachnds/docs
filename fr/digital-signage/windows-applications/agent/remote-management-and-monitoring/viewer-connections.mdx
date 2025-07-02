@@ -20,7 +20,7 @@ Dans la fenêtre des connexions des viewers, vous pouvez voir d'un coup d'œil q
 ![EN Agent Viewerconnections Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Viewerconnections.png)
 
 <Tip>
-  Pour chaque PADS4 Viewer listé, l'icône en face de l'icône reflète son statut de connexion. Pour déterminer le statut de connexion d'un PADS4 Viewer, le système examine le statut à la fois du PADS4 Viewer et du PADS4 Controller (=le processus d'arrière-plan pour effectuer certaines tâches). Si seul le PADS4 Controller est déconnecté, vous obtiendrez une icône d'avertissement au lieu d'une icône d'erreur.
+  Pour chaque PADS4 Viewer listé, l'icône en face reflète son statut de connexion. Pour déterminer le statut de connexion d'un PADS4 Viewer, le système examine à la fois le statut du PADS4 Viewer et du PADS4 Controller (=le processus d'arrière-plan qui exécute certaines tâches). Si seul le PADS4 Controller est déconnecté, vous obtiendrez une icône d'avertissement au lieu d'une icône d'erreur.
 </Tip>
 
 **Viewer**\
@@ -30,7 +30,7 @@ Le nom unique qui identifie le PADS4 Viewer au sein du système PADS4.
 La chaîne descriptive qui peut avoir été spécifiée pour donner des informations supplémentaires sur le viewer.
 
 **Statut du Viewer**\
-Le statut de l'application PADS4 Viewer. Si le statut est 'déconnecté', alors le viewer n'a pas de connexion réseau avec le PADS4 Server et ne pourra pas recevoir de mises à jour concernant les présentations programmées ou le contenu. Les présentations précédemment programmées qui ont été mises en cache localement par PADS4 Viewer peuvent encore fonctionner correctement. Les PADS4 Viewers peuvent fonctionner hors ligne pendant une période maximale d'une semaine.
+Le statut de l'application PADS4 Viewer. Si le statut est 'déconnecté', alors le viewer n'a pas de connexion réseau avec le PADS4 Server et ne pourra pas recevoir de mises à jour concernant les présentations programmées ou le contenu. Les présentations précédemment programmées qui ont été mises en cache localement par PADS4 Viewer peuvent toujours s'exécuter correctement. Les PADS4 Viewers peuvent fonctionner hors ligne pendant une période maximale d'une semaine.
 
 **Adresse IP**\
 L'adresse IP du Viewer.
@@ -51,7 +51,7 @@ Le statut du processus PADS4 Controller.
 L'adresse MAC unique du Viewer.
 
 <Tip>
-  Si le statut du controller est 'déconnecté' alors que le statut du viewer est 'connecté', PADS4 Viewer peut encore fonctionner correctement, mais vous ne pourrez pas accéder au viewer via PADS4 Agent. À l'inverse, si le statut du Controller est 'connecté' alors que le statut du Viewer est 'déconnecté', PADS4 Viewer ne fonctionnera pas correctement, mais vous pouvez toujours utiliser la plupart des fonctions de PADS4 Agent pour accéder au viewer.
+  Si le statut du controller est 'déconnecté' alors que le statut du viewer est 'connecté', PADS4 Viewer peut toujours fonctionner correctement, mais vous ne pourrez pas accéder au viewer via PADS4 Agent. À l'inverse, si le statut du Controller est 'connecté' alors que le statut du Viewer est 'déconnecté', PADS4 Viewer ne fonctionnera pas correctement, mais vous pouvez toujours utiliser la plupart des fonctions de PADS4 Agent pour accéder au viewer.
 </Tip>
 
 Lorsque vous sélectionnez un élément viewer dans la fenêtre des connexions des viewers, des informations détaillées supplémentaires sur ce viewer s'affichent au bas de la fenêtre.
@@ -118,11 +118,11 @@ Dans la fenêtre des tâches, vous pouvez voir si le signal wake-on-LAN a été 
 
 #### **Enregistrer la boîte noire d'un viewer**
 
-Pour enregistrer la [boîte noire](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) de votre Viewer pour l'analyser ou la comparer hors ligne ultérieurement :
+Pour enregistrer la [boîte noire](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) de votre Viewer afin de l'analyser ou de la comparer hors ligne ultérieurement :
 
 1. Cliquez sur l'élément viewer dans la fenêtre des connexions des viewers pour le sélectionner.
-2. Cliquez sur **Enregistrer la boîte noire** dans le **Home** menu.
-3. Saisissez un **File name** et cliquez sur **Save** pour enregistrer les informations.
+2. Cliquez sur **Enregistrer la boîte noire** dans le menu **Home**.
+3. Saisissez un **Nom de fichier** et cliquez sur **Save** pour enregistrer les informations.
 
 Après cela, le fichier de la boîte noire sera enregistré sur votre ordinateur.
 

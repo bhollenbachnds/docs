@@ -1,84 +1,84 @@
-PADS4 vous permet d'intégrer **des caméras, des logiciels de gestion de caméras et d'autres dispositifs de capteurs** pour collecter et traiter des données en temps réel. Ces capteurs fournissent des capacités de **mesure d'audience**, **reconnaissance faciale**, **comptage de personnes**, et **surveillance environnementale**.
+PADS4 vous permet d'intégrer **cameras, camera management software, and other sensor devices** pour collecter et traiter des données en temps réel. Ces capteurs fournissent **audience measurement**, **facial recognition**, **people counting**, et **environmental monitoring** capacités.
 
-Pour une liste des **capteurs certifiés**, consultez la **Certified Sensors Page**.
+Pour une liste des **certified sensors**, consultez la **Certified Sensors Page**.
 
 ***
 
 ## **Aperçu**
 
-La section **Sensors Overview** affiche tous les capteurs ajoutés. Un **point vert** indique que PADS4 a une **connexion active** au capteur.
+La section **Sensors Overview** affiche tous les capteurs ajoutés. Un **green dot** indique que PADS4 a une **active connection** au capteur.
 
 ### **Ajout d'un nouveau capteur**
 
 Pour ajouter un nouveau capteur, suivez ces étapes :
 
-1. **Allez à la page Sensors Overview** dans PADS4.
+1. **Allez à la Sensors Overview Page** dans PADS4.
 2. **Cliquez sur le bouton "New"** dans l'en-tête.
-3. **Sélectionnez le type de capteur** – Caméra ou logiciel de gestion de capteurs.
-4. **Spécifiez le modèle/type** de l'appareil.
-5. **Ajoutez éventuellement une description et un emplacement** pour aider à identifier le capteur.
-6. **Saisissez les identifiants et le nom d'hôte** où se trouve le capteur.
-7. **Enregistrez la configuration** – PADS4 tentera d'établir une connexion.
+3. **Sélectionnez le Sensor Type** – Camera ou Sensor Management Software.
+4. **Spécifiez le Model/Type** de l'appareil.
+5. **Ajoutez éventuellement une Description & Location** pour aider à identifier le capteur.
+6. **Entrez les Credentials et Hostname** où se trouve le capteur.
+7. **Enregistrez la Configuration** – PADS4 tentera d'établir une connexion.
 
 ***
 
 ## **Regroupement des capteurs en zones**
 
-Une **Area** est un regroupement logique de capteurs. Cela permet une **collecte et une analyse agrégées des données**.
+Une **Area** est un regroupement logique de capteurs. Cela permet **aggregated data collection and analysis**.
 
-### **Comptage de personnes**
+### **People Counting**
 
-* Si plusieurs **people-counting cameras** sont dans une Area, leurs données sont **combinées**.
-* Utile pour **suivre l'occupation totale** lorsqu'il y a plusieurs points d'entrée.
+* Si plusieurs **people-counting cameras** sont dans une Area, leurs données sont **combined**.
+* Utile pour **tracking total occupancy** lorsqu'il y a plusieurs points d'entrée.
 
-### **Création d'une nouvelle Area**
+### **Création d'une nouvelle zone**
 
-1. **Accédez à la page Areas** dans PADS4.
+1. **Allez à la Areas Page** dans PADS4.
 2. **Cliquez sur "New"** dans l'en-tête.
-3. **Saisissez un nom d'Area** et une description (facultative).
-4. **Sélectionnez les capteurs** qui appartiennent à cette zone.
-5. **Attribuez des règles** pour automatiser la détection d'incidents.
-6. **Enregistrez la configuration**.
+3. **Entrez un Area Name** et une description (facultative).
+4. **Sélectionnez les Sensors** qui appartiennent à cette zone.
+5. **Assignez des Rules** pour automatiser la détection d'incidents.
+6. **Enregistrez la Configuration**.
 
 ***
 
 ## **Définition des règles d'incident**
 
-Les règles définissent **quelles conditions déclenchent un incident**, permettant des réponses automatisées.
+Les règles définissent **what conditions trigger an incident**, permettant des réponses automatisées.
 
 ### **Règles disponibles**
 
-| **Règle**                | **Description**                                                                                                                           |
+| **Rule**                 | **Description**                                                                                                                           |
 | ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| **No Facemask**          | Détecte si une personne **ne porte pas de masque facial** et déclenche un incident.                                                       |
-| **Maximum People Count** | Définit une **occupation maximale** pour une zone. Si elle est dépassée, un incident est créé.                                            |
-| **Maximum Temperature**  | Surveille la température corporelle. Si elle **dépasse un seuil défini** (par exemple, 36,5°C), un incident est déclenché.                |
-| **Milestone Alarms**     | Utilise les **Milestone VMS** alarmes pour détecter les problèmes de sécurité ou de sûreté. Les alarmes peuvent déclencher des incidents. |
+| **No Facemask**          | Détecte si une personne **not wearing a facemask** et déclenche un incident.                                                              |
+| **Maximum People Count** | Définit une **maximum occupancy** pour une zone. Si dépassée, un incident est créé.                                                       |
+| **Maximum Temperature**  | Surveille la température corporelle. Si **exceeding a set threshold** (par exemple, 36,5°C), un incident est déclenché.                   |
+| **Milestone Alarms**     | Utilise les alarmes **Milestone VMS** pour détecter les problèmes de sécurité ou de sûreté. Les alarmes peuvent déclencher des incidents. |
 
-> **Note:** Le réglage de la température doit correspondre à l'unité configurée de la caméra (**Celsius ou Fahrenheit**).
+> **Note:** Le réglage de la température doit correspondre à l'unité configurée de la caméra (**Celsius or Fahrenheit**).
 
 ***
 
 ## **Gestion des incidents**
 
-Les incidents sont générés lorsque **des règles sont déclenchées**. Vous pouvez gérer les incidents dans le **PADS4 CTRL Center**.
+Les incidents sont générés lorsque **rules are triggered**. Vous pouvez gérer les incidents dans le **PADS4 CTRL Center**.
 
 Pour plus de détails, consultez la **How to Use Incidents Page**.
 
 ***
 
-## **Utilisation des données de capteurs dans PADS4 Designer**
+## **Utilisation des données de capteur dans PADS4 Designer**
 
-PADS4 Designer vous permet d'intégrer **des données de capteurs** dans les présentations.
+PADS4 Designer vous permet d'intégrer **sensor data** dans les présentations.
 
 ### **Options d'utilisation des données**
 
-* **Événements de caméra en temps réel** pour des présentations interactives.
-* **Données agrégées de zone** pour l'analyse d'audience.
-* **Alertes d'incidents** affichées sur la signalisation pour une réponse immédiate.
+* **Real-time camera events** pour des présentations interactives.
+* **Aggregated area data** pour l'analyse d'audience.
+* **Incident alerts** affichées sur la signalisation pour une réponse immédiate.
 
 ***
 
 ## **Conclusion**
 
-L'intégration de **sensor integration** de PADS4 permet **la surveillance en temps réel, les alertes automatisées basées sur des règles et la signalisation numérique interactive**. En **configurant des capteurs et en définissant des règles**, les entreprises peuvent améliorer **la sécurité, l'engagement du public et l'efficacité opérationnelle**.
+PADS4's **intégration de capteurs** permet **la surveillance en temps réel, les alertes automatisées basées sur des règles et l'affichage dynamique interactif**. En **configurant des capteurs et en définissant des règles**, les entreprises peuvent améliorer **la sécurité, l'engagement du public et l'efficacité opérationnelle**.

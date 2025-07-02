@@ -1,68 +1,68 @@
-Ces propriétés définissent les **paramètres du port de communication RS-232**, garantissant une transmission de données réussie entre votre **système de présentation** et un **périphérique externe**.
+Ces propriétés définissent les **RS-232 communication port settings**, assurant une transmission de données réussie entre votre **presentation system** et un **external device**.
 
 ***
 
-## **Paramètres du Port de Communication**
+## **Paramètres du port de communication**
 
-### **Port de Communication**
+### **Port de communication**
 
-* Sélectionnez le **COM (série)** ou **LPT (parallèle)** port utilisé pour la **communication RS-232**.
+* Sélectionnez le port **COM (serial)** ou **LPT (parallel)** utilisé pour la communication **RS-232 communication**.
 
-### **Débit en Bauds**
+### **Débit en bauds**
 
-* Définit la **vitesse de transmission** en **symboles par seconde (bps)**.
+* Définit la **transmission speed** en **symbols per second (bps)**.
 * Valeurs courantes : **1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200**.
-* Doit correspondre aux **paramètres du périphérique externe**.
+* Doit correspondre aux **external device settings**.
 
 ### **Parité**
 
-Détermine comment **la vérification de parité** est appliquée pour la **détection d'erreurs**.
+Détermine comment **parity checking** est appliqué pour la **error detection**.
 
-| **Option**  | **Description**                                             |
-| ----------- | ----------------------------------------------------------- |
-| **Aucune**  | Pas de vérification de parité (par défaut).                 |
-| **Paire**   | Assure un nombre pair de **1s** dans la trame de données.   |
-| **Impaire** | Assure un nombre impair de **1s** dans la trame de données. |
-| **Marque**  | Définit toujours le bit de parité à **1**.                  |
-| **Espace**  | Définit toujours le bit de parité à **0**.                  |
+| **Option** | **Description**                                             |
+| ---------- | ----------------------------------------------------------- |
+| **None**   | Pas de vérification de parité (par défaut).                 |
+| **Even**   | Assure un nombre pair de **1s** dans la trame de données.   |
+| **Odd**    | Assure un nombre impair de **1s** dans la trame de données. |
+| **Mark**   | Définit toujours le bit de parité à **1**.                  |
+| **Space**  | Définit toujours le bit de parité à **0**.                  |
 
-### **Bits de Données**
+### **Bits de données**
 
-* Définit le nombre de **bits de données par trame**.
-* Valeurs standard : **5, 6, 7, ou 8 bits** (par défaut : **8**).
-* Doit correspondre aux **paramètres du périphérique externe**.
+* Définit le nombre de **data bits per frame**.
+* Valeurs standard : **5, 6, 7, or 8 bits** (par défaut : **8**).
+* Doit correspondre aux **external device settings**.
 
-### **Bits de Départ**
+### **Bits de départ**
 
-* Spécifie les **bits d'introduction** avant la transmission effective des données.
+* Spécifie les **leading bits** avant la transmission effective des données.
 * Valeur standard : **1 bit**.
 
-### **Bits d'Arrêt**
+### **Bits d'arrêt**
 
-* Spécifie les **bits de fin de transmission**.
-* Valeurs standard : **1, 1,5, ou 2 bits** (par défaut : **1**).
-* Utilisés pour **séparer les paquets de données**.
+* Spécifie les **end of transmission bits**.
+* Valeurs standard : **1, 1.5, or 2 bits** (par défaut : **1**).
+* Utilisés pour **separate data packets**.
 
-### **Contrôle de Flux**
+### **Handshake**
 
-Définit le **contrôle de flux** entre l'émetteur et le récepteur pour éviter la **perte de données**.
+Définit le **flow control** entre l'émetteur et le récepteur pour éviter la **data loss**.
 
-| **Option**   | **Description**                                                                                    |
-| ------------ | -------------------------------------------------------------------------------------------------- |
-| **Aucun**    | Pas de contrôle de flux (par défaut).                                                              |
-| **XOn/XOff** | Contrôle de flux logiciel. Utilise des caractères spéciaux pour contrôler le flux de données.      |
-| **RTS/CTS**  | Contrôle de flux matériel utilisant les signaux Ready-to-Send (RTS) et Clear-to-Send (CTS).        |
-| **DTR/DSR**  | Contrôle de flux matériel utilisant les signaux Data Terminal Ready (DTR) et Data Set Ready (DSR). |
+| **Option**   | **Description**                                                                                      |
+| ------------ | ---------------------------------------------------------------------------------------------------- |
+| **None**     | Pas de handshake (par défaut).                                                                       |
+| **XOn/XOff** | Handshake basé sur logiciel. Utilise des caractères spéciaux pour contrôler le flux de données.      |
+| **RTS/CTS**  | Handshake basé sur matériel utilisant les signaux Ready-to-Send (RTS) et Clear-to-Send (CTS).        |
+| **DTR/DSR**  | Handshake basé sur matériel utilisant les signaux Data Terminal Ready (DTR) et Data Set Ready (DSR). |
 
-### **Délai de Lecture**
+### **Délai de lecture**
 
-* **Limite de temps (en millisecondes)** pour recevoir une **réponse du périphérique externe**.
-* Si aucune réponse n'est reçue dans ce délai, une **erreur de délai d'attente se produit**.
+* **Limite de temps (en millisecondes)** pour recevoir une **response from the external device**.
+* Si aucune réponse n'est reçue dans ce délai, une **timeout error occurs**.
 
-### **Délai d'Écriture**
+### **Délai d'écriture**
 
-* **Limite de temps (en millisecondes)** pour **envoyer une commande**.
-* Si les données ne peuvent pas être transmises dans ce délai, une **erreur de délai d'attente se produit**.
+* **Limite de temps (en millisecondes)** pour **sending a command** avec succès.
+* Si les données ne peuvent pas être transmises dans ce délai, une **erreur de temporisation se produit**.
 
 ***
 

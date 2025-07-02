@@ -1,4 +1,4 @@
-Cette section fournit des instructions basées sur SQL pour créer manuellement le **PADS4FIDS** base de données en utilisant votre client SQL préféré (par exemple, SQL Server Management Studio, Azure Data Studio, etc.).
+Cette section fournit des instructions basées sur SQL pour créer manuellement la base de données **PADS4FIDS** en utilisant votre client SQL préféré (par exemple, SQL Server Management Studio, Azure Data Studio, etc.).
 
 > **Note:** Exécutez les commandes SQL suivantes en utilisant un compte avec **des privilèges sysadmin** sur le serveur SQL.
 
@@ -42,10 +42,10 @@ GO
 
 ## Résultat
 
-Après l'exécution de ce script :
+Après avoir exécuté ce script :
 
-* Le **NT AUTHORITY\SYSTEM** login est créé s'il n'est pas déjà présent
-* La **PADS4FIDS** base de données est créée si elle n'existe pas
-* Le login se voit attribuer des droits **db\_owner** sur la base de données nouvellement créée
+* Le login **NT AUTHORITY\SYSTEM** est créé s'il n'existe pas déjà
+* La base de données **PADS4FIDS** est créée si elle n'existe pas
+* Le login se voit attribuer les droits **db\_owner** sur la base de données nouvellement créée
 
 Le système est maintenant prêt à connecter PADS4FIDS à cette base de données pendant la configuration.

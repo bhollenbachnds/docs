@@ -1,6 +1,6 @@
 Avec les fonctions de journal d'audit, vous pouvez consulter les journaux d'audit qui sont stockés sur votre PADS4 Server.
 
-Avec les journaux d'audit, l'utilisateur peut, par exemple, identifier le comportement de connexion/déconnexion des utilisateurs. En outre, il est possible de savoir quel utilisateur a planifié une certaine présentation ou modifié certains paramètres. Si un utilisateur tente d'utiliser une application non autorisée, cette activité inappropriée est enregistrée dans la piste d'audit.
+Avec les journaux d'audit, l'utilisateur peut, par exemple, identifier le comportement de connexion/déconnexion des utilisateurs. En outre, il est possible de savoir quel utilisateur a programmé une certaine présentation ou modifié certains paramètres. Si un utilisateur tente d'utiliser une application non autorisée, cette activité inappropriée est enregistrée dans la piste d'audit.
 
  
 
@@ -47,39 +47,39 @@ Une description qui décrit l'action effectuée par l'utilisateur. ("Updated Sch
 Lorsque les modifications (mise à jour) affectent un ou plusieurs changements de propriété (exemple "Priorité à Élevée", ou "DateDébut à 01/01/2017"), ceux-ci seront enregistrés dans la colonne détails.\
 Chaque paire Propriété et nouvelle valeur est séparée par un saut de ligne.
 
-**Usertype**\
+**Type d'utilisateur**\
 Utilisateur PADS ou LDAP de l'Active Directory.
 
-**Displayname**\
+**Nom d'affichage**\
 Nom d'utilisateur saisi dans l'application System management pour identifier un utilisateur ou récupéré par LDAP.
 
-**EventType**\
+**Type d'événement**\
 Type d'action effectuée.
 
-| Logon   | L'utilisateur essaie de se connecter                                               |
-| :------ | :--------------------------------------------------------------------------------- |
-| Logoff  | L'utilisateur essaie de se déconnecter                                             |
-| Create  | L'utilisateur crée une entrée (l'entrée est spécifique à l'action effectuée)       |
-| Update  | L'utilisateur met à jour une entrée (l'entrée est spécifique à l'action effectuée) |
-| Delete  | L'utilisateur supprime une entrée (l'entrée est spécifique à l'action effectuée)   |
-| Execute | L'utilisateur exécute une tâche Agent                                              |
+| Connexion     | L'utilisateur essaie de se connecter                                               |
+| :------------ | :--------------------------------------------------------------------------------- |
+| Déconnexion   | L'utilisateur essaie de se déconnecter                                             |
+| Créer         | L'utilisateur crée une entrée (l'entrée est spécifique à l'action effectuée)       |
+| Mettre à jour | L'utilisateur met à jour une entrée (l'entrée est spécifique à l'action effectuée) |
+| Supprimer     | L'utilisateur supprime une entrée (l'entrée est spécifique à l'action effectuée)   |
+| Exécuter      | L'utilisateur exécute une tâche Agent                                              |
 
-**IPAddress**\
+**Adresse IP**\
 Adresse IP à partir de laquelle l'utilisateur a démarré l'application.\
 La colonne contient \[local] lorsque l'application s'exécute sur le même ordinateur que le serveur PADS4.
 
-**Computername**\
+**Nom de l'ordinateur**\
 Nom de l'ordinateur sur lequel l'application s'exécute.
 
-**HistoricalID**\
+**ID historique**\
 ID interne pouvant être utilisé pour regrouper afin que les actions basées sur la même destination puissent être examinées (par exemple, modification de planning).
 
-**Servername**\
+**Nom du serveur**\
 Sur quel serveur cette action a été effectuée.
 
  
 
-#### **Period**
+#### **Période**
 
 Spécifiez la période à partir de laquelle les données doivent être récupérées. Lorsqu'aucune donnée n'est disponible, un message s'affichera.
 
@@ -91,62 +91,62 @@ Pour traiter les informations des journaux d'audit dans une application externe 
 
 Pour exporter les informations des journaux d'audit :
 
-1. Cliquez sur **Export** dans le menu **Home**.
-2. Saisissez le **Start** et la **End** de la période pour laquelle vous souhaitez exporter les informations de preuve de diffusion.
+1. Cliquez sur **Exporter** dans le menu **Accueil**.
+2. Saisissez le **Début** et la **Fin** de la période pour laquelle vous souhaitez exporter les informations de preuve de diffusion.
 
    ![EN Agent Audit Export Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-AuditExport.png)
 3. Sélectionnez le type de sortie, **XML** ou **Excel**.
-4. Cliquez sur **Browse** pour spécifier le **File Name** du fichier dans lequel vous souhaitez enregistrer les résultats de l'exportation.
-5. Dans la boîte de dialogue Enregistrer qui apparaît, spécifiez le nom du fichier et sélectionnez le format de fichier dans lequel vous souhaitez que les informations soient enregistrées, puis cliquez sur **Save**.
-6. Cliquez sur **Export** pour commencer à enregistrer toutes les informations de preuve de diffusion pour la période spécifiée dans le fichier spécifié.
+4. Cliquez sur **Parcourir** pour spécifier le **Nom du fichier** dans lequel vous souhaitez enregistrer les résultats de l'exportation.
+5. Dans la boîte de dialogue Enregistrer qui apparaît, spécifiez le nom du fichier et sélectionnez le format de fichier dans lequel vous souhaitez que les informations soient enregistrées, puis cliquez sur **Enregistrer**.
+6. Cliquez sur **Exporter** pour commencer à enregistrer toutes les informations de preuve de diffusion pour la période spécifiée dans le fichier spécifié.
 
  
 
 #### **Quelles informations utilisateur sont enregistrées ?**
 
 * Tentatives de connexion / déconnexion pour chaque application PADS4
-* Actions CRUD (Création/Lecture/Mise à jour/Suppression) du planificateur pour la programmation des présentations dans l'application PADS4 Scheduler\
+* Actions CRUD (Créer/Lire/Mettre à jour/Supprimer) du planificateur pour la programmation des présentations dans l'application PADS4 Scheduler\
   Les mises à jour sont enregistrées en détail. (niveau de propriété, quels sont les changements entre l'ancienne et la nouvelle situation)
-* Actions CRUD (Création/Lecture/Mise à jour/Suppression) de Messenger pour la programmation des présentations dans l'application PADS4 Messenger\
+* Actions CRUD (Créer/Lire/Mettre à jour/Supprimer) de Messenger pour la programmation des présentations dans l'application PADS4 Messenger\
   Les mises à jour sont enregistrées en détail. (niveau de propriété, quels sont les changements entre l'ancienne et la nouvelle situation)
-* Récupération des informations du serveur par l'Agent dans le PADS4 Agent\
+* Récupération des informations du serveur par l'Agent dans PADS4 Agent\
   Connexions Viewer, Connexions utilisateur, Tâches planifiées, Surveillance et alertes, File d'attente de synchronisation, Bibliothèque de contenu, Serveur de données, Logiciel PADS4, Informations système, Processus, Services, Journaux Windows, Variables Viewer, Chaînes de télévision.
-* Récupération des informations du Viewer par l'Agent dans le PADS4 Agent\
-  Capture d'écran, Journal du Viewer, Utilisation de la mémoire, Bibliothèque de contenu, Journal de synchronisation, Présentations planifiées, Fournisseurs de données, Paramètres du Viewer, Logiciel PADS4, Add-Ons, Tâches planifiées, Surveillance et alertes, Informations système, Processus, Services, Journaux Windows, Polices, Preuve de diffusion, télévision.
-* Actions de connexion du Viewer de l'Agent (serveur) : **restart/reboot/shutdown/wake-on-lan**
-* Actions de connexion utilisateur de l'Agent (serveur) : **close connection**
-* Actions de tâches planifiées de l'Agent (serveur) : **New/Edit/Duplicate/Delete/Enable/Disable**
-* Actions de surveillance et d'alerte de l'Agent (serveur) : **Add/Edit/Duplicate/Delete/Enable/Disable/Pending/Resolved**
-* Action du logiciel PADS4 de l'Agent (serveur) : **Update**
-* Actions des processus de l'Agent (serveur) : **Start/Stop/Restart**
-* Actions des services de l'Agent (serveur) : **Start/Pauze/Restart**
-* Actions des journaux Windows de l'Agent (serveur) : **Clear log**
-* Actions du journal d'audit de l'Agent (serveur) : **Export**
-* Actions de preuve de diffusion de l'Agent (serveur) : **Export**
-* Actions des variables Viewer de l'Agent (serveur) : **Edit/Reset/Duplicate**
-* Actions des chaînes de télévision de l'Agent (serveur) : **Add/Edit/Delete/Merge**
-* Actions du journal Viewer de l'Agent (viewer) : **Clear log/Save blackbox**
-* Actions d'utilisation de la mémoire de l'Agent (viewer) :**Clear log/Save blackbox** 
-* Actions du journal de synchronisation de l'Agent (viewer) : **Clear log/Save blackbox**
-* Actions des paramètres du Viewer de l'Agent (viewer) : **Edit**
-* Actions du logiciel PADS4 de l'Agent (viewer) : **Update**
-* Actions des Add-Ons de l'Agent (viewer) : **Installation Wizard**
-* Actions des processus de l'Agent (viewer) : **Start/Restart/Stop**
-* Actions des services de l'Agent (viewer) : **Start/Pauze/Restart**
-* Actions des journaux Windows de l'Agent (viewer) : **Clear log**
-* Actions des polices de l'Agent (viewer) : **Install/Install from file/Uninstall**
-* Actions de télévision de l'Agent (viewer) : **Auto channel scan/copy to destinations/create channel name**
-* Actions des destinations du System Management : **Add/Edit/Delete/Viewer reactivation**
-* Actions des utilisateurs du System Management : **Add/Edit/Delete/Reset password**
-* Actions des groupes d'utilisateurs du System Management : **New/Edit/Delete**
-* Actions des permissions du System Management : **Nouveau/Modifier/Supprimer**
+* Récupération des informations Viewer par l'Agent dans PADS4 Agent\
+  Capture d'écran, Journal Viewer, Utilisation de la mémoire, Bibliothèque de contenu, Journal de synchronisation, Présentations planifiées, Fournisseurs de données, Paramètres Viewer, Logiciel PADS4, Add-Ons, Tâches planifiées, Surveillance et alertes, Informations système, Processus, Services, Journaux Windows, Polices, Preuve de diffusion, télévision.
+* Actions de connexion Viewer de l'Agent (serveur) : **redémarrer/réinitialiser/arrêter/wake-on-lan**
+* Actions de connexion utilisateur de l'Agent (serveur) : **fermer la connexion**
+* Actions de tâches planifiées de l'Agent (serveur) : **Nouveau/Modifier/Dupliquer/Supprimer/Activer/Désactiver**
+* Actions de surveillance et d'alerte de l'Agent (serveur) : **Ajouter/Modifier/Dupliquer/Supprimer/Activer/Désactiver/En attente/Résolu**
+* Action logiciel PADS4 de l'Agent (serveur) : **Mettre à jour**
+* Actions de processus de l'Agent (serveur) : **Démarrer/Arrêter/Redémarrer**
+* Actions de services de l'Agent (serveur) : **Démarrer/Mettre en pause/Redémarrer**
+* Actions de journaux Windows de l'Agent (serveur) : **Effacer le journal**
+* Actions de journal d'audit de l'Agent (serveur) : **Exporter**
+* Actions de preuve de diffusion de l'Agent (serveur) : **Exporter**
+* Actions de variables Viewer de l'Agent (serveur) : **Modifier/Réinitialiser/Dupliquer**
+* Actions de chaînes de télévision de l'Agent (serveur) : **Ajouter/Modifier/Supprimer/Fusionner**
+* Actions de journal Viewer de l'Agent (viewer) : **Effacer le journal/Enregistrer la boîte noire**
+* Actions d'utilisation de la mémoire de l'Agent (viewer) :**Effacer le journal/Enregistrer la boîte noire** 
+* Actions de journal de synchronisation de l'Agent (viewer) : **Effacer le journal/Enregistrer la boîte noire**
+* Actions de paramètres Viewer de l'Agent (viewer) : **Modifier**
+* Actions logiciel PADS4 de l'Agent (viewer) : **Mettre à jour**
+* Actions Add-Ons de l'Agent (viewer) : **Assistant d'installation**
+* Actions de processus de l'Agent (viewer) : **Démarrer/Redémarrer/Arrêter**
+* Actions de services de l'Agent (viewer) : **Démarrer/Mettre en pause/Redémarrer**
+* Actions de journaux Windows de l'Agent (viewer) : **Effacer le journal**
+* Actions de polices de l'Agent (viewer) : **Installer/Installer à partir d'un fichier/Désinstaller**
+* Actions de télévision de l'Agent (viewer) : **Analyse automatique des chaînes/copier vers les destinations/créer un nom de chaîne**
+* Actions de destinations de System Management : **Ajouter/Modifier/Supprimer/Réactivation du Viewer**
+* Actions d'utilisateurs de System Management : **Ajouter/Modifier/Supprimer/Réinitialiser le mot de passe**
+* Actions de groupes d'utilisateurs de System Management : **Nouveau/Modifier/Supprimer**
+* Actions de permissions de System Management : **Nouveau/Modifier/Supprimer**
 * Actions de gestion des priorités du système : **Ajouter/Modifier/Supprimer/augmenter niveau/diminuer niveau**
 * Catégories de contenu de gestion du système : **Nouveau/Modifier/Supprimer**
 * Actions de gestion des serveurs du système : **Nouveau sous-serveur/Nouveau serveur de sauvegarde/Modifier/Supprimer**
-* Actions de gestion des licences du système : **Attribuer licence/Assistant de retrait de licence**
+* Actions de gestion des licences du système : **Assistant d'attribution de licence/Retrait de licence**
 * Actions de paramètres du serveur de gestion du système : **Modifier**
 * Actions de paramètres de télévision de gestion du système : **Ajouter/Modifier/Supprimer/Fusionner**
-* Actions de variables de visualisation de gestion du système : **Ajouter/Modifier/Supprimer**
+* Actions de variables de visionneuse de gestion du système : **Ajouter/Modifier/Supprimer**
 * Organisateur de contenu : actions sur les dossiers et fichiers : **Ajouter/Modifier/Supprimer/Déplacer**
 
  
@@ -154,6 +154,6 @@ Pour exporter les informations des journaux d'audit :
 <Tip>
   Lors de l'exportation, vous recevrez deux colonnes supplémentaires EventTypeID et ApplicationID qui contiendront la valeur numérique de EventType et Application.\
   \
-  En plus de cela, les métadonnées sont également stockées, qui contiennent les informations suivantes :\
+  En plus de cela, les métadonnées sont également stockées et contiennent les informations suivantes :\
   Utilisateur, Période, Date de génération et éventuellement filtre utilisé sur la grille.
 </Tip>

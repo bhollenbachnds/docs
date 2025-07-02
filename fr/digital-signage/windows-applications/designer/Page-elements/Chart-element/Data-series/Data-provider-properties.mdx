@@ -1,46 +1,46 @@
-Les **propriétés du Data Provider** dans l'**Assistant de séries de données** définissent **comment la série de données se connecte à une source de données externe**, garantissant que votre graphique est alimenté avec des **données en temps réel**.
+Les **Data Provider properties** dans le **Data Series Wizard** définissent **comment la série de données se connecte à une source de données externe**, garantissant que votre graphique est alimenté avec des **données en temps réel**.
 
 ***
 
 ## **Aperçu des propriétés**
 
-| **Propriété**                       | **Description**                                                                                                                                                                            |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Sélectionner le Data Provider**   | Choisissez un **data provider** existant (table, requête, procédure stockée, fichier XML, flux RSS, etc.) qui alimente la série de données.                                                |
-|                                     | Les data providers sont définis **au niveau de la présentation** et sont disponibles pour tous les éléments. Vous pouvez créer un **nouveau provider à la volée** via le bouton déroulant. |
-| **Colonne de données**              | Sélectionnez la **colonne** du data provider qui contient les **valeurs de données principales** pour le graphique.                                                                        |
-| **Colonne d'étiquette** (Optionnel) | Sélectionnez une **colonne** qui contient des **étiquettes** associées aux valeurs de données (par ex., noms de produits, dates).                                                          |
+| **Propriété**                | **Description**                                                                                                                                                                                        |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Select Data Provider**     | Choisissez un **data provider** existant (table, requête, procédure stockée, fichier XML, flux RSS, etc.) qui alimente la série de données.                                                            |
+|                              | Les fournisseurs de données sont définis **au niveau de la présentation** et sont disponibles pour tous les éléments. Vous pouvez créer un **nouveau fournisseur à la volée** via le bouton déroulant. |
+| **Data Column**              | Sélectionnez la **colonne** du fournisseur de données qui contient les **valeurs de données principales** pour le graphique.                                                                           |
+| **Label Column** (Optionnel) | Sélectionnez une **colonne** qui contient les **étiquettes** associées aux valeurs de données (par exemple, noms de produits, dates).                                                                  |
 
 ***
 
 ## **Colonnes spéciales pour types de graphiques spécifiques**
 
-### **Colonnes du graphique à bulles**
+### **Colonnes de graphique à bulles**
 
-Si **Bubble Chart** est sélectionné comme Type de graphique :
+Si **Bubble Chart** est sélectionné comme type de graphique :
 
-| **Colonne de bulle**           | **Description**                                                                                                                         |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **Colonne de taille de bulle** | Sélectionnez la colonne qui fournit la **taille de chaque bulle**, utilisée pour représenter une troisième dimension dans le graphique. |
-
-***
-
-### **Colonnes du graphique boursier**
-
-Si **Stock Chart** est sélectionné comme Type de graphique :
-
-| **Colonne boursière** | **Description**                                           |
-| --------------------- | --------------------------------------------------------- |
-| **Colonne Haut**      | Colonne contenant la **valeur boursière la plus élevée**. |
-| **Colonne Bas**       | Colonne contenant la **valeur boursière la plus basse**.  |
-| **Colonne Ouverture** | Colonne contenant la **valeur boursière d'ouverture**.    |
-| **Colonne Clôture**   | Colonne contenant la **valeur boursière de clôture**.     |
+| **Bubble Column**      | **Description**                                                                                                                         |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bubble Size Column** | Sélectionnez la colonne qui fournit la **taille de chaque bulle**, utilisée pour représenter une troisième dimension dans le graphique. |
 
 ***
 
-## **Remarques clés**
+### **Colonnes de graphique boursier**
 
-* **Data Providers** permettent une alimentation dynamique des données en temps réel pour des mises à jour en direct dans vos graphiques.
+Si **Stock Chart** est sélectionné comme type de graphique :
+
+| **Stock Column** | **Description**                                           |
+| ---------------- | --------------------------------------------------------- |
+| **High Column**  | Colonne contenant la **valeur boursière la plus élevée**. |
+| **Low Column**   | Colonne contenant la **valeur boursière la plus basse**.  |
+| **Open Column**  | Colonne contenant la **valeur boursière d'ouverture**.    |
+| **Close Column** | Colonne contenant la **valeur boursière de clôture**.     |
+
+***
+
+## **Notes clés**
+
+* **Data Providers** permettent l'alimentation dynamique de données en temps réel pour des mises à jour en direct dans vos graphiques.
 * La sélection de colonnes **lie des champs spécifiques** de vos données source au graphique pour la visualisation.
-* Les différents types de graphiques (par ex., Bubble, Stock) nécessitent des **colonnes spécialisées** pour représenter correctement les données.
-* Vous pouvez définir **de nouveaux fournisseurs de données directement** lors de la configuration de vos séries de données pour plus de commodité.
+* Différents types de graphiques (par exemple, Bubble, Stock) nécessitent des **colonnes spécialisées** pour représenter correctement les données.
+* Vous pouvez définir **de nouveaux fournisseurs de données directement** lors de la configuration de votre série de données pour plus de commodité.

@@ -1,4 +1,4 @@
-Ce guide démontre comment **créer un Cluster dans PADS4** et simuler un **scénario d'affichage dynamique réel** en utilisant une présentation **Departure Screen**.
+Ce guide démontre comment **create a Cluster in PADS4** et simuler un **scénario d'affichage dynamique réel** en utilisant une présentation **Departure Screen**.
 
 ***
 
@@ -20,9 +20,9 @@ Pour suivre cet exemple, vous avez besoin de :
    ```
    *(Remplacez `<server>` par l'adresse de votre serveur PADS4.)*
 2. **Ouvrez les paramètres du Viewer** et changez le nom en **Departure Cluster1**.
-3. **Répétez le processus** pour deux autres navigateurs Chrome *(pas de nouveaux onglets)*:
-   * **Viewer 2:** Departure Cluster2
-   * **Viewer 3:** Departure Cluster3
+3. **Répétez le processus** pour deux autres navigateurs Chrome *(pas de nouveaux onglets)* :
+   * **Viewer 2 :** Departure Cluster2
+   * **Viewer 3 :** Departure Cluster3
 4. Disposez les navigateurs côte à côte pour simuler un **cluster multi-écrans**.
 5. Un **indicateur vert** dans le coin inférieur gauche confirme que les Viewers sont connectés au PADS4 Server.
 
@@ -32,8 +32,8 @@ Pour suivre cet exemple, vous avez besoin de :
 
 1. **Ouvrez PADS4 CTRL Center** dans un navigateur.
 2. Naviguez vers **Viewers > Overview**.
-3. **Créez un nouveau Viewer Group** appelé **Cluster Departure Group**.
-4. **Ajoutez les Viewers**:
+3. **Créez un nouveau groupe de Viewers** appelé **Cluster Departure Group**.
+4. **Ajoutez les Viewers** :
    * Departure Cluster1
    * Departure Cluster2
    * Departure Cluster3
@@ -46,9 +46,9 @@ Pour suivre cet exemple, vous avez besoin de :
 1. **Allez à Viewers > Clusters**.
 2. **Cliquez sur "+ New"** pour créer un nouveau Cluster.
 3. **Entrez un nom** pour identifier ce Cluster.
-4. **Ajoutez les trois Cluster Viewers**:
+4. **Ajoutez les trois Viewers du Cluster** :
    * Cliquez sur **"+"** pour ajouter chaque Viewer.
-5. **Cliquez sur Save**.
+5. **Cliquez sur Enregistrer**.
    * Le Cluster est maintenant prêt.
 
 ***
@@ -58,14 +58,14 @@ Pour suivre cet exemple, vous avez besoin de :
 1. **Téléchargez le fichier de présentation Departure Screen** fichier (`departure.padsz`).
 2. **Ouvrez PADS4 Scheduler** *(application Windows)*.
 3. Cliquez sur **New Presentation** pour lancer **PADS4 Designer**.
-4. **Importez la présentation**:
+4. **Importez la présentation** :
    * **Allez à File > Import**.
    * Sélectionnez **departure.padsz**.
    * Suivez l'assistant pour copier les images et le contenu de la base de données.
 
 ***
 
-## **Étape 5 : Planification de la présentation sur le Cluster**
+## **Étape 5 : Planification de la présentation pour le Cluster**
 
 1. **Ouvrez la présentation Departure Screen** dans **PADS4 Designer**.
 2. **Allez à la barre de ruban** et cliquez sur **Schedule**.
@@ -80,17 +80,17 @@ Maintenant, la présentation sera affichée sur tous les **Cluster Viewers**.
 
 1. **Fermez le navigateur de Departure Cluster2**.
    * **Departure Cluster3 prendra en charge ses données.**
-   * Évite un **vide dans les informations affichées**.
+   * Évite un **écart dans les informations affichées**.
 2. **Fermez le navigateur de Departure Cluster1**.
    * **Le dernier Viewer restant commencera à partir de la ligne 1**.
 
-Cela démontre comment **PADS4 ajuste dynamiquement le contenu** en fonction de **la disponibilité des Viewers**.
+Ceci démontre comment **PADS4 ajuste dynamiquement le contenu** en fonction de **la disponibilité du Viewer**.
 
 ***
 
-## **Comment cela fonctionne dans PADS4**
+## **Comment ça fonctionne dans PADS4**
 
-### **Règles de Cluster et gestion des pages**
+### **Règles de Cluster et Gestion des Pages**
 
 1. **Chaque Viewer a une page dédiée**:
    * Page 1 → Departure Cluster1
@@ -101,7 +101,7 @@ Cela démontre comment **PADS4 ajuste dynamiquement le contenu** en fonction de 
    * **Si un Viewer est disponible**, il **affiche sa page assignée**.
    * Si un **Viewer tombe en panne**, un autre **prend automatiquement le relais**.
 
-### **Éléments de tableau connectés à la base de données**
+### **Éléments de Table Connectés à la Base de Données**
 
 * **Page 1 → Lignes 1-17**
 * **Page 2 → Lignes 18-35**
@@ -110,19 +110,19 @@ Cela démontre comment **PADS4 ajuste dynamiquement le contenu** en fonction de 
 
 ***
 
-## **Pourquoi utiliser des Clusters ?**
+## **Pourquoi Utiliser des Clusters?**
 
-* **Assure un flux d'information continu** en cas de défaillance matérielle.
-* **Priorise les informations critiques** de façon dynamique.
+* **Assure un flux d'information continu** en cas de panne matérielle.
+* **Priorise les informations critiques** dynamiquement.
 * **Permet une automatisation intelligente** avec des règles prédéfinies.
 * **S'adapte parfaitement** pour **les aéroports, les affichages de vente au détail, les murs vidéo, et plus encore**.
 
 ***
 
-## **Fonctionnalités avancées des Clusters**
+## **Fonctionnalités Avancées des Clusters**
 
-* Afficher du **contenu de secours (par ex., des vidéos) lorsque des données sont manquantes**.
+* Afficher **du contenu de secours (par ex., des vidéos) lorsque des données sont manquantes**.
 * **Ajuster la taille de police** dynamiquement si des Viewers tombent en panne.
 * **Démarrer un diaporama** sur le dernier Viewer restant.
 
-Les Clusters dans **PADS4** offrent une **flexibilité, une automatisation et une fiabilité inégalées** pour les **réseaux d'affichage numérique**.
+Les Clusters dans **PADS4** offrent **une flexibilité, une automatisation et une fiabilité inégalées** pour **les réseaux d'affichage numérique**.

@@ -1,79 +1,79 @@
-The **homepage** of the PADS4 Visitor Management System (VMS) provides an overview of active and pre-registered visitors, system actions, and access to core features such as **user creation**, **archives**, and **settings**.
+La **homepage** du PADS4 Visitor Management System (VMS) fournit une vue d'ensemble des visiteurs actifs et pré-enregistrés, des actions système, et un accès aux fonctionnalités principales telles que la **user creation**, les **archives**, et les **settings**.
 
-This central dashboard serves as your starting point for managing guest entries, configuring the environment, and handling day-of check-ins.
-
-***
-
-## Getting Started
-
-From the homepage, you can:
-
-* **Create a new visitor entry**
-* **View archived guest records**
-* **Access system settings**
-
-We’ll begin by walking through the process of creating a new user.
+Ce tableau de bord central sert de point de départ pour gérer les entrées des invités, configurer l'environnement et gérer les enregistrements le jour même.
 
 ***
 
-## Upper-Right Dashboard Options
+## Premiers pas
 
-* **Language Selection**: PADS4 VMS supports **English** and **French**.
-* **Logout**: Use the **user icon** in the top-right corner to safely log out of the system.
+Depuis la page d'accueil, vous pouvez :
+
+* **Créer une nouvelle entrée de visiteur**
+* **Consulter les enregistrements archivés des invités**
+* **Accéder aux paramètres du système**
+
+Nous allons commencer par vous guider à travers le processus de création d'un nouvel utilisateur.
 
 ***
 
-## Creating a New Visitor Entry
+## Options du tableau de bord en haut à droite
 
-To create a new visitor, the following fields are **required**:
+* **Language Selection** : PADS4 VMS prend en charge **English** et **French**.
+* **Logout** : Utilisez **user icon** dans le coin supérieur droit pour vous déconnecter en toute sécurité du système.
+
+***
+
+## Création d'une nouvelle entrée de visiteur
+
+Pour créer un nouveau visiteur, les champs suivants sont **required** :
 
 * **Email Address**
-* **Assigned Host** (from Workspace)
-* **Assigned Building** (from Workspace)
+* **Assigned Host** (de Workspace)
+* **Assigned Building** (de Workspace)
 
-### Optional Fields:
+### Champs optionnels :
 
 * First Name / Last Name
 * Company Name
 * Visit Purpose
 * Expected Arrival and Departure Time
 
-### Email Notification & Self-Registration
+### Notification par e-mail et auto-enregistrement
 
-Once the visitor is created:
+Une fois le visiteur créé :
 
-* They receive an **automated email** with check-in instructions.
-* The email includes a **pre-registration link**, allowing them to:
-  * Edit their personal information (name, company, etc.)
-  * Confirm their attendance
-* Pre-registered visitors can **validate themselves** on-site using a QR code or pincode.
+* Il reçoit un **automated email** avec les instructions d'enregistrement.
+* L'e-mail comprend un **lien de pré-inscription**, leur permettant de :
+  * Modifier leurs informations personnelles (nom, entreprise, etc.)
+  * Confirmer leur présence
+* Les visiteurs pré-inscrits peuvent **se valider** sur place à l'aide d'un code QR ou d'un code PIN.
 
 ***
 
-## On-Site Registration (VMS Kiosk Link)
+## Inscription sur place (Lien Kiosque VMS)
 
-For on-site self-check-in:
+Pour l'enregistrement autonome sur place :
 
-Deploy **interactive tablets, laptops, or PADS4 Viewers** with browsers configured to open the **VMS Kiosk URL**:
+Déployez **des tablettes interactives, des ordinateurs portables ou des PADS4 Viewers** avec des navigateurs configurés pour ouvrir l'**URL du Kiosque VMS** :
 
 ```
 https://yourpads4domain.com/VMS/Kiosk/welcome
 ```
 
-or
+ou
 
 ```
 http://<public-ip>/VMS/Kiosk/welcome
 ```
 
-> **Important (PADS4 version 2022.3 and newer):**\
-> Use the **correct domain-specific URL structure** to avoid licensing issues in multi-domain environments:
+> **Important (PADS4 version 2022.3 et plus récente) :**\
+> Utilisez la **structure d'URL spécifique au domaine correcte** pour éviter les problèmes de licence dans les environnements multi-domaines :
 
 ```
 https://serverlocation/VMS/Kiosk/domain
 ```
 
-For single-domain environments:
+Pour les environnements à domaine unique :
 
 ```
 https://serverlocation/VMS/Kiosk/pads
@@ -81,28 +81,28 @@ https://serverlocation/VMS/Kiosk/pads
 
 ***
 
-## QR Code or PIN Check-In
+## Enregistrement par Code QR ou PIN
 
-Visitors can check in using either:
+Les visiteurs peuvent s'enregistrer en utilisant soit :
 
-* A **QR Code** (camera-enabled devices required)
-* A **randomly assigned PIN**
+* Un **Code QR** (appareils équipés d'une caméra requis)
+* Un **PIN attribué aléatoirement**
 
-> Browsers will request permission to access the camera if QR code scanning is used. Supported browsers: Chrome, Edge, Firefox, Internet Explorer.
+> Les navigateurs demanderont l'autorisation d'accéder à la caméra si le scan de code QR est utilisé. Navigateurs pris en charge : Chrome, Edge, Firefox, Internet Explorer.
 
 ***
 
-## Dashboard Action Buttons
+## Boutons d'action du tableau de bord
 
-Once a user is registered, the following actions are available via the **Action Button**:
+Une fois qu'un utilisateur est enregistré, les actions suivantes sont disponibles via le **Bouton d'Action** :
 
-### For All Registered Users:
+### Pour tous les utilisateurs enregistrés :
 
-* **Manual Check-In** – Directly check the user in from the dashboard.
-* **Edit User** – Update personal details and contact information.
-* **Delete User** – Remove the user from the system.
+* **Enregistrement manuel** – Enregistrer directement l'utilisateur depuis le tableau de bord.
+* **Modifier l'utilisateur** – Mettre à jour les détails personnels et les informations de contact.
+* **Supprimer l'utilisateur** – Retirer l'utilisateur du système.
 
-### For Checked-In Users:
+### Pour les utilisateurs enregistrés :
 
-* **Print ID Badge** – Download or print a custom-designed visitor badge. Badge styling can be configured under the **Settings** tab.
-* **Manual Check-Out** – Log out the user when their visit is complete.
+* **Imprimer un badge d'identification** – Télécharger ou imprimer un badge visiteur personnalisé. Le style du badge peut être configuré sous l'onglet **Paramètres**.
+* **Départ manuel** – Déconnecter l'utilisateur lorsque sa visite est terminée.

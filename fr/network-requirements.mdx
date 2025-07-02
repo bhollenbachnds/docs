@@ -6,30 +6,30 @@ Si vous utilisez un pare-feu sur le serveur PADS4, cela signifie qu'un ou plusie
 
 ## Ports du serveur PADS4 utilisés avec des connexions externes
 
-| Port         | Protocol | Règles de pare-feu | Description                                                                                 |
-| ------------ | -------- | ------------------ | ------------------------------------------------------------------------------------------- |
-| 7237         | TCP      | Entrant            | Port par défaut utilisé pour la communication PADS4                                         |
-| 3702         | UDP      | Entrant            | Requis pour la fonction de recherche du serveur PADS4 (fonctionnalité de découverte réseau) |
-| 4525 ou 443  | HTTP     | Sortant            | Activation en ligne (un seul port doit être disponible)                                     |
-| 80 et/ou 443 | HTTP     | Entrant / Sortant  | Mises à jour logicielles et réplication lors de l'utilisation de plusieurs serveurs         |
-| 7            | UDP      | Sortant            | Fonction Wake On LAN (port WOL standard)                                                    |
-| 9            | UDP      | Sortant            | Fonction Wake On LAN (port WOL standard)                                                    |
-| 123          | UDP      | Entrant / Sortant  | Requis pour NTP (Network Time Protocol pour la synchronisation temporelle du Viewer)        |
+| Port         | Protocole | Règles de pare-feu | Description                                                                                 |
+| ------------ | --------- | ------------------ | ------------------------------------------------------------------------------------------- |
+| 7237         | TCP       | Entrant            | Port par défaut utilisé pour la communication PADS4                                         |
+| 3702         | UDP       | Entrant            | Requis pour la fonction de recherche du serveur PADS4 (fonctionnalité de découverte réseau) |
+| 4525 ou 443  | HTTP      | Sortant            | Activation en ligne (un seul port doit être disponible)                                     |
+| 80 et/ou 443 | HTTP      | Entrant / Sortant  | Mises à jour logicielles et réplication lors de l'utilisation de plusieurs serveurs         |
+| 7            | UDP       | Sortant            | Fonction Wake On LAN (port WOL standard)                                                    |
+| 9            | UDP       | Sortant            | Fonction Wake On LAN (port WOL standard)                                                    |
+| 123          | UDP       | Entrant / Sortant  | Requis pour NTP (Network Time Protocol pour la synchronisation temporelle du Viewer)        |
 
 ## Ports locaux utilisés par le serveur PADS4
 
-*Sachez que ces ports sont utilisés localement uniquement !*
+*Attention, ces ports sont utilisés uniquement en local !*
 
-| Port  | Protocol | Description                                                   |
-| ----- | -------- | ------------------------------------------------------------- |
-| 15672 | HTTP     | utilisé par RabbitMQ pour la connexion API HTTP               |
-| 15671 | HTTP     | utilisé par RabbitMQ https pour la connexion API HTTP via TLS |
-| 5672  | TCP      | utilisé par RabbitMQ AMQP                                     |
-| 5671  | TCP      | utilisé par RabbitMQ AMQP via TLS                             |
+| Port  | Protocole | Description                                                   |
+| ----- | --------- | ------------------------------------------------------------- |
+| 15672 | HTTP      | utilisé par RabbitMQ pour la connexion API HTTP               |
+| 15671 | HTTP      | utilisé par RabbitMQ https pour la connexion API HTTP via TLS |
+| 5672  | TCP       | utilisé par RabbitMQ AMQP                                     |
+| 5671  | TCP       | utilisé par RabbitMQ AMQP via TLS                             |
 
 ## Ports PADS4 Viewer
 
-| Port | Protocol          | Règles de pare-feu                                                                   | Description                                                                                 |
+| Port | Protocole         | Règles de pare-feu                                                                   | Description                                                                                 |
 | ---- | ----------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
 | 7237 | TCP               | Sortant                                                                              | Port par défaut utilisé pour la communication PADS4                                         |
 | 3702 | UDP               | Sortant                                                                              | Requis pour la fonction de recherche du serveur PADS4 (fonctionnalité de découverte réseau) |
@@ -41,8 +41,8 @@ Si vous utilisez un pare-feu sur le serveur PADS4, cela signifie qu'un ou plusie
 
 Port 80 et/ou 443 (HTTP)
 
-### Note
+### Remarque
 
-<Note>PADS4 dispose de fonctionnalités intégrées pour détecter automatiquement un serveur PADS4 dans votre réseau. Cependant, un serveur PADS4 ne peut être détecté automatiquement que lorsque le numéro de port UDP 3702 n'est pas bloqué par un pare-feu sur le PC serveur ou ailleurs dans le réseau.</Note>
+<Note>PADS4 dispose de fonctionnalités intégrées pour détecter automatiquement un serveur PADS4 dans votre réseau. Cependant, un serveur PADS4 ne peut être détecté automatiquement que lorsque le port UDP 3702 n'est pas bloqué par un pare-feu sur le PC serveur ou ailleurs dans le réseau.</Note>
 
-<Note>Avec la version 2021.3, un nouveau mécanisme est introduit qui réplique dans les deux sens. Les modifications sur le Serveur Secondaire/de Sauvegarde sont synchronisées avec le Serveur Principal et les modifications du Serveur Principal sont synchronisées avec les Serveurs Secondaires/de Sauvegarde.</Note>
+<Note>Avec la version 2021.3, un nouveau mécanisme est introduit qui réplique dans les deux sens. Les modifications sur le serveur secondaire/de sauvegarde sont synchronisées avec le serveur principal et les modifications du serveur principal sont synchronisées avec les serveurs secondaires/de sauvegarde.</Note>

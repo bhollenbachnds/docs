@@ -6,11 +6,11 @@ Ces propriétés définissent le **comportement interactif** du **Web Page Eleme
 
 ### **Barres de défilement**
 
-* **Afficher les barres de défilement** : Active ou désactive les barres de défilement lorsque le contenu dépasse les limites de l'élément.
+* **Show Scrollbars** : Active ou désactive les barres de défilement lorsque le contenu dépasse les limites de l'élément.
 
 ### **Interaction avec la souris**
 
-* **Afficher le pointeur de la souris** : Lorsqu'il est activé, le **pointeur de la souris** est visible, permettant aux utilisateurs de faire défiler et de cliquer sur les hyperliens.
+* **Show Mouse Pointer** : Lorsqu'elle est activée, le **pointeur de la souris** est visible, permettant aux utilisateurs de faire défiler et de cliquer sur les hyperliens.
 
 ### **Mode capture d'écran**
 
@@ -20,23 +20,23 @@ Ces propriétés définissent le **comportement interactif** du **Web Page Eleme
 
 ### **Interactivité utilisateur**
 
-* **Autoriser l'interactivité utilisateur** : Permet aux utilisateurs de cliquer sur les hyperliens dans l'élément de page web.
-  * **Remarque** : Désactivé si le **Mode capture d'écran** est activé.
-  * **Limitation** : Les hyperliens qui ouvrent **de nouvelles fenêtres/popups** ne sont **pas pris en charge**.
+* **Allow User Interactivity** : Permet aux utilisateurs de cliquer sur les hyperliens dans l'élément de page web.
+  * **Remarque** : Désactivé si le **Screenshot Mode** est activé.
+  * **Limitation** : Les hyperliens qui ouvrent de **nouvelles fenêtres/popups** ne sont **pas pris en charge**.
 
 ### **Barre d'adresse**
 
-* **Afficher la barre d'adresse** : Affiche une **barre d'adresse** permettant aux utilisateurs de saisir des URL.
-  * **Uniquement disponible en mode interactif.**
-  * **Conseil de sécurité** : Combinez ceci avec **Web Page Restrictions** pour empêcher la navigation non autorisée.
+* **Show Address Bar** : Affiche une **barre d'adresse** permettant aux utilisateurs de saisir des URL.
+  * **Disponible uniquement en mode interactif.**
+  * **Conseil de sécurité** : Combinez ceci avec les **Web Page Restrictions** pour empêcher la navigation non autorisée.
 
 ### **Options de mise à l'échelle**
 
-* **Ignorer la mise à l'échelle** : Garantit que l'élément **ignore** les paramètres **de mise à l'échelle d'affichage** de Windows et s'affiche à **un zoom de 100%**.
+* **Ignore Scaling** : Garantit que l'élément **ignore** les paramètres de **mise à l'échelle d'affichage** de Windows et s'affiche à un **zoom de 100%**.
 
 ***
 
-## **Options du moteur de navigateur web**
+## **Options du moteur de navigateur Web**
 
 Sélectionnez le **moteur de navigateur** utilisé pour afficher la page web. Différentes pages web **peuvent se comporter différemment** selon le moteur :
 
@@ -52,18 +52,18 @@ Sélectionnez le **moteur de navigateur** utilisé pour afficher la page web. Di
 
 ### **Contrôle du cache**
 
-* **Vider le cache au démarrage** : Efface automatiquement **les données en cache** lorsque l'élément web démarre.
+* **Clear Cache on Start** : Efface automatiquement les **données mises en cache** au démarrage de l'élément web.
 
 ### **Optimisation des performances**
 
-* **Fréquence d'images** : Ajuste la **fréquence d'images** (par défaut : **30 FPS**).
-* **Mode de rendu** :
-  * **Toujours au premier plan**: Assure que le **élément web est affiché au-dessus des autres éléments** dans la présentation.
+* **Fréquence d'images**: Ajuste le **frame rate** (par défaut : **30 FPS**).
+* **Render Mode**:
+  * **Always on Top**: Garantit que l'**élément web est affiché au-dessus des autres éléments** dans la présentation.
 
 ***
 
 ## **Remarques**
 
-* **Interactivité Utilisateur** permet uniquement **la navigation dans la même fenêtre**. **Popups** et **liens vers de nouvelles fenêtres** ne sont pas pris en charge.
+* **User Interactivity** permet uniquement la **navigation dans la même fenêtre**. **Popups** et **liens vers de nouvelles fenêtres** ne sont pas pris en charge.
 * Si **le contenu dynamique provoque des fuites de mémoire**, l'activation du **Screenshot Mode** peut aider à **améliorer la stabilité**.
-* **Conseil de Sécurité**: Si vous autorisez l'interaction utilisateur, activez **Web Page Restrictions** pour **contrôler quels sites peuvent être consultés**.
+* **Conseil de sécurité** : Si vous autorisez l'interaction utilisateur, activez **Web Page Restrictions** pour **contrôler quels sites peuvent être consultés**.

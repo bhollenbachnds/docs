@@ -5,13 +5,13 @@
 ---
 
 <Info>
-  **Prérequis**: Veuillez installer Node.js (version 19 ou supérieure) avant de continuer.<br />
-  Veuillez mettre à niveau vers `docs.json` avant de continuer et supprimer le fichier obsolète `mint.json`.
+  **Prérequis** : Veuillez installer Node.js (version 19 ou supérieure) avant de continuer. <br />
+  Veuillez mettre à niveau vers `docs.json` avant de continuer et supprimer le fichier hérité `mint.json`.
 </Info>
 
 Suivez ces étapes pour installer et exécuter Mintlify sur votre système d'exploitation :
 
-**Étape 1**: Installez Mintlify :
+**Étape 1** : Installez Mintlify :
 
 <CodeGroup>
   ```bash npm
@@ -23,17 +23,17 @@ Suivez ces étapes pour installer et exécuter Mintlify sur votre système d'exp
   ```
 </CodeGroup>
 
-**Étape 2**: Naviguez vers le répertoire docs (où se trouve le fichier `docs.json`) et exécutez la commande suivante :
+**Étape 2** : Naviguez vers le répertoire docs (où se trouve le fichier `docs.json`) et exécutez la commande suivante :
 
 ```bash
 mintlify dev
 ```
 
-Un aperçu local de votre documentation sera disponible à `http://localhost:3000`.
+Un aperçu local de votre documentation sera disponible à l'adresse `http://localhost:3000`.
 
 ### Ports personnalisés
 
-Par défaut, Mintlify utilise le port 3000. Vous pouvez personnaliser le port sur lequel Mintlify s'exécute en utilisant l'option `--port`. Pour exécuter Mintlify sur le port 3333, par exemple, utilisez cette commande :
+Par défaut, Mintlify utilise le port 3000. Vous pouvez personnaliser le port sur lequel Mintlify s'exécute en utilisant le drapeau `--port`. Pour exécuter Mintlify sur le port 3333, par exemple, utilisez cette commande :
 
 ```bash
 mintlify dev --port 3333
@@ -70,7 +70,8 @@ mintlify broken-links
 ## Déploiement
 
 <Tip>
-  Éditeurs illimités disponibles dans le [Pro Plan](https://mintlify.com/pricing) et supérieur.
+  Éditeurs illimités disponibles sous le [Pro
+  Plan](https://mintlify.com/pricing) et supérieur.
 </Tip>
 
 Si le déploiement est réussi, vous devriez voir ce qui suit :
@@ -81,7 +82,7 @@ Si le déploiement est réussi, vous devriez voir ce qui suit :
 
 ## Formatage du code
 
-Nous suggérons d'utiliser des extensions sur votre IDE pour reconnaître et formater MDX. Si vous utilisez VSCode, envisagez l'extension [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) pour la coloration syntaxique, et [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) pour le formatage du code.
+Nous suggérons d'utiliser des extensions sur votre IDE pour reconnaître et formater MDX. Si vous êtes un utilisateur de VSCode, envisagez l'[extension MDX VSCode](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) pour la mise en évidence de la syntaxe, et [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) pour le formatage du code.
 
 ## Dépannage
 
@@ -90,7 +91,7 @@ Nous suggérons d'utiliser des extensions sur votre IDE pour reconnaître et for
     Cela peut être dû à une version obsolète de node. Essayez ce qui suit :
 
     1. Supprimez la version actuellement installée de mintlify : `npm remove -g mintlify`
-    2. Mettez à niveau vers Node v19 ou supérieur.
+    2. Passez à Node v19 ou supérieur.
     3. Réinstallez mintlify : `npm install -g mintlify`
   </Accordion>
 
@@ -99,4 +100,4 @@ Nous suggérons d'utiliser des extensions sur votre IDE pour reconnaître et for
   </Accordion>
 </AccordionGroup>
 
-Curieux de savoir ce qui a changé dans la version CLI ? [Consultez le changelog du CLI.](https://www.npmjs.com/package/mintlify?activeTab=versions)
+Curieux de savoir ce qui a changé dans la version CLI ? [Consultez le journal des modifications CLI.](https://www.npmjs.com/package/mintlify?activeTab=versions)

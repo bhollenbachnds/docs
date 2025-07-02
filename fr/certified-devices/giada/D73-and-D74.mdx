@@ -1,10 +1,10 @@
-Ce guide fournit des instructions étape par étape pour **installing and configuring PADS4 Viewer** sur **Giada DN73 & DN74 devices running Android 7.1**.
+Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **Giada DN73 & DN74 devices running Android 7.1**.
 
 ***
 
 ## **1. Première utilisation**
 
-Pendant l'installation, vous devrez **configure the PADS4 Server location**. Il est recommandé de **complete the PADS4 Server installation first** avant de procéder à la configuration de l'appareil.
+Pendant l'installation, vous devrez **configurer l'emplacement du PADS4 Server**. Il est recommandé de **terminer d'abord l'installation du PADS4 Server** avant de procéder à la configuration de l'appareil.
 
 <Note>
   La version minimale **PADS4 Server version** requise pour l'application **PADS4Giada app** est **PADS4 Foundation 2022.1**.\
@@ -15,7 +15,7 @@ Pendant l'installation, vous devrez **configure the PADS4 Server location**. Il 
 
 ### **1.1 Réinitialisation de l'appareil**
 
-Si l'appareil a déjà été utilisé, une **factory reset** est recommandée pour **clear storage** et **prevent interference** avec le **PADS4 Viewer software**.
+Si l'appareil a déjà été utilisé, une **réinitialisation d'usine** est recommandée pour **effacer le stockage** et **éviter les interférences** avec le **PADS4 Viewer software**.
 
 <Steps>
   <Step title="Étape Une">
@@ -47,10 +47,10 @@ Assurez-vous que les appareils **Giada DN73 & DN74** utilisent des **PADS4-suppo
 
 #### **Versions de firmware prises en charge**
 
-| Appareil | Version du firmware | Version du chargeur | Informations sur la puce | Version de l'outil Android | Télécharger          |
-| -------- | ------------------- | ------------------- | ------------------------ | -------------------------- | -------------------- |
-| **DN73** | 7.1.00              | 2.44                | RK322H                   | 2.38                       | [**Télécharger**](#) |
-| **DN74** | 7.1.00              | 2.45                | RK330C                   | 2.63                       | [**Télécharger**](#) |
+| Device   | Firmware Version | Loader Version | Chip Info | Android Tool Version | Download          |
+| -------- | ---------------- | -------------- | --------- | -------------------- | ----------------- |
+| **DN73** | 7.1.00           | 2.44           | RK322H    | 2.38                 | [**Download**](#) |
+| **DN74** | 7.1.00           | 2.45           | RK330C    | 2.63                 | [**Download**](#) |
 
 ***
 
@@ -185,7 +185,7 @@ protocol://host:port/hostpath/
 
 * **Protocol:** `HTTP` ou `HTTPS` (dépend du certificat SSL).
 * **Host:** Nom DNS ou **Adresse IP** du **PADS4 Server**.
-* **Port:** *(Optionnel - spécifier uniquement si vous utilisez des ports non standard).*
+* **Port:** *(Optionnel - à spécifier uniquement si vous utilisez des ports non standard).*
 * **Chemin d'hôte :** Configuré dans **System Management** *`(default: PADS4)`*.
 
 #### **Étapes de connexion**
@@ -226,7 +226,7 @@ protocol://host:port/hostpath/
 
 Pour accéder aux **Viewer Settings** :
 
-* **Appuyez et maintenez le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes**.
+* **Maintenez enfoncé le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes**.
 
 ***
 
@@ -252,12 +252,12 @@ Ci-dessous sont les fonctionnalités prises en charge et les limitations pour **
 
 ### **3.1 Capacités générales de l'appareil**
 
-| Fonctionnalité | Description                                                                                                                   |
-| :------------: | ----------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Modèles d'affichage pris en charge** – Compatible avec les appareils DN73 & DN74.                                           |
-|        ✅       | **Mode Portrait** – Pris en charge.                                                                                           |
-|        ❌       | **Remote Control Blocking** – Bloque uniquement les boutons sur l'appareil et l'écran tactile (pas la télécommande complète). |
-|        ✅       | **Prend en charge HTTP & HTTPS**                                                                                              |
+| Fonctionnalité | Description                                                                                                                      |
+| :------------: | -------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Modèles d'affichage pris en charge** – Compatible avec les appareils DN73 & DN74.                                              |
+|        ✅       | **Mode Portrait** – Pris en charge.                                                                                              |
+|        ❌       | **Blocage de la télécommande** – Bloque uniquement les boutons sur l'appareil et l'écran tactile (pas la télécommande complète). |
+|        ✅       | **Prend en charge HTTP & HTTPS**                                                                                                 |
 
 ***
 
@@ -266,22 +266,22 @@ Ci-dessous sont les fonctionnalités prises en charge et les limitations pour **
 | Fonctionnalité | Description                                                                           |
 | :------------: | ------------------------------------------------------------------------------------- |
 |        ✅       | **Nombre maximum de vidéos prises en charge** – Jusqu'à **2 vidéos simultanées**.     |
-|        ❌       | **Streaming Vidéo** – Non pris en charge.                                             |
+|        ❌       | **Streaming vidéo** – Non pris en charge.                                             |
 |        ✅       | **Formats d'image** – JPG, PNG, BMP, GIF                                              |
 |        ✅       | **Texte, Ligne, Forme, Texte défilant, Texte formaté, Tableaux, Boutons interactifs** |
-|        ❌       | **Flash Element** – Non pris en charge.                                               |
-|        ✅       | **Web Element** – Interactif **Address Bar not supported**.                           |
+|        ❌       | **Élément Flash** – Non pris en charge.                                               |
+|        ✅       | **Élément Web** – Interactif **Address Bar not supported**.                           |
 |        ✅       | **Couleurs** – Prises en charge (sauf pour les **texture and pattern colors**).       |
 
 ***
 
-### **3.3 Connectivité des données et intégrations**
+### **3.3 Connectivité de données et intégrations**
 
-| Fonctionnalité | Description                                                                                                             |
-| :------------: | ----------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Data Providers** – Prend en charge **70+ PADS4 data providers** pour récupérer et intégrer des données en temps réel. |
-|        ✅       | **Viewer Variables** – Simplifie la gestion du contenu sans modifier les présentations.                                 |
-|        ✅       | **Property Bindings** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.          |
+| Fonctionnalité | Description                                                                                                                      |
+| :------------: | -------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Fournisseurs de données** – Prend en charge **70+ PADS4 data providers** pour récupérer et intégrer des données en temps réel. |
+|        ✅       | **Viewer Variables** – Simplifie la gestion du contenu sans modifier les présentations.                                          |
+|        ✅       | **Property Bindings** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.                   |
 
 ***
 
@@ -297,36 +297,36 @@ Ci-dessous sont les fonctionnalités prises en charge et les limitations pour **
 
 ### **3.5 Gestion des appareils**
 
-| Fonctionnalité | Description                                                                                                              |
-| :------------: | ------------------------------------------------------------------------------------------------------------------------ |
-|        ✅       | **Remote Device Management** – Géré via **PADS4 CTRL Center & PADS4 Agent**.                                             |
-|        ✅       | **Connection State Monitoring & Alerts** – Envoie des alertes pour les pannes réseau.                                    |
-|        ✅       | **Reboot & Restart Viewer** – Pris en charge.                                                                            |
-|        ❌       | **Shutdown & Wake-on-LAN** – Non pris en charge.                                                                         |
-|        ✅       | **Turn Off Display** – Pris en charge.                                                                                   |
-|        ✅       | **Screenshot Capture** – Récupérer des captures d'écran de l'affichage.                                                  |
-|        ✅       | **Logs & System Monitoring** – Journaux du visualiseur, journaux de synchronisation et informations système disponibles. |
-|        ✅       | **Viewer Settings & Font Installation** – Gérer les paramètres et installer des polices personnalisées.                  |
-|        ❌       | **LED Light Control** – Non pris en charge.                                                                              |
-|        ✅       | **Suivi de Preuve de Diffusion** – Surveille l'historique de lecture du contenu.                                         |
-|        ✅       | **Support Blackbox** – Fournit des journaux système pour le dépannage et le support.                                     |
+| Fonctionnalité | Description                                                                                                                    |
+| :------------: | ------------------------------------------------------------------------------------------------------------------------------ |
+|        ✅       | **Gestion à distance des appareils** – Gérée via **PADS4 CTRL Center & PADS4 Agent**.                                          |
+|        ✅       | **Surveillance de l'état de connexion et alertes** – Envoie des alertes en cas de défaillance du réseau.                       |
+|        ✅       | **Redémarrage et relance du Viewer** – Pris en charge.                                                                         |
+|        ❌       | **Arrêt et Wake-on-LAN** – Non pris en charge.                                                                                 |
+|        ✅       | **Éteindre l'écran** – Pris en charge.                                                                                         |
+|        ✅       | **Capture d'écran** – Récupérer des captures d'écran de l'affichage.                                                           |
+|        ✅       | **Journaux et surveillance du système** – Journaux du Viewer, journaux de synchronisation et informations système disponibles. |
+|        ✅       | **Paramètres du Viewer et installation de polices** – Gérer les paramètres et installer des polices personnalisées.            |
+|        ❌       | **Contrôle des lumières LED** – Non pris en charge.                                                                            |
+|        ✅       | **Proof of Play Tracking** – Surveille l'historique de lecture du contenu.                                                     |
+|        ✅       | **Blackbox Support** – Fournit des journaux système pour le dépannage et le support.                                           |
 
 ***
 
-## **4. Limitations Générales**
+## **4. Limitations générales**
 
 <Warning>
-  **Fournisseurs de Données** – **HTML5 Viewer** ne peut pas lire les données directement à partir de sources externes ; elles doivent être récupérées via le **PADS4 Data Server**.
+  **Fournisseurs de données** – **HTML5 Viewer** ne peut pas lire les données directement à partir de sources externes ; elles doivent être récupérées via le **PADS4 Data Server**.
 </Warning>
 
 <Warning>
-  **Bibliothèque de Contenu** – Prend en charge **content from PADS4 Content Library** mais **ne prend pas en charge les chemins de fichiers pointant vers un disque local**.
+  **Content Library** – Prend en charge **content from PADS4 Content Library** mais **does not support file paths pointing to a local disk**.
 </Warning>
 
 <Warning>
-  **Limite de Stockage de Preuve de Diffusion** – Stocke **jusqu'à 50 000 enregistrements** hors ligne. Lorsque la limite est atteinte, les **enregistrements les plus anciens sont automatiquement supprimés**.
+  **Proof of Play Storage Limit** – Stocke **up to 50,000 records** hors ligne. Lorsque la limite est atteinte, les **oldest records are automatically deleted**.
 </Warning>
 
 <Warning>
-  **Capacité de Stockage** – Le **stockage disponible pour le contenu varie** en fonction de l'**appareil et du navigateur**.
+  **Storage Capacity** – Le **storage for content varies** en fonction de l'**device and browser**.
 </Warning>
