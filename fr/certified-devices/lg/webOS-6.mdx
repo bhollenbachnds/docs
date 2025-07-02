@@ -4,9 +4,9 @@ Ce guide fournit des instructions étape par étape pour **l'installation et la 
 
 ## **1. Première utilisation**
 
-Avant l'installation, assurez-vous que le **PADS4 Server est correctement configuré**.
+Avant l'installation, assurez-vous que le **PADS4 Server est configuré correctement**.
 
-<Note> Ce guide est spécifique à **WebOS6**. Si l'**Configuration Wizard** ne démarre pas automatiquement, réinitialisez l'appareil comme décrit dans **1.2 Réinitialisation de l'appareil**.</Note>
+<Note> Ce guide est spécifique à **WebOS6**. Si l'**Assistant de configuration** ne démarre pas automatiquement, réinitialisez l'appareil comme décrit dans **1.2 Réinitialisation de l'appareil**.</Note>
 
 ***
 
@@ -74,7 +74,7 @@ Suivez ces étapes pour installer **PADS4 Viewer** sur **LG WebOS6**.
   </Step>
 
   <Step title="Sixième étape">
-    Définissez l'**URL** pour le **PADS4 Server**:
+    Définissez l'**URL** pour le **PADS4 Server** :
 
     * **HTTP:** `http://<server>/pads4/apps/lg.zip`
     * **HTTPS:** `https://<server>/pads4/apps/lg.zip` *(connexion sécurisée utilisant HTTPS)*
@@ -112,9 +112,9 @@ Pour résoudre les problèmes, vérifiez les **Viewer Settings** et les **fichie
 
 ***
 
-### **2.1 Vérification du micrologiciel de l'appareil**
+### **2.1 Vérification du firmware de l'appareil**
 
-Assurez-vous que la **version correcte du micrologiciel** est installée pour une fonctionnalité complète du **PADS4 Viewer**.
+Assurez-vous que la **version correcte du firmware** est installée pour une fonctionnalité complète du **PADS4 Viewer**.
 
 <Steps>
   <Step title="Étape Un">
@@ -122,17 +122,17 @@ Assurez-vous que la **version correcte du micrologiciel** est installée pour un
   </Step>
 
   <Step title="Étape Deux">
-    Ouvrez le **SI App (ZIP) Dashboard** et vérifiez la **version du micrologiciel**.
+    Ouvrez le **SI App (ZIP) Dashboard** et vérifiez la **version du firmware**.
   </Step>
 
   <Step title="Étape Trois">
-    Assurez-vous que la **version du micrologiciel** est **03.08.80** *(requise pour PADS4)*.
+    Assurez-vous que la **version du firmware** est **03.08.80** *(requise pour PADS4)*.
   </Step>
 </Steps>
 
 ***
 
-### **2.2 Mise à jour du micrologiciel**
+### **2.2 Mise à jour du firmware**
 
 <Steps>
   <Step title="Étape Un">
@@ -144,7 +144,7 @@ Assurez-vous que la **version correcte du micrologiciel** est installée pour un
   </Step>
 
   <Step title="Étape Trois">
-    L'**appareil détectera la clé USB** et démarrera la **mise à jour du micrologiciel** automatiquement.
+    L'**appareil détectera la clé USB** et démarrera la **mise à jour du firmware** automatiquement.
   </Step>
 </Steps>
 
@@ -161,13 +161,13 @@ Assurez-vous que la **version correcte du micrologiciel** est installée pour un
 | Fonctionnalité | Description                                                                                                 |
 | :------------: | ----------------------------------------------------------------------------------------------------------- |
 |        ✅       | **Automatic Software Updates** – Le HTML5 Viewer se met à jour automatiquement.                             |
-|        ✅       | **Offline Mode** – L'appareil continue d'exécuter des présentations pendant **7 jours** en mode hors ligne. |
+|        ✅       | **Offline Mode** – L'appareil continue d'exécuter les présentations pendant **7 jours** en mode hors ligne. |
 |        ✅       | **Supports HTTP & HTTPS**                                                                                   |
 |        ✅       | **Maximum 2 Full HD Videos**                                                                                |
 |        ✅       | **Streaming Support** – HTTP, HTTPS, HLS V3, UDP, RTP, RTPS multicast.                                      |
 |        ✅       | **Cluster Viewer Mode** – Pris en charge.                                                                   |
 |        ✅       | **Interactive Button, Text, Scrolling Text, Image, Table**                                                  |
-|        ✅       | **PowerPoint & PDF Elements** – *(PowerPoint nécessite une installation sur le PADS4 Server)*.              |
+|        ✅       | **PowerPoint & PDF Elements** – *(PowerPoint requires installation on PADS4 Server)*.                       |
 |        ✅       | **Remote Device Management** – Contrôlé via **PADS4 CTRL Center & PADS4 Agent**.                            |
 |        ✅       | **Wake-on-LAN** – Pris en charge.                                                                           |
 |        ✅       | **Proof of Play Tracking** – Surveille l'historique de lecture du contenu.                                  |
@@ -182,7 +182,7 @@ Assurez-vous que la **version correcte du micrologiciel** est installée pour un
 | **Problème**                                             | **Solution**                                                                                                              |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | **Problèmes de connexion au PADS4 Server**               | Assurez-vous que l'**URL correcte** est configurée dans les **SI Server Settings**.                                       |
-| **Version du micrologiciel incorrecte**                  | Vérifiez et **mettez à jour le micrologiciel** vers **03.08.80** en suivant **2.2 Mise à jour du micrologiciel**.         |
+| **Version du firmware incorrecte**                       | Vérifiez et **mettez à jour le firmware** vers **03.08.80** en suivant **2.2 Mise à jour du firmware**.                   |
 | **Les commandes de la télécommande ne fonctionnent pas** | Assurez-vous que **block remote control** est désactivé dans les **Device Settings**.                                     |
 | **L'écran ne s'éteint pas**                              | **Turn Off Display** n'est **pas pris en charge** sur WebOS6.                                                             |
 | **Problèmes de streaming**                               | Vérifiez le **format d'encodeur de flux** (MP4, MPEGTS, MP2T). Utilisez `rtp://239.0.0.1/?encoding=mpegts` si nécessaire. |

@@ -37,12 +37,12 @@ La fenêtre de preuve de diffusion affiche les entrées du journal de lecture qu
 
 ![EN Agent Proof Of Play Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ProofOfPlay.png)
 
-Dans la fenêtre de preuve de diffusion de votre serveur PADS4, vous pouvez consulter les informations de preuve de diffusion sur une base quotidienne. Sélectionnez la **Date** pour laquelle vous souhaitez consulter les données. En raison de la quantité potentiellement importante de données, cela est limité à une base quotidienne. Les options d'**export** permettent à l'utilisateur de spécifier une période. Il est également possible d'utiliser l'Agent SDK / ou une API Web pour lire les informations de preuve de diffusion du système PADS4. Consultez la documentation SDK.
+Dans la fenêtre de preuve de diffusion de votre serveur PADS4, vous pouvez consulter les informations de preuve de diffusion sur une base quotidienne. Sélectionnez la **Date** pour laquelle vous souhaitez consulter les données. En raison de la quantité potentiellement importante de données, ceci est limité à une base quotidienne. Les options d'**export** permettent à l'utilisateur de spécifier une période. Il est également possible d'utiliser l'Agent SDK / ou une API Web pour lire les informations de preuve de diffusion du système PADS4. Consultez la documentation SDK.
 
 Les entrées de preuve de diffusion qui ont été transmises par les PADS4 Viewers connectés sont stockées dans la base de données de preuve de diffusion sur votre serveur PADS4. Dans la fenêtre de preuve de diffusion d'un PADS4 Viewer (onglet Viewer), vous ne voyez que les entrées qui ont été mises en cache localement sur votre Viewer et qui n'ont pas encore été transmises à votre serveur PADS4. Toutes les heures complètes ou lors de la fermeture de PADS4 Viewer, l'application transmettra ses informations de preuve de diffusion à votre serveur PADS4.
 
 <Tip>
-  La fenêtre de preuve de diffusion d'un PADS4 Viewer est destinée à suivre le processus de journalisation réel d'un PADS4 Viewer, tandis que la fenêtre de preuve de diffusion de votre serveur PADS4 est destinée à vérifier les informations de preuve de diffusion d'une période fermée après coup.
+  La fenêtre de preuve de diffusion d'un PADS4 Viewer est destinée à suivre le processus de journalisation réel d'un PADS4 Viewer, tandis que la fenêtre de preuve de diffusion de votre serveur PADS4 est destinée à vérifier les informations de preuve de diffusion d'une période fermée par la suite.
 </Tip>
 
 **Start Time**\
@@ -55,7 +55,7 @@ La différence de temps (en minutes) entre l'heure de Greenwich (UTC) et l'heure
 Nom unique du PADS4 Viewer qui a diffusé le contenu.
 
 **Level**\
-Niveau de l'élément qui a diffusé le contenu. Les niveaux possibles sont presentation, page et element.
+Niveau de l'élément qui a diffusé le contenu. Les niveaux possibles sont présentation, page et élément.
 
 **Element**\
 Identification de l'élément qui a diffusé le contenu.
@@ -70,7 +70,7 @@ Indique si le contenu a été entièrement diffusé ou a été interrompu pendan
 Affiche l'état du moniteur pendant la lecture du contenu. Cela peut être utilisé comme preuve que le contenu a réellement été visible pour le public. Les informations sur l'état de l'affichage ne peuvent être collectées que lorsque le PADS4 Viewer a été correctement configuré et prend en charge la collecte de ces informations.
 
 **Content**\
-Contenu qui a été diffusé par l'élément. Pour les éléments de texte, ce sera le texte qui a été affiché, tandis que pour d'autres éléments comme les images et les vidéos, ce sera le nom du fichier qui contenait le contenu.
+Contenu qui a été diffusé par l'élément. Pour les éléments de texte, il s'agira du texte qui a été affiché, tandis que pour d'autres éléments comme les images et les vidéos, il s'agira du nom du fichier qui contenait le contenu.
 
  
 
@@ -92,7 +92,7 @@ Pour exporter les informations de preuve de diffusion :
    ![EN Agent Proof Of Play Export Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ProofOfPlayExport.png)
 
    <Tip>
-     Lors de la spécification de la période d'exportation ici, vous n'êtes pas limité aux périodes mensuelles de vos bases de données physiques de preuve de diffusion. Si nécessaire, le système PADS4 collectera automatiquement les informations de preuve de diffusion à partir de plusieurs bases de données de preuve de diffusion lors de l'exécution de la fonction d'exportation.
+     Lorsque vous spécifiez la période d'exportation ici, vous n'êtes pas limité aux périodes mensuelles de vos bases de données physiques de preuve de diffusion. Si nécessaire, le système PADS4 collectera automatiquement les informations de preuve de diffusion à partir de plusieurs bases de données de preuve de diffusion lors de l'exécution de la fonction d'exportation.
    </Tip>
 3. Sélectionnez le type de sortie, **XML** ou **Excel**.
 4. Cliquez sur **Browse** pour spécifier le **File Name** du fichier dans lequel vous souhaitez enregistrer les résultats de l'exportation.
@@ -118,7 +118,7 @@ Alternativement, vous pouvez naviguer jusqu'au dossier de preuve de diffusion PA
 #### **Pour supprimer une entrée de journal de preuve de diffusion**
 
 1. Sélectionnez l'élément de preuve de diffusion dans la fenêtre de preuve de diffusion de votre serveur PADS4.\
-   Optionnellement, vous pouvez sélectionner plusieurs éléments en maintenant enfoncée la touche \[Ctrl] ou \[Shift] tout en cliquant sur les éléments.
+   Vous pouvez également sélectionner plusieurs éléments en maintenant enfoncée la touche \[Ctrl] ou \[Maj] tout en cliquant sur les éléments.
 2. Cliquez sur **Remove** dans le menu **Home**.
 
    ![EN Agent Ribbon Proof Of Play Remove Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ProofOfPlayRemove.png)

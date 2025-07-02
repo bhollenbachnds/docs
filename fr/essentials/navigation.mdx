@@ -7,11 +7,11 @@
 
 Le menu de navigation est la liste de liens sur chaque site web.
 
-Vous allez probablement mettre à jour`docs.json` chaque fois que vous ajoutez une nouvelle page. Les pages n'apparaissent pas automatiquement.
+Vous devrez probablement le mettre à jour`docs.json` chaque fois que vous ajoutez une nouvelle page. Les pages n'apparaissent pas automatiquement.
 
 ## Syntaxe de navigation
 
-Notre syntaxe de navigation est récursive, ce qui signifie que vous pouvez créer des groupes de navigation imbriqués. Vous n'avez pas besoin d'inclure`.mdx` dans les noms de pages.
+Notre syntaxe de navigation est récursive, ce qui signifie que vous pouvez créer des groupes de navigation imbriqués. Vous n'avez pas besoin d'inclure `.mdx` dans les noms de pages.
 
 <CodeGroup>
   ```json Regular Navigation
@@ -55,12 +55,12 @@ Notre syntaxe de navigation est récursive, ce qui signifie que vous pouvez cré
 
 ## Dossiers
 
-Placez simplement vos fichiers MDX dans des dossiers et mettez à jour les chemins dans`docs.json`.
+Placez simplement vos fichiers MDX dans des dossiers et mettez à jour les chemins dans `docs.json`.
 
-Par exemple, pour avoir une page à`https://yoursite.com/your-folder/your-page` vous créeriez un dossier appelé`your-folder` contenant un fichier MDX appelé`your-page.mdx`.
+Par exemple, pour avoir une page à `https://yoursite.com/your-folder/your-page` vous créeriez un dossier appelé `your-folder` contenant un fichier MDX appelé `your-page.mdx`.
 
 <Warning>
-  Vous ne pouvez pas utiliser`api` pour le nom d'un dossier à moins de l'imbriquer dans un autre dossier. Mintlify utilise Next.js qui réserve le dossier`api` de premier niveau pour les appels de serveur internes. Un nom de dossier tel que`api-reference` serait accepté.
+  Vous ne pouvez pas utiliser `api` pour le nom d'un dossier à moins de l'imbriquer dans un autre dossier. Mintlify utilise Next.js qui réserve le dossier de premier niveau `api` pour les appels de serveur internes. Un nom de dossier tel que `api-reference` serait accepté.
 </Warning>
 
 ```json Navigation With Folder
@@ -81,4 +81,4 @@ Par exemple, pour avoir une page à`https://yoursite.com/your-folder/your-page` 
 
 ## Pages cachées
 
-Les fichiers MDX non inclus dans`docs.json` n'apparaîtront pas dans la barre latérale mais sont accessibles via la barre de recherche et en les liant directement.
+Les fichiers MDX non inclus dans `docs.json` n'apparaîtront pas dans la barre latérale mais sont accessibles via la barre de recherche et en les liant directement.

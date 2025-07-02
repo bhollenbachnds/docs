@@ -1,4 +1,4 @@
-Ces propriétés contrôlent comment les **text items** apparaissent et se déplacent dans l'**scrolling text element**.
+Ces propriétés contrôlent comment les **éléments de texte** apparaissent et se déplacent dans l'**élément de texte défilant**.
 
 ***
 
@@ -8,36 +8,36 @@ Ces propriétés contrôlent comment les **text items** apparaissent et se dépl
 
 Déterminent comment le nouveau texte est introduit dans l'élément de texte défilant :
 
-| **Option**                             | **Description**                                                                                                                             |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Line by Line**                       | Affiche une ligne à la fois. Chaque ligne est montrée séparément, et la ligne suivante n'apparaît qu'après la disparition de la précédente. |
-| **Directly After Previous Text**       | Le nouveau texte est placé **immédiatement après** le texte précédent, assurant un effet de défilement continu sans espaces.                |
-| **When Previous Text is Scrolled Out** | Le nouveau texte commence **seulement après** que le texte précédent ait **complètement disparu** de la vue.                                |
+| **Option**                                          | **Description**                                                                                                                             |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ligne par ligne**                                 | Affiche une ligne à la fois. Chaque ligne est montrée séparément, et la ligne suivante n'apparaît qu'après la disparition de la précédente. |
+| **Directement après le texte précédent**            | Le nouveau texte est placé **immédiatement après** le texte précédent, assurant un effet de défilement continu sans espaces.                |
+| **Lorsque le texte précédent est sorti de l'écran** | Le nouveau texte commence **seulement après** que le texte précédent ait **complètement disparu** de la vue.                                |
 
 ***
 
 ### **Paramètres supplémentaires**
 
-#### **Concatenate Multiple Text Lines to One Single Line**
+#### **Concaténer plusieurs lignes de texte en une seule ligne**
 
-* Si activé, les **hard returns (line breaks)** à l'intérieur d'une entrée de texte unique sont **supprimés**.
+* Si activé, les **retours à la ligne (sauts de ligne)** à l'intérieur d'une entrée de texte unique sont **supprimés**.
 * Le texte entier est traité comme **une ligne continue** pendant le défilement.
-* Ne peut pas être utilisé en combinaison avec le mode **Line by Line**.
+* Ne peut pas être utilisé en combinaison avec le mode **Ligne par ligne**.
 
-#### **Do Not Scroll When the Text Fits**
+#### **Ne pas faire défiler lorsque le texte s'adapte**
 
-* Lorsque cette option est activée, PADS4 calcule si le **texte entier (y compris les séparateurs)** tient dans la **zone de l'élément**.
-* Si le texte tient, il restera **statique** au lieu de défiler.
+* Lorsque cette option est activée, PADS4 calcule si le **texte entier (y compris les séparateurs)** s'adapte à la **zone de l'élément**.
+* Si le texte s'adapte, il restera **statique** au lieu de défiler.
 * Si le texte **dépasse** la zone de l'élément, le défilement **démarrera automatiquement**.
 
-#### **Show Changes in Text Immediately**
+#### **Afficher immédiatement les changements dans le texte**
 
-* Lorsque connecté à une **data source**, l'activation de ce paramètre garantit que **toutes les mises à jour de texte sont reflétées immédiatement**.
+* Lorsque connecté à une **source de données**, l'activation de ce paramètre garantit que **toutes les mises à jour de texte sont reflétées immédiatement**.
 * Le processus de défilement est **interrompu**, et le **nouveau texte commence à défiler immédiatement**.
 
 ***
 
 ## **Remarques**
 
-* **Le mode "Line by Line"** ne peut pas être utilisé avec **"Concatenate Multiple Text Lines to One Single Line"**, car ils **ont des comportements contradictoires**.
+* **Le mode "Ligne par ligne"** ne peut pas être utilisé avec **"Concaténer plusieurs lignes de texte en une seule ligne"**, car ils **ont des comportements contradictoires**.
 * Assurer un **défilement fluide** nécessite une configuration soignée de la **longueur du texte, de l'espacement des séparateurs et de la fréquence de mise à jour**.

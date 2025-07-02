@@ -4,11 +4,11 @@ Les flux vidéo sont utilisés dans les **systèmes de divertissement et de comm
 
 ## **Spécification d'URL de playlist**
 
-1. Sélectionnez **"Vidéo depuis un fichier"** dans le menu déroulant des types de contenu.
+1. Sélectionnez **"Vidéo à partir d'un fichier"** dans le menu déroulant du type de contenu.
 2. Saisissez l'**URL du flux** où se trouve le flux.
    * Example: `RTSP://<server>/example.mp4`
    * Example: `RTSP://xxx.xxx.xxx.xxx:554`
-3. Cliquez sur **"..."** à côté du champ URL pour ouvrir l'**Éditeur d'URL**, qui vous aide à structurer correctement le format d'URL.
+3. Cliquez sur **"..."** à côté du champ URL pour ouvrir l'**Éditeur d'URL**, qui vous aide à structurer le format d'URL correct.
 
 ***
 
@@ -26,9 +26,9 @@ Les flux vidéo sont utilisés dans les **systèmes de divertissement et de comm
 
 ## **Délai d'affichage vidéo**
 
-* **Le streaming peut introduire un délai** dû à la mise en mémoire tampon.
+* **Le streaming peut introduire un délai** en raison de la mise en mémoire tampon.
 * Pour réduire la mise en mémoire tampon, **augmentez le ratio de vitesse à 400%**, ce qui **contourne la mémoire tampon**.
-* **Effet secondaire:** Cela peut provoquer des **saccades** dans la vidéo si la connexion réseau est **instable**.
+* **Effet secondaire :** Cela peut provoquer des **saccades vidéo** si la connexion réseau est **instable**.
 
 ***
 
@@ -36,7 +36,7 @@ Les flux vidéo sont utilisés dans les **systèmes de divertissement et de comm
 
 ### **Multicast**
 
-* **Envoie un flux unique à plusieurs clients** au lieu de créer des flux séparés pour chaque spectateur.
+* **Envoie un flux à plusieurs clients** au lieu de créer des flux séparés pour chaque spectateur.
 * **Réduit la charge du serveur/réseau** en évitant la transmission de données en double.
 * **Idéal pour les environnements de streaming à grande échelle**.
 
@@ -52,11 +52,11 @@ Les flux vidéo sont utilisés dans les **systèmes de divertissement et de comm
 
 * **Le streaming consomme plus de bande passante** que la lecture de vidéos stockées localement.
 * **Le multicast** peut aider à réduire l'utilisation du réseau (consultez votre **administrateur réseau** pour plus de détails).
-* Si la **connexion réseau échoue**, le flux **cessera de jouer**.
+* Si la **connexion réseau échoue**, le flux **arrêtera de jouer**.
 
 ***
 
 ### **Conseil d'optimisation des performances**
 
 * **Pour réduire le délai de lecture**, réglez le **ratio de vitesse à 400%**.
-* **Effet secondaire possible:** Si la connexion est **instable**, la vidéo peut **saccader**.
+* **Effet secondaire possible :** Si la connexion est **instable**, la vidéo peut **saccader**.

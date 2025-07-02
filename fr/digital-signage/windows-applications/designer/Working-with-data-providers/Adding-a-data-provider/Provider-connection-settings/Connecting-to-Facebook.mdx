@@ -1,77 +1,77 @@
-The **Facebook provider** in **PADS4** allows you to **connect to a Facebook Business Page** and retrieve content using the **Facebook Graph API (v15.0)**.
+Le **Facebook provider** dans **PADS4** vous permet de **vous connecter à une Page Facebook Business** et de récupérer du contenu en utilisant **Facebook Graph API (v15.0)**.
 
-### **Requirements**
+### **Exigences**
 
-* A **Facebook/Meta Business Page**.
-* A valid **Facebook account** with access to the page.
-* **Internet access** for authentication and data retrieval.
+* Une **Facebook/Meta Business Page**.
+* Un **Facebook account** valide avec accès à la page.
+* **Accès Internet** pour l'authentification et la récupération des données.
 
 ***
 
-## **Steps to Add/Modify a Facebook Connection in PADS4**
+## **Étapes pour ajouter/modifier une connexion Facebook dans PADS4**
 
-### **1. Start the Data Provider Wizard**
+### **1. Démarrer l'assistant de fournisseur de données**
 
-* Open the **Data Provider Wizard** by following the instructions in **Adding a Data Provider** or **Editing a Data Provider**.
-* Select **Facebook** as the **provider type**.
+* Ouvrez le **Data Provider Wizard** en suivant les instructions dans **Adding a Data Provider** ou **Editing a Data Provider**.
+* Sélectionnez **Facebook** comme **provider type**.
 
-### **2. Authenticate Your Facebook Account**
+### **2. Authentifiez votre compte Facebook**
 
-* Click **Authenticate** to open the **Facebook login page**.
-* Enter your **credentials** and click **OK**.
-* PADS4 will generate a **token** and automatically close the window.
-* The **expiration date** of the token will be displayed.
+* Cliquez sur **Authenticate** pour ouvrir la **page de connexion Facebook**.
+* Saisissez vos **identifiants** et cliquez sur **OK**.
+* PADS4 générera un **token** et fermera automatiquement la fenêtre.
+* La **date d'expiration** du token sera affichée.
 
-**Important Notes on Authentication:**
+**Remarques importantes sur l'authentification :**
 
-* Each time you edit the **Facebook Data Provider**, you must **re-authenticate**.
-* If the **credentials are saved** in the browser, the process will be **automatic**.
-* The **token is valid for 60 days** and is **automatically extended** as long as it is used within that time.
-* If the **token expires**, Facebook will **no longer return data**, and you must **re-authenticate manually**.
+* Chaque fois que vous modifiez le **Facebook Data Provider**, vous devez **vous ré-authentifier**.
+* Si le **identifiants sont enregistrés** dans le navigateur, le processus sera **automatique**.
+* Le **jeton est valide pendant 60 jours** et est **automatiquement prolongé** tant qu'il est utilisé pendant cette période.
+* Si le **jeton expire**, Facebook ne **renverra plus de données**, et vous devez **vous réauthentifier manuellement**.
 
-### **3. Select the Facebook Account and Page**
+### **3. Sélectionnez le compte Facebook et la Page**
 
-* **Choose the account type**:
-  * **My account** (retrieves data from your own Facebook account).
-  * **Page** (retrieves data from a **Facebook Business Page**).
-* If selecting a **Page**, enter the **Page ID** (recommended) or select it from the list.
+* **Choisissez le type de compte**:
+  * **Mon compte** (récupère les données de votre propre compte Facebook).
+  * **Page** (récupère les données d'une **Facebook Business Page**).
+* Si vous sélectionnez une **Page**, saisissez l'**Page ID** (recommandé) ou sélectionnez-la dans la liste.
 
 **Important:**
 
-* The **Page ID number** is found under the **Page Name** in **Facebook settings**.
-* **Album names in Facebook are not unique**—PADS4 will select the **first matching album name**.
+* Le **Page ID number** se trouve sous le **Page Name** dans les **paramètres Facebook**.
+* **Les noms d'albums dans Facebook ne sont pas uniques**—PADS4 sélectionnera le **premier nom d'album correspondant**.
 
-### **4. Load Page Details and Specify Content Source**
+### **4. Charger les détails de la page et spécifier la source de contenu**
 
-* Click **Load** to retrieve **page-specific details**.
-* Choose the type of **content to retrieve**:
-  * **Photos** (you can specify an album).
-  * **Other Facebook content** (such as posts or events).
-* **Limit the number of rows returned** for **better performance**.
+* Cliquez sur **Charger** pour récupérer les **détails spécifiques à la page**.
+* Choisissez le type de **contenu à récupérer**:
+  * **Photos** (vous pouvez spécifier un album).
+  * **Autre contenu Facebook** (comme des publications ou des événements).
+* **Limitez le nombre de lignes renvoyées** pour de **meilleures performances**.
 
-### **5. Finalize the Connection**
+### **5. Finaliser la connexion**
 
-* Click **Next** to proceed.
-* Complete the wizard as described in **Adding a Data Provider**.
-
-***
-
-## **Best Practices**
-
-* **Use the Page ID** instead of the **Page Name** to ensure the correct page is selected.
-* **Keep the authentication active** by ensuring the **data provider is used at least once every 60 days**.
-* **Limit the number of rows** for **faster data retrieval** and **better performance**.
+* Cliquez sur **Suivant** pour continuer.
+* Complétez l'assistant comme décrit dans **Adding a Data Provider**.
 
 ***
 
-## **Important Considerations**
+## **Meilleures pratiques**
 
-* **Token Expiration:**
-  * Facebook authentication tokens **expire after 60 days**.
-  * If a **presentation** is **not used for more than 60 days**, **re-authentication** is required.
+* **Utilisez le Page ID** au lieu du **Page Name** pour vous assurer que la bonne page est sélectionnée.
+* **Maintenez l'authentification active** en vous assurant que le **fournisseur de données est utilisé au moins une fois tous les 60 jours**.
+* **Limitez le nombre de lignes** pour une **récupération de données plus rapide** et de **meilleures performances**.
 
-* **Data Server Access:**
-  * If using a **PADS4 Data Server**, ensure that **Facebook is accessible** from the **server's point of view**.
-  * If **not using a Data Server**, verify that each **PADS4 Designer and Viewer** has an **active internet connection**.
+***
 
-By following these steps, you can successfully **connect PADS4 to Facebook** and **display dynamic social media content** in your **digital signage presentations**.
+## **Considérations importantes**
+
+* **Expiration du jeton :**
+  * Les jetons d'authentification Facebook **expirent après 60 jours**.
+  * Si une **présentation** n'est **pas utilisée pendant plus de 60 jours**, **une réauthentification** est nécessaire.
+
+* **Accès au serveur de données :**
+  * Si vous utilisez un **PADS4 Data Server**, assurez-vous que **Facebook est accessible** du **point de vue du serveur**.
+  * Si **vous n'utilisez pas de Data Server**, vérifiez que chaque **PADS4 Designer et Viewer** dispose d'une **connexion internet active**.
+
+En suivant ces étapes, vous pouvez réussir à **connecter PADS4 à Facebook** et **afficher du contenu dynamique de médias sociaux** dans vos **présentations d'affichage dynamique**.

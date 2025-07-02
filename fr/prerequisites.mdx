@@ -2,22 +2,22 @@ Pendant le processus d'installation, PADS4 installera les prérequis suivants :
 
 ### Inclus dans l'installateur PADS4
 
-*Tous les prérequis seront installés/mis à jour par l'installateur PADS4 Foundation. N'installez pas ces composants au préalable sur un serveur ou un poste de travail pour la liste blanche ou d'autres questions liées au projet, cela peut perturber le fonctionnement opérationnel du produit PADS4 Foundation.*
+*Tous les prérequis seront installés/mis à jour par l'installateur PADS4 Foundation. N'installez pas ces composants au préalable sur un serveur ou un poste de travail pour la liste blanche ou d'autres questions liées au projet, cela peut perturber le fonctionnement du produit PADS4 Foundation.*
 
 | Package                                                                  | Description                                                                                                                                                                                                    |
 | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | NDS Package Manager                                                      | Outil d'installation NDS, qui est utilisé pour installer, mettre à jour ou supprimer l'installation PADS4. Lorsque cet outil est désinstallé séparément, vous ne pourrez pas désinstaller PADS4.               |
 | Microsoft Visual C++ 2015-2022 Redistributable (x64 & x84) - 14.32.31332 | Les packages redistribuables Visual C++ installent des composants d'exécution des bibliothèques Visual C++. Ces composants sont nécessaires pour exécuter les applications C++ développées par l'équipe PADS4. |
-| Microsoft .NET Runtime 6 (deprecated since 2025.1)                       | .NET Framework, utilisé par le middleware PADS4                                                                                                                                                                |
-| Microsoft ASP.NET 6   (deprecated since 2025.1)                          | .NET Framework, utilisé par le middleware PADS4                                                                                                                                                                |
+| Microsoft .NET Runtime 6 (déprécié depuis 2025.1)                        | .NET Framework, utilisé par le middleware PADS4                                                                                                                                                                |
+| Microsoft ASP.NET 6   (déprécié depuis 2025.1)                           | .NET Framework, utilisé par le middleware PADS4                                                                                                                                                                |
 | Microsoft .NET Runtime 8                                                 | .NET Framework, utilisé par le middleware PADS4                                                                                                                                                                |
 | Microsoft ASP.NET 8                                                      | .NET Framework, utilisé par le middleware PADS4                                                                                                                                                                |
-| Erlang 24.0 (deprecated from 2022.3)                                     | Une bibliothèque pour gérer la concurrence et la tolérance aux pannes afin de fournir un système robuste                                                                                                       |
-| RabbitMQ Server 3.9.1 (obsolète depuis 2022.3)                           | Mécanisme de courtier de messagerie utilisé par PADS4                                                                                                                                                          |
+| Erlang 24.0 (déprécié depuis 2022.3)                                     | Une bibliothèque pour gérer la concurrence et la tolérance aux pannes afin de fournir un système robuste                                                                                                       |
+| RabbitMQ Server 3.9.1 (déprécié depuis 2022.3)                           | Mécanisme de messagerie utilisé par PADS4                                                                                                                                                                      |
 | NDS Message Broker                                                       | Nouveau dans PADS4 2022.3. Optionnel pour remplacer RabbitMQ.                                                                                                                                                  |
 | NGinx Reverse Proxy                                                      | Équilibreur de charge haute performance utilisé par PADS4                                                                                                                                                      |
 | PADS4 Reverse Proxy                                                      | Nouveau dans PADS4 2025.1. Équilibreur de charge proxy inverse basé sur YARP, qui offre de meilleures performances que NGinx. Optionnel pour remplacer NGinx.                                                  |
-| Dokan 1.5.1.1000 bundle                                                  | Bibliothèque de lecteur virtuel utilisée par PADS4 pour créer une connexion à la nouvelle Content Library introduite avec la version 2021.3                                                                    |
+| Dokan 1.5.1.1000 bundle                                                  | Bibliothèque de disque virtuel utilisée par PADS4 pour créer une connexion à la nouvelle Content Library introduite avec la version 2021.3                                                                     |
 | Microsoft Edge WebView2 Runtime                                          | Moteur d'élément Web                                                                                                                                                                                           |
 
 ### Prérequis nécessitant une connexion Internet pour le téléchargement pendant le processus d'installation
@@ -25,8 +25,8 @@ Pendant le processus d'installation, PADS4 installera les prérequis suivants :
 | Package                        | Description                                                                                                                                                                                  |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Microsoft .NET Framework 4.7.2 | Le composant Framework est très probablement disponible sur tous les systèmes. Si sur un certain ancien système ce composant est manquant, PADS4 essaiera de le télécharger depuis Internet. |
-| Microsoft .NET Framework 4.6.2 | Le composant Framework est très probablement disponible sur tous les systèmes. Si sur un certain ancien système ce composant est manquant, PADS4 essaiera de le télécharger depuis Internet. |
-| Powershell 3.0                 | Powershell 3.0 qui est disponible sur tous les systèmes d'exploitation Windows sauf Windows 7 pour lequel PADS4 essaiera de le télécharger depuis Internet.                                  |
+| Microsoft .NET Framework 4.6.2 | Le composant Framework est très probablement disponible sur tous les systèmes. Si sur un certain ancien système ce composant est manquant, PADS4 essaiera de le télécharger depuis internet. |
+| Powershell 3.0                 | Powershell 3.0 qui est disponible sur tous les systèmes d'exploitation Windows sauf Windows 7 pour lequel PADS4 essaiera de le télécharger depuis internet.                                  |
 
 ### Optionnel
 
@@ -34,11 +34,11 @@ Certains modules nécessitent des logiciels supplémentaires mentionnés ci-dess
 
 *Selon les paramètres de configuration, SQL Server pourrait être requis.*
 
-| Package              | Description                                                                                                                                                                                        |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \*IIS                | Digital Signage CMS, Workspace, Wayfinding et Videowall nécessitent IIS.                                                                                                                           |
-| \*\*SQL Server       | La base de données par défaut utilisée après l'installation est SQLite. Cela ne nécessite pas l'installation de logiciels supplémentaires.                                                         |
-| Microsoft Powerpoint | Pour pouvoir afficher des présentations Powerpoint sur les visionneuses HTML5, l'installation de Microsoft Powerpoint sur le serveur PADS4 est requise. Powerpoint est utilisé pour la conversion. |
+| Package              | Description                                                                                                                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \*IIS                | Digital Signage CMS, Workspace, Wayfinding et Videowall nécessitent IIS.                                                                                                                      |
+| \*\*SQL Server       | La base de données par défaut utilisée après l'installation est SQLite. Cela ne nécessite pas l'installation de logiciels supplémentaires.                                                    |
+| Microsoft Powerpoint | Pour pouvoir afficher des présentations Powerpoint sur les Viewers HTML5, l'installation de Microsoft Powerpoint sur le serveur PADS4 est requise. Powerpoint est utilisé pour la conversion. |
 
 \**Par défaut, IIS est disponible sur les serveurs Windows.*
 

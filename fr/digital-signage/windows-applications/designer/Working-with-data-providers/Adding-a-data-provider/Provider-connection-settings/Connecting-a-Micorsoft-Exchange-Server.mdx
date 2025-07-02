@@ -4,25 +4,25 @@ Le fournisseur **Microsoft Exchange Server** dans **PADS4** vous permet de vous 
 
 ### **Étapes pour ajouter ou modifier une connexion Microsoft Exchange Server**
 
-#### **1. Démarrer l'Assistant de fournisseur de données**
+#### **1. Démarrer l'Assistant de Fournisseur de Données**
 
-* Ouvrez l'**Assistant de fournisseur de données** dans **PADS4**.
-* Suivez les étapes pour **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
-* Sélectionner **Microsoft Exchange Server** comme **type de fournisseur**.
+* Ouvrez **Data Provider Wizard** dans **PADS4**.
+* Suivez les étapes pour **Ajouter un Fournisseur de Données** ou **Modifier un Fournisseur de Données**.
+* Sélectionnez **Microsoft Exchange Server** comme **type de fournisseur**.
 
 ***
 
-#### **2. Configurer les paramètres de connexion**
+#### **2. Configurer les Paramètres de Connexion**
 
-* **Sélectionner la version de Microsoft Exchange Server**
+* **Sélectionner la Version du Microsoft Exchange Server**
   * Choisissez la **version d'Exchange Server** appropriée parmi les options disponibles.
 
-* **Choisir la configuration automatique ou manuelle**
+* **Choisir la Configuration Automatique ou Manuelle**
 
   * **Automatique**:
-    * Saisissez l'**Adresse e-mail** d'un **compte Exchange** valide.
+    * Saisissez l'**Adresse E-mail** d'un **compte Exchange**.
   * **Manuel**:
-    * Saisissez l'**URL du serveur Exchange** pour établir une connexion.
+    * Saisissez l'**URL du Serveur Exchange** pour établir une connexion.
 
   **Exemple d'URL:**
 
@@ -30,51 +30,51 @@ Le fournisseur **Microsoft Exchange Server** dans **PADS4** vous permet de vous 
   https://YourSmallBusinessServer/EWX/Exchange.asmx
   ```
 
-* **Saisir les identifiants de connexion**
-  * Fournissez un **Nom d'utilisateur, Mot de passe et Domaine** d'un compte Exchange Server valide.
+* **Saisir les Identifiants de Connexion**
+  * Fournissez un **Nom d'Utilisateur, Mot de Passe et Domaine** d'un compte valide du Serveur Exchange.
 
-* **Accéder à la boîte aux lettres d'un autre utilisateur (Optionnel)**
-  * Saisissez une **Adresse e-mail** pour récupérer les données de la boîte aux lettres d'un autre utilisateur.
+* **Accéder à la Boîte aux Lettres d'un Autre Utilisateur (Optionnel)**
+  * Saisissez une **Adresse E-mail** pour récupérer les données de la boîte aux lettres d'un autre utilisateur.
 
-* **Usurper l'identité d'un autre utilisateur (Optionnel)**
-  * Saisissez une **Adresse e-mail** pour usurper l'identité d'un utilisateur différent.
+* **Usurper l'Identité d'un Autre Utilisateur (Optionnel)**
+  * Saisissez une **Adresse E-mail** pour usurper l'identité d'un utilisateur différent.
 
 Cliquez sur **Suivant** pour continuer.
 
 ***
 
-#### **3. Sélectionner la source de données à laquelle se connecter**
+#### **3. Sélectionner la Source de Données à Connecter**
 
 * **Calendrier**
   * Récupère les données du calendrier.
-  * En option, activez **Inclure le texte du message** pour récupérer les détails des événements.
+  * En option, activez **Inclure le Texte du Message** pour récupérer les détails des événements.
   * *Note:* La récupération du corps du message **peut causer des problèmes de performance**.
 
-* **Boîte de réception**
-  * Récupère les e-mails de la **Boîte de réception**.
+* **Boîte de Réception**
+  * Récupère les emails de la **Boîte de Réception**.
   * En option, spécifiez:
-    * Un **(sous-)dossier** spécifique pour récupérer les e-mails.
-    * **Inclure le texte du message** (pour le corps de l'e-mail).
+    * Un **(sous-)dossier** spécifique pour récupérer les emails.
+    * **Inclure le Texte du Message** (pour le corps de l'email).
 
 * **Contacts**
   * Récupère la liste des contacts du compte Exchange.
 
-* **Dossiers publics**
+* **Dossiers Publics**
   * Accédez aux **dossiers publics** utilisés pour le partage d'informations au sein d'une organisation.
   * *Note:* Les dossiers publics n'ont pas d'**adresse SMTP** et sont accessibles via l'**API EWS**.
 
-* **Calendrier des ressources**
-  * Récupère les données des ressources **salles et réunions**.
+* **Calendrier de Ressources**
+  * Récupère les données des ressources **de salles et de réunions**.
   * Spécifiez **une ou plusieurs adresses e-mail** pour accéder à plusieurs calendriers de ressources.
-  * En option, activez **Inclure le texte du message** pour récupérer les détails.
+  * En option, activez **Inclure le Texte du Message** pour récupérer les détails.
 
-* **Disponibilité des utilisateurs**
+* **Disponibilité des Utilisateurs**
   * Récupère le **statut de disponibilité** des utilisateurs.
-  * Spécifiez **une ou plusieurs adresses e-mail** pour obtenir les données de disponibilité fusionnées.
+  * Spécifiez **une ou plusieurs adresses e-mail** pour obtenir des données de disponibilité fusionnées.
 
 ***
 
-#### **4. Définir la plage de temps pour la récupération des données**
+#### **4. Définir la Plage Horaire pour la Récupération des Données**
 
 * **Aujourd'hui**
   * Récupère les données de l'emploi du temps **d'aujourd'hui**.
@@ -84,16 +84,16 @@ Cliquez sur **Suivant** pour continuer.
   * Récupère les données à partir de **la date et l'heure actuelles**.
   * En option, spécifiez un **décalage avant ou après** l'heure actuelle.
 
-* **Date et heure**
+* **Date et Heure**
   * Récupère les données pour une **période fixe**.
 
 * **Prédéfini**
   * Sélectionnez une période prédéfinie:
-    * **Cette semaine**
-    * **Semaine prochaine**
-    * **Ce mois-ci**
+    * **Cette Semaine**
+    * **Semaine Prochaine**
+    * **Ce Mois**
 
-**Note importante:**
+**Note Importante:**
 
 * La récupération de données pour des **longues périodes** peut causer des **problèmes de performance** en raison de grandes quantités de données stockées.
 * Utilisez des **filtres** ou **limitez le nombre de lignes** pour éviter une récupération excessive de données.
@@ -102,20 +102,20 @@ Cliquez sur **Suivant** pour continuer.
 
 ***
 
-#### **5. Terminer la configuration**
+#### **5. Terminer la Configuration**
 
-* Suivez les étapes restantes dans l'**Assistant de fournisseur de données**.
+* Suivez les étapes restantes dans l'**Assistant de Fournisseur de Données**.
 * Cliquez sur **Terminer** pour finaliser la configuration.
 
 ***
 
-### **Notes supplémentaires**
+### **Notes Supplémentaires**
 
-* **Utilisation d'un serveur de données PADS4?**
-  * Assurez-vous que l'**URL du serveur Exchange** est **accessible depuis le serveur PADS4**.
+* **Utilisation d'un Serveur de Données PADS4?**
+  * Assurez-vous que l'**URL du Serveur Exchange** est **accessible depuis le Serveur PADS4**.
 
-* **Pas d'utilisation d'un serveur de données PADS4?**
-  * Assurez-vous que **PADS4 Designer** (pour la prévisualisation) et tous les **PADS4 Viewers** peuvent accéder au serveur Exchange.
+* **Pas d'Utilisation d'un Serveur de Données PADS4?**
+  * Assurez-vous que **PADS4 Designer** (pour la prévisualisation) et tous les **PADS4 Viewers** peuvent accéder au Serveur Exchange.
 
-* **Éviter les charges importantes de données**
+* **Éviter les Charges de Données Importantes**
   * Lors de la récupération de **longues périodes de données**, utilisez des filtres pour limiter l'utilisation de la mémoire.

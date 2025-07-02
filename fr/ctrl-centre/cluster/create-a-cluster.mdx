@@ -6,18 +6,18 @@ Les Clusters dans PADS4 permettent à plusieurs Viewers de fonctionner ensemble 
 
 1. **Ouvrez PADS4 CTRL Center**.
 2. Naviguez vers **Viewers > Clusters**.
-3. Cliquez sur **Nouveau** pour créer un nouveau Cluster.
-4. **Saisir les détails du Cluster** :
+3. Cliquez sur **New** pour créer un nouveau Cluster.
+4. **Saisissez les détails du Cluster** :
    * Fournissez un **nom unique** pour le Cluster.
-   * (Facultatif) Ajoutez un **description**.
-5. **Ajouter des Viewers**:
-   * Cliquez sur **"+"** pour sélectionner des Viewers dans la liste disponible.
+   * (Facultatif) Ajoutez une **description**.
+5. **Ajoutez des Viewers** :
+   * Cliquez sur **"+** pour sélectionner des Viewers dans la liste disponible.
    * Spécifiez l'**emplacement exact** de chaque Viewer dans le Cluster *(alignement horizontal ou vertical)*.
 6. Cliquez sur **Create** pour finaliser le Cluster.
 
 ***
 
-## **Étape 2 : Définir une présentation de Cluster**
+## **Étape 2 : Définition d'une présentation de Cluster**
 
 Maintenant que le Cluster est créé, nous devons créer une **présentation qui s'adapte dynamiquement lorsqu'un Viewer tombe en panne**.
 
@@ -36,20 +36,20 @@ Maintenant que le Cluster est créé, nous devons créer une **présentation qui
 
 #### **Page 1 : Configuration pour Viewer 1**
 
-1. **Créez un élément texte** et définissez son texte sur `"Viewer 1"`.
+1. **Créez un élément de texte** et définissez son texte sur `"Viewer 1"`.
 2. **Allez dans Propriétés de la page** et **décochez la visibilité** *(la page est masquée par défaut)*.
-3. **Définissez une règle de page**:
+3. **Définissez une règle de page** :
    * **Condition:**
-     * **Valeur 1:** `[Viewer Variable]` → **HorizontalPosition**
+     * **Valeur 1 :** `[Viewer Variable]` → **HorizontalPosition**
      * **Operation:** `Equals to`
-     * **Valeur 2:** `Constant Value = 1`
-   * **Action:** **Définissez la visibilité sur "visible"**.
+     * **Valeur 2 :** `Constant Value = 1`
+   * **Action:** **Définir la visibilité sur "visible"**.
 
 #### **Page 2 : Configuration pour Viewer 2**
 
 1. **Dupliquez la Page 1** pour créer **Page 2**.
-2. **Modifiez le texte** de `"Viewer 1"` à `"Viewer 2"`.
-3. **Modifiez la règle de page**:
+2. **Changez le texte** de `"Viewer 1"` à `"Viewer 2"`.
+3. **Modifiez la règle de page** :
    * **Changez "Valeur constante = 1" en "Valeur constante = 2"**.
 
 ***
@@ -65,20 +65,20 @@ Maintenant que le Cluster est créé, nous devons créer une **présentation qui
 
 ***
 
-## **Étape 4 : Simulation d'une panne de Viewer**
+## **Étape 4 : Simulation d'une défaillance de Viewer**
 
 1. **Fermez Viewer 1**.
 2. **Observez Viewer 2**:
    * **Viewer 2 affichera maintenant "Viewer 1".**
-   * Cela se produit **automatiquement** car **PADS4 déplace le contenu dynamiquement** lorsqu'un Viewer tombe en panne.
+   * Cela se produit **automatiquement** car **PADS4 déplace le contenu de façon dynamique** lorsqu'un Viewer tombe en panne.
 
 ***
 
-## **Pourquoi utiliser des Clusters ?**
+## **Pourquoi utiliser des clusters ?**
 
-* **Assure la continuité du contenu** même en cas de panne matérielle.
+* **Assure la continuité du contenu** même en cas de défaillance matérielle.
 * **Réattribue automatiquement le contenu** aux Viewers disponibles.
 * **Idéal pour l'affichage dynamique, les écrans d'aéroport, les panneaux de menu, et plus encore**.
-* **Pas de limite de taille de cluster** – adaptez selon vos besoins.
+* **Pas de limite de taille pour les clusters** – adaptez selon vos besoins.
 
-Cette configuration fournit une **solution d'affichage dynamique intelligente et automatisée**, réduisant le risque d'interruptions de contenu et de temps d'arrêt.
+Cette configuration offre une **solution d'affichage dynamique intelligente et automatisée**, réduisant les risques d'interruptions de contenu et de temps d'arrêt.

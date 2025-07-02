@@ -1,47 +1,47 @@
-**Variables du Viewer** permettre la personnalisation dynamique du contenu en remplaçant les espaces réservés par des valeurs en temps réel pour chaque **Viewer**. Ces variables peuvent être utilisées dans **les champs de texte, les fournisseurs de données, les règles, les filtres et d'autres éléments**, garantissant que le contenu affiché est spécifique à chaque Viewer sans nécessiter de présentations distinctes.
+**Variables du Viewer** permettent la personnalisation dynamique du contenu en remplaçant des espaces réservés par des valeurs en temps réel pour chaque **Viewer**. Ces variables peuvent être utilisées dans **les champs de texte, les fournisseurs de données, les règles, les filtres et d'autres éléments**, garantissant que le contenu affiché est spécifique à chaque Viewer sans nécessiter de présentations séparées.
 
 ***
 
-## **Gestion des variables Viewer**
+## **Gestion des Variables du Viewer**
 
 ### **System Management (Niveau Administrateur)**
 
-* Les variables Viewer sont créées dans **PADS4 System Management**.
+* Les Variables du Viewer sont créées dans **PADS4 System Management**.
 * Chaque variable a une **valeur par défaut** assignée.
 * Ces variables s'appliquent à tous les Viewers sauf si elles sont remplacées.
 * Les utilisateurs **ne peuvent pas ajouter ou supprimer des variables** via **PADS4 Agent**.
 
 ### **PADS4 Agent (Niveau Utilisateur)**
 
-* Les variables Viewer peuvent être **modifiées** via **PADS4 Agent (onglet Serveur)**.
+* Les variables du Viewer peuvent être **modifiées** via **PADS4 Agent (onglet Server)**.
 * Les modifications effectuées ici **écrasent** les valeurs par défaut définies dans **System Management**.
 
-### **Options Viewer (Ajustement local)**
+### **Options du Viewer (Ajustement Local)**
 
-* La **fenêtre Options Viewer** dans l'application **PADS4 Viewer** permet des **ajustements locaux**.
+* La **fenêtre Options du Viewer** dans l'application **PADS4 Viewer** permet des **ajustements locaux**.
 * Ces modifications **remplacent à la fois les paramètres de System Management et de PADS4 Agent**.
 
 ***
 
-## **Utilisation des variables Viewer**
+## **Utilisation des Variables du Viewer**
 
-### **Comment les variables Viewer sont identifiées**
+### **Comment les Variables du Viewer sont identifiées**
 
-* Une variable Viewer est écrite comme `#VariableName#`.
+* Une Variable du Viewer s'écrit comme `#VariableName#`.
 * Example: `#Store Name#`.
 
-### **Utilisation des variables Viewer dans les éléments de texte**
+### **Utilisation des Variables du Viewer dans les éléments textuels**
 
 * Example:
-  * **System Management :** `#Store Name# = New York Health`
-  * **Élément de texte :** `Welcome to #Store Name#!`
-  * **Sortie affichée :** `Welcome to New York Health!`
+  * **System Management:** `#Store Name# = New York Health`
+  * **Élément de texte:** `Welcome to #Store Name#!`
+  * **Sortie affichée:** `Welcome to New York Health!`
 
-Cette méthode permet **d'utiliser une seule présentation pour plusieurs emplacements** tout en ajustant dynamiquement le texte.
+Cette méthode permet **d'utiliser une seule présentation à travers plusieurs emplacements** tout en ajustant dynamiquement le texte.
 
 ***
 
-## **Où les variables Viewer peuvent-elles être utilisées ?**
+## **Où les Variables du Viewer peuvent-elles être utilisées?**
 
 ### **Champs basés sur du texte**
 
@@ -56,23 +56,23 @@ Cette méthode permet **d'utiliser une seule présentation pour plusieurs emplac
 
 ### **Cas d'utilisation pour l'automatisation**
 
-* **Filtrage par taille de magasin :**
-  * Si un magasin a une **variable Viewer pour la taille** (`L, XL, XXL`), seuls les produits pertinents pour cette taille sont affichés.
-* **Contenu basé sur l'emplacement :**
-  * Une **variable Viewer basée sur le GPS** permet **d'afficher des cartes ou des publicités spécifiques à l'emplacement**.
-* **Une seule présentation pour plusieurs Viewers :**
-  * Au lieu de créer plusieurs présentations, **une seule présentation peut être utilisée avec des variables Viewer** pour modifier **dynamiquement les noms de magasins, les adresses ou les promotions**.
+* **Filtrage par taille de magasin:**
+  * Si un magasin a une **Variable du Viewer pour la taille** (`L, XL, XXL`), seuls les produits pertinents pour cette taille sont affichés.
+* **Contenu basé sur la localisation:**
+  * Une **Variable du Viewer basée sur le GPS** permet **d'afficher des cartes ou des publicités spécifiques à l'emplacement**.
+* **Une seule présentation pour plusieurs Viewers:**
+  * Au lieu de créer plusieurs présentations, **une seule présentation peut être utilisée avec des Variables du Viewer** pour modifier **dynamiquement les noms de magasins, les adresses ou les promotions**.
 
 ***
 
-## **Quand NE PAS utiliser les variables Viewer**
+## **Quand NE PAS utiliser les Variables du Viewer**
 
 * **Pour des mises à jour continues en temps réel** (par exemple, des cours boursiers qui changent rapidement).
 * Dans ces cas, un **fournisseur de données** devrait être utilisé à la place.
 
 ***
 
-## **Quand les variables Viewer sont-elles mises à jour ?**
+## **Quand les Variables du Viewer sont-elles mises à jour?**
 
 ### **À l'intérieur de la source de données**
 
@@ -81,33 +81,33 @@ Cette méthode permet **d'utiliser une seule présentation pour plusieurs emplac
 
 ### **Dans les fournisseurs de données**
 
-* Si une **variable Viewer** est utilisée dans **des filtres, des tris ou des requêtes**, elle est **remplacée au début de la récupération des données**.
-* Si un fournisseur de données **se met à jour une fois par heure**, **les variables Viewer ne se mettent à jour qu'après le prochain cycle de lecture**.
+* Si une **Variable du Viewer** est utilisée dans **des filtres, des tris ou des requêtes**, elle est **remplacée au début de la récupération des données**.
+* Si un fournisseur de données **se met à jour une fois par heure**, **les Variables du Viewer ne se mettent à jour qu'après le prochain cycle de lecture**.
 
 ### **Dans les présentations**
 
-* Lorsqu'une **présentation se charge**, **les variables Viewer dans les éléments (texte, images, vidéos) sont remplacées**.
+* Lorsqu'une **présentation se charge**, **les Variables du Viewer dans les éléments (texte, images, vidéos) sont remplacées**.
 
 ### **Dans les règles**
 
-* **Les variables Viewer dans les règles** sont remplacées **uniquement lorsque la règle est vérifiée**.
-* **Les vérifications de règles ne se déclenchent pas automatiquement** si une variable Viewer change.
+* **Les Variables du Viewer dans les règles** sont remplacées **uniquement lorsque la règle est vérifiée**.
+* **Les vérifications de règles ne se déclenchent pas automatiquement** si une Variable du Viewer change.
 
 ### **Dans les liaisons de propriétés**
 
-* Si un **fournisseur de données se met à jour à un intervalle défini**, les **nouvelles valeurs des variables Viewer remplacent les anciennes**.
-* Cependant, modifier une variable Viewer **ne force pas le fournisseur de données à se rafraîchir**.
+* Si un **fournisseur de données se met à jour à un intervalle défini**, les **nouvelles valeurs des Variables du Viewer remplacent les anciennes**.
+* Cependant, modifier une Variable du Viewer **ne force pas le fournisseur de données à se rafraîchir**.
 
 ### **Dans les playlists**
 
-* Si la **playlist ne contient qu'un seul élément**, la **variable Viewer n'est remplacée qu'une seule fois** (elle ne se met pas à jour).
-* Si **l'alternance de playlist est activée**, la **variable Viewer est remplacée par de nouvelles valeurs après chaque intervalle**.
+* Si la **playlist ne contient qu'un seul élément**, la **Variable du Viewer n'est remplacée qu'une seule fois** (elle ne se met pas à jour).
+* Si **l'alternance de playlist est activée**, la **Variable du Viewer est remplacée par de nouvelles valeurs après chaque intervalle**.
 
 ***
 
-## **Principaux avantages des variables Viewer**
+## **Principaux avantages des Variables du Viewer**
 
-* **Une seule présentation peut être utilisée dans plusieurs emplacements**, réduisant la duplication.
+* **Une présentation peut être utilisée à travers plusieurs emplacements**, réduisant la duplication.
 * **Personnalisation automatisée du contenu**, comme les noms et emplacements des magasins.
 * **Fonctionne parfaitement avec les fournisseurs de données, les filtres et les règles**.
 * **Mises à jour efficaces sans reconcevoir les présentations**.

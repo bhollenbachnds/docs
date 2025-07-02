@@ -1,58 +1,58 @@
-Le **Google Workspace Calendar** data provider dans **PADS4** vous permet de récupérer des données de calendrier en temps réel depuis **Google Workspace** pour la planification d'affichage dynamique.
+Le fournisseur de données **Google Workspace Calendar** dans **PADS4** vous permet de récupérer des données de calendrier en temps réel depuis **Google Workspace** pour la planification d'affichage dynamique.
 
 ***
 
 ## **Étapes pour ajouter/modifier une connexion Google Workspace Calendar dans PADS4**
 
-### **1. Démarrer l'Assistant Data Provider**
+### **1. Démarrer l'Assistant de fournisseur de données**
 
-* Ouvrez le **Data Provider Wizard** en suivant les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
-* Sélectionnez **Google Workspace Calendar** comme **provider type**.
+* Ouvrez l'**Assistant de fournisseur de données** en suivant les étapes dans **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
+* Sélectionnez **Google Workspace Calendar** comme **type de fournisseur**.
 
 ***
 
-### **2. Authentification avec Google Workspace**
+### **2. S'authentifier auprès de Google Workspace**
 
-* Cliquez sur **Authentication** pour ouvrir un navigateur web.
+* Cliquez sur **Authentification** pour ouvrir un navigateur web.
 * **Connectez-vous à votre compte Google Workspace**.
-* Accordez à **PADS4 access** l'autorisation de récupérer les informations du calendrier.
+* Accordez à **PADS4 l'accès** pour récupérer les informations du calendrier.
 
-Si votre réseau nécessite un **proxy server**, configurez les **Proxy Server settings** pour l'authentification.
+Si votre réseau nécessite un **serveur proxy**, configurez les **paramètres du serveur proxy** pour l'authentification.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
-### **3. Sélection d'un Google Calendar**
+### **3. Sélectionner un Google Calendar**
 
 * Choisissez le **Google Calendar** à partir duquel vous souhaitez récupérer les données d'événements.
-* Activez **Group Recurrent Events** si vous souhaitez récupérer **only recurring events** au lieu de chaque instance individuelle.
+* Activez **Regrouper les événements récurrents** si vous souhaitez récupérer **uniquement les événements récurrents** au lieu de chaque instance individuelle.
 * **Filtrer les événements (Optionnel) :**
-  * Saisissez une **text substring** pour filtrer les événements selon des mots-clés.
+  * Saisissez une **sous-chaîne de texte** pour filtrer les événements en fonction de mots-clés.
 * **Définir la période de récupération :**
-  * Sélectionnez une **specific time range** pour récupérer les événements du calendrier.
+  * Sélectionnez une **plage de temps spécifique** pour récupérer les événements du calendrier.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
-### **4. Finalisation de la configuration**
+### **4. Terminer la configuration**
 
-* Cliquez sur **Finish** pour finaliser la connexion à Google Workspace Calendar.
-* Le **PADS4 Viewer** va maintenant extraire les **real-time Google Calendar events** pour l'affichage.
+* Cliquez sur **Terminer** pour finaliser la connexion Google Workspace Calendar.
+* Le **PADS4 Viewer** va maintenant extraire les **événements Google Calendar en temps réel** pour l'affichage.
 
 ***
 
 ## **Considérations importantes**
 
-* **Assurer l'accès à Internet :**
-  * Si vous utilisez un **PADS4 Data Server**, assurez-vous que l'**Google Calendar API** est **accessible** depuis le serveur.
-  * Si vous **not using a Data Server**, chaque **PADS4 Designer and Viewer** doit avoir un **direct internet access** pour se connecter à Google.
+* **Assurer l'accès Internet :**
+  * Si vous utilisez un **PADS4 Data Server**, assurez-vous que l'**API Google Calendar** est **accessible** depuis le serveur.
+  * Si vous **n'utilisez pas de Data Server**, chaque **PADS4 Designer et Viewer** doit avoir un **accès direct à Internet** pour se connecter à Google.
 * **Autorisations Google Workspace :**
-  * L'utilisateur authentifié doit avoir un **sufficient access** pour consulter le calendrier sélectionné.
+  * L'utilisateur authentifié doit avoir un **accès suffisant** pour consulter le calendrier sélectionné.
 * **Filtrage des événements :**
-  * Utilisez le **text substring filter** pour afficher **only relevant calendar entries**.
+  * Utilisez le **filtre de sous-chaîne de texte** pour afficher **uniquement les entrées de calendrier pertinentes**.
 * **Gestion des événements récurrents :**
-  * L'activation de **Group Recurrent Events** garantit que **only the main event** est affiché, évitant les **duplicate instances**.
+  * L'activation de **Group Recurrent Events** garantit que **seul l'événement principal** est affiché, évitant ainsi les **instances en double**.
 
-En suivant ces étapes, vous pouvez intégrer avec succès **Google Workspace Calendar** à **PADS4** pour l'affichage en temps réel des plannings et des événements.
+En suivant ces étapes, vous pouvez intégrer avec succès **Google Workspace Calendar** avec **PADS4** pour des affichages d'événements et de planification en temps réel.

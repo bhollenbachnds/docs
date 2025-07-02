@@ -1,25 +1,25 @@
-Lorsque des Clusters sont créés dans **PADS4 CTRL Center**, **des Variables Viewer définies par le système** sont automatiquement disponibles. Ces variables aident à contrôler la **distribution du contenu** à travers les Viewers en Cluster en fonction de leur **position** et **disponibilité**.
+Lorsque des Clusters sont créés dans **PADS4 CTRL Center**, **les variables Viewer définies par le système** sont automatiquement disponibles. Ces variables aident à contrôler **la distribution du contenu** à travers les Viewers en Cluster en fonction de leur **position** et **disponibilité**.
 
 ***
 
 ## **Variables Viewer de Cluster définies par le système**
 
-| **Variable**           | **Description**                                                                                                                                                                                                    |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **ClusterWidth**       | Nombre total de Viewers **horizontaux** dans le Cluster.                                                                                                                                                           |
-| **ClusterHeight**      | Nombre total de Viewers **verticaux** dans le Cluster.                                                                                                                                                             |
-| **HorizontalPosition** | Définit le **numéro de page actuel** qui doit être affiché en fonction de la **disponibilité des viewers** dans un Cluster **aligné horizontalement**. S'ajuste dynamiquement lorsque des Viewers se déconnectent. |
-| **VerticalPosition**   | Définit le **numéro de page actuel** qui doit être affiché en fonction de la **disponibilité des viewers** dans un Cluster **aligné verticalement**. S'ajuste dynamiquement lorsque des Viewers se déconnectent.   |
-| **IndexX**             | La **position horizontale conçue** de ce Viewer dans le Cluster.                                                                                                                                                   |
-| **IndexY**             | Le **position verticale conçue** de ce Viewer dans le Cluster.                                                                                                                                                     |
+| **Variable**           | **Description**                                                                                                                                                                                                  |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ClusterWidth**       | Nombre total de Viewers **horizontaux** dans le Cluster.                                                                                                                                                         |
+| **ClusterHeight**      | Nombre total de Viewers **verticaux** dans le Cluster.                                                                                                                                                           |
+| **HorizontalPosition** | Définit le **numéro de page actuel** qui doit être affiché en fonction de **la disponibilité du viewer** dans un Cluster **aligné horizontalement**. S'ajuste dynamiquement lorsque des Viewers se déconnectent. |
+| **VerticalPosition**   | Définit le **numéro de page actuel** qui doit être affiché en fonction de **la disponibilité du viewer** dans un Cluster **aligné verticalement**. S'ajuste dynamiquement lorsque des Viewers se déconnectent.   |
+| **IndexX**             | La **position horizontale conçue** de ce Viewer dans le Cluster.                                                                                                                                                 |
+| **IndexY**             | La **position verticale conçue** de ce Viewer dans le Cluster.                                                                                                                                                   |
 
 ***
 
-## **Exemple de Configuration de Cluster**
+## **Exemple de configuration de Cluster**
 
 L'exemple ci-dessous illustre un **Cluster 2x2** avec **4 Viewers**.
 
-| **Viewers du Cluster** | **Position Horizontale** | **Position Verticale** | **IndexX** | **IndexY** |
+| **Viewers du Cluster** | **Position horizontale** | **Position verticale** | **IndexX** | **IndexY** |
 | ---------------------- | ------------------------ | ---------------------- | ---------- | ---------- |
 | **Cluster Viewer 1**   | 1                        | 1                      | 0          | 0          |
 | **Cluster Viewer 2**   | 2                        | 3                      | 1          | 0          |
@@ -28,26 +28,26 @@ L'exemple ci-dessous illustre un **Cluster 2x2** avec **4 Viewers**.
 
 ***
 
-## **Comment Ces Variables Fonctionnent dans un Cluster**
+## **Comment ces variables fonctionnent dans un Cluster**
 
-1. **Attribution Dynamique des Pages**:
-   * Si **Viewer 2 se déconnecte**, **Viewer 3 ou Viewer 4 prendra automatiquement en charge son contenu**.
+1. **Attribution dynamique des pages**:
+   * Si **le Viewer 2 se déconnecte**, **le Viewer 3 ou le Viewer 4 prendra automatiquement en charge son contenu**.
    * Si un Viewer est **supprimé ou désactivé**, PADS4 **réattribue automatiquement les positions de page correctes**.
 
-2. **Distribution Intelligente du Contenu**:
+2. **Distribution intelligente du contenu**:
    * **HorizontalPosition** assure que le contenu est **distribué uniformément** lorsqu'un Viewer est supprimé.
-   * **VerticalPosition** aide à déterminer quels **contenus des Viewers supérieurs se déplacent vers le bas** si un écran tombe en panne.
+   * **VerticalPosition** aide à déterminer quel **contenu des Viewers supérieurs se déplace vers le bas** si un écran tombe en panne.
 
-3. **Personnalisation Flexible de la Disposition**:
-   * **IndexX/IndexY** permettent un **contrôle précis** sur le **placement des Viewers** au sein d'un Cluster.
-   * Les ajustements peuvent être **basés sur des règles**, assurant une **gestion fluide du basculement**.
+3. **Personnalisation flexible de la disposition**:
+   * **IndexX/IndexY** permettent un **contrôle précis** sur le **placement des Viewers** dans un Cluster.
+   * Les ajustements peuvent être **basés sur des règles**, assurant une **gestion fluide des basculements**.
 
 ***
 
-## **Cas d'Utilisation Pratiques**
+## **Cas d'utilisation pratiques**
 
-* **Affichages d'Informations de Vol dans les Aéroports**: Assure des **listes de vols continues** sur plusieurs écrans.
-* **Tableaux de Menu dans les Restaurants**: Déplace automatiquement le contenu du menu si un écran **tombe en panne**.
-* **Affichage Numérique pour le Commerce de Détail**: Prévient les **lacunes de contenu** et **ajuste la disposition dynamiquement**.
+* **Affichages d'informations de vol dans les aéroports** : Assure **des listes de vols continues** sur plusieurs écrans.
+* **Tableaux de menu dans les restaurants** : Déplace automatiquement le contenu du menu si un écran **tombe en panne**.
+* **Affichage numérique dans le commerce de détail** : Prévient les **lacunes de contenu** et **ajuste dynamiquement la disposition**.
 
-En utilisant ces **Variables de Cluster Viewer**, vous pouvez **optimiser les dispositions d'affichage numérique**, **réduire les temps d'arrêt**, et **automatiser la distribution du contenu** à travers votre système PADS4.
+En utilisant ces **Variables de la visionneuse de cluster**, vous pouvez **optimiser les mises en page d'affichage dynamique**, **réduire les temps d'arrêt**, et **automatiser la distribution de contenu** à travers votre système PADS4.

@@ -1,92 +1,92 @@
-**JSON (JavaScript Object Notation)** is a lightweight, structured data format widely used for **data exchange between web services and applications**. PADS4 allows integration with **JSON feeds (from the internet) or JSON files (local storage)** as data providers.
+**JSON (JavaScript Object Notation)** est un format de données léger et structuré largement utilisé pour **l'échange de données entre services web et applications**. PADS4 permet l'intégration avec **des flux JSON (depuis internet) ou des fichiers JSON (stockage local)** comme fournisseurs de données.
 
 ***
 
-## **Steps to Add or Modify a JSON Connection in PADS4**
+## **Étapes pour ajouter ou modifier une connexion JSON dans PADS4**
 
-### **1. Start the Data Provider Wizard**
+### **1. Démarrer l'assistant de fournisseur de données**
 
-* Open the **Data Provider Wizard** using the steps in **Adding a Data Provider** or **Editing a Data Provider**.
-* Choose **JSON Feed** (for an online source) or **JSON File** (for a local source).
-
-***
-
-### **2. Specify the JSON Source**
-
-* **For JSON Feeds (Online)**
-  * Enter the **URL (URI)** of the JSON feed.
-  * Ensure the URL is **publicly accessible** or has the proper authentication settings.
-* **For JSON Files (Local)**
-  * Specify the **file path**.
-  * The file can be located in the **PADS4 Content Library** or an **external location**.
-  * If stored **outside the PADS4 Content Library**, it **won't sync automatically** to the viewer.
-
-Click **Next** to proceed.
+* Ouvrez le **Data Provider Wizard** en suivant les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
+* Choisissez **JSON Feed** (pour une source en ligne) ou **JSON File** (pour une source locale).
 
 ***
 
-### **3. Select the Data Source**
+### **2. Spécifier la source JSON**
 
-* **JSON structures** can contain multiple **tables and nested data**.
-* Click **Select** to open a **tree view** of the JSON structure.
-* Browse through **different levels** to find the right data.
-* Once found, click **OK** to confirm.
+* **Pour les flux JSON (En ligne)**
+  * Saisissez l'**URL (URI)** du flux JSON.
+  * Assurez-vous que l'URL est **accessible publiquement** ou dispose des paramètres d'authentification appropriés.
+* **Pour les fichiers JSON (Local)**
+  * Spécifiez le **chemin du fichier**.
+  * Le fichier peut être situé dans la **PADS4 Content Library** ou dans un **emplacement externe**.
+  * Si stocké **en dehors de la PADS4 Content Library**, il **ne se synchronisera pas automatiquement** avec le visualiseur.
 
-#### **Advanced Selection (For Technical Users)**
-
-* Modify the **JSON Path Expression** manually.
-* Use **JSONPath syntax** for advanced filtering and selection.
-* Refer to **JSONPath documentation** for more details.
-
-***
-
-### **4. Configure Data Handling Settings**
-
-* **Include Parent Level Column Name** → Adds parent-level identifiers for hierarchical relationships.
-* **Create Additional Columns Without HTML5 Tags** → Removes **HTML formatting** and extracts plain text.
-* **Flatten Hierarchical Data** → Converts **nested JSON structures** into a flat data table.
-
-Click **Next** to continue.
+Cliquez sur **Next** pour continuer.
 
 ***
 
-### **5. Configure Request Method**
+### **3. Sélectionnez la source de données**
 
-* **GET (default)** → Retrieves data without modifying it.
-* **POST** → Used for sending additional parameters (fill in the **request body** if required).
-* **Specify Encoding** → Choose a text encoding format if needed.
+* **JSON structures** peuvent contenir plusieurs **tables et données imbriquées**.
+* Cliquez sur **Select** pour ouvrir une **vue arborescente** de la structure JSON.
+* Parcourez les **différents niveaux** pour trouver les bonnes données.
+* Une fois trouvées, cliquez sur **OK** pour confirmer.
+
+#### **Sélection avancée (pour utilisateurs techniques)**
+
+* Modifiez l'**JSON Path Expression** manuellement.
+* Utilisez la **JSONPath syntax** pour le filtrage et la sélection avancés.
+* Consultez la **JSONPath documentation** pour plus de détails.
 
 ***
 
-### **6. Configure Security and Authentication**
+### **4. Configurer les paramètres de gestion des données**
 
-* **Authorization (if required)**
-  * Enable **Authorization Required**.
-  * Enter **UserID, Password, and Domain**.
+* **Include Parent Level Column Name** → Ajoute des identifiants de niveau parent pour les relations hiérarchiques.
+* **Create Additional Columns Without HTML5 Tags** → Supprime le **formatage HTML** et extrait le texte brut.
+* **Flatten Hierarchical Data** → Convertit les **structures JSON imbriquées** en un tableau de données plat.
 
-* **Proxy Server (if applicable)**
-  * Configure proxy settings if access to the internet requires authentication.
+Cliquez sur **Next** pour continuer.
+
+***
+
+### **5. Configurer la méthode de requête**
+
+* **GET (par défaut)** → Récupère les données sans les modifier.
+* **POST** → Utilisé pour envoyer des paramètres supplémentaires (remplissez le **request body** si nécessaire).
+* **Specify Encoding** → Choisissez un format d'encodage de texte si nécessaire.
+
+***
+
+### **6. Configurer la sécurité et l'authentification**
+
+* **Authorization (si nécessaire)**
+  * Activez **Authorization Required**.
+  * Saisissez **UserID, Password, and Domain**.
+
+* **Proxy Server (si applicable)**
+  * Configurez les paramètres du proxy si l'accès à Internet nécessite une authentification.
 
 * **User-Agent Identification**
-  * Some servers require a **specific User-Agent string** (e.g., for API access).
+  * Certains serveurs nécessitent une **specific User-Agent string** (par exemple, pour l'accès API).
 
-Click **Next** to proceed.
-
-***
-
-### **7. Finalizing the JSON Provider Setup**
-
-* Click **Finish** to complete the setup.
+Cliquez sur **Next** pour continuer.
 
 ***
 
-## **Important Considerations**
+### **7. Finalisation de la configuration du fournisseur JSON**
+
+* Cliquez sur **Finish** pour terminer la configuration.
+
+***
+
+## **Considérations importantes**
 
 * **PADS4 Data Server**
-  * If using a **Data Server**, ensure the JSON source is **accessible from the server**.
-  * If not using a Data Server, the **Designer and Viewers** must have **direct access** to the JSON feed or file.
+  * Si vous utilisez un **Data Server**, assurez-vous que la source JSON est **accessible depuis le serveur**.
+  * Si vous n'utilisez pas de Data Server, le **Designer and Viewers** doivent avoir un **accès direct** au flux ou fichier JSON.
 
-* **Joining Multiple Data Tables**
-  * If you need to **combine data** from multiple JSON sources, use the **Join Data Provider**.
+* **Joindre plusieurs tables de données**
+  * Si vous devez **combiner des données** provenant de plusieurs sources JSON, utilisez le **Join Data Provider**.
 
-By following these steps, **PADS4 can seamlessly integrate JSON data sources** into **real-time digital signage presentations**.
+En suivant ces étapes, **PADS4 can seamlessly integrate JSON data sources** dans des **présentations d'affichage dynamique en temps réel**.

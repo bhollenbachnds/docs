@@ -1,28 +1,28 @@
-Les **Propriétés de défilement des données** définissent comment **les données en temps réel** sont défilées dans une page pendant la lecture.
+Les **Data Scrolling Properties** définissent comment les **real-time data** défilent dans une page pendant la lecture.
 
 ***
 
-## **Défilement général des données**
+## **General Data Scrolling**
 
-### **Intervalle**
+### **Interval**
 
-* Spécifie **intervalle de temps (en secondes)** utilisé pour faire défiler les données pour tous les éléments de page qui ont **Défilement des données** activé.
-* Cet intervalle contrôle **la vitesse à laquelle** de nouvelles lignes de données sont affichées dans des éléments comme les tableaux, les listes ou les tickers.
+* Spécifie l'**time interval (in seconds)** utilisé pour faire défiler les données pour tous les éléments de page qui ont **Data Scrolling** activé.
+* Cet intervalle contrôle **how fast** les nouvelles lignes de données sont affichées dans des éléments comme les tableaux, les listes ou les tickers.
 
 ***
 
-### **Conserver les positions de défilement après un changement de page**
+### **Hold Scroll Positions after Page Change**
 
-* **Lorsque cette option est activée**, la **position actuelle de la ligne** de tous les fournisseurs de données sur la page sera **mémorisée** pendant la lecture lors du passage à une autre page.
-* Lors du retour à cette page, le défilement **continuera là où il s'était arrêté**, au lieu de recommencer depuis la première ligne.
+* **When enabled**, la **current row position** de tous les fournisseurs de données sur la page sera **remembered** pendant la lecture lors du passage à une autre page.
+* En revenant à cette page, le défilement **continue from where it left off**, au lieu de recommencer depuis la première ligne.
 * Par exemple :
-  * Si la page affichait **la ligne 4** lorsqu'elle a été quittée, en y revenant, elle continuera avec **la ligne 5**.
+  * Si la page affichait la **row 4** lorsqu'elle a changé, en y revenant, elle continuera avec la **row 5**.
 
-> **Conseil** : Ceci est **particulièrement utile pour les listes de lecture de publicités ou les longues listes de données**, garantissant que le contenu est lu **séquentiellement** à travers les boucles, plutôt que de répéter depuis le début chaque fois que la page apparaît.
+> **Astuce**: C'est **particulièrement utile pour les listes de lecture de publicités ou les longues listes de données**, garantissant que le contenu est diffusé **séquentiellement** à travers les boucles, plutôt que de recommencer depuis le début chaque fois que la page apparaît.
 
 ***
 
 ### **Exemple de cas d'utilisation**
 
-* Vous affichez une liste rotative de publicités, et vous voulez vous assurer que **chaque publicité est affichée** sans redémarrer la liste lors du retour à cette page.
+* Vous affichez une liste rotative de publicités, et vous voulez vous assurer que **chaque publicité est affichée** sans redémarrer la liste lorsque vous revenez à cette page.
 * En conservant la position de défilement, **la publicité suivante dans la séquence** sera diffusée lorsque la page sera affichée à nouveau.

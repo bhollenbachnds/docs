@@ -1,36 +1,36 @@
 # Changements dans la synchronisation avec PADS4 Version 2021.3
 
-Avec l'introduction de **PADS4 version 2021.3**, le **synchronization mechanism** entre les serveurs PADS4 a été mis à jour. Ce changement peut avoir un impact sur les installations existantes où **PADS4 Sub and/or Backup Servers** sont utilisés.
+Avec l'introduction de **PADS4 version 2021.3**, le **mécanisme de synchronisation** entre les serveurs PADS4 a été mis à jour. Ce changement peut avoir un impact sur les installations existantes où des **PADS4 Sub et/ou Backup Servers** sont utilisés.
 
 ***
 
 ## Nouveau mécanisme de réplication dans PADS4 Version 2021.3
 
-Dans les versions précédentes de PADS4, la réplication suivait un **one-way connection model**, où le **Sub/Backup Server** initiait une connexion au **Main Server** pour la synchronisation.
+Dans les versions précédentes de PADS4, la réplication suivait un **modèle de connexion unidirectionnelle**, où le **Sub/Backup Server** initiait une connexion au **Main Server** pour la synchronisation.
 
-À partir de **PADS4 version 2021.3**, le processus de réplication a été amélioré. Le **Main Server** et les **Sub/Backup Servers** peuvent désormais tous deux **initiate** la connexion, permettant un processus de synchronisation plus **flexible and resilient**.
+À partir de **PADS4 version 2021.3**, le processus de réplication a été amélioré. Le **Main Server** et les **Sub/Backup Servers** peuvent désormais tous deux **initier** la connexion, permettant un processus de synchronisation plus **flexible et résilient**.
 
-Cette mise à jour introduit une **networking requirement** clé :
+Cette mise à jour introduit une **exigence réseau** clé :
 
-* Un **host port** doit être **opened** dans le pare-feu pour la communication entre les serveurs.
-* Les **Main Servers** et les **Sub/Backup Servers** doivent pouvoir établir une **bidirectional connection** pour que la réplication fonctionne correctement.
-
-***
-
-## Exigences de configuration du pare-feu
-
-À partir de **PADS4 version 2021.3**, la réplication entre serveurs **requires** that:
-
-* Le **Main Server** doit pouvoir initier une connexion avec le **Sub/Backup Server**.
-* Le **Sub/Backup Server** doit pouvoir initier une connexion avec le **Main Server**.
-* Les **host ports** appropriés doivent être **opened in the firewall** pour permettre le trafic dans les deux sens.
-
-Cela diffère des versions précédentes, où seul le **Sub/Backup Server** était responsable de l'initiation de la connexion au **Main Server**.
+* Un **port hôte** doit être **ouvert** dans le pare-feu pour la communication entre les serveurs.
+* Les **Main Servers** et les **Sub/Backup Servers** doivent pouvoir établir une **connexion bidirectionnelle** pour que la réplication fonctionne correctement.
 
 ***
 
-## **Note importante**
+## Exigences de Configuration du Pare-feu
 
-<Note>**Une connexion réseau full-duplex est requise entre le Main Server et les Sub/Backup Servers.** Les deux serveurs doivent pouvoir établir une connexion directe l'un avec l'autre pour une réplication et une synchronisation correctes.</Note>
+À partir de **PADS4 version 2021.3**, la réplication entre serveurs **nécessite** that:
 
-Cette nouvelle méthode de réplication assure une **more robust and efficient** processus de synchronisation, réduisant les perturbations potentielles dans les opérations d'affichage dynamique.
+* Le **Main Server** doit être capable d'initier une connexion avec le **Sub/Backup Server**.
+* Le **Sub/Backup Server** doit être capable d'initier une connexion avec le **Main Server**.
+* Les **host ports** appropriés doivent être **ouverts dans le pare-feu** pour permettre le trafic dans les deux directions.
+
+Cela diffère des versions précédentes, où seul le **Sub/Backup Server** était responsable d'initier la connexion au **Main Server**.
+
+***
+
+## **Note Importante**
+
+<Note>**Une connexion réseau full-duplex est requise entre le Main Server et les Sub/Backup Servers.** Les deux serveurs doivent être capables d'établir une connexion directe entre eux pour une réplication et une synchronisation appropriées.</Note>
+
+Cette nouvelle méthode de réplication assure un **processus de synchronisation plus robuste et efficace**, réduisant les perturbations potentielles dans les opérations d'affichage dynamique.

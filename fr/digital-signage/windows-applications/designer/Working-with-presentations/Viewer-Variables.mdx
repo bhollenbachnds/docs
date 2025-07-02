@@ -1,8 +1,8 @@
-**Variables de Viewer** sont des outils puissants qui permettent un contenu dynamique et contextuel dans les présentations PADS4. Ce sont des **variables personnalisables** attribuées à chaque Viewer et automatiquement remplies pendant l'affichage des présentations. Ces variables permettent la personnalisation du contenu **sans avoir besoin de créer plusieurs présentations** pour différents emplacements ou appareils.
+**Viewer Variables** sont des outils puissants qui permettent un contenu dynamique et contextuel dans les présentations PADS4. Ce sont des **variables personnalisables** attribuées à chaque Viewer et automatiquement remplies pendant l'affichage des présentations. Ces variables permettent la personnalisation du contenu **sans avoir besoin de créer plusieurs présentations** pour différents emplacements ou appareils.
 
 ***
 
-## **Que sont les Variables de Viewer ?**
+## **Que sont les Viewer Variables ?**
 
 * **Des espaces réservés spécifiques au Viewer** qui peuvent ajuster dynamiquement le contenu affiché dans les présentations.
 * Utilisées dans **le texte, les fournisseurs de données, les filtres, les règles, les liaisons de propriétés**, et plus encore.
@@ -12,11 +12,11 @@
 
 ***
 
-## **Où définir les Variables de Viewer ?**
+## **Où définir les Viewer Variables ?**
 
-### **1. Application System Management (Recommandé)**
+### **1. System Management Application (Recommandé)**
 
-* **Ajouter et gérer** les Variables de Viewer.
+* **Ajouter et gérer** les Viewer Variables.
 * Attribuer des **valeurs par défaut** qui s'appliquent à tous les Viewers.
 * Assure un **contrôle centralisé** et empêche la création ou la suppression non autorisée via PADS4 Agent.
 
@@ -25,15 +25,15 @@
 * Ajuster les **valeurs pour les Viewers individuels** sous l'onglet **Server**.
 * Remplace la valeur par défaut attribuée dans System Management.
 
-### **3. Fenêtre des Options du Viewer (sur l'appareil Viewer)**
+### **3. Fenêtre Viewer Options (sur l'appareil Viewer)**
 
-* Ajuster les Variables de Viewer directement sur le Viewer pour des **ajustements locaux**.
+* Ajuster les Viewer Variables directement sur le Viewer pour des **ajustements locaux**.
 
 ***
 
 ## **Example: Personalized Text with Viewer Variables**
 
-Si vous définissez une Variable de Viewer `#Store Name#` avec la valeur par défaut **"New York Health"**, et utilisez ce texte dans un Élément de Texte :
+Si vous définissez une Viewer Variable`#Store Name#` avec la valeur par défaut **"New York Health"**, et utilisez ce texte dans un élément de texte :
 
 > **Welcome to the #Store Name#.**
 
@@ -45,29 +45,29 @@ Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (pa
 
 ***
 
-## **Où les Variables de Viewer peuvent-elles être utilisées ?**
+## **Où les Viewer Variables peuvent-elles être utilisées ?**
 
 * **Champs de texte** dans les éléments.
 * **Data Providers** (requêtes, filtres, expressions, tri, chemins de fichiers).
 * **Rules** pour le comportement dynamique du contenu.
 * **Property bindings**.
-* **Playlists** pour les séquences de médias.
+* **Playlists** pour les séquences média.
 * **Références de fichiers** (par exemple, sélectionner dynamiquement des images en fonction de l'emplacement du Viewer).
 
 ***
 
-## **Exemples d'automatisation utilisant les Variables de Viewer**
+## **Exemples d'automatisation utilisant les Viewer Variables**
 
-| **Cas d'utilisation**                                | **Exemple**                                                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Informations personnalisées du magasin               | Afficher le nom et l'adresse spécifiques du magasin par Viewer.                             |
-| Sélection de produits basée sur la taille du magasin | Filtrer les produits en fonction d'une Variable de Viewer comme `#StoreSize#`.              |
-| Données spécifiques à la région                      | Utiliser `#Country#` ou des Variables de Viewer basées sur le GPS pour du contenu localisé. |
-| Affichage dynamique de carte                         | Afficher différentes cartes en fonction de la variable d'emplacement.                       |
+| **Cas d'utilisation**                                | **Exemple**                                                                              |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Informations personnalisées du magasin               | Afficher le nom et l'adresse spécifiques du magasin par Viewer.                          |
+| Sélection de produits basée sur la taille du magasin | Filtrer les produits en fonction d'une Viewer Variable comme `#StoreSize#`.              |
+| Données spécifiques à la région                      | Utiliser `#Country#` ou des Viewer Variables basées sur le GPS pour du contenu localisé. |
+| Affichage dynamique de carte                         | Afficher différentes cartes en fonction de la variable de localisation.                  |
 
 ***
 
-## **Quand les Variables de Viewer sont-elles transformées en valeurs réelles ?**
+## **Quand les Viewer Variables sont-elles transformées en valeurs réelles ?**
 
 | **Contexte**                                                     | **Quand remplacées**                                                                                             |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -80,27 +80,27 @@ Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (pa
 
 ***
 
-## **Gestion des Playlists avec les Variables de Viewer**
+## **Gestion des Playlists avec les Viewer Variables**
 
 * **Playlist à élément unique, non alternante** :\
-  La Variable de Viewer est remplacée au moment du chargement et **reste statique** jusqu'au prochain chargement.
+  La Viewer Variable est remplacée au moment du chargement et **reste statique** jusqu'au prochain chargement.
 * **Playlist alternante** :\
-  La Variable de Viewer est mise à jour **à chaque intervalle**, permettant des changements dynamiques.
+  La Viewer Variable est mise à jour **à chaque intervalle**, permettant des changements dynamiques.
 
 ***
 
 ## **Remarques importantes**
 
-* **N'utilisez PAS les Variables de Viewer pour des valeurs qui changent constamment.**\
-  Les Variables de Viewer **ne sont pas conçues** pour fonctionner comme des sources de données à haute fréquence (utilisez les Data Providers pour cela).
-* Les changements dans les Variables de Viewer **ne déclenchent pas automatiquement** la réévaluation de toutes les règles ou l'actualisation du contenu à moins d'être rechargés.
-* **Fichiers en dehors de la Content Library** référencés avec des Variables de Viewer peuvent **ne pas se synchroniser correctement**—gardez les fichiers dans la Content Library.
+* **N'utilisez PAS les Viewer Variables pour des valeurs qui changent constamment.**\
+  Les Viewer Variables **ne sont pas conçues** pour fonctionner comme des sources de données à haute fréquence (utilisez des Data Providers pour cela).
+* Les changements dans les Viewer Variables **ne déclenchent pas automatiquement** la réévaluation de toutes les règles ou l'actualisation du contenu, sauf en cas de rechargement.
+* **Fichiers en dehors de la Content Library** référencés avec des Viewer Variables peuvent **ne pas se synchroniser correctement**—conservez les fichiers dans la Content Library.
 
 ***
 
 ## **Avantages clés**
 
 * **Gestion centralisée du contenu** avec personnalisation locale dynamique.
-* **Présentation unique** desservant plusieurs Viewers avec un contenu unique.
+* **Une seule présentation** desservant plusieurs Viewers avec un contenu unique.
 * Facile à mettre à jour et à maintenir—**changez la valeur de la variable, pas la présentation**.
-* Améliore **l'automatisation et la communication ciblée** sans refonte complexe.
+* Améliore **l'automatisation et la communication ciblée** sans reconception complexe.

@@ -1,12 +1,12 @@
-Ce guide fournit des instructions étape par étape pour configurer l'**intégration PADS4 Teams** dans **Microsoft Azure**. Il suppose une familiarité avec les **Azure App Registrations** et **Azure Communication Services**.
+Ce guide fournit des instructions étape par étape pour configurer l'**PADS4 Teams integration** dans **Microsoft Azure**. Il suppose une familiarité avec les **Azure App Registrations** et **Azure Communication Services**.
 
 ***
 
-## **1. Enregistrement d'Application dans Azure**
+## **1. Enregistrement d'application dans Azure**
 
-Pour intégrer **Microsoft Teams** avec PADS4, créez un **nouvel enregistrement d'application** dans **Azure Active Directory (AAD)**.
+Pour intégrer **Microsoft Teams** avec PADS4, créez un **new application registration** dans **Azure Active Directory (AAD)**.
 
-### **Étape 1 : Créer un Nouvel Enregistrement d'Application**
+### **Étape 1 : Créer un nouvel enregistrement d'application**
 
 1. Ouvrez le **Microsoft Azure Portal**.
 2. Naviguez vers **Azure Active Directory** > **App Registrations**.
@@ -22,14 +22,14 @@ Pour intégrer **Microsoft Teams** avec PADS4, créez un **nouvel enregistrement
        ```
        https://<host>:<port>/credentials/oauth2/authorize/callback
        ```
-       * **Host** : Nom DNS ou **adresse IP** du **PADS4 CTRL Center**.
-       * **Port** : Optionnel, spécifiez uniquement si PADS4 CTRL Center n'utilise pas les ports HTTP/HTTPS par défaut.
+       * **Host** : Nom DNS ou **IP address** du **PADS4 CTRL Center**.
+       * **Port** : Optionnel, à spécifier uniquement si PADS4 CTRL Center n'utilise pas les ports HTTP/HTTPS par défaut.
 
 ***
 
-### **Étape 2 : Ajouter la Revendication Optionnelle Login Hint**
+### **Étape 2 : Ajouter la revendication optionnelle Login Hint**
 
-Cette revendication permet la **ré-authentification** dans PADS4 CTRL Center pour le **renouvellement manuel du jeton d'accès**.
+Cette revendication permet la **re-authentication** dans PADS4 CTRL Center pour le **manual access token renewal**.
 
 1. Ouvrez **App Registration**.
 2. Dans le menu de gauche, allez à **Token Configuration**.
@@ -40,9 +40,9 @@ Cette revendication permet la **ré-authentification** dans PADS4 CTRL Center po
 
 ***
 
-### **Étape 3 : Créer un Périmètre d'API**
+### **Étape 3 : Créer un périmètre d'API**
 
-Cette étape permet à l'**intégration PADS4 Teams** de **rejoindre les réunions Teams** au nom des utilisateurs.
+Cette étape permet à l'**PADS4 Teams integration** de **join Teams meetings** au nom des utilisateurs.
 
 1. Ouvrez **App Registration**.
 2. Dans le menu de gauche, sélectionnez **Expose an API**.
@@ -51,23 +51,23 @@ Cette étape permet à l'**intégration PADS4 Teams** de **rejoindre les réunio
    ```
    api://your-custom-uri
    ```
-   * L'Application ID URI **doit commencer par** `api://` et **ne peut pas contenir d'espaces ou de caractères spéciaux**.
+   * L'Application ID URI **doit commencer par** `api://` et **cannot contain spaces or special characters**.
 5. Cliquez sur **Save and Continue**.
-6. Définissez les **valeurs du périmètre** :
+6. Définissez les **Scope values** :
    * **Scope Name** : Tout nom unique sans espaces ni caractères spéciaux.
    * **Who can consent?** : Sélectionnez **Admins and Users**.
-   * **Admin Consent Display Name** : Tout nom de référence.
-   * **User Consent Display Name** : Tout nom de référence.
+   * **Admin Consent Display Name** : N'importe quel nom de référence.
+   * **User Consent Display Name** : N'importe quel nom de référence.
    * **State** : **Enabled**.
 7. Cliquez sur **Add Scope**.
 
-L'**URI complet du périmètre** (Application ID URI + nom du périmètre) sera requis dans **PADS4 CTRL Center**.
+L'**full scope URI** (Application ID URI + Scope name) sera requis dans **PADS4 CTRL Center**.
 
 ***
 
-### **Étape 4 : Créer un Secret Client**
+### **Étape 4 : Créer un secret client**
 
-Le **Client Secret** garantit que l'intégration PADS4 Teams peut **rejoindre les réunions Teams** sans que les utilisateurs aient besoin de se connecter à chaque fois.
+Le **Client Secret** garantit que l'intégration PADS4 Teams peut **join Teams meetings** sans exiger que les utilisateurs se connectent à chaque fois.
 
 1. Ouvrez **App Registration**.
 2. Dans le menu de gauche, sélectionnez **Certificates & Secrets**.
@@ -81,7 +81,7 @@ Le **Client Secret** garantit que l'intégration PADS4 Teams peut **rejoindre le
 
 ### **Étape 5 : Rassembler les informations requises**
 
-L'intégration PADS4 Teams nécessite les détails suivants :
+L'intégration de PADS4 Teams nécessite les détails suivants :
 
 * **Application (Client) ID** – Trouvé dans **App Registration Overview**.
 * **Directory (Tenant) ID** – Trouvé dans **App Registration Overview**.
@@ -110,7 +110,7 @@ Pour activer **PADS4 Teams integration**, configurez **Azure Communication Servi
 
 ### **Étape 2 : Récupérer la chaîne de connexion**
 
-L'intégration PADS4 Teams nécessite la **Primary Connection String**.
+L'intégration de PADS4 Teams nécessite la **Primary Connection String**.
 
 1. Ouvrez la **Communication Services resource**.
 2. Dans le menu de gauche, sélectionnez **Keys**.
@@ -118,7 +118,7 @@ L'intégration PADS4 Teams nécessite la **Primary Connection String**.
 
 ***
 
-## **3. Configuration utilisateur et licences**
+## **3. Configuration et licences utilisateur**
 
 Pour intégrer **Teams** avec **PADS4**, les comptes utilisateurs doivent disposer des **Microsoft 365 E3 licenses** suivantes :
 
@@ -155,7 +155,7 @@ Pour configurer **PADS4 Teams Integration**, rassemblez les détails suivants :
 ## **5. Prochaines étapes**
 
 * Saisissez ces valeurs dans **PADS4 CTRL Center** pour activer **Microsoft Teams integration**.
-* Assurez-vous que **licenses are assigned** aux utilisateurs concernés.
+* Assurez-vous que les **licenses are assigned** aux utilisateurs concernés.
 * Testez la **connection** en essayant de rejoindre une réunion Teams via PADS4.
 
 La configuration est maintenant terminée, et PADS4 est intégré à Microsoft Teams.

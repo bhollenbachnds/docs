@@ -1,13 +1,13 @@
 ---
-- title: Paramètres globaux
+- title: Global Settings
 - description: Mintlify vous donne un contrôle complet sur l'apparence de votre
     documentation en utilisant le fichier docs.json
 - icon: gear
 ---
 
-Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de configuration de base. En savoir plus sur les [propriétés](#properties) ci-dessous.
+Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de configuration de base. En savoir plus sur les [properties](#properties) ci-dessous.
 
-## Propriétés
+## Properties
 
 <ResponseField name="name" type="string" required>
   Nom de votre projet. Utilisé pour le titre global.
@@ -58,7 +58,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 <ResponseField name="colors" type="Colors">
   Codes de couleur hexadécimaux pour votre thème global
 
-  <Expandable title="Couleurs">
+  <Expandable title="Colors">
     <ResponseField name="primary" type="string" required>
       La couleur principale. Utilisée le plus souvent pour le contenu mis en évidence, les en-têtes de section, les accents, en mode clair
     </ResponseField>
@@ -74,7 +74,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     <ResponseField name="background" type="object">
       La couleur de l'arrière-plan en mode clair et sombre
 
-      <Expandable title="Objet">
+      <Expandable title="Object">
         <ResponseField name="light" type="string" required>
           Le code couleur hexadécimal de l'arrière-plan en mode clair
         </ResponseField>
@@ -98,13 +98,13 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     </ResponseField>
 
     <ResponseField name="url" type="string">
-      L'URL lorsque vous cliquez sur le bouton. Exemple : `https://mintlify.com/docs`
+      L'URL lorsque vous cliquez sur le bouton. Exemple: `https://mintlify.com/docs`
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="topbarCtaButton" type="Call to Action">
-  <Expandable title="Appel à l'action de la barre supérieure">
+  <Expandable title="Topbar Call to Action">
     <ResponseField name="type" type={'"link" or "github"'} default="link">
       Le lien affiche un bouton. GitHub affiche les informations du dépôt à l'URL fournie, y compris le nombre d'étoiles GitHub.
     </ResponseField>
@@ -128,7 +128,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 <ResponseField name="anchors" type="Anchor[]">
   Un tableau des ancres, comprenant le `icon`, `color`, et `url`.
 
-  <Expandable title="Ancre">
+  <Expandable title="Anchor">
     <ResponseField name="icon" type="string">
       L'icône [Font Awesome](https://fontawesome.com/search?q=heart) utilisée pour caractériser l'ancre.
 
@@ -166,7 +166,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 <ResponseField name="topAnchor" type="Object">
   Remplacez les configurations par défaut pour l'ancre la plus haute.
 
-  <Expandable title="Objet">
+  <Expandable title="Object">
     <ResponseField name="name" default="Documentation" type="string">
       Le nom de l'ancre la plus haute
     </ResponseField>
@@ -184,7 +184,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 <ResponseField name="tabs" type="Tabs[]">
   Un tableau d'onglets de navigation.
 
-  <Expandable title="Onglets">
+  <Expandable title="Tabs">
     <ResponseField name="name" type="string">
       Le nom de l'étiquette de l'onglet.
     </ResponseField>
@@ -230,7 +230,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
         <ResponseField name="mode" default="show" type="&#x22;show&#x22; | &#x22;simple&#x22; | &#x22;hide&#x22;">
           Si le terrain de jeu est affiché, masqué ou affiche uniquement le point de terminaison sans interactivité utilisateur ajoutée `simple`
 
-          En savoir plus dans les [guides du terrain de jeu](/api-playground/demo)
+          En savoir plus dans les [playground guides](/api-playground/demo)
         </ResponseField>
       </Expandable>
     </ResponseField>
