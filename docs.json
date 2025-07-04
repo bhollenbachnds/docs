@@ -1006,6 +1006,11 @@
                           "digital-signage/windows-applications/system-management/starting-pads4-system-management/managing-your-connections",
                           "digital-signage/windows-applications/system-management/starting-pads4-system-management/graceful-degradation"
                         ]
+                        },
+                      {
+                        "group": "Main Window",
+                        "pages": [
+                          "digital-signage/windows-applications/system-management/main-window/ribbon-bar"
                       }
                     ]
                   },
