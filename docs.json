@@ -994,6 +994,12 @@
                       }
                     ]
                   },
+                  {
+                   "group": "System Management",
+                        "pages": [
+                          "digital-signage/windows-applications/system-management/introduction" 
+                        ]
+                  },
                   "modules/digital-signage/licenses"
                 ]
               },
