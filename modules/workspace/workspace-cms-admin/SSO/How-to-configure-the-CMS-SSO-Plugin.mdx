@@ -1,0 +1,73 @@
+This manual can only be followed if you have configured SSO inyour Azure / Entra ID environment. You can follow this article to do so: **Single Sign On (Azure)**
+
+Now that all of the above information has been gathered, PADS4CMS can now be configured to make use of SSO.
+
+## Important :
+
+In order for SSO to function correctly, PADS4 must be configured with use of HTTPS. In order to achieve this, you would need to follow this guide with use of an SSL certificate.
+
+## Step 1 : Navigate to your PADS4 CMS  instance in abrowser
+
+Sign in with an Administrator account and slect "CMS Admin"
+
+![CM Sadmin Pn](/images/CMSadmin.png)
+
+## Step 2 : Select "Plugins" in the left pane and then "Single Sign-on (SSO)
+
+Enable the pluging on the **top right**, next to **"Type"**, select the **"Azure AD"** option in the drop down list
+
+![Pluging Type Azure AD Pn](/images/Pluging-Type-AzureAD.png)
+
+## Step 3 : Insert the information obtained from the previous section 
+
+| Known in Azure Active Directory | Know in PADS4                               |
+| ------------------------------- | ------------------------------------------- |
+| Azure AD Identifier             | Federation Service Identifier               |
+| URL of Relying Party            | URL of Relying party                        |
+| SMAL SSO URL                    | SAML SSO URL                                |
+| App Federation Metadata         | Federation Metada URL                       |
+| Certificate (Raw)               | Certificate of the federation server (.cer) |
+| Object ID                       | Active directory group ID                   |
+
+### Important : 
+
+The copied string for the **“ URL of the relying party ”** in the CMS SSO configuration should not contain**“ /Saml ”**  as copied from Azure butrather only**“ /crystal/pads ”** . 
+
+(Where "pads" is the default domain) Example: The Azure copied link looks like this: 
+
+https://robin.pads365.com/crystal/pads/Saml2 
+
+however, it should be like this instead
+
+ https://robin.pads365.com/crystal/pads 
+
+Upload the Application Certificate (Raw) that you have downloadedfrom Azure here:
+
+## Step 4 : Upload the Application Certificate (Raw) that you have downloaded from Azure 
+
+![Certificate Raw Pn](/images/CertificateRaw.png)
+
+For the **"relying party signing certificate"**, we suggest using the certificate that you use for your HTTPS configuration. "Convert that certificate to .pfx. "
+
+### The below section is where the certificate and private key need to be configured.
+
+![Relyingpartysigning Pn](/images/Relyingpartysigning.png)
+
+When you configure the**“Relation Table”**  in CMS Admin for SSO, seta profile that you created for the SSO users or group in relation totheir privilege level. 
+
+Example below: 
+
+![Relationtable Pn](/images/Relationtable.png)
+
+Save the configuration then log out and you should now see thebelow **“Single Sign On”** as an  option : 
+
+![Continuewithsso Pn](/images/Continuewithsso.png)
+
+## Important Notes : 
+
+1. When you SSL Certificate expires, be sure to upload the new certificate and private key in this section upon renewal
+
+   ![Uploadnewcertificate Pn](/images/Uploadnewcertificate.png)
+2. When you federation certificate expires, be sure to upload the new certificate and private key in this section upon renewal 
+
+![Renewal2 Pn](/images/renewal2.png)
