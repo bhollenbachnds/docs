@@ -995,10 +995,10 @@
                     ]
                   },
                   {
-                   "group": "System Management",
-                        "pages": [
-                          "digital-signage/windows-applications/system-management/introduction", 
-                        {
+                    "group": "System Management",
+                    "pages": [
+                      "digital-signage/windows-applications/system-management/introduction",
+                      {
                         "group": "Starting PADS4 System Management",
                         "pages": [
                           "digital-signage/windows-applications/system-management/starting-pads4-system-management/starting-the-application",
@@ -1006,7 +1006,7 @@
                           "digital-signage/windows-applications/system-management/starting-pads4-system-management/managing-your-connections",
                           "digital-signage/windows-applications/system-management/starting-pads4-system-management/graceful-degradation"
                         ]
-                        },
+                      },
                       {
                         "group": "Main Window",
                         "pages": [
@@ -1295,12 +1295,13 @@
         ]
       },
       {
+        "language": "fr",
         "dropdowns": [
           {
             "dropdown": "Guide d'installation",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/introduction",
                   "fr/system-requirements",
@@ -1502,7 +1503,7 @@
             "dropdown": "PADS4 Ctrl Center",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/ctrl-centre/introduction",
                   "fr/ctrl-centre/account-creation",
@@ -1580,7 +1581,7 @@
             "dropdown": "Affichage dynamique",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/digital-signage/introduction",
                   "fr/modules/digital-signage/components"
@@ -2084,7 +2085,7 @@
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/connecting-to-your-PADS4-server",
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/logging-on-to-your-PADS4-server",
                           {
-                            "group": "Spécifier les propriétés de connexion et d'identification",
+                            "group": "Spécifier les propriétés de connexion et de connexion",
                             "pages": [
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/connection-properties",
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/logon-properties"
@@ -2260,6 +2261,27 @@
                       }
                     ]
                   },
+                  {
+                    "group": "Gestion du système",
+                    "pages": [
+                      "fr/digital-signage/windows-applications/system-management/introduction",
+                      {
+                        "group": "Démarrer la gestion du système PADS4",
+                        "pages": [
+                          "fr/digital-signage/windows-applications/system-management/starting-pads4-system-management/starting-the-application",
+                          "fr/digital-signage/windows-applications/system-management/starting-pads4-system-management/connecting-to-your-pads4-server",
+                          "fr/digital-signage/windows-applications/system-management/starting-pads4-system-management/managing-your-connections",
+                          "fr/digital-signage/windows-applications/system-management/starting-pads4-system-management/graceful-degradation"
+                        ]
+                      },
+                      {
+                        "group": "Fenêtre principale",
+                        "pages": [
+                          "fr/digital-signage/windows-applications/system-management/main-window/ribbon-bar"
+                        ]
+                      }
+                    ]
+                  },
                   "fr/modules/digital-signage/licenses"
                 ]
               },
@@ -2275,7 +2297,7 @@
             "dropdown": "Workspace",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/workspace/introduction"
                 ]
@@ -2352,7 +2374,7 @@
             "dropdown": "FIDS",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/fids/introduction",
                   "fr/modules/fids/installation",
@@ -2375,7 +2397,7 @@
             "dropdown": "Gestion des visiteurs",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/visitor-management/introduction",
                   "fr/modules/visitor-management/home-and-creating-users",
@@ -2389,7 +2411,7 @@
             "dropdown": "Legacy CMS",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/legacy-cms/introduction"
                 ]
@@ -2537,8 +2559,7 @@
               }
             ]
           }
-        ],
-        "language": "fr"
+        ]
       }
     ]
   },
