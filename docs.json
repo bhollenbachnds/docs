@@ -1631,7 +1631,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les présentations",
+                        "group": "Travailler avec des présentations",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Content-Library",
@@ -1666,7 +1666,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les pages",
+                        "group": "Travailler avec des pages",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Creating-a-page",
@@ -1702,13 +1702,13 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les éléments de page",
+                        "group": "Travailler avec des éléments de page",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Using-the-grid",
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Adding-a-page-element",
                           {
-                            "group": "Sélection des éléments de page",
+                            "group": "Sélection d'éléments de page",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Selecting-page-elements/Introduction",
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Selecting-page-elements/Selecting-one-page-element",
@@ -2007,7 +2007,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les listes de lecture",
+                        "group": "Travailler avec des listes de lecture",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-playlists/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-playlists/Managing-playlists",
@@ -2016,7 +2016,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les fournisseurs de données",
+                        "group": "Travailler avec des fournisseurs de données",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-data-providers/Introduction",
                           {
@@ -2408,7 +2408,7 @@
             ]
           },
           {
-            "dropdown": "Legacy CMS",
+            "dropdown": "CMS hérité",
             "groups": [
               {
                 "group": "Mise en route",
