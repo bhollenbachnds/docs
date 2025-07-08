@@ -4,45 +4,43 @@ The below process helps you configure your PADS4 CMS installation touse Azure SS
 
 It is necessary to configure the Azure instance to allow users within yourorganization to access the PADS4 (Legacy) CMS application. To enable this, please follow the steps in this document :
 
-## \*\*Step 1 : \*\*Navigate and login to your \*\*Azure portal \*\*page as an admin
+## Step 1 : Navigate and login to your "Azure portal" page as an admin
 
 https://portal.azure.com/
 
-## **Step 2 :** Select the\*\*"Microsoft Entra ID" \*\* option
+## Step 2**:**  Select the "Microsoft Entra ID" option
 
 ![Microsftentra ID Pn](/images/MicrosftentraID.png)
 
-## \*\*Step 3 \*\*: On the left hand side panel, select **"Enterprise Applications"**
+## Step 3 : On the left hand side panel, select "Enterprise Applications"
 
 ![Enterprise Applications Pn](/images/EnterpriseApplications.png)
 
 # **Important**
 
 <Warning>
-  If you \*\*<u>don't</u> \*\*want to use an Application Proxy onyour on-premise application then continue on step 4 below and skip steps 7 and 8.
+  If you **<u>don't</u> ** want to use an Application Proxy onyour on-premise application then continue on step 4 below and skip steps 7 and 8.
 
-  If you \*\*<u>do</u> \*\*want to use an Application Proxy for your on-premise application then proceed to step 7 and skip steps 4, 5 and 6.
+  If you **<u>do</u> **want to use an Application Proxy for your on-premise application then proceed to step 7 and skip steps 4, 5 and 6.
 </Warning>
 
-## \*\*Step 4  **: Select the "**\+ New application" \*\*option at the top of the screen
+## Step 4  **: **Select the "\+ New application" option at the top of the screen
 
 ![Step4\+newapplication Pn](/images/step4+newapplication.png)
 
-## \*\*Step 5  \*\*: Click on **"Create you own application"**
+## Step 5  : Click on "Create you own application"
 
 ![image.png](/images/image.png)
 
-## **Step 6 :** Fill in the information requested in the form and click create
+## Step 6 **:** Fill in the information requested in the form and click create
 
 ![Step6 Pn](/images/step6.png)
-
-# 
 
 <Warning>
   Skip this step (7) if you don't use an Application Proxy.
 </Warning>
 
-## **Step 7 : Creating a connector group / application proxy connector:**
+## Step 7 : Creating a connector group / application proxy connector:
 
 Select the **Manage Application Proxy Connectors** **section**
 
@@ -64,11 +62,9 @@ Select the **Manage Application Proxy Connectors** **section**
 
 ## Creating an on-premises application within Azure
 
-1. Select**Add an on-premises application**
+1. Select **Add an on-premises application**
 
    ![Step10 Pn](/images/step10.png)
-
-# 
 
 <Warning>
   Skip this step (8) if you don't use an Application Proxy.
@@ -80,19 +76,19 @@ Select the **Manage Application Proxy Connectors** **section**
 
 ### Example :
 
-\*\*Name : \*\*PADS4 CMS
+Name : PADS4 CMS
 
-\*\*Internal URL : \*\*URL of the PADS4 CMS installation (https://servername)
+Internal URL : URL of the PADS4 CMS installation (https://servername)
 
-\*\*Pre-authentication : \*\*Azure Active Directory
+Pre-authentication : Azure Active Directory
 
-\*\*Connector Group : \*\*SSO Connector (default). <u>This is the connector group you have just set up</u>
+Connector Group : SSO Connector (default). <u>This is the connector group you have just set up</u>
 
 Then Click on the add button
 
 ## Step 9 : Navigate to the newly created application
 
-1. Navigate to the newly created application by selecting **“ Enterprise Applications"** and use t**he search bar** to find your application. **Select it** and then navigate to \*\*"Users and Groups" \*\*:
+1. Navigate to the newly created application by selecting **“ Enterprise Applications"** and use t**he search bar** to find your application. **Select it** and then navigate to "Users and Groups" :
 
 ![Userandgroups Pn](/images/userandgroups.png)
 
@@ -108,15 +104,13 @@ Then Click on the add button
 
 ![Add2 Pn](/images/add2.png)
 
-## 
-
 <Warning>
   It is highly recommended to create a PADS4 CMS user group withthe Windows Server AD as the source.
 </Warning>
 
 ## Step 10 : To configure Single Sign On (SSO)
 
-Select\*\*"Single sign-on option"\*\*  in the left pane and then **"SAML"**
+Select **"Single sign-on option"**  in the left pane and then **"SAML"**
 
 ![10 Pn](/images/10.png)
 
@@ -124,7 +118,7 @@ Select\*\*"Single sign-on option"\*\*  in the left pane and then **"SAML"**
 
 ![Image23 Pn](/images/Image23.png)
 
-Select\*\*“ Add identifier ”\*\*  and **" Add Reply URL ”** as provide the value per the below example:
+Select “ Add identifier ”  and **" Add Reply URL ”** as provide the value per the below example:
 
 ![Image24 Pn](/images/Image24.png)
 
@@ -136,17 +130,19 @@ If a unique network port is being utilized, be sure to include this in above str
 
 E.g : https://robin.pads365.com:444/crystal/domain/Saml2
 
-**Make sure** you specify your PADS4 domain at\*\*"domain" in theURL\*\*\*
+**Make sure** you specify your PADS4 domain at "domain" in theURL
 
 ![Image25 Pn](/images/Image25.png)
 
 If you use the default domain name it will be : https://robin.pads365.com/crystal/pads/Saml2
 
-Reply URL : Local PADS4 CMS URL with /Saml2/Acs **(e.g:**[**https://robin.pads365.com/crystal/domain/Saml2/Acs**](https://robin.pads365.com/crystal/domain/Saml2/Acs)\*\* )\*\*
+Reply URL : Local PADS4 CMS URL with /Saml2/Acs **(e.g:**[**https://robin.pads365.com/crystal/domain/Saml2/Acs**](https://robin.pads365.com/crystal/domain/Saml2/Acs) )
 
-If a unique network port is being utilized, be sure to include this in above string. \*\*E.g \*\*https://robin.pads365.com:444/crystal/domain/Saml2/Acs
+If a unique network port is being utilized, be sure to include this in above string. 
 
-**Make sure** you specify your PADS4 domain at\*\*"domain" in theURL\*\*\*
+E.g https://robin.pads365.com:444/crystal/domain/Saml2/Acs
+
+**Make sure** you specify your PADS4 domain at "domain" in theURL
 
 ![Image26 Pn](/images/Image26.png)
 
@@ -154,21 +150,24 @@ If you use the default domain name it will be:
 
 https://robin.pads365.com/crystal/pads/Saml2/Acs
 
-**\*Remark:** If you have configured SSO on a version before 2023.1, the domain name wasn't required in the URL when using only one domain. From version 2023.1 onwards, the domain name is required in the URL both for one and multi-domain setups.
+<Info>
+  **Remark :**  If you have configured SSO on a version before 2023.1, the domain name wasn't required in the URL when using only one domain. From version 2023.1 onwards, the domain name is required in the URL both for one and multi-domain setups.
 
-Therefore, when updating from a version before 2023.1 with SSO configured, to the latest release, make sure to add the domain to both the Identifier and Reply URL.
+  Therefore, when updating from a version before 2023.1 with SSO configured, to the latest release, make sure to add the domain to both the Identifier and Reply URL.
 
-**Be sure to "Save" these configurations.**
+  **Be sure to "Save" these configurations.**
+</Info>
 
-## Step 12 : Whilst in the **“ Single sign-on ”** menu, select **“Edit ”** on the **“ Attributes & Claims ”** section.
+
+## Step 12 : Whilst in the “ Single sign-on ” menu, select “Edit ” on the “ Attributes & Claims ” section.
 
 ![Image27 Pn](/images/Image27.png)
 
-**\*By default, you would have a list of claims already, however, it isrequired that the claims matches the below example for successful authentication :**
+**By default, you would have a list of claims already, however, it isrequired that the claims matches the below example for successful authentication :**
 
 ![Image28 Pn](/images/Image28.png)
 
-Add the primarysid claim: Select\*\*“Add new claim”\*\*
+Add the primarysid claim : Select “Add new claim”
 
 ![Image29 Pn](/images/Image29.png)
 
@@ -178,7 +177,7 @@ Add the primarysid claim: Select\*\*“Add new claim”\*\*
 
 Name : **primarysid**
 
-Namespace \*\*: \*\*[**http://schemas.xmlsoap.org/ws/2008/06/identity/claims**](http://schemas.xmlsoap.org/ws/2008/06/identity/claims)
+Namespace : [**http://schemas.xmlsoap.org/ws/2008/06/identity/claims**](http://schemas.xmlsoap.org/ws/2008/06/identity/claims)
 
 Source attribute : **user.objectid**
 
@@ -192,17 +191,18 @@ Name : **group**
 
 Namespace : http://schemas.xmlsoap.org/claims
 
-**\*Remark:** If you now experience the following behavior, the SSObutton on the login page works and you are able to input yourcredentials but it will get redirected to the PADS4 Login portal with "Noaccount is defined for your authentication request" in the URL.
+<Info>
+  Remark : If you now experience the following behavior, the SSObutton on the login page works and you are able to input yourcredentials but it will get redirected to the PADS4 Login portal with "Noaccount is defined for your authentication request" in the URL.
 
-**There can be 2 causes :**
+  **There can be 2 causes**
 
-the group claim is incorrectly configured
+  the group claim is incorrectly configured
 
-The user you are trying to log in with has the same email addressalready configured to a CMS / Workspace user.
+  The user you are trying to log in with has the same email addressalready configured to a CMS / Workspace user.
+</Info>
+
 
 ![Image31 Pn](/images/Image31.png)
-
-### 
 
 <Info>
   You **have now prepared SSO within Azure for your PADS4Application.**
@@ -230,7 +230,7 @@ Within your application, select **“ Single sign-on ”** in the left pane
 
 Scroll down to the **“ SAML Certificates ”** heading
 
-Select the **“ Download ”** option next to the \*\*“ Certificate (Raw) ”\*\*option.
+Select the **“ Download ”** option next to the “ Certificate (Raw) ” option.
 
 ![Image32 Pn](/images/Image32.png)
 
@@ -240,7 +240,7 @@ Within your application, select **“ Single sign-on ”** in the left pane
 
 Scroll down to the **“Set up“ your_application_name ”** heading
 
-Select the \*\*“ Copy ” \*\*option next to the \*\*“ Azure AD Identifier ”\*\*option.
+Select the **“ Copy ”** option next to the **“ Azure AD Identifier ”** option.
 
 ![Image33 Pn](/images/Image33.png)
 
@@ -250,7 +250,7 @@ Within your application, select **“ Single sign-on ”** in the left pane
 
 Scroll down to the **“ Set up “your_application_name ”** heading
 
-Select the\*\*“ Copy ” \*\* option next to the\*\*“ Login URL ”\*\*  option.
+Select the**“ Copy ”**   option next to the **“ Login URL ”**  option.
 
 ![Image34 Pn](/images/Image34.png)
 
@@ -258,7 +258,7 @@ Select the\*\*“ Copy ” \*\* option next to the\*\*“ Login URL ”\*\*  opt
 
 Within your application, select “**Single sign-on ”**  in the left pane
 
-Scroll down to the\*\*“ SAML Certificates ” \*\* heading
+Scroll down to the **“ SAML Certificates ” **heading
 
 Select the **“ Copy ”** option next to the **“ App FederationMetadata URL ”** option.
 
@@ -270,13 +270,11 @@ Within your application, select **“ Single sign-on ”** in the left pane
 
 Scroll to the **“ Basic SAML Configuration ”** heading
 
-Copy the string next to the \*\*“ Identifier (Entity ID) \*\*” option.
+Copy the string next to the **“ Identifier (Entity ID) ” **option.
 
 ![Image36 Pn](/images/Image36.png)
 
 ## 6. Obtaining the “Group ID” of the group you assigned to your application:
-
-### 
 
 <Info>
   For **every user group added to utilize the PADS4 CMS application, a mapping table will be required to add the groups to the interface. Please provide the installers the Group ID’s and names of the Groups from Azure to ensure users will be able to login.**
@@ -286,7 +284,7 @@ Select **“home”** in portal.azure.com and select **“Microsoft Entra ID”*
 
 Navigating to **“Groups”** in the left pane
 
-Search for the group you assigned within your application and copy the\*\*“Object Id”\*\*
+Search for the group you assigned within your application and copy the**“Object Id”** 
 
 ![Image37 Pn](/images/Image37.png)
 
