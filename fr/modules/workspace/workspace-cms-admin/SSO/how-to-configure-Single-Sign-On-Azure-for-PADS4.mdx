@@ -8,7 +8,7 @@ Il est nécessaire de configurer l'instance Azure pour permettre aux utilisateur
 
 [https://portal.azure.com/](https://portal.azure.com/)
 
-## Étape 2\*\*:\*\*  Sélectionnez l'option "Microsoft Entra ID"
+## Étape 2 : Sélectionnez l'option "Microsoft Entra ID"
 
 ![Microsftentra ID Pn](/images/MicrosftentraID.png)
 
@@ -21,18 +21,18 @@ Il est nécessaire de configurer l'instance Azure pour permettre aux utilisateur
 <Warning>
   Si vous \*\*<u>ne voulez pas</u> \*\* utiliser un Application Proxy sur votre application sur site, continuez à l'étape 4 ci-dessous et ignorez les étapes 7 et 8.
 
-  Si vous \*\*<u>voulez</u> \*\*utiliser un Application Proxy pour votre application sur site, passez à l'étape 7 et ignorez les étapes 4, 5 et 6.
+  Si vous \*\*<u>voulez</u> \*\* utiliser un Application Proxy pour votre application sur site, passez à l'étape 7 et ignorez les étapes 4, 5 et 6.
 </Warning>
 
-## Étape 4  \*\*: \*\*Sélectionnez l'option "+ New application" en haut de l'écran
+## Étape 4 : Sélectionnez l'option "+ New application" en haut de l'écran
 
 ![Step4+newapplication Pn](/images/step4+newapplication.png)
 
-## Étape 5  : Cliquez sur "Create you own application"
+## Étape 5 : Cliquez sur "Create you own application"
 
 ![image.png](/images/image.png)
 
-## Étape 6 **:** Remplissez les informations demandées dans le formulaire et cliquez sur create
+## Étape 6 : Remplissez les informations demandées dans le formulaire et cliquez sur create
 
 ![Step6 Pn](/images/step6.png)
 
@@ -51,9 +51,9 @@ Sélectionnez la **Manage Application Proxy Connectors** **section**
 3. Exécutez l'installateur et assurez-vous de valider vos identifiants d'administrateur Azure pendant la configuration.
 
    ![Step8 Pn](/images/step8.png)
-4. Une fois l'installation terminée, sélectionnez la **+New Connector** Groupsection
+4. Une fois l'installation terminée, sélectionnez la **+New Connector** Group section
 5. Créez un nom par défaut pour votre connexion. Par exemple : **SSO Connector**
-6. Sélectionnez votre machine serveur dans la liste des connecteurs
+6. Sélectionnez votre machine serveur dans la liste Connector
 7. Sélectionnez la région où se trouve votre machine.
 
    ![Step9 Pn](/images/step9.png)
@@ -100,7 +100,7 @@ Puis cliquez sur le bouton add
 
 ![Add Pn](/images/add.png)
 
-4. Utilisez la barre de recherche pour rechercher un utilisateur ou un groupe. Cliquez sur **"select"** et **"assign"**  une fois terminé
+4. Utilisez la barre de recherche pour rechercher un utilisateur ou un groupe. Cliquez sur **"select"** et **"assign"** une fois terminé
 
 ![Add2 Pn](/images/add2.png)
 
@@ -110,15 +110,15 @@ Puis cliquez sur le bouton add
 
 ## Étape 10 : Pour configurer Single Sign On (SSO)
 
-Sélectionnez **"Single sign-on option"**  dans le volet de gauche puis **"SAML"**
+Sélectionnez **"Single sign-on option"** dans le volet de gauche puis **"SAML"**
 
 ![10 Pn](/images/10.png)
 
-## Étape 11 : Sélectionnez "Edit" sur "Basic SAMLConfiguration"
+## Étape 11 : Sélectionnez "Edit" sur "Basic SAML Configuration"
 
 ![Image23 Pn](/images/Image23.png)
 
-Sélectionnez " Add identifier "  et **" Add Reply URL "** et fournissez la valeur selon l'exemple ci-dessous :
+Sélectionnez " Add identifier " et **" Add Reply URL "** et fournissez la valeur selon l'exemple ci-dessous :
 
 ![Image24 Pn](/images/Image24.png)
 
@@ -203,12 +203,12 @@ Namespace : [http://schemas.xmlsoap.org/claims](http://schemas.xmlsoap.org/claim
 ![Image31 Pn](/images/Image31.png)
 
 <Info>
-  Vous **avez maintenant préparé l'authentification unique (SSO) dans Azure pour votre application PADS4.**
+  Vous **avez maintenant préparé SSO dans Azure pour votre application PADS4.**
 </Info>
 
 # Informations requises pour la configuration SSO dans PADS4 CMS
 
-## Pour configurer l'authentification unique (SSO) dans PADS4 CMS, vous aurez besoin des éléments suivants :
+## Pour configurer SSO dans PADS4 CMS, vous aurez besoin des éléments suivants :
 
 Certificat du serveur de fédération
 
@@ -232,7 +232,7 @@ Sélectionnez l'option **" Download "** à côté de l'option " Certificate (Raw
 
 ![Image32 Pn](/images/Image32.png)
 
-## 2. Obtention de l'"Identifiant du service de fédération"
+## 2. Obtention de l'" Identifiant du service de fédération "
 
 Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
 
@@ -286,4 +286,4 @@ Recherchez le groupe que vous avez assigné dans votre application et copiez l'\
 
 ![Image37 Pn](/images/Image37.png)
 
-## 7. Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4 CMS peut être configuré pour utiliser l'authentification unique (SSO).
+## 7. Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4 CMS peut être configuré pour utiliser SSO.
