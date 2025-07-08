@@ -1398,7 +1398,7 @@
                     ]
                   },
                   {
-                    "group": "Generic Android Viewer",
+                    "group": "Visionneuse Android générique",
                     "pages": [
                       "fr/certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
                     ]
@@ -2408,7 +2408,7 @@
             ]
           },
           {
-            "dropdown": "Legacy CMS",
+            "dropdown": "CMS hérité",
             "groups": [
               {
                 "group": "Mise en route",
