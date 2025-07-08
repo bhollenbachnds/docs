@@ -1301,7 +1301,7 @@
             "dropdown": "Guide d'installation",
             "groups": [
               {
-                "group": "Mise en route",
+                "group": "Premiers pas",
                 "pages": [
                   "fr/introduction",
                   "fr/system-requirements",
@@ -1503,7 +1503,7 @@
             "dropdown": "PADS4 Ctrl Center",
             "groups": [
               {
-                "group": "Mise en route",
+                "group": "Premiers pas",
                 "pages": [
                   "fr/ctrl-centre/introduction",
                   "fr/ctrl-centre/account-creation",
@@ -1581,7 +1581,7 @@
             "dropdown": "Affichage dynamique",
             "groups": [
               {
-                "group": "Mise en route",
+                "group": "Premiers pas",
                 "pages": [
                   "fr/modules/digital-signage/introduction",
                   "fr/modules/digital-signage/components"
@@ -2085,7 +2085,7 @@
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/connecting-to-your-PADS4-server",
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/logging-on-to-your-PADS4-server",
                           {
-                            "group": "Spécifier les propriétés de connexion et de connexion",
+                            "group": "Spécifier les propriétés de connexion et d'identification",
                             "pages": [
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/connection-properties",
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/logon-properties"
@@ -2297,7 +2297,7 @@
             "dropdown": "Workspace",
             "groups": [
               {
-                "group": "Mise en route",
+                "group": "Premiers pas",
                 "pages": [
                   "fr/modules/workspace/introduction"
                 ]
@@ -2374,7 +2374,7 @@
             "dropdown": "FIDS",
             "groups": [
               {
-                "group": "Mise en route",
+                "group": "Premiers pas",
                 "pages": [
                   "fr/modules/fids/introduction",
                   "fr/modules/fids/installation",
@@ -2397,7 +2397,7 @@
             "dropdown": "Gestion des visiteurs",
             "groups": [
               {
-                "group": "Mise en route",
+                "group": "Premiers pas",
                 "pages": [
                   "fr/modules/visitor-management/introduction",
                   "fr/modules/visitor-management/home-and-creating-users",
@@ -2411,7 +2411,7 @@
             "dropdown": "Legacy CMS",
             "groups": [
               {
-                "group": "Mise en route",
+                "group": "Premiers pas",
                 "pages": [
                   "fr/modules/legacy-cms/introduction"
                 ]
