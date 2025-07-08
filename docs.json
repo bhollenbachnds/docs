@@ -1096,6 +1096,8 @@
                   {
                     "group": "SSO Configurations",
                     "pages": [
+                      "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
+                      "modules/workspace/workspace-cms-admin/SSO/how-to-configure-Single-Sign-On-Azure-for-PADS4",
                       "modules/workspace/workspace-cms-admin/SSO/ibm-security"
                     ]
                   }
