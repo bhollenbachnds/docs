@@ -1,0 +1,349 @@
+---
+title: "New file"
+description: "Description of your new file."
+---
+
+How to configure your Microsoft Azure / Exchange environment to set up the CMS Calendar plugin and allow room bookings through Workspace.
+
+### Remark :
+
+**Microsoft renamed Azure Active Directory to Microsoft Entra ID.**
+
+When authenticating with the new OAuth 2.0 setting within Exchange 365 (Azure), you will need a different type of account verification. 
+
+You will need to add the PADS4 CMS/Workspace app within Microsoft Entra ID and add a service account.
+
+Follow the steps below to configure your Microsoft Entra ID environment for use with PADS4.
+
+## Registrer the application
+
+1. Open a browser and navigate to the Microsoft Entra ID admin center and login using a**personal account**  (aka: Microsoft Account) or **Work or School Account**.
+2. Select **Identity **in the left-hand navigation, then select **App registrations** under **Applications**.
+
+   ![Image38 Pn](/images/Image38.png)
+3. Select **New registration**. On the **Register an application** page, set the values as follows.
+
+   **a. **Set **Name **to a friendly name for your app.
+
+   **b.** Set **Supported account types** to the choice that makes sense for your scenario.
+
+   **c. **For **Redirect URI**, change the dropdown to **Public client (mobile & desktop) **and set the value to : 
+
+   <CodeGroup>
+
+   ``` filename
+   urn:ietf:wg:oauth:2.0:oob
+   ```
+
+   </CodeGroup>
+
+   ![Image39 Pn](/images/Image39.png)
+4. Choose **Register**. On the next page, copy the values of the **Application (client) ID **and **Directory (tenant) ID **and save them, you will need them later to configure the calendar plugin in CMS.
+
+## Configure for app-only authentication
+
+To use application permissions, follow these additional steps.
+
+1. Select **Manifest **in the left-hand navigation under **Manage**.
+2. Locate the **requiredResourceAccess **property in the manifest, and add the following inside the square brackets ([]):
+
+   ```
+   {
+     "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",
+     "resourceAccess": [
+       {
+         "id": "dc890d15-9560-4a4c-9b7f-a736ec74ec40",
+         "type": "Role"
+       }
+     ]
+   }
+   
+   ```
+3. Select **Save.**
+
+   ![Image40 Pn](/images/Image40.png)
+4. Select **API permissions** under **Manage**. Confirm that the
+
+   **full_access_as_app **permission is listed.
+5. Select **Grant admin consent for org** and accept the consent dialog.
+
+![Image41 Pn](/images/Image41.png)
+
+In case you want to add Microsoft Teams meeting support to Workspace, continue the configuration below. If you do not want to add Microsoft Teams meeting support you can proceed to **step 9.**
+
+6. Select **Add a permission**
+7. Select the following permission **"Microsoft Graph\> Calendars.ReadWrite" **and select Add.
+8. Grant admin consent to that permission.
+
+![Image42 Pn](/images/Image42.png)
+
+ 9. Select **Certificates & Secrets** in the left-hand navigation under Manage.
+10. Select **New client secret**, enter a short description and select **Add**.
+11. Copy the **Value **of the newly added client secret and save it, you will need it later when configuring the calendar plugin in CMS.
+
+    ![image.png](/images/image.png)
+
+## Create a service account user
+
+1. 1. Log in to your Office 365 as an administrator. 
+2. 2. Navigate to **Office 365 admin center \> USERS \> Active Users. **
+3. 3. To add a new user, select the "\+" icon. **The create new user account** page appears. 
+4. 4. On the **create new user account page**, complete the required information. 
+
+   **A.**  Enter the first name, last name, display name, user name, and your email domain.
+
+   **B**. Select **Type password** and enter the password for the service account.
+
+   **C.** Deselect the **Make this person change their password the next time they sign in** check box. 
+
+   **D.** Assign at least an Exchange Online license. e. Enter the email address of the recipient to whom the password must be sent. Select **Create**.
+
+   **E.** Enter the email address of the recipient to whom the password must be sent. Select **Create**.
+
+   **F**. Select **Close**.
+
+## Manage restricted access (if required)
+
+<Warning>
+  Important: if you added an application access policy, you will need first to include the service account in the restricted access distribution group
+</Warning>
+
+To configure an application access policy and limit the scope of application permissions:
+
+1. Connect to Exchange Online PowerShell. For details, see **Connect to Exchange Online PowerShell.**
+
+
+2. Identify the app’s client ID and a mail-enabled security group to restrict the app’s access.
+
+   **A.** Identify the app’s**application (client) ID**  in the **Azure app registration portal**.
+
+   **B. **Create a new **mail-enabled security group** or use an existing one and identify the email address for the group.
+
+   **C.** Make sure to add your service account and the room(s) that you want to use to the **mail-enabled security group.**
+3. Create an **application access policy.**
+
+Run the following command, replacing the**AppId, PolicyScopeGroupId** , and arguments.
+
+```
+New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b - PolicyScopeGroupId mydistributiongroup@contoso.com -AccessRight RestrictAccess -Description "Restrict this app to members of distribution group."
+```
+
+4. Test the newly created application access policy
+
+Run the following command, replacing the **Appld** and **Identity **arguments.
+
+```
+New-DistributionGroup -Name "MyRoomList" -RoomList
+Test-ApplicationAccessPolicy -Identity room01@contoso.com -AppId e7e4dbfc-046-4074-9b3b-2ae8f144f59b
+```
+
+The output of this command will indicate whether the app has access to room01 mailbox.
+
+<Info>
+  Remarks : Changes to application access policies can take up to 30 minutes to take effect in EWS API calls.
+</Info>
+
+## Manage room list (for retrieving rooms to import)
+
+<Info>
+  Remarks:
+
+  - To be able to import rooms in Workspace you need to create a room list and add the rooms that want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient then adding rooms manually.
+  - Attention, a room list should not contain more than 100 rooms, if you plan to have more, please split them into multiple room list as the maximum number of rooms that can be returned in the request for a Room List is 100. 
+</Info>
+
+1. Connect to Exchange Online PowerShell. For details, see **Connect to Exchange Online PowerShell.**
+2. Use the Exchange Management Shell to create a room list.
+
+   ```
+   New-DistributionGroup -Name "MyRoomList" -RoomList
+   ```
+3. Use the Exchange Management Shell to add a room to a room list
+
+   ```
+   Add-DistributionGroupMember -Identity " MyRoomList" -Member room
+   ```
+
+Add-DistributionGroupMember -Identity " MyRoomList" -Member room01@contoso.com
+
+4. To check if the room list has been successfully created you can use the following command to see if the list exists.
+
+```
+Get-DistributionGroup -Identity "Room list name"
+```
+
+When you have successfully set up the app registration & created the service account you can fill in the Calendar plugin configuration inside the CMS admin portal.
+
+![Image44 Pn](/images/Image44.png)
+
+**Exchange Server**: http://outlook.office365.com / example
+
+**Application ID:** The application ID from Azure
+
+**Tenant ID** : The directory tenant ID from Azure 
+
+**Client secret Key**: The client secret key from Azure.
+
+**Default service account**: The default service account from Azure directory for retrieving the access.
+
+**Impersonation**: Described below
+
+**Room list address**: The SMTP URL of the room list that you have configured. This will allow you to import rooms in Workspace.
+
+**Allow online meeting creation: **This option needs to be turned on to enable Microsoft Teams meeting support.
+
+You can also define if the teams meeting option should be selected **by default** in workspace event creation if you set the following option:
+
+Go to CMS Administration
+
+Open the “Workspace application settings”
+
+Check “Enable online meeting creation by default” Click save
+
+![Image46 Pn](/images/Image46.png)
+
+### Create event with teams meeting from workspace
+
+<Info>
+  Remark : This option will only be available if you selected a room that is configured to use the external calendar configuration that has that option set up or also if your user is configured to use the external calendar configuration for user impersonation.
+</Info>
+
+![Image47 Pn](/images/Image47.png)
+
+To **create a teams meeting** in workspace, just create a **simple event** in workspace and **select the teams meeting option** while creating the event. 
+
+![Image48 Pn](/images/Image48.png)
+
+After making the event with the teams meeting option **turned on**, you will see it as shown below :
+
+![Image49 Pn](/images/Image49.png)
+
+### **Impersonation**
+
+There are 3 operating modes described below, these operating modes are to be set according to the desired results and also according to the security rules of the company :
+
+![Image50 Pn](/images/Image50.png)
+
+### **#1. Impersonation = Full access**
+
+Using this type of Full Access impersonation, the reservation function will have the following behavior:
+
+### **Booking from Outlook**
+
+The reservation will be made from the user account with the choice of the room and the guests.
+
+ This reservation can be modified and deleted from Outlook and Workspace.
+
+ Changing and deleting the tablet reservation will affect both the user and resource calendar.
+
+### **Booking from Workspace**
+
+The reservation will be made from the user account with the choice of the room and the guests. 
+
+This reservation can be modified and deleted from Workspace and Outlook.
+
+ Changing and deleting the tablet reservation will affect both the user and resource calendar.
+
+### **Booking from a tablet**
+
+The reservation will be made from the service account which will usurp the identity of the connected user. 
+
+The owner / organizer of the meeting will be the logged in user.
+
+This reservation can be modified and deleted from the tablet and will affect the calendar of the user and the resource. 
+
+Editing, deleting or adding participants can be done using the user calendar (who owns this meeting).
+
+### **#2. Impersonation = Resources only**
+
+This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, you will have to grant the role **"ApplicationImpersonation"** to the user of the service account following this PowerShell script :
+
+```
+New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
+```
+
+New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
+
+```
+New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
+```
+
+New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
+
+![Image52 Pn](/images/Image52.png)
+
+Using this type of**"Resources Only"**  impersonation, the reservation function will have the following behavior :
+
+### Booking from Outlook
+
+The reservation will be made from the user account with the choice of the room and the guests.
+
+ This reservation can be modified and deleted from Outlook and Workspace. 
+
+Changing and deleting the tablet reservation will only affect the resource calendar.
+
+### Booking from Workspace
+
+The reservation will be made from the user account with the choice of the room and the guests.
+
+ This reservation can be modified and deleted from Workspace and Outlook.
+
+ Changing and deleting the tablet reservation will only affect the resource calendar.
+
+### Booking from a tablet
+
+The reservation will be made from the service account which will usurp the identity of the resource. 
+
+The owner / organizer of the meeting will be the resource and the logged in user will be added as a participant. 
+
+This reservation can be modified and deleted from the tablet and will affect the calendar of the user and the resource. 
+
+Editing, deleting or adding participants can be done using the resource calendar (who owns this meeting).
+
+### #3. Impersonation = None
+
+Using this type of impersonation "None", the reservation function will have the following behavior :
+
+### Booking from Outlook
+
+The reservation will be made from the user account with the choice of the room and the guests. 
+
+This reservation can be changed and deleted from Outlook. 
+
+Changing and deleting the tablet reservation will only affect the resource calendar.
+
+### Booking from a tablet
+
+The reservation will be made from the service account which will usurp the identity of the resource.
+
+The owner / organizer of the meeting will be the resource and the logged in user will be added as a participant.
+
+This reservation can be modified and deleted from the tablet and will affect the calendar of the user and the resource.
+
+Editing, deleting, or adding participants can be done using the resource calendar (who owns this meeting).
+
+### Search Mailbox
+
+This activation function in Microsoft Exchange will allow you to import automatically from a mailing list or your Exchange resources.
+
+If this function is not activated it will be necessary to manually create these rooms. However, once the rooms have been created, the functioning of the Workspace application will remain strictly the
+
+same between an imported room and a created room.
+
+### Deligation
+
+This prerequisite will be necessary if impersonation is not authorized.
+
+This delegation will allow the service account to read the Resources calendar.
+
+### Troubleshooting
+
+If have followed the steps mentioned above and you are unable to import and/or book rooms in Workspace we kindly ask you to double- check the configuration in the CMS Calendar plugin configuration with your tenant setup. 
+
+As this is quite an extensive setup, we see that configuration errors are the main cause of a system not functioning.
+
+ If it is still not working we kindly ask you to open up a ticket in PADS4 Partner Portal and send us the **nds.services.crystal.pads** log file in the Logs folder of PADS4. 
+
+## Sources : 
+
+[Authenticate an EWS application by using OAuth ](https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth)
