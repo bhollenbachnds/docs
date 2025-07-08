@@ -1,0 +1,271 @@
+Le processus ci-dessous vous aide à configurer votre installation PADS4 CMS pour utiliser Azure SSO.
+
+## Paramètres Azure
+
+Il est nécessaire de configurer l'instance Azure pour permettre aux utilisateurs de votre organisation d'accéder à l'application PADS4 (Legacy) CMS. Pour activer cela, veuillez suivre les étapes de ce document :
+
+## \*\*Étape 1 : \*\*Naviguez et connectez-vous à votre \*\*portail Azure \*\*en tant qu'administrateur
+
+[https://portal.azure.com/](https://portal.azure.com/)
+
+## **Étape 2 :** Sélectionnez l'option\*\*"Microsoft Entra ID" \*\*
+
+![Microsftentra ID Pn](/images/MicrosftentraID.png)
+
+## \*\*Étape 3 \*\*: Sur le panneau de gauche, sélectionnez **"Enterprise Applications"**
+
+![Enterprise Applications Pn](/images/EnterpriseApplications.png)
+
+# **Important**
+
+### Si vous **<u>ne souhaitez pas</u>** utiliser un Application Proxy sur votre application locale, continuez à l'étape 4 ci-dessous et ignorez les étapes 7 et 8.
+
+### Si vous **<u>souhaitez</u>** utiliser un Application Proxy pour votre application locale, passez à l'étape 7 et ignorez les étapes 4, 5 et 6.
+
+## \*\*Étape 4  **: Sélectionnez l'option "**+ New application" \*\*en haut de l'écran
+
+![Step4+newapplication Pn](/images/step4+newapplication.png)
+
+## \*\*Étape 5  \*\*: Cliquez sur **"Create you own application"**
+
+![image.png](/images/image.png)
+
+## **Étape 6 :** Remplissez les informations demandées dans le formulaire et cliquez sur create
+
+![Step6 Pn](/images/step6.png)
+
+# Ignorez cette étape (7) si vous n'utilisez pas d'Application Proxy.
+
+## **Étape 7 : Création d'un groupe de connecteurs / connecteur d'application proxy :**
+
+Sélectionnez la section **Manage Application Proxy Connectors** ****
+
+![Step7 Pn](/images/step7.png)
+
+1. Dans le menu Application Proxy, sélectionnez + Download ConnectorService
+2. Acceptez les conditions et téléchargez le fichier **<u>AADApplicationProxyConnectorInstaller.exe</u>** sur le PC serveur.
+3. Exécutez l'installateur et assurez-vous de valider vos identifiants d'administrateur Azure pendant la configuration.
+
+   ![Step8 Pn](/images/step8.png)
+4. Une fois l'installation terminée, sélectionnez la section **+New Connector** Group
+5. Créez un nom par défaut pour votre connexion. Par exemple : **SSO Connector**
+6. Sélectionnez votre machine serveur dans la liste des connecteurs
+7. Sélectionnez la région où se trouve votre machine.
+
+   ![Step9 Pn](/images/step9.png)
+8. Enregistrez votre nouvelle connexion ici.
+9. Retournez à la section Enterprise Applications et sélectionnez **"Add your own on-premises application"**
+
+## Création d'une application locale dans Azure
+
+1. Sélectionnez**Add an on-premises application**
+
+   ![Step10 Pn](/images/step10.png)
+
+# Ignorez cette étape (8) si vous n'utilisez pas d'Application Proxy.
+
+## Étape 8 : Remplissez les informations demandées dans le formulaire et cliquez sur create.
+
+![Addyouownonpromiseapp Pn](/images/Addyouownonpromiseapp.png)
+
+### Exemple :
+
+\*\*Nom : \*\*PADS4 CMS
+
+\*\*URL interne : \*\*URL de l'installation PADS4 CMS ([https://servername](https://servername))
+
+\*\*Pré-authentification : \*\*Azure Active Directory
+
+\*\*Groupe de connecteurs : \*\*SSO Connector (par défaut). <u>C'est le groupe de connecteurs que vous venez de configurer</u>
+
+Puis cliquez sur le bouton add
+
+## Étape 9 : Naviguez vers l'application nouvellement créée
+
+1. Naviguez vers l'application nouvellement créée en sélectionnant **" Enterprise Applications"** et utilisez l**a barre de recherche** pour trouver votre application. **Sélectionnez-la** puis naviguez vers \*\*"Users and Groups" \*\*:
+
+![Userandgroups Pn](/images/userandgroups.png)
+
+2. Ajoutez les utilisateurs et les groupes qui auront accès à l'application en sélectionnant l'option **" Add user/group "**
+
+![Robinsso Pn](/images/robinsso.png)
+
+3. Sélectionnez l'option **"None Selected"** pour accéder aux groupes et utilisateurs :
+
+![Add Pn](/images/add.png)
+
+4. Utilisez la barre de recherche pour rechercher un utilisateur ou un groupe. Cliquez sur **"select"** et **"assign"**  une fois terminé
+
+![Add2 Pn](/images/add2.png)
+
+## \*Il est fortement recommandé de créer un groupe d'utilisateurs PADS4 CMS avec Windows Server AD comme source.
+
+## Étape 10 : Pour configurer l'authentification unique (SSO)
+
+Sélectionnez\*\*"Single sign-on option"\*\*  dans le volet de gauche, puis **"SAML"**
+
+![10 Pn](/images/10.png)
+
+## Étape 11 : Sélectionnez "Edit" sur la "Basic SAMLConfiguration"
+
+![Image23 Pn](/images/Image23.png)
+
+Sélectionnez\*\*" Add identifier "\*\*  et **" Add Reply URL "** et fournissez la valeur selon l'exemple ci-dessous :
+
+![Image24 Pn](/images/Image24.png)
+
+## Exemple :
+
+**Identifier**: URL PADS4 CMS local avec /Saml2 **(par exemple :** [https://robin.pads365.com/crystal/domain/Saml2](https://robin.pads365.com/crystal/domain/Saml2))
+
+Si un port réseau unique est utilisé, assurez-vous de l'inclure dans la chaîne ci-dessus.
+
+Par exemple : [https://robin.pads365.com:444/crystal/domain/Saml2](https://robin.pads365.com:444/crystal/domain/Saml2)
+
+**Assurez-vous** de spécifier votre domaine PADS4 à\*\*"domain" dans l'URL\*\*\*
+
+![Image25 Pn](/images/Image25.png)
+
+Si vous utilisez le nom de domaine par défaut, ce sera : [https://robin.pads365.com/crystal/pads/Saml2](https://robin.pads365.com/crystal/pads/Saml2)
+
+Reply URL : URL PADS4 CMS local avec /Saml2/Acs **(par exemple :**[**https://robin.pads365.com/crystal/domain/Saml2/Acs**](https://robin.pads365.com/crystal/domain/Saml2/Acs)\*\* )\*\*
+
+Si un port réseau unique est utilisé, assurez-vous de l'inclure dans la chaîne ci-dessus. \*\*Par exemple \*\*[https://robin.pads365.com:444/crystal/domain/Saml2/Acs](https://robin.pads365.com:444/crystal/domain/Saml2/Acs)
+
+**Assurez-vous** de spécifier votre domaine PADS4 à\*\*"domain" dans l'URL\*\*\*
+
+![Image26 Pn](/images/Image26.png)
+
+Si vous utilisez le nom de domaine par défaut, ce sera :
+
+[https://robin.pads365.com/crystal/pads/Saml2/Acs](https://robin.pads365.com/crystal/pads/Saml2/Acs)
+
+**\*Remarque :** Si vous avez configuré SSO sur une version antérieure à 2023.1, le nom de domaine n'était pas requis dans l'URL lors de l'utilisation d'un seul domaine. À partir de la version 2023.1, le nom de domaine est requis dans l'URL à la fois pour les configurations à un et plusieurs domaines.
+
+Par conséquent, lors de la mise à jour d'une version antérieure à 2023.1 avec SSO configuré vers la dernière version, assurez-vous d'ajouter le domaine à la fois à l'Identifier et à la Reply URL.
+
+**Assurez-vous de "Save" ces configurations.**
+
+## Étape 12 : Dans le menu **" Single sign-on "**, sélectionnez **"Edit "** dans la section **" Attributes & Claims "**.
+
+![Image27 Pn](/images/Image27.png)
+
+**\*Par défaut, vous auriez déjà une liste de revendications, cependant, il est nécessaire que les revendications correspondent à l'exemple ci-dessous pour une authentification réussie :**
+
+![Image28 Pn](/images/Image28.png)
+
+Ajoutez la revendication primarysid : Sélectionnez\*\*"Add new claim"\*\*
+
+![Image29 Pn](/images/Image29.png)
+
+**Selon l'exemple fourni ci-dessus, ajoutez une nouvelle revendication pour correspondre au tableau d'exemple :**
+
+![Image29 Pn](/images/Image29.png)
+
+Nom : **primarysid**
+
+Namespace \*\*: \*\*[**http://schemas.xmlsoap.org/ws/2008/06/identity/claims**](http://schemas.xmlsoap.org/ws/2008/06/identity/claims)
+
+Attribut source : **user.objectid**
+
+**Enregistrez toutes les configurations.**
+
+## Ajoutez / Modifiez les détails de la revendication "group" selon l'exemple ci-dessous et enregistrez
+
+![Image30 Pn](/images/Image30.png)
+
+Nom : **group**
+
+Namespace : [http://schemas.xmlsoap.org/claims](http://schemas.xmlsoap.org/claims)
+
+**\*Remarque :**&#x53;i vous rencontrez maintenant le comportement suivant, le bouton SSO sur la page de connexion fonctionne et vous pouvez saisir vos identifiants, mais vous serez redirigé vers le portail de connexion PADS4 avec "No account is defined for your authentication request" dans l'URL.
+
+**Il peut y avoir 2 causes :**
+
+la revendication de groupe est mal configurée
+
+L'utilisateur avec lequel vous essayez de vous connecter a la même adresse e-mail déjà configurée pour un utilisateur CMS / Workspace.
+
+![Image31 Pn](/images/Image31.png)
+
+### **\*Vous avez maintenant préparé SSO dans Azure pour votre application PADS4.**
+
+# Informations requises pour la configuration SSO dans PADS4 CMS
+
+## Pour configurer SSO dans PADS4 CMS, vous aurez besoin des éléments suivants :
+
+Certificat du serveur de fédération
+
+Identifiant du service de fédération
+
+URL SSO SAML
+
+URL des métadonnées
+
+URL de la partie utilisatrice et;
+
+ID de groupe du groupe d'utilisateurs que vous avez assigné à l'application.
+
+## 1. Obtention du "Certificat du serveur de fédération"
+
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+
+Faites défiler jusqu'à la section **" SAML Certificates "**&#x20;
+
+Sélectionnez l'option **" Download "** à côté de l'option \*\*" Certificate (Raw) "\*\*.
+
+![Image32 Pn](/images/Image32.png)
+
+## 2. Obtention de l'"Identifiant du service de fédération"
+
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+
+Faites défiler jusqu'à la section **"Set up" your\_application\_name "**&#x20;
+
+Sélectionnez l'option \*\*" Copy "\*\* à côté de l'option \*\*" Azure AD Identifier "\*\*.
+
+![Image33 Pn](/images/Image33.png)
+
+## 3. Obtention de l'"URL SSO SAML"
+
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+
+Faites défiler jusqu'à la section **" Set up "your\_application\_name "**&#x20;
+
+Sélectionnez l'option\*\*" Copy "\*\* à côté de l'option\*\*" Login URL "\*\*.
+
+![Image34 Pn](/images/Image34.png)
+
+## 4. Obtention de l'"URL des métadonnées"
+
+Dans votre application, sélectionnez "**Single sign-on "**  dans le volet de gauche
+
+Faites défiler jusqu'à la section\*\*" SAML Certificates "\*\*&#x20;
+
+Sélectionnez l'option **" Copy "** à côté de l'option **" App FederationMetadata URL "** .
+
+![Image35 Pn](/images/Image35.png)
+
+## 5. Obtention de l'"URL de la partie utilisatrice"
+
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+
+Faites défiler jusqu'à la section **" Basic SAML Configuration "**&#x20;
+
+Copiez la chaîne à côté de l'option \*\*" Identifier (Entity ID) \*\*".
+
+![Image36 Pn](/images/Image36.png)
+
+## 6. Obtention de l'"ID de groupe" du groupe que vous avez assigné à votre application :
+
+### **\*Pour chaque groupe d'utilisateurs ajouté pour utiliser l'application PADS4 CMS, une table de mappage sera nécessaire pour ajouter les groupes à l'interface. Veuillez fournir aux installateurs les ID de groupe et les noms des groupes d'Azure pour garantir que les utilisateurs pourront se connecter.**
+
+Sélectionnez **"home"** dans portal.azure.com et sélectionnez **"Microsoft Entra ID"**
+
+Naviguez vers **"Groups"** dans le volet de gauche
+
+Recherchez le groupe que vous avez assigné dans votre application et copiez l'\*\*"Object Id"\*\*
+
+![Image37 Pn](/images/Image37.png)
+
+## 7. Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4 CMS peut être configuré pour utiliser SSO.
