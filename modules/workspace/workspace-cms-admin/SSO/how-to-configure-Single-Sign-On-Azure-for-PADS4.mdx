@@ -18,9 +18,11 @@ https://portal.azure.com/
 
 # **Important**
 
-### If you **<u>don't</u>** want to use an Application Proxy onyour on-premise application then continue on step 4 below and skip steps 7 and 8.
+<Warning>
+  If you \*\*<u>don't</u> \*\*want to use an Application Proxy onyour on-premise application then continue on step 4 below and skip steps 7 and 8.
 
-### If you **<u>do</u>** want to use an Application Proxy for your on-premise application then proceed to step 7 and skip steps 4, 5 and 6.
+  If you \*\*<u>do</u> \*\*want to use an Application Proxy for your on-premise application then proceed to step 7 and skip steps 4, 5 and 6.
+</Warning>
 
 ## \*\*Step 4  **: Select the "**\+ New application" \*\*option at the top of the screen
 
@@ -34,7 +36,11 @@ https://portal.azure.com/
 
 ![Step6 Pn](/images/step6.png)
 
-# Skip this step (7) if you don't use anApplication Proxy.
+# 
+
+<Warning>
+  Skip this step (7) if you don't use an Application Proxy.
+</Warning>
 
 ## **Step 7 : Creating a connector group / application proxy connector:**
 
@@ -62,7 +68,11 @@ Select the **Manage Application Proxy Connectors** **section**
 
    ![Step10 Pn](/images/step10.png)
 
-# Skip this step (8) if you don't use anApplication Proxy.
+# 
+
+<Warning>
+  Skip this step (8) if you don't use an Application Proxy.
+</Warning>
 
 ## Step 8 : Fill in the information requested in the formand click create.
 
@@ -98,7 +108,11 @@ Then Click on the add button
 
 ![Add2 Pn](/images/add2.png)
 
-## \*It is highly recommended to create a PADS4 CMS user group withthe Windows Server AD as the source.
+## 
+
+<Warning>
+  It is highly recommended to create a PADS4 CMS user group withthe Windows Server AD as the source.
+</Warning>
 
 ## Step 10 : To configure Single Sign On (SSO)
 
@@ -154,7 +168,7 @@ Therefore, when updating from a version before 2023.1 with SSO configured, to th
 
 ![Image28 Pn](/images/Image28.png)
 
-Add the primarysid claim: Select**“Add new claim”** 
+Add the primarysid claim: Select\*\*“Add new claim”\*\*
 
 ![Image29 Pn](/images/Image29.png)
 
@@ -164,13 +178,13 @@ Add the primarysid claim: Select**“Add new claim”**
 
 Name : **primarysid**
 
-Namespace **: **[**http://schemas.xmlsoap.org/ws/2008/06/identity/claims**](http://schemas.xmlsoap.org/ws/2008/06/identity/claims)
+Namespace \*\*: \*\*[**http://schemas.xmlsoap.org/ws/2008/06/identity/claims**](http://schemas.xmlsoap.org/ws/2008/06/identity/claims)
 
 Source attribute : **user.objectid**
 
 **Save all configurations.**
 
-## Add / Edit the "group" claim detail as per below example and save 
+## Add / Edit the "group" claim detail as per below example and save
 
 ![Image30 Pn](/images/Image30.png)
 
@@ -178,19 +192,23 @@ Name : **group**
 
 Namespace : http://schemas.xmlsoap.org/claims
 
-**\*Remark:** If you now experience the following behavior, the SSObutton on the login page works and you are able to input yourcredentials but it will get redirected to the PADS4 Login portal with "Noaccount is defined for your authentication request" in the URL. 
+**\*Remark:** If you now experience the following behavior, the SSObutton on the login page works and you are able to input yourcredentials but it will get redirected to the PADS4 Login portal with "Noaccount is defined for your authentication request" in the URL.
 
-**There can be 2 causes :** 
+**There can be 2 causes :**
 
-the group claim is incorrectly configured 
+the group claim is incorrectly configured
 
 The user you are trying to log in with has the same email addressalready configured to a CMS / Workspace user.
 
 ![Image31 Pn](/images/Image31.png)
 
-### **\*You have now prepared SSO within Azure for your PADS4Application.**
+### 
 
-# Information Required for SSOConfiguration in PADS4 CMS 
+<Info>
+  You **have now prepared SSO within Azure for your PADS4Application.**
+</Info>
+
+# Information Required for SSOConfiguration in PADS4 CMS
 
 ## In order to configure SSO within PADS4 CMS,you will require the following :
 
@@ -208,11 +226,11 @@ Group ID of the User Group you have assigned to the application.
 
 ## 1. Obtaining the “Certificate of the federationserver”
 
-Within your application, select **“ Single sign-on ”** in the left pane 
+Within your application, select **“ Single sign-on ”** in the left pane
 
 Scroll down to the **“ SAML Certificates ”** heading
 
- Select the **“ Download ”** option next to the **“ Certificate (Raw) ”**option.
+Select the **“ Download ”** option next to the \*\*“ Certificate (Raw) ”\*\*option.
 
 ![Image32 Pn](/images/Image32.png)
 
@@ -220,9 +238,9 @@ Scroll down to the **“ SAML Certificates ”** heading
 
 Within your application, select **“ Single sign-on ”** in the left pane
 
- Scroll down to the **“Set up“ your_application_name ”** heading 
+Scroll down to the **“Set up“ your_application_name ”** heading
 
-Select the **“ Copy ” **option next to the **“ Azure AD Identifier ”**option.
+Select the \*\*“ Copy ” \*\*option next to the \*\*“ Azure AD Identifier ”\*\*option.
 
 ![Image33 Pn](/images/Image33.png)
 
@@ -230,9 +248,9 @@ Select the **“ Copy ” **option next to the **“ Azure AD Identifier ”**op
 
 Within your application, select **“ Single sign-on ”** in the left pane
 
- Scroll down to the **“ Set up “your_application_name ”** heading 
+Scroll down to the **“ Set up “your_application_name ”** heading
 
-Select the**“ Copy ” ** option next to the**“ Login URL ”**  option.
+Select the\*\*“ Copy ” \*\* option next to the\*\*“ Login URL ”\*\*  option.
 
 ![Image34 Pn](/images/Image34.png)
 
@@ -240,7 +258,7 @@ Select the**“ Copy ” ** option next to the**“ Login URL ”**  option.
 
 Within your application, select “**Single sign-on ”**  in the left pane
 
- Scroll down to the**“ SAML Certificates ” ** heading 
+Scroll down to the\*\*“ SAML Certificates ” \*\* heading
 
 Select the **“ Copy ”** option next to the **“ App FederationMetadata URL ”** option.
 
@@ -250,22 +268,26 @@ Select the **“ Copy ”** option next to the **“ App FederationMetadata URL 
 
 Within your application, select **“ Single sign-on ”** in the left pane
 
- Scroll to the **“ Basic SAML Configuration ”** heading
+Scroll to the **“ Basic SAML Configuration ”** heading
 
- Copy the string next to the **“ Identifier (Entity ID) **” option.
+Copy the string next to the \*\*“ Identifier (Entity ID) \*\*” option.
 
 ![Image36 Pn](/images/Image36.png)
 
 ## 6. Obtaining the “Group ID” of the group you assigned to your application:
 
-### **\*For every user group added to utilize the PADS4 CMS application, a mapping table will be required to add the groups to the interface. Please provide the installers the Group ID’s and names of the Groups from Azure to ensure users will be able to login.**
+### 
+
+<Info>
+  For **every user group added to utilize the PADS4 CMS application, a mapping table will be required to add the groups to the interface. Please provide the installers the Group ID’s and names of the Groups from Azure to ensure users will be able to login.**
+</Info>
 
 Select **“home”** in portal.azure.com and select **“Microsoft Entra ID”**
 
- Navigating to **“Groups”** in the left pane 
+Navigating to **“Groups”** in the left pane
 
-Search for the group you assigned within your application and copy the**“Object Id”** 
+Search for the group you assigned within your application and copy the\*\*“Object Id”\*\*
 
 ![Image37 Pn](/images/Image37.png)
 
-## 7. Now that all of the above information has been gathered, PADS4 CMS can now be configured to make use of SSO. 
+## 7. Now that all of the above information has been gathered, PADS4 CMS can now be configured to make use of SSO.
