@@ -1303,7 +1303,7 @@
             "dropdown": "Guide d'installation",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/introduction",
                   "fr/system-requirements",
@@ -1505,7 +1505,7 @@
             "dropdown": "PADS4 Ctrl Center",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/ctrl-centre/introduction",
                   "fr/ctrl-centre/account-creation",
@@ -1583,7 +1583,7 @@
             "dropdown": "Affichage dynamique",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/digital-signage/introduction",
                   "fr/modules/digital-signage/components"
@@ -1633,7 +1633,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec des présentations",
+                        "group": "Travailler avec les présentations",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Content-Library",
@@ -1668,7 +1668,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec des pages",
+                        "group": "Travailler avec les pages",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Creating-a-page",
@@ -1704,13 +1704,13 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec des éléments de page",
+                        "group": "Travailler avec les éléments de page",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Using-the-grid",
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Adding-a-page-element",
                           {
-                            "group": "Sélection d'éléments de page",
+                            "group": "Sélection des éléments de page",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Selecting-page-elements/Introduction",
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Selecting-page-elements/Selecting-one-page-element",
@@ -2009,7 +2009,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec des listes de lecture",
+                        "group": "Travailler avec les listes de lecture",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-playlists/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-playlists/Managing-playlists",
@@ -2018,7 +2018,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec des fournisseurs de données",
+                        "group": "Travailler avec les fournisseurs de données",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-data-providers/Introduction",
                           {
@@ -2299,7 +2299,7 @@
             "dropdown": "Workspace",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/workspace/introduction"
                 ]
@@ -2378,7 +2378,7 @@
             "dropdown": "FIDS",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/fids/introduction",
                   "fr/modules/fids/installation",
@@ -2401,7 +2401,7 @@
             "dropdown": "Gestion des visiteurs",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/visitor-management/introduction",
                   "fr/modules/visitor-management/home-and-creating-users",
@@ -2415,7 +2415,7 @@
             "dropdown": "Legacy CMS",
             "groups": [
               {
-                "group": "Premiers pas",
+                "group": "Mise en route",
                 "pages": [
                   "fr/modules/legacy-cms/introduction"
                 ]
