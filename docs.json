@@ -1445,7 +1445,8 @@
                       "fr/certified-devices/philips/4550D",
                       "fr/certified-devices/philips/3550Q",
                       "fr/certified-devices/philips/10BDL4551T",
-                      "fr/certified-devices/philips/CRD50"
+                      "fr/certified-devices/philips/CRD50",
+                      "fr/certified-devices/philips/25BDL4150I-32BDL5150I"
                     ]
                   },
                   {
@@ -2088,7 +2089,7 @@
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/connecting-to-your-PADS4-server",
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/logging-on-to-your-PADS4-server",
                           {
-                            "group": "Spécifier les propriétés de connexion et de connexion",
+                            "group": "Spécifier les propriétés de connexion et d'identification",
                             "pages": [
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/connection-properties",
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/logon-properties"
