@@ -1,0 +1,165 @@
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **Philips ePaper displays**.
+
+---
+
+## **1. First-Time Use**
+
+Before proceeding, ensure that the **`LauncherServiceViewer.zip`** file is located at:
+
+```
+http://pads4serverip/PADS4/apps/
+```
+
+📌 For additional documentation, visit the [Philips Dropbox site](https://www.markdownguide.org/), navigate to **"Models"** in the bottom left, and select the relevant display model.
+
+---
+
+### **1.1 Resetting the Device**
+
+If the display was previously used, perform a **factory reset** to avoid configuration conflicts.
+
+<Steps>
+  <Step title="Step One">
+    Press and hold the **universal + hidden key** on the display for ~3 seconds.
+  </Step>
+  <Step title="Step Two">
+    The **LED** will briefly turn white, then flash green.
+  </Step>
+  <Step title="Step Three">
+    Wait ~3 minutes. When the LED turns blue and prompts for a flash drive, **ignore this message**.
+  </Step>
+</Steps>
+
+---
+
+### **1.2 Updating the Firmware**
+
+Firmware updates are available via the Philips support site:
+
+📌 **Instructions**:
+
+* Go to the Philips Dropbox
+* Click on **Models → Select Model → Open Instructions Manual**
+* (Use right-click and open in a new tab if needed)
+
+---
+
+### **1.3 Installing scrcpy**
+
+Since these displays lack interactive input, use **scrcpy** to mirror and control the Android interface.
+
+<Steps>
+  <Step title="Step One">
+    Visit the [scrcpy GitHub page](https://github.com/Genymobile/scrcpy).
+  </Step>
+  <Step title="Step Two">
+    Download the appropriate version (e.g., **Windows 64-bit zip**).
+  </Step>
+  <Step title="Step Three">
+    Extract the contents to your desired location. Ensure both **scrcpy** and **adb** are included.
+  </Step>
+  <Step title="Step Four">
+    Add the folder path to your system's **Environment Variables → Path**.
+  </Step>
+  <Step title="Step Five">
+    Open Command Prompt and verify installation:
+    - `scrcpy -v`
+    - `adb --version`
+  </Step>
+</Steps>
+
+---
+
+## **2. Installing the Application**
+
+Ensure **scrcpy** and **adb** are correctly installed.
+
+<Steps>
+  <Step title="Step One">
+    Connect the **display to PC via USB**.
+  </Step>
+  <Step title="Step Two">
+    Confirm access to the **Android file system** through the file manager.
+  </Step>
+  <Step title="Step Three">
+    Open **Command Prompt**.
+  </Step>
+  <Step title="Step Four">
+    Type `adb devices` to verify the device connection.
+  </Step>
+  <Step title="Step Five">
+    Launch scrcpy with `scrcpy`. If multiple devices are connected, use `scrcpy -s {device-name}`.
+  </Step>
+  <Step title="Step Six">
+    Download the latest **PADS4 Web Launcher APK**.
+  </Step>
+  <Step title="Step Seven">
+    Navigate to the folder containing the **.apk** file.
+  </Step>
+  <Step title="Step Eight">
+    Right-click and select **Open in Terminal**.
+  </Step>
+  <Step title="Step Nine">
+    Install the app with `adb install {application}.apk`. Wait for **Success** confirmation.
+  </Step>
+  <Step title="Step Ten">
+    In the scrcpy window, press **Home**, then launch **PADS4 Web Launcher**.
+  </Step>
+  <Step title="Step Eleven">
+    Enter the appropriate configuration to connect with your **PADS4 environment**.
+  </Step>
+</Steps>
+
+---
+
+## **3. Supported Features & Limitations**
+
+| **Feature**                | **Details**                                                          |
+| -------------------------- | -------------------------------------------------------------------- |
+| Display Models             | ✅ Supported                                                          |
+| Portrait Mode              | ✅ Supported                                                          |
+| Remote Control             | ❌ Not supported (can configure, but remote doesn't work)             |
+| HTTPS                      | ✅ Supported                                                          |
+| Video                      | ⚠️ Not supported (only first frame shown)                            |
+| Images (JPG, PNG, BMP)     | ✅ Supported                                                          |
+| GIF                        | ⚠️ Static only                                                       |
+| Text, Line, Shape          | ✅ Supported                                                          |
+| Scrolling Text             | ⚠️ Unpredictable behavior due to low refresh rate                    |
+| Formatted Text             | ✅ Use only minute-based time formatting (avoid seconds)              |
+| Flash                      | ❌ Not supported                                                      |
+| Table                      | ✅ Supported (frequent changes may cause row visibility issues)       |
+| PDF / PowerPoint           | ✅ Only static, first page displayed                                  |
+| Interactive Button         | ⚠️ Displayed as static, not interactive                              |
+| Web                        | ❌ Not supported                                                      |
+| Colors                     | ✅ Supported (limited to ePaper color range)                          |
+| Data Providers             | ⚠️ Static data only; updates must exceed refresh rate intervals      |
+| Rules, Viewer Variables    | ✅ Supported within refresh rate limits                               |
+| Software Updates           | ✅ Supported                                                          |
+| Offline Storage, Schedules | ✅ Supported                                                          |
+| PADS4 Ctrl Center          | ✅ Supported: Viewer Log, Screenshot, Sync Log, Viewer Settings, etc. |
+| Display Management         | ❌ Shutdown, Reboot, Wake-on-LAN, and LED state not supported         |
+| Monitoring & Alerts        | ✅ Partial support (e.g., Network status)                             |
+
+---
+
+## **4. General Limitations**
+
+* **Refresh Rate**:
+
+  * 25BDL4150I: \~1 minute
+  * 32BDL5150I: \~2 minutes
+
+* **Content Behavior**:
+
+  * Dynamic content can be **displayed as screenshots**.
+  * Content should **not update faster than refresh rate**.
+
+---
+
+## **5. Troubleshooting**
+
+| **Problem**                           | **Solution**                                                            |
+| ------------------------------------- | ----------------------------------------------------------------------- |
+| `adb devices` does not detect display | Unplug both ends of USB, reboot display (hold power 5s), reconnect USB. |
+| USB not detected by PC                | Reboot display and reconnect. Try factory reset if issue persists.      |
+
