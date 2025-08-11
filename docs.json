@@ -2384,9 +2384,9 @@
                 "pages": [
                   "fr/modules/fids/introduction",
                   "fr/modules/fids/installation",
-                  "fr/modules/fids/Starting-the-FIDS-Operator",
-                  "fr/modules/fids/server-settings",
-                  "fr/modules/fids/setup-a-SQL-server-failover",
+                  "fr/modules/fids/demarrer-l-operateur-FIDS",
+                  "fr/modules/fids/parametres-du-serveur",
+                  "fr/modules/fids/configurer-un-relais-SQL-server",
                   {
                     "group": "SQL Server",
                     "pages": [
