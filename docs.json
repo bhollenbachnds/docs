@@ -2390,9 +2390,9 @@
                   {
                     "group": "SQL Server",
                     "pages": [
-                      "fr/modules/fids/sql-server/Create-the-database-manually-with-Microsoft-SQL-Server-Management-Studio",
-                      "fr/modules/fids/sql-server/Create-the-database-manually-with-Powershell",
-                      "fr/modules/fids/sql-server/Create-the-database-manually-with-SQL-Statements"
+                      "fr/modules/fids/sql-server/creer-la-base-manuellement-avec-Microsoft-SQL-server-management-studio",
+                      "fr/modules/fids/sql-server/creer-la-base-manuellement-avec-Powershell",
+                      "fr/modules/fids/sql-server/creer-la-base-manuellement-avec-requetes-SQL"
                     ]
                   }
                 ]
