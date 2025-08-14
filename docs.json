@@ -1307,17 +1307,17 @@
                 "group": "Mise en route",
                 "pages": [
                   "fr/introduction",
-                  "fr/system-requirements",
-                  "fr/network-requirements",
-                  "fr/prerequisites",
-                  "fr/modules-overview",
-                  "fr/certified-viewer-devices"
+                  "fr/exigences-systeme",
+                  "fr/exigences-reseau",
+                  "fr/prerequis",
+                  "fr/vue-d-ensemble-des-modules",
+                  "fr/appareils-de-visionnage-certifies"
                 ]
               },
               {
                 "group": "Informations de mise à niveau",
                 "pages": [
-                  "fr/upgrade-info/Upgrading-to-PADS4-2025.1"
+                  "fr/upgrade-info/mise-a-niveau-vers-PADS4-2025-1"
                 ]
               },
               {
@@ -1336,22 +1336,22 @@
                   {
                     "group": "Installer les serveurs PADS4",
                     "pages": [
-                      "fr/install-pads4/install-pads4-server/How-to-install-PADS4-Main-Server",
-                      "fr/install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers",
-                      "fr/install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers",
-                      "fr/install-pads4/install-pads4-server/How-to-install-PADS4-Sub-Server",
-                      "fr/install-pads4/install-pads4-server/How-to-install-PADS4-Backup-Server",
-                      "fr/install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
+                      "fr/install-pads4/install-pads4-server/installer-le-serveur-principal-PADS4",
+                      "fr/install-pads4/install-pads4-server/lecteur-virtuel-et-serveurs-PADS4",
+                      "fr/install-pads4/install-pads4-server/replication-avec-serveurs-secondaires-et-sauvegarde",
+                      "fr/install-pads4/install-pads4-server/installer-le-serveur-secondaire-PADS4",
+                      "fr/install-pads4/install-pads4-server/installer-le-serveur-de-sauvegarde-PADS4",
+                      "fr/install-pads4/install-pads4-server/entrer-la-cle-de-produit-PADS4",
                       "fr/install-pads4/install-pads4-server/PADS4-Configuration",
-                      "fr/install-pads4/install-pads4-server/Sensor-database-type-selection"
+                      "fr/install-pads4/install-pads4-server/selection-du-type-de-base-de-donnees-capteurs"
                     ]
                   },
                   {
                     "group": "Installer les visionneuses PADS4",
                     "pages": [
-                      "fr/install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-Viewer",
-                      "fr/install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-HTML5-Viewer",
-                      "fr/install-pads4/install-pads4-viewer/How-to-install-PADS4-Generic-Android-Viewer"
+                      "fr/install-pads4/install-pads4-viewer/installer-le-visionneur-windows-PADS4",
+                      "fr/install-pads4/install-pads4-viewer/installer-le-visionneur-windows-HTML5-PADS4",
+                      "fr/install-pads4/install-pads4-viewer/installer-le-visionneur-android-generique-PADS4"
                     ]
                   }
                 ]
@@ -1510,31 +1510,31 @@
                 "group": "Mise en route",
                 "pages": [
                   "fr/ctrl-centre/introduction",
-                  "fr/ctrl-centre/account-creation",
-                  "fr/ctrl-centre/dashboard",
-                  "fr/ctrl-centre/content",
-                  "fr/ctrl-centre/schedules",
-                  "fr/ctrl-centre/viewers",
-                  "fr/ctrl-centre/sensors",
+                  "fr/ctrl-centre/creation-de-compte",
+                  "fr/ctrl-centre/tableau-de-bord",
+                  "fr/ctrl-centre/contenu",
+                  "fr/ctrl-centre/plannings",
+                  "fr/ctrl-centre/visionneurs",
+                  "fr/ctrl-centre/capteurs",
                   "fr/ctrl-centre/incidents",
                   "fr/ctrl-centre/clusters",
-                  "fr/ctrl-centre/viewer-variables",
-                  "fr/ctrl-centre/licenses",
-                  "fr/ctrl-centre/domains"
+                  "fr/ctrl-centre/variables-du-visionneur",
+                  "fr/ctrl-centre/licences",
+                  "fr/ctrl-centre/domaines"
                 ]
               },
               {
                 "group": "Administration",
                 "pages": [
-                  "fr/ctrl-centre/administration/credentials",
+                  "fr/ctrl-centre/administration/identifiants",
                   "fr/ctrl-centre/administration/teams",
                   "fr/ctrl-centre/administration/Power-BI",
                   "fr/ctrl-centre/administration/credentials/active-directory",
-                  "fr/ctrl-centre/administration/Enable-SSO",
+                  "fr/ctrl-centre/administration/activer-SSO",
                   {
                     "group": "Meta",
                     "pages": [
-                      "fr/ctrl-centre/administration/meta/create-meta-app"
+                      "fr/ctrl-centre/administration/meta/creer-meta-app"
                     ]
                   },
                   {
@@ -1548,25 +1548,25 @@
               {
                 "group": "Cluster",
                 "pages": [
-                  "fr/ctrl-centre/cluster/what-is-a-cluster",
-                  "fr/ctrl-centre/cluster/cluster-example",
-                  "fr/ctrl-centre/cluster/create-a-cluster",
-                  "fr/ctrl-centre/cluster/Cluster-related-Viewer-Variables"
+                  "fr/ctrl-centre/cluster/qu-est-ce-qu-un-cluster",
+                  "fr/ctrl-centre/cluster/exemple-de-cluster",
+                  "fr/ctrl-centre/cluster/creer-un-cluster",
+                  "fr/ctrl-centre/cluster/cluster-lie-aux-variables-du-visionneur"
                 ]
               },
               {
                 "group": "Variables de visionneuse",
                 "pages": [
                   "fr/ctrl-centre/viewer-variables/introduction",
-                  "fr/ctrl-centre/viewer-variables/System-Viewer-Variables"
+                  "fr/ctrl-centre/viewer-variables/variables-du-visionneur-systeme"
                 ]
               },
               {
                 "group": "Capteurs",
                 "pages": [
-                  "fr/ctrl-centre/sensors/How-to-use-Sensors",
-                  "fr/ctrl-centre/sensors/How-to-create-Incidents",
-                  "fr/ctrl-centre/sensors/Sensor-Settings",
+                  "fr/ctrl-centre/sensors/utiliser-des-capteurs",
+                  "fr/ctrl-centre/sensors/creer-des-incidents",
+                  "fr/ctrl-centre/sensors/parametres-des-capteurs",
                   {
                     "group": "Capteurs certifiés",
                     "pages": [
