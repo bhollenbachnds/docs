@@ -1011,7 +1011,9 @@
                       {
                         "group": "Main Window",
                         "pages": [
-                          "digital-signage/windows-applications/system-management/main-window/ribbon-bar"
+                          "digital-signage/windows-applications/system-management/main-window/ribbon-bar",
+                          "digital-signage/windows-applications/system-management/main-window/navigation-pane",
+                          "digital-signage/windows-applications/system-management/main-window/information-area"      
                         ]
                       }
                     ]
