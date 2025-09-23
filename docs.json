@@ -1015,6 +1015,11 @@
                           "digital-signage/windows-applications/system-management/main-window/navigation-pane",
                           "digital-signage/windows-applications/system-management/main-window/information-area"      
                         ]
+                      },
+                      {
+                       "group": "Managing destinations",
+                        "pages": [
+                        ]
                       }
                     ]
                   },
