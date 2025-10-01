@@ -1,0 +1,25 @@
+Si vous souhaitez effectuer une mise à niveau vers PADS4 2025.1, votre version actuelle de PADS4 doit être au minimum PADS4 2022.3. Cela signifie que vous devrez avoir PADS4 2022.3 installé et fonctionnel avant de mettre à jour vers 2025.1.
+
+Toute version antérieure à 2022.2 et inférieure ne se mettra pas automatiquement à jour vers 2025.1, et vous devrez d'abord effectuer une mise à niveau intermédiaire vers PADS4 2022.3.
+
+Les notes de version pour PADS4 Version 2025.1 [peuvent être trouvées ici.](https://www.netdisplaysystems.com/downloads/ForwardLinks/PADS4relnotes.pdf)
+
+Dans notre dernière version, 2025.1, nous introduisons notre nouveau système de gestion des utilisateurs.
+
+Ce changement fondamental déplace les paramètres de gestion des utilisateurs de l'application System Management vers le portail Web PADS4.
+
+Lisez les articles suivants pour vous préparer à ce changement.
+
+[Création de compte](https://docs.pads4.com/ctrl-centre/account-creation) & [Rôles](https://docs.pads4.com/ctrl-centre/administration/user-management/Roles)
+
+### HSTS
+
+À partir de la version 2023.2, nous avons implémenté une nouvelle fonctionnalité de sécurité avec l'assistant de configuration PADS4 appelée HSTS.
+
+<img className="block" src="/images/hsts.png" alt="HSTS" />
+
+L'option HSTS activera l'en-tête HTTP Strict Transport Security sur toutes les requêtes http. Cet en-tête indiquera aux appareils intelligents (PADS4 HTML5 Viewers, PADS4 CTRL Center, PADS4 CMS (legacy)) d'utiliser le protocole HTTPS au lieu de HTTP. Par exemple, si vous vous connectez à [http://pads4server.com/](http://pads4server.com/), toutes les connexions sur cette application web seront mises à niveau vers HTTPS.
+
+<Warning>
+  Important: You need to have HTTPS enabled and have a valid certificate. If the certificate is not valid, any connection from HTTP or HTTPS will not work. This means that PADS4 devices on HTTP will no longer connect to the server and the connection will be lost. Make sure to always check if your certificate is valid and working on HTTPS, before enabling HSTS.
+</Warning>
