@@ -1,4 +1,3 @@
-
 This guide walks you through setting up **SAML 2.0 Single Sign-On (SSO)** using **IBM Security Verify** as the Identity Provider (IdP) for **PADS4 Workspace**.
 
 ---
@@ -7,11 +6,11 @@ This guide walks you through setting up **SAML 2.0 Single Sign-On (SSO)** using 
 
 Ensure the following items are ready:
 
-* Access to [IBM Security Verify Console](https://www.ibm.com/security/identity-access-management/verify)
-* Signing Certificate (.pem or .cer) from IBM Verify
-* PFX Certificate with Private Key for PADS4 (.pfx)
-* Federation Metadata URL (optional if importing manually)
-* PADS4 server URL (e.g., `https://pads4serverurl/crystal/domainone`)
+- Access to [IBM Security Verify Console](https://www.ibm.com/security/identity-access-management/verify)
+- Signing Certificate (.pem or .cer) from IBM Verify
+- PFX Certificate with Private Key for PADS4 (.pfx)
+- Federation Metadata URL (optional if importing manually)
+- PADS4 server URL (e.g., `https://pads4serverurl/crystal/domainone`)
 
 ---
 
@@ -19,27 +18,28 @@ Ensure the following items are ready:
 
 ### Navigate to:
 
-**Directory > Applications > Add Application > Custom Application**
+**Directory \> Applications \> Add Application \> Custom Application**
 
 ### Under the **Sign-on** tab:
 
-| Field                              | Value                                                       |
-| ---------------------------------- | ----------------------------------------------------------- |
-| **Sign-on method**                 | `SAML 2.0`                                                  |
-| **Provider ID**                    | `https://pads4serverurl/crystal/domainone/Saml2`     |
+| Field                              | Value                                                 |
+| ---------------------------------- | ----------------------------------------------------- |
+| **Sign-on method**                 | `SAML 2.0`                                            |
+| **Provider ID**                    | `https://pads4serverurl/crystal/domainone/Saml2`      |
 | **Assertion Consumer Service URL** | `https://dpads4serverurl/crystal/domainone/Saml2/ACS` |
-| **Service Provider SSO URL**       | `https://pads4serverurl/crystal/domainone/Saml2/ACS` |
-| **SessionNotOnOrAfter**            | `7200` (2 hours)                                            |
+| **Service Provider SSO URL**       | `https://pads4serverurl/crystal/domainone/Saml2/ACS`  |
+| **SessionNotOnOrAfter**            | `7200` (2 hours)                                      |
 
-
-<Warning>Do NOT select “Use Identity provider-initiated single sign-on</Warning>
+<Warning>
+  Do NOT select “Use Identity provider-initiated single sign-on
+</Warning>
 
 ---
 
 ### Signature Settings
 
-| Field                                  | Value                                 |
-| -------------------------------------- | ------------------------------------- |
+| Field                                  | Value                               |
+| -------------------------------------- | ----------------------------------- |
 | **Sign authentication response**       | Enabled                             |
 | **Signature Algorithm**                | RSA-SHA256                          |
 | **Signing Certificate**                | Choose Default personal certificate |
@@ -64,13 +64,13 @@ Leave **Service Provider Certificate** and **Encryption Options** blank unless e
 
 Enable: ☑ **Send all known user attributes in the SAML assertion**
 
-| Attribute Name (URN)                                      | Format | Source        |
-| --------------------------------------------------------- | ------ | ------------- |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:email`       | email  | `email`       |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:family_name` | text   | `family_name` |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:given_name`  | text   | `given_name`  |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:uid`         | text   | `uid`         |
-| `http://schemas.xmlsoap.org/claims/group`                 | text   | `groupIDs`    |
+| Attribute name                                                       | Attribute Name format (URN)                               | Format | Attribute source |
+| -------------------------------------------------------------------- | --------------------------------------------------------- | ------ | ---------------- |
+| **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email**      | `urn:oasis:names:tc:SAML:2.0:attrname-format:email`       | email  | `email`          |
+| **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/familyname** | `urn:oasis:names:tc:SAML:2.0:attrname-format:family_name` | text   | `family_name`    |
+| **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname**  | `urn:oasis:names:tc:SAML:2.0:attrname-format:given_name`  | text   | `given_name`     |
+| **http://schemas.microsoft.com/identity/claims/uid**                 | `urn:oasis:names:tc:SAML:2.0:attrname-format:uid`         | text   | `uid`            |
+| **http://schemas.xmlsoap.org/claims/group**                          | `urn:oasis:names:tc:SAML:2.0:attrname-format:group`       | text   | `groupIDs`       |
 
 > These attributes will be mapped in PADS4 to assign roles/groups.
 
@@ -78,8 +78,8 @@ Enable: ☑ **Send all known user attributes in the SAML assertion**
 
 ### Access Policy
 
-* Set to: ☑ **Use default policy**
-* Allow from: `All devices`
+- Set to: ☑ **Use default policy**
+- Allow from: `All devices`
 
 ---
 
@@ -94,11 +94,9 @@ In the **PADS4 Administration Portal**, configure the SSO Plugin as follows:
 | **SAML SSO URL**                             | `https://pads4.verify.ibm.com/saml/sps/saml20ip/saml20/login` |
 | **Federation Metadata URL** (optional)       | `https://pads4.verify.ibm.com/v1.0/saml/federations/saml2`    |
 | **Certificate of Federation Server**         | Upload the **IBM Verify signing certificate (.cer)**          |
-| **URL of Relying Party**                     | `https://pads4serverurl/crystal/domainone`             |
+| **URL of Relying Party**                     | `https://pads4serverurl/crystal/domainone`                    |
 | **Relying Party Signing Certificate (.pfx)** | Upload your `.pfx` file with private key                      |
 | **Private Key Password**                     | Enter password for `.pfx`                                     |
-
-
 
 ---
 
@@ -116,6 +114,6 @@ Go to the **Relation Table** section of the SSO plugin and map incoming `groupID
 
 ## Final Checks
 
-* Test login via PADS4 using an IBM-verified user.
-* Ensure claims are successfully received and parsed in PADS4.
-* Adjust attribute mapping or claim rules if users are not being assigned correctly.
+- Test login via PADS4 using an IBM-verified user.
+- Ensure claims are successfully received and parsed in PADS4.
+- Adjust attribute mapping or claim rules if users are not being assigned correctly.
