@@ -9,18 +9,15 @@ Vous devrez d'abord télécharger le **fichier manifeste du plugin Outlook** dep
 ### Instructions:
 
 1. Ouvrez un navigateur et accédez à votre serveur :
+
    ```
    https://<server-fqdn>.pads4.com
    ```
-
-2. Connectez-vous avec un compte administrateur\
-   *(identifiants par défaut : Nom d'utilisateur : `Administrator`, Mot de passe : `Admin1234!`)*
-
+2. Connectez-vous à l'aide d'un compte administrateur\
+   *`(default credentials: Username: Administrator, Password: Admin1234!)`*
 3. Sélectionnez **CMS Admin** dans la liste des modules disponibles.
-
 4. Naviguez vers :\
    **Plugins** → **Calendar**
-
 5. Téléchargez le fichier manifeste du plugin en cliquant sur :\
    **Download Outlook plugin Manifest file**
 
@@ -28,42 +25,41 @@ Enregistrez ce fichier dans un emplacement connu.
 
 ***
 
-## Étape 2 : Télécharger le module complémentaire sur Microsoft Exchange
+## Étape 2 : Télécharger l'Add-In sur Microsoft Exchange
 
-Pour déployer le module complémentaire à l'échelle de l'organisation, suivez les étapes ci-dessous.
+Pour déployer l'add-in à l'échelle de l'organisation, suivez les étapes ci-dessous.
 
 ### Pour Exchange 2016 / 2019 :
 
 1. Ouvrez le **Centre d'administration Exchange (EAC)**\
-   Consultez la documentation Microsoft pour accéder à l'EAC.
-
+   Consultez la documentation de Microsoft pour accéder à l'EAC.
 2. Naviguez vers :\
-   `Organization` → `Add-Ins` *(ou `Apps` dans Exchange 2013)*
-
-3. Cliquez sur **+ (Ajouter)** et sélectionnez **Add from file**
-
-4. Cliquez sur **Browse**, localisez le **fichier manifeste** que vous avez enregistré précédemment, et cliquez sur **Next**
+   `Organization` → `Add-Ins` *`(or Apps in Exchange 2013)`*
+3. Cliquez sur **+ (Ajouter)** et sélectionnez **Ajouter à partir d'un fichier**
+4. Cliquez sur **Parcourir**, localisez le **fichier manifeste** que vous avez enregistré précédemment, et cliquez sur **Suivant**
 
 Une fois téléchargé, le **PADS4 Workspace Add-In** apparaîtra dans la liste des applications disponibles.
 
 ***
 
-## Étape 3 : Rendre le module complémentaire disponible pour les utilisateurs
+## Étape 3 : Rendre l'Add-In disponible aux utilisateurs
 
 1. Double-cliquez sur **PADS4 Workspace** dans la liste des applications.
-
-2. Dans la boîte de dialogue **Edit Add-In Settings**, cochez :\
-   **Make this app available to users in your organization**
-
+2. Dans la boîte de dialogue **Modifier les paramètres de l'Add-In**, cochez :\
+   **Rendre cette application disponible aux utilisateurs de votre organisation**
 3. Choisissez l'un des modes de déploiement suivants :
 
-* **Optional, enabled by default**\
-  Le module complémentaire est activé, mais les utilisateurs peuvent le désactiver.
+* **Optionnel, activé par défaut**\
+  L'Add-In est activé, mais les utilisateurs peuvent le désactiver.
+* **Optionnel, désactivé par défaut**\
+  L'Add-In est disponible, mais les utilisateurs doivent l'activer.
+* **Obligatoire, toujours activé**\
+  L'Add-In est imposé ; les utilisateurs ne peuvent pas le désactiver.
 
-* **Optional, disabled by default**\
-  Le module complémentaire est disponible, mais les utilisateurs doivent l'activer.
+4. Cliquez sur **Enregistrer** pour appliquer les paramètres.
 
-* **Mandatory, always enabled**\
-  Le module complémentaire est imposé ; les utilisateurs ne peuvent pas le désactiver.
+<Note>
+  Assurez-vous que les adresses e-mail des utilisateurs qui utilisent le plugin disposent d'un compte workspace.
 
-4. Cliquez sur **Save** pour appliquer les paramètres.
+  Ce compte doit utiliser la même adresse e-mail que l'utilisateur Outlook ; celle-ci est utilisée pour l'authentification auprès du backend PADS4, ce qui vous permet d'utiliser le PADS4 Workspace Add-in.
+</Note>
