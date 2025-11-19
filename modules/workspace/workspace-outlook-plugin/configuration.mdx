@@ -9,19 +9,16 @@ You will first need to download the **Outlook plugin manifest file** from the **
 ### Instructions:
 
 1. Open a browser and go to your server:
+
    ```
    https://<server-fqdn>.pads4.com
    ```
-
-2. Log in using an administrator account  
-   *(default credentials: Username: `Administrator`, Password: `Admin1234!`)*
-
+2. Log in using an administrator account\
+   _``(default credentials: Username: Administrator, Password: Admin1234!)``_
 3. Select **CMS Admin** from the list of available modules.
-
-4. Navigate to:  
+4. Navigate to:\
    **Plugins** → **Calendar**
-
-5. Download the plugin manifest file by clicking:  
+5. Download the plugin manifest file by clicking:\
    **Download Outlook plugin Manifest file**
 
 Save this file to a known location.
@@ -34,14 +31,11 @@ To deploy the add-in organization-wide, follow the steps below.
 
 ### For Exchange 2016 / 2019:
 
-1. Open the **Exchange Admin Center (EAC)**  
+1. Open the **Exchange Admin Center (EAC)**\
    Refer to Microsoft’s documentation for accessing the EAC.
-
-2. Navigate to:  
-   `Organization` → `Add-Ins` *(or `Apps` in Exchange 2013)*
-
-3. Click **+ (Add)** and select **Add from file**
-
+2. Navigate to:\
+   `Organization` → `Add-Ins` _`(or Apps in Exchange 2013)`_
+3. Click **\+ (Add)** and select **Add from file**
 4. Click **Browse**, locate the **manifest file** you saved earlier, and click **Next**
 
 Once uploaded, the **PADS4 Workspace Add-In** will appear in the list of available apps.
@@ -51,19 +45,21 @@ Once uploaded, the **PADS4 Workspace Add-In** will appear in the list of availab
 ## Step 3: Make the Add-In Available to Users
 
 1. Double-click **PADS4 Workspace** in the list of apps.
-
-2. In the **Edit Add-In Settings** dialog, check:  
+2. In the **Edit Add-In Settings** dialog, check:\
    **Make this app available to users in your organization**
-
 3. Choose one of the following deployment modes:
 
-- **Optional, enabled by default**  
+- **Optional, enabled by default**\
   Add-In is enabled, but users can disable it.
-
-- **Optional, disabled by default**  
+- **Optional, disabled by default**\
   Add-In is available, but users must enable it.
-
-- **Mandatory, always enabled**  
+- **Mandatory, always enabled**\
   Add-In is enforced; users cannot disable it.
 
 4. Click **Save** to apply the settings.
+
+<Note>
+  Make sure the email addresses of the users who make use of the plugin have a workspace account.
+
+  This account needs to use the same email address as the Outlook user; this is used for authentication with the PADS4 backend, which enables you to use the PADS4 Workspace Add-in.
+</Note>
