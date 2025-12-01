@@ -1011,16 +1011,7 @@
                       {
                         "group": "Main Window",
                         "pages": [
-                          "digital-signage/windows-applications/system-management/main-window/ribbon-bar",
-                          "digital-signage/windows-applications/system-management/main-window/navigation-pane",
-                          "digital-signage/windows-applications/system-management/main-window/information-area"      
-                        ]
-                      },
-                      {
-                       "group": "Managing destinations",
-                        "pages": [
-                          "digital-signage/windows-applications/system-management/managing-destinations/destinations-window",
-                          "digital-signage/windows-applications/system-management/managing-destinations/adding-a-viewer-group"
+                          "digital-signage/windows-applications/system-management/main-window/ribbon-bar"
                         ]
                       }
                     ]
@@ -1610,16 +1601,16 @@
                 "group": "PADS4 CMS",
                 "pages": [
                   "fr/modules/digital-signage/cms/introduction",
-                  "fr/modules/digital-signage/cms/login",
-                  "fr/modules/digital-signage/cms/homepage",
+                  "fr/modules/digital-signage/cms/connexion",
+                  "fr/modules/digital-signage/cms/page-d-accueil",
                   "fr/modules/digital-signage/cms/categories",
-                  "fr/modules/digital-signage/cms/create-a-template",
-                  "fr/modules/digital-signage/cms/library",
-                  "fr/modules/digital-signage/cms/create-a-new-message",
-                  "fr/modules/digital-signage/cms/publish-a-message",
+                  "fr/modules/digital-signage/cms/creer-un-modele",
+                  "fr/modules/digital-signage/cms/bibliotheque",
+                  "fr/modules/digital-signage/cms/creer-un-nouveau-message",
+                  "fr/modules/digital-signage/cms/publier-un-message",
                   "fr/modules/digital-signage/cms/publications",
-                  "fr/modules/digital-signage/cms/ordering",
-                  "fr/modules/digital-signage/cms/more-features"
+                  "fr/modules/digital-signage/cms/ordre-de-diffusion",
+                  "fr/modules/digital-signage/cms/fonctionnalites-supplementaires"
                 ]
               },
               {
