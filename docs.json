@@ -207,7 +207,8 @@
                     "pages": [
                       "certified-devices/samsung/Tizen-7.0-SSSP10",
                       "certified-devices/samsung/Tizen-6.5-SSSP10",
-                      "certified-devices/samsung/Tizen-5.0-SSSP7"
+                      "certified-devices/samsung/Tizen-5.0-SSSP7",
+                      "certified-devices/samsung/EMDX-076D"
                     ]
                   },
                   {

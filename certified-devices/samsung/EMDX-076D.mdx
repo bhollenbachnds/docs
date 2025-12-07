@@ -1,0 +1,204 @@
+This guide provides **step-by-step instructions** for installing and configuring **PADS4 Viewer** on **Samsung EMDX-076D** devices.
+
+---
+
+## **Before You Start**
+
+### **Supported Samsung EMDX Series Devices**
+
+The following **Samsung** **EMDX Series Color E-Paper** device is supported:
+
+- **EMDX-076D**
+
+**Ensure your PADS4 Server is installed and configured before proceeding.**
+
+---
+
+## **Minimum Requirements**
+
+**PADS4 Server Version:** **2025.2 or later**
+
+**Ensure your server meets the minimum version requirement before proceeding with installation.**
+
+---
+
+## **First-Time Setup**
+
+When you **turn on** the Samsung EMDX for the first time, a **configuration wizard** will start.
+
+**If the configuration wizard does not start, perform a factory reset before continuing.**
+
+---
+
+## **Performing a Factory Reset**
+
+<Steps>
+  <Step title="Step One">
+    Reset the device by holding the PAIRING and MODE keys for ~5 seconds, which are located on the back of the display.
+
+    This process will take ~10 seconds to complete.
+  </Step>
+  <Step title="Step Two">
+    Afterwards, press the power button again, which will boot the display.
+  </Step>
+  <Step title="Step Three">
+    The device should now be reset and show new QR codes that can be scanned.
+  </Step>
+</Steps>
+
+**The device will restart and display the welcome screen / QR codes to scan for the mobile application.**
+
+---
+
+## **Installing mobile application**
+
+<Info>
+  Currently, you will need to use a mobile application to use the display, since this display does not support interactivity through other mediums. To download the latest version from the app store, scan the QR code on the display.
+</Info>
+
+## **Set up the display**
+
+<Info>
+  Once you have the mobile application, you can set up the display. Before you start, make sure you enable Bluetooth and Location on your mobile phone (Location can be disabled at the end of this process).
+</Info>
+
+<Steps>
+  <Step title="Step One">
+    Start the mobile application of Samsung on your mobile device.
+  </Step>
+  <Step title="Step Two">
+    Accept the required permissions.
+  </Step>
+  <Step title="Step Three">
+    Scan the QR code that is currently being displayed at the bottom of the screen.
+  </Step>
+  <Step title="Step Four">
+    Accept the request to connect the display via Bluetooth.
+  </Step>
+  <Step title="Step Five">
+    To set up the Wi-Fi connection on the display, you need to choose a connection that your mobile phone is also connected to (requires Location).
+
+    <Note>
+      _Make sure you choose a connection that_**\_DOESN'T \_** _require account credentials (only Wi-Fi password allowed)_
+    </Note>
+  </Step>
+  <Step title="Step Six">
+    Accept the privacy agreement and choose "Manual Setup"
+  </Step>
+  <Step title="Step Seven">
+    Define a device pin and set the device orientation to **landscape.**
+  </Step>
+  <Step title="Step Eight">
+    Configure sleep mode to **off.**
+  </Step>
+  <Step title="Step Nine">
+    Turn **off** network standby and set device date & time to automatic.
+  </Step>
+  <Step title="Step Ten">
+    Set the daily refresher timer and set the content player to **custom**.
+  </Step>
+  <Step title="Step Eleven">
+    Now define a name for the device, and it will then show up under **devices** in the application.
+  </Step>
+</Steps>
+
+## **Installing PADS4 Viewer**
+
+<Note>
+  To install the PADS4 Viewer application, you need to define the server URL where the application is hosted. This works like other Samsung displays, but instead of doing it on the display directly, you need the mobile application.
+</Note>
+
+<Steps>
+  <Step title="Step One">
+    Start the mobile application of Samsung
+  </Step>
+  <Step title="Step Two">
+    Select the display you want to use
+  </Step>
+  <Step title="Step Three">
+    Under "Player type" at the bottom of the screen, make sure it is on "CustomApp"
+  </Step>
+</Steps>
+
+<Tip>
+  If the display is sleeping, click the “Wake up” button (if that doesn’t work, you have to press the power button on the display).
+</Tip>
+
+<Steps>
+  <Step title="Step Four">
+    **Specify your PADS4 Server URL:**
+
+    ```
+    http://<server>/PADS4/apps/tizen  
+    https://<server>/PADS4/apps/tizen  
+    ```
+
+    `Replace <server>` with the **IP address** or **domain name** of your **PADS4 Server**.\
+    **Ensure "PADS4" is in CAPITAL letters, or the connection will fail due to case sensitivity.**
+  </Step>
+</Steps>
+
+<Steps>
+  <Step title="Step Five">
+    Click on "Install"
+  </Step>
+  <Step title="Step Six">
+    The display will now shhow the PADS4 logo after a minute with the viewer name and connection status and the bottom left of the screen.
+  </Step>
+</Steps>
+
+---
+
+## **Adjusting PADS4 Viewer Settings**
+
+**Due to the refresh rate of ~30 seconds, this is not supported directly on the panel itself.**
+
+---
+
+## **Supported Features & Limitations**
+
+### **General Features**
+
+| Feature | Description                                                              |
+| :-----: | :----------------------------------------------------------------------- |
+| ✅       | **Automatic Software Updates** – The HTML5 Viewer updates automatically. |
+| ✅       | **Offline Mode** – Plays scheduled content for **7 days** while offline. |
+
+### **Device Features**
+
+| Feature | Description                                                                                 |
+| :-----: | :------------------------------------------------------------------------------------------ |
+| ✅       | **Portrait Mode** – Set rotation to **270°** in Viewer Settings. Do **NOT** use SSP rotate. |
+| ✅       | **Cluster Viewer** – Can be used in a **cluster setup**.                                    |
+| ✅       | **Block Remote Control** – Prevent unauthorized screen control.                             |
+| ✅       | **Wake on LAN** – Supported.                                                                |
+| ❌       | **Turn Off Display** – Not supported.                                                       |
+
+### **Video & Content Support**
+
+| Feature | Description                                                          |
+| :-----: | :------------------------------------------------------------------- |
+| ❌       | **4K Video Mode** – Enabled via **PADS4 CTRL Center**.               |
+| ❌       | **Seamless Video Playback** – **Supported** in **Landscape Mode**.   |
+| ❌       | **Streaming** – Supports **HTTP, HLS, RTP, UDP**.                    |
+| ❌       | **Playback Speed Adjustment** – Not supported.                       |
+| ❌       | **All content that requires a higher refresh rate than 30 seconds.** |
+
+### **Device Management**
+
+| Feature | Description                                 |
+| :-----: | :------------------------------------------ |
+| ✅       | **Remote Management via PADS4 CTRL Center** |
+| ✅       | **Connection State Monitoring & Alerts**    |
+| ✅       | **Reboot Support** – Supported.             |
+| ❌       | **Shutdown Support** – Not supported.       |
+
+---
+
+## **General limitations**
+
+| **Consideration**   |                                                                                                                     |
+| :------------------ | :------------------------------------------------------------------------------------------------------------------ |
+| **Refresh rate**    | The refresh rate of the display is about once every 30 seconds.                                                     |
+| **Dynamic content** | Verify **PADS4 Server URL** is correct.                                                                             |
+| **Dataproviders**   | Only static data is supported; data can only be updated if the time is higher than the refresh rate of the display. |
