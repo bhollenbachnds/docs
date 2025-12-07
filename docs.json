@@ -144,6 +144,12 @@
                     ]
                   },
                   {
+                    "group": "Hisense",
+                    "pages": [
+                      "certified-devices/hisense/DM66D"
+                    ]
+                  },
+                  {
                     "group": "IAdea",
                     "pages": [
                       "certified-devices/iadea/WRP-1000-v2",

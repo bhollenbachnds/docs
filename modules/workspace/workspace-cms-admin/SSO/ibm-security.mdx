@@ -64,13 +64,13 @@ Leave **Service Provider Certificate** and **Encryption Options** blank unless e
 
 Enable: ☑ **Send all known user attributes in the SAML assertion**
 
-| Attribute name                                                       | Attribute Name format (URN)                               | Format | Attribute source |
-| -------------------------------------------------------------------- | --------------------------------------------------------- | ------ | ---------------- |
-| **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email**      | `urn:oasis:names:tc:SAML:2.0:attrname-format:email`       | email  | `email`          |
-| **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/familyname** | `urn:oasis:names:tc:SAML:2.0:attrname-format:family_name` | text   | `family_name`    |
-| **http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname**  | `urn:oasis:names:tc:SAML:2.0:attrname-format:given_name`  | text   | `given_name`     |
-| **http://schemas.microsoft.com/identity/claims/uid**                 | `urn:oasis:names:tc:SAML:2.0:attrname-format:uid`         | text   | `uid`            |
-| **http://schemas.xmlsoap.org/claims/group**                          | `urn:oasis:names:tc:SAML:2.0:attrname-format:group`       | text   | `groupIDs`       |
+| **Attribute name**                                                                                                                        | **Attribute Name format (URN)**                            | **Format** | **Attribute source** |
+| :---------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------- | :--------- | :------------------- |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email)     | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified`  | email      | `email`              |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/familyname)**surname** | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `family_name`        |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname)    | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `given_name`         |
+| [**http://schemas.microsoft.com/identity/claims/**](http://schemas.microsoft.com/identity/claims/uid)**objectidentifier**                 | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `uid`                |
+| [**http://schemas.xmlsoap.org/claims/group**](http://schemas.xmlsoap.org/claims/group)                                                    | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `groupIDs`           |
 
 > These attributes will be mapped in PADS4 to assign roles/groups.
 
