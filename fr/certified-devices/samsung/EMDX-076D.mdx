@@ -1,0 +1,219 @@
+Ce guide fournit **des instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur **Samsung EMDX-076D** dispositifs.
+
+***
+
+## **Avant de commencer**
+
+### **Appareils Samsung EMDX Series pris en charge**
+
+Le **Samsung** **EMDX Series Color E-Paper** suivant est pris en charge :
+
+* **EMDX-076D**
+
+**Assurez-vous que votre serveur PADS4 est installé et configuré avant de continuer.**
+
+***
+
+## **Exigences minimales**
+
+**Version du serveur PADS4 :** **2025.1 ou ultérieure**
+
+**Assurez-vous que votre serveur répond aux exigences minimales de version avant de procéder à l'installation.**
+
+***
+
+## **Configuration initiale**
+
+Lorsque vous **allumez** le Samsung EMDX pour la première fois, un **assistant de configuration** démarrera.
+
+**Si l'assistant de configuration ne démarre pas, effectuez une réinitialisation d'usine avant de continuer.**
+
+***
+
+## **Effectuer une réinitialisation d'usine**
+
+<Steps>
+  <Step title="Première étape">
+    Réinitialisez l'appareil en maintenant les touches PAIRING et MODE pendant environ 5 secondes, qui se trouvent à l'arrière de l'écran.
+
+    Ce processus prendra environ 10 secondes pour se terminer.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Ensuite, appuyez à nouveau sur le bouton d'alimentation, ce qui démarrera l'écran.
+  </Step>
+
+  <Step title="Troisième étape">
+    L'appareil devrait maintenant être réinitialisé et afficher de nouveaux codes QR qui peuvent être scannés.
+  </Step>
+</Steps>
+
+**L'appareil redémarrera et affichera l'écran de bienvenue / les codes QR à scanner pour l'application mobile.**
+
+***
+
+## **Installation de l'application mobile**
+
+<Info>
+  Actuellement, vous devrez utiliser une application mobile pour utiliser l'écran, car cet écran ne prend pas en charge l'interactivité par d'autres moyens. Pour télécharger la dernière version depuis l'app store, scannez le code QR sur l'écran.
+</Info>
+
+## **Configurer l'écran**
+
+<Info>
+  Une fois que vous avez l'application mobile, vous pouvez configurer l'écran. Avant de commencer, assurez-vous d'activer le Bluetooth et la Localisation sur votre téléphone mobile (la Localisation peut être désactivée à la fin de ce processus).
+</Info>
+
+<Steps>
+  <Step title="Première étape">
+    Démarrez l'application mobile de Samsung sur votre appareil mobile.
+  </Step>
+
+  <Step title="Deuxième étape">
+    Acceptez les autorisations requises.
+  </Step>
+
+  <Step title="Troisième étape">
+    Scannez le code QR qui est actuellement affiché au bas de l'écran.
+  </Step>
+
+  <Step title="Quatrième étape">
+    Acceptez la demande de connexion de l'écran via Bluetooth.
+  </Step>
+
+  <Step title="Cinquième étape">
+    Pour configurer la connexion Wi-Fi sur l'écran, vous devez choisir une connexion à laquelle votre téléphone mobile est également connecté (nécessite la Localisation).
+
+    <Note>
+      *Assurez-vous de choisir une connexion qui***\_NE NÉCESSITE PAS\_** *d'identifiants de compte (seul le mot de passe Wi-Fi est autorisé)*
+    </Note>
+  </Step>
+
+  <Step title="Sixième étape">
+    Acceptez l'accord de confidentialité et choisissez "Configuration manuelle"
+  </Step>
+
+  <Step title="Septième étape">
+    Définissez un code PIN pour l'appareil et réglez l'orientation de l'appareil sur **paysage.**
+  </Step>
+
+  <Step title="Huitième étape">
+    Configurez le mode veille sur **désactivé.**
+  </Step>
+
+  <Step title="Neuvième étape">
+    Désactivez **off** la veille réseau et réglez la date et l'heure de l'appareil sur automatique.
+  </Step>
+
+  <Step title="Dixième étape">
+    Réglez la minuterie de rafraîchissement quotidien et définissez le lecteur de contenu sur **custom**.
+  </Step>
+
+  <Step title="Onzième étape">
+    Définissez maintenant un nom pour l'appareil, et il apparaîtra sous **devices** dans l'application.
+  </Step>
+</Steps>
+
+## **Installation de PADS4 Viewer**
+
+<Note>
+  Pour installer l'application PADS4 Viewer, vous devez définir l'URL du serveur où l'application est hébergée. Cela fonctionne comme d'autres écrans Samsung, mais au lieu de le faire directement sur l'écran, vous avez besoin de l'application mobile.
+</Note>
+
+<Steps>
+  <Step title="Première étape">
+    Démarrez l'application mobile de Samsung
+  </Step>
+
+  <Step title="Deuxième étape">
+    Sélectionnez l'écran que vous souhaitez utiliser
+  </Step>
+
+  <Step title="Troisième étape">
+    Sous "Type de lecteur" en bas de l'écran, assurez-vous qu'il est sur "CustomApp"
+  </Step>
+</Steps>
+
+<Tip>
+  Si l'écran est en veille, cliquez sur le bouton "Réveiller" (si cela ne fonctionne pas, vous devez appuyer sur le bouton d'alimentation de l'écran).
+</Tip>
+
+<Steps>
+  <Step title="Quatrième étape">
+    **Spécifiez l'URL de votre serveur PADS4 :**
+
+    ```
+    http://<server>/PADS4/Apps/tizen/Epaper
+    https://<server>/PADS4/Apps/tizen/Epaper
+    ```
+
+    `Replace <server>` avec l'**adresse IP** ou le **nom de domaine** de votre **PADS4 Server**.\
+    **Assurez-vous que "PADS4" est en MAJUSCULES, sinon la connexion échouera en raison de la sensibilité à la casse.**
+  </Step>
+</Steps>
+
+<Steps>
+  <Step title="Cinquième étape">
+    Cliquez sur "Installer"
+  </Step>
+
+  <Step title="Sixième étape">
+    L'écran affichera maintenant le logo PADS4 après une minute avec le nom du visualiseur et l'état de la connexion en bas à gauche de l'écran.
+  </Step>
+</Steps>
+
+***
+
+## **Ajustement des paramètres de PADS4 Viewer**
+
+**En raison du taux de rafraîchissement d'environ 30 secondes, cela n'est pas pris en charge directement sur le panneau lui-même.**
+
+***
+
+## **Fonctionnalités prises en charge et limitations**
+
+### **Fonctionnalités générales**
+
+| Fonctionnalité | Description                                                                                     |
+| :------------: | :---------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel** – Le visualiseur HTML5 se met à jour automatiquement. |
+|        ✅       | **Mode hors ligne** – Lit le contenu programmé pendant **7 jours** en mode hors ligne.          |
+
+### **Fonctionnalités de l'appareil**
+
+| Fonctionnalité | Description                                                                                                                 |
+| :------------: | :-------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mode portrait** – Réglez la rotation sur **270°** dans les paramètres du visualiseur. N'utilisez **PAS** la rotation SSP. |
+|        ✅       | **Cluster Viewer** – Peut être utilisé dans une **configuration en cluster**.                                               |
+|        ✅       | **Bloquer la télécommande** – Empêche le contrôle non autorisé de l'écran.                                                  |
+|        ✅       | **Wake on LAN** – Pris en charge.                                                                                           |
+|        ❌       | **Éteindre l'écran** – Non pris en charge.                                                                                  |
+
+### **Prise en charge vidéo et contenu**
+
+| Fonctionnalité | Description                                                                       |
+| :------------: | :-------------------------------------------------------------------------------- |
+|        ❌       | **Mode vidéo 4K** – Activé via **PADS4 CTRL Center**.                             |
+|        ❌       | **Lecture vidéo transparente** – **Pris en charge** en **Mode Paysage**.          |
+|        ❌       | **Streaming** – Prend en charge **HTTP, HLS, RTP, UDP**.                          |
+|        ❌       | **Ajustement de la vitesse de lecture** – Non pris en charge.                     |
+|        ❌       | **Tout contenu nécessitant un taux de rafraîchissement supérieur à 30 secondes.** |
+
+### **Gestion des appareils**
+
+| Fonctionnalité | Description                                          |
+| :------------: | :--------------------------------------------------- |
+|        ✅       | **Gestion à distance via PADS4 CTRL Center**         |
+|        ✅       | **Surveillance de l'état de connexion et alertes**   |
+|        ✅       | **Prise en charge du redémarrage** – Pris en charge. |
+|        ❌       | **Prise en charge de l'arrêt** – Non pris en charge. |
+
+***
+
+## **Limitations générales**
+
+| **Considération**            |                                                                                                                                                                     |
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Taux de rafraîchissement** | Le taux de rafraîchissement de l'écran est d'environ une fois toutes les 30 secondes.                                                                               |
+| **Contenu dynamique**        | Les écrans prennent en charge l'exécution de contenu dynamique mais ne peuvent afficher qu'une image en prenant une capture d'écran de ce contenu dynamique         |
+| **Fournisseurs de données**  | Seules les données statiques sont prises en charge ; les données ne peuvent être mises à jour que si le temps est supérieur au taux de rafraîchissement de l'écran. |
