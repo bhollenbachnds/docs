@@ -9,18 +9,18 @@ Avant de continuer, prenez note des points suivants :
 * **"My Workspace" is not supported** lors de l'utilisation d'un principal de service.
 * **Only embedding of reports and dashboards is supported**.
 * **Users cannot sign in** au portail Power BI en utilisant un principal de service.
-* **Power BI Admin rights are required** pour activer le principal de service dans les **Developer settings**.
+* **Power BI Admin rights are required** pour activer le principal de service dans **Developer settings**.
 * **Dataflows management is not supported**.
 * **Minimum browser versions required** :
-  * Chrome: **61**
-  * Firefox: **60**
-  * Edge: **88**
+  * Chrome: **95**
+  * Firefox: **94**
+  * Edge: **120**
 * **Workspaces require capacities**, ce qui peut entraîner des coûts supplémentaires.
 
 Pour plus de détails, visitez :\
 [Power BI Embedded Documentation](https://learn.microsoft.com/en-us/power-bi/developer/embedded/move-to-production)
 
-Ne pas définir une capacité peut entraîner un **warning above your reports/dashboards** ou les empêcher de s'afficher dans le **PADS4 Viewer**.
+L'absence de définition d'une capacité peut entraîner un **warning above your reports/dashboards** ou les empêcher de s'afficher dans le **PADS4 Viewer**.
 
 ***
 
@@ -70,7 +70,7 @@ PADS4 nécessite les valeurs suivantes pour l'intégration de Power BI :
 | **Directory (Tenant) ID**   | App Registration Overview |
 | **Client Secret**           | Certificates & Secrets    |
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIClientID.png" alt="" title="" />
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIClientID.png" alt={true} title={true} />
 
 ***
 
@@ -86,11 +86,9 @@ Pour utiliser le principal de service pour l'intégration de Power BI, suivez ce
 6. **Choisissez la portée** :
    * **Entire organization** (par défaut).
    * **Specific security groups** (si un groupe de sécurité a été créé).
-7. **Développez** **Allow Service Principals to Use Power BI APIs**.
-8. **Activez** **Allow Service Principals to Use Power BI APIs**.
-9. **Cliquez sur Save**.
+7. **Cliquez sur Save**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIAdminportal.png" alt="" title="" />
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIAdminportal.png" alt={true} title={true} />
 
 ***
 
@@ -105,21 +103,21 @@ Pour permettre à PADS4 d'accéder aux rapports et tableaux de bord Power BI, le
 3. **Trouvez l'espace de travail** que vous souhaitez utiliser et **open More Options**.
 4. **Sélectionnez** **Workspace Access**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBiWorkspaceaccess.png" alt="" title="" />
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBiWorkspaceaccess.png" alt={true} title={true} />
 
 5. **Cliquez sur** **Add People or Groups**.
 6. **Recherchez** le **App Registration name** (créé dans Azure).
 7. **Ajoutez-le en tant que** **Member or Admin**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBiAddPeople.png" alt="" title="" />
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBiAddPeople.png" alt={true} title={true} />
 
-8. **Cliquez sur Enregistrer**.
+8. **Cliquez sur Save**.
 
 ***
 
 ## **5. Récupérer les ID d'espace de travail et de rapport/tableau de bord Power BI**
 
-Pour afficher le contenu Power BI dans PADS4, vous avez besoin de l'**ID d'espace de travail** et de l'**ID de rapport/tableau de bord**.
+Pour afficher le contenu Power BI dans PADS4, vous avez besoin de l'**Workspace ID** et **ID du rapport/tableau de bord**.
 
 ### **Trouvez les ID dans l'URL Power BI**
 
@@ -132,10 +130,10 @@ Pour afficher le contenu Power BI dans PADS4, vous avez besoin de l'**ID d'espac
 https://app.powerbi.com/groups/2a72e361-1e1a-43ed-a048-b44b8d2baaae/reports/d4a2c463-c469-4a58-906c-74a7bbe158ba/ReportSectiond8ab5d035cceb8586528?experience=power-bi
 ```
 
-* **ID d'espace de travail** : Se trouve **entre** `groups/` **et** `/reports`.
-* **ID de rapport** : Se trouve **entre** `/reports/` **et** `/ReportSection`.
+* **ID de l'espace de travail** : Trouvé **entre** `groups/` **et** `/reports`.
+* **ID du rapport** : Trouvé **entre** `/reports/` **et** `/ReportSection`.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIReports.png" alt="" title="" />
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIReports.png" alt={true} title={true} />
 
 #### **Exemple de tableaux de bord :**
 
@@ -143,16 +141,16 @@ https://app.powerbi.com/groups/2a72e361-1e1a-43ed-a048-b44b8d2baaae/reports/d4a2
 https://app.powerbi.com/groups/947c4e75-b0c4-4488-aab9-ffc2b67285db/dashboards/ed6ae326-b545-44ec-8524-f951f94a0fd2?experience=power-bi
 ```
 
-* **ID d'espace de travail** : Se trouve **entre** `groups/` **et** `/dashboards`.
-* **ID de tableau de bord** : Se trouve **après** `/dashboards/`.
+* **ID de l'espace de travail** : Trouvé **entre** `groups/` **et** `/dashboards`.
+* **ID du tableau de bord** : Trouvé **après** `/dashboards/`.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIDashboard.png" alt="" title="" />
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIDashboard.png" alt={true} title={true} />
 
 ***
 
 ## **6. Ajouter l'intégration Power BI dans PADS4 CTRL Center**
 
-### **Étape 1 : Enregistrer l'application dans le gestionnaire d'identifiants PADS4**
+### **Étape 1 : Enregistrer l'application dans PADS4 Credential Manager**
 
 1. **Connectez-vous à** **PADS4 CTRL Center**.
 2. **Ouvrez** **Credentials** sous le **menu Administration**.
@@ -183,11 +181,11 @@ https://app.powerbi.com/groups/947c4e75-b0c4-4488-aab9-ffc2b67285db/dashboards/e
    * **Type** (**Report ou Dashboard**).
    * **Report/Dashboard ID**.
 
-<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBiRegScreen.png" alt="" title="" />
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBiRegScreen.png" alt={true} title={true} />
 
 5. **Cliquez sur** **Create**.
 
-Cela **génère un Token ID**, qui sera utilisé dans les **Web elements** de PADS4.
+Cela **génère un Token ID**, qui sera utilisé dans les **Web elements**.
 
 <img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIReference.png" />
 
