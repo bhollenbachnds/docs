@@ -270,16 +270,11 @@
                       "ctrl-centre/administration/credentials",
 					  "ctrl-centre/administration/teams",
 					  "ctrl-centre/administration/Power-BI",
+                      "ctrl-centre/administration/meta/create-meta-app",
 					  "ctrl-centre/administration/credentials/active-directory",
                       "ctrl-centre/administration/Enable-SSO"
                     ]
                   },
-				  {
-                    "group": "Meta",
-                    "pages": [
-                      "ctrl-centre/administration/meta/create-meta-app"
-                    ]
-				  },
                   {
                     "group": "User Management",
                     "pages": [
