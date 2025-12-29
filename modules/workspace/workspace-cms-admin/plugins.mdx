@@ -11,6 +11,10 @@ Use this plugin to connect an **Active Directory (LDAP)** server to your PADS4 e
 ![Active Directory Settings](/mnt/data/image.png)
 
 - Enter your **LDAP server**, **username**, and **password** to establish a secure connection.
+
+  <Info>
+    The LDAP server address requires to have the following format: **LDAP://**\<servername\>
+  </Info>
 - Once connected, you can import users from Active Directory directly through the **Users** tab in each module.
 
 ---
@@ -33,7 +37,8 @@ Configure a connection to either:
 - **Azure Active Directory**
 - **Active Directory Federation Services (ADFS)**
 
-This enables **Single Sign-On (SSO)** capabilities, allowing users to authenticate using their Windows credentials.  
+This enables **Single Sign-On (SSO)** capabilities, allowing users to authenticate using their Windows credentials.
+
 > **Note:** You will need to create and configure the appropriate groups within your identity provider to manage access permissions effectively.
 
 ---
@@ -48,8 +53,7 @@ This plugin links the **PADS4 Workspace** module to your organization's calendar
 
 ### Supported Calendar Systems:
 
-- Microsoft Exchange 365  
-- Microsoft Exchange On-Premises  
-- Google Calendar  
+- Microsoft Exchange 365
+- Microsoft Exchange On-Premises
+- Google Calendar
 - iPorta Calendar
-
