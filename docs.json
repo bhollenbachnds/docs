@@ -270,8 +270,14 @@
                       "ctrl-centre/administration/credentials",
 					  "ctrl-centre/administration/teams",
 					  "ctrl-centre/administration/Power-BI",
-                      "ctrl-centre/administration/meta/create-meta-app"
-                    ]
+                      "ctrl-centre/administration/meta/create-meta-app",
+					  {
+					"group": "SMTP-Oauth2",
+					"pages": [
+					  "ctrl-centre/administration/smtp-oauth2/google"
+						]
+					  }
+					]
                   },
 				  {
                     "group": "Identity",
