@@ -252,14 +252,19 @@
                   "ctrl-centre/dashboard",
                   "ctrl-centre/content",
                   "ctrl-centre/schedules",
-                  "ctrl-centre/viewers",
-                  "ctrl-centre/sensors",
+				  {
+				"group": "Viewers",
+				"pages": [
+                  "ctrl-centre/viewers/viewers"
+					]
+			  },
+				  "ctrl-centre/sensors",
                   "ctrl-centre/incidents",
                   "ctrl-centre/clusters",
                   "ctrl-centre/viewer-variables",
                   "ctrl-centre/licenses",
                   "ctrl-centre/domains"
-                ]
+					]
               },
               {
                 "group": "Administration",
@@ -288,7 +293,7 @@
 					  "ctrl-centre/administration/microsoft-entra-id",
 					  "ctrl-centre/administration/credentials/role-mapping",
 					  {
-						  "group": "SCIM Configuration",
+					"group": "SCIM Configuration",
 					"pages": [
 					  "ctrl-centre/administration/credentials/SCIM/microsoft-entra",
 					  "ctrl-centre/administration/credentials/SCIM/okta",
