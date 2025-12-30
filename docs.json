@@ -285,7 +285,7 @@
                     "pages": [
 					  "ctrl-centre/administration/credentials/active-directory",
 					  "ctrl-centre/administration/credentials/Okta",
-					  "ctrl-centre/administration/Enable-SSO",
+					  "ctrl-centre/administration/microsoft-entra-id",
 					  "ctrl-centre/administration/credentials/role-mapping",
 					  {
 						  "group": "SCIM Configuration",
