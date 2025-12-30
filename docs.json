@@ -327,7 +327,7 @@
                 ]
               },
               {
-                "group": "IoT",
+                "group": "Sensors & IoT",
                 "pages": [
                   "ctrl-centre/sensors/How-to-use-Sensors",
                   "ctrl-centre/sensors/How-to-create-Incidents",
