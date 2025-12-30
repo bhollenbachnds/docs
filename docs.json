@@ -291,7 +291,8 @@
 						  "group": "SCIM Configuration",
 					"pages": [
 					  "ctrl-centre/administration/credentials/SCIM/microsoft-entra",
-					  "ctrl-centre/administration/credentials/SCIM/okta"
+					  "ctrl-centre/administration/credentials/SCIM/okta",
+					  "ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
 						]
 					  }
 					]

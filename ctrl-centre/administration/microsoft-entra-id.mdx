@@ -1,5 +1,8 @@
-This manual provides step-by-step instructions to configure **Single Sign-On** (SSO) for **PADS4** using **Microsoft Entra ID** (formerly Azure Active Directory).
+---
+title: "Microsoft Entra ID"
+---
 
+This manual provides step-by-step instructions to configure **Single Sign-On** (SSO) for **PADS4** using **Microsoft Entra ID** (formerly Azure Active Directory).
 
 ---
 
@@ -9,34 +12,78 @@ To enable access to PADS4 through Microsoft Entra:
 
 ### **Step-by-step**
 
-1. Go to [https://portal.azure.com](https://portal.azure.com) and sign in as an administrator.
+1. Go to https://portal.azure.com and sign in as an administrator.
 2. In the left menu, select **Microsoft Entra ID**.
-<img height="200" src="/images/ctrl-centre/sso/1.png" />
-3. Select **Enterprise Applications**.
-<img height="200" src="/images/ctrl-centre/sso/2.png" />
-4. Click **+ New Application**.
-<img height="200" src="/images/ctrl-centre/sso/3.png" />
-5. Choose **"Create your own application"**.
-<img height="200" src="/images/ctrl-centre/sso/4.png" />
-6. Fill in the information for the form 
-<img height="200" src="/images/ctrl-centre/sso/5.png" />
 
-<img height="200" src="/images/ctrl-centre/sso/6.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/1.png"
+/>
+
+3. Select **Enterprise Applications**.
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/2.png"
+/>
+
+4. Click **\+ New Application**.
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/3.png"
+/>
+
+5. Choose **"Create your own application"**.
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/4.png"
+/>
+
+6. Fill in the information for the form
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/5.png"
+/>
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/6.png"
+/>
 
 7. Click Create
-
 
 ### **Assign Users & Groups**
 
 8. Open your newly created application by going back to **Enterprise Applications** and searching for it.
-<img height="200" src="/images/ctrl-centre/sso/8.png" />
-9. Select **Users and Groups**.
-   a. Click **Add user/group**.
-   <img height="200" src="/images/ctrl-centre/sso/9.png" />
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/8.png"
+/>
+
+9. Select **Users and Groups**. a. Click **Add user/group**.
+
+   <img
+     height="200"
+     src="/images/ctrl-centre/sso/9.png"
+   />
+
    b. Select **None Selected**, then search and select users or groups.
-   <img height="200" src="/images/ctrl-centre/sso/10.png" />
+
+   <img
+     height="200"
+     src="/images/ctrl-centre/sso/10.png"
+   />
+
    c. Click **Select**, then **Assign**.
-   <img height="200" src="/images/ctrl-centre/sso/11.png" />
+
+   <img
+     height="200"
+     src="/images/ctrl-centre/sso/11.png"
+   />
 
 > 💡 Tip: Create a dedicated **PADS4 CMS group** in Windows Server AD and assign it here.
 
@@ -44,32 +91,50 @@ To enable access to PADS4 through Microsoft Entra:
 
 10. Go to **Single sign-on** in the left pane.
 11. Choose **SAML**.
-<img height="200" src="/images/ctrl-centre/sso/14.png" />
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/14.png"
+/>
+
 12. Under **Basic SAML Configuration**, click **Edit** and add:
 
-* **Identifier (Entity ID)**:
-  `https://romy.pads365.com/saml`
-* **Reply URL**:
-  `https://romy.pads365.com/rdx/nds.services.authentication.integration/api/v1/Saml2/Acs`
+- **Identifier (Entity ID)**: `https://romy.pads365.com/saml`
+- **Reply URL**: `https://romy.pads365.com/rdx/nds.services.authentication.integration/api/v1/Saml2/Acs`
 
 Click **Save**.
 
-<img height="200" src="/images/ctrl-centre/sso/15.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/15.png"
+/>
 
 ---
 
 ## **2. Attributes & Claims Setup**
 
 1. While in **Single sign-on**, go to **Attributes & Claims** and click **Edit**.
-<img height="200" src="/images/ctrl-centre/sso/16.png" />
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/16.png"
+/>
+
 2. Ensure claims match the required structure for successful login.
-<img height="200" src="/images/ctrl-centre/sso/17.png" />
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/17.png"
+/>
+
 3. Specifically, configure the **group claim** properly:
 
-> ⚠️ If the group claim is misconfigured, the login will redirect with this error:
-> `No account is defined for your authentication request`
+> ⚠️ If the group claim is misconfigured, the login will redirect with this error: `No account is defined for your authentication request`
 
-<img height="200" src="/images/ctrl-centre/sso/18.png" />
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/18.png"
+/>
 
 ---
 
@@ -79,35 +144,39 @@ Click **Save**.
 
 1. Log in to your **PADS4 Dashboard** in a web browser.
 2. Select **Credentials** from the left menu.
-<img height="200" src="/images/ctrl-centre/sso/19.png" />
-3. Go to **Providers > Identity > Microsoft Entra**.
-<img height="200" src="/images/ctrl-centre/sso/20.png" />
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/19.png"
+/>
+
+3. Go to **Providers \> Identity \> Microsoft Entra**.
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/20.png"
+/>
 
 ### **Enter Provider Information**
 
 Fill in the following fields using values from Azure:
 
-* **Name**: Friendly label shown on login page
+- **Name**: Friendly label shown on login page
+- **Federation Service Identifier**:
+  - From **Single sign-on** \> **Set up your_app** section
+  - Copy the **Azure AD Identifier**
+- **Reply URL**: Your PADS environment (e.g., `https://pads4serverip`)
+- **Metadata URL**:
+  - Found under **SAML Certificates**
+  - Copy the **App Federation Metadata URL**
+- **Certificates**:
+  - Upload the raw **Microsoft Entra certificate** (.cer)
+  - Upload the **private key** certificate (.pfx) used for HTTPS
 
-* **Federation Service Identifier**:
-
-  * From **Single sign-on** > **Set up your\_app** section
-  * Copy the **Azure AD Identifier**
-
-* **Reply URL**:
-  Your PADS environment (e.g., `https://pads4serverip`)
-
-* **Metadata URL**:
-
-  * Found under **SAML Certificates**
-  * Copy the **App Federation Metadata URL**
-
-* **Certificates**:
-
-  * Upload the raw **Microsoft Entra certificate** (.cer)
-  * Upload the **private key** certificate (.pfx) used for HTTPS
-
-  <img height="200" src="/images/ctrl-centre/sso/21.png" />
+  <img
+    height="200"
+    src="/images/ctrl-centre/sso/21.png"
+  />
 
 Click **Create** to save.
 
@@ -120,28 +189,42 @@ Click **Create** to save.
 
 ### **Find Group ID in Azure**
 
-3. In [portal.azure.com](https://portal.azure.com):
-   a. Go to **Microsoft Entra ID**
-   b. Select **Groups**
-   c. Search for your group
-   d. Copy the **Object ID** (this is the Group ID)
-   <img height="200" src="/images/ctrl-centre/sso/28.png" />
+3. In [portal.azure.com](https://portal.azure.com): a. Go to **Microsoft Entra ID** b. Select **Groups** c. Search for your group d. Copy the **Object ID** (this is the Group ID)
+
+   <img
+     height="200"
+     src="/images/ctrl-centre/sso/28.png"
+   />
 
 ### **Create Group Mapping**
 
 4. In PADS4, click **New Group**
-<img height="200" src="/images/ctrl-centre/sso/29.png" />
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/29.png"
+/>
+
 5. Enter the copied **Group ID**
 6. Assign roles from the dropdown list
-<img height="200" src="/images/ctrl-centre/sso/30.png" />
+
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/30.png"
+/>
+
 7. Save the group. You can add **multiple roles per group**.
 
 ---
 
 ## **5. Finalizing SSO**
 
-* **Logout and refresh** the PADS4 Portal
-* The **SSO Login button** should now be visible
+- **Logout and refresh** the PADS4 Portal
+- The **SSO Login button** should now be visible
 
-<img height="200" src="/images/ctrl-centre/sso/32.png" />
-* You can now **sign in using Azure credentials**
+<img
+  height="200"
+  src="/images/ctrl-centre/sso/32.png"
+/>
+
+- You can now **sign in using Azure credentials**
