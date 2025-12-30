@@ -327,12 +327,24 @@
                 ]
               },
               {
-                "group": "Sensors",
+                "group": "IoT",
                 "pages": [
                   "ctrl-centre/sensors/How-to-use-Sensors",
                   "ctrl-centre/sensors/How-to-create-Incidents",
                   "ctrl-centre/sensors/Sensor-Settings",
                   {
+					"group": "Overview",
+                    "pages": [
+                      
+					]
+				  },
+				  {
+					"group": "Gateways",
+                    "pages": [
+                      "ctrl-centre/sensors/gateway/philips-hue"
+					]
+				  },
+				  {
                     "group": "Certified Sensors",
                     "pages": [
                       "ctrl-centre/sensors/certified-sensors/Certified-Sensors",

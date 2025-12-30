@@ -1,0 +1,50 @@
+---
+title: "Philips Hue"
+---
+
+## How to add the Philips Hue Bridge to PADS4
+
+To add a Philips Hue Bridge, you must plug in the power cable and ethernet cable in the Bridge. After a couple moments, the Bridge should be up and running and display at least the following indicators which means the Bridge is started and connected to your local network.
+
+![Iot Hue1](/images/ctrl-centre/sensors/gateway/iot-hue1.png)
+
+Then, to register it in your PADS4 Server IoT application, you must discover the Bridge on your network to retrieve its IP-address. There are a few ways to do this:
+
+- Use a DNS discovery app to find the Philips Bridge in your network.
+- Use their discover process by visiting https://discovery.meethue.com/.
+- Log into the (wireless) network router and look for Philips Hue (or similar) in the DHCP table.
+
+After you have gotten a hold of the IP-address of the Philips Hue Bridge, ensure you can access it by visiting the IP-address on device that's on the same network as the Bridge. It may look like the following, but it doesn't have to. Just make sure you retrieve any information from it.
+
+![Iot Hue2](/images/ctrl-centre/sensors/gateway/iot-hue2.png)
+
+- You can use the IP-address in the PADS4 IoT application to add the gateway to your PADS4 Server and, optionally, select the proxy that may connect to the Philips Hue Bridge:
+
+![Iot Hue3](/images/ctrl-centre/sensors/gateway/iot-hue3.png)
+
+- When you add the Philips Hue Bridge as a gateway in PADS4 Ctrl Center, you may see an error message as below.
+
+![Iot Hue4](/images/ctrl-centre/sensors/gateway/iot-hue4.png)
+
+- In that case, you must click the Philips button on top of the Bridge before you add the gateway to put the Bridge in linking mode and allow PADS4 to connect with it.
+- If there are any devices connected to it or that will connect to it later, you may see them in the PADS IoT application on the devices list. That may look like this:
+
+![Iot Hue5](/images/ctrl-centre/sensors/gateway/iot-hue5.png)
+
+## Auto-Discover Devices
+
+PADS4 allows you to automatically pair Philips devices (sensors and LEDs/lights) with the Philips Hue Bridge without using the Philips Hue Bridge. To do this you must click the Discover Devices button just above the list of gateways in PADS4 Ctrl Center, but only after you have set your sensors and/or LEDs into pairing mode.
+
+![Iot Hue6](/images/ctrl-centre/sensors/gateway/iot-hue6.png)
+
+<Note>
+  This is not required to get the devices into PADS4. You can still pair the device using the Philips Hue app and PADS4 will automatically synchronize the devices from the Bridge into PADS4 Ctrl Center.
+</Note>
+
+### Philips Hue Motion Sensor
+
+To set the Philips Hue Motion Sensor into pairing mode, to must hold the '**setup**' button on the back of the sensor for 3 seconds. You should see a small light blink on the front of the sensor. You can now click "**Discover Devices**" to pair it with the gateway and automatically synchronize the devices into PADS4.
+
+### Philips Hue LED Strip
+
+To add the Philips Hue LED Strip to your gateway, you must plug the LED Strip into a power socket. If the device wasn't linked to some other gateway before, it's already (automatically) in pairing mode. You can now click "**Discover Devices**" to pair it with the gateway which automatically synchronize the devices into PADS4 after a minute or so.
