@@ -1,0 +1,50 @@
+---
+- title: Philips Hue
+---
+
+## Comment ajouter le Philips Hue Bridge à PADS4
+
+Pour ajouter un Philips Hue Bridge, vous devez brancher le câble d'alimentation et le câble Ethernet au Bridge. Après quelques instants, le Bridge devrait être opérationnel et afficher au moins les indicateurs suivants, ce qui signifie que le Bridge est démarré et connecté à votre réseau local.
+
+![Iot Hue1](/images/ctrl-centre/sensors/gateway/iot-hue1.png)
+
+Ensuite, pour l'enregistrer dans votre application PADS4 Server IoT, vous devez découvrir le Bridge sur votre réseau pour récupérer son adresse IP. Il existe plusieurs façons de procéder :
+
+* Utiliser une application de découverte DNS pour trouver le Philips Bridge dans votre réseau.
+* Utiliser leur processus de découverte en visitant [https://discovery.meethue.com/](https://discovery.meethue.com/).
+* Se connecter au routeur réseau (sans fil) et rechercher Philips Hue (ou similaire) dans la table DHCP.
+
+Après avoir obtenu l'adresse IP du Philips Hue Bridge, assurez-vous de pouvoir y accéder en visitant l'adresse IP sur un appareil qui se trouve sur le même réseau que le Bridge. Cela peut ressembler à ce qui suit, mais ce n'est pas obligatoire. Assurez-vous simplement d'en récupérer des informations.
+
+![Iot Hue2](/images/ctrl-centre/sensors/gateway/iot-hue2.png)
+
+* Vous pouvez utiliser l'adresse IP dans l'application PADS4 IoT pour ajouter la passerelle à votre PADS4 Server et, éventuellement, sélectionner le proxy qui peut se connecter au Philips Hue Bridge :
+
+![Iot Hue3](/images/ctrl-centre/sensors/gateway/iot-hue3.png)
+
+* Lorsque vous ajoutez le Philips Hue Bridge comme passerelle dans PADS4 Ctrl Center, vous pouvez voir un message d'erreur comme ci-dessous.
+
+![Iot Hue4](/images/ctrl-centre/sensors/gateway/iot-hue4.png)
+
+* Dans ce cas, vous devez appuyer sur le bouton Philips situé sur le dessus du Bridge avant d'ajouter la passerelle pour mettre le Bridge en mode de liaison et permettre à PADS4 de s'y connecter.
+* S'il y a des appareils connectés ou qui s'y connecteront ultérieurement, vous pourrez les voir dans l'application PADS IoT dans la liste des appareils. Cela peut ressembler à ceci :
+
+![Iot Hue5](/images/ctrl-centre/sensors/gateway/iot-hue5.png)
+
+## Découverte automatique des appareils
+
+PADS4 vous permet d'associer automatiquement les appareils Philips (capteurs et LED/lumières) au Philips Hue Bridge sans utiliser le Philips Hue Bridge. Pour ce faire, vous devez cliquer sur le bouton Discover Devices juste au-dessus de la liste des passerelles dans PADS4 Ctrl Center, mais seulement après avoir mis vos capteurs et/ou LED en mode d'appairage.
+
+![Iot Hue6](/images/ctrl-centre/sensors/gateway/iot-hue6.png)
+
+<Note>
+  Cela n'est pas nécessaire pour intégrer les appareils dans PADS4. Vous pouvez toujours associer l'appareil à l'aide de l'application Philips Hue et PADS4 synchronisera automatiquement les appareils du Bridge vers PADS4 Ctrl Center.
+</Note>
+
+### Capteur de mouvement Philips Hue
+
+Pour mettre le capteur de mouvement Philips Hue en mode d'appairage, vous devez maintenir le bouton '**setup**' à l'arrière du capteur pendant 3 secondes. Vous devriez voir une petite lumière clignoter à l'avant du capteur. Vous pouvez maintenant cliquer sur "**Discover Devices**" pour l'associer à la passerelle et synchroniser automatiquement les appareils dans PADS4.
+
+### Bande LED Philips Hue
+
+Pour ajouter la bande LED Philips Hue à votre passerelle, vous devez brancher la bande LED à une prise de courant. Si l'appareil n'était pas lié à une autre passerelle auparavant, il est déjà (automatiquement) en mode d'appairage. Vous pouvez maintenant cliquer sur "**Discover Devices**" pour l'associer à la passerelle qui synchronisera automatiquement les appareils dans PADS4 après environ une minute.
