@@ -1,0 +1,69 @@
+---
+- title: Meta
+---
+
+Ce document suppose que le lecteur est familier avec la plateforme de développement Meta, y compris la façon de créer et de soumettre des applications pour examen.
+
+Les étapes ci-dessous expliquent comment créer et configurer une application Meta spécifiquement pour l'intégration avec **PADS4**.
+
+***
+
+## Créer une nouvelle application
+
+### Étape 1 : Accéder à la plateforme de développement Meta
+
+Accédez à la page des applications pour développeurs Meta :\
+[https://developers.facebook.com/apps](https://developers.facebook.com/apps)
+
+### Étape 2 : Créer une nouvelle application
+
+Cliquez sur le bouton **Créer une application**.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/create-app.png" />
+
+### Étape 3 : Sélectionner un portefeuille d'entreprise (Facultatif)
+
+Vous pouvez choisir un portefeuille d'entreprise. Cela peut également être sélectionné ultérieurement lors de la connexion à l'application avec un utilisateur.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/business-portfolio.png" />
+
+### Étape 4 : Choisir le cas d'utilisation
+
+Pour le cas d'utilisation, sélectionnez **Autre**.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/other.png" />
+
+### Étape 5 : Sélectionner le type d'application
+
+Choisissez **Entreprise** comme type d'application.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/business-app-type.png" />
+
+### Étape 6 : Saisir les détails de l'application
+
+Remplissez les détails requis de l'application. Vous pouvez également sélectionner un portefeuille d'entreprise ici si vous ne l'avez pas déjà fait.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/app-details.png" />
+
+### Étape 7 : Accéder au tableau de bord de l'application
+
+Une fois votre application créée, vous serez redirigé vers le **Tableau de bord**.
+
+Ajoutez le produit **Facebook Login for Business** en cliquant sur le bouton **Configurer** sur sa vignette.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/setup-button.png" />
+
+### Étape 8 : Configurer l'URI de redirection
+
+Naviguez vers **Paramètres** sous **Facebook Login for Business**.
+
+Dans le champ **URI de redirection OAuth valides**, saisissez ce qui suit :
+
+```
+https://<host>:<port>/credentials/generic/authorize/callback
+```
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/redirect.png" />
+
+* **Hôte** : Nom DNS ou adresse IP de votre PADS4 Ctrl Center
+* **Port** : (Facultatif) À inclure si votre PADS4 Ctrl Center n'utilise pas les ports HTTP/HTTPS par défaut
