@@ -274,7 +274,8 @@
 					  {
 					"group": "SMTP-Oauth2",
 					"pages": [
-					  "ctrl-centre/administration/smtp-oauth2/google"
+					  "ctrl-centre/administration/smtp-oauth2/google",
+                      "ctrl-centre/administration/smtp-oauth2/Microsoft"
 						]
 					  }
 					]
