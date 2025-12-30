@@ -275,7 +275,7 @@
 					"group": "SMTP-Oauth2",
 					"pages": [
 					  "ctrl-centre/administration/smtp-oauth2/google",
-                      "ctrl-centre/administration/smtp-oauth2/Microsoft"
+					  "ctrl-centre/administration/smtp-oauth2/Microsoft"
 						]
 					  }
 					]
@@ -285,8 +285,15 @@
                     "pages": [
 					  "ctrl-centre/administration/credentials/active-directory",
 					  "ctrl-centre/administration/credentials/Okta",
-					  "ctrl-centre/administration/Enable-SSO"
-                    ]
+					  "ctrl-centre/administration/Enable-SSO",
+					  "ctrl-centre/administration/credentials/role-mapping",
+					  {
+						  "group": "SCIM Configuration",
+					"pages": [
+					  "ctrl-centre/administration/credentials/SCIM/microsoft-entra"
+						]
+					  }
+					]
 				  },
                   {
                     "group": "User Management",
