@@ -7,7 +7,7 @@ With this change, we have also introduced Roles to further refine the user manag
 Roles will allow you to quickly assign a certain set of licenses and permissions to a user.
 
 <Warning>
-  The new user management system is not yet compatible with Legacy CMS and Workspace
+  The new user management system is not compatible with Legacy CMS and Workspace in PADS4 version 2025.1,**this has been added in PADS4 version 2025.2.** 
 </Warning>
 
 ## How to use roles in PADS4
@@ -34,13 +34,15 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 - In the Roles section, you will get the following overview of the roles that are available, including the default roles, which are explained below.
 
-![Role Overview Pn](/images/ctrl-centre/administration/user-management/role-overview.png)
+![Default Roles](/images/ctrl-centre/administration/user-management/default-roles.png)
 
 ## Default roles
 
-There are 5 default roles:
+<Note>
+  In PADS4 version 2025.1 there are five default roles, since PADS4 version 2025.2, five additionel roles have been added which are listed further in the article.
+</Note>
 
-### CMS Advanced users group
+### CMS Advanced users group 
 
 | Application  | Access            | Inheritance         |
 | ------------ | ----------------- | ------------------- |
@@ -75,6 +77,55 @@ There are 5 default roles:
 | ----------- | ----------------- | ----------- |
 | Content     | Read/Write/Delete |             |
 
+<Note>
+  With the release of PADS4 version 2025.2, the below default roles has been added.
+</Note>
+
+<Danger>
+  Do note that the **viewer roles** require an **Agent** or **System Management ( Only for on-offline status / removal of viewers )** license to be effective as the roles are purely to set permissions once access have been granted by the license that has been assisgned to the user.
+
+  You can choose to adjust the default viewer roles to add this license automaticly to the user which has this role assigned.
+</Danger>
+
+### Viewer manager group
+
+| Application      | Access     | Inheritance |
+| ---------------- | ---------- | ----------- |
+| Viewers          | Read/Write |             |
+| **Restrictions** |            |             |
+| No restrictions  |            |             |
+
+### Viewer observer group
+
+| Application                         | Access | Inheritance |
+| ----------------------------------- | ------ | ----------- |
+| Viewers                             | Read   |             |
+| **Restrictions**                    |        |             |
+| Unable to restart / reboot viewers  |        |             |
+| Unable to change access permissions |        |             |
+| Unable to change viewer settings    |        |             |
+
+### Viewer user group
+
+| Application                         | Access     | Inheritance |
+| ----------------------------------- | ---------- | ----------- |
+| Viewers                             | Read/Write |             |
+| **Restrictions**                    |            |             |
+| Unable to change access permissions |            |             |
+| Unable to change viewer settings    |            |             |
+
+### Workspace users group
+
+| Application | Access     | Inheritance |
+| ----------- | ---------- | ----------- |
+| Workspace   | Read/Write |             |
+
+### CMS 1.0 administrators group
+
+| Application | Access     | Inheritance |
+| ----------- | ---------- | ----------- |
+| CMS 1.0     | Read/Write |             |
+
 ## Customizing roles
 
 - You can edit these roles to your preferred configuration, or you can make your own Roles where you can specify any other roles that it is a member of, or assign certain licenses.
@@ -106,3 +157,13 @@ There are 5 default roles:
 - Hover your mouse on a template and click the three dots, click on **"Edit access"**
 
 ![Webdesigner Template Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-template-access.png)
+
+### Viewers & Viewer groups
+
+- In Tree view, right click on the viewer group and click on **"Edit Access"**
+
+![Treeview Perm](/images/ctrl-centre/administration/user-management/treeview-perm.png)
+
+- In Detail view, hover your mouse on either the viewer group or viewer and press the three dots to "**Edit access"**.
+
+![Detailviewer Perm](/images/ctrl-centre/administration/user-management/detailviewer-perm.png)
