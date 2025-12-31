@@ -169,7 +169,8 @@
                   {
                     "group": "LG",
                     "pages": [
-                      "certified-devices/lg/webOS-6",
+                      "certified-devices/lg/webOS-8",
+					  "certified-devices/lg/webOS-6",
                       "certified-devices/lg/webOS-4.1"
                     ]
                   },
