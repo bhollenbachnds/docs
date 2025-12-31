@@ -341,7 +341,8 @@
 				  {
 					"group": "Gateways",
                     "pages": [
-                      "ctrl-centre/sensors/gateway/philips-hue"
+                      "ctrl-centre/sensors/gateway/philips-hue",
+					  "ctrl-centre/sensors/gateway/gateway-proxy"
 					]
 				  },
 				  {

@@ -1,0 +1,39 @@
+---
+title: "Gateway Proxy"
+---
+
+## Introduction
+
+A **PADS4 Gateway Proxy** allows you to connect gateways from your local server to your PADS4 server on another (physical) location. Some device gateways or (PADS4) servers can only connect with third-party gateways when they are on the same local network due to (usually security) reasons. You can install a PADS4 Gateway Proxy on a Windows server/device to locally connect the gateway with and then connect your PADS4 server with the proxy to allow communication with those devices through the PADS4 server and the proxy.
+
+An example is a SaaS server; the server is not connected to the same LAN as a device hub (e.g. Philips Hue Hub), and the device hub does not allow connections outside of the LAN network. Then, you'll need to install the PADS4 Gateway Proxy on a server/computer on the same LAN as the device hub is to connect with it and add this proxy as a gateway on the domain of the SaaS server.
+
+### Setup a gateway proxy
+
+<Warning>
+  A proxy gateway cannot and should not be installed on the same server as the PADS4 server as this defeats the entire purpose of a proxy.
+</Warning>
+
+- Download our latest Device Gateway here: [PADS4-Device-Gateway](https://github.com/PADS4/PADS4-Device-Gateway/releases)
+- Execute `NDS.PackageManager.Setup.msi` from the **Prerequisites** folder. You need this manager to install the proxy later.
+
+  ![Gateway Proxy1](/images/ctrl-centre/sensors/gateway/gateway-proxy1.png)
+- After installation, double-click (execute) ` nds.device.gateway.ndspx` to install the proxy. The `NDS.Web.Launcher.DeviceProxy.ndspx` is installed automatically when installing the gateway package.
+
+![Gateway Proxy2](/images/ctrl-centre/sensors/gateway/gateway-proxy2.png)
+
+- Then, on the same device as where you installed the proxy, open a browser and visit http://localhost:8692/launcher. Fill in the details of your PADS4 Server to connect with. In **Client ID**, enter any name you want as long as it's unique to your other proxies – in case you have more than one.
+
+![Gateway Proxy3](/images/ctrl-centre/sensors/gateway/gateway-proxy3.png)
+
+- Click `Install`. It will start setting up the proxy. The following screenshot indicates a successful setup.
+
+![Gateway Proxy4](/images/ctrl-centre/sensors/gateway/gateway-proxy4.png)
+
+- Now in your PADS4 Web Portal you will see a gateway including the name you have set on the proxy.
+
+![Gateway Proxy5](/images/ctrl-centre/sensors/gateway/gateway-proxy5.png)
+
+- You can now use this proxy when required while adding a gateway:
+
+![Iot Hue3](/images/ctrl-centre/sensors/gateway/iot-hue3.png)
