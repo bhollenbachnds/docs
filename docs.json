@@ -334,9 +334,9 @@
                   "ctrl-centre/sensors/How-to-create-Incidents",
                   "ctrl-centre/sensors/Sensor-Settings",
                   {
-					"group": "Overview",
+					"group": "Workspace",
                     "pages": [
-                      
+                      "ctrl-centre/sensors/workspace/sensors-workspace"
 					]
 				  },
 				  {
