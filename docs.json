@@ -257,7 +257,7 @@
 				"group": "Viewers",
 				"pages": [
                   "ctrl-centre/viewers/viewers",
-				  "ctrl-centre/viewers/Permissions"
+				  "ctrl-centre/administration/user-management/Permissions"
 					]
 			  },
 				  "ctrl-centre/sensors",
