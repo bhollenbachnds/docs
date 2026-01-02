@@ -1,61 +1,63 @@
+---
+title: "Connecting to Microsoft Teams"
+---
 
-The **Microsoft Teams** data provider allows **PADS4** to connect to a **Microsoft Teams Azure environment** and retrieve scheduled **Teams meetings** for use in **PADS4 presentations**.  
+The **Microsoft Teams** data provider allows **PADS4** to connect to a **Microsoft Teams Azure environment** and retrieve scheduled **Teams meetings** for use in **PADS4 presentations**.
 
 ---
 
-### **Prerequisites**  
-Before setting up the **Microsoft Teams Data Provider**, ensure the following requirements are met:  
+### **Prerequisites**
 
-1. **SSL Certificate Setup**  
-   - Your **PADS4 server** must have an **SSL certificate** configured.  
-   - Communication must be established through **HTTPS**.  
-   - More details can be found in the **PADS4 Partner Portal** under _PADS4 and SSL Certificates_.  
+Before setting up the **Microsoft Teams Data Provider**, ensure the following requirements are met:
 
-2. **Azure IT Administrator Access**  
-   - You need an **Azure IT Administrator** to link the **PADS4 server** to the correct **Microsoft Teams Azure environment**.  
-
-3. **Microsoft Teams User with Proper Permissions**  
-   - The selected **Teams user** must have the necessary **permissions** and **licenses** to access **calendar information**.  
-
-4. **Microsoft Teams Configuration in PADS4**  
-   - Configure **Microsoft Teams credentials** in **PADS4 CTRL Center** under the **Credentials section**.  
-   - Ensure an **Azure Administrator** is available for the initial setup.  
+1. **SSL Certificate Setup**
+   - Your **PADS4 server** must have an **SSL certificate** configured.
+   - Communication must be established through **HTTPS**.
+   - More details can be found in the **PADS4 Partner Portal** under _PADS4 and SSL Certificates_.
+2. **Azure IT Administrator Access**
+   - You need an **Azure IT Administrator** to link the **PADS4 server** to the correct **Microsoft Teams Azure environment**.
+3. **Microsoft Teams User with Proper Permissions**
+   - The selected **Teams user** must have the necessary **permissions** and **licenses** to access **calendar information**.
+4. **Microsoft Teams Configuration in PADS4**
+   - Configure **Microsoft Teams credentials** in **PADS4 CTRL Center** under the **Credentials section**.
+   - Ensure an **Azure Administrator** is available for the initial setup.
 
 ---
 
-### **Steps to Add/Modify a Microsoft Teams Data Provider**  
+### **Steps to Add/Modify a Microsoft Teams Data Provider**
 
-#### **1. Start the Data Provider Wizard**  
-- Open the **Data Provider Wizard** in PADS4.  
-- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.  
-- Select **Microsoft Teams** as the **provider type**.  
+#### **1. Start the Data Provider Wizard**
 
----
-
-#### **2. Configure Microsoft Teams Connection Settings**  
-
-- **Teams Parameters – User Token**  
-  - Retrieve the **user token** from **PADS4 CTRL Center** under the **Credentials tab**.  
-  - If you have not configured the **Azure environment** and **Teams user**, follow the **PADS4 tutorial** for **Azure integration**.  
-  - Copy and paste the **user/refresh token** into the appropriate field.  
-
-- **Use a Different PADS4 Server (Optional)**  
-  - If you have multiple **PADS4 servers**, you can select a different one with an existing **Teams connection**.  
-
-- **Preview Data**  
-  - Click the **Preview** button to view the **current data** retrieved from the configured **Teams user**.  
+- Open the **Data Provider Wizard** in PADS4.
+- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Microsoft Teams** as the **provider type**.
 
 ---
 
-#### **3. Finalize the Setup**  
-- Click **Next** to continue.  
-- Complete the setup by following the remaining steps in the **Data Provider Wizard**.  
+#### **2. Configure Microsoft Teams Connection Settings**
+
+- **Teams Parameters – User Token**
+  - Retrieve the **user token** from **PADS4 CTRL Center** under the **Credentials tab**.
+  - If you have not configured the **Azure environment** and **Teams user**, follow the **PADS4 tutorial** for **Azure integration**.
+  - Copy and paste the **user/refresh token** into the appropriate field.
+- **Use a Different PADS4 Server (Optional)**
+  - If you have multiple **PADS4 servers**, you can select a different one with an existing **Teams connection**.
+- **Preview Data**
+  - Click the **Preview** button to view the **current data** retrieved from the configured **Teams user**.
 
 ---
 
-### **Additional Notes**  
-- If you encounter **connection issues**, verify that your **PADS4 server**, **Teams user**, and **Azure configuration** are set up correctly.  
-- Ensure the **Teams user** has the correct **permissions and licenses** to access **calendar data**.  
-- For more information, consult the **PADS4 Partner Portal** or contact **Azure IT support**.  
+#### **3. Finalize the Setup**
 
-This setup allows **PADS4** to **retrieve and display Microsoft Teams meeting data** in **real-time** within your **presentations**. 
+- Click **Next** to continue.
+- Complete the setup by following the remaining steps in the **Data Provider Wizard**.
+
+---
+
+### **Additional Notes**
+
+- If you encounter **connection issues**, verify that your **PADS4 server**, **Teams user**, and **Azure configuration** are set up correctly.
+- Ensure the **Teams user** has the correct **permissions and licenses** to access **calendar data**.
+- For more information, consult the **PADS4 Partner Portal** or contact **Azure IT support**.
+
+This setup allows **PADS4** to **retrieve and display Microsoft Teams meeting data** in **real-time** within your **presentations**.

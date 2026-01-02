@@ -1,66 +1,66 @@
+---
+title: "Connecting a Microsoft Excel Sheet"
+---
 
-The **Microsoft Excel provider** in **PADS4** allows you to connect to **Excel files** (Office 2010 and earlier) to retrieve data for real-time presentations.  
+The **Microsoft Excel provider** in **PADS4** allows you to connect to **Excel files** (Office 2010 and earlier) to retrieve data for real-time presentations.
 
 ---
 
-### **Steps to Add or Modify a Microsoft Excel Connection**  
+### **Steps to Add or Modify a Microsoft Excel Connection**
 
-#### **1. Start the Data Provider Wizard**  
-- Open the **Data Provider Wizard** in **PADS4**.  
-- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.  
-- Select **Microsoft Excel** as the **provider type**.  
+#### **1. Start the Data Provider Wizard**
 
----
-
-#### **2. Configure Connection Settings**  
-
-- **Specify the Location of the Excel File**  
-  - **Option 1: Use PADS4 Content Library (Recommended)**  
-    - The content library automatically **synchronizes files across all computers** in the PADS4 system.  
-  - **Option 2: Use a File Outside the Content Library**  
-    - If you select this option, you must manually **distribute the Excel file** to ensure it is available for all PADS4 Viewers.  
-
-- **Select the File**  
-  - Click **Browse** to locate the **Excel file**.  
-
-- **Enable "First Row Contains Column Information"**  
-  - If your Excel sheet **includes column headers**, turn on this option to remove the first row from your dataset.  
-
-Click **Next** to continue.  
+- Open the **Data Provider Wizard** in **PADS4**.
+- Follow the steps for **Adding a Data Provider** or **Editing a Data Provider**.
+- Select **Microsoft Excel** as the **provider type**.
 
 ---
 
-#### **3. Select the Excel Sheet to Connect To**  
+#### **2. Configure Connection Settings**
 
-- PADS4 **automatically detects** all available **sheets** in the Excel file.  
-- Click the **drop-down box** and **select** the desired sheet.  
+- **Specify the Location of the Excel File**
+  - **Option 1: Use PADS4 Content Library (Recommended)**
+    - The content library automatically **synchronizes files across all computers** in the PADS4 system.
+  - **Option 2: Use a File Outside the Content Library**
+    - If you select this option, you must manually **distribute the Excel file** to ensure it is available for all PADS4 Viewers.
+- **Select the File**
+  - Click **Browse** to locate the **Excel file**.
+- **Enable "First Row Contains Column Information"**
+  - If your Excel sheet **includes column headers**, turn on this option to remove the first row from your dataset.
 
-Click **Next** to continue.  
+Click **Next** to continue.
 
 ---
 
-#### **4. Complete the Setup**  
-- Follow the remaining steps in the **Data Provider Wizard**.  
-- Click **Finish** to finalize the setup.  
+#### **3. Select the Excel Sheet to Connect To**
+
+- PADS4 **automatically detects** all available **sheets** in the Excel file.
+- Click the **drop-down box** and **select** the desired sheet.
+
+Click **Next** to continue.
 
 ---
 
-### **Additional Notes**  
+#### **4. Complete the Setup**
 
-- **Using a PADS4 Data Server?**  
-  - Ensure that **Office System drivers** are installed on the **PADS4 Server**.  
-  - The **Excel file location must be accessible** from the **Data Server's point of view**.  
+- Follow the remaining steps in the **Data Provider Wizard**.
+- Click **Finish** to finalize the setup.
 
-- **Not Using a PADS4 Data Server?**  
-  - Make sure **PADS4 Designer** (for previewing) and all **PADS4 Viewers** have:  
-    - The **Office System drivers** installed.  
-    - **Access** to the specified **Excel file** location.  
+---
 
-- **Avoid Shared Network Folders**  
-  - Referencing an **Excel file in a shared network folder** may cause:  
-    - **High network traffic** when refreshing data.  
-    - **File locking issues** if multiple users access the file simultaneously.  
+### **Additional Notes**
 
-- **Automatic File Copying**  
-  - PADS4 **creates an internal copy** of the Excel file before reading the data.  
-  - This prevents **file locking conflicts** and ensures **smooth data retrieval**.  
+- **Using a PADS4 Data Server?**
+  - Ensure that **Office System drivers** are installed on the **PADS4 Server**.
+  - The **Excel file location must be accessible** from the **Data Server's point of view**.
+- **Not Using a PADS4 Data Server?**
+  - Make sure **PADS4 Designer** (for previewing) and all **PADS4 Viewers** have:
+    - The **Office System drivers** installed.
+    - **Access** to the specified **Excel file** location.
+- **Avoid Shared Network Folders**
+  - Referencing an **Excel file in a shared network folder** may cause:
+    - **High network traffic** when refreshing data.
+    - **File locking issues** if multiple users access the file simultaneously.
+- **Automatic File Copying**
+  - PADS4 **creates an internal copy** of the Excel file before reading the data.
+  - This prevents **file locking conflicts** and ensures **smooth data retrieval**.

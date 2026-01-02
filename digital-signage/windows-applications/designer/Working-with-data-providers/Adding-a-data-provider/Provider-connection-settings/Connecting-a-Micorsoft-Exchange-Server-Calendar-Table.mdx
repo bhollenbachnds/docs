@@ -1,57 +1,61 @@
+---
+title: "Connecting a Microsoft Exchange Server Calendar Table"
+---
 
 The **Calendar table** in Microsoft Exchange Server contains detailed information about **scheduled events, meetings, and appointments**. Below is a breakdown of the table's **columns and data types**.
 
 ---
 
-### **Calendar Table Columns and Descriptions**  
+### **Calendar Table Columns and Descriptions**
 
-| **Column Name**              | **Data Type** | **Description** |
-|------------------------------|--------------|----------------|
-| **Subject**                  | String       | Title of the event. |
-| **Body**                     | String       | Description of the event (*Optionally included*). |
-| **UniqueBody**               | String       | Shows the body part that is unique to the conversation this item is part of. |
-| **Importance**               | String       | Priority of the event (**High, Normal, Low**). |
-| **Start**                    | Date         | Start date and time of the event. |
-| **Start_DayOfWeek**          | Integer      | Numeric representation of the start day of the week. |
-| **End**                      | Date         | End date and time of the event. |
-| **End_DayOfWeek**            | Integer      | Numeric representation of the end day of the week. |
-| **Location**                 | String       | Physical or virtual location where the event occurs. |
-| **Duration**                 | Integer      | Duration of the event (default unit: minutes). |
-| **DurationInSeconds**        | Integer      | Duration of the event in seconds. |
-| **DurationInMinutes**        | Integer      | Duration of the event in minutes. |
-| **DurationInHours**          | Integer      | Duration of the event in hours. |
-| **DurationInDays**           | Integer      | Duration of the event in days. |
-| **MinutesLeftBeforeStart**   | Integer      | Number of minutes left before the event starts. |
-| **MinutesLeftBeforeEnd**     | Integer      | Number of minutes left before the event ends. |
-| **Organizer**                | String       | Name of the person who organized the event. |
-| **IsAllDayEvent**            | Boolean      | Indicates if the event lasts the entire day (**True/False**). |
-| **IsAssociated**             | Boolean      | Indicates if the event is associated with another item (**True/False**). |
-| **IsMeeting**                | Boolean      | Indicates if the event is a meeting (**True/False**). |
-| **IsOnlineMeeting**          | Boolean      | Indicates if the event is an online meeting (**True/False**). |
-| **IsRecurring**              | Boolean      | Indicates if the event is a recurring event (**True/False**). |
-| **RecurrentStartDate**       | Date         | Start date of the **recurring event series**. |
-| **RecurrentEndDate**         | Date         | End date of the **recurring event series**. |
-| **IsReminderSet**            | Boolean      | Indicates if a reminder is set for this event (**True/False**). |
-| **NetShowUrl**               | String       | URL of the **Microsoft NetShow** online meeting. |
-| **OriginalStart**            | Date         | The original start date before any changes were made. |
-| **DateTimeCreated**          | Date         | The date and time the event was created. |
-| **DateTimeSent**             | Date         | The date and time the event invitation was sent. |
-| **DateTimeReceived**         | Date         | The date and time the event invitation was received. |
-| **AppointmentType**          | String       | Type of appointment (**Single, RecurringMaster, Occurrence, Exception**). |
-| **HasAttachments**           | Boolean      | Indicates if the event has attachments (**True/False**). |
-| **Sensitivity**              | String       | Visibility of the event (**Normal, Personal, Private, Confidential**). |
-| **Status**                   | String       | **Legacy Free/Busy status** of the event. |
-| **Categories**               | String       | Categories associated with this event. |
-| **IsUnmodified**             | Boolean      | Indicates if the event has been modified after creation (**True/False**). |
-| **LastModifiedTime**         | Date         | The date and time the event was last modified. |
-| **LastModifiedName**         | String       | The name of the person who last modified the event. |
-| **RequiredAttendees**        | String       | List of **mandatory** attendees. |
-| **OptionalAttendees**        | String       | List of **optional** attendees. |
-| **Resources**                | String       | List of **resources** (rooms, equipment) booked for this meeting. |
+| **Column Name**            | **Data Type** | **Description**                                                              |
+| -------------------------- | ------------- | ---------------------------------------------------------------------------- |
+| **Subject**                | String        | Title of the event.                                                          |
+| **Body**                   | String        | Description of the event (_Optionally included_).                            |
+| **UniqueBody**             | String        | Shows the body part that is unique to the conversation this item is part of. |
+| **Importance**             | String        | Priority of the event (**High, Normal, Low**).                               |
+| **Start**                  | Date          | Start date and time of the event.                                            |
+| **Start_DayOfWeek**        | Integer       | Numeric representation of the start day of the week.                         |
+| **End**                    | Date          | End date and time of the event.                                              |
+| **End_DayOfWeek**          | Integer       | Numeric representation of the end day of the week.                           |
+| **Location**               | String        | Physical or virtual location where the event occurs.                         |
+| **Duration**               | Integer       | Duration of the event (default unit: minutes).                               |
+| **DurationInSeconds**      | Integer       | Duration of the event in seconds.                                            |
+| **DurationInMinutes**      | Integer       | Duration of the event in minutes.                                            |
+| **DurationInHours**        | Integer       | Duration of the event in hours.                                              |
+| **DurationInDays**         | Integer       | Duration of the event in days.                                               |
+| **MinutesLeftBeforeStart** | Integer       | Number of minutes left before the event starts.                              |
+| **MinutesLeftBeforeEnd**   | Integer       | Number of minutes left before the event ends.                                |
+| **Organizer**              | String        | Name of the person who organized the event.                                  |
+| **IsAllDayEvent**          | Boolean       | Indicates if the event lasts the entire day (**True/False**).                |
+| **IsAssociated**           | Boolean       | Indicates if the event is associated with another item (**True/False**).     |
+| **IsMeeting**              | Boolean       | Indicates if the event is a meeting (**True/False**).                        |
+| **IsOnlineMeeting**        | Boolean       | Indicates if the event is an online meeting (**True/False**).                |
+| **IsRecurring**            | Boolean       | Indicates if the event is a recurring event (**True/False**).                |
+| **RecurrentStartDate**     | Date          | Start date of the **recurring event series**.                                |
+| **RecurrentEndDate**       | Date          | End date of the **recurring event series**.                                  |
+| **IsReminderSet**          | Boolean       | Indicates if a reminder is set for this event (**True/False**).              |
+| **NetShowUrl**             | String        | URL of the **Microsoft NetShow** online meeting.                             |
+| **OriginalStart**          | Date          | The original start date before any changes were made.                        |
+| **DateTimeCreated**        | Date          | The date and time the event was created.                                     |
+| **DateTimeSent**           | Date          | The date and time the event invitation was sent.                             |
+| **DateTimeReceived**       | Date          | The date and time the event invitation was received.                         |
+| **AppointmentType**        | String        | Type of appointment (**Single, RecurringMaster, Occurrence, Exception**).    |
+| **HasAttachments**         | Boolean       | Indicates if the event has attachments (**True/False**).                     |
+| **Sensitivity**            | String        | Visibility of the event (**Normal, Personal, Private, Confidential**).       |
+| **Status**                 | String        | **Legacy Free/Busy status** of the event.                                    |
+| **Categories**             | String        | Categories associated with this event.                                       |
+| **IsUnmodified**           | Boolean       | Indicates if the event has been modified after creation (**True/False**).    |
+| **LastModifiedTime**       | Date          | The date and time the event was last modified.                               |
+| **LastModifiedName**       | String        | The name of the person who last modified the event.                          |
+| **RequiredAttendees**      | String        | List of **mandatory** attendees.                                             |
+| **OptionalAttendees**      | String        | List of **optional** attendees.                                              |
+| **Resources**              | String        | List of **resources** (rooms, equipment) booked for this meeting.            |
 
 ---
 
 ### **Notes:**
+
 - This table structure is used in **PADS4** when retrieving calendar data from **Microsoft Exchange Server**.
 - Some fields (like **Body, UniqueBody**) may be **optional** depending on your Exchange settings.
 - **Recurring events** have additional properties like **RecurrentStartDate, RecurrentEndDate**.
