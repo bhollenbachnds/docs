@@ -1,0 +1,83 @@
+---
+- title: Utilisateurs CMS 1.0 & Workspace
+---
+
+<Warning>
+  Depuis la version 2025.2 de PADS4, la gestion des informations personnelles des utilisateurs, des attributions de rôles et des attributions de licences se fait désormais dans le portail Web PADS4. Les informations spécifiques à CMS 1.0 ou Workspace, comme l'accès aux salles, sont toujours gérées dans les pages d'administration Crystal correspondantes.
+</Warning>
+
+## Portail Web PADS4
+
+* Une fois que vous avez attribué des licences (Utilisateur PADS4 CMS 1.0 et/ou Utilisateur PADS4 Workspace) à un utilisateur, celui-ci sera ajouté à la liste des utilisateurs de CMS 1.0 et/ou de Workspace. À partir de là, l'accès à des parties spécifiques de ces applications est géré dans les profils utilisateurs (plus d'informations à ce sujet dans Profils utilisateurs (Workspace & CMS 1.0).
+
+![Cms Ws1](/images/ctrl-centre/administration/user-management/cms-ws1.png)
+
+* Attribuez la licence "PADS4 Workspace User" pour donner à l'utilisateur l'accès à Workspace. Cette licence est suffisante en elle-même pour permettre l'accès à l'application Workspace. L'accès aux salles et autres paramètres liés à Workspace sont toujours gérés via l'Administration Workspace.
+* Attribuez la licence "**PADS4 CMS 1.0 User**" pour donner à l'utilisateur l'accès à Crystal CMS/CMS (legacy)/ CMS 1.0 et/ou aux pages d'administration (pour CMS 1.0, Workspace ou les deux).
+
+  <Note>
+    Cette licence n'est PAS suffisante en elle-même pour permettre l'accès aux modules Crystal ou à ses pages d'administration. L'utilisateur a besoin d'un profil utilisateur qui permet l'accès à certaines parties de la plateforme Crystal : CMS 1.0, Page d'administration CMS 1.0, Page d'administration Workspace, Wayfinding, etc.).
+  </Note>
+* Les utilisateurs qui disposent de licences/droits suffisants verront les icônes d'applications correspondantes dans le sélecteur d'applications sur la page de connexion.
+
+![Cms Ws2](/images/ctrl-centre/administration/user-management/cms-ws2.png)
+
+* Ainsi que dans la barre latérale une fois que vous êtes sur la page d'accueil.
+
+![Cms Ws3](/images/ctrl-centre/administration/user-management/cms-ws3.png)
+
+## Informations utilisateur de base & Création
+
+* Auparavant, la création d'utilisateurs se faisait séparément dans chaque application. Maintenant, cela commence toujours par la création de l'utilisateur via PADS4 Ctrl Center. Ensuite, en attribuant à l'utilisateur une licence CMS 1.0 et/ou Workspace, il sera automatiquement visible dans la Page d'administration CMS 1.0 et/ou la Page d'administration Workspace (selon la licence).
+
+<Note>
+  Les informations de base comme le nom d'utilisateur, le prénom, le nom, le nfc et l'adresse e-mail sont désormais gérées uniquement dans PADS4. Il n'est plus possible de mettre à jour ces informations via une page d'administration CMS 1.0.
+</Note>
+
+![Cms Ws4](/images/ctrl-centre/administration/user-management/cms-ws4.png)
+
+* La création d'un utilisateur via une page d'administration Crystal est toutefois toujours possible. Il vous suffit de sélectionner l'utilisateur PADS4. Il existe également une option pour attribuer automatiquement le profil utilisateur. Plus d'informations sur cette attribution de profil utilisateur sont expliquées plus loin dans le document.
+
+![Cms Ws5](/images/ctrl-centre/administration/user-management/cms-ws5.png)
+
+* En supposant que l'utilisateur actuel dispose d'un accès suffisant pour gérer les utilisateurs dans PADS4 Ctrl Center, vous pouvez cliquer sur le lien sous le menu déroulant de l'utilisateur pour être redirigé vers la page de gestion des utilisateurs dans PADS4 Ctrl Center afin de gérer les (nouveaux) utilisateurs.
+
+## Profils utilisateurs (CMS 1.0 & Workspace)
+
+* Les profils utilisateurs CMS et Workspace – et donc, la gestion des accès utilisateurs – sont toujours gérés dans la page d'administration correspondante, mais leur attribution est désormais gérée automatiquement par les paramètres de mappage de rôles PADS4 dans la page des plugins d'administration CMS 1.0. Cette attribution automatique peut être désactivée par utilisateur si nécessaire.
+
+![Cms Ws6](/images/ctrl-centre/administration/user-management/cms-ws6.png)
+
+* Le profil qui est attribué est prévisualisé sous la case à cocher "Profil attribué automatiquement". Le profil sélectionné est basé sur le(s) rôle(s) PADS4 attribué(s) à l'utilisateur PASD4 sélectionné et les paramètres de mappage de rôles PADS4 que vous avez configurés. Lorsque cette case est décochée, vous êtes autorisé à mettre à jour le profil comme vous le souhaitez.
+
+<Note>
+  Prenez en compte que ce profil utilisateur NE sera PAS mis à jour en fonction des rôles PADS4 attribués à l'utilisateur PADS4 lié lorsque ce paramètre est désactivé. Vous pouvez mettre à jour le paramètre "Profil attribué automatiquement" de l'utilisateur à tout moment.
+</Note>
+
+## Mappage de rôles PADS4
+
+* Ces paramètres se trouvent dans Administration CMS 1.0 -> Plugins -> Mappage de rôles PADS4 et constituent une grande partie de la gestion appropriée des utilisateurs. Ils déterminent quel profil utilisateur doit être attribué à chaque utilisateur :
+* Le mappage de rôles PADS4 attribue automatiquement un profil à un utilisateur lors de la synchronisation avec un utilisateur PADS4. Comme un utilisateur PADS4 peut avoir plusieurs rôles, vous pouvez utiliser '-' comme valeur de profil dans un mappage. Cela indique à la synchronisation de collecter tous les mappages liés aux rôles de l'utilisateur et de sélectionner le profil en fonction de l'ordre défini dans le tableau ci-dessous (de haut en bas). Si aucun mappage ne correspond à l'un des rôles de l'utilisateur, le profil par défaut sera appliqué.
+
+![Cms Ws7](/images/ctrl-centre/administration/user-management/cms-ws7.png)
+
+* En supposant que vous ayez le tableau ci-dessus, cela donnera les profils suivants dans différentes situations d'attribution de rôles PADS4.
+
+| **Lorsque l'utilisateur PADS4 a le(s) rôle(s)** | **Profil utilisateur CMS 1.0** | **Profil utilisateur Workspace**       |
+| :---------------------------------------------- | :----------------------------- | :------------------------------------- |
+| \<Aucun rôle>                                   | Par défaut                     | Par défaut                             |
+| CMS 1.0 administrators group  - Cms users group | Administration                 | Profil avec accès à toutes les salles  |
+| Cms managers group  - Viewer managers group     | Profil Wayfinding              | Profil avec accès restreint aux salles |
+| Cms advanced user group                         | Profil Digital Signage         | Par défaut                             |
+| Cms users group                                 | Par défaut                     | Par défaut                             |
+
+Quelques points à noter de cet exemple :
+
+* Les profils par défaut sont utilisés comme solution de repli et peuvent être changés pour un autre profil. Lorsque l'utilisateur PADS4 n'a pas de rôle attribué ou qu'aucun de ses rôles n'est mappé dans ce tableau, il utilisera le profil par défaut.
+* Le '-' signifie qu'il n'a pas de profil utilisateur CMS ou Workspace mappé et continuera à chercher d'autres rôles mappés. Cela signifie que le rôle mappé pourrait finir avec un profil par défaut.
+* Le mappage est facultatif, vous n'êtes pas obligé de mapper tous les rôles PADS4 et vous n'êtes pas obligé de mapper un profil à un rôle PADS4.
+* Le tableau est ordonné. Cela signifie que lorsqu'un utilisateur PADS4 a plusieurs rôles et que plus d'un de ces rôles sont mappés, il prendra toujours le rôle qui est le plus haut dans le tableau. Lorsqu'il s'agit d'un '-', il continuera à chercher un rôle d'ordre inférieur dans la liste jusqu'à ce qu'il atteigne un profil mappé ou le profil par défaut (de repli).
+
+## Plugins d'administration CMS 1.0
+
+* La plupart des informations utilisateur sont maintenant gérées dans PADS4. Cela inclut LDAP, User Provisioning/SCIM et Single Sign-On. Ces paramètres sont désormais gérés par PADS4, ils ont donc été déplacés de la page Plugins vers [PADS4 Identity providers.](https://docs.pads4.com/ctrl-centre/administration/credentials/active-directory)
