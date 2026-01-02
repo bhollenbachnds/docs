@@ -1,68 +1,106 @@
-The **Viewers** section in **PADS4** displays all available **Viewers and Viewer groups**. A **Viewer** is the **endpoint** where presentations are displayed.  
+The **Viewers** section in **PADS4** displays all available **Viewers and Viewer groups**. A **Viewer** is the **endpoint** where presentations are displayed.
 
 ---
 
-## **Overview**  
+## **Overview**
 
-- Displays **all available Viewers** and **Viewer groups**.  
-- **Create a New Viewer** using the **➕ New** button.  
-- **Default Naming**:  
-  - First-time Viewers **automatically generate** a name based on the device type:  
-    - **Samsung** devices → _Samsung000x_  
-    - **LG** devices → _LG000x_  
-  - Names can be changed via the **Edit** option (only for online Viewers).  
-- **View Options**:  
-  - Switch between **Tree View** and **Detail View**.  
-  - Use the **Search/Filter** option to locate specific Viewers.  
+- Displays **all available Viewers** and **Viewer groups**.
+- **Create a New Viewer** using the **➕ New** button.
+- **Default Naming**:
+  - First-time Viewers **automatically generate** a name based on the device type:
+    - **Samsung** devices → _Samsung000x_
+    - **LG** devices → _LG000x_
+  - Names can be changed via the **Edit** option (only for online Viewers).
+- **View Options**:
+  - Switch between **Tree View** and **Detail View**.
+  - **Tree view**
 
----
+![Tree View](/images/ctrl-centre/viewers/tree-view.png)
+  - **Detail view**
 
-## **Creating a New Viewer**  
+![Detail View](/images/ctrl-centre/viewers/detail-view.png)
 
-Follow these steps to **add a new Viewer** to PADS4:  
+  - Use the **Search/Filter** option to locate specific Viewers.
 
-1️⃣ **Click the** ➕ **New** button on the Viewers page.  
-2️⃣ **Select the Viewer type** (Only Viewer types with available licenses will be shown):  
-   - **Viewer Group** – A group that contains multiple Viewers (simplifies scheduling).  
-   - **Viewer** – A standalone Viewer that supports both **Windows and HTML5** types.  
-   - **Windows Viewer** – A Viewer running on **Microsoft Windows**.  
-   - **HTML5 Viewer** – A Viewer running on **non-Windows (HTML5-compatible) systems**.  
-   - **Zone Viewer** – A Viewer assigned to a specific **zone** in a **PADS4 presentation**.  
-   - **Desktop Viewer** – A Viewer running on **Windows desktop PCs**.  
-3️⃣ **Assign a unique Viewer name** (optionally, add a description – e.g., Viewer location).  
-4️⃣ **Select a Viewer Group** (if applicable).  
-5️⃣ **Assign a License**:  
-   - **Basic** – Supports the smallest range of presentation elements.  
-   - **Xpress** – Offers a **moderate** range of features.  
-   - **Xpert** – Provides **full feature access** for advanced presentations.  
-6️⃣ **(Optional) Set a Password** – The Viewer will need this password to authenticate when connecting to the **PADS4 Server**, ensuring security.  
-
- **Once all steps are completed, the new Viewer is ready to use!**  
+![Viewer Filter](/images/ctrl-centre/viewers/viewer-filter.png)
 
 ---
 
-## **Detailed Viewer Information**  
+## **Creating a New Viewer**
 
-Clicking on a **Viewer row** expands it to display **detailed information**.  
+Follow these steps to **add a new Viewer** to PADS4:
 
-**More Options (⋮ Menu) Include:**  
-   - **View Details** – Inspect and manage the Viewer.  
-   - **Viewer Log** – Check activity logs.  
-   - **Viewer Settings** – Modify Viewer preferences.  
-   - **Viewer Screenshot** – Capture the current display.  
-   - **Viewer Reboot** – Restart the Viewer remotely.  
-   - **Retrieve Blackbox** – Collect diagnostic data.  
+1️⃣ **Click the** ➕ **New** button on the Viewers page.
+
+![New Viewer](/images/ctrl-centre/viewers/new-viewer.png)
+
+2️⃣ **Select the Viewer type** (Only Viewer types with available licenses will be shown):
+
+![New Viewer1](/images/ctrl-centre/viewers/new-viewer1.png)
+
+- **Viewer Group** – A group that contains multiple Viewers (simplifies scheduling).
+- **Viewer** – A standalone Viewer that supports both **Windows and HTML5** types.
+- **Windows Viewer** – A Viewer running on **Microsoft Windows**.
+- **HTML5 Viewer** – A Viewer running on **non-Windows (HTML5-compatible) systems**.
+- **Zone Viewer** – A Viewer assigned to a specific **zone** in a **PADS4 presentation**.
+- **Desktop Viewer** – A Viewer running on **Windows desktop PCs**.\
+  3️⃣ **Assign a unique Viewer name** (optionally, add a description – e.g., Viewer location).\
+  4️⃣ **Select a Viewer Group** (if applicable).\
+  5️⃣ **Assign a License**:
+- **Basic** – Supports the smallest range of presentation elements.
+- **Xpress** – Offers a **moderate** range of features.
+- **Xpert** – Provides **full feature access** for advanced presentations.\
+  6️⃣ **(Optional) Set a Password** – The Viewer will need this password to authenticate when connecting to the **PADS4 Server**, ensuring security.
+
+**Once all steps are completed, the new Viewer is ready to use!**
 
 ---
 
-## **Viewer Blackbox (For Troubleshooting)**  
+## **Viewer Information**
 
-- If a **Viewer issue arises**, **NDS Support** may request the **Blackbox** for troubleshooting.  
-- The **Blackbox** contains:  
-  - **Logs**  
-  - **System & memory info**  
-  - **Other diagnostic data**  
-- **How to Provide the Blackbox**:  
-  - Submit via **Zendesk** for NDS Support.  
-  - Provide it to your **partner** for further analysis.  
-  - Use **PADS4 Agent** to investigate the data.  
+- Single click on a **Viewer row** expands it to display **detailed information**.
+
+![Viewer Detail](/images/ctrl-centre/viewers/viewer-detail.png)
+
+- Double clicking on the viewer will go straight to the viewer details page described below.
+- When hovering your mouse on one of the viewers, three dots will appear at the right giving more options:
+
+![Viewer Menu](/images/ctrl-centre/viewers/viewer-menu.png)
+
+- **View Details** – Inspect and manage the Viewer. ( More on that below )
+- **Viewer schedules** - Will redirect to the scheduler module to check any schedules for that specific viewer
+- **Manage:**
+  - **Reboot viewer** – Reboot the device remotely.
+  - **Restart viewer** - Reboot the viewer applicaiton remotely.
+  - **Retrieve Blackbox** – Collect diagnostic data.
+- **Edit** - Here you can change the following aspects of the viewer:
+  - Viewer name and description
+  - Assign or change the viewer group
+  - Assign license
+  - Enable / disable password requirement
+- **Delete - **Delete the viewer from the system.
+- **Access - **Allows you set permissions on the viewer / viewer group
+  - [You can read more about it here.](https://docs.pads4.com/ctrl-centre/viewers/viewer-permissions)
+
+## Detailed viewer information
+
+![Viewer Details2](/images/ctrl-centre/viewers/viewer-details2.png)
+
+- **System information **- Detailed information about the device, including hardware characteristics, storage space, firmware, resolution etc. 
+- **Viewer Log** – Check activity logs.
+- **Viewer Settings** – Modify Viewer preferences.
+- **Viewer Screenshot** – Capture the current display.
+
+---
+
+## **Viewer Blackbox (For Troubleshooting)**
+
+- If a **Viewer issue arises**, **NDS Support** may request the **Blackbox** for troubleshooting.
+- The **Blackbox** contains:
+  - **Logs**
+  - **System & memory info**
+  - **Other diagnostic data**
+- **How to Provide the Blackbox**:
+  - Submit via PADS4 Support portal for NDS Support.
+  - Provide it to your **partner** for further analysis.
+  - Use **PADS4 Agent** to investigate the data.
