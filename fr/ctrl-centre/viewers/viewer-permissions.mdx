@@ -1,0 +1,46 @@
+---
+- title: Viewer Permissions
+---
+
+<Warning>
+  Cet article s'applique à PADS4 version 2025.2 et supérieure.
+
+  Toutes les versions antérieures ont l'administration des permissions de visualisation dans l'application PADS4 System Management.
+</Warning>
+
+Les **Viewer permissions** dans **PADS4** vous permettent d'avoir un contrôle précis sur quels **viewer group(s)** et **viewer(s)** sont visibles pour chaque utilisateur spécifique. De cette façon, vous pouvez configurer précisément ce qu'un utilisateur final peut voir et contrôler.
+
+## **Permissions de visualisation par défaut**
+
+Les permissions de visualisation fonctionnent de manière similaire aux permissions de contenu dans le PADS4 Web Portal, sur chaque groupe de visualisation ou visualiseur, vous pouvez faire un clic droit et un menu contextuel apparaîtra avec la possibilité d'ouvrir le menu **"Access"**.
+
+* Dans la vue Détail des visualiseurs :
+
+![Detailviewer Perm](/images/ctrl-centre/viewers/detailviewer-perm.png)
+
+* Dans la vue Arborescence des visualiseurs :
+
+![Treeview Perm](/images/ctrl-centre/viewers/treeview-perm.png)
+
+Une fois que vous ouvrez le menu **Access**, vous obtenez un aperçu des permissions actuelles qui sont appliquées à ce groupe de visualisation ou visualiseur.
+
+![Viewer Pm](/images/ctrl-centre/viewers/viewer-pm.png)
+
+## Comment configurer les permissions
+
+Si vous souhaitez restreindre un certain groupe de visualisation (ou visualiseur), il est conseillé de procéder comme suit :
+
+Connectez-vous avec votre compte administrateur et accédez à la section **Users**.
+
+* [Créez un nouveau rôle](https://docs.pads4.com/ctrl-centre/administration/user-management/Roles#customizing-roles)
+* Attribuez votre nouveau rôle à l'utilisateur qui nécessite des restrictions de visualisation.
+* Supprimez tous les rôles de visualisation par défaut s'ils sont attribués.
+* Maintenant, allez dans l'aperçu des Viewers et faites un clic droit sur un groupe de visualisation / visualiseur que vous souhaitez que l'utilisateur puisse voir.
+* Cliquez sur **Access**
+* Ajoutez maintenant votre nouveau rôle à la liste et donnez-lui au moins la permission **read** pour qu'il puisse voir le groupe de visualisation / visualiseur.
+  * Ajoutez plus de permissions si nécessaire.
+* Maintenant, si l'utilisateur auquel le nouveau rôle est attribué se connecte, il ne verra que le groupe de visualisation / visualiseur où son rôle est attribué.
+
+<Info>
+  Lorsque vous avez plusieurs rôles attribués qui ont des permissions différentes, rappelez-vous que le rôle le plus restrictif prévaut toujours sur tout autre rôle que vous pourriez avoir attribué.
+</Info>
