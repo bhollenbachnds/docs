@@ -1,3 +1,7 @@
+---
+- title: Connexion à une table de calendrier Microsoft Exchange Server
+---
+
 Le **Calendar table** dans Microsoft Exchange Server contient des informations détaillées sur **les événements programmés, les réunions et les rendez-vous**. Voici une ventilation des **colonnes et types de données**.
 
 ***
@@ -31,15 +35,15 @@ Le **Calendar table** dans Microsoft Exchange Server contient des informations d
 | **RecurrentStartDate**     | Date                | Date de début de la **série d'événements récurrents**.                                    |
 | **RecurrentEndDate**       | Date                | Date de fin de la **série d'événements récurrents**.                                      |
 | **IsReminderSet**          | Boolean             | Indique si un rappel est défini pour cet événement (**True/False**).                      |
-| **NetShowUrl**             | String              | URL de la réunion en ligne **Microsoft NetShow**.                                         |
+| **NetShowUrl**             | String              | URL de la **Microsoft NetShow** réunion en ligne.                                         |
 | **OriginalStart**          | Date                | La date de début originale avant que des modifications ne soient apportées.               |
 | **DateTimeCreated**        | Date                | La date et l'heure de création de l'événement.                                            |
 | **DateTimeSent**           | Date                | La date et l'heure d'envoi de l'invitation à l'événement.                                 |
 | **DateTimeReceived**       | Date                | La date et l'heure de réception de l'invitation à l'événement.                            |
 | **AppointmentType**        | String              | Type de rendez-vous (**Single, RecurringMaster, Occurrence, Exception**).                 |
-| **HasAttachments**         | Boolean             | Indique si l'événement comporte des pièces jointes (**True/False**).                      |
+| **HasAttachments**         | Boolean             | Indique si l'événement a des pièces jointes (**True/False**).                             |
 | **Sensitivity**            | String              | Visibilité de l'événement (**Normal, Personal, Private, Confidential**).                  |
-| **Status**                 | String              | **Statut de disponibilité hérité** de l'événement.                                        |
+| **Status**                 | String              | **Legacy Free/Busy status** de l'événement.                                               |
 | **Categories**             | String              | Catégories associées à cet événement.                                                     |
 | **IsUnmodified**           | Boolean             | Indique si l'événement a été modifié après sa création (**True/False**).                  |
 | **LastModifiedTime**       | Date                | La date et l'heure de la dernière modification de l'événement.                            |

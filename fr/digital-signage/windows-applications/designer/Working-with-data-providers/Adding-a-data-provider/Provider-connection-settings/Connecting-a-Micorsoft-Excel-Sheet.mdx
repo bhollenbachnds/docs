@@ -1,14 +1,18 @@
-Le **Microsoft Excel provider** dans **PADS4** vous permet de vous connecter à des **Excel files** (Office 2010 et versions antérieures) pour récupérer des données pour des présentations en temps réel.
+---
+- title: Connexion à une feuille Microsoft Excel
+---
+
+Le **Microsoft Excel provider** dans **PADS4** vous permet de vous connecter aux **Excel files** (Office 2010 et versions antérieures) pour récupérer des données pour des présentations en temps réel.
 
 ***
 
 ### **Étapes pour ajouter ou modifier une connexion Microsoft Excel**
 
-#### **1. Démarrer l'Assistant Fournisseur de Données**
+#### **1. Démarrer l'assistant de fournisseur de données**
 
 * Ouvrez l'**Data Provider Wizard** dans **PADS4**.
-* Suivez les étapes pour **Adding a Data Provider** ou **Editing a Data Provider**.
-* Sélectionnez **Microsoft Excel** comme **provider type**.
+* Suivez les étapes pour **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**.
+* Sélectionnez **Microsoft Excel** comme **type de fournisseur**.
 
 ***
 
@@ -16,52 +20,47 @@ Le **Microsoft Excel provider** dans **PADS4** vous permet de vous connecter à 
 
 * **Spécifier l'emplacement du fichier Excel**
   * **Option 1 : Utiliser la bibliothèque de contenu PADS4 (Recommandé)**
-    * La bibliothèque de contenu **synchronizes files across all computers** dans le système PADS4.
+    * La bibliothèque de contenu synchronise automatiquement **les fichiers sur tous les ordinateurs** du système PADS4.
   * **Option 2 : Utiliser un fichier en dehors de la bibliothèque de contenu**
-    * Si vous sélectionnez cette option, vous devez manuellement **distribute the Excel file** pour vous assurer qu'il est disponible pour tous les PADS4 Viewers.
-
+    * Si vous sélectionnez cette option, vous devez manuellement **distribuer le fichier Excel** pour vous assurer qu'il est disponible pour tous les PADS4 Viewers.
 * **Sélectionner le fichier**
-  * Cliquez sur **Browse** pour localiser le **Excel file**.
+  * Cliquez sur **Parcourir** pour localiser le **fichier Excel**.
+* **Activer "La première ligne contient des informations de colonne"**
+  * Si votre feuille Excel **inclut des en-têtes de colonne**, activez cette option pour supprimer la première ligne de votre ensemble de données.
 
-* **Activer "First Row Contains Column Information"**
-  * Si votre feuille Excel **includes column headers**, activez cette option pour supprimer la première ligne de votre ensemble de données.
-
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
 #### **3. Sélectionner la feuille Excel à laquelle se connecter**
 
-* PADS4 **automatically detects** toutes les **sheets** disponibles dans le fichier Excel.
-* Cliquez sur la **drop-down box** et **select** la feuille souhaitée.
+* PADS4 **détecte automatiquement** toutes les **feuilles** disponibles dans le fichier Excel.
+* Cliquez sur la **liste déroulante** et **sélectionnez** la feuille souhaitée.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
 #### **4. Terminer la configuration**
 
-* Suivez les étapes restantes dans le **Data Provider Wizard**.
-* Cliquez sur **Finish** pour finaliser la configuration.
+* Suivez les étapes restantes dans l'**Assistant de fournisseur de données**.
+* Cliquez sur **Terminer** pour finaliser la configuration.
 
 ***
 
 ### **Notes supplémentaires**
 
-* **Utilisation d'un PADS4 Data Server ?**
-  * Assurez-vous que les **Office System drivers** sont installés sur le **PADS4 Server**.
-  * L'**Excel file location must be accessible** depuis le **Data Server's point of view**.
-
-* **Pas d'utilisation d'un PADS4 Data Server ?**
+* **Utilisation d'un serveur de données PADS4 ?**
+  * Assurez-vous que les **pilotes Office System** sont installés sur le **PADS4 Server**.
+  * L'**emplacement du fichier Excel doit être accessible** depuis le **point de vue du serveur de données**.
+* **Pas d'utilisation d'un serveur de données PADS4 ?**
   * Assurez-vous que **PADS4 Designer** (pour la prévisualisation) et tous les **PADS4 Viewers** have:
-    * Les **Office System drivers** installés.
-    * **Accès** à l'emplacement du **Excel file** spécifié.
-
+    * Les **pilotes Office System** installés.
+    * **Accès** à l'emplacement du **fichier Excel** spécifié.
 * **Éviter les dossiers réseau partagés**
-  * Référencer un **Excel file in a shared network folder** peut causer :
-    * **High network traffic** lors de l'actualisation des données.
-    * **File locking issues** si plusieurs utilisateurs accèdent au fichier simultanément.
-
+  * Référencer un **fichier Excel dans un dossier réseau partagé** peut causer :
+    * **Un trafic réseau élevé** lors de l'actualisation des données.
+    * **Des problèmes de verrouillage de fichier** si plusieurs utilisateurs accèdent au fichier simultanément.
 * **Copie automatique de fichier**
-  * PADS4 **creates an internal copy** du fichier Excel avant de lire les données.
-  * Cela empêche les **file locking conflicts** et assure une **smooth data retrieval**.
+  * PADS4 **crée une copie interne** du fichier Excel avant de lire les données.
+  * Cela empêche les **conflits de verrouillage de fichier** et assure une **récupération fluide des données**.
