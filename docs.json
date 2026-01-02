@@ -256,7 +256,8 @@
 				  {
 				"group": "Viewers",
 				"pages": [
-                  "ctrl-centre/viewers/viewers"
+                  "ctrl-centre/viewers/viewers",
+				  "ctrl-centre/viewers/Permissions"
 					]
 			  },
 				  "ctrl-centre/sensors",
