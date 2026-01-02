@@ -1,0 +1,35 @@
+---
+title: "SMTP"
+---
+
+<Warning>
+  Since PADS4 version 2025.2, SMTP configuration is done in the PADS4 Web Portal instead of the CMS 1.0 Admin plugin page.
+</Warning>
+
+This document provides step-by-step instructions for configuring SMTP with basic authentication for both the PADS4 Web Portal as well as CMS 1.0 / Workspace.
+
+<Tip>
+  Our SMTP implementation also supports SMTP with OAuth2 authentication, more information in regards to setting up SMTP with Oauth2 can be found here. [SMTP-Oauth2](https://docs.pads4.com/ctrl-centre/administration/smtp-oauth2/Microsoft)
+</Tip>
+
+## How to configure SMTP for your PADS4 server
+
+- To begin:
+  - Open your **web browser**.
+  - Navigate to the **PADS4 server URL** (either a DNS name or IP address).
+  - Log in using an **Administrator account**.
+  - Click on **config**
+
+![SMTP Webportal](/images/ctrl-centre/administration/config/SMTP-Webportal.png)
+
+- Or, while you are already logged in:
+  - Use the **Toggle Sidebar** button at the **top-left** of the screen.
+  - Navigate to **Config**.
+  - Then press **Edit.**
+
+![Smtp Settings](/images/ctrl-centre/administration/config/smtp-settings.png)
+
+- Fill in your SMTP server and account details
+- You can then test the connection at the bottom left which will return a green checkmark if the connection is properly configured.
+
+![Smtp Test Connection](/images/ctrl-centre/administration/config/smtp-test-connection.png)

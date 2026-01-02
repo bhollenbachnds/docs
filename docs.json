@@ -309,7 +309,13 @@
                     "pages": [
                       "ctrl-centre/administration/user-management/Roles",
 					  "ctrl-centre/administration/user-management/cms-workspace",
-					  "ctrl-centre/viewers/viewer-permissions"
+					  "ctrl-centre/viewers/viewer-permissions",
+					  {
+			   	    "group": "Config",
+					"pages": [
+					  "ctrl-centre/administration/user-management/config/smtp"
+						]
+					  }
                     ]
                   }
                 ]
