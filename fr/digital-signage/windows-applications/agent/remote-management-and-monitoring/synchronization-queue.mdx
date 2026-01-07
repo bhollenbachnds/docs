@@ -1,0 +1,74 @@
+PADS dispose de fonctionnalités intégrées pour synchroniser automatiquement les fichiers de contenu entre votre serveur PADS4 et tous ses clients connectés. Avec les fonctions de file d'attente de synchronisation, vous pouvez vérifier à distance l'état réel du processus de synchronisation du contenu sur votre serveur PADS4. Vous pouvez voir les détails de progression des clients qui sont actuellement en train de télécharger/téléverser des fichiers de contenu ainsi que les clients qui sont en attente de synchronisation.
+
+ 
+
+#### **Pour vérifier la file d'attente de synchronisation de votre serveur PADS4**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Synchronization Queue** dans la liste des catégories d'informations disponibles du serveur.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le serveur PADS4 connecté et affichera les résultats dans la fenêtre de file d'attente de synchronisation. Si votre installation PADS4 comprend des sous-serveurs, vous devez d'abord sélectionner un serveur avant de sélectionner la catégorie d'informations.
+
+ 
+
+#### **Fenêtre de file d'attente de synchronisation**
+
+Si vous avez activé la synchronisation du contenu pour votre installation PADS4, la fenêtre de file d'attente de synchronisation montre en un coup d'œil l'état actuel du processus de synchronisation du contenu. Si aucune information n'est affichée dans la fenêtre de file d'attente de synchronisation, cela signifie que les bibliothèques de contenu sur tous les PC de votre installation sont à jour ou que la synchronisation du contenu n'a pas été activée.
+
+![EN Agent Synchronization Queue Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-SynchronizationQueue.png)
+
+<Tip>
+  Seuls les clients qui sont actuellement en cours de synchronisation ou en attente de synchronisation sont inclus dans l'aperçu. Dès qu'un client a été entièrement synchronisé, il sera retiré de la liste.
+</Tip>
+
+**Application**\
+\
+L'application client qui est en cours de synchronisation ou en attente de synchronisation. Les clients possibles sont : PADS4 Viewer, PADS4 Designer, PADS4 Scheduler, PADS4 Content Library et PADS4 Sub server.
+
+**Identification**\
+\
+Le nom unique pour identifier l'application client dans le système PADS4. Pour les PADS4 Viewers, c'est le nom du Viewer, pour les sous-serveurs, le nom du serveur, et pour les autres applications, le nom d'utilisateur de l'utilisateur connecté est affiché.
+
+**Statut**\
+Le statut indique si l'application client est actuellement en cours de synchronisation ou en attente de synchronisation.
+
+**Statut depuis**\
+\
+L'horodatage du moment depuis lequel l'application client a atteint le statut actuel. Cela donne une bonne indication sur la performance du processus de synchronisation pour ce client.
+
+**Progression totale**\
+Affiche la progression de la synchronisation du contenu pour ce client sous forme de pourcentage. Cette valeur en pourcentage est basée sur le nombre de fichiers qui ont été synchronisés par rapport au nombre total de fichiers qui doivent être synchronisés.
+
+**Changements totaux**\
+\
+Le nombre total d'éléments qui doivent être synchronisés. Un changement peut être l'ajout d'un nouveau fichier, le renommage d'un fichier ou le remplacement d'un fichier.
+
+**Direction**\
+Indique si le fichier actuellement en cours de synchronisation concerne un téléversement vers le serveur PADS4 ou un téléchargement depuis le serveur PADS4.
+
+**Fichier**\
+Le fichier dans la bibliothèque de contenu qui est actuellement en cours de synchronisation.
+
+**Progression du fichier**\
+La progression du processus de synchronisation pour le fichier actuel.
+
+ 
+
+#### **Actualisation**
+
+Par défaut, les informations dans la fenêtre de file d'attente de synchronisation ne sont pas automatiquement actualisées. Pour obtenir les dernières informations, vous devez cliquer sur **Refresh** dans le menu **Home** ou appuyer sur la touche de fonction F5.
+
+Vous pouvez également faire actualiser automatiquement les informations :
+
+1. Cochez **Automatic Refresh** dans le menu **Home**.
+
+   ![EN Agent Ribbon Synchronization Queue Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-SynchronizationQueue.png)
+2. Sélectionnez la fréquence d'actualisation des informations.
+
+Après cela, les informations dans la fenêtre de file d'attente de synchronisation seront automatiquement actualisées selon la fréquence spécifiée.
+
+<Warning>
+  Lorsque vous activez l'actualisation automatique, vous devez être conscient que cela générera une quantité importante de trafic réseau supplémentaire. En conséquence, cela peut ralentir le processus de synchronisation du contenu lui-même. Il est donc recommandé de n'utiliser les fonctions d'actualisation automatique que pendant une courte période.
+</Warning>

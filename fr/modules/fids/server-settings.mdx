@@ -1,0 +1,75 @@
+Voici une version structurée et professionnelle de la section **PADS4 Server Settings for PADS4FIDS**, rédigée pour correspondre à votre style de documentation :
+
+***
+
+# Configuration des paramètres du serveur PADS4 pour PADS4FIDS
+
+Cette section décrit comment configurer les paramètres de base de données requis pour le produit **PADS4FIDS** en utilisant le **PADS4 System Management** application.
+
+> **Note:** Ces options sont uniquement visibles si une **PADS4FIDS product license** valide est installée. Si ce n'est pas le cas, la configuration PADS4FIDS sera masquée.
+
+***
+
+## Accès aux paramètres du serveur
+
+1. Ouvrez l'application **PADS4 System Management** application.
+2. Connectez-vous avec vos identifiants.
+3. Dans le **panneau de gauche**, sélectionnez **Server Settings**.
+4. Cliquez sur **Edit** dans la **Ribbon bar**.
+5. Sélectionnez **PADS4FIDS** dans la liste des paramètres de serveur disponibles.
+
+***
+
+## Configuration de la base de données
+
+### Microsoft SQL Server
+
+Si la base de données PADS4FIDS n'a pas encore été créée, elle peut être configurée manuellement en utilisant l'une des méthodes suivantes :
+
+* SQL Server Management Studio (interface graphique)
+* Instructions SQL
+* Script PowerShell
+
+***
+
+### Nom du serveur
+
+* Choisissez l'instance SQL Server à utiliser.
+* Lorsque la liste déroulante est ouverte, attendez quelques secondes pour que la liste se remplisse.
+
+### Authentification
+
+* Si **SQL Server Authentication** est sélectionné, fournissez le **username** et le **password**.
+* Encore une fois, attendez quelques secondes pour que les champs d'identification se remplissent si vous utilisez des listes déroulantes.
+
+### Nom de la base de données
+
+* Sélectionnez ou saisissez le nom de la **PADS4FIDS database**.
+* Si la base de données n'existe pas, PADS4 tentera de la créer une fois les paramètres enregistrés.
+
+> Si la base de données sélectionnée n'est pas déjà une base de données PADS4FIDS valide, la structure existante sera écrasée et toutes les données actuelles seront supprimées.
+
+***
+
+## Paramètres de suppression des vols
+
+Ces paramètres contrôlent la durée de conservation des données opérationnelles de vol dans le système.
+
+### **Supprimer les vols après X jours**
+
+* Définissez le nombre de jours après lesquels les vols terminés ou expirés doivent être supprimés de la base de données opérationnelle.
+
+### **Archiver les vols lors de la suppression**
+
+* Facultativement, spécifiez le nom d'une **archive database** où les anciens vols doivent être stockés.
+* Si aucune archive n'est définie, les vols seront **définitivement supprimés** et ne pourront pas être récupérés.
+
+***
+
+## Aide
+
+Cliquez sur le bouton **Help** dans l'interface pour ouvrir la **documentation en ligne** pour les paramètres du serveur PADS4FIDS.
+
+***
+
+Faites-moi savoir si vous souhaitez que cela soit suivi d'un **guide de configuration de mise en page d'écran FIDS** ou d'un **guide pour la conception et la planification du contenu**.

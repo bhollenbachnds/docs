@@ -1,62 +1,62 @@
-**JSON (JavaScript Object Notation)** est un format léger largement utilisé pour **data exchange**. PADS4 prend en charge **legacy JSON feed integration**, permettant la récupération de données en temps réel pour les présentations d'affichage dynamique.
+**JSON (JavaScript Object Notation)** est un format léger largement utilisé pour **l'échange de données**. PADS4 prend en charge **l'intégration de flux JSON hérités**, permettant la récupération de données en temps réel pour les présentations d'affichage dynamique.
 
 ***
 
-## **Étapes pour ajouter ou modifier une connexion JSON Feed**
+## **Étapes pour ajouter ou modifier une connexion de flux JSON**
 
-### **1. Démarrer l'assistant Data Provider**
+### **1. Démarrer l'Assistant fournisseur de données**
 
-* Ouvrez le **Data Provider Wizard** en suivant les instructions dans **Adding a Data Provider** ou **Editing a Data Provider**.
-* Sélectionnez **JSON Feed** comme type de fournisseur.
+* Ouvrez l'**Assistant fournisseur de données** en suivant les instructions dans **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
+* Sélectionnez **Flux JSON** comme type de fournisseur.
 
 ***
 
-### **2. Spécifier l'URL du JSON Feed**
+### **2. Spécifier l'URL du flux JSON**
 
-* Saisissez l'**JSON Feed URI** (URL) pointant vers la source de données.
-* Cliquez sur **Preview** pour afficher un échantillon des données récupérées.
+* Entrez l'**URI du flux JSON** (URL) pointant vers la source de données.
+* Cliquez sur **Aperçu** pour voir un échantillon des données récupérées.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
 ### **3. Choisir la méthode de requête**
 
-* **GET (default)** → Récupère des données sans les modifier.
+* **GET (par défaut)** → Récupère des données sans les modifier.
 * **POST** → Utilisé pour envoyer des paramètres supplémentaires.
-  * Si **POST** est sélectionné, saisissez le **request body** avec les paramètres requis.
+  * Si **POST** est sélectionné, entrez le **corps de la requête** avec les paramètres requis.
 
 ***
 
 ### **4. Configurer le formatage des données**
 
-* **Flatten Hierarchical Data** → Convertit les **nested JSON structures** en format de tableau plat.
-* **Include Parent Levels Column Names** → Ajoute des **parent-level identifiers** pour les relations hiérarchiques.
-* **Create Additional Columns Without HTML Tags** → Supprime le **HTML formatting** et extrait le **plain text**.
+* **Aplatir les données hiérarchiques** → Convertit les **structures JSON imbriquées** en un format de tableau plat.
+* **Inclure les noms de colonnes des niveaux parents** → Ajoute des **identifiants de niveau parent** pour les relations hiérarchiques.
+* **Créer des colonnes supplémentaires sans balises HTML** → Supprime le **formatage HTML** et extrait le **texte brut**.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
 ### **5. Configurer la sécurité et l'authentification**
 
-* **Authorization (si nécessaire)**
-  * Activez **Authorization Required**.
-  * Saisissez **UserID, Password, and Domain**.
+* **Autorisation (si nécessaire)**
+  * Activez **Autorisation requise**.
+  * Entrez **ID utilisateur, Mot de passe et Domaine**.
 
-* **Proxy Server (si applicable)**
+* **Serveur proxy (si applicable)**
   * Configurez les paramètres du proxy si votre réseau nécessite une authentification.
 
-* **User-Agent Identification**
-  * Si nécessaire, spécifiez une **custom User-Agent string** (utile pour les restrictions d'accès API).
+* **Identification de l'agent utilisateur**
+  * Si nécessaire, spécifiez une **chaîne d'agent utilisateur personnalisée** (utile pour les restrictions d'accès API).
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
-### **6. Finalisation de la configuration JSON Feed**
+### **6. Finalisation de la configuration du flux JSON**
 
-* Cliquez sur **Finish** pour terminer la configuration.
+* Cliquez sur **Terminer** pour compléter la configuration.
 
 ***
 
@@ -64,9 +64,9 @@ Cliquez sur **Next** pour continuer.
 
 * **PADS4 Data Server**
   * Si vous utilisez un **PADS4 Data Server**, assurez-vous que le **flux JSON est accessible depuis le serveur**.
-  * Si vous n'utilisez pas de Data Server, assurez-vous que **PADS4 Designer (pour la prévisualisation) et les Viewers** peuvent accéder au flux JSON.
+  * Si vous n'utilisez pas de Data Server, assurez-vous que **PADS4 Designer (pour l'aperçu) et les Viewers** peuvent accéder au flux JSON.
 
 * **Gestion des données JSON hiérarchiques**
-  * Si votre structure JSON comporte **plusieurs niveaux**, assurez-vous que **Flatten Hierarchical Data** est activé pour une sortie structurée.
+  * Si votre structure JSON comporte **plusieurs niveaux**, assurez-vous que **Aplatir les données hiérarchiques** est activé pour une sortie structurée.
 
 En suivant ces étapes, **PADS4 peut récupérer et afficher efficacement des données en temps réel basées sur JSON** dans les présentations d'affichage dynamique.

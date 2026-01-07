@@ -1,19 +1,19 @@
-Les **propriétés de style** définissent comment votre présentation sera lue, y compris les options pour synchroniser la lecture sur plusieurs Viewers.
+Le **Style properties** définissent comment votre présentation sera lue, y compris les options pour synchroniser la lecture sur plusieurs Viewers.
 
 ***
 
 ## **Synchroniser les Viewers**
 
-### **Calculer l'heure du changement de page en fonction de l'heure planifiée**
+### **Calculer l'heure du changement de page en fonction de l'heure programmée**
 
 * **Lorsqu'elle est activée**, cette option garantit que la présentation est **lue de manière synchrone** sur tous les écrans (Viewers) auxquels elle a été programmée.
-* **Lorsqu'elle est activée**, les comportements dynamiques des pages tels que **le saut conditionnel de pages** (par exemple, sauter une page lorsqu'aucune donnée n'est disponible) **ne fonctionneront plus**, car la synchronisation est prioritaire.
+* **Lorsqu'elle est activée**, les comportements dynamiques des pages tels que **conditional page skipping** (par exemple, sauter une page lorsqu'aucune donnée n'est disponible) **ne fonctionneront plus**, car la synchronisation est prioritaire.
 
 ***
 
 ## **Exemple de lecture synchronisée**
 
-Si une présentation est programmée pour démarrer à **10:00** et contient **deux pages**, chacune affichée pendant **1 minute**, la lecture se déroulerait comme suit :
+Si une présentation est programmée pour commencer à **10:00** et contient **deux pages**, chacune affichée pendant **1 minute**, la lecture se déroulerait comme suit :
 
 * **10:00 - 10:01** : La page 1 est affichée
 * **10:01 - 10:02** : La page 2 est affichée
@@ -28,7 +28,7 @@ Si le **PADS4 Viewer** est redémarré à **10:03**, la présentation **reprendr
 
 ## **Remarques**
 
-* **La synchronisation est basée sur l'horloge système** de chaque PC PADS4 Viewer. Le Viewer utilise cette horloge pour déterminer le moment précis d'affichage de chaque page, assurant l'alignement avec les autres Viewers.
+* **La synchronisation est basée sur l'horloge système** de chaque PC PADS4 Viewer. Le Viewer utilise cette horloge pour déterminer le moment précis d'affichage de chaque page, assurant ainsi l'alignement avec les autres Viewers.
 * Comme la synchronisation est **basée sur le temps**, **la présentation peut ne pas toujours commencer par la Page 1**.
 * La synchronisation fonctionne au **niveau de la page**, ce qui signifie que tous les écrans participants passent à la page suivante **simultanément**.
 * Le système **se resynchronise automatiquement à chaque changement de page**.

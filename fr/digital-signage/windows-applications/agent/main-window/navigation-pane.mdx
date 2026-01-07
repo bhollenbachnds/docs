@@ -1,0 +1,82 @@
+Après vous être connecté avec succès à votre serveur PADS4, vous pouvez utiliser le volet de navigation pour sélectionner une catégorie d'informations et accéder aux nombreuses [fonctions du serveur](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Server%20functions.htm) ou [fonctions du viewer](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Viewer%20functions.htm) intégrées à l'application. Le volet de navigation peut également être utilisé pour accéder aux [fonctions de boîte noire](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Black%20box%20functions.htm) d'une boîte noire stockée.
+
+ 
+
+#### **Pour sélectionner une catégorie d'informations du serveur**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Server Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Navigationpane-Server.png)
+2. Cliquez sur une **Catégorie** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le serveur PADS4 connecté et affichera les résultats dans la [zone d'information](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Information%20area.htm) de la fenêtre principale.
+
+Si votre installation PADS4 comprend des sous-serveurs ou des serveurs de sauvegarde, vous devez suivre la procédure décrite dans [travailler avec des sous-serveurs](https://pads4documentation.blob.core.windows.net/agent/Content/Advanced%20features/Working%20with%20sub%20servers.htm) pour sélectionner une catégorie d'informations du serveur. Si vous êtes connecté à plusieurs serveurs PADS4 (pour travailler simultanément sur plusieurs installations PADS4), veuillez consulter [connexion à plusieurs serveurs](https://pads4documentation.blob.core.windows.net/agent/Content/Advanced%20features/Connecting%20to%20multiple%20servers.htm) pour des informations supplémentaires.
+
+ 
+
+#### **Pour sélectionner une catégorie d'informations d'un viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewer Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Navigationpane-Viewer.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur une **Catégorie** dans la liste des catégories d'informations de viewer disponibles.
+
+   ![EN Agent Navigationpane Viewer Category Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Navigationpane-ViewerCategory.png)
+
+Après cela, le système se connectera automatiquement au serveur PADS4 connecté pour récupérer les informations demandées depuis le Viewer sélectionné et afficher les résultats dans la [zone d'information](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Information%20area.htm) de la fenêtre principale.
+
+<Note>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Note>
+
+#### **Boîtes noires**
+
+Chaque Viewer PADS4 crée automatiquement une soi-disant boîte noire dans laquelle des informations précieuses sur PADS4 sont stockées. Cela inclut les informations système et divers journaux. Lorsque vous rencontrez un problème avec un Viewer PADS4, la boîte noire est la source d'information idéale pour analyser la situation et tracer le problème. Ainsi, lorsque vous contactez le support pour un problème avec un Viewer PADS4, il est toujours suggéré d'envoyer le fichier de la boîte noire.
+
+Avec le volet de navigation, vous pouvez ajouter des fichiers de boîte noire à votre système et consulter les informations stockées.
+
+ 
+
+#### **Pour ajouter un fichier de boîte noire à l'application**
+
+1. Cliquez sur l'onglet **Black box** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Blackbox Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Navigationpane-Blackbox.png)
+2. Cliquez sur le bouton **Add** de la barre d'outils dans le volet de navigation.
+
+   ![EN Agent Navigationpane Blackbox Add Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Navigationpane-Blackbox-Add.png)
+3. Dans la boîte de dialogue d'ouverture de fichier, sélectionnez le fichier de boîte noire à ajouter et cliquez sur **Open**.
+
+Après avoir ajouté un fichier de boîte noire, vous pouvez utiliser l'application PADS4 Agent pour consulter les informations qui sont stockées dans le fichier de boîte noire.
+
+Les boîtes noires que vous avez ajoutées continuent d'exister dans votre application PADS4 Agent, même après avoir fermé l'application. Ainsi, la prochaine fois que vous démarrez l'application PADS4 Agent sur le même ordinateur, vous pouvez simplement réutiliser les boîtes noires que vous avez précédemment ajoutées. Pour supprimer une boîte noire de votre application PADS4 Agent, vous devez la supprimer manuellement comme décrit ci-dessous.
+
+ 
+
+#### **Pour sélectionner une catégorie d'information d'une boîte noire**
+
+1. Assurez-vous que la boîte noire a été ajoutée à l'application comme décrit ci-dessus.
+2. Sélectionnez l'élément de boîte noire dans la liste des boîtes noires disponibles.
+3. Cliquez sur une **Category** dans la liste des catégories d'informations de boîte noire disponibles.
+
+   ![EN Agent Navigationpane Blackbox Category Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Navigationpane-Blackbox-Category.png)
+
+Après cela, le système ouvrira automatiquement le fichier de boîte noire pour récupérer les informations demandées et afficher les résultats dans la [zone d'information](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Information%20area.htm) de la fenêtre principale.
+
+ 
+
+#### **Pour supprimer un fichier de boîte noire de l'application**
+
+1. Cliquez sur l'onglet Black box dans le volet de navigation.
+2. Sélectionnez l'élément de boîte noire dans la liste des boîtes noires disponibles.
+3. Cliquez sur le bouton Remove de la barre d'outils dans le volet de navigation.
+
+   ![EN Agent Navigationpane Blackbox Remove Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Navigationpane-Blackbox-Remove.png)
+
+<Note>
+  Lorsque vous supprimez un fichier de boîte noire comme décrit ci-dessus, il sera uniquement supprimé de la liste des boîtes noires dans votre application PADS4 Agent. Le fichier physique de la boîte noire ne sera pas supprimé de votre ordinateur.
+</Note>
+
+ 

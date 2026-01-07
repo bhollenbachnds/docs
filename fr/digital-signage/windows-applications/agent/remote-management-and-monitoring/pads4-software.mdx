@@ -1,0 +1,132 @@
+Avec les fonctions de mise à jour du logiciel PADS4, vous pouvez récupérer les informations de version des fichiers PADS4 sur votre PADS4 Server, un PADS4 Viewer, ou un fichier black box. Le logiciel PADS4 de votre PADS4 Server ou PADS4 Viewer peut être mis à jour à distance.
+
+ 
+
+#### **Pour récupérer les informations de version des fichiers PADS4 sur votre PADS4 Server**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **PADS software** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le PADS4 Server connecté et affichera les résultats dans la fenêtre PADS4 software. Si votre installation PADS4 comprend des sous-serveurs, vous devez d'abord sélectionner un serveur avant de sélectionner la catégorie d'informations.
+
+ 
+
+#### **Pour récupérer les informations de version des fichiers PADS4 sur un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **PADS software** dans la liste des catégories d'informations de viewer disponibles.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées depuis le Viewer sélectionné et affichera les résultats dans la fenêtre PADS4 software.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Pour consulter les informations de version PADS4 d'un fichier black box**
+
+1. Assurez-vous que la black box a été [ajoutée](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) à l'application.
+2. Cliquez sur l'onglet **Black Box** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Blackboxtab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Blackboxtab.png)
+3. Sélectionnez l'élément black box dans la liste des black boxes disponibles.
+4. Cliquez sur **PADS software** dans la liste des catégories d'informations de black box disponibles.
+
+Après cela, le système ouvrira automatiquement le fichier black box pour récupérer les informations demandées et affichera les résultats dans la fenêtre PADS4 software.
+
+ 
+
+#### **Fenêtre PADS software**
+
+La fenêtre PADS4 software affiche les informations de version du logiciel PADS4 et de tous les fichiers associés. Cela vous permet de vérifier si vous utilisez la bonne version du logiciel.
+
+![EN Agent Pads4software Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-PADS4Software.png)
+
+En haut de la fenêtre, vous trouverez le **Numéro de version** et la **Date** du logiciel PADS4 installé.
+
+**Nom du fichier**\
+Nom du fichier qui a été installé dans le dossier \Program Files de PADS4.
+
+**Version**\
+Numéro de version du fichier installé.
+
+**Taille**\
+Taille du fichier installé.
+
+**Créé**\
+Date et heure auxquelles le fichier a été initialement installé.
+
+**Dernière modification**\
+Date et heure auxquelles le fichier a été mis à jour pour la dernière fois.
+
+ 
+
+#### **Mise à jour du logiciel PADS4**
+
+Depuis la fenêtre PADS4 software, vous pouvez mettre à jour à distance le logiciel PADS4 sur votre PADS4 Server ou PADS4 Viewer.
+
+<Warning>
+  Avant de commencer à utiliser la fonction de mise à jour, il est crucial de comprendre la différence entre l'utilisation de cette fonction pour votre PADS4 Server et votre PADS4 Viewer.\
+  \
+  Lorsque vous appelez la fonction de mise à jour pour votre PADS4 Server, le système vérifiera EN LIGNE s'il existe une nouvelle mise à jour du logiciel PADS4 disponible. Si vous appelez la fonction de mise à jour pour un PADS4 Viewer, le système vérifiera UNIQUEMENT auprès de votre PADS4 Server la disponibilité d'une nouvelle mise à jour. Cela signifie qu'un PADS4 Viewer ne 'verra' qu'il existe une nouvelle version que si cette nouvelle version a été précédemment téléchargée par votre PADS4 Server.
+</Warning>
+
+Lors de la vérification de la disponibilité des mises à jour logicielles, le système ne recherchera que la dernière version à laquelle vous avez droit. Par exemple : Vous avez un contrat logiciel qui inclut les mises à jour jusqu'au 31 décembre 2015. De nouvelles versions du logiciel PADS4 ont été publiées le 12 décembre 2015 et une suivante le 6 janvier 2016. Lorsque vous exécutez la fonction de mise à jour du logiciel le 1er février 2017, le système ne renverra que la mise à jour du 12 décembre et ignorera la mise à jour du 6 janvier. Pour accéder à cette version plus récente, vous devrez renouveler votre contrat.
+
+<Tip>
+  Lors de la mise à jour du logiciel PADS4, il est fortement recommandé de mettre d'abord à jour le logiciel sur votre PADS4 Server, avant de mettre à jour le logiciel de vos PADS4 Viewers. Il est également préférable d'utiliser la même version du logiciel PADS4 sur tous les PC de votre installation PADS4.
+</Tip>
+
+Vous pouvez éventuellement séparer le téléchargement d'une mise à jour de son installation. Cela vous permet de télécharger une mise à jour et de l'installer ultérieurement, à un moment plus opportun.
+
+<Tip>
+  La mise à jour du logiciel PADS4 peut également être effectuée en tant que tâche planifiée. De cette façon, vous pouvez automatiser entièrement le processus de téléchargement et d'installation des mises à jour.
+</Tip>
+
+ 
+
+#### **Pour mettre à jour le logiciel PADS4 sur votre PADS4 Server**
+
+1. Assurez-vous que la fenêtre PADS4 software fait référence à votre PADS4 Server (L'en-tête de l'onglet de la fenêtre doit contenir le texte 'PADS Software: Server').
+2. Cliquez sur **Update** dans le menu **Home**.
+
+   ![EN Agent Ribbon Updatesoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Updatesoftware.png)
+3. Sélectionnez l'**Action** que vous souhaitez exécuter.
+
+   ![EN Agent Updateserversoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Updateserversoftware.png)
+
+   | **Action**                  | **Description**                                                                                                                                                                                                                                                                                                                                                                                                            |
+   | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Download Update             | Votre PADS4 Server vérifiera EN LIGNE s'il existe une nouvelle version mise à jour du logiciel PADS4 disponible.<br />Si c'est le cas, la mise à jour sera automatiquement téléchargée et stockée localement sur votre PC PADS4 Server.                                                                                                                                                                                    |
+   | Install Downloaded Update   | Votre PADS4 Server vérifiera localement s'il existe une mise à jour précédemment téléchargée disponible.<br />Si c'est le cas, la mise à jour sera automatiquement installée sur votre PC PADS4 Server. REMARQUE : Si nécessaire, le système effectuera automatiquement un redémarrage après l'installation de la mise à jour. En conséquence, vous pourriez (temporairement) perdre la connexion avec votre PADS4 Server. |
+   | Download and Install Update | Votre PADS4 Server effectuera une combinaison des deux actions ci-dessus.                                                                                                                                                                                                                                                                                                                                                  |
+4. Cliquez sur **Update** pour démarrer l'action sélectionnée.
+
+Après cela, le système démarrera automatiquement l'action spécifiée. Pour voir les résultats de cette action, vous devez consulter la fenêtre [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).
+
+ 
+
+#### **Pour mettre à jour le logiciel PADS4 sur votre PADS4 Viewer**
+
+1. Assurez-vous que la fenêtre PADS4 software fait référence à votre PADS4 Viewer (L'en-tête de l'onglet de la fenêtre doit contenir le nom de votre PADS4 Viewer').
+2. Cliquez sur **Update** dans le menu **Home**.
+
+   ![EN Agent Ribbon Updatesoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Updatesoftware.png)
+3. Sélectionnez l'**Action** que vous souhaitez exécuter.
+
+   ![EN Agent Updateviewersoftware Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Updateviewersoftware.png)
+
+   | **Action**                              | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   | :-------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Télécharger la mise à jour              | Votre PADS4 Viewer vérifiera auprès de votre PADS4 Server si une nouvelle version mise à jour du logiciel PADS4 est disponible.<br /><br />Si c'est le cas, la mise à jour sera automatiquement téléchargée et stockée localement sur votre PC PADS4 Viewer.                                                                                                                                                                                                                        |
+   | Installer la mise à jour téléchargée    | Votre PADS4 Viewer vérifiera localement si une mise à jour précédemment téléchargée est disponible.<br /><br />Si c'est le cas, la mise à jour sera automatiquement installée sur votre PC PADS4 Viewer.  Cochez **Redémarrer après l'installation de la mise à jour** si vous souhaitez que le système effectue automatiquement un redémarrage après l'installation de la mise à jour. En conséquence, vous pourriez (temporairement) perdre la connexion avec votre PADS4 Viewer. |
+   | Télécharger et installer la mise à jour | Votre PADS4 Viewer effectuera une combinaison des deux actions ci-dessus.                                                                                                                                                                                                                                                                                                                                                                                                           |
+4. Cliquez sur **Mettre à jour** pour démarrer l'action sélectionnée.
+
+Après cela, le système démarrera automatiquement l'action spécifiée. Pour voir les résultats de cette action, vous devez consulter la fenêtre [tâches](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).

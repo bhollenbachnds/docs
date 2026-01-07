@@ -1,10 +1,10 @@
 Ce manuel ne peut être suivi que si vous avez configuré SSO dans votre environnement Azure / Entra ID. Vous pouvez suivre cet article pour le faire : **Single Sign On (Azure)**
 
-Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4 CMS peut être configuré pour utiliser SSO.
+Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4CMS peut être configuré pour utiliser SSO.
 
 ## Important :
 
-Pour que SSO fonctionne correctement, PADS4 doit être configuré avec l'utilisation de HTTPS. Pour y parvenir, vous devez suivre ce guide en utilisant un certificat SSL.
+Pour que SSO fonctionne correctement, PADS4 doit être configuré avec l'utilisation de HTTPS. Pour y parvenir, vous devrez suivre ce guide avec l'utilisation d'un certificat SSL.
 
 ## Étape 1 : Accédez à votre instance PADS4 CMS dans un navigateur
 
@@ -14,7 +14,7 @@ Connectez-vous avec un compte Administrateur et sélectionnez "CMS Admin"
 
 ## Étape 2 : Sélectionnez "Plugins" dans le volet de gauche, puis "Single Sign-on (SSO)
 
-Activez le plugin en haut à **droite**, à côté de **"Type"**, sélectionnez l'option **"Azure AD"** dans la liste déroulante
+Activez le plugin sur le **coin supérieur droit**, à côté de **"Type"**, sélectionnez l'option **"Azure AD"** dans la liste déroulante
 
 ![Pluging Type Azure AD Pn](/images/Pluging-Type-AzureAD.png)
 
@@ -31,7 +31,7 @@ Activez le plugin en haut à **droite**, à côté de **"Type"**, sélectionnez 
 
 ### Important :
 
-La chaîne copiée pour **" URL of the relying party "** dans la configuration SSO du CMS ne doit pas contenir\*\*" /Saml "\*\* comme copié depuis Azure mais plutôt seulement\*\*" /crystal/pads "\*\* .
+La chaîne copiée pour le **" URL of the relying party "** dans la configuration CMS SSO ne doit pas contenir\*\*" /Saml "\*\* comme copié depuis Azure mais plutôt seulement\*\*" /crystal/pads "\*\* .
 
 (Où "pads" est le domaine par défaut) Exemple : Le lien copié d'Azure ressemble à ceci :
 
@@ -59,7 +59,7 @@ Exemple ci-dessous :
 
 ![Relationtable Pn](/images/Relationtable.png)
 
-Enregistrez la configuration, puis déconnectez-vous et vous devriez maintenant voir **"Single Sign On"** comme option :
+Enregistrez la configuration puis déconnectez-vous et vous devriez maintenant voir ci-dessous **"Single Sign On"** comme option :
 
 ![Continuewithsso Pn](/images/Continuewithsso.png)
 

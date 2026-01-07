@@ -1,0 +1,42 @@
+## **Changer la base de données des capteurs dans PADS4**
+
+Par défaut, **SQLite** est utilisé comme base de données de stockage pour les **Sensor data**.
+
+⚠ **Important:** Changer le type de base de données effacera toutes les données existantes. Assurez-vous d'avoir une sauvegarde avant de continuer.
+
+***
+
+## **Changer le type de base de données**
+
+### **Utilisation de l'outil de configuration PADS4**
+
+1. Ouvrez le **PADS4 Configuration Tool**.
+2. Naviguez vers les paramètres **Sensor Database**.
+3. Sélectionnez le **database type** souhaité parmi les options disponibles.
+
+### **Changer manuellement le type de base de données**
+
+1. Ouvrez **File Explorer** et naviguez vers le répertoire d'installation de PADS4 :
+   ```
+   C:\Program Files\NDS\PADS4 Foundation\  
+   ```
+2. Localisez et lancez :
+   ```
+   NDS.DataStorage.ConfigurationTool.exe  
+   ```
+3. Sélectionnez le **new database type** et appliquez les modifications.
+
+***
+
+## **Types de bases de données pris en charge**
+
+PADS4 prend en charge les types de bases de données suivants pour le **Sensor data storage** :
+
+* **SQLite** (par défaut)
+* **SQL Server**
+* **PostgreSQL**
+* **MongoDB**
+
+### **Exportation de données pour logiciels tiers**
+
+Toutes les bases de données prises en charge permettent **l'exportation de données**, permettant une intégration transparente avec des applications tierces si nécessaire.

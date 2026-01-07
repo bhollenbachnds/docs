@@ -6,13 +6,17 @@ Ce guide fournit des instructions pour **l'installation et la configuration de P
 
 Pour installer **PADS4 Viewer** sur un **Giada F108D**, suivez le **processus d'installation Windows standard**.
 
-Pour des **instructions détaillées étape par étape**, consultez le guide [**Installing PADS4 on Windows**](/fr/certified-devices/windows/Windows-Viewer).
+Pour des **instructions détaillées étape par étape**, reportez-vous au guide [**Installing PADS4 on Windows**](/fr/certified-devices/windows/Windows-Viewer).
 
 ### **1.1 Amélioration des performances de lecture vidéo**
 
-Pour une **expérience de lecture vidéo plus fluide**, nous **recommandons vivement de mettre à jour les LAV Filters** vers au moins la version **0.79.2**.
+<Tip>
+  Lorsque vous utilisez PADS4 version 2025.2 et supérieure, cela n'est plus nécessaire car le Windows Viewer utilise désormais les derniers LAV Filters disponibles.
+</Tip>
 
-[**Télécharger LAV Filters 0.79.2**](#)
+Pour une **expérience de lecture vidéo plus fluide**, nous **recommandons vivement de mettre à jour les LAV Filters** vers la dernière version disponible, actuellement 0.80.
+
+[**Télécharger LAV Filters 0.80**](https://github.com/Nevcairiel/LAVFilters/releases/download/0.80/LAVFilters-0.80-Installer.exe)
 
 ***
 
@@ -20,71 +24,71 @@ Pour une **expérience de lecture vidéo plus fluide**, nous **recommandons vive
 
 ### **2.1 Fonctionnalités générales**
 
-| Fonctionnalité | Description                                                                                                   |
-| :------------: | ------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Automatic PADS4 Software Updates** – Géré via une tâche planifiée dans **PADS4 Agent**.                     |
-|        ✅       | **Offline Mode** – L'appareil continue d'exécuter les présentations et les planifications en mode hors ligne. |
+| Fonctionnalité | Description                                                                                                      |
+| :------------: | ---------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel PADS4** – Gérées via une tâche planifiée dans **PADS4 Agent**.           |
+|        ✅       | **Mode hors ligne** – L'appareil continue d'exécuter les présentations et les planifications en mode hors ligne. |
 
 ***
 
 ### **2.2 Capacités de l'appareil**
 
-| Fonctionnalité | Description                                                                                                      |
-| :------------: | ---------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Portrait Mode** – Pris en charge.                                                                              |
-|        ✅       | **4K UHD Support**                                                                                               |
-|        ✅       | **Dual HDMI** – *La deuxième sortie HDMI prend en charge uniquement le mode miroir (pas le mode bureau étendu).* |
-|        ✅       | **Transfer Protocols** – HTTP, HTTPS                                                                             |
-|        ✅       | **Turn Off Display** – Pris en charge.                                                                           |
-|        ✅       | **Cluster Viewer** – Cet appareil peut être utilisé comme **Cluster Viewer**.                                    |
+| Fonctionnalité | Description                                                                                                        |
+| :------------: | ------------------------------------------------------------------------------------------------------------------ |
+|        ✅       | **Mode Portrait** – Pris en charge.                                                                                |
+|        ✅       | **Prise en charge 4K UHD**                                                                                         |
+|        ✅       | **Double HDMI** – *La deuxième sortie HDMI prend en charge uniquement le mode miroir (pas le mode bureau étendu).* |
+|        ✅       | **Protocoles de transfert** – HTTP, HTTPS                                                                          |
+|        ✅       | **Éteindre l'écran** – Pris en charge.                                                                             |
+|        ✅       | **Cluster Viewer** – Cet appareil peut être utilisé comme **Cluster Viewer**.                                      |
 
 ***
 
 ### **2.3 Lecture et prise en charge du contenu**
 
-| Fonctionnalité | Description                                                                                |
-| :------------: | ------------------------------------------------------------------------------------------ |
-|        ✅       | **Maximum Videos Supported** – Jusqu'à **4 vidéos Full HD (FHD)** ou **1 vidéo UHD (4K)**. |
-|        ✅       | **Supported Video Codecs** – H.264, H.265                                                  |
-|        ✅       | **4K Video Playback** – Pris en charge.                                                    |
-|        ✅       | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Pris en charge.              |
-|        ❌       | **Streaming Video** – Non pris en charge.                                                  |
-|        ✅       | **Image Formats** – JPG, PNG, BMP, GIF                                                     |
-|        ✅       | **Text, Line, Shape, Scrolling Text, Formatted Text, Tables, Interactive Buttons**         |
-|        ✅       | **Web Element** – Pris en charge.                                                          |
-|        ✅       | **PowerPoint & PDF Elements** – Pris en charge.                                            |
+| Fonctionnalité | Description                                                                                                 |
+| :------------: | ----------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Nombre maximum de vidéos prises en charge** – Jusqu'à **4 vidéos Full HD (FHD)** ou **1 vidéo UHD (4K)**. |
+|        ✅       | **Codecs vidéo pris en charge** – H.264, H.265                                                              |
+|        ✅       | **Lecture vidéo 4K** – Prise en charge.                                                                     |
+|        ✅       | **Rotation vidéo, Vidéos sans couture, Réflexion, Inclinaison, Retournement** – Pris en charge.             |
+|        ❌       | **Diffusion vidéo en streaming** – Non pris en charge.                                                      |
+|        ✅       | **Formats d'image** – JPG, PNG, BMP, GIF                                                                    |
+|        ✅       | **Texte, Ligne, Forme, Texte défilant, Texte formaté, Tableaux, Boutons interactifs**                       |
+|        ✅       | **Élément Web** – Pris en charge.                                                                           |
+|        ✅       | **Éléments PowerPoint & PDF** – Pris en charge.                                                             |
 
 ***
 
 ### **2.4 Connexions de données**
 
-| Fonctionnalité | Description                                                                                                                     |
-| :------------: | ------------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Data Providers** – Prend en charge plus de **70+ PADS4 data providers** pour récupérer et intégrer des données en temps réel. |
-|        ✅       | **Viewer Variables** – Simplifie la gestion du contenu sans modifier les présentations.                                         |
-|        ✅       | **Property Bindings** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.                  |
+| Fonctionnalité | Description                                                                                                                                       |
+| :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Fournisseurs de données** – Prend en charge plus de **70+ fournisseurs de données PADS4** pour récupérer et intégrer des données en temps réel. |
+|        ✅       | **Variables de visualisation** – Simplifie la gestion du contenu sans modifier les présentations.                                                 |
+|        ✅       | **Liaisons de propriétés** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.                               |
 
 ***
 
-### **2.5 Règles et automatisation**
+### **2.5 Règles & Automatisation**
 
-| Fonctionnalité | Description                              |
-| :------------: | ---------------------------------------- |
-|        ✅       | **Presentation Rules** – Pris en charge. |
-|        ✅       | **Page Rules** – Pris en charge.         |
-|        ✅       | **Element Rules** – Pris en charge.      |
+| Fonctionnalité | Description                                  |
+| :------------: | -------------------------------------------- |
+|        ✅       | **Règles de présentation** – Pris en charge. |
+|        ✅       | **Règles de page** – Pris en charge.         |
+|        ✅       | **Règles d'élément** – Pris en charge.       |
 
 ***
 
 ### **2.6 Gestion des appareils**
 
-| Fonctionnalité | Description                                                                                                                    |
-| :------------: | ------------------------------------------------------------------------------------------------------------------------------ |
-|        ✅       | **Remote Device Management** – Prend en charge la gestion basée sur le web et sur Windows.                                     |
-|        ✅       | **Connection State Monitoring & Alerts** – Envoie des alertes pour les pannes réseau.                                          |
-|        ✅       | **Reboot, Restart Viewer, Shutdown, Wake-on-LAN** – Pris en charge.                                                            |
-|        ✅       | **Capture d'écran** – Récupérer des captures d'écran de l'affichage.                                                           |
-|        ✅       | **Journaux et surveillance du système** – Journaux du Viewer, journaux de synchronisation et informations système disponibles. |
-|        ✅       | **Paramètres du Viewer et installation de polices** – Gérer les paramètres et installer des polices personnalisées.            |
-|        ✅       | **Suivi de preuve de diffusion** – Surveille l'historique de lecture du contenu.                                               |
-|        ✅       | **Support Blackbox** – Si un dépannage est nécessaire, la blackbox fournit des journaux système critiques pour le support NDS. |
+| Fonctionnalité | Description                                                                                                                       |
+| :------------: | --------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Gestion d'appareils à distance** – Prend en charge la gestion basée sur le web et sur Windows.                                  |
+|        ✅       | **Surveillance de l'état de connexion & Alertes** – Envoie des alertes pour les pannes réseau.                                    |
+|        ✅       | **Redémarrage, Redémarrage du visualiseur, Arrêt, Wake-on-LAN** – Pris en charge.                                                 |
+|        ✅       | **Capture d'écran** – Récupérer des captures d'écran de l'affichage.                                                              |
+|        ✅       | **Journaux & Surveillance système** – Journaux du visualiseur, journaux de synchronisation et informations système disponibles.   |
+|        ✅       | **Paramètres du visualiseur & Installation de polices** – Gérer les paramètres et installer des polices personnalisées.           |
+|        ✅       | **Suivi de preuve de diffusion** – Surveille l'historique de lecture du contenu.                                                  |
+|        ✅       | **Support Blackbox** – Si un dépannage est nécessaire, la boîte noire fournit des journaux système critiques pour le Support NDS. |

@@ -1,10 +1,10 @@
-Le **Facebook provider** dans **PADS4** vous permet de **vous connecter à une Page Facebook Business** et de récupérer du contenu en utilisant **Facebook Graph API (v15.0)**.
+Le **Facebook provider** dans **PADS4** vous permet de **connect to a Facebook Business Page** et de récupérer du contenu en utilisant **Facebook Graph API (v15.0)**.
 
 ### **Exigences**
 
 * Une **Facebook/Meta Business Page**.
 * Un **Facebook account** valide avec accès à la page.
-* **Accès Internet** pour l'authentification et la récupération des données.
+* **Internet access** pour l'authentification et la récupération des données.
 
 ***
 
@@ -12,55 +12,55 @@ Le **Facebook provider** dans **PADS4** vous permet de **vous connecter à une P
 
 ### **1. Démarrer l'assistant de fournisseur de données**
 
-* Ouvrez le **Data Provider Wizard** en suivant les instructions dans **Adding a Data Provider** ou **Editing a Data Provider**.
+* Ouvrez **Data Provider Wizard** en suivant les instructions dans **Adding a Data Provider** ou **Editing a Data Provider**.
 * Sélectionnez **Facebook** comme **provider type**.
 
-### **2. Authentifiez votre compte Facebook**
+### **2. Authentifier votre compte Facebook**
 
-* Cliquez sur **Authenticate** pour ouvrir la **page de connexion Facebook**.
-* Saisissez vos **identifiants** et cliquez sur **OK**.
+* Cliquez sur **Authenticate** pour ouvrir la **Facebook login page**.
+* Saisissez vos **credentials** et cliquez sur **OK**.
 * PADS4 générera un **token** et fermera automatiquement la fenêtre.
-* La **date d'expiration** du token sera affichée.
+* La **expiration date** du token sera affichée.
 
 **Remarques importantes sur l'authentification :**
 
-* Chaque fois que vous modifiez le **Facebook Data Provider**, vous devez **vous ré-authentifier**.
-* Si le **identifiants sont enregistrés** dans le navigateur, le processus sera **automatique**.
-* Le **jeton est valide pendant 60 jours** et est **automatiquement prolongé** tant qu'il est utilisé pendant cette période.
-* Si le **jeton expire**, Facebook ne **renverra plus de données**, et vous devez **vous réauthentifier manuellement**.
+* Chaque fois que vous modifiez le **Facebook Data Provider**, vous devez **re-authenticate**.
+* Si les **credentials are saved** dans le navigateur, le processus sera **automatic**.
+* Le **token is valid for 60 days** et est **automatically extended** tant qu'il est utilisé pendant cette période.
+* Si le **token expires**, Facebook **no longer return data**, et vous devez **re-authenticate manually**.
 
-### **3. Sélectionnez le compte Facebook et la Page**
+### **3. Sélectionner le compte et la page Facebook**
 
-* **Choisissez le type de compte**:
-  * **Mon compte** (récupère les données de votre propre compte Facebook).
+* **Choisissez le type de compte** :
+  * **My account** (récupère les données de votre propre compte Facebook).
   * **Page** (récupère les données d'une **Facebook Business Page**).
-* Si vous sélectionnez une **Page**, saisissez l'**Page ID** (recommandé) ou sélectionnez-la dans la liste.
+* Si vous sélectionnez une **Page**, saisissez **Page ID** (recommandé) ou sélectionnez-la dans la liste.
 
 **Important:**
 
-* Le **Page ID number** se trouve sous le **Page Name** dans les **paramètres Facebook**.
-* **Les noms d'albums dans Facebook ne sont pas uniques**—PADS4 sélectionnera le **premier nom d'album correspondant**.
+* Le **Page ID number** se trouve sous le **Page Name** dans les **Facebook settings**.
+* **Les noms d'albums dans Facebook ne sont pas uniques**—PADS4 sélectionnera le **first matching album name**.
 
 ### **4. Charger les détails de la page et spécifier la source de contenu**
 
-* Cliquez sur **Charger** pour récupérer les **détails spécifiques à la page**.
+* Cliquez sur **Charger** pour récupérer **les détails spécifiques à la page**.
 * Choisissez le type de **contenu à récupérer**:
   * **Photos** (vous pouvez spécifier un album).
   * **Autre contenu Facebook** (comme des publications ou des événements).
-* **Limitez le nombre de lignes renvoyées** pour de **meilleures performances**.
+* **Limitez le nombre de lignes retournées** pour **de meilleures performances**.
 
 ### **5. Finaliser la connexion**
 
 * Cliquez sur **Suivant** pour continuer.
-* Complétez l'assistant comme décrit dans **Adding a Data Provider**.
+* Complétez l'assistant comme décrit dans **Ajouter un fournisseur de données**.
 
 ***
 
 ## **Meilleures pratiques**
 
-* **Utilisez le Page ID** au lieu du **Page Name** pour vous assurer que la bonne page est sélectionnée.
+* **Utilisez l'ID de page** au lieu du **Nom de page** pour garantir que la page correcte est sélectionnée.
 * **Maintenez l'authentification active** en vous assurant que le **fournisseur de données est utilisé au moins une fois tous les 60 jours**.
-* **Limitez le nombre de lignes** pour une **récupération de données plus rapide** et de **meilleures performances**.
+* **Limitez le nombre de lignes** pour **une récupération de données plus rapide** et **de meilleures performances**.
 
 ***
 
@@ -68,10 +68,10 @@ Le **Facebook provider** dans **PADS4** vous permet de **vous connecter à une P
 
 * **Expiration du jeton :**
   * Les jetons d'authentification Facebook **expirent après 60 jours**.
-  * Si une **présentation** n'est **pas utilisée pendant plus de 60 jours**, **une réauthentification** est nécessaire.
+  * Si une **présentation** n'est **pas utilisée pendant plus de 60 jours**, **une ré-authentification** est nécessaire.
 
 * **Accès au serveur de données :**
-  * Si vous utilisez un **PADS4 Data Server**, assurez-vous que **Facebook est accessible** du **point de vue du serveur**.
+  * Si vous utilisez un **PADS4 Data Server**, assurez-vous que **Facebook est accessible** depuis le **point de vue du serveur**.
   * Si **vous n'utilisez pas de Data Server**, vérifiez que chaque **PADS4 Designer et Viewer** dispose d'une **connexion internet active**.
 
-En suivant ces étapes, vous pouvez réussir à **connecter PADS4 à Facebook** et **afficher du contenu dynamique de médias sociaux** dans vos **présentations d'affichage dynamique**.
+En suivant ces étapes, vous pouvez **connecter PADS4 à Facebook** et **afficher du contenu dynamique des médias sociaux** dans vos **présentations d'affichage dynamique**.

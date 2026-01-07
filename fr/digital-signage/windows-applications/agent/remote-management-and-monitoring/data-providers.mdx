@@ -1,0 +1,54 @@
+Avec les fonctions du fournisseur de données, vous pouvez inspecter les paramètres du fournisseur de données et les données en temps réel qui sont transmises à votre PADS4 Viewer.
+
+ 
+
+#### **Pour récupérer les informations des fournisseurs de données d'un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Data providers** dans la liste des catégories d'informations disponibles pour le viewer.
+
+Après cela, le système se connectera automatiquement au serveur PADS4 connecté pour récupérer les informations demandées du Viewer sélectionné et afficher les résultats dans la fenêtre Data Providers.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre Data Providers**
+
+La fenêtre Data Providers affiche les fournisseurs de données de la présentation actuellement diffusée par PADS4 Viewer. Cela vous permet de vérifier les paramètres, les performances et les données en temps réel fournies par chaque fournisseur de données individuel.
+
+![EN Agent Dataproviders2 Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Dataproviders2.png)
+
+**Data Providers**\
+Une liste de tous les fournisseurs de données définis dans la présentation PADS4 actuellement en cours de lecture. En sélectionnant l'un des fournisseurs de données répertoriés, vous pouvez afficher plus de détails à son sujet.
+
+#### **Data Vault Providers**
+
+Plus d'informations sur l'utilisation des Data Vault Providers peuvent être trouvées dans la documentation PADS4 System Management.\
+Les Data Vault Providers vous permettront de spécifier des fournisseurs de données définis par le système, qui ne sont pas modifiables par les utilisateurs du Designer, et de chiffrer les données.
+
+Si vous survolez l'élément dans la liste, une infobulle avec des informations détaillées s'affichera.
+
+En sélectionnant l'un des fournisseurs répertoriés, PADS4 affichera dans la zone de droite (Data Provider) des informations détaillées, et en bas, les données réelles.
+
+**Data Provider**\
+Détails de performance et paramètres de configuration du fournisseur de données sélectionné. Si le fournisseur de données n'utilise pas de serveur de données, les détails concernant le temps d'exécution de la requête sont répertoriés. Les paramètres de configuration sont en lecture seule. Pour modifier les paramètres de configuration d'un fournisseur de données, vous devez ajuster le fournisseur de données dans votre présentation avec l'application PADS4 Designer.
+
+ 
+
+**Data**\
+Les données en temps réel fournies par le fournisseur de données sélectionné, y compris les filtres optionnels. Si votre fournisseur de données utilise un serveur de données, ce sont les données que le PADS4 Viewer a reçues du serveur de données PADS4.
+
+**Unfiltered Data** (Si aucun filtre n'est spécifié, cet onglet sera invisible.)\
+Contient les données récupérées de la source sans filtre spécifié. L'utilisateur peut spécifier un filtre dans l'assistant du fournisseur de données.
+
+ 
+
+<Tip>
+  Si votre fournisseur de données utilise le serveur de données PADS4 pour collecter et fournir des données en temps réel, vous pouvez utiliser une combinaison de la fenêtre du fournisseur de données et de la [<u>fenêtre Data Server</u>](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Data%20Server.htm) pour vérifier la livraison des données en temps réel. Dans la fenêtre Data Server, vous pouvez vérifier si les données en temps réel sont correctement collectées par le serveur de données PADS4. Dans la fenêtre Data Providers, vous pouvez vérifier si les données collectées sont correctement transmises à votre PADS4 Viewer par le serveur de données.
+</Tip>

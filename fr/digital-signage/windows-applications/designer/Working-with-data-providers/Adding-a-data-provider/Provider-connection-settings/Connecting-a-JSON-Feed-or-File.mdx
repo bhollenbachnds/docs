@@ -1,50 +1,50 @@
-**JSON (JavaScript Object Notation)** est un format de données léger et structuré largement utilisé pour **l'échange de données entre services web et applications**. PADS4 permet l'intégration avec **des flux JSON (depuis internet) ou des fichiers JSON (stockage local)** comme fournisseurs de données.
+**JSON (JavaScript Object Notation)** est un format de données léger et structuré largement utilisé pour **l'échange de données entre services web et applications**. PADS4 permet l'intégration avec des **flux JSON (depuis internet) ou des fichiers JSON (stockage local)** comme fournisseurs de données.
 
 ***
 
 ## **Étapes pour ajouter ou modifier une connexion JSON dans PADS4**
 
-### **1. Démarrer l'assistant de fournisseur de données**
+### **1. Démarrer l'Assistant de fournisseur de données**
 
-* Ouvrez le **Data Provider Wizard** en suivant les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
+* Ouvrez l'**Data Provider Wizard** en suivant les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
 * Choisissez **JSON Feed** (pour une source en ligne) ou **JSON File** (pour une source locale).
 
 ***
 
 ### **2. Spécifier la source JSON**
 
-* **Pour les flux JSON (En ligne)**
+* **Pour les flux JSON (en ligne)**
   * Saisissez l'**URL (URI)** du flux JSON.
   * Assurez-vous que l'URL est **accessible publiquement** ou dispose des paramètres d'authentification appropriés.
-* **Pour les fichiers JSON (Local)**
+* **Pour les fichiers JSON (locaux)**
   * Spécifiez le **chemin du fichier**.
-  * Le fichier peut être situé dans la **PADS4 Content Library** ou dans un **emplacement externe**.
-  * Si stocké **en dehors de la PADS4 Content Library**, il **ne se synchronisera pas automatiquement** avec le visualiseur.
+  * Le fichier peut être situé dans la **PADS4 Content Library** ou à un **emplacement externe**.
+  * S'il est stocké **en dehors de la PADS4 Content Library**, il **ne se synchronisera pas automatiquement** avec le viewer.
 
 Cliquez sur **Next** pour continuer.
 
 ***
 
-### **3. Sélectionnez la source de données**
+### **3. Sélectionner la source de données**
 
-* **JSON structures** peuvent contenir plusieurs **tables et données imbriquées**.
+* **Les structures JSON** peuvent contenir plusieurs **tableaux et données imbriquées**.
 * Cliquez sur **Select** pour ouvrir une **vue arborescente** de la structure JSON.
 * Parcourez les **différents niveaux** pour trouver les bonnes données.
 * Une fois trouvées, cliquez sur **OK** pour confirmer.
 
 #### **Sélection avancée (pour utilisateurs techniques)**
 
-* Modifiez l'**JSON Path Expression** manuellement.
-* Utilisez la **JSONPath syntax** pour le filtrage et la sélection avancés.
-* Consultez la **JSONPath documentation** pour plus de détails.
+* Modifier le **Expression de chemin JSON** manuellement.
+* Utilisez **JSONPath syntax** pour le filtrage et la sélection avancés.
+* Référez-vous à **JSONPath documentation** pour plus de détails.
 
 ***
 
 ### **4. Configurer les paramètres de gestion des données**
 
-* **Include Parent Level Column Name** → Ajoute des identifiants de niveau parent pour les relations hiérarchiques.
-* **Create Additional Columns Without HTML5 Tags** → Supprime le **formatage HTML** et extrait le texte brut.
-* **Flatten Hierarchical Data** → Convertit les **structures JSON imbriquées** en un tableau de données plat.
+* **Inclure le nom de colonne du niveau parent** → Ajoute des identifiants de niveau parent pour les relations hiérarchiques.
+* **Créer des colonnes supplémentaires sans balises HTML5** → Supprime **HTML formatting** et extrait le texte brut.
+* **Aplatir les données hiérarchiques** → Convertit **nested JSON structures** en un tableau de données plat.
 
 Cliquez sur **Next** pour continuer.
 
@@ -52,23 +52,23 @@ Cliquez sur **Next** pour continuer.
 
 ### **5. Configurer la méthode de requête**
 
-* **GET (par défaut)** → Récupère les données sans les modifier.
+* **GET (par défaut)** → Récupère des données sans les modifier.
 * **POST** → Utilisé pour envoyer des paramètres supplémentaires (remplissez le **request body** si nécessaire).
-* **Specify Encoding** → Choisissez un format d'encodage de texte si nécessaire.
+* **Spécifier l'encodage** → Choisissez un format d'encodage de texte si nécessaire.
 
 ***
 
 ### **6. Configurer la sécurité et l'authentification**
 
-* **Authorization (si nécessaire)**
+* **Autorisation (si nécessaire)**
   * Activez **Authorization Required**.
   * Saisissez **UserID, Password, and Domain**.
 
-* **Proxy Server (si applicable)**
+* **Serveur proxy (si applicable)**
   * Configurez les paramètres du proxy si l'accès à Internet nécessite une authentification.
 
-* **User-Agent Identification**
-  * Certains serveurs nécessitent une **specific User-Agent string** (par exemple, pour l'accès API).
+* **Identification de l'agent utilisateur**
+  * Certains serveurs nécessitent une **specific User-Agent string** (par exemple, pour l'accès à l'API).
 
 Cliquez sur **Next** pour continuer.
 
@@ -83,10 +83,10 @@ Cliquez sur **Next** pour continuer.
 ## **Considérations importantes**
 
 * **PADS4 Data Server**
-  * Si vous utilisez un **Data Server**, assurez-vous que la source JSON est **accessible depuis le serveur**.
-  * Si vous n'utilisez pas de Data Server, le **Designer and Viewers** doivent avoir un **accès direct** au flux ou fichier JSON.
+  * Si vous utilisez un **Data Server**, assurez-vous que la source JSON est **accessible from the server**.
+  * Si vous n'utilisez pas de Data Server, les **Designer and Viewers** doivent avoir **direct access** au flux ou au fichier JSON.
 
 * **Joindre plusieurs tables de données**
-  * Si vous devez **combiner des données** provenant de plusieurs sources JSON, utilisez le **Join Data Provider**.
+  * Si vous devez **combine data** à partir de plusieurs sources JSON, utilisez le **Join Data Provider**.
 
-En suivant ces étapes, **PADS4 can seamlessly integrate JSON data sources** dans des **présentations d'affichage dynamique en temps réel**.
+En suivant ces étapes, **PADS4 can seamlessly integrate JSON data sources** dans **real-time digital signage presentations**.

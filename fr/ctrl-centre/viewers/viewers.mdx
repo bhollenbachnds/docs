@@ -1,0 +1,107 @@
+La **Viewers** section dans **PADS4** affiche tous les **Viewers and Viewer groups**. Un **Viewer** est le **endpoint** où les présentations sont affichées.
+
+***
+
+## **Aperçu**
+
+* Affiche **all available Viewers** et **Viewer groups**.
+* **Créer un nouveau Viewer** en utilisant le bouton **➕ New**.
+* **Nommage par défaut**:
+  * Les Viewers utilisés pour la première fois **génèrent automatiquement** un nom basé sur le type d'appareil :
+    * **Samsung** appareils → *Samsung000x*
+    * **LG** appareils → *LG000x*
+  * Les noms peuvent être modifiés via l'option **Edit** (uniquement pour les Viewers en ligne).
+* **Options d'affichage**:
+  * Basculez entre **Tree View** et **Detail View**.
+  * **Vue arborescente**
+
+![Tree View](/images/ctrl-centre/viewers/tree-view.png)
+
+* **Vue détaillée**
+
+![Detail View](/images/ctrl-centre/viewers/detail-view.png)
+
+* Utilisez l'option **Search/Filter** pour localiser des Viewers spécifiques.
+
+![Viewer Filter](/images/ctrl-centre/viewers/viewer-filter.png)
+
+***
+
+## **Création d'un nouveau Viewer**
+
+Suivez ces étapes pour **ajouter un nouveau Viewer** à PADS4 :
+
+1️⃣ **Cliquez sur le bouton** ➕ **New** sur la page Viewers.
+
+![New Viewer](/images/ctrl-centre/viewers/new-viewer.png)
+
+2️⃣ **Sélectionnez le type de Viewer** (Seuls les types de Viewer avec des licences disponibles seront affichés) :
+
+![New Viewer1](/images/ctrl-centre/viewers/new-viewer1.png)
+
+* **Viewer Group** – Un groupe qui contient plusieurs Viewers (simplifie la planification).
+* **Viewer** – Un Viewer autonome qui prend en charge les types **Windows and HTML5**.
+* **Windows Viewer** – Un Viewer fonctionnant sur **Microsoft Windows**.
+* **HTML5 Viewer** – Un Viewer fonctionnant sur **non-Windows (HTML5-compatible) systems**.
+* **Zone Viewer** – Un Viewer assigné à une **zone** spécifique dans une **PADS4 presentation**.
+* **Desktop Viewer** – Un Viewer fonctionnant sur **Windows desktop PCs**.\
+  3️⃣ **Attribuez un nom unique au Viewer** (facultativement, ajoutez une description – par exemple, l'emplacement du Viewer).\
+  4️⃣ **Sélectionnez un Viewer Group** (le cas échéant).\
+  5️⃣ **Attribuez une licence**:
+* **Basic** – Prend en charge la plus petite gamme d'éléments de présentation.
+* **Xpress** – Offre une gamme **modérée** de fonctionnalités.
+* **Xpert** – Fournit un **accès complet aux fonctionnalités** pour les présentations avancées.\
+  6️⃣ **(Facultatif) Définir un mot de passe** – Le Viewer aura besoin de ce mot de passe pour s'authentifier lors de la connexion au **PADS4 Server**, garantissant ainsi la sécurité.
+
+**Une fois toutes les étapes terminées, le nouveau Viewer est prêt à être utilisé !**
+
+***
+
+## **Informations sur le Viewer**
+
+* Un clic simple sur une **ligne de Viewer** la développe pour afficher **des informations détaillées**.
+
+![Viewer Detail](/images/ctrl-centre/viewers/viewer-detail.png)
+
+* Un double-clic sur le viewer vous amènera directement à la page de détails du viewer décrite ci-dessous.
+* Lorsque vous passez votre souris sur l'un des viewers, trois points apparaîtront à droite, offrant plus d'options :
+
+![Viewer Menu](/images/ctrl-centre/viewers/viewer-menu.png)
+
+* **View Details** – Inspectez et gérez le Viewer. (Plus de détails ci-dessous)
+* **Viewer schedules** - Vous redirigera vers le module de planification pour vérifier les planifications pour ce viewer spécifique
+* **Manage:**
+  * **Reboot viewer** – Redémarrez l'appareil à distance.
+  * **Restart viewer** - Redémarrez l'application viewer à distance.
+  * **Retrieve Blackbox** – Collectez des données de diagnostic.
+* **Edit** - Ici, vous pouvez modifier les aspects suivants du viewer :
+  * Nom et description du viewer
+  * Assigner ou changer le groupe de viewer
+  * Attribuer une licence
+  * Activer / désactiver l'exigence de mot de passe
+* \*\*Delete - \*\*Supprimer le viewer du système.
+* \*\*Access - \*\*Vous permet de définir des permissions sur le viewer / groupe de viewers
+  * [Vous pouvez en savoir plus ici.](https://docs.pads4.com/ctrl-centre/viewers/viewer-permissions)
+
+## Informations détaillées sur le viewer
+
+![Viewer Details2](/images/ctrl-centre/viewers/viewer-details2.png)
+
+* \*\*Informations système\*\* - Informations détaillées sur l'appareil, y compris les caractéristiques matérielles, l'espace de stockage, le firmware, la résolution, etc.
+* **Journal du Viewer** – Vérifier les journaux d'activité.
+* **Paramètres du Viewer** – Modifier les préférences du Viewer.
+* **Capture d'écran du Viewer** – Capturer l'affichage actuel.
+
+***
+
+## **Boîte noire du Viewer (Pour le dépannage)**
+
+* Si un **problème de Viewer survient**, **NDS Support** peut demander la **Blackbox** pour le dépannage.
+* La **Blackbox** contains:
+  * **Journaux**
+  * **Informations système et mémoire**
+  * **Autres données de diagnostic**
+* **Comment fournir la Blackbox**:
+  * Soumettre via le portail de support PADS4 pour NDS Support.
+  * La fournir à votre **partner** pour une analyse plus approfondie.
+  * Utiliser **PADS4 Agent** pour examiner les données.

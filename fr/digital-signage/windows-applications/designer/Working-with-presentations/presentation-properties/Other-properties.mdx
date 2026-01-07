@@ -1,4 +1,4 @@
-La section **Other Properties** contient des **miscellaneous settings**, y compris l'option d'activer la **Proof of Play logging** pour suivre la lecture des présentations.
+La section **Other Properties** contient des **paramètres divers**, y compris l'option d'activer la **journalisation Proof of Play** pour suivre la lecture des présentations.
 
 ***
 
@@ -6,14 +6,14 @@ La section **Other Properties** contient des **miscellaneous settings**, y compr
 
 ### **Log Presentation Statistics Info**
 
-Lorsque cette option est activée, des **detailed information** sur la lecture de votre présentation seront **logged**.\
-Ces données peuvent être utilisées pour **prove** (par exemple, aux annonceurs) qu'un contenu spécifique a été affiché, **where**, **when**, et **for how long**.
+Lorsque cette option est activée, des **informations détaillées** sur la lecture de votre présentation seront **enregistrées**.\
+Ces données peuvent être utilisées pour **prouver** (par exemple, aux annonceurs) qu'un contenu spécifique a été affiché, **où**, **quand**, et **pendant combien de temps**.
 
 ### **Comment ça fonctionne :**
 
-* **Exact playback information** est stockée dans un **log file** et **sent to the PADS4 Server** pour une **centralized logging**.
+* **Les informations exactes de lecture** sont stockées dans un **fichier journal** et **envoyées au PADS4 Server** pour une **journalisation centralisée**.
 * Toutes les données de journal sont stockées dans la **PADS4 billing database**, située sur le **PADS4 Server PC**.
-* Vous pouvez **view and manage** ces données en utilisant :
+* Vous pouvez **consulter et gérer** ces données en utilisant :
   * L'application **PADS4 Agent application**.
   * **Microsoft Access** (pour un accès direct à la base de données).
   * Le **PADS4 Software Development Kit (SDK)** pour développer des solutions personnalisées de traitement des données.
@@ -22,5 +22,5 @@ Ces données peuvent être utilisées pour **prove** (par exemple, aux annonceur
 
 ## **Note importante**
 
-* **If logging is enabled**, il est **absolutely required** de mettre en place une procédure pour **manually or automatically process and clean up** les données de journal.
-* **Failing to manage this log data** peut entraîner la **PADS4 billing database** à consommer tout l'espace disque disponible, car **PADS4 does not automatically delete old log entries**.
+* **Si la journalisation est activée**, il est **absolument nécessaire** de mettre en place une procédure pour **traiter et nettoyer manuellement ou automatiquement** les données de journal.
+* **Ne pas gérer ces données de journal** peut entraîner la **PADS4 billing database** à consommer tout l'espace disque disponible, car **PADS4 ne supprime pas automatiquement les anciennes entrées de journal**.

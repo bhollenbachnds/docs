@@ -19,9 +19,9 @@ Il est nécessaire de configurer l'instance Azure pour permettre aux utilisateur
 # **Important**
 
 <Warning>
-  Si vous \*\*<u>ne voulez pas</u> \*\* utiliser un Application Proxy sur votre application locale, continuez à l'étape 4 ci-dessous et ignorez les étapes 7 et 8.
+  Si vous \*\*<u>ne voulez pas</u> \*\* utiliser un Application Proxy sur votre application sur site, continuez à l'étape 4 ci-dessous et ignorez les étapes 7 et 8.
 
-  Si vous \*\*<u>voulez</u> \*\* utiliser un Application Proxy pour votre application locale, passez à l'étape 7 et ignorez les étapes 4, 5 et 6.
+  Si vous \*\*<u>voulez</u> \*\* utiliser un Application Proxy pour votre application sur site, passez à l'étape 7 et ignorez les étapes 4, 5 et 6.
 </Warning>
 
 ## Étape 4 : Sélectionnez l'option "+ New application" en haut de l'écran
@@ -53,14 +53,14 @@ Sélectionnez la **Manage Application Proxy Connectors** **section**
    ![Step8 Pn](/images/step8.png)
 4. Une fois l'installation terminée, sélectionnez la **+New Connector** Group section
 5. Créez un nom par défaut pour votre connexion. Par exemple : **SSO Connector**
-6. Sélectionnez votre machine serveur dans la liste Connector
+6. Sélectionnez votre machine serveur dans la liste des connecteurs
 7. Sélectionnez la région où se trouve votre machine.
 
    ![Step9 Pn](/images/step9.png)
 8. Enregistrez votre nouvelle connexion ici.
 9. Retournez à la section Enterprise Applications, et sélectionnez **"Add your own on-premises application"**
 
-## Création d'une application locale dans Azure
+## Création d'une application sur site dans Azure
 
 1. Sélectionnez **Add an on-premises application**
 
@@ -92,7 +92,7 @@ Puis cliquez sur le bouton add
 
 ![Userandgroups Pn](/images/userandgroups.png)
 
-2. Ajoutez les utilisateurs et groupes qui auront accès à l'application en sélectionnant l'option **" Add user/group "**
+2. Ajoutez les utilisateurs et les groupes qui auront accès à l'application en sélectionnant l'option **" Add user/group "**
 
 ![Robinsso Pn](/images/robinsso.png)
 
@@ -100,7 +100,7 @@ Puis cliquez sur le bouton add
 
 ![Add Pn](/images/add.png)
 
-4. Utilisez la barre de recherche pour rechercher un utilisateur ou un groupe. Cliquez sur **"select"** et **"assign"**  une fois terminé
+4. Utilisez la barre de recherche pour rechercher un utilisateur ou un groupe. Cliquez sur **"select"** et **"assign"** une fois terminé
 
 ![Add2 Pn](/images/add2.png)
 
@@ -110,7 +110,7 @@ Puis cliquez sur le bouton add
 
 ## Étape 10 : Pour configurer Single Sign On (SSO)
 
-Sélectionnez **"Single sign-on option"**  dans le volet de gauche puis **"SAML"**
+Sélectionnez **"Single sign-on option"** dans le volet de gauche puis **"SAML"**
 
 ![10 Pn](/images/10.png)
 
@@ -118,7 +118,7 @@ Sélectionnez **"Single sign-on option"**  dans le volet de gauche puis **"SAML"
 
 ![Image23 Pn](/images/Image23.png)
 
-Sélectionnez " Add identifier "  et **" Add Reply URL "** et fournissez la valeur selon l'exemple ci-dessous :
+Sélectionnez " Add identifier " et **" Add Reply URL "** et fournissez la valeur selon l'exemple ci-dessous :
 
 ![Image24 Pn](/images/Image24.png)
 
@@ -232,7 +232,7 @@ Sélectionnez l'option **" Download "** à côté de l'option " Certificate (Raw
 
 ![Image32 Pn](/images/Image32.png)
 
-## 2. Obtention de l'" Identifiant du service de fédération "
+## 2. Obtention de l'"Identifiant du service de fédération"
 
 Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
 

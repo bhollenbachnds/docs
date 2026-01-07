@@ -1,4 +1,4 @@
-Ce guide fournit des **instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur le **SharpNEC Compute Module 4**.
+Ce guide fournit **des instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur le **SharpNEC Compute Module 4**.
 
 ***
 
@@ -31,7 +31,7 @@ L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
 
 <Steps>
   <Step title="Première étape">
-    Téléchargez l'**Outil de mise à jour du firmware NEC** depuis le site web de NEC.
+    Téléchargez l'**NEC Firmware Update Tool** depuis le site web de NEC.
   </Step>
 
   <Step title="Deuxième étape">
@@ -55,7 +55,7 @@ L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
 
 <Steps>
   <Step title="Première étape">
-    Téléchargez l'**Image OS PADS4** depuis le **PADS4 App Center**.
+    Téléchargez l'**image OS PADS4** depuis le **PADS4 App Center**.
   </Step>
 
   <Step title="Deuxième étape">
@@ -83,7 +83,7 @@ L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
   </Step>
 
   <Step title="Huitième étape">
-    Ouvrez **Raspberry Pi Imager** et sélectionnez **Utiliser personnalisé** dans le menu **Système d'exploitation**.
+    Ouvrez **Raspberry Pi Imager** et sélectionnez **Use Custom** dans le menu **Operating System**.
   </Step>
 
   <Step title="Neuvième étape">
@@ -94,7 +94,7 @@ L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
     Choisissez le **lecteur monté** comme **périphérique cible** pour flasher l'image PADS4.
   </Step>
 
-  <Step title="Étape Onze">
+  <Step title="Onzième étape">
     Une fois l'installation terminée, **retirez le câble Micro-USB** et déplacez le **commutateur de mode de démarrage vers le haut**.
   </Step>
 
@@ -103,7 +103,7 @@ L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
   </Step>
 </Steps>
 
-**⚠️ Ne remplacez pas le nom d'utilisateur par défaut lors du flashage du système d'exploitation. Changez le mot de passe si nécessaire.**
+**⚠️ Ne remplacez pas le nom d'utilisateur par défaut lors de la mise à jour du système d'exploitation. Changez le mot de passe si nécessaire.**
 
 ***
 
@@ -127,7 +127,7 @@ Le **SharpNEC Compute Module 4** est **préconfiguré** pour exécuter le **PADS
   </Step>
 
   <Step title="Étape Quatre">
-    Le **Viewer démarrera** et se **connectera automatiquement** au **PADS4 Server**.
+    Le **Viewer démarrera** et **se connectera automatiquement** au **PADS4 Server**.
   </Step>
 </Steps>
 
@@ -138,7 +138,7 @@ Le **SharpNEC Compute Module 4** est **préconfiguré** pour exécuter le **PADS
 **Pour accéder à l'écran des paramètres de PADS4 Viewer :**
 
 * **Connectez un clavier** à l'appareil.
-* **Faites un clic droit** à l'aide d'une **souris**.
+* **Faites un clic droit** en utilisant une **souris**.
 
 **Vous pouvez ajuster des paramètres tels que :**\
 **Orientation de l'écran**\
@@ -216,8 +216,8 @@ https://<hostnameofpi>:9090
 | :------------: | ----------------------------------------------------------------------------- |
 |        ✅       | **Mode portrait** – L'appareil ajuste automatiquement la rotation.            |
 |        ✅       | **Cluster Viewer** – Peut être utilisé dans une **configuration en cluster**. |
-|        ✅       | **Blocage de la télécommande** – Empêche le contrôle non autorisé de l'écran. |
-|        ✅       | **Éteindre l'écran** – Lorsqu'aucune présentation n'est programmée.           |
+|        ✅       | **Block Remote Control** – Empêche le contrôle non autorisé de l'écran.       |
+|        ✅       | **Turn Off Display** – Lorsqu'aucune présentation n'est programmée.           |
 
 ### **Prise en charge vidéo et contenu**
 
@@ -226,25 +226,25 @@ https://<hostnameofpi>:9090
 |        ✅       | **2 vidéos par page** – Prend en charge la lecture fluide.                 |
 |        ✅       | **Rotation, réflexion, inclinaison, retournement vidéo** – Pris en charge. |
 |        ✅       | **Streaming HTTP** – Pris en charge.                                       |
-|        ❌       | **Prise en charge des éléments Flash** – Non pris en charge.               |
+|        ❌       | **Support des éléments Flash** – Non pris en charge.                       |
 
 ### **Gestion des appareils**
 
-| Fonctionnalité | Description                                          |
-| :------------: | ---------------------------------------------------- |
-|        ✅       | **Gestion à distance via PADS4 CTRL Center**         |
-|        ✅       | **Surveillance de l'état de connexion et alertes**   |
-|        ✅       | **Prise en charge du redémarrage** – Pris en charge. |
-|        ✅       | **Capture d'écran à distance**                       |
-|        ❌       | **Prise en charge de l'arrêt** – Non pris en charge. |
+| Fonctionnalité | Description                                        |
+| :------------: | -------------------------------------------------- |
+|        ✅       | **Gestion à distance via PADS4 CTRL Center**       |
+|        ✅       | **Surveillance de l'état de connexion et alertes** |
+|        ✅       | **Support de redémarrage** – Pris en charge.       |
+|        ✅       | **Capture d'écran à distance**                     |
+|        ❌       | **Support d'arrêt** – Non pris en charge.          |
 
 ### **Limitations générales**
 
 | Fonctionnalité | Description                                                                                                   |
 | :------------: | ------------------------------------------------------------------------------------------------------------- |
 |        ❌       | **Lecture de fichiers locaux** – Prend uniquement en charge les fichiers de la bibliothèque de contenu PADS4. |
-|        ❌       | **Stockage local des preuves de lecture** – Limité à **50 000 enregistrements**.                              |
-|        ❌       | **Prise en charge de PowerBI** – Non pris en charge.                                                          |
+|        ❌       | **Stockage local de preuve de lecture** – Limité à **50 000 enregistrements**.                                |
+|        ❌       | **Support PowerBI** – Non pris en charge.                                                                     |
 
 ***
 
@@ -253,5 +253,5 @@ https://<hostnameofpi>:9090
 **Votre PADS4 Viewer est maintenant installé et prêt à être utilisé ! 🎉**
 
 **Vérifiez le PADS4 Server pour les mises à jour de statut.**\
-**Ajustez les paramètres via le menu Viewer.**\
-**Utilisez l'accès à distance (VNC, Cockpit, SSH) pour une gestion avancée.**
+**Ajustez les paramètres via le menu du Viewer.**\
+**Utilisez l'accès à distance (VNC, Cockpit, SSH) pour la gestion avancée.**

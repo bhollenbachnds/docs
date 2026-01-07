@@ -1,28 +1,28 @@
 # **Gestion de vos connexions**
 
-Pour pouvoir vous connecter à votre serveur PADS4, vous devez d'abord configurer votre connexion. Une connexion décrit généralement comment se connecter et se connecter à votre serveur PADS4. Les connexions peuvent être gérées dans la fenêtre Connexions au serveur PADS4. Dans la plupart des situations, vous n'aurez qu'un seul serveur PADS4, mais vous pouvez éventuellement [vous connecter à plusieurs serveurs PADS4](/fr/digital-signage/windows-applications/agent/advanced-features/connecting-to-multiple-servers).
+Pour pouvoir vous connecter à votre PADS4 Server, vous devez d'abord configurer votre connexion. Une connexion décrit généralement comment se connecter et se connecter à votre PADS4 Server. Les connexions peuvent être gérées dans la fenêtre PADS4 Server Connections. Dans la plupart des situations, vous n'aurez qu'un seul PADS4 Server, mais vous pouvez éventuellement [vous connecter à plusieurs PADS4 Servers](/fr/digital-signage/windows-applications/agent/advanced-features/connecting-to-multiple-servers).
 
-Les connexions que vous définissez dans la fenêtre Connexions au serveur PADS4 sont partagées par toutes les applications PADS4 qui ont été installées sur votre ordinateur.
+Les connexions que vous définissez dans la fenêtre PADS4 Server Connections sont partagées par toutes les applications PADS4 qui ont été installées sur votre ordinateur.
 
  
 
 #### **Pour afficher vos connexions**
 
-1. Cliquez sur **Gérer** dans la section **Connexions** de l'onglet **Accueil** dans la barre de ruban.
+1. Cliquez sur **Manage** dans la section **Connections** de l'onglet **Home** dans la barre de ruban.
 
    ![EN Agent Manageconnections 01 Pn](/images/digital-signage/windows-applications/agent/starting-PADS4-Agent/EN-Agent-Manageconnections-01.png)
 
-   Cela ouvre automatiquement la fenêtre Connexions au serveur PADS4, où vous pouvez voir vos connexions.
+   Cela ouvre automatiquement la fenêtre PADS4 Server Connections, où vous pouvez voir vos connexions.
 
  
 
-#### **Fenêtre Connexions au serveur PADS4**
+#### **Fenêtre PADS Server Connections**
 
-La fenêtre Connexions au serveur PADS4 donne une liste de toutes les connexions qui ont été définies sur votre ordinateur avec leur statut actuel.
+La fenêtre PADS4 Server Connections donne une liste de toutes les connexions qui ont été définies sur votre ordinateur avec leur statut actuel.
 
 ![EN Agent Manageconnections 02 Pn](/images/digital-signage/windows-applications/agent/starting-PADS4-Agent/EN-Agent-Manageconnections-02.png)
 
-La fenêtre Connexions peut être utilisée pour se connecter manuellement à un serveur PADS4 ou s'en déconnecter. Si une connexion n'est pas encore établie, vous pouvez la sélectionner et cliquer sur **Connecter** pour établir manuellement une connexion. Pour vous déconnecter à nouveau, cliquez simplement sur **Déconnecter**.
+La fenêtre Connections peut être utilisée pour se connecter manuellement à un PADS4 Server ou s'en déconnecter. Si une connexion n'est pas encore établie, vous pouvez la sélectionner et cliquer sur **Connect** pour établir manuellement une connexion. Pour vous déconnecter à nouveau, cliquez simplement sur **Disconnect**.
 
 <Tip>
   Travailler avec plusieurs connexions et se connecter et se déconnecter manuellement peut être particulièrement utile lorsque vous devez gérer plusieurs installations PADS4. Un exemple de cela est une agence de design développant du contenu pour plusieurs clients utilisant PADS4.
@@ -32,64 +32,64 @@ La fenêtre Connexions peut être utilisée pour se connecter manuellement à un
 
 #### **Pour ajouter une nouvelle connexion**
 
-1. Cliquez sur **Ajouter...**.
+1. Cliquez sur **Add...**.
 
    ![EN Agent Manageconnections Add Pn](/images/digital-signage/windows-applications/agent/starting-PADS4-Agent/EN-Agent-Manageconnections-add.png)
-2. Remplissez les paramètres dans l'onglet **Connexion**.
+2. Remplissez les paramètres dans l'onglet **Connection**.
 
    ![EN Agent Manageconnections Details Pn](/images/digital-signage/windows-applications/agent/starting-PADS4-Agent/EN-Agent-Manageconnections-details.png)
 
-   **Nom de la connexion**\
+   **Connection Name**\
    Un nom unique qui sera utilisé pour identifier votre connexion. Le nom que vous entrez ici sera utilisé partout dans l'interface graphique pour indiquer votre connexion.
 
-   **Démarrage de l'application**\
-   Décidez si vous souhaitez que votre système se connecte automatiquement à votre serveur PADS4 lorsque votre application PADS4 est démarrée.
+   **Application Startup**\
+   Décidez si vous souhaitez que votre système se connecte automatiquement à votre PADS4 Server lorsque votre application PADS4 est démarrée.
 
-   **Connexion au serveur**\
+   **Server Connection**\
    \
-   Spécifiez où se trouve votre serveur PADS4. Les options possibles sont :
+   Spécifiez où se trouve votre PADS4 Server. Les options possibles sont :
 
    <Note>
-     Un serveur PADS4 ne peut être détecté automatiquement que lorsque le processus du serveur PADS4 est en cours d'exécution et que le port UDP numéro 3702 n'est pas bloqué par un pare-feu sur le PC serveur ou ailleurs dans le réseau. La détection automatique ne fonctionne que dans un réseau local.
+     Un PADS4 Server ne peut être détecté automatiquement que lorsque le processus PADS4 Server est en cours d'exécution et que le numéro de port UDP 3702 n'est pas bloqué par un pare-feu sur le PC serveur ou ailleurs dans le réseau. La détection automatique ne fonctionne que dans un réseau local.
    </Note>
 
-   | **Option de connexion** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-   | :---------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | Automatique             | Votre système PADS4 détectera automatiquement l'emplacement de votre serveur PADS4. Si vous n'avez qu'un seul serveur PADS4 dans votre réseau, c'est peut-être la meilleure option à choisir. Lorsque votre serveur PADS4 sera déplacé vers un autre emplacement dans votre réseau ou obtiendra une adresse réseau différente, le système effectuera automatiquement les ajustements nécessaires. Lorsque vous avez plusieurs serveurs PADS4 (comme un serveur de sauvegarde) fonctionnant dans votre réseau, vous ne pouvez pas utiliser cette option, car il n'est pas garanti que le système détectera le bon serveur.                                                                                                                                                           |
-   | Cet ordinateur          | Votre serveur PADS4 est censé fonctionner sur le même ordinateur que votre application. Si vous avez installé à la fois le serveur PADS4 et votre application PADS4 sur le même ordinateur, c'est l'option préférée. Elle garantit que le système continuera à fonctionner même si le nom de votre ordinateur change. Elle maintient également la communication localement, ce qui est beaucoup plus rapide. Enfin, elle empêche que votre système passe par le réseau pour accéder à votre serveur PADS4 et puisse être bloqué par un pare-feu.                                                                                                                                                                                                                                    |
-   | Autre                   | Utilisez cette option si aucune des options ci-dessus n'est applicable. Avec cette option, vous pouvez spécifier manuellement l'adresse réseau de votre **PADS4 Server**. Ici, vous pouvez entrer un nom d'ordinateur, une adresse IP ou un nom DNS. Vous pouvez éventuellement cliquer sur **Rechercher...** pour rechercher automatiquement les serveurs PADS4 existants dans votre réseau. En cliquant sur **Afficher les options avancées**, vous avez la possibilité de spécifier un **Numéro de port** alternatif pour communiquer avec votre serveur PADS4. Veuillez noter que le numéro de port que vous entrez ici doit correspondre au numéro de port qui a été spécifié dans votre serveur PADS4 via les paramètres du serveur de l'application PADS4 System Management. |
+   | **Option de connexion** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+   | :---------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Automatic               | Votre système PADS4 détectera automatiquement l'emplacement de votre PADS4 Server. Si vous n'avez qu'un seul PADS4 Server dans votre réseau, c'est peut-être la meilleure option à choisir. Lorsque votre PADS4 Server sera déplacé vers un autre emplacement dans votre réseau ou obtiendra une adresse réseau différente, le système effectuera automatiquement les ajustements nécessaires. Lorsque vous avez plusieurs PADS4 Servers (comme un serveur de sauvegarde) fonctionnant dans votre réseau, vous ne pouvez pas utiliser cette option, car il n'est pas garanti que le système détectera le bon serveur.                                                                                                                                            |
+   | This Computer           | Votre PADS4 Server est censé fonctionner sur le même ordinateur que votre application. Si vous avez installé à la fois PADS4 Server et votre application PADS4 sur le même ordinateur, c'est l'option préférée. Elle garantit que le système continuera à fonctionner même si le nom de votre ordinateur change. Elle maintient également la communication localement, ce qui est beaucoup plus rapide. Enfin, elle empêche que votre système passe par le réseau pour accéder à votre PADS4 Server et puisse être bloqué par un pare-feu.                                                                                                                                                                                                                       |
+   | Other                   | Utilisez cette option si aucune des options ci-dessus n'est applicable. Avec cette option, vous pouvez spécifier manuellement l'adresse réseau de votre **PADS4 Server**. Ici, vous pouvez entrer un nom d'ordinateur, une adresse IP ou un nom DNS. Vous pouvez éventuellement cliquer sur **Search...** pour rechercher automatiquement les PADS4 Servers existants dans votre réseau. En cliquant sur **Show Advanced Options** vous avez la possibilité de spécifier un **Port number** alternatif pour communiquer avec votre PADS4 Server. Veuillez noter que le numéro de port que vous entrez ici doit correspondre au numéro de port qui a été spécifié dans votre PADS4 Server via les paramètres du serveur de l'application PADS4 System Management. |
 
-   **Paramètres Http**\
-   Lorsqu'il est réglé sur automatique, PADS4 identifiera la connexion au serveur et définira les paramètres HTTP en fonction des paramètres de connexion par défaut. Cela peut être ajusté en le réglant sur **manuel** et en spécifiant un chemin d'hôte et un port.\
+   **Http settings**\
+   Lorsqu'il est réglé sur automatique, PADS4 identifiera la connexion au serveur et définira les paramètres HTTP en fonction des paramètres de connexion par défaut. Cela peut être ajusté en le réglant sur **manual** et en spécifiant un Host Path et un port.\
    \
-   PADS4 utilise 2 protocoles réseau. Les connexions liées au Web sont utilisées dans PADS4 Agent (Proof of Play et journal d'audit) et PADS4 Desktop Viewer (synchronisation). Dans les situations où la connexion au serveur est établie via un routeur ou un proxy utilisant la redirection de port, il est possible que vous deviez spécifier un chemin d'hôte/port différent pour vous connecter au serveur PADS4.
-3. Spécifiez les paramètres de connexion dans l'onglet **Identifiants**.
+   PADS4 utilise 2 protocoles réseau. Les connexions liées au Web sont utilisées dans PADS4 Agent (Proof of Play et Audit log) et PADS4 Desktop Viewer (synchronisation). Dans les situations où la connexion au serveur est établie via un routeur ou un proxy utilisant la redirection de port, il est possible que vous deviez spécifier un chemin d'hôte/port différent pour vous connecter au PADS4 Server.
+3. Spécifiez les paramètres de connexion dans l'onglet **Credentials**.
 
    ![EN Agent Logon Properties Creds Pn](/images/digital-signage/windows-applications/agent/starting-PADS4-Agent/EN-Agent-LogonProperties-creds.png)
 
-   **Identifiants**\
-   Ici, vous pouvez spécifier le **Nom d'utilisateur** et/ou le **Mot de passe** que vous souhaitez utiliser pour vous connecter à votre serveur PADS4 lorsqu'une connexion est établie. Si vous ne spécifiez qu'un nom d'utilisateur, l'utilisateur sera invité à saisir le mot de passe lors de la connexion. Si vous choisissez **Connexion automatique**, le système essaiera de se connecter automatiquement à votre serveur PADS4 lors de la connexion. Si la connexion échoue, l'utilisateur sera invité à saisir le nom d'utilisateur et le mot de passe corrects.
+   **Credentials**\
+   Ici, vous pouvez spécifier le **User Name** et/ou le **Password** que vous souhaitez utiliser pour vous connecter à votre PADS4 Server lorsqu'une connexion est établie. Si vous ne spécifiez qu'un nom d'utilisateur, l'utilisateur sera invité à entrer le mot de passe lors de la connexion. Si vous choisissez **Automatic Login** alors le système essaiera de se connecter automatiquement à votre PADS4 Server lors de la connexion. Si la connexion échoue, l'utilisateur sera invité à entrer le nom d'utilisateur et le mot de passe corrects.
 
    <Tip>
-     1. Souvent, l'option **Connexion automatique** est utilisée en combinaison avec l'**Démarrer automatiquement cette connexion** option sur l'onglet **Connection**. De cette façon, votre application se connectera et s'identifiera automatiquement à votre PADS4 Server lors du démarrage de votre application PADS4.
+     1. Souvent, l'option **Automatic Login** est utilisée en combinaison avec l'option **Automatically start this connection** dans l'onglet **Connection**. De cette façon, votre application se connectera et se connectera automatiquement à votre PADS4 Server lors du démarrage de votre application PADS4.
    </Tip>
 
    **Domain**\
-   Si votre PC PADS4 Server héberge plusieurs PADS4 Servers, vous avez la possibilité ici de spécifier manuellement le **Domain** qui correspond à votre système PADS4. Une autre situation où l'utilisation des domaines peut être nécessaire est lorsque vous avez plusieurs connexions à différents PADS4 Server et que vous souhaitez garder ces connexions séparées sur votre PC client. Dans toutes les autres situations, vous devriez choisir l'option **Automatic**.
-4. Ajustez éventuellement les paramètres de synchronisation sur l'onglet **Synchronization**.
+   Si votre PC PADS4 Server héberge plusieurs PADS4 Servers, vous avez la possibilité ici de spécifier manuellement le **Domain** qui correspond à votre système PADS4. Une autre situation où l'utilisation de domaines peut être nécessaire est lorsque vous avez plusieurs connexions à différents PADS4 Server et que vous souhaitez garder ces connexions séparées sur votre PC client. Dans toutes les autres situations, vous devriez choisir l'option **Automatic**.
+4. Ajustez éventuellement les paramètres de synchronisation dans l'onglet **Synchronization**.
 
    ![Agent Manageconnection Sync Pn](/images/digital-signage/windows-applications/agent/starting-PADS4-Agent/Agent-manageconnection-sync.png)
 
    \
-   **Activation de la synchronisation de la bibliothèque de contenu**\
+   **Content Library Synchronization Activation**\
    Spécifiez la méthode qui doit être utilisée pour la synchronisation.\
-   **Automatic** synchronisera lorsque des changements sont détectés, **Manual** attendra que l'utilisateur clique sur un bouton de synchronisation immédiate et **never** ne synchronisera pas. Lorsque les trois options sont désactivées, il n'est pas autorisé d'utiliser la synchronisation. Par exemple, lorsque le serveur et le Designer sont sur le même PC, la synchronisation n'est pas nécessaire, car ils utilisent le même environnement.\
+   **Automatic** synchronisera lorsque des changements sont détectés, **Manual** attendra que l'utilisateur clique sur un bouton de synchronisation maintenant et **jamais** ne se synchronisera pas. Lorsque les trois options sont désactivées, il n'est pas autorisé d'utiliser la synchronisation. Par exemple, lorsque le serveur et le Designer sont sur le même PC, la synchronisation n'est pas nécessaire, car ils utilisent le même environnement.\
    \
    **Dossier de stockage de la bibliothèque de contenu PADS4**\
    Spécifiez où le contenu doit être stocké si l'emplacement généré automatiquement n'est pas possible.
 
    * **Domain**\
-     Si votre PC PADS4 Server héberge plusieurs PADS4 Servers, vous avez la possibilité ici de spécifier manuellement le **Domain** qui correspond à votre système PADS4. Une autre situation où l'utilisation des domaines peut être nécessaire est lorsque vous avez plusieurs connexions à différents PADS4 Server et que vous souhaitez garder ces connexions séparées sur votre PC client. Dans toutes les autres situations, vous devriez choisir l'option **Automatic**.
+     Si votre PC serveur PADS4 héberge plusieurs serveurs PADS4, vous avez alors la possibilité ici de spécifier manuellement le **Domain** qui correspond à votre système PADS4. Une autre situation où l'utilisation de domaines peut être nécessaire est lorsque vous avez plusieurs connexions à différents serveurs PADS4 et que vous souhaitez garder ces connexions séparées sur votre PC client. Dans toutes les autres situations, vous devriez choisir l'option **Automatic**.
    * Cliquez sur **OK** pour enregistrer vos paramètres.
 
  
@@ -98,7 +98,7 @@ La fenêtre Connexions peut être utilisée pour se connecter manuellement à un
 
 Avant de pouvoir commencer à modifier une connexion, vous devez d'abord vous assurer que la connexion est déconnectée. Il n'est pas possible d'apporter des modifications à une connexion actuellement utilisée.
 
-1. Cliquez sur la connexion dans la fenêtre des connexions PADS4 Server pour la sélectionner.
+1. Cliquez sur la connexion dans la fenêtre des connexions du serveur PADS4 pour la sélectionner.
 2. Cliquez sur **Edit...** pour ouvrir la fenêtre des propriétés de connexion.
 
    ![EN Agent Manageconnections Edit Pn](/images/digital-signage/windows-applications/agent/starting-PADS4-Agent/EN-Agent-Manageconnections-edit.png)
@@ -109,7 +109,7 @@ Avant de pouvoir commencer à modifier une connexion, vous devez d'abord vous as
 
 #### **Pour supprimer une connexion**
 
-1. Cliquez sur la connexion dans la fenêtre des connexions PADS4 Server pour la sélectionner.
+1. Cliquez sur la connexion dans la fenêtre des connexions du serveur PADS4 pour la sélectionner.
 2. Cliquez sur **Remove** pour supprimer la connexion.
 
 Après cela, votre connexion sera définitivement supprimée pour toutes les applications PADS4 sur votre ordinateur.

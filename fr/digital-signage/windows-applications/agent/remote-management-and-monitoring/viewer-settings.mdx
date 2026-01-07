@@ -1,0 +1,86 @@
+Avec les fonctions de paramètres du viewer, vous pouvez consulter ou modifier les paramètres du programme d'un ou plusieurs PADS4 Viewers.
+
+ 
+
+#### **Pour afficher les paramètres du programme d'un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Viewer settings** dans la liste des catégories d'informations disponibles pour le viewer.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées du Viewer sélectionné et afficher les résultats dans la fenêtre des paramètres du viewer.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre des paramètres du Viewer**
+
+La fenêtre des paramètres du viewer affiche les paramètres du programme d'un PADS4 Viewer. Cela vous permet de vérifier à distance si les paramètres d'un PADS4 Viewer ont été correctement définis.
+
+![EN Agent Viewer Settings Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ViewerSettings.png)
+
+ 
+
+#### **Vues**
+
+Pour changer la vue de la fenêtre des paramètres du viewer, cliquez sur l'un des boutons suivants dans le **Home** menu de la barre de ruban :
+
+* ![EN Agent Ribbon Viewer Settings One Viewer Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ViewerSettings-OneViewer.png)
+
+* (Vue par défaut) Affiche les paramètres du programme du Viewer qui a été sélectionné dans le volet de navigation.
+
+* ![EN Agent Ribbon Viewer Settings Multi Viewer Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ViewerSettings-MultiViewer.png)
+
+* Affiche les paramètres du programme de tous les Viewers de votre installation dans une vue en tableau.
+
+  Cette vue est généralement utilisée pour comparer les paramètres du programme de plusieurs viewers. Dans cette comparaison, le Viewer qui a été sélectionné dans le volet de navigation est utilisé comme point de référence. Les paramètres de ce Viewer sont marqués en vert. Tous les paramètres du programme des autres Viewers qui diffèrent des paramètres de ce Viewer sont marqués en rouge.
+
+  <Note>
+    Seuls les viewers ayant le statut 'Connecté' sont inclus dans la vue. Les paramètres du programme des Viewers qui ne sont pas connectés à votre PADS4 Server ne peuvent pas être consultés.
+  </Note>
+
+#### **Modification des paramètres du programme d'un PADS4 Viewer**
+
+Pour ajuster à distance les paramètres du programme d'un PADS4 Viewer :
+
+1. Cliquez sur **Edit** dans le **Home** menu.
+
+   ![EN Agent Ribbon Edit Settings Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-EditSettings.png)
+2. Modifiez un ou plusieurs paramètres du programme.
+
+   ![EN Agent Viewer Settings Multi Viewersettings Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ViewerSettings-MultiViewersettings.png)
+3. Cliquez sur **OK** pour enregistrer les paramètres ajustés et fermer la fenêtre des paramètres.
+
+Lorsque vous modifiez les paramètres d'identification d'un PADS4 Viewer, le viewer sera renommé avec le nouveau nom de viewer. Tous ses paramètres existants, comme les appartenances aux groupes de viewers, la licence attribuée et les présentations programmées, resteront intacts.
+
+Lorsque vous modifiez les paramètres de connexion au serveur d'un PADS4 Viewer, le viewer peut perdre sa connexion avec votre PADS4 Server. Par conséquent, vous pourriez ne plus être en mesure d'accéder au viewer via PADS4 Agent.
+
+ 
+
+#### **Modification des paramètres du programme de plusieurs PADS4 Viewers**
+
+Pour ajuster à distance les paramètres du programme de plusieurs PADS4 Viewers :
+
+1. Suivez la procédure décrite ci-dessus pour afficher les paramètres du programme du PADS4 Viewer que vous souhaitez prendre comme point de référence.
+2. Cliquez sur **Multiple Viewers** dans le **Home** menu pour passer à la vue affichant les paramètres du programme de tous vos PADS4 Viewers.
+
+   ![EN Agent Ribbon Viewer Settings Multi Viewer Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ViewerSettings-MultiViewer.png)
+3. Sélectionnez les Viewers pour lesquels vous souhaitez modifier les paramètres du programme en cochant les cases devant les éléments listés.
+4. Cliquez sur **Edit** dans le **Home** menu.
+
+   ![EN Agent Ribbon Edit Settings Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-EditSettings.png)
+5. Cochez la case des sections pour lesquelles vous souhaitez que les paramètres du programme soient mis à jour pour tous les PADS4 Viewers sélectionnés et modifiez éventuellement les paramètres du programme dans la section.
+
+   ![EN Agent Ribbon Viewer Settings Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ViewerSettings.png)
+
+   <Tip>
+     Certaines sections (comme la section Identification) n'ont pas de case à cocher. Cela signifie que les paramètres du programme de cette section ne peuvent pas être mis à jour pour plusieurs PADS4 Viewers en une seule action. Si vous souhaitez ajuster l'un de ces paramètres du programme, vous devez le modifier individuellement pour chaque viewer.
+   </Tip>
+6. Cliquez sur **OK** pour enregistrer les paramètres ajustés et fermer la fenêtre des paramètres.
+
+Après cela, tous les ajustements seront mis à jour pour tous les PADS4 Viewers sélectionnés.

@@ -1,4 +1,4 @@
-Les règles de page permettent à votre page de **répondre automatiquement à des situations prédéfinies** pendant la lecture. Cela permet une gestion dynamique du contenu, comme sauter une page lorsqu'il n'y a pas de données ou passer à la page suivante après la fin des vidéos.
+Les règles de page permettent à votre page de **répondre automatiquement à des situations prédéfinies** pendant la lecture. Cela permet une gestion dynamique du contenu, comme ignorer une page lorsqu'il n'y a pas de données ou passer à la page suivante après la fin des vidéos.
 
 ***
 
@@ -17,20 +17,20 @@ Si activé, **la page sera ignorée** when:
 
 * Tous les fournisseurs de données, filtres, lignes et paramètres de défilement sont vérifiés.
 * Si **aucune donnée valide n'est trouvée**, la page **passera automatiquement à la suivante**.
-* **Avertissement** : Si la présentation contient **une seule page**, et que cette page est ignorée en raison de cette règle, **toute la présentation peut devenir invisible** pendant la lecture.
+* **Avertissement** : Si la présentation contient **une seule page**, et que cette page est ignorée en raison de cette règle, **la présentation entière peut devenir invisible** pendant la lecture.
 
 ***
 
 ### 2. **Lire toutes les vidéos une fois et afficher la page suivante**
 
-Lorsque cette option est activée, **tous les éléments vidéo/son de la page seront lus entièrement**, puis **la page suivante sera affichée** automatiquement.
+Lorsque cette option est activée, **tous les éléments vidéo/son sur la page seront lus entièrement**, puis **la page suivante sera affichée** automatiquement.
 
 **Comportements clés :**
 
-* **Ignore la propriété Durée** de la page.
-* Lit **toutes les listes de lecture vidéo/audio** avant de continuer.
-* Si les éléments vidéo/audio sont liés à des sources de données, seule la **liste de lecture initiale récupérée** sera utilisée — **les données mises à jour n'affecteront pas la lecture en cours**.
-* **Préférable** pour les pages avec plusieurs éléments médias afin d'assurer **une lecture et une transition synchronisées**.
+* **Ignore la Durée de la page** propriété.
+* Lit **les playlists vidéo/audio entières** avant de continuer.
+* Si les éléments vidéo/audio sont liés à des sources de données, seule la **playlist récupérée initialement** sera utilisée — **les données mises à jour n'affecteront pas la lecture en cours**.
+* **Préféré** pour les pages avec plusieurs éléments média afin d'assurer **une lecture et une transition synchronisées**.
 * **Remarque** : Si défini au niveau de la page, les paramètres individuels "Lire une fois et passer à la page suivante" sur les éléments sont ignorés.
 
 **Conseil** : Idéal pour garantir que **les publicités des annonceurs** ou **le contenu promotionnel** soit entièrement affiché avant de passer à l'écran suivant.
@@ -46,14 +46,14 @@ Lorsque cette option est activée, une fois que le **défilement des données** 
 * Fonctionne uniquement lorsque **le défilement des données est géré au niveau de la page** (option de minuterie générale).
 * **Non compatible** avec les éléments qui ont **leurs propres cycles de durée**.
 * Lorsque plusieurs éléments sur la page ont ce paramètre, **PADS4 attendra que tous soient terminés** avant de continuer.
-* Si utilisé avec d'autres éléments chronométrés (comme des listes de lecture vidéo), **combinez les règles de manière appropriée** pour éviter les conflits.
+* Si utilisé avec d'autres éléments chronométrés (comme des playlists vidéo), **combinez les règles de manière appropriée** pour éviter les conflits.
 
 ***
 
 ## **Règles personnalisées (Section Règles)**
 
-* **Définissez des règles de page personnalisées** pour ajuster dynamiquement les propriétés de la page en fonction de certaines conditions (par exemple, afficher la page uniquement lorsque des données spécifiques sont présentes).
-* **Les règles personnalisées** permettent une logique complexe et un meilleur contrôle sur la façon et le moment où une page est affichée ou masquée.
+* **Définir des règles de page personnalisées** pour ajuster dynamiquement les propriétés de la page en fonction de certaines conditions (par exemple, afficher la page uniquement lorsque des données spécifiques sont présentes).
+* **Les règles personnalisées** permettent une logique complexe et un plus grand contrôle sur la façon et le moment où une page est affichée ou masquée.
 
 **Important** :\
 Pour des informations détaillées sur la création de règles personnalisées, consultez **Travailler avec les règles** dans la documentation.
@@ -62,8 +62,8 @@ Pour des informations détaillées sur la création de règles personnalisées, 
 
 ## **Résumé des règles prédéfinies :**
 
-| Règle                                                               | Description                                                                | Quand l'utiliser                                              |
-| ------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------- |
-| **Ignorer cette page lorsqu'il n'y a pas de données externes**      | Ignore la page si les fournisseurs de données ne renvoient aucune donnée.  | Pour éviter les pages de données vides.                       |
-| **Lire toutes les vidéos une fois et afficher la page suivante**    | Affiche la page jusqu'à ce que toutes les vidéos/sons aient fini de jouer. | Pour les pages riches en médias, par exemple, les publicités. |
-| **Faire défiler les données une fois et afficher la page suivante** | Avance lorsque toutes les lignes de données sont défilées/affichées.       | Pour les listes dynamiques ou tableaux de données.            |
+| Règle                                                               | Description                                                                | Quand l'utiliser                                          |
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------- | --------------------------------------------------------- |
+| **Ignorer cette page lorsqu'il n'y a pas de données externes**      | Ignore la page si les fournisseurs de données ne renvoient aucune donnée.  | Pour éviter les pages de données vides.                   |
+| **Lire toutes les vidéos une fois et afficher la page suivante**    | Affiche la page jusqu'à ce que toutes les vidéos/sons aient fini de jouer. | Pour les pages riches en médias, par ex., les publicités. |
+| **Faire défiler les données une fois et afficher la page suivante** | Avance lorsque toutes les lignes de données sont défilées/affichées.       | Pour les listes dynamiques ou tableaux de données.        |

@@ -1,0 +1,50 @@
+Cette section fournit des instructions étape par étape pour créer la base de données **PADS4FIDS** en utilisant **PowerShell**, destinée aux administrateurs système ayant accès à SQL Server.
+
+> **Important:** Exécutez ces commandes sur un système avec **SQL Server installé**, en utilisant un compte avec **des privilèges d'administrateur système** sur l'instance SQL.
+
+***
+
+## **Script PowerShell**
+
+```powershell
+# Step 1: Define SQL connection to the master database
+$sqlConnection = New-Object System.Data.SqlClient.SQLConnection("Data Source=localhost;Integrated Security=SSPI;Initial Catalog=master")
+
+# Step 2: Create SQL command object
+$sqlCommand = New-Object System.Data.SqlClient.SqlCommand
+$sqlCommand.Connection = $sqlConnection
+
+# Step 3: Ensure 'NT AUTHORITY\SYSTEM' login exists
+$sqlCommand.CommandText = "IF NOT EXISTS (SELECT * FROM [master].[sys].[server_principals] WHERE name = 'NT AUTHORITY\SYSTEM') CREATE LOGIN [NT AUTHORITY\SYSTEM] FROM WINDOWS"
+$sqlConnection.Open()
+if ($sqlCommand.ExecuteNonQuery() -ne 0) {
+    echo "Failed: Step 1"
+}
+
+# Step 4: Create the PADS4FIDS database if it doesn't exist
+$sqlCommand.CommandText = "IF DB_ID('PADS4FIDS') IS NULL CREATE DATABASE [PADS4FIDS];"
+if ($sqlCommand.ExecuteNonQuery() -ne 0) {
+    echo "Failed: Step 2"
+}
+
+# Step 5: Assign db_owner role to NT AUTHORITY\SYSTEM in the new database
+$sqlCommand.CommandText = "USE PADS4FIDS; EXEC sp_addrolemember 'db_owner', 'NT AUTHORITY\SYSTEM'"
+if ($sqlCommand.ExecuteNonQuery() -ne 0) {
+    echo "Failed: Step 3"
+}
+
+# Step 6: Close SQL connection
+$sqlConnection.Close()
+```
+
+***
+
+## Résultat
+
+Après l'exécution de ce script :
+
+* Le **NT AUTHORITY\SYSTEM** login est créé (s'il n'est pas déjà présent)
+* Une nouvelle base de données **PADS4FIDS** est créée (si elle n'existe pas)
+* Le login se voit accorder des privilèges **db\_owner** sur la base de données
+
+Votre base de données PADS4FIDS est maintenant prête à être utilisée avec le système.

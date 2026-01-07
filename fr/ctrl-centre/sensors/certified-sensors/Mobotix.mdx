@@ -1,4 +1,4 @@
-Ce guide explique comment connecter les **caméras Mobotix** avec **PADS4** pour récupérer des données de mesure d'audience en temps réel. Pour plus d'informations sur les caméras Mobotix, visitez : [www.Mobotix.com](https://www.mobotix.com).
+Ce guide explique comment connecter les **Mobotix cameras** avec **PADS4** pour récupérer des données de mesure d'audience en temps réel. Pour plus d'informations sur les caméras Mobotix, visitez : [www.Mobotix.com](https://www.mobotix.com).
 
 ***
 
@@ -13,12 +13,12 @@ Pour assurer une intégration correcte, les profils d'événements dans la camé
 
 ### **Vérifiez et appliquez les propriétés d'événement suivantes**
 
-| **Propriété**          | **Valeur**          |
-| ---------------------- | ------------------- |
-| Event sensor type      | **MxMessageSystem** |
-| Message name           | **AIFacedetect**    |
-| Message range          | **Local**           |
-| Filter message content | **No Filter**       |
+| **Propriété**                 | **Valeur**          |
+| ----------------------------- | ------------------- |
+| Type de capteur d'événement   | **MxMessageSystem** |
+| Nom du message                | **AIFacedetect**    |
+| Portée du message             | **Local**           |
+| Filtrer le contenu du message | **Pas de filtre**   |
 
 ***
 
@@ -30,12 +30,12 @@ Pour activer la **détection faciale** pour les visages masqués et non masqués
    **Setup Menu > Certified App Settings > AIFacedetect Settings > Configurator**.
 2. Appliquez les paramètres suivants :
 
-| **Propriété**         | **Valeur**        |
-| --------------------- | ----------------- |
-| Detection algorithm   | **Deep**          |
-| Detect unmasked faces | **Enable**        |
-| Detect masked faces   | **Enable**        |
-| Event management      | **Event on exit** |
+| **Propriété**                    | **Valeur**                |
+| -------------------------------- | ------------------------- |
+| Algorithme de détection          | **Deep**                  |
+| Détecter les visages non masqués | **Activer**               |
+| Détecter les visages masqués     | **Activer**               |
+| Gestion des événements           | **Événement à la sortie** |
 
 3. **Cliquez sur "Set"** pour enregistrer les paramètres.
 
@@ -59,10 +59,10 @@ Une fois terminé, **PADS4 se connectera à la caméra Mobotix** et commencera �
 ## **Notes supplémentaires**
 
 * **Capteurs certifiés** : Pour plus de détails sur les données récupérées de Mobotix, consultez la page **Certified Sensors** dans PADS4.
-* **Gestion des événements** : Les événements configurés déclencheront **la création d'incidents en temps réel** dans PADS4.
+* **Gestion des événements** : Les événements configurés déclencheront la **création d'incidents en temps réel** dans PADS4.
 * **Utilisations de l'intégration** :
   * **Reconnaissance faciale pour la mesure d'audience**
   * **Détection du port de masque par les individus**
-  * **Déclenchement de règles et d'automatisation PADS4 basé sur les données détectées**
+  * **Déclenchement de règles et d'automatisations PADS4 basées sur les données détectées**
 
 En suivant cette configuration, **les caméras Mobotix s'intégreront parfaitement à PADS4**, améliorant l'analyse d'audience en temps réel et l'automatisation basée sur les événements.

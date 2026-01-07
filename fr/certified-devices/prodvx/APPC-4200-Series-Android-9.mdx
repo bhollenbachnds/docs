@@ -21,12 +21,12 @@ Les appareils **ProDVX APPC-4200 series** suivants sont pris en charge :
 
 ## **Exigences minimales**
 
-### **Version du PADS4 Server**
+### **Version du serveur PADS4**
 
 Avant l'installation, assurez-vous que votre **PADS4 Server** exécute **PADS4 version 2022.1** ou ultérieure.
 
 <Note>
-  Il est recommandé de **terminer l'installation du PADS4 Server d'abord** avant de configurer votre appareil.
+  Il est recommandé de **terminer l'installation du serveur PADS4 d'abord** avant de configurer votre appareil.
 </Note>
 
 ### **Version PADS4ProDVX**
@@ -37,9 +37,9 @@ La **version minimale de PADS4ProDVX prenant en charge la série APPC-4200** est
 
 L'appareil doit répondre aux **exigences de firmware** suivantes :
 
-| **Kernel** | **Version Android** | **Build**                                              |
-| ---------- | ------------------- | ------------------------------------------------------ |
-| 4.4.167    | 9                   | ABPC-4200.ProDVX.HDMI-1080p-HDMI.V-C0.2.00.13i.2021118 |
+| **Noyau** | **Version Android** | **Build**                                              |
+| --------- | ------------------- | ------------------------------------------------------ |
+| 4.4.167   | 9                   | ABPC-4200.ProDVX.HDMI-1080p-HDMI.V-C0.2.00.13i.2021118 |
 
 **Les mises à jour du firmware** peuvent être demandées auprès de votre **revendeur ProDVX**.
 
@@ -47,13 +47,13 @@ L'appareil doit répondre aux **exigences de firmware** suivantes :
 
 ## **Réinitialisation de l'appareil**
 
-Si votre appareil a déjà été utilisé, il est **recommandé** de **réinitialiser aux paramètres d'usine** l'appareil pour libérer de l'espace de stockage et éliminer tout conflit logiciel.
+Si votre appareil a déjà été utilisé, il est **recommandé** de **réinitialiser aux paramètres d'usine** l'appareil pour libérer de l'espace de stockage et supprimer tout conflit logiciel.
 
 ### **Étapes de réinitialisation d'usine**
 
 <Steps>
   <Step title="Première étape">
-    Ouvrez les **Paramètres Android**.
+    Ouvrir les **Paramètres Android**.
   </Step>
 
   <Step title="Deuxième étape">
@@ -68,12 +68,12 @@ Si votre appareil a déjà été utilisé, il est **recommandé** de **réinitia
     Cliquez sur **Effacer toutes les données (Réinitialisation d'usine)**.
   </Step>
 
-  <Step title="Cinquième étape">
-    Cliquez sur **Réinitialiser l'appareil**.
+  <Step title="Étape Cinq">
+    Cliquez sur **Reset Device**.
   </Step>
 
-  <Step title="Sixième étape">
-    Cliquez sur **Tout effacer** pour confirmer.
+  <Step title="Étape Six">
+    Cliquez sur **Erase Everything** pour confirmer.
   </Step>
 </Steps>
 
@@ -93,48 +93,48 @@ Suivez les étapes ci-dessous pour installer et configurer **PADS4 Viewer** sur 
 
 **Le fichier PADS4ProDVX.apk est disponible dans :**
 
-**Répertoire du PADS4 Server :**
+**Répertoire du serveur PADS4 :**
 
 ```
 C:\Program Files\PADS4\Clients\Apps
 ```
 
 **Lien de téléchargement de la dernière version :**\
-[Téléchargez depuis **Github**](https://github.com/PADS4/PADS4-Viewer-ProDVX-x-series/releases/latest)
+[Télécharger depuis **Github**](https://github.com/PADS4/PADS4-Viewer-ProDVX-x-series/releases/latest)
 
-**Important:** Si vous téléchargez une version plus récente, **placez-la dans le répertoire des applications** sur le **PADS4 Server** pour assurer une installation correcte.
+**Important:** Si vous téléchargez une version plus récente, **placez-la dans le répertoire apps** sur le **PADS4 Server** pour assurer une installation correcte.
 
 ***
 
 #### **Étapes d'installation**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Un">
     Copiez **PADS4ProDVX.apk** sur une **clé USB**.
   </Step>
 
-  <Step title="Deuxième étape">
-    Insérez la **clé USB** dans l'appareil **ProDVX device**.
+  <Step title="Étape Deux">
+    Insérez la **clé USB** dans l'**appareil ProDVX**.
   </Step>
 
-  <Step title="Troisième étape">
-    Ouvrez l'**Apk Installer app** et autorisez l'**accès au stockage externe** si demandé.
+  <Step title="Étape Trois">
+    Ouvrez l'**application Apk Installer** et autorisez l'**accès au stockage externe** si demandé.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Parcourez la clé USB et sélectionnez **PADS4ProDVX.apk**.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Si demandé, **activez l'installation depuis des sources inconnues**, puis revenez et sélectionnez à nouveau l'apk.
   </Step>
 
-  <Step title="Sixième étape">
-    Appuyez sur **Installer** lorsque demandé.
+  <Step title="Étape Six">
+    Appuyez sur **Install** lorsque vous y êtes invité.
   </Step>
 
-  <Step title="Septième étape">
-    Cliquez sur **Ouvrir** une fois l'installation terminée.
+  <Step title="Étape Sept">
+    Cliquez sur **Open** une fois l'installation terminée.
   </Step>
 </Steps>
 
@@ -142,31 +142,31 @@ C:\Program Files\PADS4\Clients\Apps
 
 ### **Étape 2 : Valider la configuration de la date et de l'heure**
 
-**Des paramètres de date et d'heure incorrects** peuvent causer des **erreurs de certificat** ou des **problèmes de connexion**.
+**Des paramètres de date et d'heure incorrects** peuvent provoquer des **erreurs de certificat** ou des **problèmes de connexion**.
 
 #### **Étapes pour valider la date et l'heure**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Un">
     Ouvrez **PADS4ProDVX** et naviguez vers **System Settings**.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape Deux">
     Allez dans le menu **Date & Time**.
   </Step>
 
-  <Step title="Troisième étape">
-    Configurez **la date et l'heure** correctement. *(Activez la synchronisation automatique si disponible.)*
+  <Step title="Étape Trois">
+    Configurez correctement la **date et l'heure**. *(Activez la synchronisation automatique si disponible.)*
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Retournez au **PADS4ProDVX Launcher**.
   </Step>
 </Steps>
 
 ***
 
-### **Étape 3 : Connexion au PADS4 Server**
+### **Étape 3 : Connexion au serveur PADS4**
 
 **Format:**
 
@@ -180,31 +180,31 @@ C:\Program Files\PADS4\Clients\Apps
 http://localhost/pads4
 ```
 
-#### **Étapes pour se connecter au PADS4 Server**
+#### **Étapes pour se connecter au serveur PADS4**
 
 <Steps>
-  <Step title="Première étape">
-    Saisissez l'**PADS4 Server Address**.
+  <Step title="Étape Un">
+    Entrez l'**adresse du serveur PADS4**.
   </Step>
 
-  <Step title="Deuxième étape">
-    (Facultatif) Saisissez un **custom Viewer Name**.
+  <Step title="Étape Deux">
+    (Facultatif) Entrez un **nom de Viewer personnalisé**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Appuyez sur **Start**.
   </Step>
 
-  <Step title="Quatrième étape">
-    Si **Android System WebView** n'est pas mis à jour, il sera **téléchargé et installé**.
+  <Step title="Étape Quatre">
+    Si **Android System WebView** n'est pas à jour, il sera **téléchargé et installé**.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Après les mises à jour de WebView, redémarrez **PADS4ProDVX** et appuyez à nouveau sur **Start**.
   </Step>
 
-  <Step title="Sixième étape">
-    Si demandé, configurez **PADS4ProDVX as the Home App** et appuyez sur **Always**.
+  <Step title="Étape Six">
+    Si demandé, configurez **PADS4ProDVX comme application d'accueil** et appuyez sur **Always**.
   </Step>
 </Steps>
 
@@ -214,40 +214,40 @@ http://localhost/pads4
 
 ### **Fonctionnalités générales**
 
-| Fonctionnalité | Description                                                                                                                |
-| :------------: | -------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Automatic PADS4 Software Updates** – Le **PADS4 Viewer** se mettra à jour automatiquement.                               |
-|        ✅       | **Offline Mode** – L'appareil continuera à diffuser les **scheduled presentations** pendant **7 days** en mode hors ligne. |
+| Fonctionnalité | Description                                                                                                                       |
+| :------------: | --------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel PADS4** – Le **PADS4 Viewer** se mettra à jour automatiquement.                           |
+|        ✅       | **Mode hors ligne** – L'appareil continuera à diffuser les **présentations programmées** pendant **7 jours** s'il est hors ligne. |
 
 ### **Capacités de stockage et matérielles**
 
-| Fonctionnalité | Description                                            |
-| :------------: | ------------------------------------------------------ |
-|        ✅       | **Supports Android 9** – Requis pour la compatibilité. |
-|        ❌       | **Wake-on-LAN** – Non pris en charge.                  |
+| Fonctionnalité | Description                                                   |
+| :------------: | ------------------------------------------------------------- |
+|        ✅       | **Prend en charge Android 9** – Requis pour la compatibilité. |
+|        ❌       | **Wake-on-LAN** – Non pris en charge.                         |
 
 ### **Prise en charge des données et du contenu**
 
-| Fonctionnalité | Description                                                                                        |
-| :------------: | -------------------------------------------------------------------------------------------------- |
-|        ✅       | **Real-time Data Providers** – Prend en charge l'intégration avec des sources de données externes. |
-|        ✅       | **Video, Images, Text, Tables, and Interactive Elements** – Pris en charge.                        |
-|        ❌       | **Streaming & Flash Content** – Non pris en charge.                                                |
+| Fonctionnalité | Description                                                                                                     |
+| :------------: | --------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Fournisseurs de données en temps réel** – Prend en charge l'intégration avec des sources de données externes. |
+|        ✅       | **Vidéo, images, texte, tableaux et éléments interactifs** – Pris en charge.                                    |
+|        ❌       | **Streaming et contenu Flash** – Non pris en charge.                                                            |
 
 ### **Gestion des appareils**
 
-| Fonctionnalité | Description                                      |
-| :------------: | ------------------------------------------------ |
-|        ✅       | **Remote Management via PADS4 CTRL Center**      |
-|        ✅       | **Connection State Monitoring & Alerts**         |
-|        ❌       | **Shutdown & Wake-on-LAN** – Non pris en charge. |
+| Fonctionnalité | Description                                        |
+| :------------: | -------------------------------------------------- |
+|        ✅       | **Gestion à distance via PADS4 CTRL Center**       |
+|        ✅       | **Surveillance de l'état de connexion et alertes** |
+|        ❌       | **Arrêt et Wake-on-LAN** – Non pris en charge.     |
 
 ***
 
 ## **Dépannage**
 
-Si vous rencontrez des problèmes avec la **télécommande, la connectivité réseau ou les mises à jour WebView**, assurez-vous que :
+Si vous rencontrez des problèmes avec la **télécommande, la connectivité réseau ou les mises à jour de WebView**, assurez-vous que :
 
-✔ **SICP Network Port** est activé.\
+✔ **Le port réseau SICP** est activé.\
 ✔ **Le firmware est à jour**.\
 ✔ **La date et l'heure sont correctement configurées**.
