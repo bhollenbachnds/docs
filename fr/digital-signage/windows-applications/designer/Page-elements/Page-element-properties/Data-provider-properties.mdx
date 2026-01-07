@@ -1,0 +1,49 @@
+Les éléments peuvent être connectés à une **external data source** (comme une base de données SQL Server, un fichier Microsoft Excel ou un flux RSS) pour afficher des **real-time data**. Ces propriétés définissent comment l'élément se connecte à cette source de données, et quelles **column** et **row** sont utilisées pour le contenu.
+
+***
+
+### Data Provider Info
+
+* **No external data connection**\
+  L'élément n'est **not connected** à une source de données. Il affichera un **fixed content** tel que spécifié directement dans les paramètres de l'élément.
+
+* **External data from the following data source**\
+  L'élément est connecté à un **data provider**, et une **column** et **row** spécifiques sont utilisées pour fournir du contenu en temps réel.
+
+***
+
+### Data Provider Components
+
+* **Data Provider**\
+  Représente une connexion à une **source de données**.\
+  Examples:
+  * Table, requête ou procédure stockée (bases de données SQL)
+  * Fichier XML
+  * Flux RSS
+  * Toute autre source externe\
+    **Remarque**: Les fournisseurs de données sont définis au niveau de la **presentation level** et sont disponibles pour tous les éléments. Vous pouvez créer un nouveau fournisseur de données en cliquant sur le bouton dans la liste déroulante.\
+    *(Voir "Working with data providers" pour plus de détails.)*
+
+* **Colonne**\
+  Le **field/column** du fournisseur de données qui fournit le contenu à votre élément.
+
+* **Type de contenu**\
+  Définit **comment les données** doivent être interprétées par l'élément (par exemple, comme texte, chemin d'image, nombre).
+
+* **Ligne**\
+  L'**record/row** du fournisseur de données qui fournit le contenu pour l'élément.
+
+***
+
+### Remarques
+
+* **Applicabilité**: Toutes les propriétés ne sont pas applicables à chaque élément. Certains éléments (comme les éléments de texte) attendent un **text content**, tandis que d'autres (comme les éléments d'image) attendent des **file paths to images**.
+* **Contenu dynamique**:
+  * Lorsqu'il est connecté à un fournisseur de données, les **manual content settings** de l'élément sont **disabled**.
+  * Le contenu de l'élément est toujours contrôlé par les **real-time data** de la source de données.
+* **Limitation des lignes**:\
+  Si la source de données a moins de lignes que spécifié dans la propriété **Row**, **no content** ne sera affiché.
+* **Défilement des données**:\
+  Lorsque le **data scrolling** est activé, la propriété **Row** combinée à la propriété **Scroll step** contrôle le comportement de défilement.
+* **Playlists**:\
+  La plupart des éléments prennent en charge les **playlists**. Si le champ de la base de données renvoie une playlist (plusieurs éléments), le système les parcourra automatiquement.

@@ -1,0 +1,61 @@
+PADS4 prend en charge **des connexions de capteurs directes et indirectes**, permettant l'intégration avec diverses **caméras et logiciels de mesure d'audience**. Les capteurs peuvent se connecter **directement** via des appareils IP ou **indirectement** par **des logiciels tiers** qui interfacent avec plusieurs capteurs.
+
+***
+
+## **Connexions de capteurs directes**
+
+Les **appareils suivants ont été testés** et vérifiés par NDS pour **l'intégration directe** avec PADS4.
+
+### **Caméras Hikvision**
+
+| Fabricant     | Modèle                 | Fonctionnalité                                                       | Description                                              |
+| ------------- | ---------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| **Hikvision** | DS-2TD1217B-6/PA       | Reconnaissance faciale, Détection de masque facial (firmware requis) | Caméra tourelle thermographique                          |
+|               | DS-2TD2617B-3/PA       | Reconnaissance faciale, Détection de masque facial (firmware requis) | Caméra thermographique de type bullet                    |
+|               | DS-2CD6365G0-IS        | Détection de franchissement de ligne                                 | Caméra réseau fisheye                                    |
+|               | DS-2CD6825G0/C-I(V)(S) | Comptage de personnes                                                | Caméra réseau de comptage de personnes à double objectif |
+
+### **Configuration de l'API Hikvision**
+
+Pour activer l'accès API pour PADS4 :
+
+1. Ouvrez le **portail Admin** de la caméra.
+2. Naviguez vers **Configuration > Sécurité > Vérification**.
+3. Définissez **l'authentification RTSP** sur **Digest/Basic**.
+4. Définissez **la vérification Web** sur **Digest/Basic**.
+
+***
+
+### **Caméras Mobotix**
+
+| Fabricant   | Modèle   | Fonctionnalité                                                                        | Description                                                                                             |
+| ----------- | -------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Mobotix** | Série M7 | Détection de masque facial (nécessite l'application IAFacedetect), Imagerie thermique | Diverses longueurs focales d'objectif disponibles ; vérifiez auprès du fabricant pour la compatibilité. |
+
+**Setup:** Visitez la **page de configuration Mobotix** pour les détails d'intégration.
+
+***
+
+## **Connexions de capteurs indirectes (Logiciels tiers)**
+
+PADS4 peut récupérer **des données et des événements** à partir de divers **logiciels de reconnaissance faciale/d'audience tiers**.
+
+### **Logiciels tiers pris en charge**
+
+| Fabricant     | Logiciel        | Fonctionnalité                                                              | Description                                                                                                                                                                                                    |
+| ------------- | --------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Milestone** | XProtect        | Récupération d'alarmes                                                      | Se connecte avec **plus de 9 000 caméras**, permettant des alarmes que PADS4 peut utiliser pour informer ou guider l'audience. Voir **la configuration de Milestone XProtect** pour les détails d'intégration. |
+| **Quividi**   | Vidireports 6/7 | Données de mesure d'audience                                                | Calcule **des analyses d'audience** à partir des flux vidéo de caméras. Fournit **le genre, l'âge, l'humeur et plus encore** en temps réel. Voir **le site web de Quividi** pour plus de détails.              |
+| **SightCorp** | DeepSight       | Données de mesure d'audience, Reconnaissance faciale                        | Récupère en temps réel **des analyses de masque facial, genre, âge, humeur et autres**. Voir **le site web de SightCorp** pour plus de détails.                                                                |
+| **Saimos**    | Saimos          | Données de mesure d'audience, Reconnaissance faciale, Comptage de personnes | Envoie en temps réel **des événements de détection de masque facial** lorsqu'une personne quitte le champ de vision de la caméra. Voir **le site web de Saimos** pour plus de détails.                         |
+
+***
+
+### **Points clés**
+
+* PADS4 prend en charge à la fois **directes** et **tierces** connexions de capteurs.
+* Les intégrations directes comprennent **les caméras Hikvision et Mobotix**.
+* Les intégrations indirectes fonctionnent avec **Milestone, Quividi, SightCorp et Saimos**.
+* Une configuration API peut être nécessaire pour la connectivité directe des capteurs.
+
+Pour plus de détails, consultez le **site web du fabricant** ou la documentation PADS4.

@@ -1,0 +1,72 @@
+Cette section fournit des instructions étape par étape pour créer manuellement la base de données **PADS4FIDS** en utilisant **SQL Server Management Studio (SSMS)**.
+
+***
+
+## **Étape 1 : Ouvrir SQL Server Management Studio**
+
+1. Lancez **SQL Server Management Studio**.
+2. Connectez-vous au **Database Engine**.
+3. Dans l'**Object Explorer**, développez votre instance SQL Server.
+4. Faites un clic droit sur **Databases**.
+5. Sélectionnez **New Database...**
+
+***
+
+## **Étape 2 : Créer la base de données**
+
+1. Dans le champ **Database Name**, saisissez :
+   ```
+   PADS4FIDS
+   ```
+2. Cliquez sur **OK** pour créer la base de données.
+
+***
+
+## **Étape 3 : Vérifier l'existence du login NT AUTHORITY\SYSTEM**
+
+1. Développez le nœud **Security**.
+2. Développez **Logins**.
+3. Recherchez le login :
+   ```
+   NT AUTHORITY\SYSTEM
+   ```
+
+* S'il **existe déjà**, faites un clic droit dessus et choisissez **Properties**, puis passez à l'**Étape 6**.
+* S'il **n'existe pas**, continuez avec l'**Étape 4**.
+
+***
+
+## **Étape 4 : Créer le login NT AUTHORITY\SYSTEM**
+
+1. Faites un clic droit sur **Logins**.
+2. Sélectionnez **New Login...**
+
+***
+
+## **Étape 5 : Configurer le nouveau login**
+
+1. Dans le champ **Login name**, saisissez :
+   ```
+   NT AUTHORITY\SYSTEM
+   ```
+2. Sélectionnez **Windows Authentication**.
+3. Ne **pas** saisir de mot de passe.
+
+***
+
+## **Étape 6 : Attribuer les permissions de base de données**
+
+1. Dans la fenêtre **Login Properties**, sélectionnez **User Mapping** dans le menu de gauche.
+2. Dans la section **Users mapped to this login**, cochez la case à côté de :
+   ```
+   PADS4FIDS
+   ```
+3. Dans la section **Database role membership for: PADS4FIDS**, cochez le rôle :
+   ```
+   db_owner
+   ```
+4. Cliquez sur **OK** pour enregistrer les modifications.
+
+***
+
+La base de données PADS4FIDS est maintenant configurée et prête à l'emploi. Faites-moi savoir si vous souhaitez poursuivre avec des instructions similaires pour la configuration via des scripts SQL ou PowerShell.

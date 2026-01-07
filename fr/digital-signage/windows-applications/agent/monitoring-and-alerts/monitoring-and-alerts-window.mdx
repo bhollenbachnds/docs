@@ -1,0 +1,82 @@
+Dans la fenêtre de surveillance et d'alertes, vous pouvez consulter les alertes définies de votre PADS4 Server ou PADS4 Viewer, qui déterminent les éléments de votre système qui seront surveillés. En plus
+
+Avec les fonctions de surveillance et d'alertes, vous pouvez consulter les éléments définis à surveiller et les alertes générées de votre PADS4 Server ou PADS4 Viewer. Sur votre serveur, des définitions d'alerte peuvent être ajoutées, modifiées ou supprimées. Vous pouvez décider vous-même comment vous souhaitez être notifié en cas d'alerte : via une notification dans la barre d'état système Windows, par un son d'alarme, par e-mail ou par l'une des autres méthodes possibles.
+
+ 
+
+#### **Pour afficher les alertes de votre PADS4 Server**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Monitoring & alerts** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées du PADS4 Server connecté et affichera les résultats dans la fenêtre de surveillance et d'alertes. Si votre installation PADS4 comprend des sous-serveurs, la fenêtre de surveillance et d'alertes affichera toujours les résultats globaux de toute votre installation PADS4, quel que soit le serveur que vous avez sélectionné.
+
+ 
+
+#### **Pour afficher les alertes d'un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Monitoring & alerts** dans la liste des catégories d'informations de viewer disponibles.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées du Viewer sélectionné et afficher les résultats dans la fenêtre de surveillance et d'alertes.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre de surveillance et d'alertes**
+
+La fenêtre de surveillance et d'alertes affiche toutes les définitions d'alertes pour votre PADS4 Server ou PADS4 Viewer. Cela vous permet de vérifier quels éléments sont surveillés et d'examiner les alertes qui ont été générées.
+
+![EN Agent Alerts Pn](/images/digital-signage/windows-applications/agent/monitoring-and-alerts/EN-Agent-Alerts.png)
+
+Dans la fenêtre de surveillance et d'alertes de votre PADS4 server, toutes les alertes de votre serveur et de tous ses viewers sont affichées. Dans la fenêtre de surveillance et d'alertes d'un PADS4 Viewer, seules les alertes applicables à ce viewer sont affichées.
+
+**Nom**\
+Le nom descriptif qui a été saisi lors de la création de l'alerte.
+
+**Description**\
+Description définie par le système de l'alerte définie.
+
+**Activé**\
+Indique si l'élément est actuellement surveillé (activé) ou si le processus de surveillance a été temporairement désactivé (désactivé).
+
+**Notifier les utilisateurs**\
+Affiche les utilisateurs qui seront notifiés lorsqu'une alerte est déclenchée.
+
+**Alertes**\
+Indique s'il existe des alertes non résolues liées à l'élément surveillé.
+
+**Destinations**\
+Affiche toutes les destinations qui sont surveillées par l'alerte définie.
+
+ 
+
+#### **Alertes**
+
+Si vous sélectionnez une définition d'alerte dans le volet supérieur de la fenêtre de surveillance et d'alertes qui a généré au moins une alerte, alors le **Alertes** affiche les détails de l'alerte générée.
+
+**Horodatage**\
+La date et l'heure du moment où l'alerte a été générée.
+
+**Destination**\
+La destination où l'alerte a été générée. Cela peut être le serveur de votre système ou un visualiseur.
+
+**Statut**\
+Indique si l'alerte est en attente (ce qui signifie en attente d'une solution) ou résolue. Si un problème est automatiquement résolu par le système lui-même, alors toutes les alertes générées pour ce problème obtiendront le statut 'résolu'. Il est également possible de modifier manuellement le statut d'une alerte générée.
+
+**Message**\
+Affiche des informations sur l'alerte générée.\
+Si le message est 'Voir les détails', vous pouvez cliquer sur le bouton Détails pour vérifier les détails de l'alerte générée. La façon dont les détails sont affichés dépend du type d'alerte.\
+[Cliquez ici](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Monitoring%20&%20alerts/Email%20Alert%20structure.htm) pour découvrir comment le message Email envoyé est structuré.
+
+<Tip>
+  Par défaut, les alertes générées sont automatiquement supprimées après 4 semaines. Cette option peut être ajustée en modifiant les paramètres du serveur de votre installation PADS4 via l'application PADS4 System Management.
+</Tip>

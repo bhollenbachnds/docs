@@ -1,0 +1,77 @@
+Ces propriétés définissent les **RS-232 communication port settings**, assurant une transmission de données réussie entre votre **presentation system** et un **external device**.
+
+***
+
+## **Paramètres du port de communication**
+
+### **Port de communication**
+
+* Sélectionnez le port **COM (serial)** ou **LPT (parallel)** utilisé pour la communication **RS-232 communication**.
+
+### **Débit en bauds**
+
+* Définit la **transmission speed** en **symbols per second (bps)**.
+* Valeurs courantes : **1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200**.
+* Doit correspondre aux **external device settings**.
+
+### **Parité**
+
+Détermine comment **parity checking** est appliqué pour la **error detection**.
+
+| **Option** | **Description**                                             |
+| ---------- | ----------------------------------------------------------- |
+| **None**   | Pas de vérification de parité (par défaut).                 |
+| **Even**   | Assure un nombre pair de **1s** dans la trame de données.   |
+| **Odd**    | Assure un nombre impair de **1s** dans la trame de données. |
+| **Mark**   | Définit toujours le bit de parité à **1**.                  |
+| **Space**  | Définit toujours le bit de parité à **0**.                  |
+
+### **Bits de données**
+
+* Définit le nombre de **data bits per frame**.
+* Valeurs standard : **5, 6, 7, ou 8 bits** (par défaut : **8**).
+* Doit correspondre aux **external device settings**.
+
+### **Start Bits**
+
+* Spécifie les **leading bits** avant la transmission réelle des données.
+* Valeur standard : **1 bit**.
+
+### **Stop Bits**
+
+* Spécifie les **end of transmission bits**.
+* Valeurs standard : **1, 1.5, ou 2 bits** (par défaut : **1**).
+* Utilisés pour **separate data packets**.
+
+### **Handshake**
+
+Définit le **flow control** entre l'émetteur et le récepteur pour éviter la **data loss**.
+
+| **Option**   | **Description**                                                                                      |
+| ------------ | ---------------------------------------------------------------------------------------------------- |
+| **None**     | Pas de handshake (par défaut).                                                                       |
+| **XOn/XOff** | Handshake basé sur logiciel. Utilise des caractères spéciaux pour contrôler le flux de données.      |
+| **RTS/CTS**  | Handshake basé sur matériel utilisant les signaux Ready-to-Send (RTS) et Clear-to-Send (CTS).        |
+| **DTR/DSR**  | Handshake basé sur matériel utilisant les signaux Data Terminal Ready (DTR) et Data Set Ready (DSR). |
+
+### **Read Timeout**
+
+* **Limite de temps (en millisecondes)** pour recevoir une **response from the external device**.
+* Si aucune réponse n'est reçue dans ce délai, une **timeout error occurs**.
+
+### **Write Timeout**
+
+* **Limite de temps (en millisecondes)** pour **sending a command**.
+* Si les données ne peuvent pas être transmises dans ce délai, une **timeout error occurs**.
+
+***
+
+## **Remarques**
+
+* Les **correct RS-232 settings** pour la communication avec votre **external device** peuvent être trouvés dans son **user manual**.
+* **Incorrect port settings** peuvent entraîner une **failed communication** ou un **unexpected device behavior**.
+
+### **Important**
+
+* Les paramètres du port de communication **must match** ceux de l'**external device**.
+* Ces paramètres s'appliquent **only during playback**, donc **RS-232 commands will only be sent if the specified port is available on the playback PC**.

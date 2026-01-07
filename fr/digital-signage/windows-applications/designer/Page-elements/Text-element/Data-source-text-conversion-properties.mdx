@@ -1,0 +1,57 @@
+Ces propriétés déterminent comment votre élément **gère le texte multi-lignes** lorsqu'il est connecté à une **source de données externe**.
+
+***
+
+## **Options de Gestion du Texte**
+
+### **Diviser le Texte Multi-Lignes en Éléments de Liste de Lecture**
+
+* **Activé** – Chaque **ligne de texte** de la source de données est traitée comme un **élément de liste de lecture distinct**, permettant un **affichage alterné**.
+* **Désactivé** – Le **texte entier** est traité comme **un seul élément de liste de lecture**, affichant toutes les lignes ensemble.
+
+***
+
+## **Comment Ça Fonctionne**
+
+Si une **valeur de texte multi-lignes** est reçu à partir d'une **source de données**, ce paramètre contrôle si :
+
+1. **Chaque ligne est affichée séparément** (comme un bandeau d'actualités défilant ou des annonces rotatives).
+2. **Toutes les lignes sont affichées ensemble** dans un seul bloc de texte.
+
+***
+
+## **Exemple d'utilisation**
+
+### **Scénario 1 : Annonces de vol (Activé)**
+
+**Entrée de la source de données :**
+
+```
+Boarding  
+Einsteigen
+```
+
+* **Avec la séparation activée :** Chaque mot apparaît **individuellement** dans la playlist (par exemple, "Boarding" → "Einsteigen").
+* **Avec la séparation désactivée :** Les deux lignes sont affichées **ensemble** dans un seul bloc de texte.
+
+***
+
+### **Scénario 2 : Playlist d'images (Activé)**
+
+**Entrée de la source de données :**
+
+```
+c:\folder\image1.jpg  
+c:\folder\image2.jpg  
+```
+
+* **Sans séparation :** L'élément d'image **ne peut pas lire** l'entrée entière comme un chemin valide.
+* **Avec séparation :** L'élément **traite chaque ligne séparément**, permettant à une **playlist d'images** de s'afficher en séquence.
+
+***
+
+## **Notes importantes**
+
+* Le **séparateur entre les lignes de texte** est le **caractère de retour chariot et saut de ligne** (`<CR> <LF>`).
+* Cette fonctionnalité est utile lorsque vous travaillez avec des **listes d'images, de messages ou des flux de données en temps réel**.
+* Fonctionne en combinaison avec les **options de playlist** pour définir comment les éléments sont affichés.

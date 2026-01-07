@@ -1,0 +1,65 @@
+Pour assurer une haute disponibilité et une redondance du système, PADS4FIDS prend en charge une **configuration de basculement** utilisant deux serveurs PADS4 avec une base de données SQL partagée et un commutateur API DNS.
+
+Cette configuration garantit que si un serveur PADS4 devient indisponible, le système peut automatiquement rediriger vers le serveur secondaire avec un minimum d'interruption.
+
+***
+
+## Aperçu
+
+* **Base de données SQL** : Hébergée sur un serveur séparé (pas sur l'un des serveurs PADS4)
+* **Deux serveurs PADS4FIDS** : Installés sur des machines séparées
+* **Commutateur API DNS** : Redirige automatiquement le trafic entre les serveurs primaire et secondaire
+* **Accès unifié** : Les viewers et les opérateurs utilisent une adresse DNS commune
+
+***
+
+## Configuration étape par étape
+
+### Étape 1 : Préparer la base de données SQL
+
+* Configurez un **SQL Server** sur une machine dédiée dans votre réseau.
+* Suivez les étapes standard pour **créer une base de données PADS4FIDS** sur ce serveur.
+* Assurez-vous que les deux serveurs PADS4 auront accès à ce SQL Server.
+
+***
+
+### Étape 2 : Installer deux serveurs PADS4FIDS
+
+* Déployez **deux serveurs PADS4FIDS séparés** (sur deux machines virtuelles ou physiques).
+* Ces serveurs **partageront la même licence**, mais vous devez contacter l'**équipe commerciale de PADS4** pour autoriser cette configuration.
+* Référez-vous au **Manuel d'installation PADS4** pour les instructions de configuration.
+
+***
+
+### Étape 3 : Installer un commutateur d'API DNS
+
+* Installez le **DNS API Switcher** sur une machine qui n'est **pas l'un des serveurs PADS4**.
+* Cette machine peut être le serveur SQL ou un autre système qui peut **communiquer avec les deux serveurs PADS4 et tous les PADS4 Viewers**.
+* Configurez le DNS API Switcher pour :
+  * Utiliser le **primary PADS4 server** comme point de terminaison par défaut
+  * Basculer automatiquement vers le **secondary server** si le primaire devient inaccessible
+
+***
+
+### Étape 4 : Configurer les Viewers et l'accès opérateur
+
+* Configurez tous les **PADS4 Viewers** pour utiliser l'**adresse DNS** du commutateur d'API au lieu d'une IP de serveur fixe.
+
+* L'adresse DNS doit être saisie comme **PADS4 Server IP** dans les paramètres de connexion du viewer.
+
+* Les ports par défaut restent inchangés sauf indication contraire :
+  * **Port 80** (HTTP)
+  * **Port 7237** (communication PADS4)
+
+* Les utilisateurs accédant à **PADS4FIDS Operator** doivent également utiliser l'**adresse DNS** pour assurer la continuité, quel que soit le serveur actif.
+
+***
+
+## Schéma réseau
+
+*Un diagramme de topologie réseau serait affiché ici, illustrant la relation entre :*
+
+* SQL Server
+* Serveurs PADS4 primaire et secondaire
+* DNS API Switcher
+* PADS4 Viewers et Operators

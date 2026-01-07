@@ -1,0 +1,94 @@
+Avec les fonctions de journalisation Windows, vous pouvez consulter les journaux d'événements Windows de votre serveur PADS4 ou PADS4 Viewer. Les journaux peuvent être effacés à distance.
+
+ 
+
+#### **Pour afficher les journaux d'événements Windows de votre serveur PADS4**
+
+1. Cliquez sur l'onglet **Serveur** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Journaux Windows** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le serveur PADS4 connecté et affichera les résultats dans la fenêtre des journaux Windows. Si votre installation PADS4 comprend des sous-serveurs, vous devez d'abord sélectionner un serveur avant de sélectionner la catégorie d'informations.
+
+ 
+
+#### **Pour afficher les journaux d'événements Windows d'un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Journaux Windows** dans la liste des catégories d'informations de viewer disponibles.
+
+Après cela, le système se connectera automatiquement au serveur PADS4 connecté pour récupérer les informations demandées du Viewer sélectionné et affichera les résultats dans la fenêtre des journaux Windows.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre des journaux Windows**
+
+La fenêtre des journaux Windows affiche tous les messages de journal qui sont stockés dans les journaux d'événements de votre serveur PADS4 ou PADS4 Viewer. Lorsque vous rencontrez un problème, ces journaux peuvent vous aider à trouver la cause possible du problème.
+
+![EN Agent Windowslogs Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Windowslogs.png)
+
+**Niveau**\
+\
+Indique si l'élément journalisé est un message d'information, un avertissement ou une erreur.
+
+**Date et heure**\
+\
+Date et heure auxquelles l'élément a été journalisé.
+
+**Source**\
+\
+Nom du processus qui a journalisé l'élément. Si le processus est PADS4 Viewer, le nom du viewer qui identifie le PADS4 Viewer est répertorié.
+
+**ID d'événement**\
+Un ID facultatif pour identifier le message du journal.
+
+**Catégorie de tâche**\
+Une catégorie facultative pour identifier la tâche qui a généré le message du journal.
+
+Lorsque vous sélectionnez un élément de journal dans la fenêtre des journaux Windows, des informations détaillées supplémentaires sur cet élément s'affichent au bas de la fenêtre.
+
+ 
+
+#### **Vues**
+
+Par défaut, seuls les messages de journal PADS4 du journal d'application Windows sont affichés. Pour changer de vue, cliquez sur l'un des boutons suivants dans le menu **Accueil** de la barre de ruban :
+
+* ![EN Agent PADS4 Logo Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-PADS4-logo.png)
+
+* Affiche UNIQUEMENT les messages de journal PADS4 du journal d'application Windows.
+
+* ![EN Agent Application Logo Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Application-logo.png)
+
+* Affiche tous les messages de journal du journal d'application Windows.
+
+* ![EN Agent Ribbon Securitylog Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Securitylog.png)
+
+* Affiche tous les messages de journal du journal de sécurité Windows.
+
+* ![EN Agent Ribbon Systemlog Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Systemlog.png)
+
+* Affiche tous les messages de journal du journal système Windows.
+
+#### **Effacement des journaux d'événements Windows**
+
+En effaçant un journal d'événements Windows, vous pouvez redémarrer le processus de journalisation sur votre serveur PADS4 ou PADS4 Viewer. Pour effacer un journal Windows :
+
+1. Sélectionnez un journal d'événements en cliquant sur l'un des boutons du groupe **Vue** dans le menu **Accueil**.
+2. Cliquez sur **Effacer le journal** dans le menu **Accueil**.
+
+   ![EN Agent Ribbon Clear Log Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ClearLog.png)
+3. Cliquez sur **Oui** pour confirmer que vous souhaitez effacer le journal d'événements.
+
+Après cela, tous les messages de journal seront supprimés du journal d'événements sélectionné sur le PC PADS4 Viewer.
+
+<Tip>
+  Lorsque vous avez sélectionné PADS4 comme vue, l'ensemble du journal d'application Windows sera effacé.
+</Tip>

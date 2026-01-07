@@ -1,4 +1,4 @@
-L'application **PADS4 Designer** vous permet de **prévisualiser les présentations** pour voir exactement comment elles apparaîtront et se comporteront lorsqu'elles seront diffusées dans l'application **PADS4 Viewer**. Cela permet de vérifier la mise en page, le contenu, les connexions de données et l'interactivité avant la publication.
+L'**application PADS4 Designer** vous permet de **prévisualiser les présentations** pour voir exactement comment elles apparaîtront et se comporteront lorsqu'elles seront lues dans l'**application PADS4 Viewer**. Cela permet de vérifier la mise en page, le contenu, les connexions de données et l'interactivité avant la publication.
 
 ***
 
@@ -8,7 +8,7 @@ L'application **PADS4 Designer** vous permet de **prévisualiser les présentati
 
 1. **Cliquez** sur l'onglet **View** dans la barre de ruban.
 2. Dans la **section Preview**, cliquez sur **Presentation**.
-3. La fenêtre **Presentation Preview** s'ouvrira et **démarrera automatiquement la présentation**.
+3. La **fenêtre Presentation Preview** s'ouvrira et **démarrera automatiquement la présentation**.
 
 **Tip:**
 
@@ -19,17 +19,17 @@ L'application **PADS4 Designer** vous permet de **prévisualiser les présentati
 
 ### **Prévisualiser une page spécifique**
 
-1. Naviguez vers la page que vous souhaitez prévisualiser en utilisant la section **Go To** dans le menu **View**.
+1. Naviguez jusqu'à la page que vous souhaitez prévisualiser en utilisant la section **Go To** dans le menu **View**.
 2. Suivez les étapes ci-dessus pour démarrer la prévisualisation de la présentation.
-3. Alternativement, dans la fenêtre **Presentation Preview** :
-   * Utilisez le **menu déroulant de sélection de page** pour choisir une page de départ.
+3. Alternativement, dans la **fenêtre Presentation Preview**:
+   * Utilisez le **menu déroulant Page selector** pour choisir une page de départ.
    * Cliquez sur **Start** pour commencer la prévisualisation à partir de cette page.
 
 ***
 
 ## **Aperçu de la fenêtre de prévisualisation de présentation**
 
-### **Groupe Présentation**
+### **Groupe Presentation**
 
 * **Close** : Ferme la fenêtre de prévisualisation.
 * **Start** : Démarre la prévisualisation à partir de la page sélectionnée.
@@ -49,47 +49,47 @@ L'application **PADS4 Designer** vous permet de **prévisualiser les présentati
 
 * **Viewer Name** : Entrez un nom de Viewer existant pour **simuler** comment ce Viewer spécifique exécuterait la présentation. Utile pour tester les **Viewer Variables** comme `#ViewerName#`.
 * **Page** : Sélectionnez la page de départ pour la prévisualisation.
-* **Viewer Type** : Choisissez un type de Viewer à **simuler** et supprimez les éléments **non pris en charge** par ce type de Viewer.
+* **Viewer Type**: Choisissez un type de visionneuse pour **simuler** et supprimer les éléments **non pris en charge** par ce type de visionneuse.
 
 ***
 
-### **Groupe Source de données**
+### **Groupe de source de données**
 
-(Ces options peuvent être ajustées uniquement **avant** de démarrer la prévisualisation)
+(Ceux-ci ne peuvent être ajustés que **avant** de démarrer l'aperçu)
 
-* **Use Data Cache** :
-  * Utilise les **données mises en cache** pour une prévisualisation plus rapide.
+* **Utiliser le cache de données**:
+  * Utilise **les données mises en cache** pour un aperçu plus rapide.
   * Évite les appels chronophages aux fournisseurs de données.
   * Essentiel pour travailler hors ligne ou concevoir avec des sources de données lentes/distantes.
   * En savoir plus : **Data Caching in PADS4 Designer**.
-* **Use Backup** :
-  * Force PADS4 à utiliser des **Data Providers de sauvegarde** (si définis), permettant de simuler des scénarios de repli.
+* **Utiliser la sauvegarde**:
+  * Force PADS4 à utiliser **les fournisseurs de données de sauvegarde** (si définis), permettant de simuler des scénarios de repli.
 
 ***
 
-### **Groupe Affichage**
+### **Groupe d'affichage**
 
-* **Viewer Variables** : Ouvre une fenêtre listant **toutes les Viewer Variables** pour cette session de prévisualisation. Voir la page **Viewer Variables** pour plus de détails.
-* **Data Preview** : Affiche tous les **Data Providers** connectés et leurs **données récupérées** pour cette présentation.
-* **Log Information** :
-  * Affiche les journaux avec **erreurs/avertissements** pendant la prévisualisation.
+* **Variables de visionneuse**: Ouvre une fenêtre listant **toutes les variables de visionneuse** pour cette session d'aperçu. Voir la page **Viewer Variables** pour plus de détails.
+* **Aperçu des données**: Affiche tous les **Data Providers** connectés et leurs **données récupérées** pour cette présentation.
+* **Informations du journal**:
+  * Affiche les journaux avec **erreurs/avertissements** pendant l'aperçu.
   * Se met à jour automatiquement en temps réel.
   * Le bouton devient **rouge** si un problème est détecté.
-  * Affiche directement les 4 derniers messages du journal.
+  * Visualisez directement les 4 derniers messages du journal.
 
 ***
 
-## **Notes importantes**
+## **Remarques importantes**
 
-* **Les pages masquées** peuvent toujours être forcées à s'afficher pour la prévisualisation si elles sont choisies comme page de départ.
-* Si vous utilisez des **web elements** avec **l'interactivité activée**, appuyez sur **F12** pour ouvrir les **outils de débogage du navigateur Chromium**.\
-  (Remarque : Cette fonction n'est pas prise en charge pour le moteur Internet Explorer).
+* **Les pages masquées** peuvent toujours être forcées à s'afficher pour l'aperçu si elles sont choisies comme page de démarrage.
+* Si vous utilisez **des éléments web** avec **l'interactivité activée**, appuyez sur **F12** pour ouvrir les **outils de débogage du navigateur Chromium**.\
+  (Remarque : Ceci n'est pas pris en charge pour le moteur Internet Explorer).
 
 ***
 
 ## **Résumé des touches de raccourci**
 
-| Action                                                   | Touche de raccourci |
-| -------------------------------------------------------- | ------------------- |
-| Démarrer la prévisualisation complète de la présentation | F2                  |
-| Ouvrir le débogueur web Chromium (pour les éléments web) | F12                 |
+| Action                                            | Touche de raccourci |
+| ------------------------------------------------- | ------------------- |
+| Démarrer l'aperçu complet de la présentation      | F2                  |
+| Ouvrir le débogueur web Chromium (pour élém. web) | F12                 |

@@ -1,14 +1,14 @@
-Dans de nombreux cas, une présentation programmée doit être répétée régulièrement—quotidiennement, hebdomadairement, mensuellement, ou même annuellement. Plutôt que de créer manuellement plusieurs planifications, **PADS4 Scheduler** fournit une puissante fonctionnalité **Set Recurrence** pour automatiser ces planifications répétitives.
+Dans de nombreux cas, une présentation planifiée doit être répétée régulièrement—quotidiennement, hebdomadairement, mensuellement, ou même annuellement. Plutôt que de créer manuellement plusieurs planifications, **PADS4 Scheduler** offre une puissante fonctionnalité **Set Recurrence** pour automatiser ces planifications répétitives.
 
-Le **modèle de récurrence** définit comment et quand la planification se répète au fil du temps.
+Le **recurrence pattern** définit comment et quand la planification se répète au fil du temps.
 
 ***
 
 ## Pourquoi utiliser la récurrence ?
 
-* Gérer efficacement les **événements récurrents**
+* Gérer efficacement les **repeating events**
 * Éviter la duplication des entrées de planification
-* Contrôler précisément **quand et à quelle fréquence** le contenu apparaît
+* Contrôler précisément **when and how often** le contenu apparaît
 
 Exemples de planifications récurrentes :
 
@@ -22,45 +22,45 @@ Exemples de planifications récurrentes :
 
 ## Composants de récurrence
 
-Un modèle de récurrence est défini par **trois aspects principaux** :
+Un modèle de récurrence est défini par **trois aspects principaux**:
 
 ***
 
-### 1. **Date de début et critère de fin**
+### 1. **Start Date and End Criterion**
 
 Vous contrôlez quand une planification récurrente commence et se termine :
 
-* **Date de début** : La date à laquelle la récurrence commence
-* **Critère de fin** :
+* **Start Date** : La date à laquelle la récurrence commence
+* **End Criterion**:
   * **By End Date** : Se termine à une date spécifiée
   * **By Number of Occurrences** : Se termine après un nombre défini de répétitions
-  * **Never Ending** : Continue indéfiniment jusqu'à ce qu'elle soit modifiée ou supprimée manuellement
+  * **Never Ending** : Continue indéfiniment jusqu'à ce qu'elle soit manuellement modifiée ou supprimée
 
 ***
 
-### 2. **Type de récurrence**
+### 2. **Recurrence Type**
 
-Il existe **quatre types de récurrence**, chacun avec ses propres options de configuration :
+Il existe **four recurrence types**, chacun avec ses propres options de configuration :
 
-| Type de récurrence | Description                                                                                          |
-| ------------------ | ---------------------------------------------------------------------------------------------------- |
-| **Daily**          | Se répète chaque jour ou tous les quelques jours (par ex., tous les 2 jours)                         |
-| **Weekly**         | Se répète certains jours de la semaine (par ex., lundi et vendredi)                                  |
-| **Monthly**        | Se répète à des jours spécifiques (par ex., le 15) ou selon des modèles (par ex., le deuxième mardi) |
-| **Yearly**         | Se répète une fois par an ou à un intervalle annuel personnalisé                                     |
+| Recurrence Type | Description                                                                                          |
+| --------------- | ---------------------------------------------------------------------------------------------------- |
+| **Daily**       | Se répète chaque jour ou tous les quelques jours (par ex., tous les 2 jours)                         |
+| **Weekly**      | Se répète certains jours de la semaine (par ex., lundi et vendredi)                                  |
+| **Monthly**     | Se répète à des jours spécifiques (par ex., le 15) ou selon des modèles (par ex., le deuxième mardi) |
+| **Yearly**      | Se répète une fois par an ou à un intervalle annuel personnalisé                                     |
 
 Chaque type de récurrence offre une flexibilité pour répondre à vos besoins de planification.
 
 ***
 
-### 3. **Spécificités au sein d'une journée**
+### 3. **Specifics Within One Day**
 
-Cela détermine **quand pendant la journée** la présentation doit être affichée.
+Cela détermine **when during each day** la présentation doit être affichée.
 
 Vous pouvez spécifier :
 
-* **Heure de début et de fin** : La fenêtre temporelle pendant la journée où le contenu est affiché
-* **Time Segments** *(Optionnel)* :
+* **Start and End Time** : La fenêtre temporelle pendant la journée où le contenu est affiché
+* **Time Segments** *(Optionnel)*:
   * **Uninterrupted** : Affiché en continu pendant toute la plage horaire sélectionnée
   * **On an Hourly Basis** : Affiché plusieurs minutes à des intervalles spécifiques chaque heure
   * **On a Minute Basis** : Contrôle précis au niveau des minutes pour les créneaux de présentation

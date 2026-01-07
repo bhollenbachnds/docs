@@ -1,0 +1,40 @@
+En définissant des **property bindings**, vous pouvez lier des propriétés spécifiques d'un élément directement à une **source de données externe**. Une fois liée, la propriété de l'élément se **mettra à jour automatiquement** en temps réel lorsque la valeur dans la source de données change.
+
+Par exemple, si vous liez la propriété **Visible** d'un élément à une valeur dans un fichier XML, l'élément s'affichera ou se masquera automatiquement au fur et à mesure que cette valeur change.
+
+***
+
+### **Aperçu des Property Bindings**
+
+La section **Property Bindings** répertorie toutes les propriétés d'élément qui peuvent être liées dynamiquement à une source de données. Pour configurer une liaison, vous devez spécifier **au moins** les éléments suivants :
+
+* **Data Provider** (la source externe)
+* **Column** (le champ de données spécifique)
+* **Row** (l'enregistrement de données)
+
+***
+
+### **Champs et définitions**
+
+| **Champ**         | **Description**                                                                                                                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Property**      | La propriété de l'élément à lier (définie par le système et ne peut pas être modifiée).                                                                        |
+| **Type**          | Le type de données de la propriété à lier (défini par le système et ne peut pas être modifié).                                                                 |
+| **Data Provider** | Le fournisseur de données représentant la source de données externe à lier (doit être ajouté au préalable).                                                    |
+| **Column**        | Le champ de données (colonne) de la source de données à lier.                                                                                                  |
+| **Row**           | L'enregistrement spécifique (ligne) de la source de données à lier.                                                                                            |
+| **Scroll**        | Activez cette option pour appliquer le défilement des données si souhaité. Si elle est activée, les **data scrolling properties** s'appliqueront à la liaison. |
+
+***
+
+### **Notes importantes et limitations :**
+
+* **Les options de liaison de propriétés varient en fonction du type d'élément.** Toutes les propriétés ne peuvent pas être liées pour chaque type d'élément.
+* **Limitation sur le défilement de la durée de la playlist :** Les property bindings **ne détectent pas** et ne suivent pas le défilement basé sur la **local playlist duration**. Ce type de défilement est spécifique à l'élément et ne peut pas se synchroniser avec les property bindings.
+* **Limitation à l'intérieur des Table Elements :** Lorsqu'un élément est placé à l'intérieur d'un **Table Element**, les actualisations de données se produisent en synchronisation avec le **Table's refresh cycle**, et non indépendamment.
+
+***
+
+### **Tip:**
+
+Pour plus d'informations sur la façon d'écrire des valeurs de liaison appropriées, consultez la page **[Property Bindings Values](#)** qui détaille les formats exacts et la notation pour les valeurs de liaison (par exemple, booléens, couleurs, tailles).

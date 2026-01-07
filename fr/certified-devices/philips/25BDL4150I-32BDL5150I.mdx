@@ -1,10 +1,10 @@
-Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **les écrans Philips ePaper**.
+Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **les écrans ePaper de Philips**.
 
 ***
 
 ## **1. Première utilisation**
 
-Avant de continuer, assurez-vous que le **`LauncherServiceViewer.zip`** fichier est situé à :
+Avant de continuer, assurez-vous que le **`LauncherServiceViewer.zip`** fichier se trouve à :
 
 ```
 http://pads4serverip/PADS4/apps/
@@ -19,15 +19,15 @@ http://pads4serverip/PADS4/apps/
 Si l'écran a déjà été utilisé, effectuez une **réinitialisation d'usine** pour éviter les conflits de configuration.
 
 <Steps>
-  <Step title="Première étape">
-    Appuyez et maintenez la **touche universelle + cachée** sur l'écran pendant environ 3 secondes.
+  <Step title="Étape Une">
+    Appuyez et maintenez la touche **universelle + cachée** sur l'écran pendant environ 3 secondes.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape Deux">
     La **LED** deviendra brièvement blanche, puis clignotera en vert.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Attendez environ 3 minutes. Lorsque la LED devient bleue et demande une clé USB, **ignorez ce message**.
   </Step>
 </Steps>
@@ -40,7 +40,7 @@ Les mises à jour du firmware sont disponibles via le site de support Philips :
 
 📌 **Instructions**:
 
-* Allez sur le Dropbox Philips
+* Allez sur le Dropbox de Philips
 * Cliquez sur **Models → Sélectionnez le modèle → Ouvrez le manuel d'instructions**
 * (Utilisez le clic droit et ouvrez dans un nouvel onglet si nécessaire)
 
@@ -51,23 +51,23 @@ Les mises à jour du firmware sont disponibles via le site de support Philips :
 Comme ces écrans n'ont pas d'entrée interactive, utilisez **scrcpy** pour refléter et contrôler l'interface Android.
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Une">
     Visitez la [page GitHub de scrcpy](https://github.com/Genymobile/scrcpy).
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape Deux">
     Téléchargez la version appropriée (par exemple, **Windows 64-bit zip**).
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Extrayez le contenu à l'emplacement souhaité. Assurez-vous que **scrcpy** et **adb** sont inclus.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Ajoutez le chemin du dossier aux **Variables d'environnement → Path** de votre système.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Ouvrez l'Invite de commandes et vérifiez l'installation :
 
     * `scrcpy -v`
@@ -82,47 +82,47 @@ Comme ces écrans n'ont pas d'entrée interactive, utilisez **scrcpy** pour refl
 Assurez-vous que **scrcpy** et **adb** sont correctement installés.
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Une">
     Connectez l'**écran au PC via USB**.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape Deux">
     Confirmez l'accès au **système de fichiers Android** via le gestionnaire de fichiers.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Ouvrez l'**Invite de commandes**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Tapez `adb devices` pour vérifier la connexion de l'appareil.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Lancez scrcpy avec `scrcpy`. Si plusieurs appareils sont connectés, utilisez `scrcpy -s {device-name}`.
   </Step>
 
-  <Step title="Sixième étape">
+  <Step title="Étape Six">
     Téléchargez le dernier **PADS4 Web Launcher APK**.
   </Step>
 
-  <Step title="Septième étape">
+  <Step title="Étape Sept">
     Naviguez vers le dossier contenant le fichier **.apk**.
   </Step>
 
-  <Step title="Huitième étape">
+  <Step title="Étape Huit">
     Faites un clic droit et sélectionnez **Ouvrir dans le Terminal**.
   </Step>
 
-  <Step title="Neuvième étape">
+  <Step title="Étape Neuf">
     Installez l'application avec `adb install {application}.apk`. Attendez la confirmation **Success**.
   </Step>
 
-  <Step title="Dixième étape">
+  <Step title="Étape Dix">
     Dans la fenêtre scrcpy, appuyez sur **Home**, puis lancez **PADS4 Web Launcher**.
   </Step>
 
-  <Step title="Onzième étape">
+  <Step title="Étape Onze">
     Entrez la configuration appropriée pour vous connecter à votre **environnement PADS4**.
   </Step>
 </Steps>

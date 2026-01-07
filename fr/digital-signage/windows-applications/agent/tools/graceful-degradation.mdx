@@ -1,0 +1,47 @@
+Lors de la première installation de PADS4, l'utilisateur active l'installation avec l'application PADS4 License Wizard. Pendant ce processus, des informations relatives au matériel sont collectées pour créer une clé de produit PADS4 qui a été vérifiée.
+
+#### **Période de dégradation progressive de 7 jours**
+
+Lorsqu'un ou plusieurs changements matériels sont effectués, PADS4 le détectera et permettra au système de fonctionner pendant une période de 7 jours à partir de ce moment. Pendant ces 7 jours, l'utilisateur sera informé lors de la connexion que le système doit être réactivé. Ce message apparaît lors du démarrage des applications PADS4 Agent, Messenger, System Management, Scheduler ou Designer. Il est possible de créer une alerte qui notifie automatiquement quelqu'un par e-mail lorsque cela est détecté.
+
+ 
+
+#### **Réactivation du serveur PADS4**
+
+Lorsqu'une période de dégradation progressive est détectée et que vous devez réactiver le système PADS4, suivez les étapes suivantes :
+
+1. Contactez votre revendeur et expliquez que le matériel a changé sur l'ordinateur du serveur PADS4 et que le système doit être réactivé. Veuillez fournir la clé de produit PADS4.
+2. Le revendeur contactera Net Display Systems qui vérifiera votre licence et permettra la réactivation de la clé de produit PADS4.
+3. Vous serez informé par e-mail lorsque le changement aura été effectué. Sachez qu'il s'agit d'un processus manuel qui a lieu uniquement pendant les heures de travail.
+4. Démarrez le License Wizard qui est, dans la plupart des cas, installé sur l'ordinateur du serveur PADS4 et sélectionnez le serveur, puis appuyez sur le bouton Suivant.
+5. Il affichera maintenant les détails de la licence actuelle. Veuillez appuyer sur le bouton Suivant pour afficher la fenêtre 'Sélectionner une action'.
+6. Sélectionnez l'option 'Réactiver l'installation actuelle'. L'assistant se connectera au serveur de licences PADS4 et vérifiera votre clé de produit PADS4.\
+   Une fois la validation effectuée, le système réinitialisera vos changements matériels et annulera la période de dégradation. Sachez que le serveur aura besoin d'une connexion Internet pour cela.\
+   \
+   Si une connexion Internet n'est pas disponible, utilisez plutôt la méthode d'activation hors ligne en sélectionnant l'option 'Activer l'installation hors ligne' dans le License Wizard, qui vous guidera tout au long du processus.\
+   Plus d'informations sur la façon d'effectuer une activation hors ligne [peuvent être trouvées ici.](/fr/ctrl-centre/licenses)
+
+Quickview:
+
+* Lorsque des changements matériels sont détectés, PADS4 cessera de fonctionner après une **période de grâce de 7 jours**.
+* Lorsque le serveur PADS4 fonctionne sur un **Serveur Virtuel,** sachez que l'**adresse MAC doit être verrouillée** pour éviter les changements matériels.
+* Lorsque l'utilisateur se connecte pendant une période de grâce, un message s'affiche pour l'informer qu'une action doit être effectuée avant la fin de la période de grâce.
+* **Désactivez le partage des périphériques Bluetooth** sur le Serveur Virtuel pour éviter que PADS4 ne détecte un adaptateur réseau différent.
+* Avec l'**application PADS Agent,** il est possible d'**ajouter une Alerte** qui **notifie automatiquement** une personne lorsque des changements matériels sont détectés et qu'une action est nécessaire.
+
+ 
+
+#### **Changement dans les composants matériels du serveur PADS4**
+
+Lorsqu'un ou plusieurs composants matériels du serveur PADS4 sont modifiés après les activations, PADS4 peut détecter un changement et forcer une réactivation nécessaire pour ce serveur PADS4. Entre-temps, PADS4 continuera à fonctionner pendant une période de 7 jours. Après cette période, le serveur PADS4 cesse de fonctionner. Réactivez le système avant la fin de la période de 7 jours !\
+La détection des changements matériels est basée sur :
+
+* Système d'exploitation
+* ID du processeur
+* Date d'installation du système d'exploitation
+* Numéro de série du système d'exploitation
+* Numéro de série du BIOS
+* Version du BIOS
+* Adaptateur réseau
+* Adresse MAC
+* Code d'activation Windows

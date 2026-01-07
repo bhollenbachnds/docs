@@ -1,13 +1,13 @@
 ---
-- title: Global Settings
+- title: Paramètres globaux
 - description: Mintlify vous donne un contrôle complet sur l'apparence de votre
     documentation en utilisant le fichier docs.json
 - icon: gear
 ---
 
-Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de configuration de base. En savoir plus sur les [properties](#properties) ci-dessous.
+Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de configuration de base. En savoir plus sur les [propriétés](#properties) ci-dessous.
 
-## Properties
+## Propriétés
 
 <ResponseField name="name" type="string" required>
   Nom de votre projet. Utilisé pour le titre global.
@@ -58,7 +58,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 <ResponseField name="colors" type="Colors">
   Codes de couleur hexadécimaux pour votre thème global
 
-  <Expandable title="Colors">
+  <Expandable title="Couleurs">
     <ResponseField name="primary" type="string" required>
       La couleur principale. Utilisée le plus souvent pour le contenu mis en évidence, les en-têtes de section, les accents, en mode clair
     </ResponseField>
@@ -74,7 +74,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     <ResponseField name="background" type="object">
       La couleur de l'arrière-plan en mode clair et sombre
 
-      <Expandable title="Object">
+      <Expandable title="Objet">
         <ResponseField name="light" type="string" required>
           Le code couleur hexadécimal de l'arrière-plan en mode clair
         </ResponseField>
@@ -98,13 +98,13 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     </ResponseField>
 
     <ResponseField name="url" type="string">
-      L'URL lorsque vous cliquez sur le bouton. Exemple: `https://mintlify.com/docs`
+      L'URL lorsque vous cliquez sur le bouton. Exemple : `https://mintlify.com/docs`
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="topbarCtaButton" type="Call to Action">
-  <Expandable title="Topbar Call to Action">
+  <Expandable title="Appel à l'action de la barre supérieure">
     <ResponseField name="type" type={'"link" or "github"'} default="link">
       Le lien affiche un bouton. GitHub affiche les informations du dépôt à l'URL fournie, y compris le nombre d'étoiles GitHub.
     </ResponseField>
@@ -112,23 +112,23 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     <ResponseField name="url" type="string">
       Si `link`: Ce à quoi le bouton renvoie.
 
-      Si `github`: Lien vers le dépôt à partir duquel charger les informations GitHub.
+      Si `github`: Lien vers le dépôt pour charger les informations GitHub.
     </ResponseField>
 
     <ResponseField name="name" type="string">
-      Texte à l'intérieur du bouton. Requis uniquement si `type` est un `link`.
+      Texte à l'intérieur du bouton. Uniquement requis si `type` est un `link`.
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="versions" type="string[]">
-  Tableau des noms de versions. Utilisez-le uniquement si vous souhaitez afficher différentes versions de la documentation avec un menu déroulant dans la barre de navigation.
+  Tableau des noms de version. Utilisez-le uniquement si vous souhaitez afficher différentes versions de documentation avec un menu déroulant dans la barre de navigation.
 </ResponseField>
 
 <ResponseField name="anchors" type="Anchor[]">
   Un tableau des ancres, comprenant le `icon`, `color`, et `url`.
 
-  <Expandable title="Anchor">
+  <Expandable title="Ancre">
     <ResponseField name="icon" type="string">
       L'icône [Font Awesome](https://fontawesome.com/search?q=heart) utilisée pour caractériser l'ancre.
 
@@ -150,7 +150,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     </ResponseField>
 
     <ResponseField name="version" type="string">
-      Utilisé si vous souhaitez masquer une ancre jusqu'à ce que la version correcte de la documentation soit sélectionnée.
+      Utilisé si vous souhaitez masquer une ancre jusqu'à ce que la bonne version de documentation soit sélectionnée.
     </ResponseField>
 
     <ResponseField name="isDefaultHidden" type="boolean" default="false">
@@ -158,15 +158,15 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     </ResponseField>
 
     <ResponseField name="iconType" default="duotone" type="string">
-      L'un des suivants : "brands", "duotone", "light", "sharp-solid", "solid", ou "thin"
+      L'un des suivants : "brands", "duotone", "light", "sharp-solid", "solid" ou "thin"
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="topAnchor" type="Object">
-  Remplacez les configurations par défaut pour l'ancre la plus haute.
+  Remplacer les configurations par défaut pour l'ancre la plus haute.
 
-  <Expandable title="Object">
+  <Expandable title="Objet">
     <ResponseField name="name" default="Documentation" type="string">
       Le nom de l'ancre la plus haute
     </ResponseField>
@@ -176,7 +176,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     </ResponseField>
 
     <ResponseField name="iconType" default="duotone" type="string">
-      L'un des suivants : "brands", "duotone", "light", "sharp-solid", "solid", ou "thin"
+      L'un des suivants : "brands", "duotone", "light", "sharp-solid", "solid" ou "thin"
     </ResponseField>
   </Expandable>
 </ResponseField>
@@ -184,7 +184,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 <ResponseField name="tabs" type="Tabs[]">
   Un tableau d'onglets de navigation.
 
-  <Expandable title="Tabs">
+  <Expandable title="Onglets">
     <ResponseField name="name" type="string">
       Le nom de l'étiquette de l'onglet.
     </ResponseField>
@@ -210,27 +210,27 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
         </ResponseField>
 
         <ResponseField name="name" type="string">
-          Le nom du paramètre d'authentification utilisé dans le terrain de jeu API.
+          Le nom du paramètre d'authentification utilisé dans l'API playground.
 
-          Si la méthode est `basic`, le format doit être `[usernameName]:[passwordName]`
+          Si la méthode est `basic`, le format devrait être `[usernameName]:[passwordName]`
         </ResponseField>
 
         <ResponseField name="inputPrefix" type="string">
-          La valeur par défaut conçue pour être un préfixe pour le champ de saisie d'authentification.
+          La valeur par défaut qui est conçue pour être un préfixe pour le champ de saisie d'authentification.
 
-          Par exemple, si un `inputPrefix` de `AuthKey` hériterait du résultat d'entrée par défaut du champ d'authentification comme `AuthKey`.
+          Par exemple, si un `inputPrefix` de `AuthKey` hériterait du résultat de saisie par défaut du champ d'authentification comme `AuthKey`.
         </ResponseField>
       </Expandable>
     </ResponseField>
 
     <ResponseField name="playground" type="Playground">
-      Configurations pour le terrain de jeu API
+      Configurations pour l'API playground
 
       <Expandable title="Playground">
         <ResponseField name="mode" default="show" type="&#x22;show&#x22; | &#x22;simple&#x22; | &#x22;hide&#x22;">
-          Si le terrain de jeu est affiché, masqué ou affiche uniquement le point de terminaison sans interactivité utilisateur ajoutée `simple`
+          Si le playground est visible, caché, ou affiche uniquement le point de terminaison sans interactivité utilisateur ajoutée `simple`
 
-          En savoir plus dans les [playground guides](/api-playground/demo)
+          En savoir plus sur les [guides du playground](/api-playground/demo)
         </ResponseField>
       </Expandable>
     </ResponseField>
@@ -238,13 +238,13 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
     <ResponseField name="maintainOrder" type="boolean">
       L'activation de ce drapeau garantit que l'ordre des clés dans les pages OpenAPI correspond à l'ordre des clés défini dans le fichier OpenAPI.
 
-      <Warning>Ce comportement sera bientôt activé par défaut, auquel cas ce champ sera obsolète.</Warning>
+      <Warning>Ce comportement sera bientôt activé par défaut, à ce moment ce champ sera déprécié.</Warning>
     </ResponseField>
   </Expandable>
 </ResponseField>
 
 <ResponseField name="openapi" type="string | string[]">
-  Une chaîne ou un tableau de chaînes d'URL ou de chemins relatifs pointant vers votre fichier OpenAPI.
+  Une chaîne ou un tableau de chaînes d'URL(s) ou de chemin(s) relatif(s) pointant vers votre fichier OpenAPI.
 
   Examples:
 
@@ -264,7 +264,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 </ResponseField>
 
 <ResponseField name="footerSocials" type="FooterSocials">
-  Un objet de comptes de médias sociaux où la paire clé:propriété représente la plateforme de médias sociaux et l'URL du compte.
+  Un objet de comptes de médias sociaux où la paire clé:propriété représente la plateforme de média social et l'URL du compte.
 
   Example:
 
@@ -291,7 +291,7 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 </ResponseField>
 
 <ResponseField name="feedback" type="Feedback">
-  Configurations pour activer les boutons de retour
+  Configurations pour activer les boutons de feedback
 
   <Expandable title="Feedback">
     <ResponseField name="suggestEdit" type="boolean" default="false">
@@ -305,15 +305,15 @@ Chaque site Mintlify a besoin d'un `docs.json` fichier avec les paramètres de c
 </ResponseField>
 
 <ResponseField name="modeToggle" type="ModeToggle">
-  Personnalisez le commutateur de mode sombre.
+  Personnaliser le commutateur de mode sombre.
 
   <Expandable title="ModeToggle">
     <ResponseField name="default" type={'"light" or "dark"'}>
-      Définissez si vous souhaitez toujours afficher le mode clair ou sombre pour les nouveaux utilisateurs. Lorsqu'il n'est pas défini, nous utilisons par défaut le même mode que le système d'exploitation de l'utilisateur.
+      Définissez si vous souhaitez toujours afficher le mode clair ou sombre pour les nouveaux utilisateurs. Lorsque ce n'est pas défini, nous utilisons par défaut le même mode que le système d'exploitation de l'utilisateur.
     </ResponseField>
 
     <ResponseField name="isHidden" type="boolean" default="false">
-      Définissez sur true pour masquer le commutateur de mode sombre/clair. Vous pouvez combiner `isHidden` avec `default` pour forcer votre documentation à n'utiliser que le mode clair ou sombre. Par exemple :
+      Définissez sur true pour masquer le commutateur de mode clair/sombre. Vous pouvez combiner `isHidden` avec `default` pour forcer vos documents à n'utiliser que le mode clair ou sombre. Par exemple :
 
       <CodeGroup>
         ```json Only Dark Mode
