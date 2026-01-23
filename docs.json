@@ -170,7 +170,7 @@
                     "group": "LG",
                     "pages": [
                       "certified-devices/lg/webOS-8",
-					  "certified-devices/lg/webOS-6",
+                      "certified-devices/lg/webOS-6",
                       "certified-devices/lg/webOS-4.1"
                     ]
                   },
@@ -253,20 +253,20 @@
                   "ctrl-centre/dashboard",
                   "ctrl-centre/content",
                   "ctrl-centre/schedules",
-				  {
-				"group": "Viewers",
-				"pages": [
-                  "ctrl-centre/viewers/viewers",
-				  "ctrl-centre/administration/user-management/Permissions"
-					]
-			  },
-				  "ctrl-centre/sensors",
+                  {
+                    "group": "Viewers",
+                    "pages": [
+                      "ctrl-centre/viewers/viewers",
+                      "ctrl-centre/viewers/Permissions"
+                    ]
+                  },
+                  "ctrl-centre/sensors",
                   "ctrl-centre/incidents",
                   "ctrl-centre/clusters",
                   "ctrl-centre/viewer-variables",
                   "ctrl-centre/licenses",
                   "ctrl-centre/domains"
-					]
+                ]
               },
               {
                 "group": "Administration",
@@ -275,49 +275,49 @@
                     "group": "Credentials",
                     "pages": [
                       "ctrl-centre/administration/credentials",
-					  "ctrl-centre/administration/teams",
-					  "ctrl-centre/administration/Power-BI",
+                      "ctrl-centre/administration/teams",
+                      "ctrl-centre/administration/Power-BI",
                       "ctrl-centre/administration/meta/create-meta-app",
-					  {
-					"group": "SMTP-Oauth2",
-					"pages": [
-					  "ctrl-centre/administration/smtp-oauth2/google",
-					  "ctrl-centre/administration/smtp-oauth2/Microsoft"
-						]
-					  }
-					]
+                      {
+                        "group": "SMTP-Oauth2",
+                        "pages": [
+                          "ctrl-centre/administration/smtp-oauth2/google",
+                          "ctrl-centre/administration/smtp-oauth2/Microsoft"
+                        ]
+                      }
+                    ]
                   },
-				  {
+                  {
                     "group": "Identity",
                     "pages": [
-					  "ctrl-centre/administration/credentials/active-directory",
-					  "ctrl-centre/administration/credentials/Okta",
-					  "ctrl-centre/administration/microsoft-entra-id",
-					  "ctrl-centre/administration/credentials/role-mapping",
-					  {
-					"group": "SCIM Configuration",
-					"pages": [
-					  "ctrl-centre/administration/credentials/SCIM/microsoft-entra",
-					  "ctrl-centre/administration/credentials/SCIM/okta",
-					  "ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
-						]
-					  }
-					]
-				  },
+                      "ctrl-centre/administration/credentials/active-directory",
+                      "ctrl-centre/administration/credentials/Okta",
+                      "ctrl-centre/administration/microsoft-entra-id",
+                      "ctrl-centre/administration/credentials/role-mapping",
+                      {
+                        "group": "SCIM Configuration",
+                        "pages": [
+                          "ctrl-centre/administration/credentials/SCIM/microsoft-entra",
+                          "ctrl-centre/administration/credentials/SCIM/okta",
+                          "ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
+                        ]
+                      }
+                    ]
+                  },
                   {
                     "group": "User Management",
                     "pages": [
                       "ctrl-centre/administration/user-management/Roles",
-					  "ctrl-centre/administration/user-management/cms-workspace",
-					  "ctrl-centre/viewers/viewer-permissions"
-						]
+                      "ctrl-centre/administration/user-management/cms-workspace",
+                      "ctrl-centre/administration/user-management/viewer-permissions"
+                    ]
                   },
-				  {
-					 "group": "Config",
-					 "pages": [
-					  "ctrl-centre/administration/config/smtp"
-					]
-				  }
+                  {
+                    "group": "Config",
+                    "pages": [
+                      "ctrl-centre/administration/config/smtp"
+                    ]
+                  }
                 ]
               },
               {
@@ -343,19 +343,19 @@
                   "ctrl-centre/sensors/How-to-create-Incidents",
                   "ctrl-centre/sensors/Sensor-Settings",
                   {
-					"group": "Workspace",
+                    "group": "Workspace",
                     "pages": [
                       "ctrl-centre/sensors/workspace/sensors-workspace"
-					]
-				  },
-				  {
-					"group": "Gateways",
+                    ]
+                  },
+                  {
+                    "group": "Gateways",
                     "pages": [
                       "ctrl-centre/sensors/gateway/philips-hue",
-					  "ctrl-centre/sensors/gateway/gateway-proxy"
-					]
-				  },
-				  {
+                      "ctrl-centre/sensors/gateway/gateway-proxy"
+                    ]
+                  },
+                  {
                     "group": "Certified Sensors",
                     "pages": [
                       "ctrl-centre/sensors/certified-sensors/Certified-Sensors",
@@ -1536,7 +1536,7 @@
                       "fr/certified-devices/samsung/Tizen-7.0-SSSP10",
                       "fr/certified-devices/samsung/Tizen-6.5-SSSP10",
                       "fr/certified-devices/samsung/Tizen-5.0-SSSP7",
-                      "fr/certified-devices/samsung/EMDX-076D"                     
+                      "fr/certified-devices/samsung/EMDX-076D"
                     ]
                   },
                   {
