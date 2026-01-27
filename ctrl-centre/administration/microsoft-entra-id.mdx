@@ -8,7 +8,7 @@ This manual provides step-by-step instructions to configure **Single Sign-On** (
 
 To configure a Microsoft Entra Identity provider, you will need to connect to Azure as an Administrator and create a new enterprise application.
 
-1. Go to **https://portal.azure.com** and sign in as an administrator.
+1. Go to [**https://portal.azure.com**](https://portal.azure.com) and sign in as an administrator.
 2. On Azure, go to the **Enterprise applications** page 
 3. Click on **New application**  
 
@@ -52,7 +52,7 @@ You need to edit the basic SAML method. Click on **Edit** to do so.
 
 ![Azure SAML Step1](/images/ctrl-centre/identity/AzureSAMLStep1.png)
 
-Edit the **Basic SAML configuration**. 
+Edit the **Basic SAML configuration**.
 
 - For the Identifier use the PADS4 server address and add **/saml** (e.g. https://pads4.mycompany.com/saml)
 - For the Reply URL use the PADS server address and add **/rdx/nds.services/authentication.integration/api/v1/pads/Saml2/Acs** (e.g. https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs)
@@ -155,9 +155,9 @@ To create the identity provider:
 ### Fill in provider details
 
 1. **Name** – Enter a display name for the provider in PADS4
-2. **Identifier** – Enter the \_Microsoft Entra Identifier \_you collected earlier
+2. **Identifier** – Enter the **Microsoft Entra Identifier** you collected earlier
 3. **Reply URL** – Enter the URL of your local PADS4 application (e.g., `https://pads4.mycompany.com`).
-4. **Metadata URL** – Enter the Microsoft Entra: \_App Federation Metadata URL \_metadata URL you collected.
+4. **Metadata URL** – Enter the **Microsoft Entra: App Federation Metadata URL** metadata URL you collected.
 
    <img
      src="/images/ctrl-centre/identity/PADS4CreateMicrosoftEntraIdProvider.png"
@@ -165,7 +165,7 @@ To create the identity provider:
      title="Pads4create Microsoft Entra Id Provider"
      style={{ width:"65%" }}
    />
-5. The \*\*Identifier \*\*and **Assertion Consumer Service URL** are filled in.
+5. The **Identifier** and **Assertion Consumer Service URL** are filled in.
 
 ### Upload certificates
 
