@@ -290,9 +290,10 @@
                   {
                     "group": "Identity",
                     "pages": [
-                      "ctrl-centre/administration/credentials/active-directory",
-                      "ctrl-centre/administration/credentials/Okta",
                       "ctrl-centre/administration/microsoft-entra-id",
+                      "ctrl-centre/administration/credentials/Okta",
+                      "en/pads-4-ctrl-center/administration/identity/custom-saml-2-0",
+                      "ctrl-centre/administration/credentials/active-directory",
                       "ctrl-centre/administration/credentials/role-mapping",
                       {
                         "group": "SCIM Configuration",

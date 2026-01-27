@@ -1,1 +1,57 @@
-.
+Follow these step-by-step instructions to install and configure PADS4 Viewer on your **IIyama ProLite TW1025LASC** Android touchscreen device.
+
+## **First-Time Use**
+
+Ensure your **PADS4 Server (version 2025.1 or later)** is fully operational before starting.
+
+<Note>
+  The minimum **PADS4 Server version** required is **PADS4 Foundation 2025.1**
+</Note>
+
+When you power on the device for the first time, the Android Home Screen should appear automatically. If it does not, perform a factory reset as described in section “Resetting the Device”
+
+### **Resetting the Device**
+
+If the device has been used before, perform a factory reset to clear storage and avoid software conflicts.
+
+1. Open the \*\*Settings \*\*
+2. Select \*\*System → Reset \*\*options
+3. Select **Erase all data** (Fatory reset)
+4. \*\*Confirm \*\*Erase all data
+
+After resetting the Android Home screen will appear. Continue with Installing the PADS4 Viewer.
+
+## **Installing the PADS4 IIyama Viewer**
+
+Download PADS4IiyamaTouch.apk from your PADS4 Server at `http(s)://[server]/[domain]/Apps`
+
+Replace [server] with IP/hostname and [domain] with your PADS4 domain, default: PADS4.
+
+<Note>
+  Alternatively, get the latest from [here](https://github.com/PADS4/PADS4-Viewer-AOpen/releases/download/v1.0/PADS4AOpen.apk), but copy it to the Server's Apps directory to ensure the device installs the matching version upon connection
+</Note>
+
+1. Copy **PADS4IiyamaTouch.apk** to a **USB stick**.
+2. Insert USB stick into the device.
+3. Open**File Manager** .
+4. Navigate to **USB stick** and tap **PADS4IiyamaTouch.apk**.
+5. If blocked ("install from unknown sources not allowed"), tap Settings in the popup \> enable "Allow from this source" for File Manager \> go back.
+6. Tap to install, then open PADS4 IIyama Touch app
+
+## Connecting to the PADS4 Server
+
+After installation, the PADS4 Viewer must be connected to the PADS4 Server using a correctly formatted server address.
+
+Use the following format for the server URL:\
+`http(s)://[server]/[domain]`
+
+Replace [server] with IP/hostname and [domain] with your PADS4 domain, default: PADS4.
+
+### Connection Steps
+
+1. Enter the **PADS4 Server Location**.
+2. Specify a **Viewer Name**. If left blank, the PADS4 Server will generate a unique name
+3. Click on **Start**
+4. Set **PADS4 IIyama Touch** as the **Home app** and select **Always**
+
+Once completed, the **PADS4 Viewer** should connect to the **PADS4 Server**. Additional settings such as **screen orientation** can be configured using **Viewer Settings**

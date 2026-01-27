@@ -1,0 +1,55 @@
+---
+title: "Custom SAML 2.0"
+---
+
+PADS4 can connect to any identity provider that supports the SAML 2.0 protocol.
+
+To configure a custom identity provider (IdP) other than Microsoft Entra or Okta, you must first collect several configuration details that will be required when creating the identity provider in PADS4. Gather the following from your IdP application:
+
+- Metadata URL of the IdP application
+- Sign-on/Login URL of the IdP application
+- Identifier of the IdP application
+- Signing certificate of the IdP application
+
+You will use this information  when configuring the identity provider in PADS4.
+
+## Configure a Custom SAML 2.0 provider
+
+To create the identity provider:
+
+1. Log in to PADS4 and navigate to Adminstration
+2. In the left-hand menu, click **Credentials**.
+3. Click on **Providers**
+4. Click on **New**  and select **Identity **and **Custom SAML 2.0**
+
+### Fill in provider details
+
+1. **Name** – Enter a display name for the provider in PADS4
+2. **Identifier** – Enter the identifier of the IdP application
+3. **Reply URL** – Enter the URL of your local PADS4 application (e.g., `https://pads4.mycompany.com`).
+4. **Metadata URL** – Enter the Metadata URL of the IdP.
+
+### Upload certificates
+
+1. **Provider Signing Certificate** - Upload the **Certificate (Raw)** (`.cer`) file
+2. **PADS4 Identity Provider Certificate** - Upload a certificate (`.pfx`) 
+3. **Password **- Enter the password for the uploaded `.pfx` certificate 
+
+If you don’t need to enable SCIM provisioning, click **Create** to finish setting up the identity provider.
+
+### Enable SCIM Provisioning (Optional)
+
+You can enable SCIM provisioning during identity provider creation. This feature synchronizes users between Microsoft Entra and PADS4, automatically creating, updating, or deleting users linked to the application.
+
+Once enabled, save these values for later use in your Microsoft Entra SCIM configuration:
+
+1. **SCIM URL**
+2. **SCIM Access Token**
+
+Click **Create** to complete the identity provider setup.
+
+## **Finalizing your Custom SAML 2.0 set-up**
+
+1. **Log out** and **refresh** the PADS4 Portal.
+2. The **SSO Login** button should now be visible.
+3. **Sign in** using your **Custom SAML 2.0** provider
