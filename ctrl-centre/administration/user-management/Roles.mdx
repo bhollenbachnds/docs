@@ -1,3 +1,7 @@
+---
+title: "Users and Roles"
+---
+
 In our latest release, 2025.1, we are introducing our new user management system.
 
 This fundamental change moves the User Management settings from the System Management application to the PADS4 Web Portal.
@@ -7,7 +11,7 @@ With this change, we have also introduced Roles to further refine the user manag
 Roles will allow you to quickly assign a certain set of licenses and permissions to a user.
 
 <Warning>
-  The new user management system is not compatible with Legacy CMS and Workspace in PADS4 version 2025.1,**this has been added in PADS4 version 2025.2.**
+  The new user management system is not compatible with Legacy CMS and Workspace in PADS4 version 2025.1,this has been added in PADS4 version 2025.2**.**
 </Warning>
 
 ## How to use roles in PADS4
@@ -18,11 +22,19 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 - You can access it by logging in to your PADS4 Web Portal with your Adminstrator account. Go to Dashboard, and on the bottom left go to **Users**.
 
-![Users Pn](/images/ctrl-centre/administration/user-management/Users.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/Users.png"
+  alt="Users Pn"
+  style={{ width:"50%" }}
+/>
 
 - On the left-hand side you can switch between the Users and Roles
 
-![Users Overview Pn](/images/ctrl-centre/administration/user-management/Users-overview.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/Users-overview.png"
+  alt="Users Overview Pn"
+  style={{ width:"51%" }}
+/>
 
 - In the user's overview, you will see the users and their corresponding information as:
   - Name
@@ -35,6 +47,19 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 - In the Roles section, you will get the following overview of the roles that are available, including the default roles, which are explained below.
 
 ![Default Roles](/images/ctrl-centre/administration/user-management/default-roles.png)
+
+### Search for Users
+
+Use the search function to quickly locate specific users in the system. It searches across key fields: Name, Username, Roles, and License. This is ideal for admins managing PADS4.
+
+**How to Search**
+
+1. Enter keywords in the search box (e.g., "john.doe", "admin role", or "Cms users group").
+2. Results filter dynamically as you type—no need to hit Enter.
+
+**Export Results**
+
+Click the **Export** button to download results as Excel. This expands the view for bulk analysis or reporting. Exported data includes all visible columns for easy import elsewhere.
 
 ## Default roles
 
@@ -82,7 +107,7 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 </Note>
 
 <Danger>
-  Do note that the **viewer roles** require an **Agent** or **System Management ( Only for on-offline status / removal of viewers )** license to be effective outside of CMS2.0, as the roles are purely to set permissions once access have been granted by the license that has been assisgned to the user.
+  Do note that the viewer roles require an Agent or System Management ( Only for on-offline status / removal of viewers ) license to be effective outside of CMS2.0, as the roles are purely to set permissions once access have been granted by the license that has been assisgned to the user.
 
   You can choose to adjust the default viewer roles to add this license automaticly to the user which has this role assigned.
 </Danger>
@@ -130,9 +155,17 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 - You can edit these roles to your preferred configuration, or you can make your own Roles where you can specify any other roles that it is a member of, or assign certain licenses.
 
-![New Roles Pn](/images/ctrl-centre/administration/user-management/new-roles.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/new-roles.png"
+  alt="New Roles Pn"
+  style={{ width:"65%" }}
+/>
 
-![Create Role Pn](/images/ctrl-centre/administration/user-management/create-role.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/create-role.png"
+  alt="Create Role Pn"
+  style={{ width:"78%" }}
+/>
 
 - With these roles or the self-created roles, you can then further specify the access that you grant users with a certain role to application available in the PADS4 Web Portal.
 
@@ -140,7 +173,11 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 - Right click on the folder that you want to change/review access for and press **"Edit access"**
 
-![Content Access Pn](/images/ctrl-centre/administration/user-management/content-access.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/content-access.png"
+  alt="Content Access Pn"
+  style={{ width:"71%" }}
+/>
 
 - An overview of the roles and users with their rights on this particular folder will show and allows you to add or remove roles and users.
 
@@ -150,7 +187,11 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 - Click the 3 dots on the right of your category and click on **"Edit access"**
 
-![Webdesigner Category Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png"
+  alt="Webdesigner Category Access Pn"
+  style={{ width:"57%" }}
+/>
 
 ### Web designer templates
 
@@ -162,8 +203,16 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 - In Tree view, right click on the viewer group and click on **"Edit Access"**
 
-![Treeview Perm](/images/ctrl-centre/administration/user-management/treeview-perm.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/treeview-perm.png"
+  alt="Treeview Perm"
+  style={{ width:"61%" }}
+/>
 
 - In Detail view, hover your mouse on either the viewer group or viewer and press the three dots to "**Edit access"**.
 
-![Detailviewer Perm](/images/ctrl-centre/administration/user-management/detailviewer-perm.png)
+<img
+  src="/images/ctrl-centre/administration/user-management/detailviewer-perm.png"
+  alt="Detailviewer Perm"
+  style={{ width:"65%" }}
+/>

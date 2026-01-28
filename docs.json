@@ -309,8 +309,8 @@
                     "group": "User Management",
                     "pages": [
                       "ctrl-centre/administration/user-management/Roles",
-                      "ctrl-centre/administration/user-management/cms-workspace",
-                      "ctrl-centre/administration/user-management/Permissions"
+                      "ctrl-centre/administration/user-management/Permissions",
+                      "ctrl-centre/administration/user-management/cms-workspace"
                     ]
                   },
                   {
