@@ -381,24 +381,16 @@
                 ]
               },
               {
-                "group": "PADS4 Web Designer",
-                "pages": [
-                  "en/digital-signage/pads-4-web-designer/categories",
-                  "en/digital-signage/pads-4-web-designer/templates"
-                ]
-              },
-              {
-                "group": "PADS4 CMS",
+                "group": "PADS4 CMS and Designer",
                 "pages": [
                   "modules/digital-signage/cms/introduction",
-                  "modules/digital-signage/cms/login",
                   "modules/digital-signage/cms/homepage",
-                  "modules/digital-signage/cms/categories",
                   "modules/digital-signage/cms/create-a-template",
-                  "modules/digital-signage/cms/library",
-                  "modules/digital-signage/cms/create-a-new-message",
+                  "modules/digital-signage/cms/categories",
+                  "en/digital-signage/pads-4-web-designer/templates",
                   "modules/digital-signage/cms/publish-a-message",
                   "modules/digital-signage/cms/publications",
+                  "modules/digital-signage/cms/library",
                   "modules/digital-signage/cms/ordering",
                   "modules/digital-signage/cms/more-features"
                 ]
