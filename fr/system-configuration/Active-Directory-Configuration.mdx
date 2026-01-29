@@ -14,15 +14,15 @@ Une fois qu'une connexion à **Active Directory** est établie, vous pouvez cré
 * Lorsqu'un utilisateur est **supprimé d'Active Directory**, il est **automatiquement supprimé** de PADS4.
 * Si le **PADS4 Server** a des permissions limitées pour accéder à Active Directory, les mises à jour depuis AD **peuvent ne pas prendre effet immédiatement** et seront appliquées **après un redémarrage du serveur**.
 
-> **Important:** Supprimer un **utilisateur LDAP** de PADS4 **ne supprime pas** leur compte de **Active Directory**.
+> **Important:** La suppression d'un **utilisateur LDAP** de PADS4 **ne supprime pas** son compte de **Active Directory**.
 
 ***
 
-### **Gestion des utilisateurs et des autorisations**
+### **Gestion des utilisateurs et des permissions**
 
-Toutes les **appartenances aux groupes d'utilisateurs, les autorisations et les attributions de licences** sont gérées dans **PADS4**, y compris pour les utilisateurs LDAP.
+Toutes les **appartenances aux groupes d'utilisateurs, permissions et attributions de licences** sont gérées dans **PADS4**, y compris pour les utilisateurs LDAP.
 
-Si la **connexion Active Directory** est **désactivée**, les **utilisateurs LDAP créés précédemment restent actifs** dans PADS4. Cela vous permet de **les réutiliser** si vous réactivez la connexion AD à l'avenir.
+Si la **connexion Active Directory** est **désactivée**, les **utilisateurs LDAP précédemment créés restent actifs** dans PADS4. Cela vous permet de **les réutiliser** si vous réactivez la connexion AD à l'avenir.
 
 ***
 
@@ -32,22 +32,22 @@ Pour intégrer **Active Directory** avec **PADS4**, suivez ces étapes :
 
 1️. **Configurer les paramètres de connexion Active Directory**
 
-* Ouvrez la fenêtre **Server Settings** dans **PADS4 System Management**.
-* Saisissez les **détails de connexion Active Directory**.
+* Ouvrez la **Server Settings** fenêtre dans **PADS4 System Management**.
+* Saisissez les **Active Directory connection details**.
 
-2️. **Redémarrer le serveur PADS4**
+2️. **Redémarrer le PADS4 Server**
 
-* Cela garantit que les **paramètres de connexion Active Directory prennent effet**.
+* Cela garantit que les **Active Directory connection settings prennent effet**.
 
 3️. **Créer des utilisateurs LDAP**
 
 * Accédez à la fenêtre **Users** dans **PADS4 System Management**.
-* Créez **un ou plusieurs utilisateurs LDAP** liés aux **comptes Active Directory**.
+* Créez **un ou plusieurs utilisateurs LDAP** liés aux **Active Directory accounts**.
 
 4️. **Attribuer des groupes d'utilisateurs et des licences**
 
-* Assurez-vous que les utilisateurs sont **affectés aux groupes d'utilisateurs appropriés**.
-* Attribuez les **licences** nécessaires à chaque utilisateur.
+* Assurez-vous que les utilisateurs sont **assignés aux groupes d'utilisateurs appropriés**.
+* Attribuez les **licenses** nécessaires à chaque utilisateur.
 
 ***
 
@@ -57,4 +57,4 @@ Pour intégrer **Active Directory** avec **PADS4**, suivez ces étapes :
 Les utilisateurs peuvent **se connecter en utilisant leurs identifiants Active Directory**.\
 **L'authentification et les mises à jour des utilisateurs** sont **automatisées** et **transparentes**.
 
-En utilisant **Active Directory avec PADS4**, les organisations peuvent maintenir une **gestion centralisée des utilisateurs**, améliorer la **sécurité** et **simplifier l'authentification** sans modifier leur **structure Active Directory** existante.
+En utilisant **Active Directory with PADS4**, les organisations peuvent maintenir une **gestion centralisée des utilisateurs**, améliorer la **sécurité**, et **simplifier l'authentification** sans modifier leur **Active Directory structure**.

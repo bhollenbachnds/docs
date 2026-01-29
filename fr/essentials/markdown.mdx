@@ -6,7 +6,7 @@
 
 ## Titres
 
-Mieux utilisés pour les en-têtes de section.
+Idéal pour les en-têtes de section.
 
 ```md
 ## Titles
@@ -14,60 +14,60 @@ Mieux utilisés pour les en-têtes de section.
 
 ### Sous-titres
 
-Meilleure utilisation pour les en-têtes de sous-section.
+Idéal pour les en-têtes de sous-section.
 
 ```md
 ### Subtitles
 ```
 
 <Tip>
-  Chaque **titre** et **sous-titre** crée un ancrage et apparaît également dans la table des matières à droite.
+  Chaque **titre** et **sous-titre** crée une ancre et apparaît également dans la table des matières à droite.
 </Tip>
 
 ## Formatage de texte
 
-Nous prenons en charge la plupart des formatages markdown. Ajoutez simplement `**`\*\*`_`\*`~`\~\~ autour du texte pour le formater.
+Nous prenons en charge la plupart des formatages markdown. Ajoutez simplement `**`, `_`, ou `~` autour du texte pour le formater.
 
-| Style    | Comment l'écrire  | Résultat          |
-| -------- | ----------------- | ----------------- |
-| Gras     | `**bold**`        | **\*\*gras\*\***  |
-| Italique | `_italic_`        | *\*italique\**    |
-| Barré    | `~strikethrough~` | ~~\~\~barré\~\~~~ |
+| Style    | Comment l'écrire  | Résultat   |
+| -------- | ----------------- | ---------- |
+| Gras     | `**bold**`        | **gras**   |
+| Italique | `_italic_`        | *italique* |
+| Barré    | `~strikethrough~` | ~~barré~~  |
 
-Vous pouvez combiner ces styles. Par exemple, écrivez `**_bold and italic_**`\*\*\*texte\*\*\* pour obtenir ***du texte gras et italique***.
+Vous pouvez combiner ces styles. Par exemple, écrivez `**_bold and italic_**` pour obtenir ***gras et italique*** texte.
 
-Vous devez utiliser HTML pour écrire du texte en exposant et en indice. C'est-à-dire, ajoutez `<sup>`\<sup>...\</sup>`<sub>`\<sub>...\</sub> autour de votre texte.
+Vous devez utiliser HTML pour écrire du texte en exposant et en indice. C'est-à-dire, ajoutez `<sup>` ou `<sub>` autour de votre texte.
 
-| Taille du texte | Comment l'écrire         | Résultat                         |
-| --------------- | ------------------------ | -------------------------------- |
-| Exposant        | `<sup>superscript</sup>` | <sup>\<sup>exposant\</sup></sup> |
-| Indice          | `<sub>subscript</sub>`   | <sub>\<sub>indice\</sub></sub>   |
+| Taille du texte | Comment l'écrire         | Résultat            |
+| --------------- | ------------------------ | ------------------- |
+| Exposant        | `<sup>superscript</sup>` | <sup>exposant</sup> |
+| Indice          | `<sub>subscript</sub>`   | <sub>indice</sub>   |
 
 ## Liens vers des pages
 
-Vous pouvez ajouter un lien en entourant le texte avec `[]()`\[texte]\(URL). Vous écririez `[link to google](https://google.com)`\[lien vers google]\(https\://www\.google.com) pour [lier vers google](https://google.com).
+Vous pouvez ajouter un lien en entourant le texte avec `[]()`. Vous écririez `[link to google](https://google.com)` pour [lien vers google](https://google.com).
 
-Les liens vers des pages dans vos documents doivent être relatifs à la racine. Fondamentalement, vous devez inclure le chemin complet du dossier. Par exemple, `[link to text](/writing-content/text)`\[Texte]\(/components/text) renvoie à la page "Text" dans notre section composants.
+Les liens vers des pages dans vos documents doivent être relatifs à la racine. Fondamentalement, vous devez inclure le chemin complet du dossier. Par exemple, `[link to text](/writing-content/text)` renvoie à la page "Text" dans notre section composants.
 
 Les liens relatifs comme `[link to text](../text)` s'ouvriront plus lentement car nous ne pouvons pas les optimiser aussi facilement.
 
 ## Citations
 
-### Ligne unique
+### Une seule ligne
 
 Pour créer une citation, ajoutez un `>` devant un paragraphe.
 
-> Dorothy l'a suivie à travers plusieurs des magnifiques pièces de son château.
+> Dorothy l'a suivie à travers de nombreuses belles pièces de son château.
 
 ```md
 > Dorothy followed her through many of the beautiful rooms in her castle.
 ```
 
-### Multiligne
+### Plusieurs lignes
 
-> Dorothy l'a suivie à travers plusieurs des magnifiques pièces de son château.
+> Dorothy l'a suivie à travers de nombreuses belles pièces de son château.
 >
-> La Sorcière lui ordonna de nettoyer les marmites et les bouilloires, de balayer le sol et d'alimenter le feu avec du bois.
+> La Sorcière lui ordonna de nettoyer les pots et les bouilloires, de balayer le sol et d'alimenter le feu avec du bois.
 
 ```md
 > Dorothy followed her through many of the beautiful rooms in her castle.

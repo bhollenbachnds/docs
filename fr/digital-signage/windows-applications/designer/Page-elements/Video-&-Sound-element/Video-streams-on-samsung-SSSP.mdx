@@ -1,0 +1,68 @@
+Samsung **Smart Signage Platform (SSSP)** prend en charge **la diffusion vidéo en streaming**, y compris **HLS streams and Lynk DRM encryption**.
+
+***
+
+## **Lecture des flux HLS sur Samsung SSSP**
+
+Si l'**URL du flux HLS ne se termine pas par `.m3u8`**, suivez ces étapes :
+
+1. **Modifiez manuellement l'URL** en utilisant la notation Samsung.
+2. **Ajoutez `|COMPONENT=HLS`** à la fin de l'URL du flux.
+
+### **Example:**
+
+```
+http://<server>:<port>/<path>|COMPONENT=HLS
+```
+
+***
+
+## **Prise en charge du protocole Lynk DRM**
+
+Samsung **Lynk DRM** (Digital Rights Management) permet la lecture de **flux vidéo cryptés**.
+
+Pour activer **Lynk DRM**, vous devez modifier l'URL du flux en ajoutant **des options de requête** :
+
+| **Option de requête** | **Description**                                                                                 |
+| --------------------- | ----------------------------------------------------------------------------------------------- |
+| **lynk\_server**      | Spécifie l'emplacement du serveur Lynk DRM.                                                     |
+| **lynk\_type**        | Définit si le flux est **encrypted** ou **normal**. (Par défaut **unencrypted** si non défini). |
+
+***
+
+## **Exemples d'URL de flux Lynk DRM**
+
+### **Exemple 1 : Utilisation par défaut de Lynk DRM**
+
+```
+http://server.nds.local/stream1.mp4?lynk_server
+```
+
+* **L'adresse du serveur Lynk DRM n'est pas spécifiée**, donc le système **utilise automatiquement** l'hôte du flux (`server.nds.local`).
+* Comme **`lynk_type` n'est pas défini**, le système suppose un **contenu non crypté**.
+
+### **Exemple 2 : Spécification d'un serveur Lynk DRM**
+
+```
+http://server.nds.local/stream1.mp4?lynk_server=lynkserver.nds.local:8080
+```
+
+* **Serveur Lynk DRM explicitement défini** sur `lynkserver.nds.local`.
+* **Le port 8080 est utilisé pour la connexion**.
+
+### **Exemple 3 : Lecture de flux cryptés**
+
+```
+http://server.nds.local/stream1.mp4?lynk_server=lynkserver.nds.local:8080&lynk_type=encrypted
+```
+
+* **Le serveur Lynk DRM est défini (`lynkserver.nds.local:8080`)**.
+* **`lynk_type=encrypted`** assure **la récupération de la clé de décryptage** depuis le serveur Lynk DRM.
+
+***
+
+## **Considérations pour le streaming sur Samsung SSSP**
+
+* **Les flux HLS doivent être correctement formatés** en utilisant `|COMPONENT=HLS`.
+* **Le contenu protégé par Lynk DRM nécessite un serveur correctement configuré**.
+* **Des paramètres DRM incorrects empêcheront la lecture**.

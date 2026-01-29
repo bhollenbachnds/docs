@@ -1,0 +1,48 @@
+Ces propriétés définissent les présentations qui seront lues dans l'élément **Presentation in Page**. Vous pouvez ajouter une seule présentation ou créer une **playlist** de plusieurs présentations qui seront lues séquentiellement.
+
+#### **Gestion de la playlist**
+
+* Ajoutez, modifiez, réorganisez ou supprimez des éléments de la playlist.
+* Naviguez à travers les éléments à l'aide des **navigation buttons** en bas.
+* Le **durée totale** de tous les éléments de la playlist est affichée.
+
+💡 **Pour les détails généraux sur la gestion des playlists, voir "Travailler avec les Playlists."**
+
+***
+
+### **Élément de Présentation dans la Page de la Playlist**
+
+#### **Type**
+
+Définit la **source** de la présentation incluse :
+
+| **Option**                                               | **Description**                                                                                                                                                                                                      |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Présentation PADS4 depuis la Bibliothèque de Contenu** | Fait référence à une présentation stockée dans la **bibliothèque de contenu PADS4** (recommandé). Les éléments de la bibliothèque de contenu sont automatiquement **synchronisés** sur tous les PC de votre système. |
+| **Présentation PADS4 depuis un Fichier**                 | Fait référence à une présentation stockée **en dehors** de la bibliothèque de contenu. Ces fichiers ne sont **pas synchronisés** automatiquement, et vous devez les distribuer manuellement.                         |
+| **Pas de Présentation PADS4**                            | Aucune présentation n'est incluse — cette option est utilisée pour créer une **pause** dans la playlist.                                                                                                             |
+
+#### **Contenu**
+
+Contient la **référence du fichier** pour le type de présentation sélectionné. Vous pouvez :
+
+* Parcourir la **Bibliothèque de Contenu** ou votre système de fichiers.
+* Si vous utilisez "Présentation PADS4 depuis un Fichier", spécifiez le **chemin complet du fichier**.
+
+#### **Durée**
+
+Définit combien de temps (en **secondes**) la présentation sélectionnée ou la pause sera affichée.
+
+#### **Découper la Présentation**
+
+* **Si activé**, seule une partie de la présentation sera jouée en fonction de la plage de pages sélectionnée.
+* **Première Page :** La première page à afficher.
+* **Dernière Page :** La dernière page à afficher.
+
+***
+
+### **Remarques**
+
+* **Seules les références** aux fichiers de présentation sont stockées dans la **présentation conteneur**—pas les fichiers réels. Si la présentation référencée est mise à jour, la dernière version sera automatiquement utilisée pendant la lecture.
+* **Les propriétés de la playlist seront désactivées** lorsque l'élément est connecté à une **source de données**. Dans ce cas, le contenu est déterminé par des données en temps réel.
+* **Dans PADS4 Designer**, les fournisseurs de données à l'intérieur de l'élément **Presentation in Page** ne sont **pas chargés** pour des raisons de performance.

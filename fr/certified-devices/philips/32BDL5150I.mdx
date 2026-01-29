@@ -1,4 +1,4 @@
-Avant de commencer le processus d'installation, assurez-vous que le fichier **LauncherServiceViewer.zip** est placé dans le `/PADS4/apps/` répertoire sur le serveur PADS4.
+Avant de commencer le processus d'installation, assurez-vous que le fichier **LauncherServiceViewer.zip** est placé dans le `/PADS4/apps/` répertoire sur le PADS4 Server.
 
 Pour des instructions détaillées relatives au matériel, consultez la documentation **Philips Dropbox**. Cliquez sur **"Models"** dans le menu en bas à gauche pour sélectionner votre écran.
 
@@ -6,19 +6,19 @@ Pour des instructions détaillées relatives au matériel, consultez la document
 
 ### **1.1 Réinitialisation de l'appareil**
 
-Une réinitialisation est fortement recommandée lorsque l'appareil a été utilisé précédemment, afin de supprimer toute configuration conflictuelle.
+Une réinitialisation est fortement recommandée lorsque l'appareil a déjà été utilisé, afin de supprimer toute configuration conflictuelle.
 
 <Steps>
-  <Step title="Étape Une">
-    Appuyez et maintenez la **touche universelle + cachée** sur l'appareil pendant environ **3 secondes**.
+  <Step title="Première étape">
+    Appuyez et maintenez la touche **universal + hidden key** sur l'appareil pendant environ **3 seconds**.
   </Step>
 
-  <Step title="Étape Deux">
-    Attendez que la **LED clignote en vert** après être brièvement devenue blanche.
+  <Step title="Deuxième étape">
+    Attendez que la **LED to flash green** après être brièvement devenue blanche.
   </Step>
 
-  <Step title="Étape Trois">
-    Après environ **3 minutes**, la LED deviendra **bleue**. Un message vous invitant à insérer un USB apparaîtra — vous pouvez l'ignorer.
+  <Step title="Troisième étape">
+    Après environ **3 minutes**, la LED deviendra **blue**. Un message vous invitant à insérer un USB apparaîtra — vous pouvez l'ignorer.
   </Step>
 </Steps>
 
@@ -26,86 +26,86 @@ Une réinitialisation est fortement recommandée lorsque l'appareil a été util
 
 ### **1.2 Mise à jour du firmware**
 
-Pour assurer la compatibilité, mettez à jour votre firmware en suivant les étapes du **manuel d'instructions Philips**:
+Pour assurer la compatibilité, mettez à jour votre firmware en suivant les étapes du **Philips instructions manual**:
 
-Accédez aux instructions via le Dropbox de Philips en sélectionnant **"Models"**, en trouvant votre écran, et en ouvrant le **manuel** (utilisez le clic droit pour ouvrir dans un nouvel onglet si nécessaire).
+Accédez aux instructions via Philips Dropbox en sélectionnant **"Models"**, en trouvant votre écran et en ouvrant le **manual** (utilisez le clic droit pour ouvrir dans un nouvel onglet si nécessaire).
 
 ***
 
 ### **1.3 Installation de scrcpy**
 
-**scrcpy** permet d'interagir avec l'appareil via votre PC, ce qui est essentiel car **les écrans ePaper n'ont pas d'interactivité**.
+**scrcpy** permet d'interagir avec l'appareil via votre PC, ce qui est essentiel car **ePaper displays lack interactivity**.
 
 <Steps>
-  <Step title="Étape Une">
-    Naviguez vers la page **[GitHub de scrcpy](https://github.com/Genymobile/scrcpy)**.
+  <Step title="Première étape">
+    Naviguez vers la page **[scrcpy GitHub](https://github.com/Genymobile/scrcpy)**.
   </Step>
 
-  <Step title="Étape Deux">
+  <Step title="Deuxième étape">
     Faites défiler jusqu'à **"Get the app"**, et téléchargez la version pour votre système d'exploitation.
   </Step>
 
-  <Step title="Étape Trois">
+  <Step title="Troisième étape">
     Sur Windows, téléchargez et extrayez le fichier **64-bit .zip**.
   </Step>
 
-  <Step title="Étape Quatre">
+  <Step title="Quatrième étape">
     Assurez-vous que le dossier extrait contient à la fois **scrcpy** et **adb**.
   </Step>
 
-  <Step title="Étape Cinq">
-    (Facultatif) Ajoutez le dossier à la **Variable d'Environnement Path** de votre système pour un accès facile.
+  <Step title="Cinquième étape">
+    (Facultatif) Ajoutez le dossier à la **Path Environment Variable** de votre système pour un accès facile.
   </Step>
 
-  <Step title="Étape Six">
-    Ouvrez l'Invite de Commandes et testez avec `scrcpy -v` et `adb version`.
+  <Step title="Sixième étape">
+    Ouvrez l'invite de commande et testez avec `scrcpy -v` et `adb version`.
   </Step>
 </Steps>
 
 ***
 
-## **2. Installation de l'Application**
+## **2. Installation de l'application**
 
-Utilisez **scrcpy et adb** pour installer l'application PADS4.
+Utilisez **scrcpy and adb** pour installer l'application PADS4.
 
 <Steps>
-  <Step title="Étape Une">
-    Connectez **l'écran à votre PC/ordinateur portable via USB**.
+  <Step title="Première étape">
+    Connectez l'**display to your PC/laptop via USB**.
   </Step>
 
-  <Step title="Étape Deux">
-    Le système de fichiers Android devrait apparaître dans l'Explorateur de Fichiers.
+  <Step title="Deuxième étape">
+    Le système de fichiers Android devrait apparaître dans l'Explorateur de fichiers.
   </Step>
 
-  <Step title="Étape Trois">
-    Ouvrez **l'Invite de Commandes**.
+  <Step title="Troisième étape">
+    Ouvrez **Command Prompt**.
   </Step>
 
-  <Step title="Étape Quatre">
+  <Step title="Quatrième étape">
     Exécutez `adb devices` pour vérifier la connexion.
   </Step>
 
-  <Step title="Étape Cinq">
+  <Step title="Cinquième étape">
     Lancez scrcpy avec `scrcpy`. Pour plusieurs appareils : `scrcpy -s {device-name}`.
   </Step>
 
-  <Step title="Étape Six">
-    Téléchargez le fichier **PADS4 Web Launcher .apk** le plus récent.
+  <Step title="Sixième étape">
+    Téléchargez le fichier **latest PADS4 Web Launcher .apk**.
   </Step>
 
-  <Step title="Étape Sept">
-    Naviguez vers le dossier contenant le `.apk`, faites un clic droit et sélectionnez **"Ouvrir dans le Terminal"**.
+  <Step title="Septième étape">
+    Naviguez vers le dossier contenant le `.apk`, faites un clic droit et sélectionnez **"Open in Terminal"**.
   </Step>
 
-  <Step title="Étape Huit">
+  <Step title="Huitième étape">
     Run: `adb install {application}.apk`. Recherchez `Success`.
   </Step>
 
-  <Step title="Étape Neuf">
-    Passez à la **fenêtre scrcpy**, appuyez sur **Accueil**, et localisez **PADS4 Web Launcher**.
+  <Step title="Neuvième étape">
+    Passez à la **scrcpy window**, appuyez sur **Home**, et localisez **PADS4 Web Launcher**.
   </Step>
 
-  <Step title="Étape Dix">
+  <Step title="Dixième étape">
     Lancez l'application et complétez la configuration de l'environnement PADS4.
   </Step>
 </Steps>
@@ -117,27 +117,27 @@ Utilisez **scrcpy et adb** pour installer l'application PADS4.
 | **Domaine**                             | **Support**                                                                            |
 | :-------------------------------------- | :------------------------------------------------------------------------------------- |
 | Modèles d'affichage                     | ✅ Pris en charge                                                                       |
-| Mode Portrait                           | ✅ Pris en charge                                                                       |
+| Mode portrait                           | ✅ Pris en charge                                                                       |
 | Télécommande                            | ⚠️ Le paramètre peut être modifié, mais les télécommandes ne sont pas prises en charge |
 | HTTPS                                   | ✅ Pris en charge                                                                       |
 | Vidéo                                   | ❌ Non applicable – seule la première image est affichée                                |
 | Image                                   | ✅ JPG, PNG, BMP *(GIF statique uniquement)*                                            |
 | Texte / Ligne / Forme                   | ✅ Pris en charge                                                                       |
-| Texte défilant                          | ⚠️ Imprévisible en raison du faible taux de rafraîchissement                           |
+| Texte défilant                          | ⚠️ Imprévisible en raison d'un faible taux de rafraîchissement                         |
 | Texte formaté                           | ✅ Pris en charge avec considérations de timing                                         |
 | Flash                                   | ❌ Non pris en charge                                                                   |
-| Tableau                                 | ✅ Contenu statique uniquement. Certaines lignes peuvent ne pas s'afficher complètement |
+| Table                                   | ✅ Contenu statique uniquement. Certaines lignes peuvent ne pas s'afficher complètement |
 | PDF / PowerPoint                        | ✅ Contenu statique uniquement; première page affichée                                  |
 | Bouton interactif                       | ✅ Affiché de manière statique (non interactif)                                         |
-| Playlist                                | ✅ Pris en charge depuis la Bibliothèque de Contenu                                     |
+| Playlist                                | ✅ Pris en charge depuis la Content Library                                             |
 | Web                                     | ❌ Non pris en charge                                                                   |
 | Couleurs                                | ✅ Limité à la gamme de couleurs de l'écran                                             |
-| Fournisseurs de données                 | ✅ Données statiques uniquement                                                         |
+| Data Providers                          | ✅ Données statiques uniquement                                                         |
 | Transitions                             | ❌ Non applicable                                                                       |
-| Règles                                  | ⚠️ Seulement si tolérant au rafraîchissement                                           |
-| Fonctionnalités hors ligne              | ✅ Bibliothèque de contenu, Planifications, Données                                     |
-| Liaisons de propriétés                  | ✅ Uniquement avec un intervalle de mise à jour lent                                    |
-| Variables du visualiseur                | ✅ Pris en charge                                                                       |
+| Rules                                   | ⚠️ Uniquement si tolérant au rafraîchissement                                          |
+| Fonctionnalités hors ligne              | ✅ Content Library, Schedules, Data                                                     |
+| Property Bindings                       | ✅ Uniquement avec un intervalle de mise à jour lent                                    |
+| Viewer Variables                        | ✅ Pris en charge                                                                       |
 | Mises à jour logicielles                | ✅ Pris en charge                                                                       |
 | Éteindre l'écran                        | ⚠️ Fonctionne mais aucun écran noir n'est affiché                                      |
 | LED / NFC / 4K                          | ❌ Non pris en charge                                                                   |
@@ -157,7 +157,7 @@ Utilisez **scrcpy et adb** pour installer l'application PADS4.
 
 * **Rendu de contenu dynamique :**
 
-  * Les éléments dynamiques sont rendus comme statiques **screenshots**.
+  * Les éléments dynamiques sont rendus comme des **captures d'écran**.
 
 ***
 
@@ -165,5 +165,5 @@ Utilisez **scrcpy et adb** pour installer l'application PADS4.
 
 | **Problème**                           | **Solution**                                                                                                                                                                           |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `adb devices` n'affiche pas l'appareil | Débranchez les deux extrémités USB et rebranchez. Redémarrez l'appareil en maintenant **le bouton d'alimentation \~5s**, puis reconnectez après que le voyant vert cesse de clignoter. |
-| L'appareil ne se connecte pas via USB  | Suivez les étapes de réinitialisation/débranchement ci-dessus. Effectuez une réinitialisation de l'appareil si cela n'a pas été fait précédemment.                                     |
+| `adb devices` n'affiche pas l'appareil | Débranchez les deux extrémités USB et rebranchez. Redémarrez l'appareil en maintenant le **bouton d'alimentation \~5s**, puis reconnectez après que le voyant vert cesse de clignoter. |
+| L'appareil ne se connecte pas via USB  | Suivez les étapes de réinitialisation/débranchement ci-dessus. Effectuez une réinitialisation de l'appareil si cela n'a pas été fait auparavant.                                       |
