@@ -1,4 +1,4 @@
-Ce guide vous accompagne dans la configuration de **SAML 2.0 Single Sign-On (SSO)** en utilisant **IBM Security Verify** comme fournisseur d'identité (IdP) pour **PADS4 Workspace**.
+Ce guide vous explique comment configurer **SAML 2.0 Single Sign-On (SSO)** en utilisant **IBM Security Verify** comme fournisseur d'identité (IdP) pour **PADS4 Workspace**.
 
 ***
 
@@ -20,55 +20,57 @@ Assurez-vous que les éléments suivants sont prêts :
 
 **Directory > Applications > Add Application > Custom Application**
 
-### Sous le **Sign-on** tab:
+### Sous **Sign-on** tab:
 
 | Champ                              | Valeur                                                |
 | ---------------------------------- | ----------------------------------------------------- |
-| **Méthode de connexion**           | `SAML 2.0`                                            |
+| **Sign-on method**                 | `SAML 2.0`                                            |
 | **Provider ID**                    | `https://pads4serverurl/crystal/domainone/Saml2`      |
 | **Assertion Consumer Service URL** | `https://dpads4serverurl/crystal/domainone/Saml2/ACS` |
 | **Service Provider SSO URL**       | `https://pads4serverurl/crystal/domainone/Saml2/ACS`  |
 | **SessionNotOnOrAfter**            | `7200` (2 heures)                                     |
 
-<Warning>Ne PAS sélectionner "Use Identity provider-initiated single sign-on</Warning>
+<Warning>
+  Ne PAS sélectionner "Use Identity provider-initiated single sign-on
+</Warning>
 
 ***
 
 ### Paramètres de signature
 
-| Champ                                                 | Valeur                                     |
-| ----------------------------------------------------- | ------------------------------------------ |
-| **Signer la réponse d'authentification**              | Activé                                     |
-| **Algorithme de signature**                           | RSA-SHA256                                 |
-| **Certificat de signature**                           | Choisir le certificat personnel par défaut |
-| **Valider la signature de la requête SAML**           | Activé                                     |
-| **Valider la signature de la requête de déconnexion** | Activé                                     |
-| **Valider la signature de la réponse de déconnexion** | Activé                                     |
+| Champ                                  | Valeur                               |
+| -------------------------------------- | ------------------------------------ |
+| **Sign authentication response**       | Activé                               |
+| **Signature Algorithm**                | RSA-SHA256                           |
+| **Signing Certificate**                | Choisir Default personal certificate |
+| **Validate SAML request signature**    | Activé                               |
+| **Validate logout request signature**  | Activé                               |
+| **Validate logout response signature** | Activé                               |
 
-Laissez **Service Provider Certificate** et **Encryption Options** vides sauf si le chiffrement est requis par votre organisation.
+Laissez **Service Provider Certificate** et **Encryption Options** vides, sauf si le chiffrement est requis par votre organisation.
 
 ***
 
-### Sujet SAML
+### SAML Subject
 
 | Champ               | Valeur               |
 | ------------------- | -------------------- |
-| **Format NameID**   | `Unspecified`        |
+| **NameID Format**   | `Unspecified`        |
 | **Name Identifier** | `preferred_username` |
 
 ***
 
 ### Mappage d'attributs
 
-Enable: ☑ **Envoyer tous les attributs utilisateur connus dans l'assertion SAML**
+Enable: ☑ **Send all known user attributes in the SAML assertion**
 
-| Nom d'attribut (URN)                                      | Format | Source        |
-| --------------------------------------------------------- | ------ | ------------- |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:email`       | email  | `email`       |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:family_name` | text   | `family_name` |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:given_name`  | text   | `given_name`  |
-| `urn:oasis:names:tc:SAML:2.0:attrname-format:uid`         | text   | `uid`         |
-| `http://schemas.xmlsoap.org/claims/group`                 | text   | `groupIDs`    |
+| **Attribute name**                                                                                                                        | **Attribute Name format (URN)**                            | **Format** | **Attribute source** |
+| :---------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------- | :--------- | :------------------- |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/email)     | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified`  | email      | `email`              |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/familyname)**surname** | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `family_name`        |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname)    | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `given_name`         |
+| [**http://schemas.microsoft.com/identity/claims/**](http://schemas.microsoft.com/identity/claims/uid)**objectidentifier**                 | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `uid`                |
+| [**http://schemas.xmlsoap.org/claims/group**](http://schemas.xmlsoap.org/claims/group)                                                    | `urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified ` | text       | `groupIDs`           |
 
 > Ces attributs seront mappés dans PADS4 pour attribuer des rôles/groupes.
 
@@ -77,7 +79,7 @@ Enable: ☑ **Envoyer tous les attributs utilisateur connus dans l'assertion SAM
 ### Politique d'accès
 
 * Définir sur : ☑ **Use default policy**
-* Autoriser depuis : `All devices`
+* Allow from: `All devices`
 
 ***
 
@@ -102,11 +104,11 @@ Dans le **PADS4 Administration Portal**, configurez le plugin SSO comme suit :
 
 Allez à la section **Relation Table** du plugin SSO et mappez les `groupIDs` entrants d'IBM aux profils PADS4 :
 
-| ID de groupe Active Directory | Profil         |
-| ----------------------------- | -------------- |
-| `admin`                       | Administration |
-| `admin`                       | Default        |
-| `developer`                   | Default        |
+| Active Directory Group ID | Profile        |
+| ------------------------- | -------------- |
+| `admin`                   | Administration |
+| `admin`                   | Default        |
+| `developer`               | Default        |
 
 ***
 

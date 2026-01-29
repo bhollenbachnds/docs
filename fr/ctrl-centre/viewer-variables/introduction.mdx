@@ -1,44 +1,44 @@
-Les variables de visualisation, également connues sous le nom de **Dynamic Filtering**, vous permettent de créer un **contenu d'affichage dynamique intelligent et efficace**. Au lieu de concevoir plusieurs présentations pour différents visualiseurs, vous pouvez utiliser les variables de visualisation pour adapter automatiquement le contenu en fonction de valeurs prédéfinies.
+Variables Viewer, également connues sous le nom de **Filtrage Dynamique**, vous permettent de créer **un contenu d'affichage dynamique intelligent et efficace**. Au lieu de concevoir plusieurs présentations pour différents viewers, vous pouvez utiliser les Variables Viewer pour adapter automatiquement le contenu en fonction de valeurs prédéfinies.
 
 ***
 
 ## **Exemple de salle de réunion**
 
-Imaginez la gestion de 50 panneaux de porte de salle de réunion dans votre réseau d'affichage dynamique. Chaque panneau affiche un numéro de salle unique. Traditionnellement, vous auriez besoin de 50 présentations distinctes.
+Imaginez que vous gérez 50 panneaux de porte de salle de réunion dans votre réseau d'affichage dynamique. Chaque panneau affiche un numéro de salle unique. Traditionnellement, vous auriez besoin de 50 présentations distinctes.
 
-Avec les variables de visualisation, vous concevez une seule présentation et laissez le système insérer dynamiquement le numéro de salle correct pour chaque écran.
+Avec les Variables Viewer, vous concevez une seule présentation et laissez le système insérer dynamiquement le numéro de salle correct pour chaque écran.
 
 ***
 
-## **Création d'une variable de visualisation**
+## **Création d'une Variable Viewer**
 
 ### **Steps:**
 
 1. Ouvrez PADS4 CTRL Center.
 2. Allez dans la catégorie de menu **Viewers**.
 3. Sélectionnez **Variables** dans la section qui s'ouvre.
-4. Créez une nouvelle variable de visualisation :
+4. Créez une nouvelle Variable Viewer :
    * Entrez un nom, par exemple, **MeetingRoomName**.
    * Cliquez sur **Create** pour ajouter la variable.
 5. Maintenant, chaque **Viewer** peut avoir sa propre valeur unique pour **MeetingRoomName**.
 
 ***
 
-## **Conception d'une présentation avec des variables de visualisation**
+## **Conception d'une présentation avec des Variables Viewer**
 
 1. Créez un champ de texte dans PADS4 Designer.
-2. Insérez la variable de visualisation comme **#MeetingRoomName#**.
-3. Planifiez la présentation pour vos visualiseurs.
+2. Insérez la Variable Viewer comme **#MeetingRoomName#**.
+3. Planifiez la présentation pour vos Viewers.
 
-Chaque visualiseur affichera son **Meeting Room Name** attribué sans nécessiter de présentations séparées.
+Chaque Viewer affichera son **Meeting Room Name** attribué sans nécessiter de présentations séparées.
 
 ***
 
 ## **Adaptation dynamique du contenu**
 
-Les variables de visualisation ne se limitent pas aux numéros de salle. Vous pouvez les utiliser pour :
+Les Variables Viewer ne se limitent pas aux numéros de salle. Vous pouvez les utiliser pour :
 
-* Données basées sur la localisation
+* Données basées sur l'emplacement
 * Panneaux directionnels
 * Adresses IP
 * Heures d'ouverture
@@ -62,15 +62,15 @@ Cela garantit que la requête filtre dynamiquement les données en fonction de l
 * Requêtes SQL dans les fournisseurs de données
 * Éléments de playlist pour la rotation dynamique du contenu
 
-Viewer Variables**ne peuvent pas** être utilisées dans les champs de mot de passe.
+Les Variables Viewer **ne peuvent pas** être utilisées dans les champs de mot de passe.
 
 ***
 
 ## **Comment fonctionnent les Variables Viewer**
 
-PADS4 analyse automatiquement tous les textes pour détecter les Variables Viewer (formatées comme `#VariableName#`) et les remplace par les valeurs assignées.
+PADS4 analyse automatiquement tout le texte pour les Variables Viewer (formatées comme `#VariableName#`) et les remplace par les valeurs assignées.
 
-Si un **nom de salle de réunion** change, il suffit de mettre à jour la valeur dans **Viewer Variables**—il n'est pas nécessaire de modifier la présentation.
+Si un **meeting room name** change, il suffit de mettre à jour la valeur dans **Viewer Variables**—il n'est pas nécessaire de modifier la présentation.
 
 ***
 

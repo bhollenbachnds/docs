@@ -1,3 +1,7 @@
+---
+- title: Utilisateurs et rôles
+---
+
 Dans notre dernière version, 2025.1, nous introduisons notre nouveau système de gestion des utilisateurs.
 
 Ce changement fondamental déplace les paramètres de gestion des utilisateurs de l'application System Management vers le portail Web PADS4.
@@ -7,7 +11,7 @@ Avec ce changement, nous avons également introduit des Rôles pour affiner dava
 Les rôles vous permettront d'attribuer rapidement un certain ensemble de licences et d'autorisations à un utilisateur.
 
 <Warning>
-  Le nouveau système de gestion des utilisateurs n'est pas encore compatible avec Legacy CMS et Workspace
+  Le nouveau système de gestion des utilisateurs n'est pas compatible avec Legacy CMS et Workspace dans la version 2025.1 de PADS4, cela a été ajouté dans la version 2025.2 de PADS4.
 </Warning>
 
 ## Comment utiliser les rôles dans PADS4
@@ -18,91 +22,165 @@ Les rôles vous permettront d'attribuer rapidement un certain ensemble de licenc
 
 * Vous pouvez y accéder en vous connectant à votre portail Web PADS4 avec votre compte Administrateur. Allez dans le Tableau de bord, et en bas à gauche, accédez à **Users**.
 
-![Users Pn](/images/ctrl-centre/administration/user-management/Users.png)
+<img src="/images/ctrl-centre/administration/user-management/Users.png" alt="Users Pn" style={{ width:"50%" }} />
 
 * Sur le côté gauche, vous pouvez basculer entre les Utilisateurs et les Rôles
 
-![Users Overview Pn](/images/ctrl-centre/administration/user-management/Users-overview.png)
+<img src="/images/ctrl-centre/administration/user-management/Users-overview.png" alt="Users Overview Pn" style={{ width:"51%" }} />
 
 * Dans l'aperçu des utilisateurs, vous verrez les utilisateurs et leurs informations correspondantes comme :
-  * Name
-  * Username
-  * Roles
-  * License
+  * Nom
+  * Nom d'utilisateur
+  * Rôles
+  * Licence
 
 ![Single User Summary Pn](/images/ctrl-centre/administration/user-management/single-user-summary.png)
 
 * Dans la section Rôles, vous obtiendrez l'aperçu suivant des rôles disponibles, y compris les rôles par défaut, qui sont expliqués ci-dessous.
 
-![Role Overview Pn](/images/ctrl-centre/administration/user-management/role-overview.png)
+![Default Roles](/images/ctrl-centre/administration/user-management/default-roles.png)
+
+### Rechercher des utilisateurs
+
+Utilisez la fonction de recherche pour localiser rapidement des utilisateurs spécifiques dans le système. Elle recherche dans les champs clés : Nom, Nom d'utilisateur, Rôles et Licence. C'est idéal pour les administrateurs qui gèrent PADS4.
+
+**Comment rechercher**
+
+1. Entrez des mots-clés dans la zone de recherche (par exemple, "john.doe", "rôle admin" ou "groupe d'utilisateurs Cms").
+2. Les résultats se filtrent dynamiquement au fur et à mesure que vous tapez — pas besoin d'appuyer sur Entrée.
+
+**Exporter les résultats**
+
+Cliquez sur le bouton **Export** pour télécharger les résultats au format Excel. Cela élargit la vue pour l'analyse en masse ou les rapports. Les données exportées incluent toutes les colonnes visibles pour une importation facile ailleurs.
 
 ## Rôles par défaut
 
-Il y a 5 rôles par défaut :
+<Note>
+  Dans la version 2025.1 de PADS4, il existe cinq rôles par défaut, depuis la version 2025.2 de PADS4, cinq rôles supplémentaires ont été ajoutés qui sont listés plus loin dans l'article.
+</Note>
 
-### CMS Advanced users group
+### Groupe d'utilisateurs CMS Advanced
 
-| Application  | Access            | Inheritance         |
-| ------------ | ----------------- | ------------------- |
-| Web Designer | Read/Write/Delete |                     |
-| CMS          | Read              |                     |
-| Content      | Read/Write/Delete | Content users group |
+| Application  | Accès                        | Héritage                      |
+| ------------ | ---------------------------- | ----------------------------- |
+| Web Designer | Lecture/Écriture/Suppression |                               |
+| CMS          | Lecture                      |                               |
+| Content      | Lecture/Écriture/Suppression | Groupe d'utilisateurs Content |
 
-### CMS Manager group
+### Groupe CMS Manager
 
-| Application | Access            | Inheritance         |
-| ----------- | ----------------- | ------------------- |
-| CMS         | Read/Write/Delete |                     |
-| Users       | Read/Write/Delete |                     |
-| Content     | Read/Write/Delete | Content users group |
+| Application | Accès                        | Héritage                      |
+| ----------- | ---------------------------- | ----------------------------- |
+| CMS         | Lecture/Écriture/Suppression |                               |
+| Users       | Lecture/Écriture/Suppression |                               |
+| Content     | Lecture/Écriture/Suppression | Groupe d'utilisateurs Content |
 
-### CMS User group
+### Groupe d'utilisateurs CMS
 
-| Application | Access            | Inheritance         |
-| ----------- | ----------------- | ------------------- |
-| CMS         | Read              |                     |
-| Content     | Read/Write/Delete | Content users group |
+| Application | Accès                        | Héritage                         |
+| ----------- | ---------------------------- | -------------------------------- |
+| CMS         | Lecture                      |                                  |
+| Contenu     | Lecture/Écriture/Suppression | Groupe d'utilisateurs de contenu |
 
-### Content Managers group
+### Groupe de gestionnaires de contenu
 
-| Application | Access                   | Inheritance |
-| ----------- | ------------------------ | ----------- |
-| Content     | Read/Write/Delete/Modify |             |
+| Application | Accès                                     | Héritage |
+| ----------- | ----------------------------------------- | -------- |
+| Contenu     | Lecture/Écriture/Suppression/Modification |          |
 
-### Content User group
+### Groupe d'utilisateurs de contenu
 
-| Application | Access            | Inheritance |
-| ----------- | ----------------- | ----------- |
-| Content     | Read/Write/Delete |             |
+| Application | Accès                        | Héritage |
+| ----------- | ---------------------------- | -------- |
+| Contenu     | Lecture/Écriture/Suppression |          |
+
+<Note>
+  Avec la sortie de PADS4 version 2025.2, les rôles par défaut ci-dessous ont été ajoutés.
+</Note>
+
+<Danger>
+  Notez que les rôles de visualiseur nécessitent une licence Agent ou System Management (uniquement pour le statut hors ligne / la suppression des visualiseurs) pour être efficaces en dehors de CMS2.0, car les rôles servent uniquement à définir les permissions une fois que l'accès a été accordé par la licence attribuée à l'utilisateur.
+
+  Vous pouvez choisir d'ajuster les rôles de visualiseur par défaut pour ajouter automatiquement cette licence à l'utilisateur auquel ce rôle est attribué.
+</Danger>
+
+### Groupe de gestionnaires de visualiseurs
+
+| Application        | Accès            | Héritage |
+| ------------------ | ---------------- | -------- |
+| Visualiseurs       | Lecture/Écriture |          |
+| **Restrictions**   |                  |          |
+| Aucune restriction |                  |          |
+
+### Groupe d'observateurs de visualiseurs
+
+| Application                                               | Accès   | Héritage |
+| --------------------------------------------------------- | ------- | -------- |
+| Visualiseurs                                              | Lecture |          |
+| **Restrictions**                                          |         |          |
+| Impossible de redémarrer / réinitialiser les visualiseurs |         |          |
+| Impossible de modifier les permissions d'accès            |         |          |
+| Impossible de modifier les paramètres des visualiseurs    |         |          |
+
+### Groupe d'utilisateurs de visualiseurs
+
+| Application                                            | Accès            | Héritage |
+| ------------------------------------------------------ | ---------------- | -------- |
+| Visualiseurs                                           | Lecture/Écriture |          |
+| **Restrictions**                                       |                  |          |
+| Impossible de modifier les permissions d'accès         |                  |          |
+| Impossible de modifier les paramètres des visualiseurs |                  |          |
+
+### Groupe d'utilisateurs d'espace de travail
+
+| Application       | Accès            | Héritage |
+| ----------------- | ---------------- | -------- |
+| Espace de travail | Lecture/Écriture |          |
+
+### Groupe d'administrateurs CMS 1.0
+
+| Application | Accès            | Héritage |
+| ----------- | ---------------- | -------- |
+| CMS 1.0     | Lecture/Écriture |          |
 
 ## Personnalisation des rôles
 
 * Vous pouvez modifier ces rôles selon votre configuration préférée, ou vous pouvez créer vos propres rôles où vous pouvez spécifier d'autres rôles dont il est membre, ou attribuer certaines licences.
 
-![New Roles Pn](/images/ctrl-centre/administration/user-management/new-roles.png)
+<img src="/images/ctrl-centre/administration/user-management/new-roles.png" alt="New Roles Pn" style={{ width:"65%" }} />
 
-![Create Role Pn](/images/ctrl-centre/administration/user-management/create-role.png)
+<img src="/images/ctrl-centre/administration/user-management/create-role.png" alt="Create Role Pn" style={{ width:"78%" }} />
 
 * Avec ces rôles ou les rôles que vous avez créés, vous pouvez ensuite préciser davantage l'accès que vous accordez aux utilisateurs ayant un certain rôle aux applications disponibles dans le portail Web PADS4.
 
-### Content library
+### Bibliothèque de contenu
 
-* Faites un clic droit sur le dossier pour lequel vous souhaitez modifier/examiner l'accès et appuyez sur **"Edit access"**
+* Faites un clic droit sur le dossier pour lequel vous souhaitez modifier/examiner l'accès et appuyez sur **"Modifier l'accès"**
 
-![Content Access Pn](/images/ctrl-centre/administration/user-management/content-access.png)
+<img src="/images/ctrl-centre/administration/user-management/content-access.png" alt="Content Access Pn" style={{ width:"71%" }} />
 
 * Un aperçu des rôles et des utilisateurs avec leurs droits sur ce dossier particulier s'affichera et vous permettra d'ajouter ou de supprimer des rôles et des utilisateurs.
 
 ![Content Access 2 Pn](/images/ctrl-centre/administration/user-management/content-access-2.png)
 
-### Catégories du Web designer
+### Catégories du concepteur Web
 
-* Cliquez sur les 3 points à droite de votre catégorie et cliquez sur **"Edit access"**
+* Cliquez sur les 3 points à droite de votre catégorie et cliquez sur **"Modifier l'accès"**
 
-![Webdesigner Category Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png)
+<img src="/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png" alt="Webdesigner Category Access Pn" style={{ width:"57%" }} />
 
-### Modèles du Web designer
+### Modèles du concepteur Web
 
-* Passez votre souris sur un modèle et cliquez sur les trois points, cliquez sur **"Edit access"**
+* Passez votre souris sur un modèle et cliquez sur les trois points, cliquez sur **"Modifier l'accès"**
 
 ![Webdesigner Template Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-template-access.png)
+
+### Visualiseurs et groupes de visualiseurs
+
+* En vue arborescente, faites un clic droit sur le groupe de visualiseurs et cliquez sur **"Modifier l'accès"**
+
+<img src="/images/ctrl-centre/administration/user-management/treeview-perm.png" alt="Treeview Perm" style={{ width:"61%" }} />
+
+* En vue détaillée, passez votre souris sur le groupe de visualiseurs ou le visualiseur et appuyez sur les trois points pour "**Modifier l'accès"**.
+
+<img src="/images/ctrl-centre/administration/user-management/detailviewer-perm.png" alt="Detailviewer Perm" style={{ width:"65%" }} />

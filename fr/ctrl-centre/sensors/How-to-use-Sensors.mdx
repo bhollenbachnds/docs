@@ -1,0 +1,84 @@
+PADS4 vous permet d'intégrer **caméras, logiciels de gestion de caméras et autres dispositifs de capteurs** pour collecter et traiter des données en temps réel. Ces capteurs fournissent **audience measurement**, **facial recognition**, **people counting**, et **environmental monitoring** capacités.
+
+Pour une liste de **certified sensors**, consultez la **Certified Sensors Page**.
+
+***
+
+## **Aperçu**
+
+La section **Sensors Overview** affiche tous les capteurs ajoutés. Un **green dot** indique que PADS4 a une **active connection** au capteur.
+
+### **Ajout d'un nouveau capteur**
+
+Pour ajouter un nouveau capteur, suivez ces étapes :
+
+1. **Accédez à la Sensors Overview Page** dans PADS4.
+2. **Cliquez sur le bouton "New"** dans l'en-tête.
+3. **Sélectionnez le Sensor Type** – Caméra ou Logiciel de gestion de capteurs.
+4. **Spécifiez le Model/Type** de l'appareil.
+5. **Ajoutez éventuellement une Description & Location** pour aider à identifier le capteur.
+6. **Saisissez les Credentials and Hostname** où se trouve le capteur.
+7. **Enregistrez la Configuration** – PADS4 tentera d'établir une connexion.
+
+***
+
+## **Regroupement des capteurs en zones**
+
+Une **Area** est un regroupement logique de capteurs. Cela permet une **aggregated data collection and analysis**.
+
+### **People Counting**
+
+* Si plusieurs **people-counting cameras** sont dans une Area, leurs données sont **combined**.
+* Utile pour **tracking total occupancy** lorsqu'il y a plusieurs points d'entrée.
+
+### **Création d'une nouvelle zone**
+
+1. **Accédez à la Areas Page** dans PADS4.
+2. **Cliquez sur "New"** dans l'en-tête.
+3. **Saisissez un Area Name** et une description (facultative).
+4. **Sélectionnez les Sensors** qui appartiennent à cette zone.
+5. **Attribuez des Rules** pour automatiser la détection d'incidents.
+6. **Enregistrez la Configuration**.
+
+***
+
+## **Définition des règles d'incident**
+
+Les règles définissent **what conditions trigger an incident**, permettant des réponses automatisées.
+
+### **Règles disponibles**
+
+| **Rule**                 | **Description**                                                                                                                           |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **No Facemask**          | Détecte si une personne **not wearing a facemask** et déclenche un incident.                                                              |
+| **Maximum People Count** | Définit une **maximum occupancy** pour une zone. Si dépassée, un incident est créé.                                                       |
+| **Maximum Temperature**  | Surveille la température corporelle. Si **exceeding a set threshold** (par exemple, 36,5°C), un incident est déclenché.                   |
+| **Milestone Alarms**     | Utilise les **Milestone VMS** alarmes pour détecter les problèmes de sécurité ou de sûreté. Les alarmes peuvent déclencher des incidents. |
+
+> **Note:** Le réglage de la température doit correspondre à l'unité configurée de la caméra (**Celsius or Fahrenheit**).
+
+***
+
+## **Gestion des incidents**
+
+Les incidents sont générés lorsque **rules are triggered**. Vous pouvez gérer les incidents dans le **PADS4 CTRL Center**.
+
+Pour plus de détails, consultez la **How to Use Incidents Page**.
+
+***
+
+## **Utilisation des données de capteurs dans PADS4 Designer**
+
+PADS4 Designer vous permet d'intégrer des **sensor data** dans les présentations.
+
+### **Options d'utilisation des données**
+
+* **Real-time camera events** pour des présentations interactives.
+* **Aggregated area data** pour l'analyse d'audience.
+* **Incident alerts** affichées sur la signalisation pour une réponse immédiate.
+
+***
+
+## **Conclusion**
+
+L'intégration de capteurs de **sensor integration** de PADS4 permet **real-time monitoring, automated rule-based alerts, and interactive digital signage**. En **configuring sensors and defining rules**, les entreprises peuvent améliorer **security, audience engagement, and operational efficiency**.
