@@ -383,9 +383,14 @@
               {
                 "group": "PADS4 CMS and Designer",
                 "pages": [
+                  {
+                    "group": "User Interface Designer",
+                    "pages": [
+                      "en/digital-signage/pads-4-cms-and-designer/user-interface-designer/untitled-page"
+                    ]
+                  },
                   "modules/digital-signage/cms/introduction",
                   "modules/digital-signage/cms/homepage",
-                  "modules/digital-signage/cms/create-a-template",
                   "modules/digital-signage/cms/categories",
                   "en/digital-signage/pads-4-web-designer/templates",
                   "modules/digital-signage/cms/publish-a-message",
