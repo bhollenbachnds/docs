@@ -383,7 +383,8 @@
               {
                 "group": "PADS4 Web Designer",
                 "pages": [
-                  "modules/digital-signage/web-designer/introduction"
+                  "en/digital-signage/pads-4-web-designer/categories",
+                  "en/digital-signage/pads-4-web-designer/templates"
                 ]
               },
               {
@@ -1074,8 +1075,7 @@
                         ]
                       }
                     ]
-                  },
-                  "modules/digital-signage/licenses"
+                  }
                 ]
               },
               {
