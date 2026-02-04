@@ -1,6 +1,14 @@
 # Aperçu des plugins
 
-La section **Plugins** vous permet de configurer des intégrations système essentielles qui améliorent les fonctionnalités des modules PADS4 Workspace et CMS. Voici un aperçu des options de plugins disponibles et de leurs objectifs.
+<Warning>
+  Depuis la version 2025.2 de PADS4, les configurations de plugins suivantes ont été déplacées vers la section Credentials and Config dans le portail Web PADS4 pour fournir un système de gestion des utilisateurs cohérent dans un environnement unique.
+
+  * [LDAP(s)](https://docs.pads4.com/ctrl-centre/administration/credentials/active-directory)
+  * SMTP
+  * [SSO](https://docs.pads4.com/ctrl-centre/administration/microsoft-entra-id)
+</Warning>
+
+La section **Plugins** vous permet de configurer des intégrations système essentielles qui améliorent la fonctionnalité des modules PADS4 Workspace et CMS 1.0. Voici un aperçu des options de plugins disponibles et de leurs objectifs.
 
 ***
 
@@ -8,16 +16,22 @@ La section **Plugins** vous permet de configurer des intégrations système esse
 
 Utilisez ce plugin pour connecter un serveur **Active Directory (LDAP)** à votre environnement PADS4.
 
-![Active Directory Settings](/mnt/data/image.png)
+![LDAP CMS 1 0](/images/modules/workspace/workspace-cms-admin/LDAP-CMS-1.0.png)
 
-* Saisissez votre **serveur LDAP**, **nom d'utilisateur** et **mot de passe** pour établir une connexion sécurisée.
-* Une fois connecté, vous pouvez importer des utilisateurs depuis Active Directory directement via l'onglet **Utilisateurs** dans chaque module.
+* Entrez votre **LDAP server**, **username**, et **password** pour établir une connexion sécurisée.
+
+  <Info>
+    L'adresse du serveur LDAP doit avoir le format suivant : **LDAP://**\<servername>
+  </Info>
+* Une fois connecté, vous pouvez importer des utilisateurs depuis Active Directory directement via l'onglet **Users** dans chaque module.
 
 ***
 
 ## SMTP
 
-Cette section vous permet de configurer les identifiants du serveur **SMTP (Simple Mail Transfer Protocol)** pour permettre à la plateforme d'envoyer:
+![SMTP CMS 1 0](/images/modules/workspace/workspace-cms-admin/SMTP-CMS-1.0.png)
+
+Cette section vous permet de configurer les informations d'identification du serveur **SMTP (Simple Mail Transfer Protocol)** pour permettre à la plateforme d'envoyer :
 
 * **Alertes par e-mail**
 * **Rapports automatisés**
@@ -26,30 +40,52 @@ Vous devez spécifier l'adresse e-mail qui sera utilisée comme expéditeur au n
 
 ***
 
-## Authentification unique (SSO)
+## Single Sign-On (SSO)
 
-Configurez une connexion à:
+![SSO CMS 1 0](/images/modules/workspace/workspace-cms-admin/SSO-CMS-1.0.png)
+
+Configurez une connexion à :
 
 * **Azure Active Directory**
 * **Active Directory Federation Services (ADFS)**
 
-Cela active les fonctionnalités d'**Authentification unique (SSO)**, permettant aux utilisateurs de s'authentifier à l'aide de leurs identifiants Windows.
+Cela active **Single Sign-On (SSO)** capacités, permettant aux utilisateurs de s'authentifier à l'aide de leurs identifiants Windows.
 
 > **Note:** Vous devrez créer et configurer les groupes appropriés au sein de votre fournisseur d'identité pour gérer efficacement les autorisations d'accès.
 
 ***
 
-## Intégration du calendrier
+## Intégration du Calendrier
 
-Ce plugin relie le module **PADS4 Workspace** au système de calendrier de votre organisation. Cela permet au système de:
+![Calendar CMS 1 0](/images/modules/workspace/workspace-cms-admin/Calendar-CMS-1.0.png)
 
-* Récupérer les **informations de réunions et de réservation de ressources**
-* Afficher en temps réel la **disponibilité du calendrier**
+Ce plugin relie le **PADS4 Workspace** module au système de calendrier de votre organisation. Cela permet au système de :
+
+* Récupérer **les informations de réunion et de réservation de ressources**
+* Afficher en temps réel **la disponibilité du calendrier**
 * Importer des ressources telles que les salles de réunion et les espaces partagés
 
-### Systèmes de calendrier pris en charge:
+### Systèmes de Calendrier Pris en Charge :
 
 * Microsoft Exchange 365
 * Microsoft Exchange On-Premises
 * Google Calendar
 * iPorta Calendar
+
+## Paramètre d'application Workspace
+
+Ce plugin est utilisé pour configurer les paramètres par défaut de PADS4 Workspace.
+
+![Workspace Defaults](/images/modules/workspace-cms-admin/WorkspaceDefaults.png)
+
+### Paramètre de création d'événement
+
+Activer par défaut les réunions en ligne Microsoft Teams automatiques. Disponible uniquement pour les salles intégrées à Exchange.
+
+### Paramètres de confidentialité
+
+Ce paramètre configure les options de confidentialité globales pour les réservations dans PADS4 Workspace, permettant de contrôler la visibilité du nom de l'organisateur et d'activer la fonctionnalité "Rechercher un collègue".
+
+### Paramètres de Notification par Défaut
+
+Ce paramètre configure les préférences de notification globales dans PADS4 Workspace, où vous pouvez activer/désactiver les notifications, définir le timing et activer les rappels pour les participants aux réunions.

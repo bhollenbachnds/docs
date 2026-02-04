@@ -1,10 +1,14 @@
 Ce manuel ne peut être suivi que si vous avez configuré SSO dans votre environnement Azure / Entra ID. Vous pouvez suivre cet article pour le faire : **Single Sign On (Azure)**
 
-Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4 CMS peut être configuré pour utiliser SSO.
+Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4CMS peut être configuré pour utiliser SSO.
+
+<Warning>
+  À partir de PADS4 2025.2, cette fonctionnalité fait partie de PADS4 CTRL Center. Pour plus d'informations, voir CTRL Center > Administration > Identity.
+</Warning>
 
 ## Important :
 
-Pour que SSO fonctionne correctement, PADS4 doit être configuré avec l'utilisation de HTTPS. Pour y parvenir, vous devez suivre ce guide en utilisant un certificat SSL.
+Pour que SSO fonctionne correctement, PADS4 doit être configuré avec HTTPS. Pour y parvenir, vous devez suivre ce guide en utilisant un certificat SSL.
 
 ## Étape 1 : Accédez à votre instance PADS4 CMS dans un navigateur
 
@@ -18,7 +22,7 @@ Activez le plugin en haut à **droite**, à côté de **"Type"**, sélectionnez 
 
 ![Pluging Type Azure AD Pn](/images/Pluging-Type-AzureAD.png)
 
-## Étape 3 : Insérez les informations obtenues dans la section précédente
+## Étape 3 : Insérez les informations obtenues de la section précédente
 
 | Connu dans Azure Active Directory | Connu dans PADS4                            |
 | --------------------------------- | ------------------------------------------- |
@@ -31,7 +35,7 @@ Activez le plugin en haut à **droite**, à côté de **"Type"**, sélectionnez 
 
 ### Important :
 
-La chaîne copiée pour **" URL of the relying party "** dans la configuration SSO du CMS ne doit pas contenir\*\*" /Saml "\*\* comme copié depuis Azure mais plutôt seulement\*\*" /crystal/pads "\*\* .
+La chaîne copiée pour **" URL of the relying party "** dans la configuration CMS SSO ne doit pas contenir\*\*" /Saml "\*\* comme copié depuis Azure mais plutôt seulement\*\*" /crystal/pads "\*\* .
 
 (Où "pads" est le domaine par défaut) Exemple : Le lien copié d'Azure ressemble à ceci :
 
@@ -47,7 +51,7 @@ Téléchargez le certificat d'application (Raw) que vous avez téléchargé depu
 
 ![Certificate Raw Pn](/images/CertificateRaw.png)
 
-Pour le **"relying party signing certificate"**, nous vous suggérons d'utiliser le certificat que vous utilisez pour votre configuration HTTPS. "Convertissez ce certificat en .pfx. "
+Pour le **"relying party signing certificate"**, nous suggérons d'utiliser le certificat que vous utilisez pour votre configuration HTTPS. "Convertissez ce certificat en .pfx. "
 
 ### La section ci-dessous est l'endroit où le certificat et la clé privée doivent être configurés.
 
