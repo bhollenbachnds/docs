@@ -1,5 +1,9 @@
 The below process helps you configure your PADS4 CMS installation touse Azure SSO.
 
+<Warning>
+  From PADS4 2025.2 onward, this feature is part of PADS4 CTRL Center. For more information, see CTRL Center \> Administration \> Identity.
+</Warning>
+
 ## Azure settings
 
 It is necessary to configure the Azure instance to allow users within yourorganization to access the PADS4 (Legacy) CMS application. To enable this, please follow the steps in this document :
@@ -24,9 +28,9 @@ https://portal.azure.com/
   If you \*\*<u>do</u> \*\*want to use an Application Proxy for your on-premise application then proceed to step 7 and skip steps 4, 5 and 6.
 </Warning>
 
-## Step 4 : Select the "\+ New application" option at the top of the screen
+## Step 4 : Select the "+ New application" option at the top of the screen
 
-![Step4\+newapplication Pn](/images/step4+newapplication.png)
+![Step4+newapplication Pn](/images/step4+newapplication.png)
 
 ## Step 5 : Click on "Create you own application"
 
@@ -46,7 +50,7 @@ Select the **Manage Application Proxy Connectors** **section**
 
 ![Step7 Pn](/images/step7.png)
 
-1. In the Application Proxy menu, Select the \+ Download ConnectorService
+1. In the Application Proxy menu, Select the + Download ConnectorService
 2. Agree to the terms and download the **<u>AADApplicationProxyConnectorInstaller.exe</u>** file to the server PC.
 3. Run the installer and make sure to validate your Azure Administratorcredentials during the setup.
 
