@@ -47,6 +47,7 @@
               {
                 "group": "Upgrade Information",
                 "pages": [
+                  "upgrade-info/upgrading-to-pads-4-2025-2",
                   "upgrade-info/Upgrading-to-PADS4-2025.1"
                 ]
               },
