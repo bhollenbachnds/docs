@@ -1,0 +1,133 @@
+Les&#x20;
+**propriétés de ligne** définissent la&#x20;
+**mise en page et les données en temps réel** affichées dans chaque ligne de l'
+**élément de tableau**. Le tableau&#x20;
+**répète automatiquement** cette ligne autant de fois que nécessaire pour remplir le&#x20;
+**corps du tableau**.
+
+
+***
+
+## **Modification du contenu des lignes**
+
+1. Cliquez sur&#x20;
+   **Edit** pour ouvrir la fenêtre&#x20;
+   **Edit Row**.
+
+2. Concevez la&#x20;
+   **mise en page de la ligne** en ajoutant des&#x20;
+   **éléments de page** et en définissant leurs propriétés.
+
+3. Cliquez sur&#x20;
+   **Close** dans le&#x20;
+   **menu Fichier**.
+
+4. Cliquez sur&#x20;
+   **Yes** pour confirmer et&#x20;
+   **enregistrer les modifications**.
+
+5. Cliquez sur&#x20;
+   **OK** ou&#x20;
+   **Apply** dans la fenêtre des&#x20;
+   **propriétés du tableau** pour appliquer les modifications.
+
+
+***
+
+## **Conception et mise en page des lignes**
+
+* Comme pour la&#x20;
+  **conception d'une page standard**, vous pouvez ajouter&#x20;
+  **n'importe quel type d'élément de page** (sauf un autre élément de tableau).
+
+* Les éléments peuvent être disposés sur une&#x20;
+  **seule ligne** ou&#x20;
+  **plusieurs lignes** pour créer des&#x20;
+  **lignes multi-lignes**.
+
+* Les éléments peuvent être&#x20;
+  **liés à une source de données** pour des&#x20;
+  **mises à jour de données en temps réel**.
+
+
+### **Affichage des données et défilement**
+
+* **Connecté à une source de données :**
+  * **Chaque élément de ligne** extrait des&#x20;
+    **données en temps réel** d'un&#x20;
+    **fournisseur de données**.
+
+  * La&#x20;
+    **propriété Row** doit être définie sur&#x20;
+    **1** pour la première ligne (augmente automatiquement pour les lignes supplémentaires).
+
+
+* **Non connecté à une source de données :**
+  * Affiche le&#x20;
+    **même contenu dans toutes les lignes**.
+
+
+* **Support de défilement :**
+  * Si&#x20;
+    **plus de données sont disponibles** que ce qui peut tenir, le tableau va&#x20;
+    **défiler** pour afficher toutes les données.
+
+  * Pour activer le défilement, activez le&#x20;
+    **défilement des données** pour chaque&#x20;
+    **élément de ligne défilant**.
+
+  * Utilisez&#x20;
+    **"Don't Scroll the First X Rows"** pour garder&#x20;
+    **certaines lignes statiques**.
+
+
+### **Utilisation de plusieurs fournisseurs de données**
+
+* Une ligne&#x20;
+  **peut inclure plusieurs fournisseurs de données**.
+
+* Sachez que&#x20;
+  **la propriété Row de chaque élément** augmentera pour les lignes supplémentaires.
+
+
+***
+
+## **Hauteur de ligne et ajustement automatique**
+
+| **Réglage de la hauteur**  | **Comportement**                                                                                                        |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Hauteur fixe**           | La hauteur de ligne reste &#xA;**constante**.&#xA;                                                                      |
+| **Ajustement automatique** | Le &#xA;**système ajuste la hauteur de ligne** si un élément devient &#xA;**invisible** ou &#xA;**redimensionné**.&#xA; |
+
+* Le&#x20;
+  **élément le plus bas** contrôles **ajustement de la hauteur de ligne**.
+* Si un élément **disparaît** ou **rétrécit**, la **hauteur de ligne se réduit automatiquement**.
+
+***
+
+## **Fonctionnalités avancées des lignes**
+
+### **Regroupement des lignes**
+
+* Regrouper **les éléments de données associés** ensemble.
+* Utile pour **les tableaux basés sur des catégories** ou **triés** tableaux.
+
+### **Affichage des lignes multi-lignes**
+
+* Example: At an **airport**, la première ligne affiche **les détails du vol**, et la deuxième ligne affiche **les informations d'itinéraire**.
+* Si **aucune information d'itinéraire n'existe**, la **deuxième ligne disparaît**, et la **hauteur de ligne s'ajuste automatiquement**.
+
+### **Liaisons de propriétés et numéros de ligne calculés**
+
+* Lors de l'utilisation de **liaisons de propriétés**, activez **le défilement** pour permettre à la **liaison de s'ajuster dynamiquement** au numéro de ligne correct.
+* Pendant **l'exécution**, le **numéro de ligne initial** sera utilisé, et le **système calcule les numéros de ligne supplémentaires** au fur et à mesure que le tableau **se rafraîchit**.
+
+***
+
+## **Meilleures pratiques et conseils**
+
+* **Activez le défilement** pour les éléments pilotés par les données afin de **afficher dynamiquement toutes les informations**.
+* **Utilisez le regroupement** pour catégoriser les données pour une **meilleure lisibilité**.
+* **Définissez l'ajustement automatique de la hauteur** pour **éviter les espaces vides** lorsque du contenu est manquant.
+* **Pour les éléments de ligne dynamiques**, utilisez **des règles** pour **afficher/masquer le contenu en fonction de la disponibilité des données**.
+* **Utilisez les liaisons de propriétés** pour **ajuster automatiquement les numéros de ligne** lors du défilement.

@@ -1,0 +1,36 @@
+# Changements dans la synchronisation avec PADS4 version 2021.3
+
+Avec l'introduction de **PADS4 version 2021.3**, le **mécanisme de synchronisation** entre les serveurs PADS4 a été mis à jour. Ce changement peut avoir un impact sur les installations existantes où **PADS4 Sub et/ou Backup Servers** sont utilisés.
+
+***
+
+## Nouveau mécanisme de réplication dans PADS4 version 2021.3
+
+Dans les versions précédentes de PADS4, la réplication suivait un **modèle de connexion unidirectionnelle**, où le **Sub/Backup Server** initiait une connexion au **Main Server** pour la synchronisation.
+
+À partir de **PADS4 version 2021.3**, le processus de réplication a été amélioré. Le **Main Server** et les **Sub/Backup Servers** peuvent désormais tous deux **initier** la connexion, permettant un processus de synchronisation plus **flexible et résilient**.
+
+Cette mise à jour introduit une **exigence réseau** clé :
+
+* Un **port hôte** doit être **ouvert** dans le pare-feu pour la communication entre les serveurs.
+* Les **Main Servers** et les **Sub/Backup Servers** doivent pouvoir établir une **connexion bidirectionnelle** pour que la réplication fonctionne correctement.
+
+***
+
+## Exigences de configuration du pare-feu
+
+À partir de **PADS4 version 2021.3**, la réplication entre serveurs **nécessite** that:
+
+* Le **Main Server** doit pouvoir initier une connexion avec le **Sub/Backup Server**.
+* Le **Sub/Backup Server** doit pouvoir initier une connexion avec le **Main Server**.
+* Les **ports hôtes** appropriés doivent être **ouverts dans le pare-feu** pour permettre le trafic dans les deux sens.
+
+Cela diffère des versions précédentes, où seul le **Sub/Backup Server** était responsable d'initier la connexion au **Main Server**.
+
+***
+
+## **Note importante**
+
+<Note>**Une connexion réseau full-duplex est requise entre le Main Server et les Sub/Backup Servers.** Les deux serveurs doivent pouvoir établir une connexion directe l'un avec l'autre pour une réplication et une synchronisation correctes.</Note>
+
+Cette nouvelle méthode de réplication assure un processus de synchronisation **plus robuste et efficace**, réduisant les perturbations potentielles dans les opérations d'affichage dynamique.

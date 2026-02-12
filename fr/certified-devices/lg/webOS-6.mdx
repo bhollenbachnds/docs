@@ -1,100 +1,104 @@
-Ce guide fournit des instructions étape par étape pour **l'installation et la configuration de PADS4 Viewer** sur les appareils **LG WebOS6**.
+---
+- title: LG WebOS 6
+---
 
-***
+Ce guide fournit des instructions étape par étape pour **installing and configuring PADS4 Viewer** sur les appareils **LG WebOS6**.
 
 ## **1. Première utilisation**
 
-Avant l'installation, assurez-vous que le **PADS4 Server est configuré correctement**.
+Avant l'installation, assurez-vous que le **PADS4 Server is set up and configured properly**.
 
-<Note> Ce guide est spécifique à **WebOS6**. Si l'**Assistant de configuration** ne démarre pas automatiquement, réinitialisez l'appareil comme décrit dans **1.2 Réinitialisation de l'appareil**.</Note>
+<Note>
+  Ce guide est spécifique à **WebOS6**. Si l'**Configuration Wizard** ne démarre pas automatiquement, réinitialisez l'appareil comme décrit dans **1.2 Resetting the Device**.
+</Note>
 
 ***
 
 ### **1.1 Configuration de l'appareil**
 
-Aucune modification n'est nécessaire avant d'installer **PADS4 Viewer**. Passez directement à l'**Installation**.
+Aucune modification n'est nécessaire avant d'installer le **PADS4 Viewer**. Passez directement à l'**Installation**.
 
 ***
 
 ### **1.2 Réinitialisation de l'appareil**
 
-Si l'appareil a été utilisé précédemment, effectuez une **réinitialisation d'usine** pour effacer le stockage et éviter les conflits logiciels.
+Si l'appareil a été utilisé précédemment, effectuez une **factory reset** pour effacer le stockage et éviter les conflits logiciels.
 
 <Steps>
-  <Step title="Première étape">
-    Appuyez sur le **bouton Paramètres** *(icône d'engrenage sur la télécommande)*.
+  <Step title="Étape Un">
+    Appuyez sur le bouton **Settings button** *(icône d'engrenage sur la télécommande)*.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape Deux">
     Sélectionnez **Admin**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Sélectionnez **Turn On**.
   </Step>
 
-  <Step title="Quatrième étape">
-    Entrez le **code PIN** par défaut : `000000`.
+  <Step title="Étape Quatre">
+    Entrez le **PIN code** par défaut : `000000`.
   </Step>
 
-  <Step title="Cinquième étape">
-    Confirmez pour **démarrer la réinitialisation d'usine**.
+  <Step title="Étape Cinq">
+    Confirmez pour **start the factory reset**.
   </Step>
 </Steps>
 
-Après la réinitialisation, l'**écran d'accueil** apparaîtra. Suivez les étapes dans **1.1 Configuration de l'appareil**.
+Après la réinitialisation, l'**Welcome Screen** apparaîtra. Suivez les étapes dans **1.1 Configuring the Device**.
 
 ***
 
 ## **2. Installation de PADS4 Viewer**
 
-Suivez ces étapes pour installer **PADS4 Viewer** sur **LG WebOS6**.
+Suivez ces étapes pour installer le **PADS4 Viewer** sur **LG WebOS6**.
 
 #### **Étapes d'installation**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Un">
     Appuyez sur le bouton **Power On**.
   </Step>
 
-  <Step title="Deuxième étape">
-    Appuyez sur le **bouton Paramètres** *(icône d'engrenage sur la télécommande)*.
+  <Step title="Étape Deux">
+    Appuyez sur le **Settings button** *(icône d'engrenage sur la télécommande)*.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Sélectionnez **EZ Settings**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Sélectionnez **SI Server Settings** dans le menu de droite et appuyez sur **OK**.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Réglez **Fully Qualified Domain Name** sur **ON**.
   </Step>
 
-  <Step title="Sixième étape">
-    Définissez l'**URL** pour le **PADS4 Server** :
+  <Step title="Étape Six">
+    Définissez l'**URL** pour le **PADS4 Server**:
 
     * **HTTP:** `http://<server>/pads4/apps/lg.zip`
     * **HTTPS:** `https://<server>/pads4/apps/lg.zip` *(connexion sécurisée utilisant HTTPS)*
-    * Remplacez `<server>` par l'**adresse IP ou le nom de domaine** du **PADS4 Server**.
+    * Remplacez `<server>` par l'**IP address or domain name** du **PADS4 Server**.
   </Step>
 
-  <Step title="Septième étape">
-    Réglez **Application Launch Mode** sur **Local**.
+  <Step title="Étape Sept">
+    Réglez **Mode de lancement de l'application** à **Local**.
   </Step>
 
-  <Step title="Huitième étape">
-    Réglez **Installation Type** à **ZIP**.
+  <Step title="Étape Huit">
+    Définir **Installation Type** à **ZIP**.
   </Step>
 
   <Step title="Étape Neuf">
-    Sélectionnez **Local Application Upgrade → Remote**.
+    Sélectionner **Local Application Upgrade → Remote**.
   </Step>
 
   <Step title="Étape Dix">
-    Sélectionnez **Confirm** pour démarrer la mise à niveau.
+    Sélectionner **Confirm** pour démarrer la mise à niveau.
   </Step>
 
   <Step title="Étape Onze">
@@ -108,13 +112,13 @@ Après avoir complété ces étapes, le **PADS4 HTML5 Viewer** se téléchargera
   * **Vert** = Connexion réussie
   * **Rouge** = Problème de connexion
 
-Pour résoudre les problèmes, vérifiez les **Viewer Settings** et les **fichiers journaux** pour les erreurs.
+Pour dépanner, vérifiez les **Viewer Settings** et les **fichiers journaux** pour les erreurs.
 
 ***
 
 ### **2.1 Vérification du firmware de l'appareil**
 
-Assurez-vous que la **version correcte du firmware** est installée pour une fonctionnalité complète du **PADS4 Viewer**.
+Assurez-vous que la **version correcte du firmware** est installée pour une **PADS4 Viewer** fonctionnalité complète.
 
 <Steps>
   <Step title="Étape Un">
@@ -136,11 +140,11 @@ Assurez-vous que la **version correcte du firmware** est installée pour une fon
 
 <Steps>
   <Step title="Étape Un">
-    Copiez le **firmware`.epk` fichier** dans le dossier **LG\_MONITOR** d'une **clé USB**.
+    Copiez le **`firmware .epk file`** dans le **LG\_MONITOR** dossier d'une **clé USB**.
   </Step>
 
   <Step title="Étape Deux">
-    Insérez la **clé USB** dans l'**appareil LG WebOS6**.
+    Insérez la **clé USB** dans le **LG WebOS6 device**.
   </Step>
 
   <Step title="Étape Trois">
@@ -150,7 +154,7 @@ Assurez-vous que la **version correcte du firmware** est installée pour une fon
 
 ***
 
-### **2.3 Ajustement des paramètres du PADS4 Viewer**
+### **2.3 Ajustement des paramètres PADS4 Viewer**
 
 * **Appuyez et maintenez le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes** pour accéder aux **Viewer Settings**.
 
@@ -160,7 +164,7 @@ Assurez-vous que la **version correcte du firmware** est installée pour une fon
 
 | Fonctionnalité | Description                                                                                                 |
 | :------------: | ----------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Automatic Software Updates** – Le HTML5 Viewer se met à jour automatiquement.                             |
+|        ✅       | **Automatic Software Updates** – HTML5 Viewer se met à jour automatiquement.                                |
 |        ✅       | **Offline Mode** – L'appareil continue d'exécuter les présentations pendant **7 jours** en mode hors ligne. |
 |        ✅       | **Supports HTTP & HTTPS**                                                                                   |
 |        ✅       | **Maximum 2 Full HD Videos**                                                                                |
@@ -181,8 +185,8 @@ Assurez-vous que la **version correcte du firmware** est installée pour une fon
 
 | **Problème**                                             | **Solution**                                                                                                              |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **Problèmes de connexion au PADS4 Server**               | Assurez-vous que l'**URL correcte** est configurée dans les **SI Server Settings**.                                       |
-| **Version du firmware incorrecte**                       | Vérifiez et **mettez à jour le firmware** vers **03.08.80** en suivant **2.2 Mise à jour du firmware**.                   |
-| **Les commandes de la télécommande ne fonctionnent pas** | Assurez-vous que **block remote control** est désactivé dans les **Device Settings**.                                     |
+| **Problèmes de connexion au PADS4 Server**               | Assurez-vous que l'**URL correcte** est configurée sous **SI Server Settings**.                                           |
+| **Version du firmware incorrecte**                       | Vérifiez et **mettez à jour le firmware** à **03.08.80** en suivant **2.2 Mise à jour du firmware**.                      |
+| **Les commandes de la télécommande ne fonctionnent pas** | Assurez-vous que **block remote control** est désactivé dans **Device Settings**.                                         |
 | **L'écran ne s'éteint pas**                              | **Turn Off Display** n'est **pas pris en charge** sur WebOS6.                                                             |
 | **Problèmes de streaming**                               | Vérifiez le **format d'encodeur de flux** (MP4, MPEGTS, MP2T). Utilisez `rtp://239.0.0.1/?encoding=mpegts` si nécessaire. |

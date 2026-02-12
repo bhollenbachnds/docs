@@ -1,4 +1,4 @@
-Le **Dossier** le type de fournisseur vous permet de vous connecter à un **dossier spécifique** pour récupérer et afficher son **contenu de fichiers**. Vous pouvez inclure **tous les fichiers** ou les filtrer en fonction des **extensions**. **Sous-dossiers** peuvent également être inclus si nécessaire.
+Le type de fournisseur **Folder** vous permet de vous connecter à un **dossier spécifique** pour récupérer et afficher son **contenu de fichiers**. Vous pouvez inclure **tous les fichiers** ou les filtrer en fonction des **extensions**. **Les sous-dossiers** peuvent également être inclus si nécessaire.
 
 ***
 
@@ -6,28 +6,28 @@ Le **Dossier** le type de fournisseur vous permet de vous connecter à un **doss
 
 ### **1. Démarrer l'Assistant de fournisseur de données**
 
-* Ouvrez l'**Assistant de fournisseur de données** en suivant les instructions dans **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**.
-* Sélectionnez **Dossier** comme **type de fournisseur**.
+* Ouvrez l'**Assistant de fournisseur de données** en suivant les instructions dans **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
+* Sélectionnez **Folder** comme **type de fournisseur**.
 
 ### **2. Spécifier les paramètres de connexion du dossier**
 
 * Choisissez l'une des **options de source** suivantes :
-  * **Bibliothèque de contenu :** Utilise un dossier de la **Bibliothèque de contenu PADS4** (Recommandé).
+  * **Content Library:** Utilise un dossier de la **PADS4 Content Library** (Recommandé).
   * **Folder:** Utilise un **dossier externe** à la bibliothèque de contenu.
 
-* **Saisir le chemin du dossier** :
-  * Si vous utilisez la **Bibliothèque de contenu**, fournissez le **chemin relatif**.
+* **Entrez le chemin du dossier** :
+  * Si vous utilisez **Content Library**, fournissez le **chemin relatif**.
   * Si vous utilisez un **dossier externe**, fournissez le **chemin absolu** (par exemple, `C:\MyFolder`).
-  * Utilisez le bouton **Parcourir** pour localiser le dossier.
+  * Utilisez le bouton **Browse** pour localiser le dossier.
 
-* **Inclure les sous-dossiers** *(Optionnel)*
+* **Include Subfolders** *(Optionnel)*
   * Activez cette option pour inclure les fichiers **des sous-dossiers** du dossier sélectionné.
 
 * **Définir les filtres de fichiers**
-  * Utilisez **Restriction de recherche par extension** pour **filtrer des types de fichiers spécifiques** (par exemple, `.jpg`, `.png`, `.mp4`).
+  * Utilisez **Search Extension Restriction** pour **filtrer des types de fichiers spécifiques** (par exemple, `.jpg`, `.png`, `.mp4`).
 
 * **Trier les fichiers**
-  * Utilisez les paramètres **Tri de la liste de fichiers** pour **définir l'ordre de tri**.
+  * Utilisez **Tri de la liste de fichiers** paramètres pour **définir l'ordre de tri**.
 
 ### **3. Finaliser la connexion**
 
@@ -38,13 +38,13 @@ Le **Dossier** le type de fournisseur vous permet de vous connecter à un **doss
 
 ## **Meilleures pratiques**
 
-* **Utiliser la bibliothèque de contenu PADS4**
-  * Les fichiers dans la **Bibliothèque de contenu** sont **automatiquement synchronisés** sur **tous les systèmes PADS4**.
-  * Si vous utilisez un **dossier externe**, vous devez **distribuer manuellement** les fichiers sur tous les systèmes.
+* **Utilisez la bibliothèque de contenu PADS4**
+  * Les fichiers dans la **Content Library** sont **automatiquement synchronisés** à travers **tous les systèmes PADS4**.
+  * Si vous utilisez un **dossier externe**, vous devez **distribuer manuellement** les fichiers à travers les systèmes.
 
-* **Éviter les dossiers réseau partagés**
+* **Évitez les dossiers réseau partagés**
   * **Le trafic réseau peut augmenter** lors de l'utilisation d'un **lecteur mappé** ou **chemin UNC** (`\\server\folder`).
-  * Cela peut **ralentir** les **performances du Viewer** lors de la récupération des listes de fichiers ou du chargement du contenu.
+  * Cela peut **ralentir** la **performance du Viewer** lors de la récupération des listes de fichiers ou du chargement du contenu.
 
 * **Règles de tri**
   * **Le tri spécifique au dossier** s'applique en premier.
@@ -56,6 +56,6 @@ Le **Dossier** le type de fournisseur vous permet de vous connecter à un **doss
 
 * **Accès au serveur de données**
   * Si vous utilisez un **PADS4 Data Server**, assurez-vous que le **dossier est accessible** du **point de vue du serveur**.
-  * Si vous **n'utilisez pas de Data Server**, chaque **PADS4 Designer et Viewer** doit avoir **un accès direct** au dossier.
+  * Si **vous n'utilisez pas de Data Server**, chaque **PADS4 Designer et Viewer** doit avoir **un accès direct** au dossier.
 
-En suivant ces étapes, vous pouvez **connecter un dossier** et récupérer son contenu pour l'utiliser dans des **présentations d'affichage dynamique**.
+En suivant ces étapes, vous pouvez réussir à **connecter un dossier** et récupérer son contenu pour l'utiliser dans des **présentations d'affichage dynamique**.

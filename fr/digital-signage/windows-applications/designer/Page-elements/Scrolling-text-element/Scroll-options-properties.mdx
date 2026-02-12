@@ -1,0 +1,43 @@
+Ces propriétés contrôlent comment les **text items** apparaissent et se déplacent dans l'**scrolling text element**.
+
+***
+
+## **Options de défilement**
+
+### **Options de défilement du texte**
+
+Déterminez comment le nouveau texte est introduit dans l'élément de texte défilant :
+
+| **Option**                             | **Description**                                                                                                                             |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Line by Line**                       | Affiche une ligne à la fois. Chaque ligne est montrée séparément, et la ligne suivante n'apparaît qu'après la disparition de la précédente. |
+| **Directly After Previous Text**       | Le nouveau texte est placé **immediately after** le texte précédent, assurant un effet de défilement continu sans espaces.                  |
+| **When Previous Text is Scrolled Out** | Le nouveau texte commence **only after** que le texte précédent ait **fully disappeared** de la vue.                                        |
+
+***
+
+### **Paramètres supplémentaires**
+
+#### **Concatenate Multiple Text Lines to One Single Line**
+
+* Si activé, les **hard returns (line breaks)** à l'intérieur d'une entrée de texte unique sont **removed**.
+* Le texte entier est traité comme **one continuous line** pendant le défilement.
+* Ne peut pas être utilisé en combinaison avec le mode **Line by Line**.
+
+#### **Do Not Scroll When the Text Fits**
+
+* Lorsque activé, PADS4 calcule si le **entire text (including separators)** tient dans l'**element area**.
+* Si le texte tient, il restera **static** au lieu de défiler.
+* Si le texte **exceeds** la zone de l'élément, le défilement **automatically start**.
+
+#### **Show Changes in Text Immediately**
+
+* Lorsque connecté à une **data source**, l'activation de ce paramètre garantit que **any text updates are reflected immediately**.
+* Le processus de défilement est **aborted**, et le **new text begins scrolling immediately**.
+
+***
+
+## **Remarques**
+
+* **"Line by Line" mode** ne peut pas être utilisé avec **"Concatenate Multiple Text Lines to One Single Line"**, car ils **conflict in behavior**.
+* Assurer un **seamless scrolling** nécessite une configuration soignée de la **text length, separator spacing, and update frequency**.
