@@ -6,40 +6,42 @@ Domains in PADS4 make it possible to manage multiple independent client environm
 
 With the enhanced domain support, all PADS4 services and applications are now domain-aware, and domains can be fully configured and managed through the PADS4 CTRL Center.
 
-## **Prerequisites**
+## Prerequisites
 
 <Info>
-  Before creating a new domain, ensure that your **PADS4 installation is updated to version 2023.1 **or later, as domain functionality is only supported from this version onward.
+  Before creating a new domain, ensure that your **PADS4 installation is updated to version 2023.1** or later, as domain functionality is only supported from this version onward.
 </Info>
 
 Each domain requires its own **PADS4 license**. Verify that you have obtained the necessary license before proceeding with domain setup.
 
-## Creating a PADS4 Domain
+## Default Domain
 
-Follow the steps below to create a new PADS4 domain.
+During PADS4 installation, a default domain named **PADS** is automatically created. This serves as the initial environment.
 
-<Steps>
-  <Step title="Log in to PADS4 as Root">
-    Log in to PADS4 using the root account that was created during installation.
+### Editing the Default Domain
 
-    - **Username:** `su\root`
-    - **Password:** `******` _(Your chosen password)_
-  </Step>
-  <Step title="Configuring Domain">
-    You can now **add a new domain** or **modify the existing default domain ("pads")**.
+From the Domains section of the root interface:
 
-    ### **Creating a New Domain**
+- Select the **PADS** domain entry.
+- Click the **three dots ⁝** menu to access edit options.
+- Update the **DNS Host Name** to match your server's address.
+- Upload your third-party signed **SSL certificate** (_.CRT_) and **private key** (_.KEY_).
 
-    Click **\+ New** in the Domains dashboard.
+<Frame>
+  ![Root Default Domain Edit](/images/RootAccess/RootDefaultDomainEdit.png)
+</Frame>
 
-    1. **Enter the domain details**:\
-       Provide a domain \*\*name \*\*(e.g., "CompanyA" or "Branch1").
-    2. **DNS Host Name** – Specify the domain’s **DNS hostname**.
-    3. **Certificate File** – Upload the **third-party signed SSL certificate** (`.CRT format`).
-    4. **Private Key File** – Upload the **third-party signed private key** (`.KEY format`).
+## Creating a new PADS4 Domain
 
-    Click **Create**.
+Follow the steps below to create a new PADS4 domain. 
 
-    This will **restart PADS4 services** and apply the domain settings.
-  </Step>
-</Steps>
+1. Click **\+ New** in the Domains dashboard.
+1. **Enter the domain details**:\
+   Provide a domain **name** (e.g., "CompanyA" or "Branch1").
+2. **DNS Host Name** – Specify the domain’s **DNS hostname**.
+3. **Certificate File** – Upload the **third-party signed SSL certificate** (`.CRT format`).
+4. **Private Key File** – Upload the **third-party signed private key** (`.KEY format`).
+
+Click **Create**.
+
+This will **restart PADS4 services** and apply the domain settings.

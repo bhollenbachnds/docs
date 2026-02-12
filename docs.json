@@ -248,6 +248,7 @@
             "dropdown": "PADS4 Super User",
             "pages": [
               "ctrl-centre/untitled-page",
+              "ctrl-centre/user-interface",
               "ctrl-centre/domains",
               "ctrl-centre/account-creation"
             ]
