@@ -1,0 +1,125 @@
+Avec les fonctions de processus, vous pouvez voir les processus en cours d'exécution sur votre PADS4 Server ou PADS4 Viewer. Les processus peuvent être démarrés, redémarrés ou arrêtés.
+
+ 
+
+#### **Pour voir les processus en cours d'exécution sur votre PADS4 Server**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Processes** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le PADS4 Server connecté et affichera les résultats dans la fenêtre des processus. Si votre installation PADS4 comprend des sous-serveurs, vous devez d'abord sélectionner un serveur avant de sélectionner la catégorie d'informations.
+
+ 
+
+#### **Pour afficher les processus en cours d'exécution sur un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Processes** dans la liste des catégories d'informations disponibles pour le viewer.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées du Viewer sélectionné et afficher les résultats dans la fenêtre des processus.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre des processus**
+
+La fenêtre des processus affiche une liste complète de tous les processus en cours d'exécution. Cela vous permet de vérifier si un certain processus est en cours d'exécution et combien de CPU et de mémoire il utilise.
+
+![EN Agent Processes Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Processes.png)
+
+**Image Name**\
+Nom du fichier (sans le chemin complet) du processus en cours d'exécution. Si vous exécutez un processus 32 bits sur un PC 64 bits, le suffixe \*32 est ajouté au nom du fichier.
+
+**User Name**\
+Le nom du compte utilisateur utilisé pour démarrer le processus.
+
+**CPU**\
+Le pourcentage du temps processeur utilisé par le processus. Il s'agit d'un instantané de la situation au moment où les informations ont été récupérées et ne reflète pas la situation actuelle.
+
+**Memory**\
+La quantité de mémoire utilisée par le processus. Comme pour le CPU, il s'agit d'un instantané de la situation au moment où les informations ont été récupérées.
+
+**Description**\
+Un nom descriptif du processus.
+
+ 
+
+#### **Vues**
+
+Pour afficher plus de détails sur les processus en cours d'exécution, vous pouvez inclure des colonnes supplémentaires :
+
+1. Cliquez sur **Columns** dans le menu **Home**.
+
+   ![EN Agent Ribbon Columns Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Columns.png)
+2. Cochez les colonnes que vous souhaitez inclure dans votre vue.
+
+   ![EN Agent Columnswindow Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Columnswindow.png)
+3. Cliquez sur **OK**.
+
+Après cela, les informations sur les processus seront à nouveau récupérées depuis votre serveur ou viewer et affichées avec les nouveaux paramètres de colonnes.
+
+ 
+
+#### **Gestion des processus**
+
+Depuis la fenêtre des processus, vous pouvez démarrer, redémarrer ou arrêter des processus à distance.
+
+<Tip>
+  Lorsque vous avez un processus qui ne répond plus ou qui consomme une quantité énorme de mémoire en raison d'un problème de fuite de mémoire, redémarrez le processus pour résoudre le problème.
+</Tip>
+
+Lorsque vous démarrez ou redémarrez un processus sur votre PADS4 Server, le système utilisera le compte utilisateur du processus PADS4 Server pour démarrer le processus. Sur un PADS4 Viewer, le système utilisera le compte utilisateur du processus PADS4 Controller pour cela.
+
+En ce qui concerne les processus PADS4, les fonctions de redémarrage et d'arrêt doivent être utilisées avec précaution. Les processus suivants, PADSServer.exe, PADSDataServer.exe et PADSViewer.exe, peuvent être arrêtés ou redémarrés sans aucun risque. Cependant, les processus PADSServerManager.exe et PADSController.exe ne doivent PAS être arrêtés ou redémarrés, car cela peut rendre votre PADS4 Server ou PADS4 Viewer inaccessible.
+
+ 
+
+#### **Pour démarrer un processus**
+
+1. Cliquez sur **Start** dans le menu **Home**.
+
+   ![EN Agent Ribbon Start Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-RibbonStartProcess.png)
+2. Spécifiez le nom du fichier (y compris le chemin complet) de l'application à démarrer.
+
+   ![EN Agent Start Processwindow Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-StartProcesswindow.png)
+
+   <Warning>
+     Le nom de fichier que vous spécifiez ici sera appliqué localement par votre PADS4 Server ou PADS4 Viewer. Ainsi, le chemin et l'application que vous spécifiez ici doivent être valides, vus du point de vue de votre PADS4 Server ou PADS4 Viewer.\
+     \
+     Vous pouvez éventuellement utiliser le bouton **Browse** pour spécifier un nom de fichier en parcourant votre ordinateur. Cela ne fonctionne également que lorsque le même fichier existe sur votre PADS4 Server ou PADS4 Viewer.
+   </Warning>
+3. Cliquez sur **OK**.
+
+Après cela, le système essaiera de démarrer l'application spécifiée sur votre PADS4 Server ou PADS4 Viewer. Pour voir les résultats de cette action, vous devez consulter la fenêtre des [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).
+
+ 
+
+#### **Pour redémarrer un processus**
+
+1. Cliquez sur le processus dans la fenêtre des processus pour le sélectionner.
+2. Cliquez sur **Restart** dans le menu **Home**.
+
+   ![EN Agent Ribbon Restart Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-RestartProcess.png)
+3. Cliquez sur **Yes** pour confirmer que vous souhaitez redémarrer le processus.
+
+Après cela, le système essaiera de redémarrer l'application spécifiée sur votre PADS4 Server ou PADS4 Viewer. Pour voir les résultats de cette action, vous devez consulter la fenêtre des [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).
+
+ 
+
+#### **Pour arrêter un processus**
+
+1. Cliquez sur le processus dans la fenêtre des processus pour le sélectionner.
+2. Cliquez sur **Stop** dans le menu **Home**.
+
+   ![EN Agent Ribbon Stop Process Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-StopProcess.png)
+3. Cliquez sur **Yes** pour confirmer que vous souhaitez arrêter le processus.
+
+Après cela, le système tuera le processus sur votre PADS4 Server ou PADS4 Viewer. Pour voir les résultats de cette action, vous devez consulter la fenêtre des [tasks](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Tasks.htm).

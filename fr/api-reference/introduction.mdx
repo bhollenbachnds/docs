@@ -2,16 +2,16 @@ Bienvenue dans la **PADS4 API Documentation**, votre référence complète pour 
 
 La suite d'API PADS4 est conçue pour prendre en charge l'intégration transparente, l'automatisation et l'évolutivité de vos solutions d'affichage dynamique et d'espace de travail. Que vous construisiez une interface personnalisée, que vous intégriez des systèmes tiers ou que vous automatisiez des flux de travail de contenu, cette documentation d'API fournit tous les outils et points de terminaison nécessaires pour communiquer avec les services backend de PADS4.
 
-Chaque module d'API est conçu autour d'un domaine spécifique de fonctionnalité au sein de l'écosystème PADS4. Tous les services suivent une architecture RESTful et exposent des définitions OpenAPI (Swagger) pour simplifier le développement et réduire les efforts d'intégration.
+Chaque module d'API est conçu autour d'un domaine spécifique de fonctionnalité au sein de l'écosystème PADS4. Tous les services suivent une architecture RESTful et exposent des définitions OpenAPI (Swagger) pour rationaliser le développement et réduire l'effort d'intégration.
 
 ### Groupes d'API disponibles
 
 La plateforme d'API PADS4 est divisée en groupes fonctionnels suivants :
 
-* **Domains**\
+* **Domaines**\
   Gérer les domaines des locataires et la configuration associée.
 
-* **Authentication & Authentication Integration**\
+* **Authentification & Intégration d'Authentification**\
   Gérer la connexion des utilisateurs, la gestion des sessions et l'intégration avec des fournisseurs d'identité tiers.
 
 * **CMS**\
@@ -20,34 +20,34 @@ La plateforme d'API PADS4 est divisée en groupes fonctionnels suivants :
 * **Configuration**\
   Accéder et modifier les paramètres de configuration à l'échelle du système.
 
-* **Content**\
+* **Contenu**\
   Gérer les ressources multimédias, les fichiers et les métadonnées associées.
 
-* **Credentials**\
-  Gérer de manière sécurisée le stockage des identifiants et l'accès tokenisé.
+* **Identifiants**\
+  Gérer de manière sécurisée le stockage des identifiants et l'accès par jetons.
 
-* **Data**\
+* **Données**\
   Accéder aux sources de données externes et internes intégrées dans les présentations.
 
-* **Device**\
+* **Appareil**\
   Enregistrer et surveiller les appareils de lecture sur l'ensemble du réseau d'affichage dynamique.
 
 * **Email**\
   Configurer et envoyer des notifications et des alertes.
 
-* **Engine**\
+* **Moteur**\
   Gérer la logique backend et le comportement d'exécution des services.
 
 * **FIDS Connector**\
   Intégrer avec les systèmes d'affichage d'informations de vol pour les environnements de transport.
 
-* **Globalization**\
+* **Globalisation**\
   Gérer les paramètres de localisation et de traduction des langues.
 
-* **License**\
+* **Licence**\
   Gérer les licences de produits et le suivi des droits.
 
-* **Messaging**\
+* **Messagerie**\
   Configurer les services de messagerie tels que SMS, notifications push, et plus encore.
 
 * **Migration**\
@@ -59,31 +59,31 @@ La plateforme d'API PADS4 est divisée en groupes fonctionnels suivants :
 * **Package**\
   Gérer les configurations groupées et les packages de présentation.
 
-* **Process**\
+* **Processus**\
   Exécuter une logique personnalisée ou déclencher des processus internes.
 
-* **Replication**\
-  Gérer la synchronisation des données entre les systèmes distribués.
+* **Réplication**\
+  Gérer la synchronisation des données à travers les systèmes distribués.
 
-* **Schedule**\
-  Contrôler la programmation de lecture des présentations, les calendriers et les horaires récurrents.
+* **Planification**\
+  Contrôler le timing de lecture des présentations, les calendriers et les planifications récurrentes.
 
-* **User SCIM & User Profile**\
+* **SCIM Utilisateur & Profil Utilisateur**\
   Prendre en charge le provisionnement des utilisateurs, la synchronisation d'annuaire compatible SCIM et la gestion des attributs utilisateur.
 
-* **Video Conversion**\
+* **Conversion Vidéo**\
   Automatiser le transcodage et le formatage vidéo pour une lecture compatible.
 
-* **Viewer**\
+* **Visionneuse**\
   Enregistrer, configurer et surveiller les points de terminaison des lecteurs d'affichage dynamique.
 
 * **Web to Image**\
-  Capturer et convertir des pages web en images d'affichage statiques.
+  Capturer et convertir des pages web en images statiques pour affichage.
 
 ***
 
-Chaque groupe dispose d'une interface Swagger dédiée, disponible via des liens OpenAPI, permettant aux développeurs d'explorer les points de terminaison, de tester les requêtes et de créer des intégrations en toute confiance.
+Chaque groupe dispose d'une interface Swagger dédiée, disponible via des liens OpenAPI, permettant aux développeurs d'explorer les endpoints, de tester les requêtes et de créer des intégrations en toute confiance.
 
-Pour commencer, choisissez un groupe correspondant à vos besoins d'intégration et consultez sa documentation Swagger. Toutes les API sont sécurisées, et une authentification appropriée est requise pour effectuer des appels à la plupart des points de terminaison.
+Pour commencer, choisissez un groupe correspondant à vos besoins d'intégration et consultez sa documentation Swagger. Toutes les API sont sécurisées, et une authentification appropriée est requise pour effectuer des appels vers la plupart des endpoints.
 
 Commençons à construire avec PADS4.

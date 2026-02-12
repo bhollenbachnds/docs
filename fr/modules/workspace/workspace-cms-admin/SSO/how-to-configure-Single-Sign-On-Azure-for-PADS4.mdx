@@ -1,5 +1,9 @@
 Le processus ci-dessous vous aide à configurer votre installation PADS4 CMS pour utiliser Azure SSO.
 
+<Warning>
+  À partir de PADS4 2025.2, cette fonctionnalité fait partie de PADS4 CTRL Center. Pour plus d'informations, consultez CTRL Center > Administration > Identity.
+</Warning>
+
 ## Paramètres Azure
 
 Il est nécessaire de configurer l'instance Azure pour permettre aux utilisateurs de votre organisation d'accéder à l'application PADS4 (Legacy) CMS. Pour activer cela, veuillez suivre les étapes de ce document :
@@ -19,9 +23,9 @@ Il est nécessaire de configurer l'instance Azure pour permettre aux utilisateur
 # **Important**
 
 <Warning>
-  Si vous \*\*<u>ne voulez pas</u> \*\* utiliser un Application Proxy sur votre application locale, continuez à l'étape 4 ci-dessous et ignorez les étapes 7 et 8.
+  Si vous \*\*<u>don't</u> \*\* voulez pas utiliser un Application Proxy sur votre application locale, continuez à l'étape 4 ci-dessous et ignorez les étapes 7 et 8.
 
-  Si vous \*\*<u>voulez</u> \*\* utiliser un Application Proxy pour votre application locale, passez à l'étape 7 et ignorez les étapes 4, 5 et 6.
+  Si vous \*\*<u>do</u> \*\* voulez utiliser un Application Proxy pour votre application locale, passez à l'étape 7 et ignorez les étapes 4, 5 et 6.
 </Warning>
 
 ## Étape 4 : Sélectionnez l'option "+ New application" en haut de l'écran
@@ -42,7 +46,7 @@ Il est nécessaire de configurer l'instance Azure pour permettre aux utilisateur
 
 ## Étape 7 : Création d'un groupe de connecteurs / connecteur d'application proxy :
 
-Sélectionnez la **Manage Application Proxy Connectors** **section**
+Sélectionnez la section **Manage Application Proxy Connectors** ****
 
 ![Step7 Pn](/images/step7.png)
 
@@ -51,14 +55,14 @@ Sélectionnez la **Manage Application Proxy Connectors** **section**
 3. Exécutez l'installateur et assurez-vous de valider vos identifiants d'administrateur Azure pendant la configuration.
 
    ![Step8 Pn](/images/step8.png)
-4. Une fois l'installation terminée, sélectionnez la **+New Connector** Group section
+4. Une fois l'installation terminée, sélectionnez la section **+New Connector** Group
 5. Créez un nom par défaut pour votre connexion. Par exemple : **SSO Connector**
-6. Sélectionnez votre machine serveur dans la liste Connector
+6. Sélectionnez votre machine serveur dans la liste des connecteurs
 7. Sélectionnez la région où se trouve votre machine.
 
    ![Step9 Pn](/images/step9.png)
 8. Enregistrez votre nouvelle connexion ici.
-9. Retournez à la section Enterprise Applications, et sélectionnez **"Add your own on-premises application"**
+9. Retournez à la section Enterprise Applications et sélectionnez **"Add your own on-premises application"**
 
 ## Création d'une application locale dans Azure
 
@@ -92,11 +96,11 @@ Puis cliquez sur le bouton add
 
 ![Userandgroups Pn](/images/userandgroups.png)
 
-2. Ajoutez les utilisateurs et groupes qui auront accès à l'application en sélectionnant l'option **" Add user/group "**
+2. Ajoutez les utilisateurs et les groupes qui auront accès à l'application en sélectionnant l'option **" Add user/group "**
 
 ![Robinsso Pn](/images/robinsso.png)
 
-3. Sélectionnez **"None Selected"** pour accéder aux groupes et utilisateurs :
+3. Sélectionnez l'option **"None Selected"** pour accéder aux groupes et utilisateurs :
 
 ![Add Pn](/images/add.png)
 
@@ -110,21 +114,21 @@ Puis cliquez sur le bouton add
 
 ## Étape 10 : Pour configurer Single Sign On (SSO)
 
-Sélectionnez **"Single sign-on option"**  dans le volet de gauche puis **"SAML"**
+Sélectionnez **"Single sign-on option"**  dans le volet gauche puis **"SAML"**
 
 ![10 Pn](/images/10.png)
 
-## Étape 11 : Sélectionnez "Edit" sur "Basic SAML Configuration"
+## Étape 11 : Sélectionnez "Edit" sur "Basic SAMLConfiguration"
 
 ![Image23 Pn](/images/Image23.png)
 
-Sélectionnez " Add identifier "  et **" Add Reply URL "** et fournissez la valeur selon l'exemple ci-dessous :
+Sélectionnez " Add identifier " et **" Add Reply URL "** et fournissez la valeur selon l'exemple ci-dessous :
 
 ![Image24 Pn](/images/Image24.png)
 
 ## Exemple :
 
-**Identifier**: URL PADS4 CMS local avec /Saml2 **(par exemple :** [https://robin.pads365.com/crystal/domain/Saml2](https://robin.pads365.com/crystal/domain/Saml2))
+**Identifier**: URL locale du PADS4 CMS avec /Saml2 **(par exemple :** [https://robin.pads365.com/crystal/domain/Saml2](https://robin.pads365.com/crystal/domain/Saml2))
 
 Si un port réseau unique est utilisé, assurez-vous de l'inclure dans la chaîne ci-dessus.
 
@@ -136,7 +140,7 @@ Par exemple : [https://robin.pads365.com:444/crystal/domain/Saml2](https://robin
 
 Si vous utilisez le nom de domaine par défaut, ce sera : [https://robin.pads365.com/crystal/pads/Saml2](https://robin.pads365.com/crystal/pads/Saml2)
 
-Reply URL : URL PADS4 CMS local avec /Saml2/Acs **(par exemple :**[**https://robin.pads365.com/crystal/domain/Saml2/Acs**](https://robin.pads365.com/crystal/domain/Saml2/Acs) )
+Reply URL : URL locale du PADS4 CMS avec /Saml2/Acs **(par exemple :**[**https://robin.pads365.com/crystal/domain/Saml2/Acs**](https://robin.pads365.com/crystal/domain/Saml2/Acs) )
 
 Si un port réseau unique est utilisé, assurez-vous de l'inclure dans la chaîne ci-dessus.
 
@@ -191,7 +195,7 @@ Name : **group**
 Namespace : [http://schemas.xmlsoap.org/claims](http://schemas.xmlsoap.org/claims)
 
 <Info>
-  Remarque : Si vous rencontrez maintenant le comportement suivant, le bouton SSO sur la page de connexion fonctionne et vous pouvez saisir vos identifiants mais vous serez redirigé vers le portail de connexion PADS4 avec "No account is defined for your authentication request" dans l'URL.
+  Remarque : Si vous rencontrez maintenant le comportement suivant, le bouton SSO sur la page de connexion fonctionne et vous pouvez saisir vos identifiants, mais vous serez redirigé vers le portail de connexion PADS4 avec "No account is defined for your authentication request" dans l'URL.
 
   **Il peut y avoir 2 causes**
 
@@ -214,7 +218,7 @@ Certificat du serveur de fédération
 
 Identifiant du service de fédération
 
-URL SSO SAML
+URL SAML SSO
 
 URL des métadonnées
 
@@ -224,7 +228,7 @@ ID de groupe du groupe d'utilisateurs que vous avez assigné à l'application.
 
 ## 1. Obtention du "Certificat du serveur de fédération"
 
-Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet gauche
 
 Faites défiler jusqu'à la section **" SAML Certificates "**&#x20;
 
@@ -232,9 +236,9 @@ Sélectionnez l'option **" Download "** à côté de l'option " Certificate (Raw
 
 ![Image32 Pn](/images/Image32.png)
 
-## 2. Obtention de l'" Identifiant du service de fédération "
+## 2. Obtention de l'"Identifiant du service de fédération"
 
-Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet gauche
 
 Faites défiler jusqu'à la section **"Set up" your\_application\_name "**&#x20;
 
@@ -242,19 +246,19 @@ Sélectionnez l'option **" Copy "** à côté de l'option **" Azure AD Identifie
 
 ![Image33 Pn](/images/Image33.png)
 
-## 3. Obtention de l'"URL SSO SAML"
+## 3. Obtention de l'"URL SAML SSO"
 
-Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet gauche
 
 Faites défiler jusqu'à la section **" Set up "your\_application\_name "**&#x20;
 
-Sélectionnez l'option\*\*" Copy "\*\*   à côté de l'option **" Login URL "**  .
+Sélectionnez\*\*" Copy "\*\*   option à côté de l'option **" Login URL "**  .
 
 ![Image34 Pn](/images/Image34.png)
 
 ## 4. Obtention de l'"URL des métadonnées"
 
-Dans votre application, sélectionnez "**Single sign-on "**  dans le volet de gauche
+Dans votre application, sélectionnez "**Single sign-on "**  dans le volet gauche
 
 Faites défiler jusqu'à la section \*\*" SAML Certificates " \*\*
 
@@ -264,7 +268,7 @@ Sélectionnez l'option **" Copy "** à côté de l'option **" App FederationMeta
 
 ## 5. Obtention de l'"URL de la partie utilisatrice"
 
-Dans votre application, sélectionnez **" Single sign-on "** dans le volet de gauche
+Dans votre application, sélectionnez **" Single sign-on "** dans le volet gauche
 
 Faites défiler jusqu'à la section **" Basic SAML Configuration "**&#x20;
 
@@ -280,7 +284,7 @@ Copiez la chaîne à côté de l'option \*\*" Identifier (Entity ID) " \*\*.
 
 Sélectionnez **"home"** dans portal.azure.com et sélectionnez **"Microsoft Entra ID"**
 
-Naviguez vers **"Groups"** dans le volet de gauche
+Naviguez vers **"Groups"** dans le volet gauche
 
 Recherchez le groupe que vous avez assigné dans votre application et copiez l'\*\*"Object Id"\*\*
 

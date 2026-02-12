@@ -1,0 +1,48 @@
+Ces propriétés définissent les **commandes RS-232** qui seront envoyées par votre **élément de communication RS-232**. Vous pouvez saisir une **commande unique** ou créer une **play list** de commandes qui seront exécutées séquentiellement.
+
+Vous pouvez **ajouter, modifier, réorganiser ou supprimer** des commandes de la play list. Les boutons de navigation vous permettent de parcourir les éléments de la play list. La **durée totale** affiche le temps d'exécution combiné pour toutes les commandes.
+
+***
+
+## **Élément de Play List de Commande RS-232**
+
+### **Type**
+
+Définit l'**origine** ou le **format** de la commande RS-232.
+
+| **Option**                                            | **Description**                                                                                                                                                                           |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Commande RS-232 (Texte)**                           | Commande statique saisie en texte brut.                                                                                                                                                   |
+| **Commande RS-232 (Hexadécimal)**                     | Commande saisie en **format hexadécimal**.                                                                                                                                                |
+| **Commande RS-232 depuis la Bibliothèque de Contenu** | Référence à un **fichier texte prédéfini** stocké dans la **bibliothèque de contenu PADS4** (recommandé). Les éléments sont **automatiquement synchronisés** sur tous les PC.             |
+| **Commande RS-232 depuis un Fichier**                 | Référence à un fichier texte **en dehors de la bibliothèque de contenu PADS4**. Ces fichiers ne sont **pas synchronisés** automatiquement, donc une distribution manuelle est nécessaire. |
+| **Pas de Commande RS-232**                            | Aucune commande n'est incluse. Ceci est utilisé pour **faire une pause** entre les commandes.                                                                                             |
+
+***
+
+### **Contenu**
+
+Définit la **commande** à exécuter.
+
+* Si vous utilisez **la saisie manuelle**, tapez directement la **commande texte ou hexadécimale**.
+* Si vous utilisez une **référence de fichier**, naviguez pour **sélectionner le fichier** contenant les commandes.
+* Les références de fichier **doivent inclure le chemin complet du fichier** si stocké en dehors de la bibliothèque de contenu.
+
+***
+
+### **Durée**
+
+Spécifie combien de temps (en **secondes**) **attendre** avant d'envoyer la commande suivante ou de **mettre en pause** la lecture.
+
+***
+
+### **Effet**
+
+Définit l'**effet de transition entrante** pour l'élément de la play list et la **durée** (en secondes).
+
+***
+
+## **Remarques**
+
+* **Seules les références de fichiers sont stockées**, pas le contenu réel de la commande. Si le **fichier texte référencé est mis à jour**, les dernières commandes seront utilisées automatiquement.
+* Les **propriétés de la play list** seront **désactivées** si l'**élément est connecté à une source de données**. Dans ce cas, le **source de données en temps réel** détermine quelles commandes sont exécutées.

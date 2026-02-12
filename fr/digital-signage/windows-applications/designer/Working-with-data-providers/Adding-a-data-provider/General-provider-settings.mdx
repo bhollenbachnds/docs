@@ -1,21 +1,21 @@
-À la **deuxième étape** du **Data Provider Wizard**, vous définissez un **nom unique** pour votre fournisseur de données et configurez les paramètres pour **la récupération de données en temps réel**.
+À la **deuxième étape** de l'**Assistant Data Provider**, vous définissez un **nom unique** pour votre fournisseur de données et configurez les paramètres pour la **récupération de données en temps réel**.
 
 ***
 
 ## **Étapes pour configurer les paramètres généraux du fournisseur**
 
-1. **Démarrer le Data Provider Wizard**
+1. **Démarrer l'Assistant Data Provider**
    * Suivez les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**
 2. **Saisir un nom unique pour le fournisseur**
    * Attribuez un **Provider Name** (doit être unique dans votre présentation)
    * Facultativement, saisissez une **Description**
 3. **Décider d'utiliser ou non le PADS4 Data Server**
-   * **Activer ou désactiver** l'option :\
+   * **Activer ou Désactiver** l'option :\
      **"Make use of the Data Server for retrieval of Data"**
    * Si **activé**, les données en temps réel sont récupérées de manière centralisée via le **PADS4 Data Server**
    * Si **désactivé**, chaque **PADS4 Viewer** récupère les données **individuellement**
 4. **Activer la mise en cache (Facultatif)**
-   * **Use Design Cache** : Stocke les données de la source pour **l'aperçu en phase de conception**
+   * **Use Design Cache** : Stocke les données de la source pour la **prévisualisation en phase de conception**
    * **Generate Sample Values** : Crée des **valeurs d'espace réservé** si la source de données n'est pas disponible
 5. **Passer à l'étape suivante**
 
@@ -23,16 +23,16 @@
 
 ## **Utilisation du PADS4 Data Server**
 
-Le **PADS4 Data Server** récupère et distribue **des données en temps réel** à tous les Viewers connectés.
+Le **PADS4 Data Server** récupère et distribue des **données en temps réel** à tous les Viewers connectés.
 
 ### **Comparaison des méthodes de récupération de données**
 
-| **Fonctionnalité**           | **Utilisation du PADS4 Data Server**                   | **Récupération individuelle des données**                          |
-| ---------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------ |
-| **Récupération des données** | Une seule requête pour tous les Viewers                | Chaque Viewer récupère les données séparément                      |
-| **Performance**              | Optimisée (réduit les requêtes de base de données)     | Plus de charge sur la source de données                            |
-| **Cas d'utilisation**        | Réseaux à grande échelle, sources de données lentes    | Requêtes spécifiques au Viewer (par ex., filtrage par Viewer Name) |
-| **Support de basculement**   | Bascule vers un serveur PADS4 de secours si nécessaire | Pas de redondance intégrée                                         |
+| **Fonctionnalité**           | **Utilisation du PADS4 Data Server**                  | **Récupération individuelle des données**                          |
+| ---------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------ |
+| **Récupération des données** | Une seule requête pour tous les Viewers               | Chaque Viewer récupère les données séparément                      |
+| **Performance**              | Optimisée (réduit les requêtes de base de données)    | Plus de charge sur la source de données                            |
+| **Cas d'utilisation**        | Réseaux à grande échelle, sources de données lentes   | Requêtes spécifiques au Viewer (par ex., filtrage par Viewer Name) |
+| **Support de basculement**   | Bascule vers un PADS4 Server de secours si nécessaire | Pas de redondance intégrée                                         |
 
 ### **Quand activer le PADS4 Data Server**
 
@@ -67,12 +67,12 @@ Un **concepteur** doit créer une **mise en page basée sur des données** mais 
 
 ## **Considérations de basculement et de sauvegarde**
 
-* Si le **PADS4 Data Server** tombe en panne, un **Backup PADS4 Server** (si configuré) prend le relais.
-* Si le **Data Server est désactivé**, assurez-vous que **chaque Viewer** peut **accéder indépendamment** à la source de données.
+* Si le **PADS4 Data Server** tombe en panne, un **Serveur PADS4 de sauvegarde** (si configuré) prend le relais.
+* Si **Data Server est désactivé**, assurez-vous que **chaque Viewer** peut **accéder indépendamment** à la source de données.
 
 ***
 
 ## **Étapes finales**
 
-* **Cliquez sur Next** pour passer aux **Connection Settings**
-* Complétez le **Data Provider Wizard**
+* **Cliquez sur Suivant** pour passer aux **Paramètres de connexion**
+* Complétez l'**Assistant de fournisseur de données**

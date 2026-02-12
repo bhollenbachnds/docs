@@ -1,41 +1,41 @@
-Le fournisseur **Microsoft SQL Server Compact Edition (CE)** dans **PADS4** vous permet de vous connecter à un fichier de **base de données SQL Server CE** et de récupérer des données pour les utiliser dans vos présentations.
+Le fournisseur **Microsoft SQL Server Compact Edition (CE)** dans **PADS4** vous permet de vous connecter à un fichier de base de données **SQL Server CE database file** et de récupérer des données pour les utiliser dans vos présentations.
 
 ***
 
 ### **Étapes pour ajouter ou modifier une connexion Microsoft SQL Server CE**
 
-#### **1. Démarrer l'assistant de fournisseur de données**
+#### **1. Démarrer l'assistant Data Provider**
 
-* Ouvrez **PADS4** et accédez à **l'assistant de fournisseur de données**.
-* Sélectionnez **Microsoft SQL Server CE** comme **type de fournisseur**.
-* Cliquez sur **Suivant** pour continuer.
+* Ouvrez **PADS4** et naviguez vers **Data Provider Wizard**.
+* Sélectionnez **Microsoft SQL Server CE** comme **provider type**.
+* Cliquez sur **Next** pour continuer.
 
 #### **2. Spécifier l'emplacement de la base de données et les paramètres d'accès**
 
 * Choisissez l'une des options suivantes :
-  * **Content Library** : Utiliser une **base de données SQL Server CE** stockée dans la **PADS4 Content Library** *(recommandé pour la synchronisation automatique)*.
-  * **Nom de fichier** : Utiliser une **base de données SQL Server CE** stockée **en dehors** de la bibliothèque de contenu *(distribution manuelle des fichiers requise)*.
+  * **Content Library** : Utilisez une base de données **SQL Server CE database** stockée dans la **PADS4 Content Library** *(recommandé pour la synchronisation automatique)*.
+  * **File Name** : Utilisez une base de données **SQL Server CE database** stockée **outside** de la bibliothèque de contenu *(distribution manuelle des fichiers requise)*.
 
-* Entrez le **chemin du fichier** ou utilisez le bouton **Parcourir** pour localiser le fichier.
+* Entrez le **file path** ou utilisez le bouton **Browse** pour localiser le fichier.
 
-* Si la base de données est **protégée par mot de passe**, entrez le **mot de passe**.
+* Si la base de données est **password-protected**, entrez le **password**.
 
-* Cliquez sur **Suivant** pour continuer.
+* Cliquez sur **Next** pour continuer.
 
 #### **3. Sélectionner la table ou la requête SQL**
 
-* Le système détectera automatiquement les **tables disponibles** dans la base de données.
+* Le système détectera automatiquement **tables disponibles** dans la base de données.
 
 * Sélectionnez une table dans la **liste déroulante**.
 
-* Alternativement, sélectionnez **Instruction SQL** et entrez une **requête SQL personnalisée** pour récupérer des données spécifiques.
+* Alternativement, sélectionnez **SQL Statement** et saisissez une **requête SQL personnalisée** pour récupérer des données spécifiques.
 
-* Cliquez sur **Suivant** pour continuer.
+* Cliquez sur **Next** pour continuer.
 
 #### **4. Terminer la configuration**
 
 * **Vérifiez** les paramètres sélectionnés.
-* Cliquez sur **Terminer** pour enregistrer le fournisseur de données.
+* Cliquez sur **Finish** pour enregistrer le fournisseur de données.
 
 ***
 
@@ -43,11 +43,11 @@ Le fournisseur **Microsoft SQL Server Compact Edition (CE)** dans **PADS4** vous
 
 * **Considérations relatives au PADS4 Data Server** :
   * Si vous utilisez un **PADS4 Data Server**, assurez-vous que le **fichier de base de données est accessible depuis le serveur**.
-  * Si vous **n'utilisez pas** de **PADS4 Data Server**, assurez-vous que **PADS4 Designer et Viewers** peuvent accéder au **fichier de base de données**.
+  * Si **vous n'utilisez pas** un **PADS4 Data Server**, assurez-vous que **PADS4 Designer and Viewers** peuvent accéder au **fichier de base de données**.
 * **Recommandations pour le stockage des fichiers** :
   * L'utilisation de la **PADS4 Content Library** assure une **synchronisation automatique des fichiers**.
   * Le stockage de la base de données **en dehors** de la bibliothèque de contenu nécessite une **distribution manuelle des fichiers**.
 * **Requêtes SQL** :
-  * Les **instructions SQL** saisies manuellement doivent être optimisées pour **les performances et l'efficacité**.
+  * Les **instructions SQL** saisies manuellement doivent être optimisées pour la **performance et l'efficacité**.
 
-Cette configuration permet à **PADS4** d'extraire des données en temps réel d'une **base de données SQL Server CE**, en les intégrant de manière transparente dans l'affichage dynamique, les rapports ou les flux de travail d'automatisation.
+Cette configuration permet à **PADS4** d'extraire des données en temps réel d'une **SQL Server CE database**, en les intégrant de manière transparente dans l'affichage dynamique, les rapports ou les flux de travail d'automatisation.

@@ -1,31 +1,31 @@
-Le **.NET framework provider** permet **des connexions haute performance** à **MySQL, Oracle, SQL Server**, et autres bases de données. Il réduit les frais généraux tout en maintenant une fonctionnalité complète.
+Le **fournisseur .NET framework** permet des **connexions haute performance** à **MySQL, Oracle, SQL Server**, et autres bases de données. Il réduit les frais généraux tout en maintenant une fonctionnalité complète.
 
 ***
 
 ## **Prérequis**
 
-* Installez le **.NET driver** pour votre base de données avant de continuer.
+* Installez le **pilote .NET** pour votre base de données avant de continuer.
 * Assurez-vous que votre base de données est **accessible** depuis le **PADS4 Data Server** ou les Viewers individuels.
 
 ***
 
 ## **Étapes pour connecter une base de données via .NET Framework**
 
-### **1. Démarrer l'Assistant de fournisseur de données**
+### **1. Démarrer l'Assistant de Fournisseur de Données**
 
-* Suivez les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
+* Suivez les étapes dans **Ajouter un Fournisseur de Données** ou **Modifier un Fournisseur de Données**.
 * Choisissez **.NET Framework** comme type de fournisseur.
 
 ### **2. Configurer les paramètres de connexion .NET**
 
 * Sélectionnez le **.NET Data Provider** dans la liste des fournisseurs installés.
-  * Si votre fournisseur est manquant, assurez-vous que le **.NET driver** correct est installé.
-* Saisissez la **Connection String** pour vous connecter à votre base de données.
-  * Référez-vous à la **.NET provider documentation** ou consultez **[www.connectionstrings.com](http://www.connectionstrings.com)** pour des exemples.
-* Sécuriser la chaîne de connexion (Optionnel)
-  * Utilisez **"Optional Password"** pour masquer la chaîne de connexion lors de l'édition.
+  * Si votre fournisseur est manquant, assurez-vous que le **pilote .NET** correct est installé.
+* Saisissez la **Chaîne de Connexion** pour vous connecter à votre base de données.
+  * Référez-vous à la **documentation de votre fournisseur .NET** ou consultez **[www.connectionstrings.com](http://www.connectionstrings.com)** pour des exemples.
+* Sécuriser la Chaîne de Connexion (Optionnel)
+  * Utilisez **"Mot de passe optionnel"** pour masquer la chaîne de connexion lors de l'édition.
 
-**Exemple de chaîne de connexion pour MySQL :**
+**Exemple de Chaîne de Connexion pour MySQL :**
 
 ```
 Server=192.168.1.10;Port=3306;Database=mysampledb;Uid=root;Pwd=mypassword;pooling=false;
@@ -47,7 +47,7 @@ SELECT * FROM MyTable
 
 * Cliquez sur **Test** pour vérifier la connexion.
 
-### **5. Terminer l'Assistant**
+### **5. Terminer l'assistant**
 
 * Cliquez sur **Next** pour continuer.
 * Terminez l'assistant comme décrit dans **Adding a Data Provider**.
@@ -58,25 +58,25 @@ SELECT * FROM MyTable
 
 * **Si vous utilisez PADS4 Data Server :**
   * Assurez-vous que le **.NET driver is installed** sur le **server**.
-  * La **base de données doit être accessible** depuis le **réseau du PADS4 Data Server**.
+  * La **database must be accessible** depuis le réseau **PADS4 Data Server's network**.
 
 * **Si vous n'utilisez pas PADS4 Data Server :**
-  * Installez le **.NET driver** sur **all PADS4 Viewers** et **PADS4 Designer** machines.
-  * Vérifiez que **chaque Viewer** peut accéder à la **base de données** directement.
+  * Installez le **.NET driver** sur **all PADS4 Viewers** et les machines **PADS4 Designer**.
+  * Vérifiez que **each Viewer** peut accéder à la **database** directement.
 
 ***
 
 ## **Dépannage**
 
 * **La connexion à la base de données échoue ?**
-  * Vérifiez les **paramètres du pare-feu** et les **identifiants de la base de données**.
-  * Assurez-vous de l'**accès réseau** au **serveur de base de données**.
-  * Vérifiez que le **.NET driver** est **correctement installé**.
+  * Vérifiez les **firewall settings** et les **database credentials**.
+  * Assurez-vous de l'**network access** au **database server**.
+  * Vérifiez que le **.NET driver** est **installed correctly**.
 
 * **La requête ne renvoie aucune donnée ?**
-  * Exécutez la **requête SQL manuellement** dans un outil de base de données pour vérifier les erreurs.
-  * Vérifiez que les **noms de table et de colonne** sont corrects.
+  * Exécutez la **query manually** dans un outil de base de données pour vérifier les erreurs.
+  * Vérifiez que les **table and column names** sont corrects.
 
 ***
 
-Votre base de données est maintenant connectée. Si vous avez besoin de filtrage avancé, de tri ou de mises à jour en temps réel, explorez les **options du Data Provider** dans PADS4.
+Votre base de données est maintenant connectée. Si vous avez besoin de filtrage avancé, de tri ou de mises à jour en temps réel, explorez les **Data Provider options** dans PADS4.

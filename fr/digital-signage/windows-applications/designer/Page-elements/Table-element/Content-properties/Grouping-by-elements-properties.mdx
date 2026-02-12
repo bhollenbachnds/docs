@@ -1,0 +1,37 @@
+Le **grouping by properties** vous permet d'organiser les lignes du tableau en **hiding duplicate values** dans les colonnes sélectionnées. Lorsque **two or more consecutive rows** contiennent la même valeur pour un **grouped element**, cette valeur est **only displayed in the first row**.
+
+⚠ **Important:** Cette fonctionnalité **does not** regroupe pas réellement les données dans le tableau comme l'option **"Scroll Data, Grouped By"**. Au lieu de cela, elle **hides duplicate values** pour améliorer la lisibilité.
+
+***
+
+## **Définition des éléments de regroupement dans un tableau**
+
+1. Ouvrez la fenêtre **Table Properties**.
+2. Accédez à la section **Row Properties**.
+3. Cliquez sur **Edit** pour modifier la **Row Definition**.
+4. Dans l'**Home tab** du ruban, cliquez sur **Group By**.
+5. Sélectionnez les **elements** que vous souhaitez regrouper.
+6. (Facultatif) Utilisez **Move Up** ou **Move Down** pour ajuster la **grouping priority**.
+7. Cliquez sur **OK** pour enregistrer les **group settings**.
+8. Dans le **File menu**, cliquez sur **Close**.
+9. Cliquez sur **Yes** pour confirmer les modifications.
+10. Cliquez sur **OK** ou **Apply** pour mettre à jour la présentation.
+
+***
+
+## **Options de regroupement supplémentaires**
+
+* Si vous avez besoin de **display data grouped together** au lieu de simplement **hiding duplicate values**, utilisez l'option **"Scroll Data, Grouped By"** dans **Scroll Options**.
+
+***
+
+## **Remarques et bonnes pratiques**
+
+* **All elements** dans la définition de ligne **can be used for grouping**, mais **text elements and picture elements** sont les plus **commonly used**.
+* **Lorsque plusieurs éléments sont regroupés**, le système les traite par **ordre de priorité**:
+  * Il vérifie d'abord **le premier élément de regroupement**.
+  * Si sa valeur **correspond à la ligne précédente**, il est **masqué**.
+  * Le système vérifie ensuite le **prochain élément de regroupement**, continuant jusqu'à ce que soit :
+    * Une **valeur différente soit trouvée**, ou
+    * Tous les **éléments de regroupement** sélectionnés aient été traités.
+* **Il n'y a pas de limite** au nombre d'**éléments de regroupement** que vous pouvez définir.

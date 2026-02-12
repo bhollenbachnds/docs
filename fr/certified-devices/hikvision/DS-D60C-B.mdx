@@ -1,24 +1,20 @@
-Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur le **Hikvision DS-D60C-B** appareil.
-
-***
+Ce guide fournit des instructions étape par étape pour **l'installation et la configuration du PADS4 Viewer** sur l'appareil **Hikvision DS-D60C-B**.
 
 ## **1. Première utilisation**
 
-Avant l'installation, il est recommandé de **compléter la configuration du PADS4 Server**.
+Avant l'installation, il est recommandé de **terminer la configuration du PADS4 Server**.
 
 <Note>
   La version minimale **PADS4 Server** requise est **PADS4 Foundation 2023.1**.
 </Note>
 
-***
-
 ### **1.1 Réinitialisation de l'appareil**
 
-Si l'appareil a déjà été utilisé, effectuez une **réinitialisation d'usine** pour effacer le stockage et éviter les conflits logiciels.
+Si l'appareil a été utilisé précédemment, effectuez une **réinitialisation d'usine** pour effacer le stockage et éviter les conflits logiciels.
 
 <Steps>
-  <Step title="Étape Un">
-    Ouvrez l'**écran d'accueil** de l'appareil.
+  <Step title="Première étape">
+    Ouvrez le **écran d'accueil** de l'appareil.
   </Step>
 
   <Step title="Étape Deux">
@@ -38,14 +34,12 @@ Si l'appareil a déjà été utilisé, effectuez une **réinitialisation d'usine
   </Step>
 </Steps>
 
-***
-
 ### **1.2 Mise à jour du firmware**
 
-Assurez-vous que le **firmware est mis à jour** à au moins **V1.7.1 build 20230424** avant d'installer PADS4.
+Assurez-vous que le **firmware est mis à jour** au moins à la version **V1.7.1 build 20230424** avant d'installer PADS4.
 
 <Steps>
-  <Step title="Étape Un">
+  <Step title="Étape Une">
     Copiez le fichier **update.zip** du firmware dans le **répertoire racine** d'une clé USB.
   </Step>
 
@@ -62,13 +56,9 @@ Assurez-vous que le **firmware est mis à jour** à au moins **V1.7.1 build 2023
   </Step>
 </Steps>
 
-***
-
 ## **2. Installation de PADS4 Viewer**
 
 Suivez les étapes ci-dessous pour installer et configurer **PADS4 Viewer sur le Hikvision DS-D60C-B**.
-
-***
 
 ### **2.1 Installation de PADS4 à partir d'une clé USB**
 
@@ -78,12 +68,12 @@ Le fichier **PADS4Hikvision.apk** est disponible sur le **PADS4 Server** in:
 C:\Program Files\PADS4\Foundation\Apps  
 ```
 
-Alternativement, téléchargez la dernière version depuis [**here**](https://github.com/PADS4/PADS4-Viewer-HikVision/releases/latest) et placez-la dans le **répertoire des applications du PADS4 Server** pour garantir l'installation de la version correcte.
+Alternativement, téléchargez la dernière version depuis [**ici**](https://github.com/PADS4/PADS4-Viewer-HikVision/releases/latest) et placez-la dans le **répertoire des applications du PADS4 Server** pour vous assurer que la version correcte est installée.
 
 #### **Étapes d'installation**
 
 <Steps>
-  <Step title="Étape Un">
+  <Step title="Étape Une">
     Copiez le fichier **PADS4Hikvision.apk** sur une **clé USB**.
   </Step>
 
@@ -116,8 +106,6 @@ Alternativement, téléchargez la dernière version depuis [**here**](https://gi
   </Step>
 </Steps>
 
-***
-
 ### **2.2 Connexion au PADS4 Server**
 
 **Format d'adresse du PADS4 Server :**
@@ -128,13 +116,13 @@ protocol://host:port/hostpath/
 
 * **Protocol:** `http` ou `https` (dépend du certificat SSL).
 * **Host:** Nom DNS ou **adresse IP** du **PADS4 Server**.
-* **Port:** *(Optionnel - à spécifier uniquement si vous utilisez des ports non standard).*
+* **Port:** *(Optionnel - spécifiez uniquement si vous utilisez des ports non standard).*
 * **Chemin d'hôte :** Configuré dans **System Management** *`(default: PADS4)`*.
 
 #### **Étapes de connexion**
 
 <Steps>
-  <Step title="Étape Un">
+  <Step title="Étape Une">
     Entrez l'**emplacement du PADS4 Server**.
   </Step>
 
@@ -155,19 +143,13 @@ protocol://host:port/hostpath/
   </Step>
 </Steps>
 
-***
-
 ### **2.3 Ajustement des paramètres du PADS4 Viewer**
 
 * **Appuyez et maintenez le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes** pour accéder aux **Paramètres du Viewer**.
 
-***
-
 ### **2.4 Mise à jour du PADS4 Viewer & de l'application PADS4 Hikvision**
 
 Le **PADS4 Viewer & l'application PADS4 Hikvision** se **mettront à jour automatiquement** lorsque le **PADS4 Server** est mis à jour.
-
-***
 
 ### **2.5 Accès au menu Android**
 
@@ -175,9 +157,7 @@ Si vous accédez au **Menu Android** pendant que **PADS4 est en cours d'exécuti
 
 Pour éviter le redémarrage, **arrêtez l'application PADS4 Hikvision dans les 30 secondes**.
 
-***
-
-## **3. Fonctionnalités prises en charge et limitations**
+## **3. Fonctionnalités prises en charge & Limitations**
 
 ### **3.1 Fonctionnalités générales**
 
@@ -190,37 +170,37 @@ Pour éviter le redémarrage, **arrêtez l'application PADS4 Hikvision dans les 
 
 ### **3.2 Capacités de l'appareil**
 
-| Fonctionnalité | Description                                                                                                               |
-| :------------: | ------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Mode Portrait** – Pris en charge. L'appareil pivote automatiquement.                                                    |
-|        ✅       | **Blocage de la télécommande** – Empêche l'interaction avec l'écran via la télécommande.                                  |
-|        ✅       | **Prend en charge HTTP & HTTPS**                                                                                          |
-|        ✅       | **Éteindre l'écran** – L'écran s'éteint lorsqu'aucune présentation n'est programmée, réduisant la consommation d'énergie. |
-|        ✅       | **Cluster Viewer** – Prend en charge le **Cluster Mode**.                                                                 |
-|        ✅       | **Vérification d'intégrité des fichiers MD5** – Assure l'intégrité du contenu.                                            |
-|        ❌       | **Contrôle du volume principal** – Le volume peut uniquement être ajusté au niveau de l'élément.                          |
+| Fonctionnalité | Description                                                                                                                   |
+| :------------: | ----------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mode Portrait** – Pris en charge. L'appareil pivote automatiquement.                                                        |
+|        ✅       | **Blocage de la télécommande** – Empêche l'interaction avec l'écran via la télécommande.                                      |
+|        ✅       | **Prend en charge HTTP & HTTPS**                                                                                              |
+|        ✅       | **Éteindre l'affichage** – L'écran s'éteint lorsqu'aucune présentation n'est programmée, réduisant la consommation d'énergie. |
+|        ✅       | **Cluster Viewer** – Prend en charge **Cluster Mode**.                                                                        |
+|        ✅       | **Vérification d'intégrité des fichiers MD5** – Assure l'intégrité du contenu.                                                |
+|        ❌       | **Contrôle du volume principal** – Le volume ne peut être ajusté qu'au niveau de l'élément.                                   |
 
 ***
 
 ### **3.3 Lecture et prise en charge du contenu**
 
-| Fonctionnalité | Description                                                                                                   |
-| :------------: | ------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Nombre maximum de vidéos prises en charge** – Jusqu'à **2 vidéos simultanées** par page.                    |
-|        ❌       | **Vidéo en streaming** – Non pris en charge.                                                                  |
-|        ✅       | **Rotation vidéo, Vidéos sans couture, Réflexion, Inclinaison, Retournement** – Pris en charge.               |
-|        ✅       | **Image, Texte, Ligne, Forme, Texte défilant, Tableaux, Boutons, Éléments Web**                               |
-|        ✅       | **Éléments PowerPoint & PDF** – Pris en charge *(PowerPoint nécessite une installation sur le PADS4 Server)*. |
-|        ❌       | **Éléments Flash** – Non pris en charge.                                                                      |
+| Fonctionnalité | Description                                                                                                |
+| :------------: | ---------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Nombre maximum de vidéos prises en charge** – Jusqu'à **2 vidéos simultanées** par page.                 |
+|        ❌       | **Vidéo en streaming** – Non pris en charge.                                                               |
+|        ✅       | **Rotation vidéo, Vidéos sans couture, Réflexion, Inclinaison, Retournement** – Pris en charge.            |
+|        ✅       | **Image, Texte, Ligne, Forme, Texte défilant, Tableaux, Boutons, Éléments Web**                            |
+|        ✅       | **Éléments PowerPoint & PDF** – Pris en charge *(PowerPoint nécessite une installation sur PADS4 Server)*. |
+|        ❌       | **Éléments Flash** – Non pris en charge.                                                                   |
 
 ***
 
-### **3.4 Connectivité de données et intégrations**
+### **3.4 Connectivité des données et intégrations**
 
 | Fonctionnalité | Description                                                                                                                               |
 | :------------: | ----------------------------------------------------------------------------------------------------------------------------------------- |
 |        ✅       | **Fournisseurs de données** – Prend en charge **70+ fournisseurs de données PADS4** pour récupérer et intégrer des données en temps réel. |
-|        ✅       | **Variables du Viewer** – Simplifie la gestion du contenu sans modifier les présentations.                                                |
+|        ✅       | **Variables du visualiseur** – Simplifie la gestion du contenu sans modifier les présentations.                                           |
 |        ✅       | **Liaisons de propriétés** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.                       |
 
 ***
@@ -230,7 +210,7 @@ Pour éviter le redémarrage, **arrêtez l'application PADS4 Hikvision dans les 
 | Fonctionnalité | Description                                                                          |
 | :------------: | ------------------------------------------------------------------------------------ |
 |        ✅       | **Gestion à distance des appareils** – Géré via **PADS4 CTRL Center & PADS4 Agent**. |
-|        ✅       | **Redémarrage & Relance du Viewer** – Pris en charge.                                |
-|        ✅       | **Capture d'écran** – Récupération des captures d'écran de l'affichage.              |
-|        ✅       | **Suivi de preuve de diffusion** – Surveille l'historique de lecture du contenu.     |
+|        ✅       | **Redémarrage & Relance du visualiseur** – Pris en charge.                           |
+|        ✅       | **Capture d'écran** – Récupérer des captures d'écran d'affichage.                    |
+|        ✅       | **Suivi de preuve de lecture** – Surveille l'historique de lecture du contenu.       |
 |        ✅       | **Support Blackbox** – Fournit des journaux système pour le dépannage et le support. |

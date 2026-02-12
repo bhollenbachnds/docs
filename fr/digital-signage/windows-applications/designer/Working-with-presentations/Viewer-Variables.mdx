@@ -2,7 +2,7 @@
 
 ***
 
-## **Que sont les Viewer Variables ?**
+## **Que Sont les Viewer Variables ?**
 
 * **Des espaces réservés spécifiques au Viewer** qui peuvent ajuster dynamiquement le contenu affiché dans les présentations.
 * Utilisées dans **le texte, les fournisseurs de données, les filtres, les règles, les liaisons de propriétés**, et plus encore.
@@ -12,9 +12,9 @@
 
 ***
 
-## **Où définir les Viewer Variables ?**
+## **Où Définir les Viewer Variables ?**
 
-### **1. System Management Application (Recommandé)**
+### **1. Application System Management (Recommandé)**
 
 * **Ajouter et gérer** les Viewer Variables.
 * Attribuer des **valeurs par défaut** qui s'appliquent à tous les Viewers.
@@ -25,7 +25,7 @@
 * Ajuster les **valeurs pour les Viewers individuels** sous l'onglet **Server**.
 * Remplace la valeur par défaut attribuée dans System Management.
 
-### **3. Fenêtre Viewer Options (sur l'appareil Viewer)**
+### **3. Fenêtre des Options du Viewer (sur l'appareil Viewer)**
 
 * Ajuster les Viewer Variables directement sur le Viewer pour des **ajustements locaux**.
 
@@ -33,7 +33,7 @@
 
 ## **Example: Personalized Text with Viewer Variables**
 
-Si vous définissez une Viewer Variable`#Store Name#` avec la valeur par défaut **"New York Health"**, et utilisez ce texte dans un élément de texte :
+Si vous définissez une Viewer Variable `#Store Name#` avec la valeur par défaut **"New York Health"**, et utilisez ce texte dans un Élément Texte :
 
 > **Welcome to the #Store Name#.**
 
@@ -45,7 +45,7 @@ Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (pa
 
 ***
 
-## **Où les Viewer Variables peuvent-elles être utilisées ?**
+## **Où Peut-on Utiliser les Viewer Variables ?**
 
 * **Champs de texte** dans les éléments.
 * **Data Providers** (requêtes, filtres, expressions, tri, chemins de fichiers).
@@ -56,9 +56,9 @@ Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (pa
 
 ***
 
-## **Exemples d'automatisation utilisant les Viewer Variables**
+## **Exemples d'Automatisation Utilisant les Viewer Variables**
 
-| **Cas d'utilisation**                                | **Exemple**                                                                              |
+| **Cas d'Utilisation**                                | **Exemple**                                                                              |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Informations personnalisées du magasin               | Afficher le nom et l'adresse spécifiques du magasin par Viewer.                          |
 | Sélection de produits basée sur la taille du magasin | Filtrer les produits en fonction d'une Viewer Variable comme `#StoreSize#`.              |
@@ -67,9 +67,9 @@ Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (pa
 
 ***
 
-## **Quand les Viewer Variables sont-elles transformées en valeurs réelles ?**
+## **Quand les Viewer Variables Sont-elles Transformées en Valeurs Réelles ?**
 
-| **Contexte**                                                     | **Quand remplacées**                                                                                             |
+| **Contexte**                                                     | **Moment du Remplacement**                                                                                       |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | **Dans les sources de données (SQL, XML, JSON, RSS)**            | Lorsque le Viewer lit ou reçoit des données de la source.                                                        |
 | **Dans les Data Providers (filtre, tri, expressions)**           | Au début de la récupération des données. Les nouvelles valeurs de variables affectent la prochaine récupération. |
@@ -89,18 +89,18 @@ Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (pa
 
 ***
 
-## **Remarques importantes**
+## **Remarques Importantes**
 
 * **N'utilisez PAS les Viewer Variables pour des valeurs qui changent constamment.**\
-  Les Viewer Variables **ne sont pas conçues** pour fonctionner comme des sources de données à haute fréquence (utilisez des Data Providers pour cela).
-* Les changements dans les Viewer Variables **ne déclenchent pas automatiquement** la réévaluation de toutes les règles ou l'actualisation du contenu, sauf en cas de rechargement.
-* **Fichiers en dehors de la Content Library** référencés avec des Viewer Variables peuvent **ne pas se synchroniser correctement**—conservez les fichiers dans la Content Library.
+  Les Viewer Variables **ne sont pas conçues** pour fonctionner comme des sources de données à haute fréquence (utilisez les Data Providers pour cela).
+* Les changements dans les Viewer Variables **ne pas déclencher automatiquement** la réévaluation de toutes les règles ou l'actualisation du contenu sauf en cas de rechargement.
+* **Fichiers en dehors de la Content Library** référencés avec des Variables Viewer peuvent **ne pas se synchroniser correctement**—conservez les fichiers dans la Content Library.
 
 ***
 
 ## **Avantages clés**
 
 * **Gestion centralisée du contenu** avec personnalisation locale dynamique.
-* **Une seule présentation** desservant plusieurs Viewers avec un contenu unique.
-* Facile à mettre à jour et à maintenir—**changez la valeur de la variable, pas la présentation**.
-* Améliore **l'automatisation et la communication ciblée** sans reconception complexe.
+* **Présentation unique** desservant plusieurs Viewers avec un contenu unique.
+* Facile à mettre à jour et à maintenir—**modifiez la valeur de la variable, pas la présentation**.
+* Améliore **l'automatisation et la communication ciblée** sans refonte complexe.

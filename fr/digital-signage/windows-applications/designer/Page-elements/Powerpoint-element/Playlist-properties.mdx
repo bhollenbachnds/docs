@@ -1,0 +1,39 @@
+Les **Play List Properties** définissent les **fichiers PowerPoint** qui seront affichés dans votre élément PowerPoint. Vous pouvez **ajouter plusieurs présentations**, les modifier, changer leur séquence ou les supprimer de la liste.
+
+***
+
+## **Gestion de la liste de lecture**
+
+* Vous pouvez **ajouter**, **modifier**, **réorganiser** ou **supprimer** des présentations PowerPoint.
+* Les boutons de navigation vous permettent de **parcourir la liste**.
+* La **durée totale** indique le temps d'affichage combiné de toutes les présentations.
+* Les propriétés d'un élément de liste de lecture dépendent du **type d'élément PowerPoint**.
+
+### **Élément de liste de lecture PowerPoint**
+
+Chaque élément de la liste de lecture peut provenir de **différentes sources**, comme décrit ci-dessous :
+
+| **Option**                          | **Description**                                                                                                                                                                |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **PowerPoint from Content Library** | Le fichier PowerPoint est stocké dans la **PADS4 Content Library** (recommandé). Les fichiers dans la Content Library sont **automatically synchronized** entre tous les PC.   |
+| **PowerPoint from File**            | Le fichier est **stored locally** en dehors de la PADS4 Content Library. Ces fichiers ne sont **not automatically synchronized**, vous devez donc les distribuer manuellement. |
+| **Separator**                       | Crée une **pause** dans la playlist. Aucune présentation PowerPoint n'est affichée pendant cet intervalle.                                                                     |
+
+***
+
+## **PowerPoint File Details**
+
+| **Propriété** | **Description**                                                                                                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Content**   | Stocke la référence au fichier PowerPoint. Vous pouvez **browse** la Content Library ou votre système de fichiers. Si vous utilisez un fichier local, le **file path** complet doit être spécifié. |
+| **Duration**  | Définit **how long (in seconds)** chaque présentation PowerPoint sera affichée. Si défini sur `0`, les diapositives suivront le minutage par défaut de PowerPoint.                                 |
+| **Effect**    | Spécifie l'**incoming transition effect** et sa **duration (in seconds)**.                                                                                                                         |
+
+***
+
+## **Important Notes**
+
+* Seules les **references** aux fichiers PowerPoint sont stockées, **not the actual files**.
+* Si le **original PowerPoint file is updated**, la dernière version sera utilisée pendant la lecture.
+* Les **Play List properties are disabled** si l'élément est connecté à une **data source**—dans ce cas, le contenu est déterminé par des données en temps réel.
+* **PowerPoint presentations always appear in the foreground** et ne peuvent pas être chevauchées par d'autres éléments.
