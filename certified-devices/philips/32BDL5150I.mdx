@@ -1,3 +1,6 @@
+---
+title: "E-paper 32BDL5150I"
+---
 
 Before beginning the installation process, ensure the **LauncherServiceViewer.zip** file is placed in the `/PADS4/apps/` directory on the PADS4 Server.
 
@@ -37,7 +40,7 @@ Access the instructions through the Philips Dropbox by selecting **“Models”*
 
 <Steps>
   <Step title="Step One">
-    Navigate to the **[scrcpy GitHub](https://github.com/Genymobile/scrcpy)** page.
+    Navigate to the [**scrcpy GitHub**](https://github.com/Genymobile/scrcpy) page.
   </Step>
   <Step title="Step Two">
     Scroll to **"Get the app"**, and download the version for your OS.
@@ -106,7 +109,7 @@ Use **scrcpy and adb** to install the PADS4 application.
 | Remote Control                       | ⚠️ Setting can be changed, but remotes are not supported |
 | HTTPS                                | ✅ Supported                                              |
 | Video                                | ❌ Not Applicable – only first frame shown                |
-| Image                                | ✅ JPG, PNG, BMP *(GIF static only)*                      |
+| Image                                | ✅ JPG, PNG, BMP _(GIF static only)_                      |
 | Text / Line / Shape                  | ✅ Supported                                              |
 | Scrolling Text                       | ⚠️ Unpredictable due to low refresh rate                 |
 | Formatted Text                       | ✅ Supported with timing considerations                   |
@@ -135,20 +138,17 @@ Use **scrcpy and adb** to install the PADS4 application.
 
 ## **4. General Limitations**
 
-* **Refresh Rate:**
-
-  * 25BDL4150I: \~1 minute
-  * 32BDL5150I: \~2 minutes
-
-* **Dynamic Content Rendering:**
-
-  * Dynamic elements are rendered as static **screenshots**.
+- **Refresh Rate:**
+  - 25BDL4150I: ~1 minute
+  - 32BDL5150I: ~2 minutes
+- **Dynamic Content Rendering:**
+  - Dynamic elements are rendered as static **screenshots**.
 
 ---
 
 ## **5. Troubleshooting**
 
-| **Problem**                        | **Solution**                                                                                                                      |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `adb devices` does not list device | Unplug both USB ends and replug. Reboot device by holding **power button \~5s**, then reconnect after green light stops flashing. |
-| Device not connecting via USB      | Follow the above reset/unplug steps. Perform a device reset if not previously done.                                               |
+| **Problem**                        | **Solution**                                                                                                                     |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `adb devices` does not list device | Unplug both USB ends and replug. Reboot device by holding **power button ~5s**, then reconnect after green light stops flashing. |
+| Device not connecting via USB      | Follow the above reset/unplug steps. Perform a device reset if not previously done.                                              |

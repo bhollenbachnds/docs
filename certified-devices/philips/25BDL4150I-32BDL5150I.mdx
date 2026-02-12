@@ -1,3 +1,7 @@
+---
+title: "E-paper 25BDL4150I"
+---
+
 This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **Philips ePaper displays**.
 
 ---
@@ -38,9 +42,9 @@ Firmware updates are available via the Philips support site:
 
 📌 **Instructions**:
 
-* Go to the Philips Dropbox
-* Click on **Models → Select Model → Open Instructions Manual**
-* (Use right-click and open in a new tab if needed)
+- Go to the Philips Dropbox
+- Click on **Models → Select Model → Open Instructions Manual**
+- (Use right-click and open in a new tab if needed)
 
 ---
 
@@ -63,6 +67,7 @@ Since these displays lack interactive input, use **scrcpy** to mirror and contro
   </Step>
   <Step title="Step Five">
     Open Command Prompt and verify installation:
+
     - `scrcpy -v`
     - `adb --version`
   </Step>
@@ -144,15 +149,12 @@ Ensure **scrcpy** and **adb** are correctly installed.
 
 ## **4. General Limitations**
 
-* **Refresh Rate**:
-
-  * 25BDL4150I: \~1 minute
-  * 32BDL5150I: \~2 minutes
-
-* **Content Behavior**:
-
-  * Dynamic content can be **displayed as screenshots**.
-  * Content should **not update faster than refresh rate**.
+- **Refresh Rate**:
+  - 25BDL4150I: ~1 minute
+  - 32BDL5150I: ~2 minutes
+- **Content Behavior**:
+  - Dynamic content can be **displayed as screenshots**.
+  - Content should **not update faster than refresh rate**.
 
 ---
 
@@ -162,4 +164,3 @@ Ensure **scrcpy** and **adb** are correctly installed.
 | ------------------------------------- | ----------------------------------------------------------------------- |
 | `adb devices` does not detect display | Unplug both ends of USB, reboot display (hold power 5s), reconnect USB. |
 | USB not detected by PC                | Reboot display and reconnect. Try factory reset if issue persists.      |
-

@@ -93,6 +93,9 @@
                   {
                     "group": "Aopen",
                     "pages": [
+                      "certified-devices/aopen/untitled-page",
+                      "certified-devices/aopen/e",
+                      "certified-devices/aopen/chrome-box",
                       "certified-devices/aopen/1032TP-Series"
                     ]
                   },
@@ -179,13 +182,13 @@
                     "group": "Philips",
                     "pages": [
                       "certified-devices/philips/32BDL5150I",
+                      "certified-devices/philips/25BDL4150I-32BDL5150I",
                       "certified-devices/philips/4650D",
                       "certified-devices/philips/3650Q",
                       "certified-devices/philips/4550D",
                       "certified-devices/philips/3550Q",
                       "certified-devices/philips/10BDL4551T",
-                      "certified-devices/philips/CRD50",
-                      "certified-devices/philips/25BDL4150I-32BDL5150I"
+                      "certified-devices/philips/CRD50"
                     ]
                   },
                   {
@@ -215,10 +218,10 @@
                   {
                     "group": "Samsung",
                     "pages": [
+                      "certified-devices/samsung/EMDX-076D",
                       "certified-devices/samsung/Tizen-7.0-SSSP10",
                       "certified-devices/samsung/Tizen-6.5-SSSP10",
-                      "certified-devices/samsung/Tizen-5.0-SSSP7",
-                      "certified-devices/samsung/EMDX-076D"
+                      "certified-devices/samsung/Tizen-5.0-SSSP7"
                     ]
                   },
                   {

@@ -1,216 +1,208 @@
-This guide provides step-by-step instructions for installing and configuring **PADS4 Viewer** on **Crestron TSS-1070-B-S** devices.  
+This guide provides step-by-step instructions for installing and configuring **PADS4 Viewer** on **Crestron TSS-1070-B-S** devices.
 
----
+## **1. First-Time Use**
 
-## **1. First-Time Use**  
+During installation, you will need to configure the **PADS4 Server location**. It is recommended to **complete the installation of the PADS4 Server first** before configuring the Crestron device.
 
-During installation, you will need to configure the **PADS4 Server location**. It is recommended to **complete the installation of the PADS4 Server first** before configuring the Crestron device.  
+<Note>
+  The minimum **PADS4 Server version** required to run **PADS4 on Crestron** is **PADS4 Foundation 2022.3**.
+</Note>
 
-<Note>The minimum **PADS4 Server version** required to run **PADS4 on Crestron** is **PADS4 Foundation 2022.3**.</Note>  
+### **1.1 Resetting the Device**
 
----
+If the device was previously used, a **factory reset** is recommended to clear storage and prevent interference with the **PADS4 Viewer software**.
 
-### **1.1 Resetting the Device**  
+<Steps>
+  <Step title="Step One">
+    Log in to the **web configuration interface** of the Crestron device.
+  </Step>
+  <Step title="Step Two">
+    Click the **arrow button** next to the **Action button** at the top-right of the screen.
+  </Step>
+  <Step title="Step Three">
+    Select **Restore**.
+  </Step>
+  <Step title="Step Four">
+    Click **Yes** in the confirmation dialog.
+  </Step>
+</Steps>
 
-If the device was previously used, a **factory reset** is recommended to clear storage and prevent interference with the **PADS4 Viewer software**.  
+### **1.2 Updating Firmware**
 
-<Steps>  
-  <Step title="Step One">  
-    Log in to the **web configuration interface** of the Crestron device.  
-  </Step>  
-  <Step title="Step Two">  
-    Click the **arrow button** next to the **Action button** at the top-right of the screen.  
-  </Step>  
-  <Step title="Step Three">  
-    Select **Restore**.  
-  </Step>  
-  <Step title="Step Four">  
-    Click **Yes** in the confirmation dialog.  
-  </Step>  
-</Steps>  
+**PADS4 is included with the Crestron firmware** and cannot be installed separately.
 
----
+<Note>
+  The minimum firmware version that includes **PADS4** is **2.003.1011**.
+</Note>
 
-### **1.2 Updating Firmware**  
+## **2. Installing PADS4 Viewer**
 
-**PADS4 is included with the Crestron firmware** and cannot be installed separately.  
+Follow the instructions below to run **PADS4 Viewer** on Crestron.
 
-<Note>The minimum firmware version that includes **PADS4** is **2.003.1011**.</Note>  
+### **2.1 Set Crestron Application Mode to PADS4**
 
----
+**PADS4** is included in the **Crestron firmware** and can be installed by selecting **PADS4 as the Application Mode** in the **web configuration interface**.
 
-## **2. Installing PADS4 Viewer**  
+<Steps>
+  <Step title="Step One">
+    Log in to the **web configuration interface** of the Crestron device.
+  </Step>
+  <Step title="Step Two">
+    Click the **Settings tab**.
+  </Step>
+  <Step title="Step Three">
+    Select **Applications**.
+  </Step>
+  <Step title="Step Four">
+    Select **PADS4** from the **Application Mode dropdown**.
+  </Step>
+  <Step title="Step Five">
+    Click **"Save Changes"** at the top-right of the web interface.
+  </Step>
+  <Step title="Step Six">
+    Click **"Yes, Reboot Now"** in the confirmation dialog.
+  </Step>
+</Steps>
 
-Follow the instructions below to run **PADS4 Viewer** on Crestron.  
+### **2.2 Connecting to PADS4 Server**
 
----
+After installation, **PADS4 Viewer** must be connected to the **PADS4 Server**.
 
-### **2.1 Set Crestron Application Mode to PADS4**  
+#### **PADS4 Server Address Format**
 
-**PADS4** is included in the **Crestron firmware** and can be installed by selecting **PADS4 as the Application Mode** in the **web configuration interface**.  
-
-<Steps>  
-  <Step title="Step One">  
-    Log in to the **web configuration interface** of the Crestron device.  
-  </Step>  
-  <Step title="Step Two">  
-    Click the **Settings tab**.  
-  </Step>  
-  <Step title="Step Three">  
-    Select **Applications**.  
-  </Step>  
-  <Step title="Step Four">  
-    Select **PADS4** from the **Application Mode dropdown**.  
-  </Step>  
-  <Step title="Step Five">  
-    Click **"Save Changes"** at the top-right of the web interface.  
-  </Step>  
-  <Step title="Step Six">  
-    Click **"Yes, Reboot Now"** in the confirmation dialog.  
-  </Step>  
-</Steps>  
-
----
-
-### **2.2 Connecting to PADS4 Server**  
-
-After installation, **PADS4 Viewer** must be connected to the **PADS4 Server**.  
-
-#### **PADS4 Server Address Format**  
-```  
+```
 protocol://host:port/hostpath/  
-```  
-- **Protocol:** Use `HTTP` or `HTTPS`, depending on whether a **valid SSL certificate** is used.  
-- **Host:** The **DNS name** or **IP address** of the **PADS4 Server**.  
-- **Port:** Optional – if **non-default HTTP/HTTPS ports** are used, specify the **port number**.  
-- **Host Path:** Configured in **PADS4 System Management** (default: `PADS4`).  
+```
 
-**Example:**  
-```  
+- **Protocol:** Use `HTTP` or `HTTPS`, depending on whether a **valid SSL certificate** is used.
+- **Host:** The **DNS name** or **IP address** of the **PADS4 Server**.
+- **Port:** Optional – if **non-default HTTP/HTTPS ports** are used, specify the **port number**.
+- **Host Path:** Configured in **PADS4 System Management** (default: `PADS4`).
+
+**Example:**
+
+```
 http://localhost/pads4  
-```  
+```
 
-#### **Connection Steps**  
+#### **Connection Steps**
 
-<Steps>  
-  <Step title="Step One">  
-    Enter the **PADS4 Server Location**.  
-  </Step>  
-  <Step title="Step Two">  
-    (Optional) Specify a **Viewer Name**. If left blank, the **PADS4 Server** will generate one.  
-  </Step>  
-  <Step title="Step Three">  
-    Press the **Start** button.  
-  </Step>  
-  <Step title="Step Four">  
-    Grant **permission to permanently store content** on the device when prompted.  
-  </Step>  
-  <Step title="Step Five">  
-    If the **Android System WebView** is outdated, it will be automatically updated.  
-  </Step>  
-  <Step title="Step Six">  
-    **PADS4 Viewer** will be downloaded. Wait for installation to complete, and the **Viewer will start** automatically.  
-  </Step>  
-</Steps>  
+<Steps>
+  <Step title="Step One">
+    Enter the **PADS4 Server Location**.
+  </Step>
+  <Step title="Step Two">
+    (Optional) Specify a **Viewer Name**. If left blank, the **PADS4 Server** will generate one.
+  </Step>
+  <Step title="Step Three">
+    Press the **Start** button.
+  </Step>
+  <Step title="Step Four">
+    Grant **permission to permanently store content** on the device when prompted.
+  </Step>
+  <Step title="Step Five">
+    If the **Android System WebView** is outdated, it will be automatically updated.
+  </Step>
+  <Step title="Step Six">
+    **PADS4 Viewer** will be downloaded. Wait for installation to complete, and the **Viewer will start** automatically.
+  </Step>
+</Steps>
 
----
+### **2.3 Adjust PADS4 Viewer Settings**
 
-### **2.3 Adjust PADS4 Viewer Settings**  
+To **adjust PADS4 Viewer settings** directly on the **Crestron display**:
 
-To **adjust PADS4 Viewer settings** directly on the **Crestron display**:  
+- **Hold down the left mouse button** or **touch the screen for 3 seconds** to open the **Options Screen**.
+- To **return to the PADS4 app**, press the **Launcher Settings** button.
 
-- **Hold down the left mouse button** or **touch the screen for 3 seconds** to open the **Options Screen**.  
-- To **return to the PADS4 app**, press the **Launcher Settings** button.  
+## **3. Configuring the Crestron Occupancy Sensor**
 
----
+**PADS4 supports the Crestron occupancy sensor.** Follow the steps below to **pair the sensor** and **register it in PADS4 Workspace**.
 
-## **3. Configuring the Crestron Occupancy Sensor**  
+### **3.1 Pairing the Occupancy Sensor with the Screen**
 
-**PADS4 supports the Crestron occupancy sensor.** Follow the steps below to **pair the sensor** and **register it in PADS4 Workspace**.  
+<Steps>
+  <Step title="Step One">
+    Log in to the **web configuration interface** of the Crestron screen.
+  </Step>
+  <Step title="Step Two">
+    Click the **Settings tab**.
+  </Step>
+  <Step title="Step Three">
+    Open **Device Pairing**.
+  </Step>
+  <Step title="Step Four">
+    Select **POE Occupancy Sensor** in the **Device Model dropdown**.
+  </Step>
+  <Step title="Step Five">
+    Enter the **IP address** or **FQDN** of the **sensor**.
+  </Step>
+  <Step title="Step Six">
+    Click **Save Changes** at the top-right of the web interface.
+  </Step>
+  <Step title="Step Seven">
+    After saving, the **Pairing Status** should change to **Online**.
+  </Step>
+</Steps>
 
-### **3.1 Pairing the Occupancy Sensor with the Screen**  
+### **3.2 Finding the Occupancy Sensor in PADS4 Workspace**
 
-<Steps>  
-  <Step title="Step One">  
-    Log in to the **web configuration interface** of the Crestron screen.  
-  </Step>  
-  <Step title="Step Two">  
-    Click the **Settings tab**.  
-  </Step>  
-  <Step title="Step Three">  
-    Open **Device Pairing**.  
-  </Step>  
-  <Step title="Step Four">  
-    Select **POE Occupancy Sensor** in the **Device Model dropdown**.  
-  </Step>  
-  <Step title="Step Five">  
-    Enter the **IP address** or **FQDN** of the **sensor**.  
-  </Step>  
-  <Step title="Step Six">  
-    Click **Save Changes** at the top-right of the web interface.  
-  </Step>  
-  <Step title="Step Seven">  
-    After saving, the **Pairing Status** should change to **Online**.  
-  </Step>  
-</Steps>  
+After pairing, the sensor will be **visible in PADS4 Workspace Admin**.
 
----
+<Steps>
+  <Step title="Step One">
+    Log in to **PADS4 Workspace Admin**.
+  </Step>
+  <Step title="Step Two">
+    Click **Occupancy Sensors**.
+  </Step>
+  <Step title="Step Three">
+    Click the **Sensors tab**.
+  </Step>
+  <Step title="Step Four">
+    The **sensor** will be listed in the **table**.
+  </Step>
+</Steps>
 
-### **3.2 Finding the Occupancy Sensor in PADS4 Workspace**  
+## **4. Supported Features & Limitations**
 
-After pairing, the sensor will be **visible in PADS4 Workspace Admin**.  
+### **General Features**
 
-<Steps>  
-  <Step title="Step One">  
-    Log in to **PADS4 Workspace Admin**.  
-  </Step>  
-  <Step title="Step Two">  
-    Click **Occupancy Sensors**.  
-  </Step>  
-  <Step title="Step Three">  
-    Click the **Sensors tab**.  
-  </Step>  
-  <Step title="Step Four">  
-    The **sensor** will be listed in the **table**.  
-  </Step>  
-</Steps>  
+| Feature | Description                                               |
+| :-----: | --------------------------------------------------------- |
+| ✅       | **Portrait Mode** – Supported.                            |
+| ✅       | **HTTP/HTTPS** – Supported.                               |
+| ✅       | **Offline Content Library Storage** – Cached locally.     |
+| ❌       | **Block Remote Control** – Not supported.                 |
+| ✅       | **Remote Management via PADS4 CTRL Center & PADS4 Agent** |
 
----
+### **Content & Playback**
 
-## **4. Supported Features & Limitations**  
+| Feature | Description                                                                |
+| :-----: | -------------------------------------------------------------------------- |
+| ✅       | **Supports JPG, PNG, BMP, GIF, Text, Shapes, Tables, Interactive Buttons** |
+| ✅       | **Single Video Playback**                                                  |
+| ❌       | **Streaming Video** – Not supported.                                       |
+| ✅       | **Content from PADS4 Content Library & URL**                               |
+| ✅       | **Web Element** – Usage of **interactive Address Bar** not supported.      |
 
-### **General Features**  
+### **Device Management**
 
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Portrait Mode** – Supported. |  
-| ✅ | **HTTP/HTTPS** – Supported. |  
-| ✅ | **Offline Content Library Storage** – Cached locally. |  
-| ❌ | **Block Remote Control** – Not supported. |  
-| ✅ | **Remote Management via PADS4 CTRL Center & PADS4 Agent** |  
-
-### **Content & Playback**  
-
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Supports JPG, PNG, BMP, GIF, Text, Shapes, Tables, Interactive Buttons** |  
-| ✅ | **Single Video Playback** |  
-| ❌ | **Streaming Video** – Not supported. |  
-| ✅ | **Content from PADS4 Content Library & URL** |  
-| ✅ | **Web Element** – Usage of **interactive Address Bar** not supported. |  
-
-### **Device Management**  
-
-| Feature | Description |  
-|:------:|------------|  
-| ✅ | **Reboot & Restart Viewer** – Supported. |  
-| ❌ | **Shutdown & Wake-on-LAN** – Not supported. |  
-| ✅ | **Retrieve Screenshots & System Logs** |  
-| ✅ | **Install Fonts & Proof of Play Tracking** |  
+| Feature | Description                                 |
+| :-----: | ------------------------------------------- |
+| ✅       | **Reboot & Restart Viewer** – Supported.    |
+| ❌       | **Shutdown & Wake-on-LAN** – Not supported. |
+| ✅       | **Retrieve Screenshots & System Logs**      |
+| ✅       | **Install Fonts & Proof of Play Tracking**  |
 
 ---
 
-## **5. General Limitations**  
+## **5. General Limitations**
 
-<Warning> **Local file storage for content is not supported.** </Warning> 
-<Warning> **Proof of Play Limit: Maximum of 50,000 records stored offline.** </Warning> 
+<Warning>
+   **Local file storage for content is not supported.** 
+</Warning>
+
+ <Warning>
+   **Proof of Play Limit: Maximum of 50,000 records stored offline.** 
+</Warning>
