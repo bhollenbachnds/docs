@@ -245,13 +245,20 @@
             ]
           },
           {
+            "dropdown": "PADS4 Super User",
+            "pages": [
+              "ctrl-centre/untitled-page",
+              "ctrl-centre/domains",
+              "ctrl-centre/account-creation"
+            ]
+          },
+          {
             "dropdown": "PADS4 Ctrl Center",
             "groups": [
               {
                 "group": "Getting Started",
                 "pages": [
                   "ctrl-centre/introduction",
-                  "ctrl-centre/account-creation",
                   "ctrl-centre/dashboard",
                   "ctrl-centre/content",
                   "ctrl-centre/schedules",
@@ -266,8 +273,7 @@
                   "ctrl-centre/incidents",
                   "ctrl-centre/clusters",
                   "ctrl-centre/viewer-variables",
-                  "ctrl-centre/licenses",
-                  "ctrl-centre/domains"
+                  "ctrl-centre/licenses"
                 ]
               },
               {
