@@ -76,20 +76,31 @@
                       "install-pads4/install-pads4-server/PADS4-Configuration",
                       "install-pads4/install-pads4-server/Sensor-database-type-selection"
                     ]
-                  },
-                  {
-                    "group": "Install PADS4 Viewers",
-                    "pages": [
-                      "install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-Viewer",
-                      "install-pads4/install-pads4-viewer/How-to-install-PADS4-Windows-HTML5-Viewer",
-                      "install-pads4/install-pads4-viewer/How-to-install-PADS4-Generic-Android-Viewer"
-                    ]
                   }
                 ]
               },
               {
                 "group": "Install PADS4 on certified Devices",
                 "pages": [
+                  {
+                    "group": "Microsoft Windows",
+                    "pages": [
+                      "certified-devices/windows/Windows-Viewer",
+                      "certified-devices/windows/Windows-HTML5-Viewer"
+                    ]
+                  },
+                  {
+                    "group": "Generic Android Viewer",
+                    "pages": [
+                      "certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
+                    ]
+                  },
+                  {
+                    "group": "Google Chrome OS",
+                    "pages": [
+                      "certified-devices/chromeOS/ChromeOS"
+                    ]
+                  },
                   {
                     "group": "Aopen",
                     "pages": [
@@ -104,12 +115,6 @@
                     "pages": [
                       "certified-devices/brightsign/BrightSign-Series-5",
                       "certified-devices/brightsign/BrightSign-Series-4"
-                    ]
-                  },
-                  {
-                    "group": "Google Chrome OS",
-                    "pages": [
-                      "certified-devices/chromeOS/ChromeOS"
                     ]
                   },
                   {
@@ -132,12 +137,6 @@
                       "certified-devices/giada/F-Series",
                       "certified-devices/giada/F108D",
                       "certified-devices/giada/D73-and-D74"
-                    ]
-                  },
-                  {
-                    "group": "Generic Android Viewer",
-                    "pages": [
-                      "certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
                     ]
                   },
                   {
@@ -234,13 +233,6 @@
                     "group": "Sony",
                     "pages": [
                       "certified-devices/sony/BZxx-series"
-                    ]
-                  },
-                  {
-                    "group": "Windows",
-                    "pages": [
-                      "certified-devices/windows/Windows-Viewer",
-                      "certified-devices/windows/Windows-HTML5-Viewer"
                     ]
                   }
                 ]
