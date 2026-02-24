@@ -1,78 +1,71 @@
-Here's a more professional and polished version of your text:  
+Here's a more professional and polished version of your text:
 
 ---
 
 # Upgrading to PADS4 Version 2021.3 and Higher
 
-With the release of **PADS4 version 2021.3**, a new **Advanced Content Library System** has been introduced. This update enhances functionality and security by transitioning from an open folder structure to a controlled environment. As a result, existing installations may require minor adjustments to accommodate this change.  
+With the release of **PADS4 version 2021.3**, a new **Advanced Content Library System** has been introduced. This update enhances functionality and security by transitioning from an open folder structure to a controlled environment. As a result, existing installations may require minor adjustments to accommodate this change.
 
----
+## PADS4 Advanced Content Library
 
-## PADS4 Advanced Content Library 
-
-Starting from **PADS4 version 2021.3**, the content library is no longer stored within the traditional directory path:  
+Starting from **PADS4 version 2021.3**, the content library is no longer stored within the traditional directory path:
 
 ```
 C:\ProgramData\PADS\Content\...
-```  
+```
 
-Instead, it is now managed within a **closed environment**, enabling PADS4 to introduce advanced features and improved security while maintaining seamless content management.  
-
----
+Instead, it is now managed within a **closed environment**, enabling PADS4 to introduce advanced features and improved security while maintaining seamless content management.
 
 ## PADS4 Virtual Drive on PADS4 (Sub/Backup) Servers
 
-When using **PADS4 Designer**, **Data Folder Data Providers**, **PADS4 CMS**, or **PADS4 Workspace**, the system now utilizes a **Virtual Drive** as a gateway to the new closed content environment.  
+When using **PADS4 Designer**, **Data Folder Data Providers**, **PADS4 CMS**, or **PADS4 Workspace**, the system now utilizes a **Virtual Drive** as a gateway to the new closed content environment.
 
-For existing installations that rely on the traditional **Content Library folder**, compatibility is maintained through this mechanism. The **Virtual Drive** is automatically installed during the upgrade process.  
+For existing installations that rely on the traditional **Content Library folder**, compatibility is maintained through this mechanism. The **Virtual Drive** is automatically installed during the upgrade process.
 
 ### Performance Considerations
-Users may experience a slight change in performance, as the **Virtual Drive** retrieves content dynamically from the closed environment instead of a direct file system structure.  
 
----
+Users may experience a slight change in performance, as the **Virtual Drive** retrieves content dynamically from the closed environment instead of a direct file system structure.
 
-## How Does It Work? 
+## How Does It Work?
 
-When installing **PADS4 Server version 2021.3 or higher**, a **Virtual Drive Service** is automatically deployed. This service provides seamless integration with the new **Advanced Content Library**.  
+When installing **PADS4 Server version 2021.3 or higher**, a **Virtual Drive Service** is automatically deployed. This service provides seamless integration with the new **Advanced Content Library**.
 
-### Navigating the Virtual Drive 
-After upgrading, you may notice that the previous content library folder:  
+### Navigating the Virtual Drive
+
+After upgrading, you may notice that the previous content library folder:
 
 ```
 C:\ProgramData\PADS\Content\...
-```  
+```
 
-is now represented as a **Virtual Folder** (indicated by an arrow on the folder icon). You can still open and interact with it as you would with a normal folder.  
+is now represented as a **Virtual Folder** (indicated by an arrow on the folder icon). You can still open and interact with it as you would with a normal folder.
 
 ### Functionality
-Although the folder appears to contain files, no actual data is stored locally. Instead, the system dynamically retrieves and displays file information from the **PADS4 Server**. Users can:  
-- **Add, edit, and delete files**  
-- **Open files for editing and save changes directly**  
-- **Synchronize changes automatically with the PADS4 Server**  
 
-Additionally, any new files uploaded via the **PADS4 Web Portal** will appear in the **Virtual Drive** folder.  
+Although the folder appears to contain files, no actual data is stored locally. Instead, the system dynamically retrieves and displays file information from the **PADS4 Server**. Users can:
 
----
+- **Add, edit, and delete files**
+- **Open files for editing and save changes directly**
+- **Synchronize changes automatically with the PADS4 Server**
+
+Additionally, any new files uploaded via the **PADS4 Web Portal** will appear in the **Virtual Drive** folder.
 
 ## Log File Location
-For troubleshooting and log analysis, the **Virtual Drive Service** maintains a dedicated log file. You can find it here:  
+
+For troubleshooting and log analysis, the **Virtual Drive Service** maintains a dedicated log file. You can find it here:
 
 ```
 C:\Program Files\NDS\PADS4 Foundation\NDS.Content.FileSystem.Service\NDS.Content.FileSystem.Service.log
-```  
+```
 
----
+## API for Content Management
 
-## API for Content Management 
+With **PADS4 version 2021.3**, a new **Content Management API** has been introduced, replacing the previous **Agent SDK**. This API provides improved functionality and flexibility for managing content programmatically.
 
-With **PADS4 version 2021.3**, a new **Content Management API** has been introduced, replacing the previous **Agent SDK**. This API provides improved functionality and flexibility for managing content programmatically.  
-
-For further details and implementation examples, refer to the **PADS4 API Documentation on GitHub**.  
-
----
+For further details and implementation examples, refer to the **PADS4 API Documentation on GitHub**.
 
 ## Content Library and Viewers
 
-The mechanism for syncing **Viewers** remains unchanged in this update. Existing processes for content synchronization and playback will continue to function as before.  
+The mechanism for syncing **Viewers** remains unchanged in this update. Existing processes for content synchronization and playback will continue to function as before.
 
 ---

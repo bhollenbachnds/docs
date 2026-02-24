@@ -54,8 +54,6 @@
               {
                 "group": "System Configuration",
                 "pages": [
-                  "system-configuration/PADS4-Configuration-Selection",
-                  "system-configuration/Active-Directory-Configuration",
                   "system-configuration/PADS4-Hardware-Configuration-Guide",
                   "system-configuration/Microsoft-Windows-Group-Polocies"
                 ]
@@ -68,12 +66,11 @@
                     "group": "Install PADS4 Servers",
                     "pages": [
                       "install-pads4/install-pads4-server/How-to-install-PADS4-Main-Server",
-                      "install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers",
-                      "install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers",
+                      "install-pads4/install-pads4-server/PADS4-Configuration",
                       "install-pads4/install-pads4-server/How-to-install-PADS4-Sub-Server",
                       "install-pads4/install-pads4-server/How-to-install-PADS4-Backup-Server",
-                      "install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
-                      "install-pads4/install-pads4-server/PADS4-Configuration",
+                      "install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers",
+                      "install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers",
                       "install-pads4/install-pads4-server/Sensor-database-type-selection"
                     ]
                   }
@@ -245,6 +242,7 @@
               "ctrl-centre/untitled-page",
               "ctrl-centre/user-interface",
               "ctrl-centre/domains",
+              "install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
               "ctrl-centre/account-creation"
             ]
           },
