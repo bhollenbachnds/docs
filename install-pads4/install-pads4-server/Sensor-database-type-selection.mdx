@@ -1,38 +1,44 @@
-## **Changing the Sensor Database in PADS4**  
+## **Changing the Sensor Database in PADS4**
 
-By default, **SQLite** is used as the storage database for **Sensor data**.  
+By default, **SQLite** is used as the storage database for **Sensor data**.
 
-⚠ **Important:** Changing the database type will erase all existing data. Ensure you have a backup before proceeding.  
+⚠ **Important:** Changing the database type will erase all existing data. Ensure you have a backup before proceeding.
 
----
+## **Changing the Database Type**
 
-## **Changing the Database Type**  
+### **Using the PADS4 Configuration Tool**
 
-### **Using the PADS4 Configuration Tool**  
-1. Open the **PADS4 Configuration Tool**.  
-2. Navigate to **Sensor Database** settings.  
-3. Select the desired **database type** from the available options.  
+1. Open the **PADS4 Configuration Tool**.
+2. Navigate to **Sensor Database** settings.
+3. Select the desired **database type** from the available options.
 
-### **Manually Changing the Database Type**  
-1. Open **File Explorer** and navigate to the PADS4 installation directory:  
-   ```  
+### **Manually Changing the Database Type**
+
+1. Open **File Explorer** and navigate to the PADS4 installation directory:
+
+   ```
    C:\Program Files\NDS\PADS4 Foundation\  
-   ```  
-2. Locate and launch:  
-   ```  
+   ```
+2. Locate and launch:
+
+   ```
    NDS.DataStorage.ConfigurationTool.exe  
-   ```  
-3. Select the **new database type** and apply the changes.  
+   ```
+3. Select the **new database type** and apply the changes.
 
----
+## **Supported Database Types**
 
-## **Supported Database Types**  
+PADS4 supports the following database types for **Sensor data storage**:
 
-PADS4 supports the following database types for **Sensor data storage**:  
-- **SQLite** (default)  
-- **SQL Server**  
-- **PostgreSQL**  
-- **MongoDB**  
+- **SQLite** (default)
+- **SQL Server**
+- **PostgreSQL**
+- **MongoDB**
 
-### **Data Export for Third-Party Software**  
-All supported databases allow **data export**, enabling seamless integration with third-party applications if needed.  
+### **Data Export for Third-Party Software**
+
+All supported databases allow **data export**, enabling seamless integration with third-party applications if needed.
+
+### Change Sensor database
+
+Option to change the type of database used for storage of sensor data. Click here to show more information.

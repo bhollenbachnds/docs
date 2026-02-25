@@ -8,7 +8,7 @@ Download the PADS4 Installer Setup from [here](https://docs.pads4.com/install-pa
 
 **Pre-Installation Checks**
 
-- Before installing the PADS4 product, verify prerequisites based on your setup. If using Workspace and/or CMS, ensure Internet Information Services (IIS) is installed on the server. 
+- Before installing the PADS4 product, verify prerequisites based on your setup. If using Workspace and/or CMS, ensure Internet Information Services (IIS) is installed on the server.
 - For storing Workspace and/or CMS data in a SQL Server database, confirm SQL Server is installed on the server.
 
 <Note>
@@ -23,30 +23,13 @@ Install PADS4 by following these numbered steps, ensuring you run as Administrat
 2. Change the installation root folder if needed (default: C:\\Program Files\\PADS4).​
 3. Read the installation document and license agreement, then check the boxes.​
 4. Check boxes to confirm and press Install to begin.​
-5. In the PADS4 Configuration window, set options per your requirements and license.​
-6. Confirm success with the "PADS4 Foundation installed successfully" message.​
-7. Optionally, check the box to install additional Windows apps like Scheduler or Designer.
+
+Upon completing the PADS4 installation, the PADS4 Configuration application automatically opens. Use it to set hosting ports, database options, and server settings.
 
 ### Error during installation
 
-In case an error occurs a pop up window will occur. This pop up contains a click HERE link to the log file created. If you encounter any problems this log file can be of help to investigate the cause of the problem. Every step of the installation process is written to this log.
-
-### Log file locations
-
-Check out this Application Log Files page for more details about log files. These log files can be of use when you encounter problems at runtime.
-
-### Network ports used by PADS4
-
-Check out the Network Ports Configurations page for more information about network ports used by PADS4.
-
-Check out the Replication with Sub and/or Backup Servers page for more info about synchronization.
-
-### Change Sensor database
-
-Option to change the type of database used for storage of sensor data. Click here to show more information.
-
-Important
+If an error occurs during PADS4 installation, a pop-up window appears with a "click HERE" link to the generated log file. This log records every step of the process, aiding in problem diagnosis. Share it with support if issues persist.
 
 <Warning>
-  It is of vital importance that you do not install the PADS4 Foundation on a workstation / Viewer PC (that is only configured for Designer/Scheduler/Messenger etc.). This will install PADS4 Server functionality on your workstation / Viewer PC, as this would result in setting up the configuration as a Server PC. It is however possible to install the PADS4 Clients software after installing the PADS4 Foundation installation as the machine is then already classified as a Server PC.
+  Never install PADS4 Foundation on a workstation or Viewer PC intended only for client apps like Designer, Scheduler, or Messenger. Doing so adds server functionality, reconfiguring it as a server machine and potentially disrupting client operations. After Foundation installation, you can add PADS4 client software on that server-classified PC.
 </Warning>
