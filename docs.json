@@ -32,6 +32,7 @@
         "dropdowns": [
           {
             "dropdown": "Installation Guide",
+            "icon": "circle-1",
             "color": {
               "light": "#00ADBA",
               "dark": "#00ADBA"
