@@ -32,6 +32,10 @@
         "dropdowns": [
           {
             "dropdown": "Installation Guide",
+            "color": {
+              "light": "#00ADBA",
+              "dark": "#00ADBA"
+            },
             "groups": [
               {
                 "group": "Getting Started",
