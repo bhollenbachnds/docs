@@ -1,99 +1,27 @@
 ---
-title: "Install a PADS4 backed server"
+title: "Install a PADS4 Backup server"
 ---
 
-Here is your revised version with the preferred formatting and professional tone:
+The installation process matches the PADS4 Server setup. See [Install PADS4 Server](/install-pads4/install-pads4-server/Install-the-PADS4-server) and run the installer.
 
-## **Download the PADS4 Foundation Setup**
+## Configuring a Backup Server
 
-Please download **PADS4 Foundation** from [**here**](http://go.pads4.com/?fwlink=1010).
+To configure a Back-up Server, complete the following steps in PADS4 System Management on the Main Server:​
 
-## **Pre-Installation Considerations**
+1. Open **PADS4 System Management** on the Main Server.
+2. In the left menu, select **Servers**.​
+3. In the ribbon bar, click **Add Backup Server**.
+4. Enter a **display name** for the Sub Server as it should appear in PADS4.
+6. Verify that a **valid license** is assigned to the Sub Server.
 
-Before starting the PADS4 installation, ensure the following prerequisites are met:
+## Network Port Configuration
 
-1. If you plan to use **Workspace** and/or **CMS**, verify that **Internet Information Services (IIS)** is installed on the server.
-2. If you intend to store **Workspace** and/or **CMS data** in a **SQL Server database**, ensure SQL Server is installed and configured.
+PADS4 uses specific network ports for its internal communication and services. Refer to the [**Network Ports Configuration**](/network-requirements) page for the full list of required ports and settings.
 
-<Note>
-  It is recommended to disable virus scanners before starting the installation or update process. Some antivirus programs may interfere with installation, leading to "could not lock file" errors.
-</Note>
+For more details on how data is synchronized between Main, Sub, and Backup Servers, see the [**Replication with Sub and Backup Servers**](/network-requirements) page.
 
-## **Installation Process**
-
-<Steps>
-  <Step title="Step One">
-    Execute the installation file as an **Administrator**. To do this, right-click on the installation file and select **"Run as Administrator."**
-  </Step>
-  <Step title="Step Two">
-    Change the installation root folder if required. The default location is:
-
-    ```
-    C:\Program Files\PADS4  
-    ```
-  </Step>
-  <Step title="Step Three">
-    Read the **installation documentation** and **license agreement** carefully before proceeding. Check the required boxes to confirm.
-  </Step>
-  <Step title="Step Four">
-    Check the necessary options and press **"Install"** to begin the installation process.
-  </Step>
-  <Step title="Step Five">
-    The **PADS4 Configuration** window will open during the setup. Configure settings as per your installation requirements and licensing type.
-  </Step>
-  <Step title="Step Six">
-    Upon successful installation, a confirmation message will appear indicating **PADS4 Foundation has been installed successfully.**
-  </Step>
-  <Step title="Step Seven - *Optional*">
-    If you wish to install additional **Windows-based PADS4 programs** (such as **PADS4 Scheduler, PADS4 Designer, etc.**), check the box to **start the setup after PADS4 Foundation installation completes.** The setup will allow you to select the required **client components**.
-  </Step>
-</Steps>
-
-## **Handling Installation Errors**
-
-### **Error During Installation**
-
-If an error occurs, a **pop-up window** will appear containing a **"click HERE"** link to the installation log file.
-
-- This log file records each step of the installation process and can help diagnose installation issues.
-
-### **Log File Locations**
-
-For more details about log files, refer to the **Application Log Files** page. These files are useful for troubleshooting runtime issues.
-
-## **Configuring a Backup Server**
-
-If installing a **Backup Server**, follow these steps using **PADS4 System Management** on the **Main Server**:
-
-1. Open **PADS4 System Management**.
-2. Select **Servers** from the left menu.
-3. Click **"Add Backup Server"** in the ribbon bar.
-4. Enter a **display name** for the Backup Server in **PADS4 Agent**.
-5. Configure **network settings** for the **Main Server** to communicate with the Backup Server.
-6. Ensure a **valid license** is assigned to the Backup Server.
-
-For further details, refer to the **PADS4 System Management Manual**, available during **Windows Clients installation**.
-
-## **Network Configuration**
-
-### **Network Ports Used by PADS4**
-
-For a list of required ports and network settings, refer to the [**Network Ports Configuration**](#) page.
-
-For information about **synchronization**, check out the [**Replication with Sub and/or Backup Servers**](#) page.
-
-## **Important Installation Considerations**
+## Server installation requirements
 
 <Warning>
-  ⚠ **Do NOT install PADS4 Foundation on a workstation or Viewer PC.**
-
-  - **PADS4 Foundation** should only be installed on **server machines**.
-  - Installing **PADS4 Foundation** on a **workstation/Viewer PC** (configured only for **PADS4 Designer, Scheduler, or Messenger**) will activate **server functionality**, altering its configuration.
-  - However, once **PADS4 Foundation** is installed on a **server**, you can install **PADS4 Client software** (e.g., **Scheduler, Designer, Messenger**) on the same machine if needed.
+  Do not install **PADS4 Foundation** on a workstation or Viewer PC. It must run on a dedicated **server machine**.
 </Warning>
-
-### Network ports used by PADS4
-
-Check out the Network Ports Configurations page for more information about network ports used by PADS4.
-
-Check out the Replication with Sub and/or Backup Servers page for more info about synchronization.
