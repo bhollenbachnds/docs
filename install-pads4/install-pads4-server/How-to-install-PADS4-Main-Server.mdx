@@ -24,7 +24,19 @@ Install PADS4 by following these numbered steps, ensuring you run as Administrat
 3. Read the installation document and license agreement, then check the boxes.​
 4. Check boxes to confirm and press Install to begin.​
 
-Upon completing the PADS4 installation, the PADS4 Configuration application automatically opens. Use it to set hosting ports, database options, and server settings.
+Upon completing the PADS4 installation, the PADS4 Configuration application automatically opens. Use it to set hosting ports, server settings and database options.
+
+1. Set HTTP and HTTPS Ports: Enter HTTP port and/or HTTPS port for PADS4 access.
+2. Enable HSTS (Optional): Toggle on to redirect all HTTP to HTTPS, enforcing secure transport.
+3. Set Minimum TLS Version: Select TLS 1.2 or 1.3 (recommended) from dropdown for SSL encryption.
+4. Message Broker and Reverse Proxy (Optional): Use defaults (NDS Message Broker, PADS4 Reverse Proxy) unless custom needs apply.
+5. Root Account Password: Enter strong password for su\\root user; required for system login.
+
+Click **Apply** to save settings and automatically restart services (takes about 30 seconds). 
+
+For more details on PADS4 Configuration, see the [PADS4 Configuration page](https://docs.pads4.com/install-pads4/install-pads4-server/PADS4-Configuration) in the documentation.
+
+You can now log in to PADS4 at `http(s)://localhost`,which loads the login page.
 
 ### Error during installation
 
