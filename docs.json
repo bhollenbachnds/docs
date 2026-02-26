@@ -70,7 +70,7 @@
                   {
                     "group": "Install PADS4 Servers",
                     "pages": [
-                      "install-pads4/install-pads4-server/How-to-install-PADS4-Main-Server",
+                      "install-pads4/install-pads4-server/Install-the-PADS4-server",
                       "install-pads4/install-pads4-server/PADS4-Configuration",
                       "install-pads4/install-pads4-server/How-to-install-PADS4-Sub-Server",
                       "install-pads4/install-pads4-server/How-to-install-PADS4-Backup-Server",
@@ -83,6 +83,7 @@
               },
               {
                 "group": "Install PADS4 Viewers",
+                "icon": "tv",
                 "pages": [
                   {
                     "group": "Microsoft Windows",
