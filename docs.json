@@ -1195,14 +1195,15 @@
           },
           {
             "dropdown": "Visitor Management",
-            "groups": [
+            "pages": [
               {
                 "group": "Getting Started",
                 "pages": [
                   "modules/visitor-management/introduction",
                   "modules/visitor-management/home-and-creating-users",
                   "modules/visitor-management/archive",
-                  "modules/visitor-management/settings"
+                  "modules/visitor-management/settings",
+                  "untitled-page"
                 ]
               }
             ]
