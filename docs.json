@@ -197,6 +197,7 @@
                   {
                     "group": "ProDVX",
                     "pages": [
+                      "certified-devices/prodvx/appc_s_series",
                       "certified-devices/prodvx/APPC-R23-series-Android-12",
                       "certified-devices/prodvx/APPC-R23-series-Android-11",
                       "certified-devices/prodvx/APPC-10SLBe-Android-11",

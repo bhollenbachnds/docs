@@ -1,0 +1,55 @@
+---
+title: "APPC S-series"
+---
+
+This manual provides step-by-step instructions for configuring the ProDVX APPC S-series device and installing the PADS4 Viewer. It covers initial setup, APK installation, autostart configuration, and viewer setup.
+
+**Compatible Devices:**
+
+- **APPC-10SFA**
+- **APPC-10SFN**
+- **APPC-10SF**
+- **APPC-10S**
+
+**Minimun requirments**
+
+PADS4 Version Required: **2024.1**
+
+Firmware ProDVX: **PPC-10N-S-series.R25.ProDVX_013.A25_02**
+
+## Initial Device Configuration
+
+Power on the ProDVX APPC 10SFA device to begin setup.
+
+- On the Welcome screen, **agree** to the Terms and Conditions, then click Start​
+- (Optional) Enable or disable ProMGR and click Continue.
+- **Enable** the PRODVX API, as PADS4 relies on it for proper operation, then click Continue.​
+- **Disable** AutoStart and click Continue.
+- Set screen **timeout** to Never and click Continue.
+- Click **Reboot** Device to apply changes.
+
+## Installing PADS4 Viewer APK
+
+Download the latest PADS4ProDVXv2.apk from your PADS4 server (e.g., https://[your-server]/[domain]/apps) or official sources, and copy it to a USB stick.
+
+1. Insert the USB drive into the ProDVX device.
+2. Open the Files app and select the USB drive.
+3. Tap **PADS4ProDVXv2.apk**.
+4. Click **Continue** on the warning prompt.
+5. Click **Install** to proceed.
+6. Once complete, click **Done**.
+
+## Setting Up Autostart
+
+Launch the **AutoStart app** from the App Drawer after installation. Click Start App, select PADS4ProDVXv2, then close AutoStart and reboot the device.
+
+This ensures the PADS4 Viewer launches automatically on boot.
+
+## Configuring PADS4 Viewer
+
+After reboot, the PADS4 Viewer opens. Enter your PADS4 server address in the format`https://<host>:<port>/<domain>/`
+
+- Optionally, enter a custom viewer name.
+- Click Start to connect
+
+Wait for connection; a green LED and viewer name indicate success.
