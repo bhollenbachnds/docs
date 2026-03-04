@@ -145,6 +145,7 @@
                   {
                     "group": "HikVision",
                     "pages": [
+                      "certified-devices/hikvision/ds-d60xx-un",
                       "certified-devices/hikvision/DS-D60C-B",
                       "certified-devices/hikvision/DS-D6032FN"
                     ]
