@@ -53,7 +53,7 @@ To install **PADS4 on ChromeOS**, follow these steps to **add PADS4 as an App** 
   <Step title="Step Seven">
     Specify the following URL:
 
-    ```
+    ```text
     http://[PADS4server]/PADS4/apps/Viewer/  
     ```
 
@@ -143,7 +143,7 @@ To ensure **PADS4 Viewer** starts automatically upon device startup:
 
 Once connected to the **PADS4 Server**, the server assigns a **temporary viewer name** such as:
 
-```
+```text
 Chrome0001  
 ```
 
@@ -154,6 +154,16 @@ To rename the viewer, use **PADS4 CTRL Center**.
 ## **4. Updating PADS4 Viewer**
 
 After initial installation, **PADS4 Viewer** will **automatically update** when the **PADS4 Server** is updated.
+
+## **5. Direct access to ChromeOS on device.**
+
+The PADS4 viewer will start directly in Kiosk mode, this means it is well protected against any tempering with the device directly.
+
+In case you do need to get access to ChromeOS to, for example, change the WIFI network it is connected to, you can prevent the device from booting into the PADS4 Kiosk app by pressing the **CTRL + ALT + S** button combination directly after a reboot.
+
+<Tip>
+  Some manufactures implement their own button combination instead of the default of ChromeOS. Kindly refer to the official documentation of the device manufacturer if this is the case.
+</Tip>
 
 ---
 
@@ -203,9 +213,9 @@ After initial installation, **PADS4 Viewer** will **automatically update** when 
 ## **Important Notes**
 
 <Warning>
-   **Content File Integrity** – The **PADS4 Content Library** verifies file integrity using **MD5 checksum** during synchronization.
+  **Content File Integrity** – The **PADS4 Content Library** verifies file integrity using **MD5 checksum** during synchronization.
 </Warning>
 
 <Warning>
-   **Proof of Play Limitations** – A maximum of **50,000 records** can be stored locally. Older records will be removed once the limit is reached.
+  **Proof of Play Limitations** – A maximum of **50,000 records** can be stored locally. Older records will be removed once the limit is reached.
 </Warning>
