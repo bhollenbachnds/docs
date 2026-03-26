@@ -106,6 +106,12 @@
                   },
                   {
                     "group": "Amino",
+                    "pages": [
+                      "amino-h200"
+                    ]
+                  },
+                  {
+                    "group": "Amino",
                     "pages": []
                   },
                   {
@@ -1209,8 +1215,7 @@
                   "modules/visitor-management/introduction",
                   "modules/visitor-management/home-and-creating-users",
                   "modules/visitor-management/archive",
-                  "modules/visitor-management/settings",
-                  "untitled-page"
+                  "modules/visitor-management/settings"
                 ]
               }
             ]
