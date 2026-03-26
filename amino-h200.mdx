@@ -1,0 +1,62 @@
+---
+title: "Amino H200"
+---
+
+This manual provides step-by-step instructions for configuring the Amino H200 device and installing the PADS4 Viewer. It covers initial setup, APK installation and viewer setup.
+
+**Compatible Devices:**
+
+- **Amino H200**
+
+**Minimum requirements**
+
+PADS4 Version Required: **2024.1**\
+Firmware Amino: **25.6.2540.10R**
+
+## Configure PADS4 Viewer in Orchestra
+
+Amino is using a central console to manage the devices. Make sure you have an account and download the Generic Android Viewer
+
+1. In your browser open the URL: [https://orchestrate.amino.tv/](https://orchestrate.amino.tv/)
+2. On the main page go to \*\*Application **sections.** \*\*
+3. Click on **Add Application.**
+4. Enter PADS4 Viewer as **Application Name**
+5. Upload the **Generic Android Viewer APK**
+
+The viewer is ready for deploying the your device.
+
+## Configure Configuration in Orchestra
+
+1. Navigate to **Configurations**
+2. Select **Add Configuration** and provide a name for your Configurations
+3. Click **Add** to save the Configurations
+4. Open the **Parameters** tab.
+5. Select the **Target Version** of the Firmware
+6. Click **Save Changes** to apply.
+7. Open the **Applications** tab in the configuration view.
+8. Click on **Add Action** and select your PADS4 application.
+9. Verify the app is listed, set **Action** to **Install**, and select the correct **Version** if applicable.
+10. Click **Save Changes** to apply.
+
+## Set auto start
+
+1. Open the **Parameters** tab.
+2. Under **Application Settings**, select the PADS4 Viewer app from the **Home App** dropdown.
+3. Click **Save Changes**.
+
+## Add PADS4 Viewers to Orchestra
+
+1. Navigate to **Devices** and select **Device list.**
+2. Click on **Add Device**.
+3. Enter the **Serial Number** of your device.
+4. Under **Configuration**, select the configuration you want to use.
+5. Once the Viewer comes on-line the player will install.
+
+## Configuring PADS4 Viewer
+
+After installing, the PADS4 Viewer opens. Enter your PADS4 server address in the format`https://<host>:<port>/<domain>/`
+
+- Optionally, enter a custom viewer name.
+- Click Start to connect
+
+Wait for connection; a green LED and viewer name indicate success.

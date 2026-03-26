@@ -105,6 +105,12 @@
                     ]
                   },
                   {
+                    "group": "Amino",
+                    "pages": [
+                      "amino-h200"
+                    ]
+                  },
+                  {
                     "group": "Aopen",
                     "pages": [
                       "certified-devices/aopen/untitled-page",
