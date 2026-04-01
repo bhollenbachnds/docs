@@ -1,0 +1,53 @@
+---
+title: "Diagnostics"
+---
+
+The Diagnostics section provides tools to monitor the health of your PADS4 system. The Overview page offers a quick visual summary of your PADS4 environment's status.
+
+### **Diagnostics Overview**
+
+Use this page to confirm if your PADS4 setup is operational at a glance. In a single-server configuration, the server status appears with a green dot next to the server name if it's online.
+
+<Frame>
+  <img
+    src="/images/RootAccess/SingleServerOverview.png"
+    alt="Single Server Overview"
+    title="Single Server Overview"
+    className="mx-auto"
+    style={{ width:"56%" }}
+  />
+</Frame>
+
+### **Multi-Server Setups**
+
+For distributed environments, multiple servers and their sync status display similarly, helping identify issues early. Green indicators confirm connectivity; other colors signal problems requiring attention.
+
+The multi-server setup page includes graphs that visualize synchronization metrics. These graphs display the number of pending changes queued for processing across servers.
+
+<Frame>
+  ![Multiple Server Overview](/images/RootAccess/MultipleServerOverview.png)
+</Frame>
+
+Graphs track the amount of changes (e.g., content updates or tasks) that must be synchronized and processed between the main server and sub-servers. High volumes may indicate delays; monitor to ensure timely distribution and system health.
+
+<Frame>
+  ![Multiple Server Overview Busy](/images/RootAccess/MultipleServerOverviewBusy.png)
+</Frame>
+
+## Services
+
+On the left side of the page, all PADS4 services are listed with status indicators. A green check mark shows the service is healthy; a red exclamation mark signals an issue.
+
+<Frame>
+  <img
+    src="/images/RootAccess/ServicesOverview.png"
+    alt="Services Overview"
+    title="Services Overview"
+    className="mr-auto"
+    style={{ width:"58%" }}
+  />
+</Frame>
+
+### **Service Status**
+
+Click any service to view its log file for detailed diagnostics. This helps troubleshoot errors like startup failures or connectivity problems in Foundation services or microservices. Logs reveal timestamps, errors, and events for quick resolution.

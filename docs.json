@@ -255,8 +255,15 @@
             "dropdown": "PADS4 Super User",
             "pages": [
               "ctrl-centre/untitled-page",
-              "ctrl-centre/user-interface",
-              "ctrl-centre/domains",
+              {
+                "group": "Using PADS4 Super Users",
+                "pages": [
+                  "ctrl-centre/user-interface",
+                  "ctrl-centre/diagnostics",
+                  "ctrl-centre/migration-overview",
+                  "ctrl-centre/domains"
+                ]
+              },
               "install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
               "ctrl-centre/account-creation"
             ]
