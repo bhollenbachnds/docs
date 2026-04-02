@@ -71,9 +71,14 @@
                     "group": "Install PADS4 Servers",
                     "pages": [
                       "install-pads4/install-pads4-server/Install-the-PADS4-server",
-                      "install-pads4/install-pads4-server/PADS4-Configuration",
                       "install-pads4/install-pads4-server/How-to-install-PADS4-Sub-Server",
                       "install-pads4/install-pads4-server/How-to-install-PADS4-Backup-Server",
+                      {
+                        "group": "PADS4 Foundation Configuration",
+                        "pages": [
+                          "install-pads4/install-pads4-server/PADS4-Configuration"
+                        ]
+                      },
                       "install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers",
                       "install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers",
                       "install-pads4/install-pads4-server/Sensor-database-type-selection"
@@ -122,6 +127,7 @@
                   {
                     "group": "BrightSign",
                     "pages": [
+                      "certified-devices/brightsign/bright-sign-series-6",
                       "certified-devices/brightsign/BrightSign-Series-5",
                       "certified-devices/brightsign/BrightSign-Series-4"
                     ]
