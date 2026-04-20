@@ -1,11 +1,11 @@
-**Viewer Variables** sont des outils puissants qui permettent un contenu dynamique et contextuel dans les présentations PADS4. Ce sont des **variables personnalisables** attribuées à chaque Viewer et automatiquement remplies pendant l'affichage des présentations. Ces variables permettent la personnalisation du contenu **sans avoir besoin de créer plusieurs présentations** pour différents emplacements ou appareils.
+**Viewer Variables** sont des outils puissants qui permettent un contenu dynamique et contextuel dans les présentations PADS4. Ce sont des **variables personnalisables** attribuées à chaque Viewer et automatiquement remplies lors de l'affichage des présentations. Ces variables permettent la personnalisation du contenu **sans avoir besoin de créer plusieurs présentations** pour différents emplacements ou appareils.
 
 ***
 
 ## **Que sont les Viewer Variables ?**
 
 * **Des espaces réservés spécifiques au Viewer** qui peuvent ajuster dynamiquement le contenu affiché dans les présentations.
-* Utilisées dans **le texte, les fournisseurs de données, les filtres, les règles, les liaisons de propriétés**, et plus encore.
+* Utilisées dans les **textes, fournisseurs de données, filtres, règles, liaisons de propriétés**, et plus encore.
 * **Identifiées** dans le contenu en utilisant le format :\
   `#<Viewer Variable name>#`\
   *(Exemple : `#Store Name#`)*
@@ -14,7 +14,7 @@
 
 ## **Où définir les Viewer Variables ?**
 
-### **1. System Management Application (Recommandé)**
+### **1. Application System Management (Recommandé)**
 
 * **Ajouter et gérer** les Viewer Variables.
 * Attribuer des **valeurs par défaut** qui s'appliquent à tous les Viewers.
@@ -25,7 +25,7 @@
 * Ajuster les **valeurs pour les Viewers individuels** sous l'onglet **Server**.
 * Remplace la valeur par défaut attribuée dans System Management.
 
-### **3. Fenêtre Viewer Options (sur l'appareil Viewer)**
+### **3. Fenêtre des options du Viewer (sur l'appareil Viewer)**
 
 * Ajuster les Viewer Variables directement sur le Viewer pour des **ajustements locaux**.
 
@@ -41,66 +41,66 @@ Pendant la lecture, il affichera automatiquement :
 
 > **Welcome to the New York Health.**
 
-Si vous mettez à jour la variable dans PADS4 Agent ou les options du Viewer (par exemple, vers "Chicago Health"), le contenu s'ajustera **sans modifier la présentation**.
+Si vous mettez à jour la variable dans les options PADS4 Agent ou Viewer (par exemple, en "Chicago Health"), le contenu s'ajustera **sans modifier la présentation**.
 
 ***
 
-## **Où les Viewer Variables peuvent-elles être utilisées ?**
+## **Où les variables Viewer peuvent-elles être utilisées ?**
 
 * **Champs de texte** dans les éléments.
 * **Data Providers** (requêtes, filtres, expressions, tri, chemins de fichiers).
 * **Rules** pour le comportement dynamique du contenu.
 * **Property bindings**.
-* **Playlists** pour les séquences média.
-* **Références de fichiers** (par exemple, sélectionner dynamiquement des images en fonction de l'emplacement du Viewer).
+* **Playlists** pour les séquences de médias.
+* **File references** (par exemple, sélectionner dynamiquement des images en fonction de l'emplacement du Viewer).
 
 ***
 
-## **Exemples d'automatisation utilisant les Viewer Variables**
+## **Exemples d'automatisation utilisant les variables Viewer**
 
 | **Cas d'utilisation**                                | **Exemple**                                                                              |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Informations personnalisées du magasin               | Afficher le nom et l'adresse spécifiques du magasin par Viewer.                          |
-| Sélection de produits basée sur la taille du magasin | Filtrer les produits en fonction d'une Viewer Variable comme `#StoreSize#`.              |
-| Données spécifiques à la région                      | Utiliser `#Country#` ou des Viewer Variables basées sur le GPS pour du contenu localisé. |
+| Informations personnalisées sur le magasin           | Afficher le nom et l'adresse spécifiques du magasin par Viewer.                          |
+| Sélection de produits basée sur la taille du magasin | Filtrer les produits en fonction d'une variable Viewer comme `#StoreSize#`.              |
+| Données spécifiques à la région                      | Utiliser `#Country#` ou des variables Viewer basées sur le GPS pour du contenu localisé. |
 | Affichage dynamique de carte                         | Afficher différentes cartes en fonction de la variable de localisation.                  |
 
 ***
 
-## **Quand les Viewer Variables sont-elles transformées en valeurs réelles ?**
+## **Quand les variables Viewer sont-elles transformées en valeurs réelles ?**
 
-| **Contexte**                                                     | **Quand remplacées**                                                                                             |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **Dans les sources de données (SQL, XML, JSON, RSS)**            | Lorsque le Viewer lit ou reçoit des données de la source.                                                        |
-| **Dans les Data Providers (filtre, tri, expressions)**           | Au début de la récupération des données. Les nouvelles valeurs de variables affectent la prochaine récupération. |
-| **Dans les présentations (texte, image, vidéo)**                 | Au démarrage de la présentation.                                                                                 |
-| **Dans les règles (règles d'élément, de page, de présentation)** | Au moment où la règle est vérifiée (pas de mise à jour automatique si la variable change).                       |
-| **Property bindings (avec data provider)**                       | Lors de la lecture programmée des données.                                                                       |
-| **Playlists**                                                    | Remplacées lors du chargement. Pour les playlists alternées, mises à jour au cycle suivant.                      |
+| **Contexte**                                                    | **Quand remplacées**                                                                                             |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Dans les sources de données (SQL, XML, JSON, RSS)**           | Lorsque le Viewer lit ou reçoit des données de la source.                                                        |
+| **Dans les Data Providers (filtre, tri, expressions)**          | Au début de la récupération des données. Les nouvelles valeurs de variables affectent la prochaine récupération. |
+| **Dans les présentations (texte, image, vidéo)**                | Au démarrage de la présentation.                                                                                 |
+| **Dans les rules (règles d'élément, de page, de présentation)** | Au moment où la règle est vérifiée (pas de mise à jour automatique si la variable change).                       |
+| **Property bindings (avec data provider)**                      | Lors de la lecture programmée des données.                                                                       |
+| **Playlists**                                                   | Remplacées lors du chargement. Pour les playlists alternées, mises à jour au cycle suivant.                      |
 
 ***
 
-## **Gestion des Playlists avec les Viewer Variables**
+## **Gestion des Playlists avec les variables Viewer**
 
 * **Playlist à élément unique, non alternante** :\
-  La Viewer Variable est remplacée au moment du chargement et **reste statique** jusqu'au prochain chargement.
+  La variable Viewer est remplacée au moment du chargement et **reste statique** jusqu'au prochain chargement.
 * **Playlist alternante** :\
-  La Viewer Variable est mise à jour **à chaque intervalle**, permettant des changements dynamiques.
+  La variable Viewer est mise à jour **à chaque intervalle**, permettant des changements dynamiques.
 
 ***
 
 ## **Remarques importantes**
 
-* **N'utilisez PAS les Viewer Variables pour des valeurs qui changent constamment.**\
-  Les Viewer Variables **ne sont pas conçues** pour fonctionner comme des sources de données à haute fréquence (utilisez des Data Providers pour cela).
-* Les changements dans les Viewer Variables **ne déclenchent pas automatiquement** la réévaluation de toutes les règles ou l'actualisation du contenu, sauf en cas de rechargement.
-* **Fichiers en dehors de la Content Library** référencés avec des Viewer Variables peuvent **ne pas se synchroniser correctement**—conservez les fichiers dans la Content Library.
+* **N'utilisez PAS les variables Viewer pour des valeurs qui changent constamment.**\
+  Les variables Viewer **ne sont pas conçues** pour fonctionner comme des sources de données à haute fréquence (utilisez des Data Providers pour cela).
+* Les changements dans les variables Viewer **ne déclenchent pas automatiquement** la réévaluation de toutes les règles ou l'actualisation du contenu sans rechargement.
+* **Files outside Content Library** référencés avec des variables Viewer peuvent **ne pas se synchroniser correctement**—conservez les fichiers dans la Content Library.
 
 ***
 
 ## **Avantages clés**
 
 * **Gestion centralisée du contenu** avec personnalisation locale dynamique.
-* **Une seule présentation** desservant plusieurs Viewers avec un contenu unique.
+* **Présentation unique** desservant plusieurs Viewers avec un contenu unique.
 * Facile à mettre à jour et à maintenir—**changez la valeur de la variable, pas la présentation**.
-* Améliore **l'automatisation et la communication ciblée** sans reconception complexe.
+* Améliore **l'automatisation et la communication ciblée** sans refonte complexe.

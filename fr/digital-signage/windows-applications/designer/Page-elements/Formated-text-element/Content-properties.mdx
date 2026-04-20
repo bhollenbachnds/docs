@@ -1,0 +1,98 @@
+Ces propriétés définissent la **valeur calculée** qui sera affichée par l'**Formatted Text element**. Vous pouvez choisir parmi une variété de valeurs dynamiques telles que la date, l'heure, les numéros de page, les compteurs de données ou les valeurs numériques.
+
+***
+
+### **Types de contenu disponibles**
+
+| **Option**                             | **Description**                                                                                   |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Date/Time**                          | Affiche la date et/ou l'heure actuelle.                                                           |
+| **Count Down Timer**                   | Affiche un compte à rebours jusqu'à un moment spécifié. Changement automatique de page en option. |
+| **Stopwatch**                          | Compte à partir de 0 ou à partir d'une valeur de départ spécifiée.                                |
+| **Numeric**                            | Affiche une valeur numérique avec un formatage personnalisé.                                      |
+| **Page Number**                        | Affiche le numéro de page actuel de votre présentation.                                           |
+| **Total Number of Pages**              | Affiche le nombre total de pages dans votre présentation.                                         |
+| **Page Number of Total Pages**         | Affiche à la fois le numéro de page actuel et le nombre total de pages.                           |
+| **Total Number of Data Provider Rows** | Affiche le nombre total de lignes renvoyées par un fournisseur de données connecté.               |
+
+***
+
+### **Options de formatage par type de contenu**
+
+#### **1. Formatage Date/Time**
+
+* **Prefix** : Texte affiché avant la valeur de date/heure.
+* **Date Format** :
+  * None: No date shown.
+  * Long Date: Utilise le format de date longue de Windows.
+  * Short Date: Utilise le format de date courte de Windows.
+  * Custom: Use custom formats (see [Standard Date and Time Format Strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings)).
+* **Insertion** : Texte entre la date et l'heure (par défaut, un espace).
+* **Time Format** :
+  * None: No time shown.
+  * Long Time: Format d'heure longue de Windows.
+  * Short Time: Format d'heure courte de Windows.
+  * Custom: Custom time format (see link above).
+* **Suffix** : Texte affiché après la valeur de date/heure.
+* **Culture** : Définir la culture (par exemple, en-US, de-DE) pour ajuster le formatage.
+* **Time zone** : Ajuster l'heure à afficher pour un fuseau horaire différent.
+
+***
+
+#### **2. Formatage Page Number & Total Pages**
+
+* **Prefix** : Texte avant la valeur.
+* **Format** : Spécifier la longueur/format des caractères pour l'affichage.
+* **Suffix** : Texte après la valeur.
+
+***
+
+#### **3. Formatage Page Number of Total Pages**
+
+* **Prefix** : Texte avant le numéro de page.
+* **Page Number** : Longueur/format des caractères.
+* **Between** : Texte entre le numéro de page et le nombre total de pages.
+* **Total Pages** : Longueur/format des caractères.
+* **Suffix** : Texte après la valeur du nombre total de pages.
+
+***
+
+#### **4. Formatage Total Number of Data Provider Rows**
+
+* Identique au **Page Number Formatting**.
+* **Note** : Nécessite une connexion à une source de données et au moins un autre élément utilisant cette source de données avec le défilement activé.
+
+***
+
+#### **5. Formatage Count Down Timer**
+
+* **Prefix** : Texte avant la valeur du compte à rebours.
+* **Time Format** :
+  * Long Time: Format d'heure longue de Windows.
+  * Short Time: Format d'heure courte de Windows.
+  * Custom: Custom format (see [Standard Date and Time Format Strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings)).
+* **Suffix** : Texte après la valeur du compte à rebours.
+* **Duration** : Temps de départ (par exemple, `1:00:00` pour 1 heure).
+* **Show next page when time reaches zero** : Naviguer automatiquement vers la page suivante lorsque le compte à rebours se termine.
+
+***
+
+#### **6. Formatage Stopwatch**
+
+* **Start Value** : Définir la valeur initiale ou commencer à partir de zéro.
+* **Format** : Utiliser le formatage de l'heure pour l'affichage.
+
+***
+
+#### **7. Formatage Numeric**
+
+* Formats numériques personnalisés pris en charge (voir [Standard Numeric Format Strings](https://learn.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings)).
+
+***
+
+### **Remarques importantes**
+
+* Les valeurs calculées sont mises à jour **en temps réel pendant la lecture**.
+* Si connecté à une source de données, les formats comme DateTime ou Timespan suivent le **type de données de colonne**.
+* Le système va automatiquement **synchroniser l'heure** avec le PADS4 Server, sauf indication contraire.
+* Les comptes à rebours peuvent déclencher des **changements automatiques de page** lorsque le compte à rebours atteint zéro.

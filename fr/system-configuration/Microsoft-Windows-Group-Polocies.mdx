@@ -1,0 +1,62 @@
+De nombreuses organisations utilisent les stratégies de groupe Microsoft pour gérer de manière centralisée les paramètres des utilisateurs. Avec les stratégies de groupe de Microsoft, vous pouvez gérer de manière centralisée les paramètres du Desktop Viewer.
+
+PADS4 a implémenté des stratégies de groupe pour l'application Desktop Viewer afin de permettre à l'administrateur de spécifier les paramètres depuis un emplacement central et de les transmettre à un ou plusieurs utilisateurs ou groupes d'utilisateurs. Les stratégies définies par l'administrateur sont automatiquement détectées par la fenêtre d'options du Desktop Viewer et ces options sont désactivées dans l'interface utilisateur. De cette façon, il est possible de transmettre un ensemble de paramètres prédéfinis aux utilisateurs, tout en leur donnant la possibilité de modifier certains paramètres localement.
+
+Les paramètres transmis sont stockés dans le registre sous :
+
+HKEY\_CURRENT\_USER\SOFTWARE\Policies\Net Display Systems\PADS4
+
+Les 'paramètres normaux' sont stockés dans le registre sous :
+
+HKEY\_CURRENT\_USER\SOFTWARE\Net Display Systems\PADS4
+
+Pour configurer l'utilisation des stratégies de groupe pour les Desktop Viewers PADS4
+Installation du serveur PADS4
+
+Installez d'abord le serveur PADS4 (ou plus de composants, mais les fichiers de stratégie sont installés avec l'installation du serveur).
+
+Installation du fichier de modèle de stratégie de groupe
+
+Copiez PADS4.admx depuis C:\Program Files\Net Display Systems\PADS4\PolicyDefinitions vers le répertoire Domain Policy Definitions sur le serveur de domaine (généralement : \FQDN\SYSVOL\FQDN\Policies\PolicyDefinitions)
+
+Fichier de traduction de stratégie
+
+Copiez PADS4.adml depuis C:\Program Files\Net Display Systems\PADS4\PolicyDefinitions vers le répertoire Domain Policy Definitions Language sur le serveur de domaine (généralement : \FQDN\SYSVOL\<FQDN>\Policies\PolicyDefinitions\en-US)
+
+Console de gestion des stratégies de groupe Microsoft (GPMC)
+
+Ouvrez l'application Console de gestion des stratégies de groupe puis ouvrez l'Éditeur de stratégie de groupe.
+
+Sélectionnez Configuration utilisateur / Stratégies / Modèles d'administration : définition de stratégie / Net Display Systems / PADS4 / Desktop Viewer
+
+Table des propriétés PADS4 pour le Desktop Viewer :
+
+| Paramètre                                                                         | Options                                                                           | Type      | Description                                                                                                                                                          |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Serveur de sauvegarde PADS4                                                       | Adresse du serveur de sauvegarde                                                  | String    | Nom/adresse IP du serveur de sauvegarde PADS4.                                                                                                                       |
+|                                                                                   | Numéro de port                                                                    | Number    | Numéro de port sur lequel le serveur PADS4 écoute les appels entrants (par défaut 7237).                                                                             |
+| Domaine PADS4                                                                     | Domain                                                                            | String    | Domaine personnalisé (par défaut PADS).                                                                                                                              |
+| Activer l'économiseur d'écran PADS4 au démarrage                                  | Délai d'attente de l'économiseur d'écran                                          | Number    | Intervalle en millisecondes après lequel l'économiseur d'écran est lancé lorsque l'utilisateur n'a pas utilisé le clavier ou la souris.                              |
+|                                                                                   | Afficher l'écran de connexion à la reprise                                        | Boolean   | Après que l'économiseur d'écran est actif et que l'utilisateur déplace la souris ou appuie sur le clavier, l'écran de connexion peut être affiché.                   |
+| Chemin d'hôte PADS4                                                               | Hostpath                                                                          | String    | Le chemin d'hôte tel que spécifié dans les paramètres du serveur PADS4 (par défaut PADS4) qui est utilisé pour la synchronisation http.                              |
+| Numéro de port Http                                                               | Numéro de port HTTP                                                               | Number    | Numéro de port utilisé pour la synchronisation et spécifié dans les paramètres du serveur PADS4 (par défaut 8080).                                                   |
+| Mode d'identification                                                             | Mode d'identification                                                             | Sélection | Mode d'identification lors de la connexion au serveur PADS4.                                                                                                         |
+| Autorisations utilisateur                                                         | L'utilisateur peut voir les messages                                              | Booléen   | L'utilisateur peut ouvrir la fenêtre des messages.                                                                                                                   |
+|                                                                                   | L'utilisateur peut ouvrir la fenêtre des options                                  | Booléen   | L'utilisateur peut ouvrir la fenêtre des options pour modifier les paramètres (non recommandé avec les stratégies de groupe).                                        |
+|                                                                                   | L'utilisateur peut quitter l'application                                          | Booléen   | L'utilisateur peut quitter l'application.                                                                                                                            |
+|                                                                                   | L'utilisateur peut vérifier les mises à jour logicielles                          | Booléen   | L'utilisateur peut vérifier les mises à jour logicielles (non recommandé avec les stratégies de groupe).                                                             |
+|                                                                                   | L'utilisateur peut démarrer l'économiseur d'écran                                 | Booléen   | L'utilisateur peut modifier les paramètres de l'économiseur d'écran.                                                                                                 |
+| Mettre à l'échelle les présentations pour les adapter à la fenêtre de destination | Mettre à l'échelle les présentations pour les adapter à la fenêtre de destination | Booléen   | Redimensionner le contenu à la taille de la fenêtre.                                                                                                                 |
+|                                                                                   | Conserver les proportions                                                         | Booléen   | Préserver les proportions.                                                                                                                                           |
+| PADS4 Server                                                                      | Connexion au serveur                                                              | Sélection | Configure la façon dont les clients se connectent au serveur. Lorsque réglé sur automatique, l'adresse du serveur doit être laissée vide.                            |
+|                                                                                   | Adresse du serveur                                                                | Chaîne    | Nom/adresse IP du PADS4 Server.                                                                                                                                      |
+|                                                                                   | Numéro de port                                                                    | Nombre    | Numéro de port sur lequel le PADS4 Server écoute les appels entrants (par défaut 7237).                                                                              |
+| Synchronisation de la bibliothèque de contenu                                     | Mode de synchronisation                                                           | Sélection | Lorsque automatique est sélectionné, le contenu est synchronisé.                                                                                                     |
+| Dossier de stockage de la bibliothèque de contenu                                 | Mode                                                                              | Sélection | Lorsque réglé sur Manuel, spécifiez la destination. Utilisez des variables comme %APPDATA% pour changer l'emplacement vers des dossiers spécifiques à l'utilisateur. |
+|                                                                                   | Dossier de la bibliothèque de contenu                                             | Chaîne    | Emplacement du dossier où se trouve la bibliothèque de contenu PADS4.                                                                                                |
+| Apparence de l'icône dans la barre d'état                                         | Apparence                                                                         | Sélection | La façon dont le Desktop Viewer est visible dans la barre d'état Windows.                                                                                            |
+| Utiliser le fuseau horaire local pour les présentations programmées               | Utiliser le fuseau horaire local pour les présentations programmées               | Booléen   | Utiliser le fuseau horaire du système local pour déterminer quand afficher un message.                                                                               |
+
+REMARQUE
+
+Cela permet à l'administrateur de spécifier les paramètres depuis un emplacement central et de les transmettre aux utilisateurs. Les utilisateurs ne peuvent pas remplacer ces paramètres à l'aide de la fenêtre Options. Les options définies/transmises par l'administrateur sont désactivées dans la fenêtre Options du Desktop Viewer.

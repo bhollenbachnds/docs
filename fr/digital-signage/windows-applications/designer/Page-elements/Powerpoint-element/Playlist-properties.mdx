@@ -1,0 +1,39 @@
+Les **Propriétés de la liste de lecture** définissent les **fichiers PowerPoint** qui sera affiché dans votre élément PowerPoint. Vous pouvez **ajouter plusieurs présentations**, les modifier, changer leur séquence ou les supprimer de la liste.
+
+***
+
+## **Gestion de la liste de lecture**
+
+* Vous pouvez **ajouter**, **modifier**, **réorganiser**, ou **supprimer** des présentations PowerPoint.
+* Les boutons de navigation vous permettent de **parcourir la liste**.
+* La **durée totale** indique le temps d'affichage combiné de toutes les présentations.
+* Les propriétés d'un élément de la liste de lecture dépendent du **type d'élément PowerPoint**.
+
+### **Élément de liste de lecture PowerPoint**
+
+Chaque élément de la liste de lecture peut provenir de **différentes sources**, comme décrit ci-dessous :
+
+| **Option**                                       | **Description**                                                                                                                                                                     |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **PowerPoint depuis la bibliothèque de contenu** | Le fichier PowerPoint est stocké dans la **PADS4 Content Library** (recommandé). Les fichiers dans la Content Library sont **automatiquement synchronisés** entre tous les PC.      |
+| **PowerPoint depuis un fichier**                 | Le fichier est **stocké localement** en dehors de la PADS4 Content Library. Ces fichiers ne sont **pas automatiquement synchronisés**, vous devez donc les distribuer manuellement. |
+| **Séparateur**                                   | Crée une **pause** dans la liste de lecture. Aucune présentation PowerPoint n'est affichée pendant cet intervalle.                                                                  |
+
+***
+
+## **Détails du fichier PowerPoint**
+
+| **Propriété** | **Description**                                                                                                                                                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Contenu**   | Stocke la référence au fichier PowerPoint. Vous pouvez **parcourir** la Content Library ou votre système de fichiers. Si vous utilisez un fichier local, le **chemin complet du fichier** doit être spécifié. |
+| **Durée**     | Définit **combien de temps (en secondes)** chaque présentation PowerPoint sera affichée. Si défini à `0`, les diapositives suivront le minutage par défaut de PowerPoint.                                     |
+| **Effet**     | Spécifie l'**effet de transition d'entrée** et sa **durée (en secondes)**.                                                                                                                                    |
+
+***
+
+## **Remarques importantes**
+
+* Seules les **références** aux fichiers PowerPoint sont stockées, **pas les fichiers eux-mêmes**.
+* Si le **fichier PowerPoint original est mis à jour**, la dernière version sera utilisée pendant la lecture.
+* Les **propriétés de la liste de lecture sont désactivées** si l'élément est connecté à une **source de données**—dans ce cas, le contenu est déterminé par des données en temps réel.
+* **Les présentations PowerPoint apparaissent toujours au premier plan** et ne peuvent pas être chevauchées par d'autres éléments.

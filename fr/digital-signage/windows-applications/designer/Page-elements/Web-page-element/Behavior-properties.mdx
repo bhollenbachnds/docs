@@ -1,0 +1,69 @@
+Ces propriétés définissent le **comportement interactif** du **Web Page Element** et comment il s'affiche et interagit avec les utilisateurs.
+
+***
+
+## **Paramètres de comportement**
+
+### **Barres de défilement**
+
+* **Show Scrollbars** : Active ou désactive les barres de défilement lorsque le contenu dépasse les limites de l'élément.
+
+### **Interaction avec la souris**
+
+* **Show Mouse Pointer** : Lorsqu'elle est activée, le **pointeur de la souris** est visible, permettant aux utilisateurs de faire défiler et de cliquer sur les hyperliens.
+
+### **Screenshot Mode**
+
+* Lorsqu'il est activé, l'élément **capture une capture d'écran** de la page web après le chargement et affiche **l'image statique** au lieu de la page en direct.
+* **Avantages** : Améliore les performances, empêche les interactions indésirables et permet un redimensionnement approprié lorsque les présentations sont automatiquement redimensionnées.
+* **Inconvénients** : **Le contenu dynamique (par exemple, animations, vidéos, éléments interactifs) ne fonctionnera pas.**
+
+### **Interactivité utilisateur**
+
+* **Allow User Interactivity** : Permet aux utilisateurs de cliquer sur les hyperliens dans l'élément de page web.
+  * **Remarque** : Désactivé si **Screenshot Mode** est activé.
+  * **Limitation** : Les hyperliens qui ouvrent **de nouvelles fenêtres/popups** ne sont **pas pris en charge**.
+
+### **Barre d'adresse**
+
+* **Show Address Bar** : Affiche une **barre d'adresse** permettant aux utilisateurs de saisir des URL.
+  * **Disponible uniquement en mode interactif.**
+  * **Conseil de sécurité** : Combinez ceci avec **Web Page Restrictions** pour empêcher la navigation non autorisée.
+
+### **Options de mise à l'échelle**
+
+* **Ignore Scaling** : Garantit que l'élément **ignore** les paramètres **de mise à l'échelle d'affichage** de Windows et s'affiche à **un zoom de 100%**.
+
+***
+
+## **Options du moteur de navigateur Web**
+
+Sélectionnez le **moteur de navigateur** utilisé pour afficher la page web. Différentes pages web **peuvent se comporter différemment** selon le moteur :
+
+| **Moteur**            | **Description**                                                  | **Version actuelle** |
+| --------------------- | ---------------------------------------------------------------- | -------------------- |
+| **Chromium**          | Basé sur le projet **Chrome** open-source.                       | **Chrome 100**       |
+| **Edge**              | Utilise **Microsoft Edge WebView**.                              | **Edge 108**         |
+| **Internet Explorer** | Utilise **IE11**, qui peut avoir des problèmes de compatibilité. | **IE11**             |
+
+***
+
+## **Paramètres de cache et de performance**
+
+### **Contrôle du cache**
+
+* **Clear Cache on Start**: Automatiquement **efface les données mises en cache** lorsque l'élément web démarre.
+
+### **Optimisation des performances**
+
+* **Frame Rate**: Ajuste le **frame rate** (par défaut : **30 FPS**).
+* **Render Mode**:
+  * **Always on Top**: Assure que **l'élément web est affiché au-dessus des autres éléments** dans la présentation.
+
+***
+
+## **Remarques**
+
+* **User Interactivity** permet uniquement **la navigation dans la même fenêtre**. **Popups** et **liens vers de nouvelles fenêtres** ne sont pas pris en charge.
+* Si **le contenu dynamique provoque des fuites de mémoire**, l'activation du **Screenshot Mode** peut aider à **améliorer la stabilité**.
+* **Conseil de sécurité** : Si vous autorisez l'interaction utilisateur, activez **Web Page Restrictions** pour **contrôler quels sites peuvent être consultés**.

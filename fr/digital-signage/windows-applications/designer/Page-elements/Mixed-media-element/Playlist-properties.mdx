@@ -1,0 +1,44 @@
+Ces propriétés définissent **les éléments médias (images, vidéos, flux)** qui seront affichés dans votre élément Mixed Media. Vous pouvez créer un **affichage à élément unique** ou une **playlist** qui exécute des fichiers médias séquentiellement.
+
+***
+
+### **Gestion de la playlist**
+
+* **Ajouter**, **modifier**, **réorganiser**, ou **supprimer** des éléments dans votre playlist.
+* Les éléments de la playlist peuvent être gérés en **vue détaillée** ou **vue liste**.
+* **Boutons de navigation** au bas de la fenêtre de playlist vous permettent de vous déplacer dans la liste.
+* **Durée totale** affiche la durée cumulée de tous les éléments de la playlist.
+
+> **Important:**\
+> Pour des conseils détaillés sur la gestion des playlists, voir **Working with Play Lists**.
+
+***
+
+### **Élément de playlist : Options de type**
+
+| **Type**                       | **Description**                                                                                                                                                                               |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Media from Content Library** | Fait référence à un **fichier image ou vidéo** existant stocké dans la **PADS4 Content Library** (recommandé). Les fichiers sont **automatiquement synchronisés** sur tous les PC du système. |
+| **Media from URL**             | Une **référence URL** directe vers une source média (par ex., image ou vidéo hébergée sur le web).                                                                                            |
+| **Video Stream**               | Une référence **URL de flux** (par ex., caméra IP ou service de streaming en direct).                                                                                                         |
+| **Separator**                  | Un élément de playlist **vide**, utilisé pour créer une **pause** dans la séquence.                                                                                                           |
+
+***
+
+### **Propriétés de chaque élément de playlist**
+
+| **Propriété**                  | **Description**                                                                                                                 |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Media from Content Library** | Contient la **référence de fichier relative** à un élément dans la bibliothèque de contenu.                                     |
+| **Media from URL**             | Contient l'**URL** pointant vers la source média.                                                                               |
+| **Video Stream**               | Contient la référence **URL du flux**.                                                                                          |
+| **Duration**                   | Durée (en secondes) pendant laquelle l'élément sera affiché. S'il s'agit d'une **vidéo**, sa durée naturelle est utilisée.      |
+| **Effect**                     | **Effet de transition** appliqué lorsque l'élément apparaît (par ex., fondu, glissement) et **durée de l'effet** (en secondes). |
+
+***
+
+### **Remarques importantes**
+
+* **Uniquement des références** aux fichiers médias sont incluses, **pas** les médias eux-mêmes. Cela permet des **mises à jour automatiques** pendant la lecture si le fichier source change.
+* **Play List properties** sont **désactivées** lorsque l'élément est lié à une **data source**. Dans ces cas, le contenu média est contrôlé par des **données en temps réel**.
+* **Separators** sont un moyen utile d'**insérer des pauses** sans média entre les éléments d'une séquence.

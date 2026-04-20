@@ -1,0 +1,37 @@
+Ces propriétés vous permettent d'ajouter une image en filigrane à votre graphique.
+
+***
+
+#### **Image en filigrane**
+
+**Type**\
+Définit la source de l'image en filigrane. Options disponibles :
+
+| Option                           | Description                                                                                                                                                                                                                                                                                                |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Picture from Content Library** | Le filigrane fait référence à une image existante dans la Content Library de PADS4 (recommandé). Les éléments de la Content Library sont automatiquement synchronisés entre tous les PC du système. Les références sont relatives et restent valides si la bibliothèque est déplacée.                      |
+| **Picture from File**            | Le filigrane fait référence à un fichier image situé en dehors de la Content Library de PADS4. Ces fichiers ne sont **not** synchronisés automatiquement et nécessitent une distribution manuelle. Les références sont absolues, et les fichiers doivent exister à l'emplacement spécifié pour la lecture. |
+| **No Picture**                   | Aucune image en filigrane ne sera incluse.                                                                                                                                                                                                                                                                 |
+
+***
+
+**Content**\
+Spécifie la référence du fichier de l'image, en fonction du **Type** sélectionné. Vous pouvez parcourir la **Content Library** ou le système de fichiers à l'aide du bouton de navigation.
+
+* Si **Picture from File** est sélectionné, fournissez le chemin complet et le nom du fichier.
+
+***
+
+**Stretch**\
+Lorsqu'elle est activée, l'image en filigrane est redimensionnée pour s'adapter entièrement aux limites du graphique.\
+Lorsqu'elle est désactivée, l'image en filigrane s'affiche dans sa taille d'origine.
+
+* Si elle est plus petite que le graphique, l'image peut ne pas couvrir tout l'arrière-plan.
+* Si elle est plus grande que le graphique, l'image peut être tronquée.
+
+***
+
+#### **Remarques**
+
+* **Seules les références** aux fichiers image sont stockées dans la présentation, **pas les images elles-mêmes**.
+* Si le fichier image source est mis à jour, l'image mise à jour sera automatiquement utilisée pendant la lecture.

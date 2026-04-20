@@ -1,0 +1,40 @@
+Ces propriétés définissent les **identifiants d'authentification** requis pour accéder aux pages web. Par défaut, **aucune autorisation** n'est utilisée.
+
+Si le serveur web demande une **authentification**, le système détectera automatiquement cette demande et fournira les identifiants spécifiés dans cette section.
+
+***
+
+## **Paramètres d'autorisation**
+
+### **Enable Authorization**
+
+* Vous permet d'**activer/désactiver** l'authentification pour accéder aux pages web protégées.
+
+### **User ID**
+
+* Saisissez le **nom d'utilisateur** requis pour s'authentifier auprès du site web.
+
+### **Password**
+
+* Saisissez le **mot de passe** associé au nom d'utilisateur spécifié.
+
+***
+
+## **Méthodes d'authentification**
+
+Si le serveur ou le proxy prend en charge **plusieurs méthodes d'authentification**, le système choisira la **méthode disponible la plus sécurisée** selon le classement de priorité suivant :
+
+| **Méthode d'authentification** | **Score de priorité** |
+| ------------------------------ | --------------------- |
+| **Basic** (moins sécurisé)     | 1                     |
+| **Digest**                     | 2                     |
+| **NTLM**                       | 3                     |
+| **Negotiate** (plus sécurisé)  | 4                     |
+
+***
+
+## **Notes supplémentaires**
+
+* **Si aucun identifiant n'est fourni**, le système tentera d'accéder à la page **sans authentification**.
+* **Si l'authentification est requise**, les identifiants spécifiés ici seront automatiquement soumis.
+* La **méthode d'authentification** sélectionnée est déterminée par la **configuration du serveur**.

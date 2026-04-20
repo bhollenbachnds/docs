@@ -1,154 +1,154 @@
-Ce guide fournit des instructions étape par étape pour l'installation et la configuration du **PADS4 Viewer** sur les **appareils ChromeOS**.
+Ce guide fournit des instructions étape par étape pour l'installation et la configuration de **PADS4 Viewer** sur les **appareils ChromeOS**.
 
 ***
 
 ## **1. Préparation de l'appareil**
 
-Pendant la configuration, vous devrez configurer l'**emplacement du serveur PADS4**. Il est recommandé de **terminer l'installation du serveur PADS4 d'abord** avant de configurer votre **appareil ChromeOS**.
+Pendant la configuration, vous devrez configurer le **Emplacement du serveur PADS4**. Il est recommandé de **terminer d'abord l'installation du serveur PADS4** avant de configurer votre **appareil ChromeOS**.
 
-<Note>La version minimale de **PADS4 Foundation** requise pour ChromeOS est **2024.1**.</Note>
+<Note>La version minimale **PADS4 Foundation** requise pour ChromeOS est **2024.1**.</Note>
 
 ### **1.1 Prérequis**
 
 Avant d'utiliser **PADS4 sur ChromeOS**, assurez-vous que les conditions suivantes sont remplies :
 
 1. Vous êtes familier avec **ChromeOS** et la gestion des appareils dans la **Google Admin Console**.
-2. La **Google Management Platform** est basée sur le cloud, nécessitant un **accès internet** pour les viewers.
+2. La **Google Management Platform** est basée sur le cloud, nécessitant un **accès internet** pour les visionneuses.
 3. La **version ChromeOS** est **120 ou plus récente**.
 4. L'appareil est **connecté à un réseau** avec **accès internet**.
-5. Vous avez créé **une ou plusieurs Unités Organisationnelles (UO)** pour les **PADS4 Viewers**.
+5. Vous avez créé **une ou plusieurs Unités Organisationnelles (UO)** pour **PADS4 Viewers**.
 6. L'appareil est **provisionné dans la Google Admin Console**.
 7. Vous avez acheté une licence **Chrome Enterprise** ou **Kiosk & Signage Upgrade**.
 8. L'appareil a été **assigné à une licence Chrome Enterprise ou Kiosk & Signage Upgrade**.
 
 ***
 
-## **2. Ajout de PADS4 comme application**
+## **2. Ajouter PADS4 comme Application**
 
 Pour installer **PADS4 sur ChromeOS**, suivez ces étapes pour **ajouter PADS4 comme application** dans la **Google Admin Console** :
 
 <Steps>
-  <Step title="Étape Une">
+  <Step title="Première étape">
     Ouvrez la **Google Admin Console** et connectez-vous.
   </Step>
 
-  <Step title="Étape Deux">
+  <Step title="Deuxième étape">
     Naviguez vers : **Devices → Chrome → Apps & Extensions**.
   </Step>
 
-  <Step title="Étape Trois">
+  <Step title="Troisième étape">
     Allez à **Kiosks**.
   </Step>
 
-  <Step title="Étape Quatre">
-    Sélectionnez le **appropriate Organizational Unit**.
+  <Step title="Quatrième étape">
+    Sélectionnez **l'Unité Organisationnelle appropriée**.
   </Step>
 
-  <Step title="Étape Cinq">
+  <Step title="Cinquième étape">
     Cliquez sur le **signe plus (+)** pour ajouter une application.
   </Step>
 
-  <Step title="Étape Six">
+  <Step title="Sixième étape">
     Sélectionnez **"Add by URL"**.
   </Step>
 
-  <Step title="Étape Sept">
+  <Step title="Septième étape">
     Spécifiez l'URL suivante :
 
     ```
     http://[PADS4server]/PADS4/apps/Viewer/  
     ```
 
-    <Note>Si votre **PADS4 Server** fonctionne sous un **domain**, remplacez `"PADS4"` par votre **domain name**.</Note>
+    <Note>Si votre **PADS4 Server** fonctionne sous un **domaine**, remplacez `"PADS4"` par votre **nom de domaine**.</Note>
   </Step>
 
-  <Step title="Étape Huit">
+  <Step title="Huitième étape">
     Cliquez sur **Save**.
   </Step>
 
-  <Step title="Étape Neuf">
-    Sous l'**Organizational Unit**, sélectionnez **PADS4** comme **Auto-launch App**.
+  <Step title="Neuvième étape">
+    Sous **l'Unité Organisationnelle**, sélectionnez **PADS4** comme **Auto-launch App**.
   </Step>
 
-  <Step title="Étape Dix">
-    **PADS4 Viewer** démarrera maintenant automatiquement comme **default application** pour les appareils dans cette **Organizational Unit**.
+  <Step title="Dixième étape">
+    **PADS4 Viewer** démarrera maintenant automatiquement comme **application par défaut** pour les appareils dans cette **Unité Organisationnelle**.
   </Step>
 </Steps>
 
 ***
 
-## **3. Configuration des paramètres des appareils ChromeOS pour PADS4**
+## **3. Configuration des paramètres de l'appareil ChromeOS pour PADS4**
 
 ### **3.1 Ajustement des paramètres de veille**
 
 Pour empêcher **ChromeOS** de diminuer la luminosité ou d'éteindre l'écran, suivez ces étapes :
 
 <Steps>
-  <Step title="Étape Un">
+  <Step title="Première étape">
     Ouvrez la **Google Admin Console** et connectez-vous.
   </Step>
 
-  <Step title="Étape Deux">
+  <Step title="Deuxième étape">
     Naviguez vers : **Devices → Chrome → Settings**.
   </Step>
 
-  <Step title="Étape Trois">
-    Sélectionnez l'**Organizational Unit** pour les **PADS4 Devices**.
+  <Step title="Troisième étape">
+    Sélectionnez **l'Unité Organisationnelle** pour **les appareils PADS4**.
   </Step>
 
-  <Step title="Étape Quatre">
+  <Step title="Quatrième étape">
     Allez à **Device Settings**.
   </Step>
 
-  <Step title="Étape Cinq">
+  <Step title="Cinquième étape">
     Faites défiler jusqu'à **AC Kiosk Power Settings**.
   </Step>
 
-  <Step title="Étape Six">
-    Entrez `0` pour **Screen Dim Timeout (minutes)**.
+  <Step title="Sixième étape">
+    Saisissez `0` pour **Screen Dim Timeout (minutes)**.
   </Step>
 
-  <Step title="Étape Sept">
-    Entrez `0` pour **Screen Off Timeout (minutes)**.
+  <Step title="Septième étape">
+    Saisissez `0` pour **Screen Off Timeout (minutes)**.
   </Step>
 
-  <Step title="Étape Huit">
+  <Step title="Huitième étape">
     Cliquez sur **Save**.
   </Step>
 </Steps>
 
 ***
 
-### **3.2 Déplacement de l'appareil vers l'Organizational Unit**
+### **3.2 Déplacement de l'appareil vers l'Unité Organisationnelle**
 
 Pour garantir que **PADS4 Viewer** démarre automatiquement au démarrage de l'appareil :
 
 <Steps>
-  <Step title="Étape Un">
+  <Step title="Première étape">
     Ouvrez la **Google Admin Console** et connectez-vous.
   </Step>
 
-  <Step title="Étape Deux">
+  <Step title="Deuxième étape">
     Naviguez vers : **Devices → Chrome → Devices**.
   </Step>
 
-  <Step title="Étape Trois">
-    Sélectionnez **all devices** qui doivent exécuter **PADS4 Viewer**.
+  <Step title="Troisième étape">
+    Sélectionnez **tous les appareils** qui doivent exécuter **PADS4 Viewer**.
   </Step>
 
-  <Step title="Étape Quatre">
+  <Step title="Quatrième étape">
     Cliquez sur **Move**.
   </Step>
 
-  <Step title="Étape Cinq">
-    Sélectionnez l'**Organizational Unit** avec **PADS4 set as the Auto-launch App**.
+  <Step title="Cinquième étape">
+    Sélectionnez **l'Unité Organisationnelle** avec **PADS4 défini comme Auto-launch App**.
   </Step>
 
-  <Step title="Étape Six">
+  <Step title="Sixième étape">
     **Redémarrez les appareils**.
   </Step>
 
-  <Step title="Étape Sept">
+  <Step title="Septième étape">
     Les appareils redémarreront, et **PADS4 Viewer** se lancera automatiquement.
   </Step>
 </Steps>
@@ -157,7 +157,7 @@ Pour garantir que **PADS4 Viewer** démarre automatiquement au démarrage de l'a
 
 ### **3.3 Renommer le PADS4 Viewer**
 
-Une fois connecté au **PADS4 Server**, le serveur attribue un **temporary viewer name** tel que :
+Une fois connecté au **PADS4 Server**, le serveur attribue un **nom temporaire au viewer** tel que :
 
 ```
 Chrome0001  
@@ -173,51 +173,51 @@ Après l'installation initiale, **PADS4 Viewer** se **mettra à jour automatique
 
 ***
 
-## **5. Capacités des appareils et fonctionnalités prises en charge**
+## **5. Capacités de l'appareil et fonctionnalités prises en charge**
 
 ### **Fonctionnalités générales**
 
-| Fonctionnalité | Description                                                                                                                |
-| :------------: | -------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Automatic Updates** – PADS4 Viewer se met à jour lorsque le **PADS4 Server** est mis à jour.                             |
-|        ✅       | **Offline Mode** – L'appareil continue de diffuser les **scheduled presentations** pendant **7 days** s'il est hors ligne. |
-|        ⚠       | **ChromeOS nécessite une connexion réseau pour démarrer PADS4 Viewer.**                                                    |
+| Fonctionnalité | Description                                                                                                                      |
+| :------------: | -------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques** – PADS4 Viewer se met à jour lorsque le **PADS4 Server** est mis à jour.                           |
+|        ✅       | **Mode hors ligne** – L'appareil continue de diffuser les **présentations programmées** pendant **7 jours** s'il est hors ligne. |
+|        ⚠       | **ChromeOS nécessite une connexion réseau pour démarrer PADS4 Viewer.**                                                          |
 
-### **Capacités des appareils**
+### **Capacités de l'appareil**
 
-| Fonctionnalité | Description                                                                          |
-| :------------: | ------------------------------------------------------------------------------------ |
-|        ✅       | **Portrait Mode** – L'appareil pivote automatiquement.                               |
-|        ✅       | **4K UHD Support**                                                                   |
-|        ✅       | **Transfer Protocols** – HTTP, HTTPS                                                 |
-|        ✅       | **Turn Off Display** – L'écran s'éteint lorsqu'aucune présentation n'est programmée. |
-|        ✅       | **Cluster Viewer** – Pris en charge                                                  |
-|        ✅       | **Volume Level Control** – Réglez le volume maximum au niveau de l'appareil.         |
+| Fonctionnalité | Description                                                                               |
+| :------------: | ----------------------------------------------------------------------------------------- |
+|        ✅       | **Mode portrait** – L'appareil pivote automatiquement.                                    |
+|        ✅       | **Prise en charge 4K UHD**                                                                |
+|        ✅       | **Protocoles de transfert** – HTTP, HTTPS                                                 |
+|        ✅       | **Extinction de l'écran** – L'écran s'éteint lorsqu'aucune présentation n'est programmée. |
+|        ✅       | **Cluster Viewer** – Pris en charge                                                       |
+|        ✅       | **Contrôle du niveau de volume** – Définir le volume maximal au niveau de l'appareil.     |
 
 ### **Éléments pris en charge**
 
-| Fonctionnalité | Description                                                                                |
-| :------------: | ------------------------------------------------------------------------------------------ |
-|        ✅       | **Video Element** – Jusqu'à **4 Full HD videos** par page.                                 |
-|        ✅       | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Pris en charge.              |
-|        ❌       | **Streaming Video** – Non pris en charge.                                                  |
-|        ✅       | **Images (JPG, PNG, BMP, GIF), Text, Tables, Shapes, Scrolling Text, Interactive Buttons** |
-|        ✅       | **PowerPoint Element** – Nécessite **Microsoft PowerPoint installé sur le PADS4 Server**.  |
-|        ✅       | **PDF Element** – Nécessite **Xpert License**.                                             |
+| Fonctionnalité | Description                                                                                     |
+| :------------: | ----------------------------------------------------------------------------------------------- |
+|        ✅       | **Élément vidéo** – Jusqu'à **4 vidéos Full HD** par page.                                      |
+|        ✅       | **Rotation vidéo, Vidéos sans couture, Réflexion, Inclinaison, Retournement** – Pris en charge. |
+|        ❌       | **Vidéo en streaming** – Non pris en charge.                                                    |
+|        ✅       | **Images (JPG, PNG, BMP, GIF), Texte, Tableaux, Formes, Texte défilant, Boutons interactifs**   |
+|        ✅       | **Élément PowerPoint** – Nécessite **Microsoft PowerPoint installé sur le PADS4 Server**.       |
+|        ✅       | **Élément PDF** – Nécessite une **Xpert License**.                                              |
 
-### **Gestion des Appareils**
+### **Gestion des appareils**
 
-| Fonctionnalité | Description                                                                                                  |
-| :------------: | ------------------------------------------------------------------------------------------------------------ |
-|        ✅       | **Gestion à distance des appareils via PADS4 CTRL Center**                                                   |
-|        ✅       | **Surveillance de l'état de connexion et alertes**                                                           |
-|        ❌       | **Redémarrage, Arrêt, Wake-on-LAN** – Non pris en charge.                                                    |
-|        ✅       | **Redémarrage du Viewer, Récupération des journaux, Installation des polices, Suivi de preuve de diffusion** |
+| Fonctionnalité | Description                                                                                           |
+| :------------: | ----------------------------------------------------------------------------------------------------- |
+|        ✅       | **Gestion à distance des appareils via PADS4 CTRL Center**                                            |
+|        ✅       | **Surveillance de l'état de connexion et alertes**                                                    |
+|        ❌       | **Redémarrage, Arrêt, Wake-on-LAN** – Non pris en charge.                                             |
+|        ✅       | **Redémarrer le Viewer, Récupérer les journaux, Installer des polices, Suivi de preuve de diffusion** |
 
 ***
 
-## **Notes importantes**
+## **Remarques importantes**
 
-<Warning> **Intégrité des fichiers de contenu** – La **PADS4 Content Library** vérifie l'intégrité des fichiers en utilisant **MD5 checksum** pendant la synchronisation.</Warning>
+<Warning> **Intégrité des fichiers de contenu** – La **PADS4 Content Library** vérifie l'intégrité des fichiers à l'aide de **MD5 checksum** pendant la synchronisation.</Warning>
 
-<Warning> **Limitations de la preuve de diffusion** – Un maximum de **50,000 records** peuvent être stockés localement. Les enregistrements plus anciens seront supprimés une fois la limite atteinte.</Warning>
+<Warning> **Limitations de preuve de diffusion** – Un maximum de **50 000 enregistrements** peuvent être stockés localement. Les enregistrements plus anciens seront supprimés une fois la limite atteinte.</Warning>

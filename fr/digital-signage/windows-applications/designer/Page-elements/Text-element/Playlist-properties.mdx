@@ -1,0 +1,60 @@
+Ces propriétés définissent le **text content** affiché par un **text-based element**. Vous pouvez ajouter un **single text item** ou créer une **play list of text items** qui seront affichés en séquence.
+
+***
+
+## **Gestion de la Play List**
+
+Vous pouvez :
+
+* **Add, edit, or remove** des éléments de texte.
+* **Rearrange** l'ordre des éléments de la play list.
+* **Use navigation buttons** pour parcourir les éléments de la play list.
+* Voir la **total duration** de tous les éléments de la play list.
+
+***
+
+## **Options des éléments de la Play List basée sur du texte**
+
+| **Type**                      | **Description**                                                                                                                                      |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Text**                      | Affiche du **static text** directement saisi dans l'élément.                                                                                         |
+| **Text from Content Library** | Fait référence à un **text file** stocké dans la **PADS4 content library** (recommandé). Le contenu est automatiquement synchronisé sur tous les PC. |
+| **Text from File**            | Fait référence à un **text file outside the content library**. Ces fichiers **must be manually distributed** sur tous les PC.                        |
+| **No Text**                   | Crée une **pause** dans la play list, utile pour les ajustements de timing.                                                                          |
+
+***
+
+## **Content**
+
+* **Saisissez directement du texte statique** ou fournissez une **file reference** selon le type choisi.
+* Si vous utilisez **Text from File**, assurez-vous que le chemin du fichier est **correct and accessible**.
+
+***
+
+## **Duration**
+
+* Spécifie le **display time (in seconds)** pour chaque élément de texte ou pause dans la play list.
+* Le timing détermine combien de temps le texte reste visible avant de passer à l'élément suivant.
+
+***
+
+## **Effect**
+
+* Sélectionnez un **incoming transition effect** pour chaque élément de la play list.
+* Définissez la **effect duration (in seconds)**.
+
+***
+
+## **Considérations supplémentaires**
+
+* **Multi-Line Text Handling** :
+  * Si vous saisissez plusieurs lignes manuellement, appuyez sur **\[Enter]** pour séparer les lignes.
+  * Pour les fichiers texte, les **Data Source Text Conversion Properties** déterminent comment le texte multi-ligne est traité.
+
+* **Real-Time Data Handling** :
+  * Si l'élément de texte est connecté à une **data source**, **play list properties are disabled**.
+  * Le contenu de l'élément sera plutôt déterminé par le **real-time data feed**.
+
+* **Updating Text Files** :
+  * Lors de l'utilisation de fichiers texte, **only file references** sont incluses dans la présentation.
+  * Si le **text file is updated**, le nouveau contenu sera utilisé pendant la lecture **without modifying the presentation itself**.

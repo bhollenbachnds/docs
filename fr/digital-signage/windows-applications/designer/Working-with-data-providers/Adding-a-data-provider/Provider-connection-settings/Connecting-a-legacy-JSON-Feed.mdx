@@ -1,10 +1,10 @@
-**JSON (JavaScript Object Notation)** est un format léger largement utilisé pour **data exchange**. PADS4 prend en charge **legacy JSON feed integration**, permettant la récupération de données en temps réel pour les présentations d'affichage dynamique.
+**JSON (JavaScript Object Notation)** est un format léger largement utilisé pour **l'échange de données**. PADS4 prend en charge **legacy JSON feed integration**, permettant la récupération de données en temps réel pour les présentations d'affichage dynamique.
 
 ***
 
 ## **Étapes pour ajouter ou modifier une connexion JSON Feed**
 
-### **1. Démarrer l'assistant Data Provider**
+### **1. Démarrer le Data Provider Wizard**
 
 * Ouvrez le **Data Provider Wizard** en suivant les instructions dans **Adding a Data Provider** ou **Editing a Data Provider**.
 * Sélectionnez **JSON Feed** comme type de fournisseur.
@@ -22,17 +22,17 @@ Cliquez sur **Next** pour continuer.
 
 ### **3. Choisir la méthode de requête**
 
-* **GET (default)** → Récupère des données sans les modifier.
+* **GET (par défaut)** → Récupère des données sans les modifier.
 * **POST** → Utilisé pour envoyer des paramètres supplémentaires.
-  * Si **POST** est sélectionné, saisissez le **request body** avec les paramètres requis.
+  * Si **POST** est sélectionné, saisissez le **corps de la requête** avec les paramètres requis.
 
 ***
 
 ### **4. Configurer le formatage des données**
 
-* **Flatten Hierarchical Data** → Convertit les **nested JSON structures** en format de tableau plat.
-* **Include Parent Levels Column Names** → Ajoute des **parent-level identifiers** pour les relations hiérarchiques.
-* **Create Additional Columns Without HTML Tags** → Supprime le **HTML formatting** et extrait le **plain text**.
+* **Flatten Hierarchical Data** → Convertit **les structures JSON imbriquées** en un format de tableau plat.
+* **Include Parent Levels Column Names** → Ajoute **des identifiants de niveau parent** pour les relations hiérarchiques.
+* **Create Additional Columns Without HTML Tags** → Supprime **le formatage HTML** et extrait **le texte brut**.
 
 Cliquez sur **Next** pour continuer.
 
@@ -40,21 +40,21 @@ Cliquez sur **Next** pour continuer.
 
 ### **5. Configurer la sécurité et l'authentification**
 
-* **Authorization (si nécessaire)**
+* **Autorisation (si nécessaire)**
   * Activez **Authorization Required**.
-  * Saisissez **UserID, Password, and Domain**.
+  * Saisissez **UserID, Password, et Domain**.
 
-* **Proxy Server (si applicable)**
+* **Serveur proxy (si applicable)**
   * Configurez les paramètres du proxy si votre réseau nécessite une authentification.
 
-* **User-Agent Identification**
-  * Si nécessaire, spécifiez une **custom User-Agent string** (utile pour les restrictions d'accès API).
+* **Identification User-Agent**
+  * Si nécessaire, spécifiez une **chaîne User-Agent personnalisée** (utile pour les restrictions d'accès aux API).
 
 Cliquez sur **Next** pour continuer.
 
 ***
 
-### **6. Finalisation de la configuration JSON Feed**
+### **6. Finalisation de la configuration du JSON Feed**
 
 * Cliquez sur **Finish** pour terminer la configuration.
 
@@ -63,7 +63,7 @@ Cliquez sur **Next** pour continuer.
 ## **Considérations importantes**
 
 * **PADS4 Data Server**
-  * Si vous utilisez un **PADS4 Data Server**, assurez-vous que le **flux JSON est accessible depuis le serveur**.
+  * Si vous utilisez un **PADS4 Data Server**, assurez-vous que **le flux JSON est accessible depuis le serveur**.
   * Si vous n'utilisez pas de Data Server, assurez-vous que **PADS4 Designer (pour la prévisualisation) et les Viewers** peuvent accéder au flux JSON.
 
 * **Gestion des données JSON hiérarchiques**
