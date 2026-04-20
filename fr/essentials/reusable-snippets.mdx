@@ -10,7 +10,7 @@ import SnippetIntro from '/snippets/snippet-intro.mdx';
 
 ## Création d'un extrait personnalisé
 
-**Condition préalable** : Vous devez créer votre fichier d'extrait dans le répertoire `snippets`.
+**Pré-condition** : Vous devez créer votre fichier d'extrait dans le répertoire `snippets`.
 
 <Note>
   Toute page dans le répertoire `snippets` sera traitée comme un extrait et ne sera pas rendue en tant que page autonome. Si vous souhaitez créer une page autonome à partir de l'extrait, importez l'extrait dans un autre fichier et appelez-le comme un composant.
@@ -83,7 +83,7 @@ export const MyComponent = ({ title }) => (
 ```
 
 <Warning>
-  MDX ne se compile pas dans le corps d'une fonction fléchée. Tenez-vous-en à la syntaxe HTML quand vous le pouvez ou utilisez un export par défaut si vous avez besoin d'utiliser MDX.
+  MDX ne se compile pas à l'intérieur du corps d'une fonction fléchée. Tenez-vous-en à la syntaxe HTML quand vous le pouvez ou utilisez un export par défaut si vous avez besoin d'utiliser MDX.
 </Warning>
 
 2. Importez l'extrait dans votre fichier de destination et passez les props

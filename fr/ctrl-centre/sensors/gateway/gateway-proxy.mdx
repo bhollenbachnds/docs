@@ -1,0 +1,47 @@
+---
+- title: Gateway Proxy
+---
+
+<Warning>
+  Cet article nécessite que vous disposiez au moins de la version 2025.2 de PADS4.
+</Warning>
+
+<Tip>
+  Cette implémentation est destinée à être utilisée uniquement pour Workspace.
+</Tip>
+
+## Introduction
+
+Un **PADS4 Gateway Proxy** vous permet de connecter des passerelles depuis votre serveur local à votre serveur PADS4 sur un autre emplacement (physique). Certaines passerelles de périphériques ou serveurs (PADS4) ne peuvent se connecter avec des passerelles tierces que lorsqu'ils sont sur le même réseau local pour des raisons (généralement de sécurité). Vous pouvez installer un PADS4 Gateway Proxy sur un serveur/appareil Windows pour connecter localement la passerelle, puis connecter votre serveur PADS4 avec le proxy pour permettre la communication avec ces appareils via le serveur PADS4 et le proxy.
+
+Un exemple est un serveur SaaS ; le serveur n'est pas connecté au même réseau local qu'un hub de périphérique (par exemple, Philips Hue Hub), et le hub de périphérique n'autorise pas les connexions en dehors du réseau local. Vous devrez alors installer le PADS4 Gateway Proxy sur un serveur/ordinateur sur le même réseau local que le hub de périphérique pour vous y connecter et ajouter ce proxy comme passerelle sur le domaine du serveur SaaS.
+
+### Configurer un proxy de passerelle
+
+<Warning>
+  Un proxy de passerelle ne peut pas et ne doit pas être installé sur le même serveur que le serveur PADS4 car cela va à l'encontre de l'objectif même d'un proxy.
+</Warning>
+
+* Téléchargez notre dernière passerelle de périphérique ici : [PADS4-Device-Gateway](https://github.com/PADS4/PADS4-Device-Gateway/releases)
+* Exécutez `NDS.PackageManager.Setup.msi` depuis le dossier **Prerequisites**. Vous avez besoin de ce gestionnaire pour installer le proxy ultérieurement.
+
+  ![Gateway Proxy1](/images/ctrl-centre/sensors/gateway/gateway-proxy1.png)
+* Après l'installation, double-cliquez (exécutez) ` nds.device.gateway.ndspx` pour installer le proxy. Le `NDS.Web.Launcher.DeviceProxy.ndspx` est installé automatiquement lors de l'installation du package de passerelle.
+
+![Gateway Proxy2](/images/ctrl-centre/sensors/gateway/gateway-proxy2.png)
+
+* Ensuite, sur le même appareil où vous avez installé le proxy, ouvrez un navigateur et visitez [http://localhost:8692/launcher](http://localhost:8692/launcher). Remplissez les détails de votre serveur PADS4 pour vous connecter. Dans **Client ID**, entrez n'importe quel nom que vous souhaitez tant qu'il est unique par rapport à vos autres proxys – au cas où vous en auriez plus d'un.
+
+![Gateway Proxy3](/images/ctrl-centre/sensors/gateway/gateway-proxy3.png)
+
+* Cliquez sur `Install`. Il commencera à configurer le proxy. La capture d'écran suivante indique une configuration réussie.
+
+![Gateway Proxy4](/images/ctrl-centre/sensors/gateway/gateway-proxy4.png)
+
+* Maintenant, dans votre portail Web PADS4, vous verrez une passerelle incluant le nom que vous avez défini sur le proxy.
+
+![Gateway Proxy5](/images/ctrl-centre/sensors/gateway/gateway-proxy5.png)
+
+* Vous pouvez maintenant utiliser ce proxy si nécessaire lors de l'ajout d'une passerelle :
+
+![Iot Hue3](/images/ctrl-centre/sensors/gateway/iot-hue3.png)

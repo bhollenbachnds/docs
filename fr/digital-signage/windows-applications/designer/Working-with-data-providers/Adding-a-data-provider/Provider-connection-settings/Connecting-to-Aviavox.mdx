@@ -1,34 +1,34 @@
-Le **Aviavox provider** dans **PADS4** permet l'intégration avec le **Aviavox Artificial Voice System**, permettant des annonces vocales automatisées en temps réel.
+Le **fournisseur Aviavox** dans **PADS4** permet l'intégration avec le **Système de Voix Artificielle Aviavox**, permettant des annonces vocales automatisées en temps réel.
 
 ***
 
 ### **Étapes pour ajouter ou modifier une connexion Aviavox**
 
-#### **1. Démarrez l'assistant de fournisseur de données**
+#### **1. Démarrer l'Assistant de Fournisseur de Données**
 
-* Ouvrez **PADS4** et naviguez vers le **Data Provider Wizard**.
+* Ouvrez **PADS4** et naviguez vers l'**Assistant de Fournisseur de Données**.
 * Sélectionnez **Aviavox** comme **type de fournisseur**.
-* Cliquez sur **Next** pour continuer.
+* Cliquez sur **Suivant** pour continuer.
 
-#### **2. Configurez les paramètres de connexion Aviavox**
+#### **2. Configurer les paramètres de connexion Aviavox**
 
-* Entrez l'**adresse IP du serveur** où le **serveur Aviavox** est en cours d'exécution.
-* Entrez le **numéro de port** pour la communication.
-* Sélectionnez le **format d'encodage de texte** approprié.
-* Cliquez sur **Next** pour continuer.
+* Entrez l'**Adresse IP du serveur** où le **serveur Aviavox** est en cours d'exécution.
+* Entrez le **Numéro de Port** pour la communication.
+* Sélectionnez l'**Encodage de Texte** approprié.
+* Cliquez sur **Suivant** pour continuer.
 
-#### **3. Terminez la configuration**
+#### **3. Terminer la configuration**
 
 * Vérifiez les paramètres de connexion.
-* Cliquez sur **Finish** pour enregistrer le fournisseur de données.
+* Cliquez sur **Terminer** pour enregistrer le fournisseur de données.
 
 ***
 
 ### **Comment Aviavox fonctionne dans PADS4**
 
 * Le **système Aviavox** envoie des annonces au **fournisseur de données Aviavox de PADS4**.
-* Chaque message inclut la **durée**, la **langue**, les **zones** et le **contenu textuel**.
-* Une fois que le message est annoncé, il est **supprimé du tableau du fournisseur de données**.
+* Chaque message inclut **durée**, **langue**, **zones**, et **contenu textuel**.
+* Une fois le message annoncé, il est **supprimé de la table du fournisseur de données**.
 * Plusieurs messages peuvent être annoncés **simultanément** dans **différentes zones**.
 
 ***
@@ -48,7 +48,7 @@ Le **Aviavox provider** dans **PADS4** permet l'intégration avec le **Aviavox A
 
 ***
 
-### **Exemple d'une structure de message Aviavox**
+### **Exemple de structure de message Aviavox**
 
 ```xml
 <Announcements>
@@ -70,7 +70,7 @@ Le **Aviavox provider** dans **PADS4** permet l'intégration avec le **Aviavox A
 ### **Considérations clés**
 
 * **Mises à jour en temps réel** : Les messages arrivent dynamiquement depuis **Aviavox** et sont supprimés après lecture.
-* **Prise en charge multi-zones** : Les messages peuvent être diffusés **simultanément** dans différentes zones.
-* **Prise en charge des langues** : Chaque message peut être **multilingue**, avec différentes traductions.
+* **Support multi-zones** : Les messages peuvent être joués **simultanément** dans différentes zones.
+* **Support linguistique** : Chaque message peut être **multilingue**, avec différentes traductions.
 
 Cette configuration assure **une intégration transparente** des **annonces vocales Aviavox** dans votre **système d'affichage dynamique PADS4**.

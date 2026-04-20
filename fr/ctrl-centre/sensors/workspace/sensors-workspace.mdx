@@ -1,0 +1,64 @@
+---
+- title: Capteurs dans Workspace
+---
+
+<Warning>
+  Cet article nécessite que vous ayez au moins la version 2025.2 de PADS4.
+</Warning>
+
+Une fois que les passerelles sont configurées dans PADS4, Workspace les importera automatiquement dans **Workspace Administration -> Occupancy Sensors**. Vous pouvez voir une **PADS4 Gateway** disponible dans la liste des passerelles dans **Workspace Administration**. Il s'agit d'une passerelle générique qui importe automatiquement les appareils PADS4 (capteurs de mouvement et LED) dans Workspace.
+
+![Ws Sensor1](/images/ctrl-centre/sensors/workspace/ws-sensor1.png)
+
+* Dans les onglets à côté, vous pouvez trouver les capteurs et les LED que vous pouvez utiliser dans Workspace.
+
+## Capteurs
+
+* Les capteurs détectent les mouvements et peuvent être liés à une salle (y compris les espaces modulaires).
+
+![Ws Sensor2](/images/ctrl-centre/sensors/workspace/ws-sensor2.png)
+
+* Vous pouvez les lier en cliquant sur le bouton lien/chaîne, en sélectionnant la salle et en enregistrant en cliquant sur le bouton d'enregistrement. Pour annuler la modification, vous pouvez cliquer sur le bouton déroulant à côté du bouton d'enregistrement et sélectionner annuler.
+
+![Ws Sensor3](/images/ctrl-centre/sensors/workspace/ws-sensor3.png)
+
+<Tip>
+  Lier un capteur **coûte une licence IoT**. Le nombre de licences peut être trouvé dans le coin supérieur droit du tableau des capteurs.
+</Tip>
+
+![Remaining Licenses](/images/ctrl-centre/sensors/workspace/Remaining-licenses.png)
+
+* Des erreurs de licence peuvent survenir. Dans ce cas, un indicateur d'avertissement est affiché sur la ligne de l'appareil. Il y a deux cas où vous pourriez rencontrer une erreur :
+  * Le capteur est lié à une salle non valide. Cela peut se produire si la salle n'a pas de licence (ou plus).
+  * Le capteur dépasse le nombre de licences disponibles.
+* Vous pouvez survoler l'avertissement pour savoir de quel type d'erreur il s'agit (infobulle).
+
+![Ws Sensor4](/images/ctrl-centre/sensors/workspace/ws-sensor4.png)
+
+* Lier un capteur à une salle signifie qu'il créera automatiquement une réservation pour cette salle lorsque le capteur détecte un mouvement pendant le nombre de minutes défini dans le profil de la salle. La réunion créée s'appellera PIR et aura la durée également définie dans le profil de la salle.
+* Dans le profil de salle, vous pouvez également définir la pause déjeuner. La pause déjeuner est la plage horaire pendant laquelle le capteur n'affectera aucune réunion. Il n'interrompra/ne libérera pas la réservation si les personnes sont absentes et ne créera pas non plus de nouvelle réservation automatique.
+* Prenez l'exemple suivant d'une configuration de profil de salle :
+
+![Ws Sensor5](/images/ctrl-centre/sensors/workspace/ws-sensor5.png)
+
+Dans ce cas, le capteur va :
+
+* Créer une réservation de 15 minutes une fois qu'un détecteur de mouvement a détecté un mouvement pendant 2 minutes.
+* Annuler/supprimer une réservation (automatique ou non) si aucun mouvement n'a été détecté pendant les 5 premières minutes de la réservation.
+* Interrompre/libérer une réservation (automatique ou non) si un mouvement a été détecté pendant la réunion mais qu'aucun nouveau mouvement n'a été détecté pendant 5 minutes.
+* Ne pas annuler/libérer/créer de réservation entre 12h et 13h.
+
+Il est important de noter que le "**Time without presence before release**" commence à chronométrer ces 5 minutes **après** que le délai de mouvement soit écoulé. Donc, dans ce cas, si le délai de mouvement du capteur était réglé à 120 secondes (2 minutes), il libérera/annulera 7 minutes après que le capteur ait notifié qu'il ne détectait plus aucun mouvement. S'il détecte un mouvement pendant ces 7 minutes, il répétera le processus.
+
+Enfin, les réservations automatiques ne remplacent/ne chevauchent jamais les réservations existantes. Prenons l'exemple précédent ; si une réunion est automatiquement créée 9 minutes avant une réservation à venir, cette réservation automatique ne durera que 9 minutes même si le profil de salle est configuré pour créer une réservation de 15 minutes.
+
+## LEDs
+
+* Les LEDs réagissent uniquement aux événements, mais **pas** par elles-mêmes. Vous devez les lier soit à une salle, soit à un capteur. Pour ce faire, vous devez vous assurer que la LED a le type de liaison souhaité : **Room Link** ou **Sensor Link**.
+* Vous pouvez mettre à jour ce type dans la boîte de dialogue d'édition (en cliquant sur le crayon à droite de la ligne du capteur).
+
+![Ws Sensor6](/images/ctrl-centre/sensors/workspace/ws-sensor6.png)
+
+* Lorsque le type est défini sur **Room Link,** vous pouvez sélectionner une salle à lier à la LED en utilisant le bouton de lien (icône de chaîne). La LED indiquera alors l'état de la salle liée (les espaces modulaires sont également autorisés) : Rouge pour actuellement occupé/réservé par une réservation et vert pour libre / aucune réservation en cours.
+* Lorsque le type est défini sur **Sensor Link**, vous pouvez sélectionner un capteur à lier à la LED. La LED indiquera alors l'état du capteur lié : Rouge pour la détection actuelle de mouvement et vert pour aucun mouvement détecté.
+* Une fois que la LED devient verte, cela signifie également que le délai de mouvement est écoulé et que la salle libérera/annulera la réservation en cours après que le nombre de minutes configuré dans le profil de salle soit écoulé.

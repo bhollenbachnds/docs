@@ -1,0 +1,62 @@
+---
+- title: TD-1070
+---
+
+Ce guide décrit comment installer et configurer PADS4 Viewer sur les appareils Qbic TD‑1070 fonctionnant sous Android. Utilisez-le pour effectuer une configuration étape par étape du viewer sur les versions de firmware et d'Android prises en charge.
+
+## Avant de commencer
+
+* Assurez-vous que votre PADS4 Server est déjà installé, sous licence et correctement configuré.
+* Vérifiez que le TD‑1070 est allumé et connecté au réseau
+
+## Appareils pris en charge
+
+Les modèles Qbic TD‑1070 suivants sont pris en charge :
+
+* TD‑1070 (Android 12)
+* TD‑1070 (Android 14)
+
+## Exigences minimales
+
+* Version du serveur PADS4 : 2023.3 ou ultérieure
+* Version du firmware : V2.12.2 (Android 12) ou V3.14.1 (Android 14)
+
+Assurez-vous que la version du firmware de votre TD‑1070 correspond au moins à la version requise pour sa version Android avant de commencer l'installation de PADS4 Viewer.
+
+## Effectuer une réinitialisation d'usine
+
+Une réinitialisation d'usine efface toutes les applications, les paramètres et les données stockées localement sur le TD‑1070.
+
+* Ouvrez **Paramètres** et sélectionnez **Options de réinitialisation**
+* Sélectionnez **Effacer toutes les données (Réinitialisation d'usine)**
+* Cliquez sur **Effacer toutes les données** pour confirmer la réinitialisation d'usine
+
+**Une fois terminé, l'appareil redémarrera et affichera l'écran d'accueil.**
+
+# **Installation de PADS4 Viewer**
+
+## Télécharger le package d'installation
+
+1. Téléchargez le dernier **PADS4Qbic.apk** package d'installation depuis
+
+   [https://github.com/PADS4/PADS4-Viewer-Qbic/releases/latest](https://github.com/PADS4/PADS4-Viewer-Qbic/releases/latest)
+2. Copiez le fichier APK sur une clé USB
+3. Insérez la clé USB dans l'appareil TD-1070
+
+## Installation du visualiseur PADS4
+
+1. Ouvrez **Paramètres Android** → **Paramètres du lecteur** sur le TD-1070.
+2. Activez **Passer au mode Android natif**.
+3. Fermez les Paramètres pour revenir à l'écran d'accueil Android.
+4. Ouvrez l'application **Fichiers** depuis le tiroir d'applications.
+5. Naviguez vers le **Lecteur USB**, sélectionnez **PADS4Qbic.apk**, et appuyez pour l'ouvrir.
+6. Lorsque l'avertissement apparaît, appuyez sur **Paramètres** et activez **Installer des applications inconnues** pour l'application Fichiers.
+7. Sur l'écran **Installer PADS4Qbic**, appuyez sur **Installer**.
+8. Une fois l'installation terminée, appuyez sur **Terminé**.
+9. Retournez aux **Paramètres** → **Paramètres du lecteur** et désactivez **Passer au mode Android natif**.
+10. Appuyez sur **Accueil**.
+11. Recherchez et lancez **PADS4Qbic** depuis l'option de recherche.
+12. PADS4 Viewer démarre—configurez l'**adresse du serveur** et le **nom du visualiseur**.
+13. Accordez toutes les **permissions** requises lorsque vous y êtes invité.
+
+PADS4 Viewer est maintenant installé avec succès sur le TD-1070

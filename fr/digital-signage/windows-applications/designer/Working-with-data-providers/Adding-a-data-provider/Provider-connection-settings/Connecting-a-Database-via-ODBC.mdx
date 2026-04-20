@@ -20,10 +20,10 @@ Avant de configurer une **connexion ODBC** dans **PADS4**, assurez-vous que :
 
 ### **1. Démarrer l'Assistant de fournisseur de données**
 
-* Suivez les étapes décrites dans **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**.
+* Suivez les étapes décrites dans **Adding a Data Provider** ou **Editing a Data Provider**.
 * Sélectionnez **ODBC** comme type de fournisseur.
 
-### **2. Saisissez la chaîne de connexion ODBC**
+### **2. Saisir la chaîne de connexion ODBC**
 
 * Fournissez la **chaîne de connexion ODBC** pour établir un lien avec votre base de données.
 * Le format de cette chaîne dépend du **pilote ODBC** utilisé.
@@ -35,12 +35,12 @@ Avant de configurer une **connexion ODBC** dans **PADS4**, assurez-vous que :
 Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:\MyDatabase.accdb;Uid=Admin;Pwd=;
 ```
 
-* Cliquez sur **Test** pour valider la connexion.
-* Cliquez sur **Next** pour continuer.
+* Cliquez **Test** pour valider la connexion.
+* Cliquez **Suivant** pour continuer.
 
 ***
 
-### **3. Sélectionnez la source de données**
+### **3. Sélectionner la source de données**
 
 * Choisissez l'une des sources de données détectées :
   * **Tables**
@@ -57,14 +57,14 @@ SELECT * FROM Customers
 **Tip:**\
 N'utilisez les **instructions SQL** que lorsque c'est nécessaire. Les requêtes écrites manuellement doivent être validées pendant l'exécution, ce qui peut **affecter les performances**.
 
-* Cliquez sur **Next** pour continuer.
+* Cliquez **Suivant** pour continuer.
 
 ***
 
-### **4. Terminez la configuration**
+### **4. Terminer la configuration**
 
 * Suivez les étapes restantes dans le guide **Adding a Data Provider**.
-* Cliquez sur **Finish** pour enregistrer les paramètres de connexion.
+* Cliquez **Terminer** pour enregistrer les paramètres de connexion.
 
 ***
 
@@ -72,12 +72,12 @@ N'utilisez les **instructions SQL** que lorsque c'est nécessaire. Les requêtes
 
 * **Assurer l'accès réseau :**
   * Si vous utilisez un **PADS4 Data Server**, le **pilote ODBC doit être installé** sur le **serveur**, et la base de données **doit être accessible**.
-  * Si **vous n'utilisez pas de Data Server**, assurez-vous que **chaque PADS4 Viewer et Designer** dispose du **pilote ODBC correct installé**.
+  * Si **vous n'utilisez pas de Data Server**, assurez-vous que **chaque PADS4 Viewer et Designer** a le **pilote ODBC correct installé**.
 
 * **Test de la connexion :**
   * Utilisez le bouton **Test** pour vérifier la connexion **avant de continuer**.
 
 * **Considérations de performance :**
-  * Utilisez des **Tables, Views ou Stored Procedures prédéfinis** pour **de meilleures performances** au lieu de **requêtes SQL** brutes.
+  * Utilisez **des Tables, Vues ou Procédures Stockées prédéfinies** pour **de meilleures performances** au lieu de **requêtes SQL**.
 
-En suivant ces étapes, vous pouvez réussir à **connecter une base de données ODBC à PADS4** et récupérer des **données en temps réel** pour **l'affichage dynamique et les mises à jour automatiques de contenu**.
+En suivant ces étapes, vous pouvez **connecter avec succès une base de données ODBC à PADS4** et récupérer **des données en temps réel** pour **l'affichage dynamique et les mises à jour automatiques de contenu**.

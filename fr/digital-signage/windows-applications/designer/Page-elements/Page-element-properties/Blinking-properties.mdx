@@ -1,0 +1,47 @@
+Ces propriétés vous permettent d'ajouter un **effet de clignotement** à votre élément, soit en faisant apparaître et disparaître l'élément, soit en changeant ses couleurs.
+
+***
+
+### Clignotement
+
+* **Blink**:\
+  Activer ou désactiver le clignotement pour votre élément.
+  * **Enabled** : L'élément alternera entre visible et invisible à une fréquence définie.
+  * **Disabled** : L'élément restera statique sans clignotement.
+
+* **Use Different for Blinking** :\
+  Lorsque cette option est activée, l'élément **ne** disparaîtra pas. Au lieu de cela, ses couleurs alterneront entre les couleurs normales et les **Foreground Color** et **Background Color** spécifiées pendant le cycle de clignotement.
+  * Cela garantit que le contenu reste visible à tout moment tout en attirant l'attention par des changements de couleur.
+
+***
+
+### Foreground Color
+
+* Définit la **couleur de premier plan alternative** utilisée lorsque l'élément est dans son état de "clignotement".
+* Peut être utilisé, par exemple, pour changer la couleur du texte pendant le clignotement.
+
+***
+
+### Background Color
+
+* Définit la **couleur d'arrière-plan alternative** utilisée lorsque l'élément est dans son état de "clignotement".
+* Fonctionne bien en combinaison avec la couleur de premier plan pour créer un effet visuel fort.
+
+***
+
+### Remarques
+
+* **Synchronisation** :\
+  Les effets de clignotement sont **automatiquement synchronisés** entre différents Viewers. Cela garantit que le clignotement se produit **simultanément** sur tous les écrans dans une configuration en réseau.
+
+* **Blink Frequency** :\
+  La fréquence à laquelle le clignotement se produit est contrôlée au **niveau de la page** pour assurer un timing cohérent entre les éléments sur la même page.
+
+* **Compatibilité** :\
+  Toutes les propriétés (comme le changement de couleur pendant le clignotement) ne sont pas disponibles pour chaque type d'élément. Cela peut dépendre de la nature de l'élément et du type de contenu.
+
+***
+
+### Conseil
+
+Utiliser **différentes couleurs pour le clignotement** (au lieu de rendre l'élément invisible) peut agir comme un effet d'inversion de couleur — faisant ressortir l'élément tout en **gardant le contenu visible**. Cette approche est utile lorsque vous voulez mettre l'accent sur des informations importantes **sans les cacher**.

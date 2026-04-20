@@ -1,0 +1,47 @@
+---
+- title: PADS4 Domains
+---
+
+Les domaines dans PADS4 permettent de gérer plusieurs environnements clients indépendants sur un seul serveur PADS4. Cela permet à différentes organisations ou départements de fonctionner séparément tout en utilisant la même infrastructure.
+
+Avec la prise en charge améliorée des domaines, tous les services et applications PADS4 sont désormais conscients des domaines, et les domaines peuvent être entièrement configurés et gérés via le PADS4 CTRL Center.
+
+## Prérequis
+
+<Info>
+  Avant de créer un nouveau domaine, assurez-vous que votre **PADS4 installation is updated to version 2023.1** ou ultérieure, car la fonctionnalité de domaine n'est prise en charge qu'à partir de cette version.
+</Info>
+
+Chaque domaine nécessite sa propre **PADS4 license**. Vérifiez que vous avez obtenu la licence nécessaire avant de procéder à la configuration du domaine.
+
+## Domaine par défaut
+
+Lors de l'installation de PADS4, un domaine par défaut nommé **PADS** est automatiquement créé. Celui-ci sert d'environnement initial.
+
+### Modification du domaine par défaut
+
+Depuis la section Domaines de l'interface racine :
+
+* Sélectionnez l'entrée du domaine **PADS**.
+* Cliquez sur le menu **trois points ⁝** pour accéder aux options de modification.
+* Mettez à jour le **DNS Host Name** pour qu'il corresponde à l'adresse de votre serveur.
+* Téléchargez votre **SSL certificate** (*.CRT*) et **private key** (*.KEY*) signés par un tiers.
+
+<Frame>
+  ![Root Default Domain Edit](/images/RootAccess/RootDefaultDomainEdit.png)
+</Frame>
+
+## Création d'un nouveau domaine PADS4
+
+Suivez les étapes ci-dessous pour créer un nouveau domaine PADS4.
+
+1. Cliquez sur **+ New** dans le tableau de bord Domaines.
+2. **Saisissez les détails du domaine** :\
+   Fournissez un **name** de domaine (par exemple, "CompanyA" ou "Branch1").
+3. **DNS Host Name** – Spécifiez le **DNS hostname** du domaine.
+4. **Certificate File** – Téléchargez le **third-party signed SSL certificate** (`.CRT format`).
+5. **Private Key File** – Téléchargez la **third-party signed private key** (`.KEY format`).
+
+Cliquez sur **Create**.
+
+Cela va **restart PADS4 services** et appliquer les paramètres du domaine.

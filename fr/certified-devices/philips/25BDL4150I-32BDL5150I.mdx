@@ -1,22 +1,26 @@
-Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **les écrans Philips ePaper**.
+---
+- title: E-paper 25BDL4150I
+---
+
+Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **Philips ePaper displays**.
 
 ***
 
 ## **1. Première utilisation**
 
-Avant de continuer, assurez-vous que le **`LauncherServiceViewer.zip`** fichier est situé à :
+Avant de continuer, assurez-vous que le **`LauncherServiceViewer.zip`** fichier se trouve à :
 
 ```
 http://pads4serverip/PADS4/apps/
 ```
 
-📌 Pour une documentation supplémentaire, visitez le [site Dropbox de Philips](https://www.markdownguide.org/), naviguez vers **"Models"** en bas à gauche, et sélectionnez le modèle d'écran concerné.
+📌 Pour une documentation supplémentaire, visitez le [Philips Dropbox site](https://www.markdownguide.org/), naviguez vers **"Models"** en bas à gauche, et sélectionnez le modèle d'affichage pertinent.
 
 ***
 
 ### **1.1 Réinitialisation de l'appareil**
 
-Si l'écran a déjà été utilisé, effectuez une **réinitialisation d'usine** pour éviter les conflits de configuration.
+Si l'écran a été utilisé précédemment, effectuez une **réinitialisation d'usine** pour éviter les conflits de configuration.
 
 <Steps>
   <Step title="Première étape">
@@ -38,10 +42,10 @@ Si l'écran a déjà été utilisé, effectuez une **réinitialisation d'usine**
 
 Les mises à jour du firmware sont disponibles via le site de support Philips :
 
-📌 **Instructions**:
+📌 **Instructions** :
 
-* Allez sur le Dropbox Philips
-* Cliquez sur **Models → Sélectionnez le modèle → Ouvrez le manuel d'instructions**
+* Allez sur le Philips Dropbox
+* Cliquez sur **Models → Select Model → Open Instructions Manual**
 * (Utilisez le clic droit et ouvrez dans un nouvel onglet si nécessaire)
 
 ***
@@ -59,16 +63,16 @@ Comme ces écrans n'ont pas d'entrée interactive, utilisez **scrcpy** pour refl
     Téléchargez la version appropriée (par exemple, **Windows 64-bit zip**).
   </Step>
 
-  <Step title="Troisième étape">
-    Extrayez le contenu à l'emplacement souhaité. Assurez-vous que **scrcpy** et **adb** sont inclus.
+  <Step title="Étape Trois">
+    Extrayez le contenu vers l'emplacement souhaité. Assurez-vous que **scrcpy** et **adb** sont inclus.
   </Step>
 
-  <Step title="Quatrième étape">
-    Ajoutez le chemin du dossier aux **Variables d'environnement → Path** de votre système.
+  <Step title="Étape Quatre">
+    Ajoutez le chemin du dossier aux **Variables d'Environnement → Path**.
   </Step>
 
-  <Step title="Cinquième étape">
-    Ouvrez l'Invite de commandes et vérifiez l'installation :
+  <Step title="Étape Cinq">
+    Ouvrez l'Invite de Commandes et vérifiez l'installation :
 
     * `scrcpy -v`
     * `adb --version`
@@ -77,98 +81,95 @@ Comme ces écrans n'ont pas d'entrée interactive, utilisez **scrcpy** pour refl
 
 ***
 
-## **2. Installation de l'application**
+## **2. Installation de l'Application**
 
 Assurez-vous que **scrcpy** et **adb** sont correctement installés.
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Un">
     Connectez l'**écran au PC via USB**.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape Deux">
     Confirmez l'accès au **système de fichiers Android** via le gestionnaire de fichiers.
   </Step>
 
-  <Step title="Troisième étape">
-    Ouvrez l'**Invite de commandes**.
+  <Step title="Étape Trois">
+    Ouvrez l'**Invite de Commandes**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Tapez `adb devices` pour vérifier la connexion de l'appareil.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Lancez scrcpy avec `scrcpy`. Si plusieurs appareils sont connectés, utilisez `scrcpy -s {device-name}`.
   </Step>
 
-  <Step title="Sixième étape">
+  <Step title="Étape Six">
     Téléchargez le dernier **PADS4 Web Launcher APK**.
   </Step>
 
-  <Step title="Septième étape">
+  <Step title="Étape Sept">
     Naviguez vers le dossier contenant le fichier **.apk**.
   </Step>
 
-  <Step title="Huitième étape">
+  <Step title="Étape Huit">
     Faites un clic droit et sélectionnez **Ouvrir dans le Terminal**.
   </Step>
 
-  <Step title="Neuvième étape">
+  <Step title="Étape Neuf">
     Installez l'application avec `adb install {application}.apk`. Attendez la confirmation **Success**.
   </Step>
 
-  <Step title="Dixième étape">
+  <Step title="Étape Dix">
     Dans la fenêtre scrcpy, appuyez sur **Home**, puis lancez **PADS4 Web Launcher**.
   </Step>
 
-  <Step title="Onzième étape">
+  <Step title="Étape Onze">
     Entrez la configuration appropriée pour vous connecter à votre **environnement PADS4**.
   </Step>
 </Steps>
 
 ***
 
-## **3. Fonctionnalités prises en charge et limitations**
+## **3. Fonctionnalités Prises en Charge & Limitations**
 
-| **Fonctionnalité**                  | **Détails**                                                                                                    |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| Modèles d'affichage                 | ✅ Pris en charge                                                                                               |
-| Mode Portrait                       | ✅ Pris en charge                                                                                               |
-| Télécommande                        | ❌ Non pris en charge (peut être configuré, mais la télécommande ne fonctionne pas)                             |
-| HTTPS                               | ✅ Pris en charge                                                                                               |
-| Vidéo                               | ⚠️ Non pris en charge (seule la première image est affichée)                                                   |
-| Images (JPG, PNG, BMP)              | ✅ Pris en charge                                                                                               |
-| GIF                                 | ⚠️ Statique uniquement                                                                                         |
-| Texte, Ligne, Forme                 | ✅ Pris en charge                                                                                               |
-| Texte défilant                      | ⚠️ Comportement imprévisible en raison du faible taux de rafraîchissement                                      |
-| Texte formaté                       | ✅ Utilisez uniquement le formatage de temps basé sur les minutes (évitez les secondes)                         |
-| Flash                               | ❌ Non pris en charge                                                                                           |
-| Tableau                             | ✅ Pris en charge (des changements fréquents peuvent causer des problèmes de visibilité des lignes)             |
-| PDF / PowerPoint                    | ✅ Uniquement statique, première page affichée                                                                  |
-| Bouton interactif                   | ⚠️ Affiché comme statique, non interactif                                                                      |
-| Web                                 | ❌ Non pris en charge                                                                                           |
-| Couleurs                            | ✅ Pris en charge (limité à la gamme de couleurs ePaper)                                                        |
-| Fournisseurs de données             | ⚠️ Données statiques uniquement; les mises à jour doivent dépasser les intervalles de taux de rafraîchissement |
-| Règles, Variables Viewer            | ✅ Pris en charge dans les limites du taux de rafraîchissement                                                  |
-| Mises à jour logicielles            | ✅ Pris en charge                                                                                               |
-| Stockage hors ligne, Planifications | ✅ Pris en charge                                                                                               |
-| PADS4 Ctrl Center                   | ✅ Pris en charge : Journal du Viewer, Capture d'écran, Journal de synchronisation, Paramètres du Viewer, etc.  |
-| Gestion de l'affichage              | ❌ Arrêt, Redémarrage, Wake-on-LAN et état de la LED non pris en charge                                         |
-| Surveillance et alertes             | ✅ Prise en charge partielle (par exemple, état du réseau)                                                      |
+| **Fonctionnalité**                  | **Détails**                                                                                                             |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Modèles d'Affichage                 | ✅ Pris en charge                                                                                                        |
+| Mode Portrait                       | ✅ Pris en charge                                                                                                        |
+| Télécommande                        | ❌ Non pris en charge (peut être configuré, mais la télécommande ne fonctionne pas)                                      |
+| HTTPS                               | ✅ Pris en charge                                                                                                        |
+| Vidéo                               | ⚠️ Non pris en charge (seule la première image est affichée)                                                            |
+| Images (JPG, PNG, BMP)              | ✅ Pris en charge                                                                                                        |
+| GIF                                 | ⚠️ Statique uniquement                                                                                                  |
+| Texte, Ligne, Forme                 | ✅ Pris en charge                                                                                                        |
+| Texte Défilant                      | ⚠️ Comportement imprévisible en raison du faible taux de rafraîchissement                                               |
+| Texte Formaté                       | ✅ Utilisez uniquement le formatage de temps basé sur les minutes (évitez les secondes)                                  |
+| Flash                               | ❌ Non pris en charge                                                                                                    |
+| Tableau                             | ✅ Pris en charge (les changements fréquents peuvent causer des problèmes de visibilité des lignes)                      |
+| PDF / PowerPoint                    | ✅ Uniquement statique, première page affichée                                                                           |
+| Bouton Interactif                   | ⚠️ Affiché comme statique, non interactif                                                                               |
+| Web                                 | ❌ Non pris en charge                                                                                                    |
+| Couleurs                            | ✅ Pris en charge (limité à la gamme de couleurs ePaper)                                                                 |
+| Fournisseurs de Données             | ⚠️ Données statiques uniquement; les mises à jour doivent dépasser les intervalles de taux de rafraîchissement          |
+| Règles, Variables de Visualisation  | ✅ Pris en charge dans les limites du taux de rafraîchissement                                                           |
+| Mises à Jour Logicielles            | ✅ Pris en charge                                                                                                        |
+| Stockage Hors Ligne, Planifications | ✅ Pris en charge                                                                                                        |
+| PADS4 Ctrl Center                   | ✅ Pris en charge : Journal du Visualiseur, Capture d'écran, Journal de Synchronisation, Paramètres du Visualiseur, etc. |
+| Gestion de l'Affichage              | ❌ Arrêt, Redémarrage, Wake-on-LAN et état LED non pris en charge                                                        |
+| Surveillance & Alertes              | ✅ Prise en charge partielle (par ex., état du réseau)                                                                   |
 
 ***
 
-## **4. Limitations générales**
+## **4. Limitations Générales**
 
-* **Taux de rafraîchissement**:
-
+* **Taux de Rafraîchissement**:
   * 25BDL4150I: \~1 minute
   * 32BDL5150I: \~2 minutes
-
-* **Comportement du contenu**:
-
-  * Le contenu dynamique peut être **affiché sous forme de captures d'écran**.
+* **Comportement du Contenu**:
+  * Le contenu dynamique peut être **affiché comme des captures d'écran**.
   * Le contenu ne doit **pas se mettre à jour plus rapidement que le taux de rafraîchissement**.
 
 ***

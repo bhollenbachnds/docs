@@ -1,0 +1,61 @@
+Ces propriétés définissent les **videos or sounds** qui seront lus par l'**video/sound element**. Vous pouvez soit **select a single file** ou créer une **playlist of multiple videos/sounds** qui seront lus séquentiellement.
+
+***
+
+## **Gestion de la liste de lecture**
+
+* **Add**, **edit**, **reorder**, ou **remove** les éléments de la liste de lecture.
+* Utilisez les **navigation buttons** pour naviguer dans la liste de lecture.
+* La **total duration** de tous les éléments de la liste de lecture est affichée.
+* **Play list item properties** varient selon le type d'élément.
+
+***
+
+## **Options des éléments de la liste de lecture vidéo/son**
+
+| **Option**                     | **Description**                                                                                                                                                                                              |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Video from Content Library** | Utilise un **video or sound file** de la **PADS4 Content Library** (recommandé). Le contenu est **automatically synchronized** sur tous les PC.                                                              |
+| **Video from File**            | Utilise un **video or sound file** d'une **external source** (y compris les flux RTSP). Les fichiers **must be manually managed**, et la lecture nécessite le chemin exact du fichier.                       |
+| **Video Stream**               | Utilise un **video stream** d'une **IP camera, streaming media server, or online source**. Nécessite une **streaming URL** valide.                                                                           |
+| **Separator**                  | Insère une **pause** dans la liste de lecture (aucune vidéo/son ne sera lu).                                                                                                                                 |
+| **HDMI / DVI**                 | Lit du **HDMI/DVI content** à partir d'appareils qui le prennent en charge (par exemple, Samsung SSSP3 et versions supérieures). Spécifiez la source en utilisant : **SOURCE://HDMI1** ou **SOURCE://DVI2**. |
+
+***
+
+## **Propriétés de l'élément de la liste de lecture**
+
+### **Contenu**
+
+* Spécifie la **référence du fichier** pour la vidéo/le son.
+* Si vous utilisez **"Video from File"**, le **chemin complet du fichier** doit être fourni.
+* Si vous utilisez un **flux vidéo**, saisissez l'**URL de streaming**.
+
+### **Découper la vidéo**
+
+* Permet de **lire uniquement une portion sélectionnée** de la vidéo/du son.
+
+| **Propriété** | **Description**                                                          |
+| ------------- | ------------------------------------------------------------------------ |
+| **Début**     | L'**image de départ** pour la section découpée.                          |
+| **Durée**     | La **longueur (en images)** de la section découpée ou la durée de pause. |
+
+### **Effet**
+
+* Définit l'**effet de transition d'entrée** pour chaque élément de la liste de lecture.
+* **La durée de l'effet** peut être spécifiée en **secondes**.
+
+***
+
+## **Utilisation des flux vidéo**
+
+* **Se connecter à un flux vidéo** depuis un **serveur de médias en streaming, une caméra IP ou un fichier en ligne**.
+* Saisissez l'**URL** du flux vidéo.
+
+***
+
+## **Remarques**
+
+* La **liste de lecture stocke les références aux fichiers vidéo/audio** mais **ne stocke pas les médias réels**.
+* Si un **fichier référencé est mis à jour**, la nouvelle version sera **automatiquement utilisée pendant la lecture**.
+* **Les propriétés de la liste de lecture sont désactivées** si l'élément est connecté à une **source de données**—le contenu sera plutôt déterminé par le flux de données en temps réel.

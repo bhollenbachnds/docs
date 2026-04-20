@@ -1,0 +1,44 @@
+Les paramètres de capteurs dans PADS4 vous permettent de gérer comment **les données de capteurs, les images et les rapports d'incidents** sont stockés dans la base de données. Vous pouvez configurer **la durée de stockage**, **la gestion des images**, et **le type de base de données** pour des performances optimales du système.
+
+***
+
+## **Configuration du stockage des données de capteurs**
+
+* **Définir la période de conservation** pour les données de capteurs.
+* Les données plus anciennes sont **automatiquement supprimées** après la période spécifiée.
+* Si nécessaire, **des outils tiers** peuvent être utilisés pour **copier et exporter** les informations de la base de données.
+
+***
+
+## **Gestion des images de capteurs**
+
+* Définir combien de temps **les images de capteurs** doivent être stockées.
+* En raison des **réglementations GPRS**, le stockage d'images peut être **désactivé** pour la conformité à la confidentialité.
+
+***
+
+## **Paramètres de stockage des incidents**
+
+* Spécifiez combien de temps **les données d'incidents** (générées par les capteurs) sont conservées dans la base de données.
+* Après la période définie, **les incidents seront automatiquement supprimés**.
+
+***
+
+## **Configuration de la base de données**
+
+### **Base de données par défaut**
+
+* **SQLite** est utilisé **par défaut** pour stocker les données de capteurs.
+
+### **Modification des paramètres de la base de données**
+
+* La configuration de la base de données peut être modifiée à l'aide de **NDS.DataStorage.ConfigurationTool.exe**.
+* Location:\
+  `C:\Program Files\NDS\PADS4 Foundation\NDS.DataStorage.ConfigurationTool`
+* Alternativement, vous pouvez démarrer cet outil depuis l'**Application de configuration Foundation** après l'installation.
+
+***
+
+## **Conclusion**
+
+PADS4 offre une gestion flexible **des données de capteurs**, assurant la conformité avec **les politiques et réglementations de stockage** tout en optimisant **les performances et la sécurité** du système.

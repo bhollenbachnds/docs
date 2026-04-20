@@ -1,4 +1,4 @@
-Dans les environnements avec des **structures de Destination hiérarchiques** complexes, il peut être difficile de suivre où un planning a été initialement créé—particulièrement lors de la visualisation de **Viewers** individuels au sein d'un **Viewer Group**.
+Dans les environnements avec des **structures de Destination hiérarchiques complexes**, il peut être difficile de suivre où un planning a été initialement créé—surtout lors de la visualisation de **Viewers** individuels au sein d'un **Viewer Group**.
 
 Pour simplifier cela, **PADS4 Scheduler** fournit un mécanisme rapide pour identifier et naviguer vers la **Destination d'origine** où réside un planning, rendant l'édition rapide et efficace.
 
@@ -9,7 +9,7 @@ Pour simplifier cela, **PADS4 Scheduler** fournit un mécanisme rapide pour iden
 * Un planning a été créé pour un **Viewer Group** appelé **1stFloor**.
 * Un **Viewer** nommé **1stFloorViewer01** fait partie de ce groupe.
 
-Lorsque vous sélectionnez le **1stFloorViewer01** dans l'arborescence des **Destinations**, vous verrez que le **planning au niveau du groupe** (de *1stFloor*) est **visible** dans la vue Calendrier ou Tableau.
+Lorsque vous sélectionnez le **1stFloorViewer01** dans l'**arborescence des Destinations**, vous verrez que le **planning au niveau du groupe** (de *1stFloor*) est **visible** dans la vue Calendrier ou Tableau.
 
 > Vous pouvez voir que le planning appartient à un groupe et **non** au Viewer individuel car le planning **affiche le nom de la Destination d'origine** dans sa description (par exemple, "1stFloor").
 
@@ -17,7 +17,7 @@ Lorsque vous sélectionnez le **1stFloorViewer01** dans l'arborescence des **Des
 
 ## Tentative de modification du planning
 
-Si vous essayez de **modifier directement le planning** depuis le niveau du Viewer (par exemple, 1stFloorViewer01), l'action sera **bloquée**, car le planning **n'appartient pas** à ce Viewer—il appartient au Viewer Group.
+Si vous tentez de **modifier directement le planning** depuis le niveau Viewer (par exemple, 1stFloorViewer01), l'action sera **bloquée**, car le planning **n'appartient pas** à ce Viewer—il appartient au Viewer Group.
 
 ***
 
@@ -30,12 +30,12 @@ Pour modifier le planning, vous devez naviguer vers le **Viewer Group** où le p
 1. **Faites un clic droit** sur le planning qui appartient à un autre groupe.
 2. Sélectionnez **Go to Destination of Schedule** dans le menu contextuel.
 
-PADS4 Scheduler basculera automatiquement la sélection vers le **Viewer Group** correct (par exemple, 1stFloor).
+PADS4 Scheduler passera automatiquement la sélection au **Viewer Group** correct (par exemple, 1stFloor).
 
 À partir de là, vous pouvez :
 
 * **Modifier le planning**
-* **Changer son contenu, sa destination, son horaire ou sa priorité**
+* **Changer son contenu, sa destination, son heure ou sa priorité**
 * **Appliquer ou mettre à jour les paramètres de récurrence**
 
 ***

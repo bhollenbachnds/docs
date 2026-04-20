@@ -1,0 +1,57 @@
+Ces propriétés déterminent comment votre élément **gère le texte multi-lignes** lorsqu'il est connecté à une **source de données externe**.
+
+***
+
+## **Options de gestion de texte**
+
+### **Diviser le texte multi-lignes en éléments de liste de lecture**
+
+* **Activé** – Chaque **ligne de texte** de la source de données est traitée comme un **élément de liste de lecture distinct**, permettant un **affichage alterné**.
+* **Désactivé** – Le **texte entier** est traité comme **un seul élément de liste de lecture**, affichant toutes les lignes ensemble.
+
+***
+
+## **Comment ça fonctionne**
+
+Si une **valeur de texte multi-lignes** est reçue d'une **source de données**, ce paramètre contrôle si :
+
+1. **Chaque ligne est affichée séparément** (comme un bandeau d'actualités défilant ou des annonces rotatives).
+2. **Toutes les lignes sont affichées ensemble** dans un seul bloc de texte.
+
+***
+
+## **Exemple d'utilisation**
+
+### **Scénario 1 : Annonces de vol (Activé)**
+
+**Entrée de la source de données :**
+
+```
+Boarding  
+Einsteigen
+```
+
+* **Avec la division activée :** Chaque mot apparaît **individuellement** dans la liste de lecture (par exemple, "Boarding" → "Einsteigen").
+* **Avec la division désactivée :** Les deux lignes sont affichées **ensemble** dans un seul bloc de texte.
+
+***
+
+### **Scénario 2 : Liste de lecture d'images (Activé)**
+
+**Entrée de la source de données :**
+
+```
+c:\folder\image1.jpg  
+c:\folder\image2.jpg  
+```
+
+* **Sans division :** L'élément d'image **ne peut pas lire** l'entrée entière comme un chemin valide.
+* **Avec division :** L'élément **traite chaque ligne séparément**, permettant à une **liste de lecture d'images** de s'afficher en séquence.
+
+***
+
+## **Notes importantes**
+
+* Le **séparateur entre les lignes de texte** est le **caractère de retour chariot et saut de ligne** (`<CR> <LF>`).
+* Cette fonctionnalité est utile lorsque vous travaillez avec des **listes d'images, de messages ou des flux de données en temps réel**.
+* Fonctionne en combinaison avec les **options de liste de lecture** pour définir comment les éléments sont affichés.

@@ -1,0 +1,75 @@
+Avec les fonctions du journal de synchronisation, vous pouvez consulter les messages du journal du processus de synchronisation de contenu sur votre PADS4 Viewer ou les messages du journal stockés dans un fichier de boîte noire. Le journal de synchronisation d'un PADS4 Viewer peut être effacé ou enregistré dans un fichier, avec d'autres informations de la boîte noire.
+
+ 
+
+#### **Pour consulter le journal de synchronisation d'un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Synchronization log** dans la liste des catégories d'informations disponibles pour le viewer.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées du Viewer sélectionné et afficher les résultats dans la fenêtre du journal de synchronisation.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Pour consulter le journal de synchronisation d'un fichier de boîte noire**
+
+1. Assurez-vous que la boîte noire a été [ajoutée](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) à l'application.
+2. Cliquez sur l'onglet **Black Box** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Blackboxtab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Blackboxtab.png)
+3. Sélectionnez l'élément de boîte noire dans la liste des boîtes noires disponibles.
+4. Cliquez sur **Synchronization log** dans la liste des catégories d'informations disponibles pour la boîte noire.
+
+Après cela, le système ouvrira automatiquement le fichier de boîte noire pour récupérer les informations demandées et afficher les résultats dans la fenêtre du journal de synchronisation.
+
+ 
+
+#### **Fenêtre du journal de synchronisation**
+
+La fenêtre du journal de synchronisation affiche tous les messages de journal générés par le processus de synchronisation de contenu sur un PC Viewer. Avec ces informations, vous pouvez vérifier quand le processus de synchronisation a été exécuté et obtenir des détails sur les éléments en cours de synchronisation.
+
+![EN Agent Synchronizationlog Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Synchronizationlog.png)
+
+**Horodatage**\
+Date et heure auxquelles l'élément a été enregistré.
+
+**Message**\
+L'élément réel qui a été enregistré. Habituellement, chaque session de synchronisation commence par le message 'Requesting new synchronization session' et se termine par 'Synchronization session finished'.
+
+**Taille**\
+Si le processus de synchronisation ajoute de nouveaux éléments à votre bibliothèque de contenu, la taille du fichier ajouté est indiquée ici.
+
+ 
+
+#### **Effacer le journal de synchronisation**
+
+En effaçant le journal de synchronisation, vous pouvez redémarrer le processus d'enregistrement de votre PADS4 Viewer. Pour effacer le journal de synchronisation :
+
+1. Cliquez sur **Clear Log** dans le menu **Home**.
+
+   ![EN Agent Ribbon Clear Log Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ClearLog.png)
+2. Cliquez sur **Yes** pour confirmer que vous souhaitez effacer le journal de synchronisation.
+
+Après cela, tous les messages du journal seront supprimés du journal de synchronisation sur le PC PADS4 Viewer.
+
+ 
+
+#### **Enregistrer le journal de synchronisation**
+
+Pour enregistrer le journal de synchronisation afin de le consulter hors ligne ultérieurement, vous pouvez l'enregistrer avec d'autres informations [black box](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) de votre Viewer. Pour enregistrer le journal de synchronisation :
+
+1. Cliquez sur **Save Black Box** dans le menu **Home**.
+2. Saisissez un **File name** et cliquez sur **Save** pour enregistrer les informations.
+
+Après cela, le fichier black box sera enregistré sur votre ordinateur.
+
+<Tip>
+  Chaque PADS4 Viewer crée automatiquement ce qu'on appelle une black box dans laquelle sont stockées des informations précieuses sur PADS4. Cela comprend les informations système et divers journaux. Lorsque vous rencontrez un problème avec un PADS4 Viewer, la black box est la source d'information idéale pour analyser la situation et identifier le problème. Ainsi, lorsque vous contactez le support pour un problème avec un PADS4 Viewer, il est toujours recommandé d'envoyer le fichier black box.
+</Tip>

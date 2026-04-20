@@ -1,33 +1,33 @@
-Le fournisseur de données **Office 365 Microsoft Excel** permet à **PADS4** de se connecter à des **documents Excel stockés dans le cloud** via **SharePoint** ou **OneDrive for Business**.
+Le **Office 365 Microsoft Excel** fournisseur de données permet **PADS4** de se connecter à **des documents Excel stockés dans le cloud** via **SharePoint** ou **OneDrive for Business**.
 
 ***
 
 ### **Étapes pour ajouter ou modifier une connexion Office 365 Microsoft Excel**
 
-#### **1. Démarrer l'Assistant Fournisseur de données**
+#### **1. Démarrer l'Assistant Fournisseur de Données**
 
-* Ouvrez l'**Assistant Fournisseur de données** dans **PADS4**.
-* Suivez les étapes pour **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
+* Ouvrez l'**Assistant Fournisseur de Données** dans **PADS4**.
+* Suivez les étapes pour **Ajouter un Fournisseur de Données** ou **Modifier un Fournisseur de Données**.
 * Sélectionnez **Office 365 Microsoft Excel** comme **type de fournisseur**.
 
 ***
 
 #### **2. Configurer les paramètres de connexion**
 
-* **Spécifier les paramètres de proxy (si nécessaire)**
-  * Si votre organisation utilise un **proxy server**, saisissez les paramètres requis.
-  * Contactez votre **system administrator** pour plus de détails.
+* **Spécifier les paramètres du proxy (si nécessaire)**
+  * Si votre organisation utilise un **serveur proxy**, saisissez les paramètres requis.
+  * Contactez votre **administrateur système** pour plus de détails.
 
 * **S'authentifier auprès de Microsoft**
-  * Cliquez sur le bouton **Authenticate**.
+  * Cliquez sur le bouton **Authentifier**.
   * Une **page de connexion Microsoft** s'ouvrira.
   * Connectez-vous avec vos **identifiants Office 365** et autorisez **PADS4** à accéder à votre environnement.
-  * Une fois l'authentification réussie, le **statut** affichera **successful**.
+  * Une fois l'authentification réussie, le **statut** affichera **réussi**.
 
 * **Réauthentification**
-  * Chaque fois que vous modifiez ce **data provider**, vous devrez vous réauthentifier.
+  * Chaque fois que vous modifiez ce **fournisseur de données**, vous devrez vous réauthentifier.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
@@ -38,14 +38,14 @@ Choisissez où votre **document Excel** est stocké :
 * **SharePoint**
 * **OneDrive for Business**
 
-**Note:** Si votre document est stocké **localement**, utilisez plutôt le **Microsoft Excel data provider**.
+**Note:** Si votre document est stocké **localement**, utilisez plutôt le **fournisseur de données Microsoft Excel**.
 
 ***
 
 #### **4. Connexion à un document Excel sur SharePoint**
 
 * **Sélectionner le site SharePoint**
-  * Cliquez sur le bouton **Browse** pour ouvrir une **fenêtre de sélection de site**.
+  * Cliquez sur le bouton **Parcourir** pour ouvrir une **fenêtre de sélection de site**.
   * Choisissez le **site SharePoint** correct.
 
 * **Sélectionner la bibliothèque de documents**
@@ -53,20 +53,20 @@ Choisissez où votre **document Excel** est stocké :
   * Si nécessaire, choisissez la **bibliothèque** correcte manuellement.
 
 * **Sélectionner le fichier Excel**
-  * Cliquez sur **Browse** pour localiser et sélectionner votre **document Excel**.
+  * Cliquez sur **Parcourir** pour localiser et sélectionner votre **document Excel**.
 
 * **Ouvrir le document Excel (Optionnel)**
-  * Cliquez sur **Open Excel document** pour prévisualiser le fichier dans un **navigateur web**.
+  * Cliquez sur **Ouvrir le document Excel** pour prévisualiser le fichier dans un **navigateur web**.
   * Utilisez cette prévisualisation pour confirmer **où se trouvent les données** dans la feuille de calcul.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
 #### **5. Configurer les colonnes et la plage de données**
 
 * **Spécifier les noms de colonnes**
-  * Si les **noms de colonnes** se trouvent dans une plage spécifique, cochez la case pour **Column names range**.
+  * Si les **noms de colonnes** se trouvent dans une plage spécifique, cochez la case pour **Plage de noms de colonnes**.
   * Saisissez le **numéro de ligne** et la **plage de colonnes** contenant les noms de colonnes.
   * Si laissé vide, les colonnes seront nommées **Column1, Column2, etc.**
 
@@ -76,16 +76,16 @@ Cliquez sur **Next** pour continuer.
   * Assurez-vous que la **plage de données n'inclut pas les en-têtes de colonnes**, sinon ils seront traités comme des données.
 
 * **Prévisualiser les données**
-  * Cliquez sur **Preview** pour vérifier si les données récupérées sont correctes.
+  * Cliquez sur **Aperçu** pour vérifier si les données récupérées sont correctes.
 
-Cliquez sur **Next** pour continuer.
+Cliquez sur **Suivant** pour continuer.
 
 ***
 
 #### **6. Finaliser la configuration**
 
-* Complétez les étapes restantes dans l'**Assistant de fournisseur de données**.
-* Cliquez sur **Finish** pour finaliser la configuration.
+* Complétez les étapes restantes dans l'**Assistant Fournisseur de Données**.
+* Cliquez sur **Terminer** pour finaliser la configuration.
 
 ***
 
@@ -93,6 +93,6 @@ Cliquez sur **Next** pour continuer.
 
 * Si **l'authentification échoue**, assurez-vous que votre **compte Microsoft 365** dispose des **autorisations** nécessaires pour accéder à **SharePoint** ou **OneDrive for Business**.
 * Si votre **feuille Excel change fréquemment**, vérifiez que vos **paramètres de plage de données** capturent correctement les dernières données.
-* Si vous utilisez un **proxy server**, assurez-vous que les **paramètres de proxy** sont correctement configurés.
+* Si vous utilisez un **serveur proxy**, assurez-vous que les **paramètres du proxy** sont correctement configurés.
 
 Cette configuration permet à **PADS4** de récupérer et d'afficher en temps réel les **données Excel** depuis **Office 365** dans vos **présentations**.

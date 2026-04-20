@@ -1,0 +1,28 @@
+Ces propriétés définissent **si et quand** l'application externe lancée par l'élément doit être **automatiquement arrêtée**.
+
+***
+
+### **Options d'arrêt de l'application**
+
+| Option                                      | Description                                                                                                                                                                                                                                           |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Lors du passage à une autre page**        | Arrêter automatiquement l'application externe **lors du passage à la page suivante** dans la présentation.                                                                                                                                            |
+| **Lors de la fermeture de la présentation** | Arrêter automatiquement l'application externe **lorsque la présentation se termine**.                                                                                                                                                                 |
+| **Ne jamais arrêter cette application**     | L'application **ne sera pas** arrêtée automatiquement. Ceci est uniquement recommandé lorsqu'il est combiné avec **"Ne pas démarrer cette application lorsqu'elle est déjà en cours d'exécution"** pour éviter de la redémarrer à plusieurs reprises. |
+
+***
+
+### **Remarques et notes importantes**
+
+* **Mécanisme d'arrêt** :\
+  PADS4 va **tuer** le processus en cours d'exécution de l'application externe pour l'arrêter.\
+  Cependant, **tous les processus enfants** ou processus supplémentaires **démarrés par cette application NE seront PAS arrêtés automatiquement**. Vous devrez les arrêter manuellement si nécessaire.
+
+* **Avertissement sur les performances du système** :
+  > **Important** : **Assurez-vous toujours** que les applications externes sont correctement arrêtées.\
+  > Ne pas le faire peut entraîner **des fuites de mémoire**, une dégradation des performances ou **une instabilité du système** au fil du temps.
+
+* **Utilisation recommandée** :
+  * Si vous définissez **"Ne jamais arrêter cette application"**, assurez-vous que :
+    * L'application est correctement gérée ailleurs.
+    * Vous utilisez également **"Ne pas démarrer cette application lorsqu'elle est déjà en cours d'exécution"** pour éviter les instances multiples.

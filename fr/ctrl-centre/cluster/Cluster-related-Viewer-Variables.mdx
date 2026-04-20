@@ -1,0 +1,53 @@
+Lorsque des Clusters sont créés dans **PADS4 CTRL Center**, **system-defined Viewer Variables** sont automatiquement disponibles. Ces variables aident à contrôler la **content distribution** à travers les Viewers en Cluster basée sur leur **position** et **availability**.
+
+***
+
+## **Variables Viewer de Cluster prédéfinies par le système**
+
+| **Variable**           | **Description**                                                                                                                                                                                          |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ClusterWidth**       | Nombre total de Viewers **horizontal** dans le Cluster.                                                                                                                                                  |
+| **ClusterHeight**      | Nombre total de Viewers **vertical** dans le Cluster.                                                                                                                                                    |
+| **HorizontalPosition** | Définit le **current page number** qui doit être affiché en fonction de la **viewer availability** dans un Cluster **horizontally aligned**. S'ajuste dynamiquement lorsque des Viewers se déconnectent. |
+| **VerticalPosition**   | Définit le **current page number** qui doit être affiché en fonction de la **viewer availability** dans un Cluster **vertically aligned**. S'ajuste dynamiquement lorsque des Viewers se déconnectent.   |
+| **IndexX**             | La **designed horizontal position** de ce Viewer dans le Cluster.                                                                                                                                        |
+| **IndexY**             | La **designed vertical position** de ce Viewer dans le Cluster.                                                                                                                                          |
+
+***
+
+## **Exemple de configuration de Cluster**
+
+L'exemple ci-dessous illustre un **2x2 Cluster** avec **4 Viewers**.
+
+| **Cluster Viewers**  | **Horizontal Position** | **Vertical Position** | **IndexX** | **IndexY** |
+| -------------------- | ----------------------- | --------------------- | ---------- | ---------- |
+| **Cluster Viewer 1** | 1                       | 1                     | 0          | 0          |
+| **Cluster Viewer 2** | 2                       | 3                     | 1          | 0          |
+| **Cluster Viewer 3** | 3                       | 2                     | 0          | 1          |
+| **Cluster Viewer 4** | 4                       | 4                     | 1          | 1          |
+
+***
+
+## **Comment ces variables fonctionnent dans un Cluster**
+
+1. **Attribution dynamique de page**:
+   * Si **Viewer 2 goes offline**, **Viewer 3 or Viewer 4 will automatically take over its content**.
+   * Si un Viewer est **removed or disabled**, PADS4 **automatically reassigns the correct page positions**.
+
+2. **Distribution intelligente du contenu**:
+   * **HorizontalPosition** assure que le contenu est **distribué uniformément** lorsqu'un Viewer est supprimé.
+   * **VerticalPosition** aide à déterminer quels **contenus des Viewers supérieurs se déplacent vers le bas** si un écran tombe en panne.
+
+3. **Personnalisation Flexible de la Mise en Page**:
+   * **IndexX/IndexY** permettent un **contrôle précis** sur le **placement des Viewers** au sein d'un Cluster.
+   * Les ajustements peuvent être **basés sur des règles**, assurant une **gestion fluide des basculements**.
+
+***
+
+## **Cas d'Utilisation Pratiques**
+
+* **Affichages d'Informations de Vol dans les Aéroports**: Assure des **listes de vols continues** sur plusieurs écrans.
+* **Tableaux de Menu dans les Restaurants**: Déplace automatiquement le contenu du menu si un écran **tombe en panne**.
+* **Affichage Numérique pour le Commerce de Détail**: Prévient les **lacunes de contenu** et **ajuste la mise en page dynamiquement**.
+
+En utilisant ces **Variables de Cluster Viewer**, vous pouvez **optimiser les mises en page d'affichage numérique**, **réduire les temps d'arrêt**, et **automatiser la distribution de contenu** à travers votre système PADS4.

@@ -1,4 +1,8 @@
-Le **Calendar table** dans Microsoft Exchange Server contient des informations détaillées sur **les événements programmés, les réunions et les rendez-vous**. Voici une ventilation des **colonnes et types de données**.
+---
+- title: Connexion d'une Table de Calendrier Microsoft Exchange Server
+---
+
+La **Calendar table** dans Microsoft Exchange Server contient des informations détaillées sur les **événements programmés, réunions et rendez-vous**. Voici une ventilation des **colonnes et types de données** de la table.
 
 ***
 
@@ -7,7 +11,7 @@ Le **Calendar table** dans Microsoft Exchange Server contient des informations d
 | **Nom de colonne**         | **Type de données** | **Description**                                                                           |
 | -------------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
 | **Subject**                | String              | Titre de l'événement.                                                                     |
-| **Body**                   | String              | Description de l'événement (*Inclus en option*).                                          |
+| **Body**                   | String              | Description de l'événement (*Optionnellement inclus*).                                    |
 | **UniqueBody**             | String              | Affiche la partie du corps qui est unique à la conversation dont cet élément fait partie. |
 | **Importance**             | String              | Priorité de l'événement (**High, Normal, Low**).                                          |
 | **Start**                  | Date                | Date et heure de début de l'événement.                                                    |
@@ -37,16 +41,16 @@ Le **Calendar table** dans Microsoft Exchange Server contient des informations d
 | **DateTimeSent**           | Date                | La date et l'heure d'envoi de l'invitation à l'événement.                                 |
 | **DateTimeReceived**       | Date                | La date et l'heure de réception de l'invitation à l'événement.                            |
 | **AppointmentType**        | String              | Type de rendez-vous (**Single, RecurringMaster, Occurrence, Exception**).                 |
-| **HasAttachments**         | Boolean             | Indique si l'événement comporte des pièces jointes (**True/False**).                      |
+| **HasAttachments**         | Boolean             | Indique si l'événement a des pièces jointes (**True/False**).                             |
 | **Sensitivity**            | String              | Visibilité de l'événement (**Normal, Personal, Private, Confidential**).                  |
-| **Status**                 | String              | **Statut de disponibilité hérité** de l'événement.                                        |
+| **Status**                 | String              | **Legacy Free/Busy status** de l'événement.                                               |
 | **Categories**             | String              | Catégories associées à cet événement.                                                     |
 | **IsUnmodified**           | Boolean             | Indique si l'événement a été modifié après sa création (**True/False**).                  |
 | **LastModifiedTime**       | Date                | La date et l'heure de la dernière modification de l'événement.                            |
 | **LastModifiedName**       | String              | Le nom de la personne qui a modifié l'événement en dernier.                               |
 | **RequiredAttendees**      | String              | Liste des participants **obligatoires**.                                                  |
-| **OptionalAttendees**      | String              | Liste des participants **facultatifs**.                                                   |
-| **Resources**              | String              | Liste des **ressources** (salles, équipements) réservées pour cette réunion.              |
+| **OptionalAttendees**      | String              | Liste des participants **optionnels** participants.                                       |
+| **Ressources**             | Chaîne              | Liste de **ressources** (salles, équipement) réservées pour cette réunion.                |
 
 ***
 

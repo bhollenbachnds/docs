@@ -1,0 +1,164 @@
+---
+- title: Microsoft Entra ID
+---
+
+Ce manuel fournit des instructions étape par étape pour configurer **Single Sign-On** (SSO) pour **PADS4** en utilisant **Microsoft Entra ID**.
+
+## Créer une Application d'Entreprise Microsoft Azure
+
+Pour configurer un fournisseur d'identité Microsoft Entra, vous devrez vous connecter à Azure en tant qu'Administrateur et créer une nouvelle application d'entreprise.
+
+1. Allez sur [**https://portal.azure.com**](https://portal.azure.com) et connectez-vous en tant qu'administrateur.
+2. Sur Azure, accédez à la page **Enterprise applications**&#x20;
+3. Cliquez sur **New application**  
+
+   ![Azure New Application](/images/ctrl-centre/identity/AzureNewApplication.png)
+4. Cliquez sur **Create your own Application**
+
+   <img src="/images/ctrl-centre/identity/AzureCreateOwnApp.png" alt="Azure Create Own App" title="Azure Create Own App" style={{ width:"82%" }} />
+5. Remplissez les informations demandées dans le formulaire. Par exemple, vous pouvez utiliser PADS4
+
+   <img src="/images/ctrl-centre/identity/AzureCreateYourOwnApp.png" alt="Azure Create Your Own App" title="Azure Create Your Own App" style={{ width:"73%" }} />
+6. Cliquez sur le bouton **Create**&#x20;
+7. Votre application est maintenant en cours de création.
+
+## Configuration de l'authentification unique
+
+Maintenant que votre application a été créée, vous devez activer et configurer l'authentification unique.
+
+* Dans le menu de gauche, cliquez sur **Single sign-on**
+
+  <img src="/images/ctrl-centre/identity/AzureSelectSSO.png" alt="Azure Select SSO" title="Azure Select SSO" style={{ width:"31%" }} />
+* Sélectionnez **SAML** comme méthode d'authentification unique
+
+  ![Azure Select SAML](/images/ctrl-centre/identity/AzureSelectSAML.png)
+
+Vous devez modifier la méthode SAML de base. Cliquez sur **Edit** pour ce faire.
+
+![Azure SAML Step1](/images/ctrl-centre/identity/AzureSAMLStep1.png)
+
+Modifiez la **Basic SAML configuration**.
+
+* Pour l'Identifier, utilisez l'adresse du serveur PADS4 et ajoutez **/saml** (par ex. [https://pads4.mycompany.com/saml](https://pads4.mycompany.com/saml))
+* Pour l'URL de réponse, utilisez l'adresse du serveur PADS et ajoutez **/rdx/nds.services/authentication.integration/api/v1/pads/Saml2/Acs** (par ex. [https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs](https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs))
+
+![Azure SAML Basic Configuration](/images/ctrl-centre/identity/AzureSAMLBasicConfiguration.png)
+
+<Warning>
+  Si votre serveur PADS4 utilise un domaine autre que "pads", remplacez-le par votre nom de domaine réel dans l'URL \
+  par exemple, pour un domaine nommé "domainone", utilisez [https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/domainone/Saml2/Acs](https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/domainone/Saml2/Acs)).
+</Warning>
+
+* Cliquez sur **Save** pour appliquer les modifications
+
+## Modifier les attributs et revendications
+
+1. Vous devez modifier les **Attributes & Claims**. Cliquez sur **Edit** pour ce faire.
+
+   ![Download](/images/download-10.png)
+2. Modifiez les **Attributes & Claims**
+
+   ![Download](/images/download-11.png)
+
+## Créer la revendication de groupe
+
+Pour mapper les groupes Microsoft Entra aux rôles PADS4, configurez la revendication de groupe :
+
+1. Cliquez sur **Add new group claim**.
+2. Sélectionnez **Groups assigned to the application** (bouton radio).
+3. Choisissez **Group ID** comme attribut source.
+4. Cliquez sur **Save**.
+
+<img src="/images/ctrl-centre/identity/AzureSAMLGroupClaims.png" alt="Azure SAML Group Claims" title="Azure SAML Group Claims" style={{ width:"69%" }} />
+
+| **Name**                                                                                                                                     | **Type**    | **Value**              |
+| :------------------------------------------------------------------------------------------------------------------------------------------- | :---------- | :--------------------- |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress) | Claim       | user.mail              |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname)       | Claim       | user.givenname         |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name)                 | Claim       | user.userprincipalname |
+| [**http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname**](http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname)           | Claim       | user.surname           |
+| [**http://schemas.microsoft.com/ws/2008/06/identity/claims/groups**](http://schemas.microsoft.com/ws/2008/06/identity/claims/groups)         | Group claim | user.groups            |
+
+## Attribuer des utilisateurs et des groupes
+
+Pour spécifier quels groupes d'utilisateurs peuvent accéder à l'application, attribuez les groupes d'utilisateurs appropriés à celle-ci.
+
+1. Dans le menu de gauche, sélectionnez Users and groups.
+2. Cliquez sur Add user/group pour ajouter un nouveau groupe.
+
+   <img src="/images/ctrl-centre/identity/AzureAddPADS4UsersAndGroups.png" alt="Azure Add Pads4users And Groups" title="Azure Add Pads4users And Groups" style={{ width:"83%" }} />
+3. Cliquez sur **Users and groups**, choisissez le groupe que vous souhaitez attribuer, puis cliquez sur **Select**.
+
+   <img src="/images/ctrl-centre/identity/AzureSearchGroup.png" alt="Azure Search Group" title="Azure Search Group" style={{ width:"85%" }} />
+4. Cliquez sur **Assign**
+
+Vous pouvez répéter cette action pour chaque groupe d'utilisateurs que vous souhaitez attribuer à l'application.
+
+## Collecter les données de configuration pour le fournisseur d'identité PADS4
+
+Pour créer le fournisseur d'identité dans PADS4, rassemblez ces détails de votre configuration Microsoft Entra. Ouvrez la page **Single sign-on** et collectez :
+
+1. **App Federation Metadata URL** (par ex., `https://login.microsoftonline.com/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/federationmetadata/2007-06/federationmetadata.xml?appid=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`)
+2. **Certificate (Raw)** – Cliquez sur le lien pour le télécharger (par ex., `your-application-name.cer`)
+3. **Login URL** (par ex., `https://login.microsoftonline.com/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/saml2`)
+4. **Microsoft Entra Identifier** (par ex., `https://sts.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/`)
+
+![Azure Set Up](/images/ctrl-centre/identity/AzureSetUp.png)
+
+Vous utiliserez ces informations plus tard lors de la configuration du fournisseur d'identité dans PADS4.
+
+# Configurer le fournisseur d'identité dans PADS4
+
+Après avoir créé votre application de fournisseur d'identité, vous devez également configurer le fournisseur d'identité correspondant dans PADS4.
+
+## Créer le fournisseur d'identité
+
+Pour créer le fournisseur d'identité :
+
+1. Connectez-vous à PADS4 et accédez à Adminstration
+2. Dans le menu de gauche, cliquez sur **Credentials**.
+3. Cliquez sur **Providers**
+4. Cliquez sur**New**  et sélectionnez \*\*Identity \*\*et **Microsoft Entra**
+
+   ![Pads4select Microsft Entra](/images/ctrl-centre/identity/PADS4SelectMicrosftEntra.png)
+
+### Remplir les détails du fournisseur
+
+1. **Name** – Entrez un nom d'affichage pour le fournisseur dans PADS4
+2. **Identifier** – Entrez l'**Microsoft Entra Identifier** que vous avez collecté précédemment
+3. **Reply URL** – Entrez l'URL de votre application PADS4 locale (par ex., `https://pads4.mycompany.com`).
+4. **Metadata URL** – Entrez l'URL de métadonnées **Microsoft Entra: App Federation Metadata URL** que vous avez collectée.
+
+   <img src="/images/ctrl-centre/identity/PADS4CreateMicrosoftEntraIdProvider.png" alt="Pads4create Microsoft Entra Id Provider" title="Pads4create Microsoft Entra Id Provider" style={{ width:"65%" }} />
+5. Les champs **Identifier** et **Assertion Consumer Service URL** sont remplis.
+
+### Télécharger les certificats
+
+1. **Provider Signing Certificate** - Téléchargez le **Certificate (Raw)** (`.cer`) que vous avez téléchargé depuis votre configuration de fournisseur d'identité Microsoft Entra.
+2. **PADS4 Identity Provider Certificate** - Téléchargez un certificat (`.pfx`) pour signer les assertions SAML de PADS4 vers Microsoft Entra.
+3. \*\*Mot de passe \*\*- Entrez le mot de passe pour le certificat téléchargé `.pfx` certificat (sous le champ du certificat).
+
+   <img src="/images/ctrl-centre/identity/PADS4UploadCertificateEntra.png" alt="Pads4upload Certificate Entra" title="Pads4upload Certificate Entra" style={{ width:"53%" }} />
+
+Si vous n'avez pas besoin d'activer le provisionnement SCIM, cliquez sur **Create** pour terminer la configuration du fournisseur d'identité.
+
+### Activer le provisionnement SCIM (Optionnel)
+
+Vous pouvez activer le provisionnement SCIM lors de la création du fournisseur d'identité. Cette fonctionnalité synchronise les utilisateurs entre Microsoft Entra et PADS4, créant, mettant à jour ou supprimant automatiquement les utilisateurs liés à l'application.
+
+Une fois activé, enregistrez ces valeurs pour une utilisation ultérieure dans votre configuration SCIM Microsoft Entra :
+
+1. **URL SCIM**
+2. **Jeton d'accès SCIM**
+
+   <img src="/images/ctrl-centre/identity/PADS4CreateScimProvisioning.png" alt="Pads4create Scim Provisioning" title="Pads4create Scim Provisioning" style={{ width:"67%" }} />
+
+Cliquez sur **Create** pour terminer la configuration du fournisseur d'identité.
+
+# **Finalisation de la configuration de Microsoft Entra ID**
+
+1. **Déconnectez-vous** et **actualisez** le portail PADS4.
+2. Le bouton **SSO Login** devrait maintenant être visible.
+3. **Connectez-vous** en utilisant vos identifiants Microsoft Entra.
+
+   ![Pads4log In With Entra](/images/ctrl-centre/identity/PADS4LogInWithEntra.png)

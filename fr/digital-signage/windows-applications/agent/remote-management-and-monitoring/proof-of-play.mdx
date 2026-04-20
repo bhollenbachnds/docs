@@ -1,0 +1,145 @@
+Avec les fonctions de preuve de diffusion, vous pouvez consulter les entrées du journal de lecture qui sont stockées sur votre PADS4 Server ou PADS4 Viewer. Sur votre serveur, les informations de preuve de diffusion peuvent être exportées ou supprimées.
+
+Lors de la conception de votre présentation dans PADS4 Designer, vous pouvez spécifier que vous souhaitez collecter des informations de preuve de diffusion concernant votre présentation, page ou élément de page. Pendant la lecture, chaque PADS4 Viewer collectera et mettra en cache localement les informations de preuve de diffusion. Toutes les heures complètes, ces informations sont transmises au PADS4 Server principal où elles sont fusionnées dans une base de données centrale de preuve de diffusion (Microsoft SQL Compact Edition). Si l'application PADS4 Viewer est arrêtée normalement, toutes les informations de preuve de diffusion qui n'ont pas encore été transmises seront envoyées au serveur.
+
+ 
+
+#### **Pour consulter les informations de preuve de diffusion stockées sur votre PADS4 Server**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Proof of play** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le PADS4 Server connecté et affichera les résultats dans la fenêtre de preuve de diffusion. Si votre installation PADS4 comprend des sous-serveurs, vous devez d'abord sélectionner un serveur avant de sélectionner la catégorie d'informations.
+
+ 
+
+#### **Pour consulter les informations de preuve de diffusion qui sont mises en cache localement sur un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Proof of play** dans la liste des catégories d'informations de viewer disponibles.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées depuis le Viewer sélectionné et afficher les résultats dans la fenêtre de preuve de diffusion.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>both</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre de preuve de diffusion**
+
+La fenêtre de preuve de diffusion affiche les entrées du journal de lecture qui ont été stockées sur votre PADS4 Server ou PADS4 Viewer. Cela vous permet de vérifier si, quand, où et pendant combien de temps un contenu spécifique a été diffusé.
+
+![EN Agent Proof Of Play Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ProofOfPlay.png)
+
+Dans la fenêtre de preuve de diffusion de votre PADS4 Server, vous pouvez consulter les informations de preuve de diffusion sur une base quotidienne. Sélectionnez la **Date** pour laquelle vous souhaitez consulter les données. En raison de la quantité potentiellement importante de données, cela est limité à une base quotidienne. Les options d'**export** permettent à l'utilisateur de spécifier une période. Il est également possible d'utiliser l'Agent SDK / ou une API Web pour lire les informations de preuve de diffusion du système PADS4. Consultez la documentation SDK.
+
+Les entrées de preuve de diffusion qui ont été transmises par les PADS4 Viewers connectés sont stockées dans la base de données de preuve de diffusion sur votre PADS4 Server. Dans la fenêtre de preuve de diffusion d'un PADS4 Viewer (onglet Viewer), vous ne voyez que les entrées qui ont été mises en cache localement sur votre Viewer et qui n'ont pas encore été transmises à votre PADS4 Server. Toutes les heures complètes ou lors de la fermeture de PADS4 Viewer, l'application transmettra ses informations de preuve de diffusion à votre PADS4 Server.
+
+<Tip>
+  La fenêtre de preuve de diffusion d'un PADS4 Viewer est destinée à suivre le processus de journalisation réel d'un PADS4 Viewer, tandis que la fenêtre de preuve de diffusion de votre PADS4 Server est destinée à vérifier les informations de preuve de diffusion d'une période fermée après coup.
+</Tip>
+
+**Start Time**\
+Date et heure auxquelles la lecture du contenu a commencé. L'heure d'affichage utilise le fuseau horaire local de votre système PADS4.
+
+**UTC Offset**\
+La différence de temps (en minutes) entre l'heure de Greenwich (UTC) et l'heure locale du PADS4 Viewer. Cette information est généralement utilisée lorsque votre installation PADS4 comprend des PADS4 Viewers fonctionnant dans différents fuseaux horaires.
+
+**Viewer Name**\
+Nom unique du PADS4 Viewer qui a diffusé le contenu.
+
+**Level**\
+Niveau de l'élément qui a diffusé le contenu. Les niveaux possibles sont presentation, page et element.
+
+**Element**\
+Identification de l'élément qui a diffusé le contenu.
+
+**Duration**\
+Durée pendant laquelle le contenu a été diffusé. Dans l'aperçu, la durée est arrondie à la seconde, tandis que l'information est stockée avec une précision en millisecondes. Lorsque vous exportez les informations de preuve de diffusion, la valeur en millisecondes est incluse.
+
+**Completed**\
+Indique si le contenu a été entièrement diffusé ou a été interrompu pendant la lecture. Dans ce contexte, entièrement diffusé signifie que le contenu a été diffusé pendant toute la durée pour laquelle il était programmé. Certains éléments (comme la vidéo en streaming) n'ont pas de durée programmée et ne prennent donc pas en charge cette option.
+
+**Display Status**\
+Affiche l'état du moniteur pendant la lecture du contenu. Cela peut être utilisé comme preuve que le contenu a réellement été visible pour le public. Les informations sur l'état de l'affichage ne peuvent être collectées que lorsque le PADS4 Viewer a été correctement configuré et prend en charge la collecte de ces informations.
+
+**Content**\
+Contenu qui a été diffusé par l'élément. Pour les éléments textuels, il s'agira du texte qui a été affiché, tandis que pour d'autres éléments comme les images et les vidéos, il s'agira du nom du fichier qui contenait le contenu.
+
+ 
+
+#### **Views**
+
+Sur votre PADS4 Server, les informations de preuve de diffusion sont stockées dans une base de données de preuve de diffusion. Le système crée automatiquement une nouvelle base de données de preuve de diffusion au début d'un nouveau mois. Lorsque vous consultez les informations de preuve de diffusion de votre PADS4 Server, vous devez sélectionner la **Proof of Play Date** (et donc implicitement la base de données de preuve de diffusion) pour laquelle vous souhaitez voir les informations. Si une certaine période n'est pas répertoriée, cela signifie qu'il n'y a pas d'informations de preuve de diffusion disponibles pour cette période.
+
+ 
+
+#### **Exportation des informations de preuve de diffusion**
+
+Pour traiter les informations de preuve de diffusion dans une application externe (comme Microsoft Excel), les informations peuvent être exportées dans différents formats. Cela inclut XML (suivant les définitions officielles de formatage de preuve de diffusion de l'organisation POPAI) et le format Microsoft Excel.
+
+Pour exporter les informations de preuve de diffusion :
+
+1. Cliquez sur **Export** dans le menu **Home**.
+2. Entrez le **Start** et la **End** de la période pour laquelle vous souhaitez exporter les informations de preuve de diffusion.
+
+   ![EN Agent Proof Of Play Export Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ProofOfPlayExport.png)
+
+   <Tip>
+     Lorsque vous spécifiez la période d'exportation ici, vous n'êtes pas limité aux périodes mensuelles de vos bases de données physiques de preuve de diffusion. Si nécessaire, le système PADS4 collectera automatiquement les informations de preuve de diffusion à partir de plusieurs bases de données de preuve de diffusion lors de l'exécution de la fonction d'exportation.
+   </Tip>
+3. Sélectionnez le type de sortie, **XML** ou **Excel**.
+4. Cliquez sur **Browse** pour spécifier le **File Name** du fichier dans lequel vous souhaitez enregistrer les résultats d'exportation.
+5. Dans la boîte de dialogue Enregistrer qui apparaît, spécifiez le nom du fichier et sélectionnez le format de fichier dans lequel vous souhaitez que les informations soient enregistrées, puis cliquez sur **Enregistrer**.
+6. Cliquez sur **Export** pour commencer à enregistrer toutes les informations de preuve de diffusion pour la période spécifiée dans le fichier spécifié.
+
+ 
+
+#### **Suppression des informations de preuve de diffusion**
+
+* Après avoir exporté ou traité vos informations de preuve de diffusion, vous devez supprimer ces informations de PADS4.
+
+  <Warning>
+    Les informations de preuve de diffusion ne sont pas automatiquement supprimées par le système PADS4, vous devez donc toujours les supprimer vous-même. Si vous ne supprimez pas les informations de preuve de diffusion, vous risquez que ces informations consomment tout l'espace de votre disque dur, ce qui peut causer des problèmes imprévisibles.
+  </Warning>
+
+Dans PADS4 Agent, vous avez la possibilité de supprimer soit des entrées individuelles de preuve de diffusion, soit tous les éléments d'une base de données entière de preuve de diffusion.
+
+Comme alternative, vous pouvez naviguer vers le dossier de preuve de diffusion PADS4 sur votre serveur PADS4 et supprimer manuellement les fichiers de base de données de preuve de diffusion. Enfin, vous pouvez également utiliser le SDK PADS4 pour développer votre propre solution personnalisée pour traiter et supprimer les informations de preuve de diffusion.
+
+ 
+
+#### **Pour supprimer une entrée de journal de preuve de diffusion**
+
+1. Sélectionnez l'élément de preuve de diffusion dans la fenêtre de preuve de diffusion de votre serveur PADS4.\
+   Vous pouvez également sélectionner plusieurs éléments en maintenant enfoncée la touche \[Ctrl] ou \[Maj] tout en cliquant sur les éléments.
+2. Cliquez sur **Remove** dans le menu **Home**.
+
+   ![EN Agent Ribbon Proof Of Play Remove Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ProofOfPlayRemove.png)
+3. Cliquez sur **Yes** pour confirmer que vous souhaitez supprimer l'entrée du journal de preuve de diffusion.
+
+Après cela, le système supprimera l'élément de preuve de diffusion de la base de données de preuve de diffusion sur votre serveur PADS4.
+
+<Tip>
+  La suppression des éléments de preuve de diffusion est irréversible et ne devrait normalement être effectuée qu'après que l'élément a été traité ou exporté. Comme tous les éléments de preuve de diffusion ont un numéro de séquence unique, vous pouvez toujours voir dans les informations exportées quand un ou plusieurs éléments ont été supprimés.
+</Tip>
+
+ 
+
+#### **Pour supprimer toutes les informations de preuve de diffusion d'une période entière**
+
+1. Sélectionnez la **Proof of Play Period** dans la fenêtre de preuve de diffusion de votre serveur PADS4.
+2. Cliquez sur **Remove All** dans le menu **Home**.
+
+   ![EN Agent Ribbon Proof Of Play Remove All Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ProofOfPlayRemoveAll.png)
+3. Cliquez sur **Yes** pour confirmer que vous souhaitez supprimer toutes les informations de preuve de diffusion.
+
+Après cela, le système supprimera toutes les informations de preuve de diffusion pour la période spécifiée. Comme chaque période correspond exactement à une base de données de preuve de diffusion, cela signifie en pratique que la base de données de preuve de diffusion correspondante sera supprimée du dossier de preuve de diffusion de votre système PADS4.
+
+Comme pour la suppression d'éléments individuels de preuve de diffusion, la suppression d'une période complète de preuve de diffusion est irréversible et ne devrait normalement être effectuée qu'après que les éléments ont été traités ou exportés.
