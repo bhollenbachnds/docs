@@ -49,7 +49,11 @@ These settings are for PADS4 CMS 1.0.
   - **SQLite** This is the default setting and applicable for most installations
   - **Microsoft SQL Server**
     - Hostname and port for Microsoft SQL Server
-    - Username and password for Mircosoft SQL Server
+    - Username and password for Microsoft SQL Server
+
+<Note>
+  When changing the database while PADS4 is in use, the existing data will not be migrated. The new database starts empty.
+</Note>
 
 ### Service Selection
 
@@ -58,6 +62,19 @@ To boost performance, disable unused microservices on the PADS4 Server. Configur
 <Warning>
   Disabling may cause instability. Contact support if unsure.
 </Warning>
+
+### Click Change Sensor Database.
+
+- Select the database type you want to use. You can choose from the following options:
+  - SQLite (default)
+  - SQL Server
+  - PostgreSQL
+  - MongoDB
+- The selected database is created 
+
+<Note>
+  When changing the database while PADS4 is in use, the existing data will not be migrated. The new database starts empty.
+</Note>
 
 ### Save and Restart Configuration
 
