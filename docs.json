@@ -147,13 +147,13 @@
                   {
                     "group": "Giada",
                     "pages": [
+                      "certified-devices/giada/DN84",
+                      "certified-devices/giada/DN76",
+                      "certified-devices/giada/D73-and-D74",
                       "certified-devices/giada/DM-Series",
                       "certified-devices/giada/D6-Series",
                       "certified-devices/giada/F-Series",
-                      "certified-devices/giada/F108D",
-                      "certified-devices/giada/D73-and-D74",
-                      "certified-devices/giada/DN76",
-                      "certified-devices/giada/DN84"
+                      "certified-devices/giada/F108D"
                     ]
                   },
                   {
@@ -161,7 +161,8 @@
                     "pages": [
                       "certified-devices/hikvision/ds-d60xx-un",
                       "certified-devices/hikvision/DS-D60C-B",
-                      "certified-devices/hikvision/DS-D6032FN"
+                      "certified-devices/hikvision/DS-D6032FN",
+                      "certified-devices/hikvision/ds-dt-60-p"
                     ]
                   },
                   {
