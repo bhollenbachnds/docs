@@ -1,14 +1,16 @@
-This guide provides instructions for **installing and configuring PADS4 Viewer** on **Giada F108D running Windows 10**, along with system capabilities and supported features.
-
+---
+title: "F108D"
 ---
 
-## **1. Installation Instructions**
+This guide provides instructions for **installing and configuring PADS4 Viewer** on **Giada F108D running Windows 10**, along with system capabilities and supported features.
+
+## **Installation Instructions**
 
 To install **PADS4 Viewer** on a **Giada F108D**, follow the **standard Windows installation process**.
 
 For **detailed step-by-step instructions**, refer to the [**Installing PADS4 on Windows**](/certified-devices/windows/Windows-Viewer) guide.
 
-### **1.1 Improving Video Playback Performance**
+### **Improving Video Playback Performance**
 
 <Tip>
   When you are running PADS4 version 2025.2 and above this is not required anymore as the Windows Viewer is now using the lastest available LAV Filters.
@@ -18,77 +20,63 @@ For a **smoother video playback experience**, we **highly recommend updating the
 
 [**Download LAV Filters 0.80**](https://github.com/Nevcairiel/LAVFilters/releases/download/0.80/LAVFilters-0.80-Installer.exe)
 
----
+## **Capabilities and Supported Features**
 
-## **2. Capabilities and Supported Features**
+###  **General Features**
 
-### **2.1 General Features**
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Automatic PADS4 Software Updates** – Managed via a scheduled task in **PADS4 Agent**. |
+| ✅ | **Offline Mode** – Device continues running presentations and schedules while offline. |
 
-| Feature | Description                                                                             |
-| :-----: | --------------------------------------------------------------------------------------- |
-| ✅       | **Automatic PADS4 Software Updates** – Managed via a scheduled task in **PADS4 Agent**. |
-| ✅       | **Offline Mode** – Device continues running presentations and schedules while offline.  |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Portrait Mode** – Supported. |
+| ✅ | **4K UHD Support** |
+| ✅ | **Dual HDMI** – _Second HDMI output supports mirror mode only (not extended desktop mode)._ |
+| ✅ | **Transfer Protocols** – HTTP, HTTPS |
+| ✅ | **Turn Off Display** – Supported. |
+| ✅ | **Cluster Viewer** – This device can be used as a **Cluster Viewer**. |
 
----
+### **Playback & Content Support**
 
-### **2.2 Device Capabilities**
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Maximum Videos Supported** – Up to **4 Full HD (FHD) videos** or **1 UHD (4K) video**. |
+| ✅ | **Supported Video Codecs** – H.264, H.265 |
+| ✅ | **4K Video Playback** – Supported. |
+| ✅ | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Supported. |
+| ❌ | **Streaming Video** – Not supported. |
+| ✅ | **Image Formats** – JPG, PNG, BMP, GIF |
+| ✅ | **Text, Line, Shape, Scrolling Text, Formatted Text, Tables, Interactive Buttons** |
+| ✅ | **Web Element** – Supported. |
+| ✅ | **PowerPoint & PDF Elements** – Supported. |
 
-| Feature | Description                                                                                 |
-| :-----: | ------------------------------------------------------------------------------------------- |
-| ✅       | **Portrait Mode** – Supported.                                                              |
-| ✅       | **4K UHD Support**                                                                          |
-| ✅       | **Dual HDMI** – _Second HDMI output supports mirror mode only (not extended desktop mode)._ |
-| ✅       | **Transfer Protocols** – HTTP, HTTPS                                                        |
-| ✅       | **Turn Off Display** – Supported.                                                           |
-| ✅       | **Cluster Viewer** – This device can be used as a **Cluster Viewer**.                       |
+### **Data Connections**
 
----
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Data Providers** – Supports over **70\+ PADS4 data providers** for retrieving and integrating real-time data. |
+| ✅ | **Viewer Variables** – Simplifies content management without modifying presentations. |
+| ✅ | **Property Bindings** – Allows dynamic element properties using external data sources. |
 
-### **2.3 Playback & Content Support**
+### **Rules & Automation**
 
-| Feature | Description                                                                              |
-| :-----: | ---------------------------------------------------------------------------------------- |
-| ✅       | **Maximum Videos Supported** – Up to **4 Full HD (FHD) videos** or **1 UHD (4K) video**. |
-| ✅       | **Supported Video Codecs** – H.264, H.265                                                |
-| ✅       | **4K Video Playback** – Supported.                                                       |
-| ✅       | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Supported.                 |
-| ❌       | **Streaming Video** – Not supported.                                                     |
-| ✅       | **Image Formats** – JPG, PNG, BMP, GIF                                                   |
-| ✅       | **Text, Line, Shape, Scrolling Text, Formatted Text, Tables, Interactive Buttons**       |
-| ✅       | **Web Element** – Supported.                                                             |
-| ✅       | **PowerPoint & PDF Elements** – Supported.                                               |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Presentation Rules** – Supported. |
+| ✅ | **Page Rules** – Supported. |
+| ✅ | **Element Rules** – Supported. |
 
----
+### **Device Management**
 
-### **2.4 Data Connections**
-
-| Feature | Description                                                                                                    |
-| :-----: | -------------------------------------------------------------------------------------------------------------- |
-| ✅       | **Data Providers** – Supports over **70+ PADS4 data providers** for retrieving and integrating real-time data. |
-| ✅       | **Viewer Variables** – Simplifies content management without modifying presentations.                          |
-| ✅       | **Property Bindings** – Allows dynamic element properties using external data sources.                         |
-
----
-
-### **2.5 Rules & Automation**
-
-| Feature | Description                         |
-| :-----: | ----------------------------------- |
-| ✅       | **Presentation Rules** – Supported. |
-| ✅       | **Page Rules** – Supported.         |
-| ✅       | **Element Rules** – Supported.      |
-
----
-
-### **2.6 Device Management**
-
-| Feature | Description                                                                                                        |
-| :-----: | ------------------------------------------------------------------------------------------------------------------ |
-| ✅       | **Remote Device Management** – Supports web-based and Windows-based management.                                    |
-| ✅       | **Connection State Monitoring & Alerts** – Sends alerts for network failures.                                      |
-| ✅       | **Reboot, Restart Viewer, Shutdown, Wake-on-LAN** – Supported.                                                     |
-| ✅       | **Screenshot Capture** – Retrieve screenshots of the display.                                                      |
-| ✅       | **Logs & System Monitoring** – Viewer logs, synchronization logs, and system info available.                       |
-| ✅       | **Viewer Settings & Font Installation** – Manage settings and install custom fonts.                                |
-| ✅       | **Proof of Play Tracking** – Monitors content playback history.                                                    |
-| ✅       | **Blackbox Support** – If troubleshooting is required, the blackbox provides critical system logs for NDS Support. |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Remote Device Management** – Supports web-based and Windows-based management. |
+| ✅ | **Connection State Monitoring & Alerts** – Sends alerts for network failures. |
+| ✅ | **Reboot, Restart Viewer, Shutdown, Wake-on-LAN** – Supported. |
+| ✅ | **Screenshot Capture** – Retrieve screenshots of the display. |
+| ✅ | **Logs & System Monitoring** – Viewer logs, synchronization logs, and system info available. |
+| ✅ | **Viewer Settings & Font Installation** – Manage settings and install custom fonts. |
+| ✅ | **Proof of Play Tracking** – Monitors content playback history. |
+| ✅ | **Blackbox Support** – If troubleshooting is required, the blackbox provides critical system logs for NDS Support. |
