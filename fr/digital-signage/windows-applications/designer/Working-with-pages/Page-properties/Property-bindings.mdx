@@ -6,57 +6,57 @@ Par exemple, si vous **liez la couleur d'arrière-plan** d'une page à un fichie
 
 ## **Aperçu des liaisons de propriétés**
 
-Cette section contient une **liste des propriétés de page** qui peuvent être liées à une source de données externe.\
+Cette section contient une **liste des propriétés de page** pouvant être liées à une source de données externe.\
 Pour créer une liaison, vous devez définir au minimum :
 
 * **Data Provider**
-* **Column (Field)**
-* **Row (Record)**
+* **Colonne (Champ)**
+* **Ligne (Enregistrement)**
 
 ***
 
-### **Property**
+### **Propriété**
 
-* La **propriété de page spécifique** à lier (par exemple, **Background Color**, **Visible**, etc.).
-* **System-defined** — ne peut pas être modifié.
+* La **propriété de page spécifique** à lier (par ex., **Couleur d'arrière-plan**, **Visible**, etc.).
+* **Défini par le système** — ne peut pas être modifié.
 
 ### **Type**
 
-* Le **type de données** de la propriété (par exemple, **Color**, **Boolean**, **Integer**).
-* **System-defined** — ne peut pas être modifié.
+* Le **type de données** de la propriété (par ex., **Couleur**, **Booléen**, **Entier**).
+* **Défini par le système** — ne peut pas être modifié.
 
 ### **Data Provider**
 
-* Choisissez le **data provider** qui fournit les données (par exemple, XML, Excel, SQL, JSON).
-* Si aucun data provider n'est disponible, **créez-en un d'abord** dans la configuration du data provider.
+* Choisissez le **fournisseur de données** qui fournit les données (par ex., XML, Excel, SQL, JSON).
+* Si aucun fournisseur de données n'est disponible, **créez-en un d'abord** dans la configuration du fournisseur de données.
 
-### **Column**
+### **Colonne**
 
 * Sélectionnez le **champ de données** (colonne) dans le fournisseur de données qui contient la valeur de la propriété.
 
 ### **Ligne**
 
-* Sélectionnez le **enregistrement (ligne)** dans le fournisseur de données qui contient la valeur souhaitée.
+* Sélectionnez l'**enregistrement (ligne)** dans le fournisseur de données qui contient la valeur souhaitée.
 
 ### **Défilement**
 
 * **Activez cette option** si le défilement des données doit être appliqué.
-* Lorsqu'elle est activée, **Propriétés de défilement des données** détermineront comment les données défilent pendant la lecture.
+* Lorsqu'elle est activée, les **propriétés de défilement des données** détermineront comment les données sont parcourues pendant la lecture.
 
 ***
 
-## **Exemple de cas d'utilisation : Visibilité dynamique des pages**
+## **Exemple d'utilisation : Visibilité dynamique des pages**
 
 * Liez la propriété **Visible** d'une page à une **cellule dans un fichier Excel**.
-* Si la valeur Excel est "1", la page sera affichée.
-* Si la valeur Excel est "0", la page sera masquée.
-* Cela permet un **contrôle dynamique** sur les pages qui sont affichées, simplement en modifiant le fichier Excel — utile pour le contenu basé sur un calendrier.
+* Si la valeur Excel est « 1 », la page sera affichée.
+* Si la valeur Excel est « 0 », la page sera masquée.
+* Cela permet un **contrôle dynamique** sur les pages affichées, simplement en modifiant le fichier Excel — utile pour le contenu basé sur un planning.
 
 ***
 
-> **Astuce** :\
+> **Conseil** :\
 > Les liaisons de propriétés sont puissantes pour le **contenu adaptatif en temps réel**. Par exemple :
 
-* Changer la couleur d'arrière-plan en fonction des données de capteur en temps réel.
+* Modifier la couleur d'arrière-plan en fonction des données de capteurs en temps réel.
 * Afficher ou masquer des pages en fonction de fichiers de planification externes.
 * Ajuster dynamiquement les effets de transition.

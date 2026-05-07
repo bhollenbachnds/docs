@@ -1,6 +1,8 @@
-Ce guide fournit des instructions étape par étape pour l'installation et la configuration de **PADS4 Viewer** sur les lecteurs **BrightSign Series 5**.
+---
+- title: BrightSign Series-5
+---
 
-***
+Ce guide fournit des instructions étape par étape pour installer et configurer **PADS4 Viewer** sur **BrightSign Series 5** lecteurs.
 
 ## **Avant de commencer**
 
@@ -15,29 +17,29 @@ Les **lecteurs BrightSign Series-5** suivants sont pris en charge :
 * **BrightSign HS5 (Intégré)**
 
 <Warning>
-  *Note: The following features are **non pris en charge**:*
+  ***Note: The following features are not supported:***
 
   * **HDMI-in** sur **XT1145 & XT2145**
-  * **Double sortie HDMI** sur **XT2145**
+  * **Double HDMI-out** sur **XT2145**
 </Warning>
 
-***
+## **Configuration minimale requise**
 
-## **Exigences minimales**
+### **Version du PADS4 Server**
 
-### **Version du serveur PADS4**
+Avant l'installation, assurez-vous que votre **PADS4 Server** exécute **PADS4 version 2023.2** ou une version ultérieure.
 
-Avant l'installation, assurez-vous que votre **PADS4 Server** exécute **PADS4 version 2023.2** ou supérieure.
-
-<Note>Il est recommandé de **terminer l'installation du serveur PADS4 d'abord** avant de configurer votre lecteur BrightSign.</Note>
+<Note>
+  Il est recommandé de **terminer l'installation du PADS4 Server en premier** avant de configurer votre lecteur BrightSign.
+</Note>
 
 ### **Version du système d'exploitation BrightSign**
 
-Votre lecteur BrightSign doit exécuter **BrightSign OS 9.0.120 ou ultérieur**.
+Votre lecteur BrightSign doit exécuter **BrightSign OS 9.0.120 ou une version ultérieure**.
 
 Si votre appareil BrightSign ne répond pas à cette exigence, mettez à jour le système d'exploitation en utilisant l'une des méthodes suivantes :
 
-1. **BNS.cloud** – Une plateforme de gestion de réseau BrightSign basée sur le cloud pour les mises à jour de firmware à distance.
+1. **BNS.cloud** – Une plateforme de gestion réseau BrightSign basée sur le cloud pour les mises à jour du firmware à distance.
 2. **BrightAuthor:connected** – Permet les mises à jour du firmware directement depuis votre PC.
 
 ***
@@ -51,19 +53,19 @@ Si votre appareil BrightSign ne répond pas à cette exigence, mettez à jour le
 
 ## **Génération du PADS4 Viewer pour les lecteurs BrightSign**
 
-L'**application PADS4 Viewer** pour les lecteurs BrightSign peut être générée directement à partir du **PADS4 Server**.
+L'**application PADS4 Viewer** pour les lecteurs BrightSign peut être générée directement depuis le **PADS4 Server**.
 
 ### **Étapes pour générer le PADS4 Viewer**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape 1">
     Ouvrez un **navigateur web** sur votre ordinateur.
   </Step>
 
-  <Step title="Deuxième étape">
-    Naviguez vers l'**Assistant PADS4 BrightSign Player** en utilisant le format suivant :
+  <Step title="Étape 2">
+    Accédez au **PADS4 BrightSign Player Wizard** en utilisant le format suivant :
 
-    ```
+    ```text
     https://[yourPADS4Server]/[domain]/Apps/Brightsign  
     ```
 
@@ -71,28 +73,28 @@ L'**application PADS4 Viewer** pour les lecteurs BrightSign peut être généré
     * Remplacez **\[domain]** par votre **nom de domaine PADS4**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape 3">
     Exemple d'URL :
 
-    ```
+    ```text
     https://example.pads365.com/PADS4/Apps/Brightsign  
     ```
   </Step>
 
-  <Step title="Quatrième étape">
-    Appuyez sur **Entrée** pour lancer l'**Assistant PADS4 BrightSign Player**.
+  <Step title="Étape 4">
+    Appuyez sur **Entrée** pour lancer le **PADS4 BrightSign Player Wizard**.
   </Step>
 </Steps>
 
 ***
 
-## **Utilisation de l'Assistant PADS4 BrightSign Player**
+## **Utilisation du PADS4 BrightSign Player Wizard**
 
-L'**Assistant PADS4 BrightSign Player** se compose de **trois étapes** :
+Le **PADS4 BrightSign Player Wizard** se compose de **trois étapes** :
 
-### **Étape 1 : Configurer le serveur PADS4**
+### **Étape 1 : Configurer le PADS4 Server**
 
-* L'**URL du serveur PADS4** sera **automatiquement renseignée** en fonction de l'adresse saisie dans votre navigateur.
+* L'**URL du PADS4 Server** sera **renseignée automatiquement** en fonction de l'adresse saisie dans votre navigateur.
 * Vérifiez que l'URL est correcte et cliquez sur **Suivant** pour continuer.
 
 ### **Étape 2 : Télécharger les fichiers du lecteur BrightSign**
@@ -103,16 +105,19 @@ L'**Assistant PADS4 BrightSign Player** se compose de **trois étapes** :
 ### **Étape 3 : Extraire et déployer les fichiers**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape 1">
     Extrayez le **fichier ZIP téléchargé**.
   </Step>
 
-  <Step title="Deuxième étape">
-    Insérez une **carte microSD** dans le lecteur de carte de votre ordinateur.\
-    <Note>Assurez-vous que la carte microSD est **vide** avant de continuer.</Note>
+  <Step title="Étape 2">
+    Insérez une **carte microSD** dans le lecteur de carte de votre ordinateur.\\
+
+    <Note>
+      Assurez-vous que la carte microSD est **vide** avant de continuer.
+    </Note>
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape 3">
     Copiez le **contenu extrait** du fichier ZIP sur la **carte microSD**.
   </Step>
 </Steps>
@@ -124,35 +129,35 @@ L'**Assistant PADS4 BrightSign Player** se compose de **trois étapes** :
 Une fois la **carte microSD** préparée, procédez à l'installation sur votre **lecteur BrightSign**.
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape 1">
     Retirez la **carte microSD** de votre ordinateur.
   </Step>
 
-  <Step title="Deuxième étape">
-    Insérez la **carte microSD** dans **l'emplacement microSD désigné** sur votre **lecteur BrightSign**.
+  <Step title="Étape 2">
+    Insérez la **carte microSD** dans le **slot microSD désigné** sur votre **lecteur BrightSign**.
   </Step>
 
-  <Step title="Étape Trois">
-    Si le **BrightSign player** est déjà allumé, il devrait **détecter et démarrer automatiquement** l'**PADS4 Viewer application** après l'insertion de la carte microSD.
+  <Step title="Étape 3">
+    Si le **lecteur BrightSign** est déjà sous tension, il devrait **détecter et démarrer automatiquement** l'**application PADS4 Viewer** après l'insertion de la carte microSD.
   </Step>
 
-  <Step title="Étape Quatre - *Si PADS4 Viewer ne se lance pas automatiquement*">
-    Appuyez sur le bouton **Reset** du **BrightSign player** pour redémarrer l'appareil.
+  <Step title="Étape 4 - *Si le PADS4 Viewer ne se lance pas automatiquement*">
+    Appuyez sur le bouton **Reset** sur le **lecteur BrightSign** pour redémarrer l'appareil.
   </Step>
 
-  <Step title="Étape Cinq">
+  <Step title="Étape 5">
     Au redémarrage, le **PADS4 Viewer** devrait **se lancer automatiquement**.
   </Step>
 </Steps>
 
-**Félicitations !** Vous avez installé avec succès le **PADS4 Viewer** sur votre **BrightSign player**.
+**Félicitations !** Vous avez installé avec succès le **PADS4 Viewer** sur votre **lecteur BrightSign**.
 
 ***
 
-## **Finalisation de la configuration de votre PADS4 BrightSign Player**
+## **Finalisation de la configuration de votre lecteur PADS4 BrightSign**
 
-* Au premier lancement, le **PADS4 Viewer** sur votre **BrightSign player** affichera un nom par défaut, tel que :
-  ```
+* Au premier lancement, le **PADS4 Viewer** sur votre **lecteur BrightSign** affichera un nom par défaut, tel que :
+  ```text
   BrightSign0002  
   ```
 * Pour attribuer un **nom personnalisé**, utilisez le **PADS4 CTRL Center** pour mettre à jour le **Viewer Name**.
@@ -163,40 +168,41 @@ Une fois la **carte microSD** préparée, procédez à l'installation sur votre 
 
 ### **Fonctionnalités générales**
 
-| Fonctionnalité | Description                                                                                                                 |
-| :------------: | --------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Automatic PADS4 Software Updates** – Le **PADS4 Viewer** se mettra à jour automatiquement.                                |
-|        ✅       | **Offline Mode** – L'appareil continuera à diffuser les **scheduled presentations** pendant **7 days** s'il est hors ligne. |
+| Fonctionnalité | Description                                                                                                                    |
+| :------------: | ------------------------------------------------------------------------------------------------------------------------------ |
+|        ✅       | **Mises à jour automatiques du logiciel PADS4** – Le **PADS4 Viewer** se mettra à jour automatiquement.                        |
+|        ✅       | **Mode hors ligne** – L'appareil continuera à lire les **présentations planifiées** pendant **7 jours** en cas de déconnexion. |
 
-### **Stockage et capacités matérielles**
+### **Capacités de stockage et matérielles**
 
-| Fonctionnalité | Description                                                                         |
-| :------------: | ----------------------------------------------------------------------------------- |
-|        ✅       | **Supports microSD storage** – Nécessaire pour l'installation et le fonctionnement. |
-|        ✅       | **Supports BrightSign OS 9.0.120+** – Requis pour la compatibilité.                 |
-|        ❌       | **USB storage support** – Non pris en charge.                                       |
+| Fonctionnalité | Description                                                                                |
+| :------------: | ------------------------------------------------------------------------------------------ |
+|        ✅       | **Prise en charge du stockage microSD** – Requis pour l'installation et le fonctionnement. |
+|        ✅       | **Prise en charge de BrightSign OS 9.0.120+** – Requis pour la compatibilité.              |
+|        ❌       | **Prise en charge du stockage USB** – Non pris en charge.                                  |
 
 ### **Prise en charge des données et du contenu**
 
-| Fonctionnalité | Description                                                                                        |
-| :------------: | -------------------------------------------------------------------------------------------------- |
-|        ✅       | **Real-time Data Providers** – Prend en charge l'intégration avec des sources de données externes. |
-|        ✅       | **Video, Images, Text, Tables, and Interactive Elements** – Pris en charge dans les présentations. |
-|        ❌       | **Flash Content, Seamless Video Playback** – Non pris en charge.                                   |
+| Fonctionnalité | Description                                                                                                     |
+| :------------: | --------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Fournisseurs de données en temps réel** – Prend en charge l'intégration avec des sources de données externes. |
+|        ✅       | **Vidéo, images, texte, tableaux et éléments interactifs** – Pris en charge dans les présentations.             |
 
 ### **Gestion des appareils**
 
-| Fonctionnalité | Description                                             |
-| :------------: | ------------------------------------------------------- |
-|        ✅       | **Remote Management via PADS4 CTRL Center**             |
-|        ✅       | **Connection State Monitoring & Alerts**                |
-|        ❌       | **Reboot, Shutdown, Wake-on-LAN** – Non pris en charge. |
-|        ✅       | **Restart Viewer, Retrieve Logs, Edit Viewer Settings** |
-
-***
+| Fonctionnalité | Description                                                                         |
+| :------------: | ----------------------------------------------------------------------------------- |
+|        ✅       | **Gestion à distance via PADS4 CTRL Center**                                        |
+|        ✅       | **Surveillance de l'état de connexion et alertes**                                  |
+|        ❌       | **Redémarrage, arrêt, Wake-on-LAN** – Non pris en charge.                           |
+|        ✅       | **Redémarrer le Viewer, récupérer les journaux, modifier les paramètres du Viewer** |
 
 ## **Remarques importantes**
 
-<Warning> **Content File Integrity** – La **PADS4 Content Library** vérifie l'intégrité des fichiers à l'aide de **MD5 checksum** pendant la synchronisation.</Warning>
+<Warning>
+  **Intégrité des fichiers de contenu** – La **PADS4 Content Library** vérifie l'intégrité des fichiers à l'aide du **checksum MD5** lors de la synchronisation.
+</Warning>
 
-<Warning> **Proof of Play Limitations** – Un maximum de **50,000 records** peuvent être stockés localement. Les enregistrements plus anciens seront supprimés une fois la limite atteinte.</Warning>
+<Warning>
+  **Limitations de la preuve de diffusion** – Un maximum de **50 000 enregistrements** peuvent être stockés localement. Les enregistrements les plus anciens seront supprimés une fois la limite atteinte.
+</Warning>

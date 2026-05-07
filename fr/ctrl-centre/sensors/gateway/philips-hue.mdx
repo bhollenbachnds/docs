@@ -1,0 +1,58 @@
+---
+- title: Philips Hue
+---
+
+<Warning>
+  Cet article nécessite que vous disposiez au moins de PADS4 version 2025.2.
+</Warning>
+
+<Tip>
+  Cette implémentation est destinée à être utilisée uniquement pour Workspace.
+</Tip>
+
+## Comment ajouter le Philips Hue Bridge à PADS4
+
+Pour ajouter un Philips Hue Bridge, vous devez brancher le câble d'alimentation et le câble Ethernet dans le Bridge. Après quelques instants, le Bridge devrait être opérationnel et afficher au moins les indicateurs suivants, ce qui signifie que le Bridge est démarré et connecté à votre réseau local.
+
+![Iot Hue1](/images/ctrl-centre/sensors/gateway/iot-hue1.png)
+
+Ensuite, pour l'enregistrer dans votre application PADS4 Server IoT, vous devez découvrir le Bridge sur votre réseau afin de récupérer son adresse IP. Il existe plusieurs façons de procéder :
+
+* Utilisez une application de découverte DNS pour trouver le Philips Bridge sur votre réseau.
+* Utilisez leur processus de découverte en visitant [https://discovery.meethue.com/](https://discovery.meethue.com/).
+* Connectez-vous au routeur réseau (filaire ou sans fil) et recherchez Philips Hue (ou similaire) dans la table DHCP.
+
+Après avoir obtenu l'adresse IP du Philips Hue Bridge, assurez-vous de pouvoir y accéder en visitant l'adresse IP depuis un appareil connecté au même réseau que le Bridge. Cela peut ressembler à ce qui suit, mais ce n'est pas obligatoire. Assurez-vous simplement de récupérer des informations à partir de celui-ci.
+
+![Iot Hue2](/images/ctrl-centre/sensors/gateway/iot-hue2.png)
+
+* Vous pouvez utiliser l'adresse IP dans l'application PADS4 IoT pour ajouter la passerelle à votre PADS4 Server et, optionnellement, sélectionner le proxy qui peut se connecter au Philips Hue Bridge :
+
+![Iot Hue3](/images/ctrl-centre/sensors/gateway/iot-hue3.png)
+
+* Lorsque vous ajoutez le Philips Hue Bridge en tant que passerelle dans PADS4 Ctrl Center, vous pouvez voir un message d'erreur comme ci-dessous.
+
+![Iot Hue4](/images/ctrl-centre/sensors/gateway/iot-hue4.png)
+
+* Dans ce cas, vous devez appuyer sur le bouton Philips situé sur le dessus du Bridge avant d'ajouter la passerelle, afin de mettre le Bridge en mode de liaison et permettre à PADS4 de s'y connecter.
+* Si des appareils y sont connectés ou s'y connecteront ultérieurement, vous pourrez les voir dans l'application PADS IoT dans la liste des appareils. Cela peut ressembler à ceci :
+
+![Iot Hue5](/images/ctrl-centre/sensors/gateway/iot-hue5.png)
+
+## Auto-Discover Devices
+
+PADS4 vous permet d'associer automatiquement des appareils Philips (capteurs et LED/lumières) avec le Philips Hue Bridge sans utiliser l'application Philips Hue Bridge. Pour ce faire, vous devez cliquer sur le bouton Discover Devices juste au-dessus de la liste des passerelles dans PADS4 Ctrl Center, mais uniquement après avoir mis vos capteurs et/ou LED en mode d'association.
+
+![Iot Hue6](/images/ctrl-centre/sensors/gateway/iot-hue6.png)
+
+<Note>
+  Cela n'est pas nécessaire pour intégrer les appareils dans PADS4. Vous pouvez toujours associer l'appareil à l'aide de l'application Philips Hue et PADS4 synchronisera automatiquement les appareils depuis le Bridge vers PADS4 Ctrl Center.
+</Note>
+
+### Philips Hue Motion Sensor
+
+Pour mettre le Philips Hue Motion Sensor en mode d'association, vous devez maintenir le '**configuration**' sur le dos du capteur pendant 3 secondes. Vous devriez voir un petit voyant clignoter sur le devant du capteur. Vous pouvez maintenant cliquer sur "**Discover Devices**" pour le jumeler avec la passerelle et synchroniser automatiquement les appareils dans PADS4.
+
+### Philips Hue LED Strip
+
+Pour ajouter le Philips Hue LED Strip à votre passerelle, vous devez brancher le LED Strip sur une prise de courant. Si l'appareil n'était pas lié à une autre passerelle auparavant, il est déjà (automatiquement) en mode de jumelage. Vous pouvez maintenant cliquer sur "**Discover Devices**" pour le jumeler avec la passerelle, ce qui synchronise automatiquement les appareils dans PADS4 après environ une minute.
