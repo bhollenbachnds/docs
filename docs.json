@@ -279,11 +279,11 @@
           },
           {
             "dropdown": "PADS4 Ctrl Center",
-            "groups": [
+            "pages": [
+              "ctrl-centre/introduction",
               {
-                "group": "Getting Started",
+                "group": "User Applications",
                 "pages": [
-                  "ctrl-centre/introduction",
                   "ctrl-centre/dashboard",
                   "ctrl-centre/content",
                   "ctrl-centre/schedules",
@@ -291,14 +291,65 @@
                     "group": "Viewers",
                     "pages": [
                       "ctrl-centre/viewers/viewers",
-                      "ctrl-centre/viewers/viewer-permissions"
+                      "ctrl-centre/clusters",
+                      "ctrl-centre/viewers/viewer-permissions",
+                      "ctrl-centre/viewer-variables",
+                      {
+                        "group": "Cluster",
+                        "pages": [
+                          "ctrl-centre/cluster/what-is-a-cluster",
+                          "ctrl-centre/cluster/cluster-example",
+                          "ctrl-centre/cluster/create-a-cluster",
+                          "ctrl-centre/cluster/Cluster-related-Viewer-Variables"
+                        ]
+                      },
+                      {
+                        "group": "Viewer Variables",
+                        "pages": [
+                          "ctrl-centre/viewer-variables/introduction",
+                          "ctrl-centre/viewer-variables/System-Viewer-Variables"
+                        ]
+                      }
                     ]
                   },
-                  "ctrl-centre/sensors",
-                  "ctrl-centre/incidents",
-                  "ctrl-centre/clusters",
-                  "ctrl-centre/viewer-variables",
-                  "ctrl-centre/licenses"
+                  {
+                    "group": "IoT",
+                    "pages": [
+                      "ctrl-centre/sensors",
+                      "ctrl-centre/incidents"
+                    ]
+                  },
+                  {
+                    "group": "Workspace",
+                    "pages": [
+                      "ctrl-centre/sensors/workspace/sensors-workspace"
+                    ]
+                  },
+                  {
+                    "group": "Sensors & IoT",
+                    "pages": [
+                      "ctrl-centre/sensors/How-to-use-Sensors",
+                      "ctrl-centre/sensors/How-to-create-Incidents",
+                      "ctrl-centre/sensors/Sensor-Settings",
+                      {
+                        "group": "Gateways",
+                        "pages": [
+                          "ctrl-centre/sensors/gateway/philips-hue",
+                          "ctrl-centre/sensors/gateway/gateway-proxy"
+                        ]
+                      },
+                      {
+                        "group": "Certified Sensors",
+                        "pages": [
+                          "ctrl-centre/sensors/certified-sensors/Certified-Sensors",
+                          "ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
+                          "ctrl-centre/sensors/certified-sensors/Mobotix",
+                          "ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
+                          "ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
+                        ]
+                      }
+                    ]
+                  }
                 ]
               },
               {
@@ -320,83 +371,37 @@
                       }
                     ]
                   },
+                  "ctrl-centre/licenses",
                   {
-                    "group": "Identity",
-                    "pages": [
-                      "ctrl-centre/administration/microsoft-entra-id",
-                      "ctrl-centre/administration/credentials/Okta",
-                      "en/pads-4-ctrl-center/administration/identity/custom-saml-2-0",
-                      "ctrl-centre/administration/credentials/active-directory",
-                      "ctrl-centre/administration/credentials/role-mapping",
-                      {
-                        "group": "SCIM Configuration",
-                        "pages": [
-                          "ctrl-centre/administration/credentials/SCIM/microsoft-entra",
-                          "ctrl-centre/administration/credentials/SCIM/okta",
-                          "ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "User Management",
+                    "group": "Users",
                     "pages": [
                       "ctrl-centre/administration/user-management/Roles",
                       "ctrl-centre/administration/user-management/Permissions",
-                      "ctrl-centre/administration/user-management/cms-workspace"
+                      "ctrl-centre/administration/user-management/cms-workspace",
+                      {
+                        "group": "Identity",
+                        "pages": [
+                          "ctrl-centre/administration/microsoft-entra-id",
+                          "ctrl-centre/administration/credentials/Okta",
+                          "en/pads-4-ctrl-center/administration/identity/custom-saml-2-0",
+                          "ctrl-centre/administration/credentials/active-directory",
+                          "ctrl-centre/administration/credentials/role-mapping",
+                          {
+                            "group": "SCIM Configuration",
+                            "pages": [
+                              "ctrl-centre/administration/credentials/SCIM/microsoft-entra",
+                              "ctrl-centre/administration/credentials/SCIM/okta",
+                              "ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
+                            ]
+                          }
+                        ]
+                      }
                     ]
                   },
                   {
                     "group": "Config",
                     "pages": [
                       "ctrl-centre/administration/config/smtp"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Cluster",
-                "pages": [
-                  "ctrl-centre/cluster/what-is-a-cluster",
-                  "ctrl-centre/cluster/cluster-example",
-                  "ctrl-centre/cluster/create-a-cluster",
-                  "ctrl-centre/cluster/Cluster-related-Viewer-Variables"
-                ]
-              },
-              {
-                "group": "Viewer Variables",
-                "pages": [
-                  "ctrl-centre/viewer-variables/introduction",
-                  "ctrl-centre/viewer-variables/System-Viewer-Variables"
-                ]
-              },
-              {
-                "group": "Sensors & IoT",
-                "pages": [
-                  "ctrl-centre/sensors/How-to-use-Sensors",
-                  "ctrl-centre/sensors/How-to-create-Incidents",
-                  "ctrl-centre/sensors/Sensor-Settings",
-                  {
-                    "group": "Workspace",
-                    "pages": [
-                      "ctrl-centre/sensors/workspace/sensors-workspace"
-                    ]
-                  },
-                  {
-                    "group": "Gateways",
-                    "pages": [
-                      "ctrl-centre/sensors/gateway/philips-hue",
-                      "ctrl-centre/sensors/gateway/gateway-proxy"
-                    ]
-                  },
-                  {
-                    "group": "Certified Sensors",
-                    "pages": [
-                      "ctrl-centre/sensors/certified-sensors/Certified-Sensors",
-                      "ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
-                      "ctrl-centre/sensors/certified-sensors/Mobotix",
-                      "ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
-                      "ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
                     ]
                   }
                 ]
