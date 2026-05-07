@@ -291,12 +291,11 @@
                     "group": "Viewers",
                     "pages": [
                       "ctrl-centre/viewers/viewers",
-                      "ctrl-centre/clusters",
                       "ctrl-centre/viewers/viewer-permissions",
-                      "ctrl-centre/viewer-variables",
                       {
                         "group": "Cluster",
                         "pages": [
+                          "ctrl-centre/clusters",
                           "ctrl-centre/cluster/what-is-a-cluster",
                           "ctrl-centre/cluster/cluster-example",
                           "ctrl-centre/cluster/create-a-cluster",
@@ -307,6 +306,7 @@
                         "group": "Viewer Variables",
                         "pages": [
                           "ctrl-centre/viewer-variables/introduction",
+                          "ctrl-centre/viewer-variables",
                           "ctrl-centre/viewer-variables/System-Viewer-Variables"
                         ]
                       }
