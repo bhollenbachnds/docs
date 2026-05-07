@@ -1,0 +1,72 @@
+Ces propriétés déterminent **comment un bouton interactif répond aux actions de l'utilisateur**, y compris les clics, les combinaisons de touches, et plus encore.
+
+***
+
+### **Hotkey**
+
+Définissez une **raccourci clavier** pour activer le bouton :
+
+* **Hotkey Setup**:
+  * Utilisez le bouton à droite pour ouvrir **Advanced Settings**.
+  * Dans Advanced Settings, vous pouvez :
+    * Saisir manuellement n'importe quelle combinaison de touches en utilisant des **valeurs ASCII**.
+    * Utiliser **Auto Detect** pour capturer automatiquement la combinaison de touches lors de la saisie.
+
+⚙️ **Remarque sur les codes ASCII et les codes de touches**:
+
+* **Les valeurs ASCII** distinguent les minuscules et les majuscules (ex. : `65 = 'A'`, `97 = 'a'`).
+* **Les codes de touches** ne différencient pas les casses. Pour utiliser 'A', spécifiez l'ASCII `65` et ajoutez `[Shift]` si la majuscule est nécessaire.
+
+***
+
+### **Page Action**
+
+Choisissez une **action unique liée à la page** (une seule autorisée par bouton) :
+
+| **Option**                      | **Description**                                                      |
+| ------------------------------- | -------------------------------------------------------------------- |
+| **Go to Previous Page**         | Aller à la page visible précédente.                                  |
+| **Go to Next Page**             | Aller à la page visible suivante.                                    |
+| **First Page**                  | Aller à la première page.                                            |
+| **Last Page**                   | Aller à la dernière page.                                            |
+| **Go to Page...**               | Accéder à une page spécifique (rend les pages invisibles visibles).  |
+| **Show data sort dialog box**   | L'utilisateur définit l'ordre de tri pour un fournisseur de données. |
+| **Show data filter dialog box** | L'utilisateur définit un filtre pour un fournisseur de données.      |
+| **Exit application**            | Fermer l'application PADS Viewer.                                    |
+
+***
+
+### **Actions**
+
+Ajouter **une ou plusieurs actions** à exécuter lorsque le bouton est cliqué ou que la touche de raccourci est pressée.\
+Les actions sont exécutées dans l'ordre où elles sont ajoutées.
+
+| **Option d'action**                                   | **Description**                                                                                                                           |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Send Web Request command**                          | Envoyer une requête HTTP (GET, POST, PUT, PATCH, DELETE) et éventuellement changer de page.                                               |
+| **Edit Viewer Variable**                              | Modifier ou réinitialiser la valeur d'une Viewer Variable jusqu'à la fin de la présentation.                                              |
+| **Scroll data (up/down/page up/page down/begin/end)** | Faire défiler un fournisseur de données de différentes manières. *Note: Resets on page change.*                                           |
+| **Set data filter (with page change)**                | Appliquer un filtre dynamique à un fournisseur de données et éventuellement changer de page.                                              |
+| **Clear data filter (with page change)**              | Effacer les filtres dynamiques précédemment appliqués.                                                                                    |
+| **Apply data sort for this page**                     | Trier les données du fournisseur de données. Se réinitialise lors du changement de page.                                                  |
+| **Apply data filter for this page**                   | Appliquer un filtre spécifique à la page. Se réinitialise lors du changement de page.                                                     |
+| **Send message to Web Element**                       | Contrôler un Web Element (activer/désactiver le microphone/la caméra, rejoindre/quitter une réunion, envoyer une commande personnalisée). |
+| **Open webpage in external window**                   | Ouvrir une URL dans une fenêtre de navigateur séparée.                                                                                    |
+
+***
+
+### **Remarques importantes sur le défilement et les filtres**
+
+* **Le défilement avec des boutons interactifs** peut entrer en conflit avec **le défilement automatique** — peut provoquer un double défilement.
+* **Les filtres et les tris** appliqués via des boutons **se réinitialisent lors du changement de page**, sauf indication contraire (ex. : les filtres dynamiques restent actifs jusqu'à leur suppression).
+* Lors du **défilement ou du filtrage des données**, assurez-vous que le bouton interactif cible le **même fournisseur de données** utilisé par les éléments de la page.
+
+***
+
+### **Remarques spéciales**
+
+* **Synchronize Mode** : Si **la synchronisation de la présentation** est activée, **les fonctionnalités interactives (ex. : navigation entre les pages)** **ne fonctionneront pas** pour maintenir la synchronisation.
+* **Hotkey Configuration**:
+  * **La valeur ASCII** est sensible à la casse.
+  * **Le code de touche** n'est pas sensible à la casse.
+  * Utilisez Auto Detect pour une configuration facile des raccourcis clavier.

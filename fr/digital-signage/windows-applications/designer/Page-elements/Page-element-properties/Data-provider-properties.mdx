@@ -1,0 +1,49 @@
+Les éléments peuvent être connectés à une **source de données externe** (telle qu'une base de données SQL Server, un fichier Microsoft Excel ou un flux RSS) pour afficher **des données en temps réel**. Ces propriétés définissent comment l'élément se connecte à cette source de données, et quelle **colonne** et **ligne** sont utilisées pour le contenu.
+
+***
+
+### Data Provider Info
+
+* **Aucune connexion de données externe**\
+  L'élément n'est **pas connecté** à une source de données. Il affichera **un contenu fixe** tel que spécifié directement dans les paramètres de l'élément.
+
+* **Données externes provenant de la source de données suivante**\
+  L'élément est connecté à un **data provider**, et une **colonne** et une **ligne** spécifiques sont utilisées pour fournir le contenu en temps réel.
+
+***
+
+### Data Provider Components
+
+* **Data Provider**\
+  Représente une connexion à une **source de données**.\
+  Examples:
+  * Table, requête ou procédure stockée (bases de données SQL)
+  * Fichier XML
+  * Flux RSS
+  * Toute autre source externe\
+    **Remarque** : Les data providers sont définis au niveau de la **présentation** et sont disponibles pour tous les éléments. Vous pouvez créer un nouveau data provider en cliquant sur le bouton dans la liste déroulante.\
+    *(Voir « Travailler avec les data providers » pour plus de détails.)*
+
+* **Column**\
+  Le **champ/colonne** du data provider qui fournit le contenu à votre élément.
+
+* **Content Type**\
+  Définit **comment les données** doivent être interprétées par l'élément (par exemple, en tant que texte, chemin d'image, nombre).
+
+* **Row**\
+  Le **enregistrement/ligne** du data provider qui fournit le contenu pour l'élément.
+
+***
+
+### Remarques
+
+* **Applicabilité** : Toutes les propriétés ne s'appliquent pas à chaque élément. Certains éléments (comme les éléments de texte) attendent **du contenu textuel**, tandis que d'autres (comme les éléments d'image) attendent **des chemins de fichiers vers des images**.
+* **Contenu dynamique**:
+  * Lorsqu'il est connecté à un data provider, **les paramètres de contenu manuels** de l'élément sont **désactivés**.
+  * Le contenu de l'élément est toujours contrôlé par **des données en temps réel** provenant de la source de données.
+* **Limitation des lignes**:\
+  Si la source de données contient moins de lignes que ce qui est spécifié dans la propriété **Row**, **aucun contenu** ne sera affiché.
+* **Défilement des données**:\
+  Lorsque le **défilement des données** est activé, la propriété **Row** combinée avec la propriété **Scroll step** contrôle le comportement de défilement.
+* **Playlists**:\
+  La plupart des éléments prennent en charge les **playlists**. Si le champ de base de données renvoie une playlist (plusieurs éléments), le système les parcourra automatiquement.

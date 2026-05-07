@@ -1,12 +1,12 @@
 Au lieu d'utiliser une **playlist définie manuellement**, vous pouvez lier votre playlist à une **source de données externe** telle qu'une **base de données SQL Server, un fichier XML ou un fichier Microsoft Excel**. Cela permet des **mises à jour de données en temps réel** pour contrôler dynamiquement le contenu affiché.
 
-Pour plus de détails sur **la liaison d'un élément** à une source de données externe, consultez **les propriétés du fournisseur de données** et **le travail avec les fournisseurs de données**.
+Pour plus de détails sur la **liaison d'un élément** à une source de données externe, consultez **les propriétés du fournisseur de données** et **l'utilisation des fournisseurs de données**.
 
 ***
 
-## **Structure XML pour les listes de lecture externes**
+## **Structure XML pour les playlists externes**
 
-Pour être reconnues par **PADS4**, les listes de lecture externes doivent suivre une **structure XML spécifique**. Voici un exemple :
+Pour être reconnues par **PADS4**, les playlists externes doivent suivre une **structure XML spécifique**. Voici un exemple :
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -18,8 +18,8 @@ Pour être reconnues par **PADS4**, les listes de lecture externes doivent suivr
 
 ### **Détails clés :**
 
-* Les éléments textuels de la liste de lecture peuvent contenir **plusieurs lignes**, séparées par un **\[Enter]**.
-* **Duration** et **EffectDuration** sont mesurés en **millisecondes**.
+* Les éléments texte d'une playlist peuvent contenir **plusieurs lignes**, séparées par une touche **\[Enter]**.
+* **Duration** et **EffectDuration** sont mesurées en **millisecondes**.
 
 ***
 
@@ -27,30 +27,30 @@ Pour être reconnues par **PADS4**, les listes de lecture externes doivent suivr
 
 Chaque **type d'élément** nécessite un **format XML** légèrement différent. Pour garantir la structure correcte, suivez ces étapes :
 
-1. **Insérez le type d'élément** qui lira la liste de lecture externe (par exemple, un **élément vidéo/son** pour une liste de lecture vidéo).
-2. **Ajoutez manuellement des exemples d'éléments de liste de lecture** avec un contenu similaire à ce qui sera dans la source de données.
-3. **Ouvrez la fenêtre de liste de lecture** et récupérez la structure XML.
+1. **Insérez le type d'élément** qui lira la playlist externe (par exemple, un **élément vidéo/son** pour une playlist vidéo).
+2. **Ajoutez manuellement des exemples d'éléments de playlist** avec un contenu similaire à ce qui figurera dans la source de données.
+3. **Ouvrez la fenêtre de playlist** et récupérez la structure XML.
 4. **Copiez le XML dans le presse-papiers** et collez-le dans votre source de données.
-5. **Modifiez la structure** pour répondre exactement à vos besoins.
+5. **Modifiez la structure** pour répondre à vos besoins exacts.
 
 ***
 
-## **Lecture des listes de lecture externes**
+## **Lecture des Playlists Externes**
 
-Le comportement d'une **liste de lecture externe** est déterminé par :
+Le comportement d'une **playlist externe** est déterminé par :
 
 * La **structure XML** fournie par la source de données.
-* Les **options de liste de lecture** définies dans l'élément de page.
-* Les paramètres de **durée par défaut** et **effets de transition par défaut**.
+* Les **options de playlist** définies dans l'élément de page.
+* La **durée par défaut** et les **effets de transition par défaut** paramètres.
 * Si **le défilement des données** est activé, la **propriété d'intervalle de défilement** influencera également la lecture.
 
 ***
 
-## **Stockage des listes de lecture dans une colonne (uniquement pour le fournisseur de données XML)**
+## **Stockage des Playlists dans une Colonne (Fournisseur de Données XML Uniquement)**
 
-Si vous devez stocker des **listes de lecture imbriquées** dans un **fichier XML**, l'analyseur XML peut mal interpréter la structure. Pour éviter cela, **remplacez** `<` et `>` par `&lt;` et `&gt;`.
+Si vous devez stocker des **playlists imbriquées** dans un **fichier XML**, le parseur XML peut mal interpréter la structure. Pour éviter cela, **remplacez** `<` et `>` par `&lt;` et `&gt;`.
 
-### **Exemple de XML corrigé :**
+### **Exemple de XML Corrigé :**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -67,21 +67,22 @@ Si vous devez stocker des **listes de lecture imbriquées** dans un **fichier XM
 
 ***
 
-## **Résumé des énumérations de liste de lecture**
+## **Résumé des Énumérations de Playlist**
 
-### **Valeurs de type de contenu**
+### **Valeurs de Type de Contenu**
 
 | Valeur | Description                                                                                             |
 | ------ | ------------------------------------------------------------------------------------------------------- |
 | **0**  | Nom de fichier de la bibliothèque de contenu (fichier stocké dans la **bibliothèque de contenu PADS4**) |
-| **1**  | Chemin complet du fichier (fichier situé en dehors de la **bibliothèque de contenu PADS4**)             |
-| **2**  | Séparateur (pause entre les éléments de la liste de lecture)                                            |
-| **3**  | Contenu intégré (par exemple, texte)                                                                    |
-| **4**  | Contenu hexadécimal (par exemple, **commandes RS-232**)                                                 |
+| **1**  | Chemin de fichier complet (fichier situé en dehors de la **bibliothèque de contenu PADS4**)             |
+| **2**  | Séparateur (pause entre les éléments de la playlist)                                                    |
+| **3**  | Contenu intégré (ex. : texte)                                                                           |
+| **4**  | Contenu hexadécimal (ex. : **commandes RS-232**)                                                        |
+| **5**  | URL de flux vidéo                                                                                       |
 
 ***
 
-### **Valeurs d'effet**
+### **Valeurs d'Effet**
 
 | Valeur  | Description                                                           |
 | ------- | --------------------------------------------------------------------- |
@@ -97,7 +98,7 @@ Si vous devez stocker des **listes de lecture imbriquées** dans un **fichier XM
 | **9**   | Rectangle en expansion                                                |
 | **10**  | Cercle tranché                                                        |
 | **11**  | Effet aléatoire                                                       |
-| **12**  | Fondu entrant                                                         |
+| **12**  | Fondu en entrée                                                       |
 | **13**  | Dissolution                                                           |
 | **14**  | Retournement                                                          |
 | **15**  | Rétrécissement vers le centre                                         |
@@ -105,24 +106,24 @@ Si vous devez stocker des **listes de lecture imbriquées** dans un **fichier XM
 | **17**  | Division verticale                                                    |
 | **18**  | Twister                                                               |
 | **19**  | Zoom avant                                                            |
-| **20**  | Tourner la page depuis la gauche                                      |
-| **21**  | Tourner la page depuis la droite                                      |
-| **22**  | Tourner la page vers la droite                                        |
-| **23**  | Tourner la page vers la gauche                                        |
-| **24**  | Déplacement vers la gauche                                            |
-| **25**  | Déplacement vers la droite                                            |
-| **26**  | Déplacement vers le haut                                              |
-| **27**  | Déplacement vers le bas                                               |
+| **20**  | Tournage de page depuis la gauche                                     |
+| **21**  | Tournage de page depuis la droite                                     |
+| **22**  | Tournage de page vers la droite                                       |
+| **23**  | Tournage de page vers la gauche                                       |
+| **24**  | Déplacement par-dessus vers la gauche                                 |
+| **25**  | Déplacement par-dessus vers la droite                                 |
+| **26**  | Déplacement par-dessus vers le haut                                   |
+| **27**  | Déplacement par-dessus vers le bas                                    |
 | **28**  | Réservé                                                               |
 | **29**  | Flush (**effet HTML5 Viewer**)                                        |
 | **30**  | Vortex (**effet HTML5 Viewer**)                                       |
-| **31**  | Rebond (**effet HTML5 Viewer**)                                       |
-| **999** | Effet par défaut (utilise la propriété **Default Transition Effect**) |
+| **31**  | Bounce (**effet HTML5 Viewer**)                                       |
+| **999** | Effet par défaut (utilise la **Default Transition Effect** propriété) |
 
 ***
 
-### **Notes finales**
+### **Notes Finales**
 
-* L'utilisation de **listes de lecture externes** garantit des **mises à jour dynamiques du contenu** sans intervention manuelle.
-* **Les fournisseurs de données** peuvent être utilisés pour récupérer des éléments de liste de lecture en temps réel.
-* Testez toujours votre **structure XML** en récupérant un **exemple de PADS4** avant de l'implémenter dans un environnement de production.
+* L'utilisation des **playlists externes** garantit des **mises à jour dynamiques du contenu** sans intervention manuelle.
+* **Les fournisseurs de données** peuvent être utilisés pour récupérer des éléments de playlist en temps réel.
+* Testez toujours votre **structure XML** en récupérant un **exemple depuis PADS4** avant de l'implémenter dans un environnement en production.
