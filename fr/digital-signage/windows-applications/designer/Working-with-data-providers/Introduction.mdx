@@ -1,103 +1,103 @@
-Les fournisseurs de données permettent aux **présentations PADS4** d'afficher des **données en temps réel** provenant de diverses sources, garantissant que le contenu reste **dynamique et automatiquement mis à jour**. Ces fournisseurs permettent aux éléments d'extraire des données de **bases de données, flux XML, feuilles de calcul, fichiers texte et autres sources externes** sans intervention manuelle.
+Les Data Providers permettent aux **PADS4 presentations** d'afficher des **données en temps réel** provenant de diverses sources, garantissant que le contenu reste **dynamique et automatiquement mis à jour**. Ces fournisseurs permettent aux éléments d'extraire des données de **bases de données, flux XML, feuilles de calcul, fichiers texte et autres sources externes** sans intervention manuelle.
 
 ***
 
-## **Définition des fournisseurs de données**
+## **Définition des Data Providers**
 
-### **Fonctionnalités clés**
+### **Caractéristiques principales**
 
 * **Connecte les présentations à des sources de données en temps réel**
-* **Plusieurs fournisseurs de données** peuvent être liés à une seule présentation
-* **Le défilement des données** permet le parcours automatique de plusieurs lignes de données
-* **Les liaisons de propriétés** permettent le contrôle dynamique des propriétés des éléments
+* **Plusieurs data providers** peuvent être liés à une seule présentation
+* **Le défilement des données** permet le cycle automatique à travers plusieurs lignes de données
+* **Les liaisons de propriétés** permettent un contrôle dynamique des propriétés des éléments
 * **Les règles** déclenchent des changements de contenu basés sur des conditions en temps réel
 
 ### **Sources de données prises en charge**
 
-A **Data Provider** peut récupérer des informations à partir de :
+Un **Data Provider** peut récupérer des informations à partir de :
 
-* **SQL Databases** – requêtes, vues, procédures stockées
-* **XML Files** – flux de données structurées
-* **Microsoft Excel Spreadsheets**
-* **Text Files** – CSV, JSON et autres formats structurés
-* **Web Services & APIs** – intégrations personnalisées
+* **Bases de données SQL** – requêtes, vues, procédures stockées
+* **Fichiers XML** – flux de données structurées
+* **Feuilles de calcul Microsoft Excel**
+* **Fichiers texte** – CSV, JSON et autres formats structurés
+* **Services Web et API** – intégrations personnalisées
 
 ***
 
 ## **Utilisation des Data Vault Providers**
 
-Les Data Vault Providers sont gérés via **PADS4 System Management** et offrent une sécurité et une efficacité supplémentaires :
+Les Data Vault Providers sont gérés via **PADS4 System Management** et fournir une sécurité et une efficacité supplémentaires :
 
-* **Encrypted Data** – assure une transmission sécurisée
-* **Continuous Availability** – stocke et met à jour les données automatiquement
-* **Optimized Bandwidth Usage** – réduit les demandes de données en double
-* **Simplified Credential Management** – le stockage côté serveur élimine la gestion locale des mots de passe
-* **Controlled Access**
-  * **PADS4 Designers** peuvent accéder aux données mais **cannot modify credentials**
-  * **Sorting, filtering, and expressions** restent configurables
+* **Données cryptées** – assure une transmission sécurisée
+* **Disponibilité continue** – stocke et met à jour les données automatiquement
+* **Utilisation optimisée de la bande passante** – réduit les demandes de données en double
+* **Gestion simplifiée des identifiants** – le stockage côté serveur élimine la gestion locale des mots de passe
+* **Accès contrôlé**
+  * **PADS4 Designers** peuvent accéder aux données mais **ne peuvent pas modifier les identifiants**
+  * **Tri, filtrage et expressions** restent configurables
 
 ***
 
-## **Gestion des Data Providers**
+## **Gestion des fournisseurs de données**
 
-### **Ajout d'un Data Provider**
+### **Ajout d'un fournisseur de données**
 
 * Créer un nouveau **Data Provider** dans une **presentation**
 * Sélectionner le **source type** et configurer les **connection settings**
 * Définir les **update intervals** pour la synchronisation automatique
 
-### **Modification d'un Data Provider**
+### **Modification d'un fournisseur de données**
 
-* Modifier les **existing data sources**, y compris les requêtes, les options de tri et de filtrage
+* Modifier les **existing data sources**, y compris les options de requêtes, de tri et de filtrage
 
-### **Suppression d'un Data Provider**
+### **Suppression d'un fournisseur de données**
 
 * **Supprimer** les fournisseurs de données inutilisés de la présentation
 
-### **Duplication d'un Data Provider**
+### **Duplication d'un fournisseur de données**
 
 * **Copier un fournisseur existant** pour le réutiliser avec des **modified settings**
 
-### **Importation d'un Data Provider**
+### **Importation d'un fournisseur de données**
 
 * **Transférer des fournisseurs** entre différentes présentations
 
-### **Prévisualisation d'un Data Provider**
+### **Prévisualisation d'un fournisseur de données**
 
-* **Tester** le fournisseur pour assurer **data integrity and formatting** avant de l'utiliser
+* **Tester** le fournisseur pour assurer **l'intégrité et le formatage des données** avant de l'utiliser
 
-### **Réutilisation des Data Providers stockés**
+### **Réutilisation des fournisseurs de données stockés**
 
-* Enregistrer les **frequently used data providers** pour une utilisation future dans plusieurs présentations
+* Enregistrer les **fournisseurs de données fréquemment utilisés** pour une utilisation future dans plusieurs présentations
 
 ***
 
-## **Intégration des Data Providers dans les présentations**
+## **Intégration des fournisseurs de données dans les présentations**
 
 ### **Liaison des données aux éléments**
 
-* Connecter **text, images, tables, and scrolling elements** aux **specific data fields**
-* Assigner **columns and rows dynamically** pour mettre à jour le contenu automatiquement
+* Connecter **texte, images, tableaux et éléments défilants** aux **champs de données spécifiques**
+* Assigner **colonnes et lignes dynamiquement** pour mettre à jour le contenu automatiquement
 
 ### **Utilisation du défilement de données**
 
-* Configurer les éléments pour **cycle through multiple rows of data**
-* Définir **scroll interval** et définir **how many rows are displayed**
+* Configurer les éléments pour **parcourir plusieurs lignes de données**
+* Définir **l'intervalle de défilement** et définir **combien de lignes sont affichées**
 
 ### **Application des liaisons de propriétés**
 
-* Ajuster automatiquement les **adjust properties** en fonction des données entrantes (par ex., **color, size, transparency**)
+* Ajuster automatiquement les **propriétés** en fonction des données entrantes (par ex., **couleur, taille, transparence**)
 
 ### **Définition de règles pour le contenu dynamique**
 
-* Définir des conditions qui modifient la **visibility, formatting, or layout** en fonction des données
-* Example: If a **stock price drops below a threshold**, afficher un **red warning message**
+* Définir des conditions qui modifient la **visibilité, le formatage ou la mise en page** en fonction des données
+* Example: If a **le cours de l'action tombe en dessous d'un seuil**, afficher un **message d'avertissement rouge**
 
 ***
 
-## **Avantages de l'utilisation des Data Providers**
+## **Avantages de l'utilisation des fournisseurs de données**
 
-* **Real-time content updates** sans intervention manuelle
-* **Scalability** – s'intègre facilement à plusieurs sources de données
-* **Custom display options** utilisant le défilement, le filtrage et le formatage
-* **Secure and efficient performance** avec **Data Vault Providers**
+* **Mises à jour du contenu en temps réel** sans intervention manuelle
+* **Évolutivité** – s'intègre facilement à plusieurs sources de données
+* **Options d'affichage personnalisées** utilisant le défilement, le filtrage et le formatage
+* **Performance sécurisée et efficace** avec **Data Vault Providers**

@@ -1,0 +1,54 @@
+Ces propriétés définissent les **images** qui seront affichées par votre élément d'image. Vous pouvez **add a single image** ou créer une **playlist of images** qui seront affichées séquentiellement.
+
+Vous pouvez :
+
+* **Add, edit, reorder, or remove** des images dans la playlist.
+* Utiliser les **navigation buttons** en bas pour parcourir les éléments de la playlist.
+* Voir la **total duration** de tous les éléments de la playlist combinés.
+
+***
+
+## **Propriétés des éléments de la playlist d'images**
+
+### **Type**
+
+Définit la **source** de l'image. Options possibles :
+
+| **Option**                       | **Description**                                                                                                                                                  |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Picture from Content Library** | Référence à un **picture file in the PADS4 content library** existant (recommandé). Automatiquement **synchronized** sur tous les Viewers.                       |
+| **Picture from File**            | Référence à une **image stored outside the content library**. Non synchronisée automatiquement, vous devez donc gérer manuellement la distribution des fichiers. |
+| **Base64 String**                | Utilisé lorsque les **data is stored in a text-based format (Base64 string)** dans un fournisseur de données. **Example:** `"data:image/png;base64,..."`         |
+| **Separator**                    | Pas d'image—utilisé pour **create a pause** dans la playlist.                                                                                                    |
+
+***
+
+### **Content**
+
+Définit la **image source**, en fonction du **Type** sélectionné.
+
+* Si **Picture from File** est choisi, saisissez le **full file path**.
+* Si vous utilisez **Content Library**, parcourez et sélectionnez l'image.
+
+***
+
+### **Duration**
+
+* Spécifie **long** (en secondes) l'image sera affichée avant de passer à l'élément suivant de la playlist.
+* Si une **image is missing**, un cadre vide sera affiché pendant la durée définie.
+
+***
+
+### **Effect**
+
+* Sélectionnez un **transition effect** pour chaque image.
+* Définissez la **effect duration (in seconds)**.
+
+***
+
+### **Remarques importantes**
+
+* **Only references** aux images sont stockées dans la présentation, **not the images themselves**.
+  * Si un fichier image est mis à jour, la présentation affichera la dernière version.
+* **Playlist properties are disabled** si l'élément est connecté à une **data source**.
+  * Dans ce cas, **le contenu de l'image est déterminé en temps réel** par la source de données.

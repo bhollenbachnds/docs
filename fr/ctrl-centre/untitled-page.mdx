@@ -1,0 +1,15 @@
+---
+- title: Aperçu de l'utilisateur root PADS4
+---
+
+L'utilisateur root dans PADS4 est un compte superutilisateur avec des privilèges élevés pour gérer les domaines et les configurations à l'échelle du serveur. Il est automatiquement créé lors du processus d'installation de PADS4 à l'aide de l'outil de configuration PADS4 Foundation Configuration Tool, où vous définissez son mot de passe.
+
+## **Exigences d'accès**
+
+Vous devez vous connecter directement sur la console du serveur PADS4 pour accéder à l'utilisateur root (nom d'utilisateur : `su\root`). Les tentatives d'accès à distance entraîneront un message d'erreur en raison des restrictions de sécurité.
+
+<Frame>
+  <img src="/images/RootAccess/RemoteLogonNotAllowed.png" alt="Remote Logon Not Allowed" title="Connexion à distance non autorisée" className="mr-auto" style={{ width:"67%" }} />
+</Frame>
+
+Cette conception garantit que la configuration du domaine et les modifications critiques sont effectuées en toute sécurité sur la machine locale avant d'être déléguées aux administrateurs spécifiques du domaine.

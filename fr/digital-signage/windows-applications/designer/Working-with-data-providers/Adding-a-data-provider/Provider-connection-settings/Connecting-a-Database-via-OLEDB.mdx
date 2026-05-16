@@ -1,4 +1,4 @@
-**OLEDB (Object Linking and Embedding Database)** est un **modèle générique** pour accéder à diverses **bases de données standard de l'industrie**. Par rapport à **ODBC**, OLEDB offre **plus de fonctionnalités** mais s'accompagne d'une **surcharge plus élevée**.
+**OLEDB (Object Linking and Embedding Database)** est un **modèle générique** pour accéder à diverses **bases de données standard de l'industrie**. Comparé à **ODBC**, OLEDB offre **plus de fonctionnalités** mais implique **une charge système plus élevée**.
 
 ***
 
@@ -7,18 +7,18 @@
 Avant de configurer une **connexion OLEDB** dans **PADS4**, assurez-vous que :
 
 * Le **pilote OLEDB** pour la base de données requise **est installé** sur votre système.
-* La **base de données est accessible** depuis le **PADS4 Data Server** ou la **machine locale**.
+* La **base de données est accessible** depuis le **PADS4 Data Server** ou **la machine locale**.
 
 ***
 
 ## **Étapes pour ajouter/modifier une connexion OLEDB dans PADS4**
 
-### **1. Démarrer l'Assistant fournisseur de données**
+### **1. Démarrer l'Assistant Fournisseur de données**
 
-* Suivez les étapes décrites dans **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**.
+* Suivez les étapes décrites dans **Adding a Data Provider** ou **Editing a Data Provider**.
 * Sélectionnez **OLEDB** comme type de fournisseur.
 
-### **2. Saisissez la chaîne de connexion OLEDB**
+### **2. Saisir la chaîne de connexion OLEDB**
 
 * Fournissez la **chaîne de connexion OLEDB** pour établir un lien avec votre base de données.
 * Le format de cette chaîne dépend du **pilote OLEDB** utilisé.
@@ -35,7 +35,7 @@ Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\MyDatabase.accdb;Persist Securi
 
 ***
 
-### **3. Sélectionnez la source de données**
+### **3. Sélectionner la source de données**
 
 * Choisissez l'une des sources de données détectées :
   * **Tables**
@@ -50,13 +50,13 @@ SELECT * FROM Customers
 ```
 
 **Tip:**\
-N'utilisez les **instructions SQL** que lorsque c'est nécessaire. Les requêtes écrites manuellement doivent être validées pendant l'exécution, ce qui peut **affecter les performances**.
+N'utilisez des **instructions SQL** que lorsque c'est nécessaire. Les requêtes écrites manuellement doivent être validées pendant l'exécution, ce qui peut **affecter les performances**.
 
 * Cliquez sur **Next** pour continuer.
 
 ***
 
-### **4. Terminez la configuration**
+### **4. Terminer la configuration**
 
 * Suivez les étapes restantes dans le guide **Adding a Data Provider**.
 * Cliquez sur **Finish** pour enregistrer les paramètres de connexion.
@@ -73,6 +73,6 @@ N'utilisez les **instructions SQL** que lorsque c'est nécessaire. Les requêtes
   * Utilisez le bouton **Test** pour vérifier la connexion **avant de continuer**.
 
 * **Considérations de performance :**
-  * Utilisez des **Tables, Views ou Stored Procedures prédéfinis** pour **de meilleures performances** au lieu de **requêtes SQL** brutes.
+  * Utilisez des **Tables, Vues ou Procédures stockées prédéfinies** pour **de meilleures performances** plutôt que des **requêtes SQL** brutes.
 
-En suivant ces étapes, vous pouvez **connecter avec succès une base de données OLEDB à PADS4** et récupérer des **données en temps réel** pour **l'affichage dynamique et les mises à jour automatiques de contenu**.
+En suivant ces étapes, vous pouvez réussir à **connecter une base de données OLEDB à PADS4** et récupérer **des données en temps réel** pour **l'affichage dynamique et les mises à jour automatiques de contenu**.

@@ -1,56 +1,56 @@
-Le **Microsoft SQL Server** fournisseur dans **PADS4** vous permet de vous connecter à une **SQL Server database**, de récupérer des données et de les utiliser dans votre présentation.
+Le fournisseur **Microsoft SQL Server** dans **PADS4** vous permet de vous connecter à une **SQL Server database**, de récupérer des données et de les utiliser dans votre présentation.
 
 ***
 
 ### **Étapes pour ajouter ou modifier une connexion Microsoft SQL Server**
 
-#### **1. Démarrer l'Assistant Fournisseur de Données**
+#### **1. Démarrer l'assistant de fournisseur de données**
 
 * Ouvrez **PADS4** et accédez à l'**Data Provider Wizard**.
-* Sélectionnez **Microsoft SQL Server** comme **type de fournisseur**.
-* Cliquez sur **Next** pour continuer.
+* Sélectionnez **Microsoft SQL Server** comme **provider type**.
+* Cliquez **Next** pour continuer.
 
 #### **2. Spécifier les paramètres de connexion SQL Server**
 
-* Saisissez le **SQL Server Name**:
-  * Tapez manuellement le **nom du serveur**.
-  * Cliquez sur le **bouton déroulant** pour rechercher et sélectionner un serveur disponible sur votre réseau.
+* Saisissez le **SQL Server Name** :
+  * Tapez manuellement le **server name**.
+  * Cliquez sur le **drop-down button** pour scanner et sélectionner un serveur disponible sur votre réseau.
 * Dans la section **Logon to the Server**, choisissez l'une des méthodes d'authentification :
   * **Windows Authentication** *(utilise les identifiants de l'utilisateur actuel)*.
   * **SQL Server Authentication** *(nécessite un nom d'utilisateur et un mot de passe)*.
-* Cliquez sur **Next** pour continuer.
+* Cliquez **Next** pour continuer.
 
 #### **3. Sélectionner la base de données et la source de données**
 
-* Choisissez la **base de données** dans la liste déroulante.
+* Choisissez la **database** dans la liste déroulante.
 
-* Sélectionnez la **source de données**:
-  * **Tables** – Récupérer des données à partir d'une table spécifique.
+* Sélectionnez la **data source** :
+  * **Tables** – Récupérer des données d'une table spécifique.
   * **Views** – Utiliser une vue SQL Server prédéfinie.
   * **Stored Procedures** – Exécuter une procédure stockée.
   * **SQL Statement** – Saisir manuellement une requête SQL personnalisée.
 
 * Si vous utilisez **SQL Statement**, assurez-vous qu'elle est optimisée pour les performances.
 
-* Cliquez sur **Next** pour continuer.
+* Cliquez **Next** pour continuer.
 
 #### **4. Terminer la configuration**
 
 * **Vérifiez** les paramètres de connexion.
-* Cliquez sur **Finish** pour enregistrer le fournisseur de données.
+* Cliquez **Finish** pour enregistrer le fournisseur de données.
 
 ***
 
 ### **Remarques importantes**
 
-* **SQL Server Authentication**:
-  * Si vous utilisez **Windows Authentication**, assurez-vous que le **PADS4 service** dispose des **autorisations appropriées**.
-  * Si vous utilisez **SQL Server Authentication**, utilisez un **nom d'utilisateur et mot de passe sécurisés**.
-* **Optimisation des requêtes**:
-  * L'utilisation de **Views** ou de **Stored Procedures** est recommandée pour l'efficacité.
-  * Évitez les **requêtes SQL complexes** dans les **SQL Statements** lorsque c'est possible.
+* **SQL Server Authentication** :
+  * Si vous utilisez **Windows Authentication**, assurez-vous que le service **PADS4 service** dispose des **proper permissions**.
+  * Si vous utilisez **SQL Server Authentication**, utilisez un **secure username and password**.
+* **Optimisation des requêtes** :
+  * L'utilisation de **Views** ou de **Stored Procedures** est recommandé pour l'efficacité.
+  * Évitez **les requêtes SQL complexes** dans **SQL Statements** lorsque c'est possible.
 * **Considérations de performance**:
   * **SQL Server est optimisé** pour traiter les requêtes en interne.
-  * L'utilisation d'un **PADS4 Data Server** peut ne pas fournir d'avantages supplémentaires.
+  * L'utilisation d'un **PADS4 Data Server** pourrait ne pas apporter d'avantages supplémentaires.
 
-Cette configuration garantit que **PADS4** peut récupérer efficacement des **données SQL Server en temps réel**, ce qui est utile pour les **présentations dynamiques, tableaux de bord et automatisations**.
+Cette configuration garantit que **PADS4** peut récupérer efficacement **les données SQL Server en temps réel**, ce qui est utile pour **les présentations dynamiques, les tableaux de bord et l'automatisation**.

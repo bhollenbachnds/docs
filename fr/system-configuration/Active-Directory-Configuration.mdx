@@ -1,28 +1,28 @@
 De nombreuses organisations s'appuient sur **Microsoft Active Directory** pour gérer de manière centralisée les comptes utilisateurs des employés. En intégrant **Active Directory (AD)** avec **PADS4**, vous pouvez utiliser facilement cette structure existante pour l'authentification et la gestion des utilisateurs.
 
-<Note>PADS4 fonctionne avec votre structure Active Directory existante **sans nécessiter de modifications** aux unités d'organisation (UO) ou aux groupes d'utilisateurs.</Note>
+<Note>PADS4 fonctionne avec votre structure Active Directory existante **sans nécessiter de modifications** aux unités organisationnelles (UO) ou aux groupes d'utilisateurs.</Note>
 
 ***
 
 ### **Comment PADS4 fonctionne avec Active Directory**
 
-Une fois qu'une connexion à **Active Directory** est établie, vous pouvez créer des **utilisateurs LDAP** dans PADS4. Ces utilisateurs sont directement liés aux **comptes Active Directory**, assurant un processus d'authentification synchronisé et sécurisé.
+Une fois qu'une connexion à **Active Directory** est établie, vous pouvez créer des **LDAP users** dans PADS4. Ces utilisateurs sont directement liés aux **Active Directory accounts**, garantissant un processus d'authentification synchronisé et sécurisé.
 
-* Lorsqu'un **utilisateur LDAP** se connecte, **PADS4 l'authentifie automatiquement** en utilisant les identifiants stockés dans **Active Directory**.
-* Toute modification des **noms d'utilisateur ou mots de passe** dans Active Directory est **instantanément reflétée** dans PADS4.
-* Si un **compte utilisateur est désactivé** dans Active Directory, il **ne pourra plus se connecter** à PADS4.
-* Lorsqu'un utilisateur est **supprimé d'Active Directory**, il est **automatiquement supprimé** de PADS4.
-* Si le **PADS4 Server** a des permissions limitées pour accéder à Active Directory, les mises à jour depuis AD **peuvent ne pas prendre effet immédiatement** et seront appliquées **après un redémarrage du serveur**.
+* Lorsqu'un **LDAP user** se connecte, **PADS4 automatically authenticates** celui-ci en utilisant les informations d'identification stockées dans **Active Directory**.
+* Toute modification des **usernames or passwords** dans Active Directory est **instantly reflected** dans PADS4.
+* Si un compte **account is disabled** dans Active Directory, l'utilisateur **will no longer be able to log in** à PADS4.
+* Lorsqu'un utilisateur est **removed from Active Directory**, il est **automatically deleted** de PADS4.
+* Si le **PADS4 Server** dispose de permissions limitées pour accéder à Active Directory, les mises à jour depuis AD **may not take effect immediately** et seront appliquées **after a server restart**.
 
-> **Important:** Supprimer un **utilisateur LDAP** de PADS4 **ne supprime pas** leur compte de **Active Directory**.
+> **Important:** La suppression d'un **LDAP user** de PADS4 **does not delete** son compte de **Active Directory**.
 
 ***
 
-### **Gestion des utilisateurs et des autorisations**
+### **Gestion des utilisateurs et des permissions**
 
-Toutes les **appartenances aux groupes d'utilisateurs, les autorisations et les attributions de licences** sont gérées dans **PADS4**, y compris pour les utilisateurs LDAP.
+Toutes les **user group memberships, permissions, and license assignments** sont gérées dans **PADS4**, y compris pour les LDAP users.
 
-Si la **connexion Active Directory** est **désactivée**, les **utilisateurs LDAP créés précédemment restent actifs** dans PADS4. Cela vous permet de **les réutiliser** si vous réactivez la connexion AD à l'avenir.
+Si la **Active Directory connection** est **disabled**, les **LDAP users remain active** dans PADS4. Cela vous permet de **reuse them** si vous réactivez la connexion AD à l'avenir.
 
 ***
 
@@ -30,31 +30,31 @@ Si la **connexion Active Directory** est **désactivée**, les **utilisateurs LD
 
 Pour intégrer **Active Directory** avec **PADS4**, suivez ces étapes :
 
-1️. **Configurer les paramètres de connexion Active Directory**
+1️. **Configure the Active Directory connection settings**
 
 * Ouvrez la fenêtre **Server Settings** dans **PADS4 System Management**.
-* Saisissez les **détails de connexion Active Directory**.
+* Saisissez les **Active Directory connection details** requis.
 
-2️. **Redémarrer le serveur PADS4**
+2️. **Restart the PADS4 Server**
 
-* Cela garantit que les **paramètres de connexion Active Directory prennent effet**.
+* Cela garantit que les **Active Directory connection settings take effect**.
 
-3️. **Créer des utilisateurs LDAP**
+3️. **Create LDAP users**
 
 * Accédez à la fenêtre **Users** dans **PADS4 System Management**.
-* Créez **un ou plusieurs utilisateurs LDAP** liés aux **comptes Active Directory**.
+* Créez **one or more LDAP users** liés aux **Active Directory accounts**.
 
-4️. **Attribuer des groupes d'utilisateurs et des licences**
+4️. **Assign user groups & licenses**
 
-* Assurez-vous que les utilisateurs sont **affectés aux groupes d'utilisateurs appropriés**.
-* Attribuez les **licences** nécessaires à chaque utilisateur.
+* Assurez-vous que les utilisateurs sont **assigned to the appropriate user groups**.
+* Attribuez les **licenses** nécessaires à chaque utilisateur.
 
 ***
 
 ## **Étapes finales**
 
 **Votre intégration Active Directory est maintenant terminée !**\
-Les utilisateurs peuvent **se connecter en utilisant leurs identifiants Active Directory**.\
-**L'authentification et les mises à jour des utilisateurs** sont **automatisées** et **transparentes**.
+Les utilisateurs peuvent **log in using their Active Directory credentials**.\
+**User authentication & updates** sont **automated** et **seamless**.
 
-En utilisant **Active Directory avec PADS4**, les organisations peuvent maintenir une **gestion centralisée des utilisateurs**, améliorer la **sécurité** et **simplifier l'authentification** sans modifier leur **structure Active Directory** existante.
+En utilisant **Active Directory with PADS4**, les organisations peuvent maintenir une **centralized user management**, améliorer la **security** et **simplify authentication** sans modifier leur **Active Directory structure** existante.

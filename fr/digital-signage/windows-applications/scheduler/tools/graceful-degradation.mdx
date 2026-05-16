@@ -1,64 +1,64 @@
-Lors de l'installation initiale de PADS4, l'activation est complétée à l'aide de **PADS4 License Wizard**. Ce processus génère une **clé de produit liée au matériel**, qui est vérifiée par rapport au profil matériel de votre système.
+Lors de l'installation initiale de PADS4, l'activation est complétée à l'aide du **PADS4 License Wizard**. Ce processus génère une **hardware-bound product key**, qui est vérifiée par rapport au profil matériel de votre système.
 
 ***
 
 ## Période de dégradation progressive : 7 jours
 
-Si des **changements matériels** sont détectés (par exemple, remplacement de l'adaptateur réseau ou modifications des identifiants système), PADS4 entre dans une **période de dégradation progressive**.
+Si **hardware changes** sont détectés (par exemple, remplacement de l'adaptateur réseau ou modifications des identifiants système), PADS4 entre dans une **graceful degradation period**.
 
 * **Durée** : 7 jours
 * Pendant cette période, le système **continue de fonctionner normalement**
-* Un **message d'avertissement** s'affiche lors de la connexion pour les applications suivantes :
+* Un **warning message** s'affiche lors de la connexion pour les applications suivantes :
   * PADS4 Agent
   * PADS4 Messenger
   * System Management
   * Scheduler
   * Designer
 
-> Vous pouvez configurer une alerte dans **PADS4 Agent** pour notifier les administrateurs par e-mail lorsque des changements matériels sont détectés et qu'une réactivation est nécessaire.
+> Vous pouvez configurer une alerte dans le **PADS4 Agent** pour notifier les administrateurs par e-mail lorsque des changements matériels sont détectés et qu'une réactivation est nécessaire.
 
 ***
 
-## Réactivation du serveur PADS4
+## Réactivation du PADS4 Server
 
 Pour éviter que PADS4 ne s'arrête après la période de grâce de 7 jours, suivez ces étapes :
 
 ### Processus de réactivation étape par étape :
 
 1. **Contactez votre revendeur** pour signaler le changement matériel et demander une réactivation.
-   * Fournissez votre **clé de produit PADS4**.
+   * Fournissez votre **PADS4 product key**.
 2. Le revendeur contactera **Net Display Systems** pour vérifier votre licence et autoriser la réactivation.
-3. Vous recevrez une **confirmation par e-mail** une fois que votre licence aura été approuvée pour la réactivation.
+3. Vous recevrez une **email confirmation** une fois que votre licence aura été approuvée pour la réactivation.
 
 ### Réactivation via License Wizard :
 
-1. Lancez le **License Wizard** sur le serveur PADS4.
+1. Lancez le **License Wizard** sur le PADS4 Server.
 2. Sélectionnez le **Server** et cliquez sur **Next**.
 3. Vérifiez les détails de la licence actuelle et cliquez à nouveau sur **Next**.
 4. Dans la fenêtre **Select an Action**, choisissez :
    * **Reactivate current installation**
-5. L'assistant se connectera au serveur de licences PADS4 pour vérifier votre clé.
+5. L'assistant se connectera au PADS4 License Server pour vérifier votre clé.
 6. Après validation réussie, le profil matériel est réinitialisé et la période de dégradation prend fin.
 
 > Note: An **internet connection** est requise pour la réactivation en ligne.
 
 ### Activation hors ligne :
 
-Si votre serveur n'a pas d'accès Internet :
+Si votre serveur n'a pas accès à Internet :
 
 * Sélectionnez **Activate installation offline** dans le License Wizard
-* Suivez les instructions guidées pour compléter l'activation manuellement
+* Suivez les instructions guidées pour terminer l'activation manuellement
 
-[Cliquez ici pour ouvrir l'article Zendesk de Net Display Systems pour l'activation hors ligne](#)
+[Click here to open the Net Display Systems Zendesk article for offline activation](#)
 
 ***
 
-## Meilleures pratiques et recommandations
+## Bonnes pratiques et recommandations
 
-* **PADS4 cessera de fonctionner** après 7 jours si la réactivation n'est pas effectuée.
-* Si vous utilisez une **machine virtuelle**, assurez-vous que **l'adresse MAC est fixe** pour éviter des changements matériels involontaires.
-* Évitez d'activer ou de partager des **périphériques Bluetooth** sur des machines virtuelles, car cela pourrait déclencher une détection de changement matériel.
-* Utilisez des **alertes par e-mail** via the PADS4 Agent pour rester informé des exigences de réactivation en attente.
+* **PADS4 will stop working** après 7 jours si la réactivation n'est pas effectuée.
+* Si vous utilisez une **virtual machine**, assurez-vous que l'**MAC address is fixed** pour éviter des changements matériels involontaires.
+* Évitez d'activer ou de partager des **Bluetooth devices** sur les machines virtuelles, car cela peut déclencher une détection de changement matériel.
+* Utilisez des **email alerts** via le PADS4 Agent pour rester informé des exigences de réactivation à venir.
 
 ***
 
@@ -66,10 +66,10 @@ Si votre serveur n'a pas d'accès Internet :
 
 PADS4 compare plusieurs identifiants matériels aux données d'activation d'origine. Si l'un des éléments suivants change, une réactivation peut être nécessaire :
 
-* Système d'exploitation
-* ID du processeur
-* Date d'installation du système d'exploitation
-* Numéro de série du système d'exploitation
-* Numéro de série et version du BIOS
-* Adaptateur réseau et adresse MAC
-* Code d'activation Windows
+* Operating System
+* Processor ID
+* OS Installation Date
+* OS Serial Number
+* BIOS Serial Number and Version
+* Network Adapter and MAC Address
+* Windows Activation Code
