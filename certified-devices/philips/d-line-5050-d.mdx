@@ -1,10 +1,10 @@
 ---
-title: "D-line 5050D"
+title: "5050D-Series"
 ---
 
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **Philips D-line (5050D) displays**.
+This guide gives step‑by‑step instructions for installing and configuring PADS4 Viewer on Philips 5050D series displays.
 
-## **First-Time Use**
+## **Prepare the 5050D**
 
 Before installation, ensure that the **PADS4 Server is set up and configured properly**.
 
@@ -16,98 +16,72 @@ When turning on the device for the first time, the **Configuration Wizard** will
 
 ### **Resetting the Device**
 
-If the device was previously used, perform a **factory reset** to clear storage and prevent software conflicts.
+If the device has been used before, perform a factory reset to clear the storage and avoid software conflicts. 
 
-<Steps>
-  <Step title="Step One">
-    Open the **Android Menu** by pressing **Home**, followed by **1 8 8 8** on the **Philips remote control**.
-  </Step>
-  <Step title="Step Two">
-    Open **Settings**.
-  </Step>
-  <Step title="Step Three">
-    Select **System Tools → Factory Reset**.
-  </Step>
-  <Step title="Step Four">
-    Click on **Factory Reset** and confirm by pressing **OK**.
-  </Step>
-</Steps>
+1. On the Philips remote control, press **Home**, then **1 8 8 8** to open the Android Menu.
+2. Open **Settings**, then select **System Tools → Factory Reset**. 
+3. Confirm by clicking **Factory Reset** and pressing **OK**.
 
-After resetting, the **Welcome Screen** will appear. Follow the steps in **Configuring the Device**.
+After the reset, the **Welcome Screen** appears. Continue with the steps in **Configuring the Device**.
 
 ### **Configuring the Device**
 
-<Steps>
-  <Step title="Step One">
-    On the **Welcome Screen**, select your preferred **language** and click **Start**.
-  </Step>
-  <Step title="Step Two">
-    On the **Security Settings** screen, ensure **SICP Network Port** is **enabled**. _(Other settings can be enabled or disabled as required.)_
-  </Step>
-  <Step title="Step Three">
-    On the **Network Settings** screen, select and configure the **network type**.
-  </Step>
-  <Step title="Step Four">
-    On the **Signage Display Settings** screen, press **Skip**.
-  </Step>
-  <Step title="Step Five">
-    On the **Clone Media Files** screen, press **Skip**.
-  </Step>
-  <Step title="Step Six">
-    Press **Finish** to complete the setup.
-  </Step>
-</Steps>
-
-## **Installing PADS4 Viewer**
-
-Follow these steps to install the **PADS4 Viewer** on **Philips D-line (5050D)**.
+1. On the **Welcome Screen**, select your preferred **language** and click **Start**.
+2. On the **Security Settings** screen, ensure **SICP Network Port** is **enabled**. _(Other settings can be enabled or disabled as required.)_
+3. On the **Network Settings** screen, select and configure the **network type**.
+4. On the **Signage Display Settings** screen, press **Skip**.
+5. On the **Clone Media Files** screen, press **Skip**.
+6. Press **Finish** to complete the setup.
 
 ### **Checking Device Firmware**
 
 Ensure the **correct firmware version** is installed for full **PADS4 Viewer** functionality.
 
-<Steps>
-  <Step title="Step One">
-    Open the **Android Menu** by pressing **Home 1 8 8 8**.
-  </Step>
-  <Step title="Step Two">
-    Open **Settings**.
-  </Step>
-  <Step title="Step Three">
-    Select **About**.
-  </Step>
-  <Step title="Step Four">
-    Ensure the **Build Number** is **FB01.05** _(required for PADS4)_.
-  </Step>
-</Steps>
+1. Open the Android Menu by pressing Home 1 8 8 8.
+2. Open Settings → Select About.
+3. Ensure the Build Number is FB01.05 _(required for PADS4)_.
+
+## **Installing PADS4 Viewer**
+
+Follow these steps to install PADS4 Viewer on Philips D-line (5050D) displays.
 
 ### **Installing PADS4Philips from USB Stick**
 
-The **PADS4Philips.apk** file can be found on the **PADS4 Server** in:
+The PADS4Philip**s.apk** file can be found on the **PADS4 Server** in:
 
-```
+```text
 https://[PADS4Server]/pads4/apps
 ```
 
-#### **Installation Steps**
+### **Installation Steps**
 
-<Steps>
-  <Step title="Step One">
-    Copy the **PADS4Philips.apk** file onto a **USB stick**.
-  </Step>
-  <Step title="Step Two">
-    Insert the **USB stick** into the **Philips D-line device**.
-  </Step>
-  <Step title="Step Three">
-    Open the **Android Menu** by pressing **Home 1 8 8 8**.
-  </Step>
-  <Step title="Step Four">
-    Select **Apps → File Manager**.
-  </Step>
-  <Step title="Step Five">
-    Open **mnt → usb_storage** and select **PADS4Philips.apk**.
-  </Step>
-  <Step title="Step Six">
-    Select **Install** and then **Open** the app.
-  </Step>
-</Steps>
+1. Copy the  **PADS4Philips.apk** file onto a **USB stick.**
+2. Insert the **USB stick** into the **Philips D-line device**.
+3. Open the **Android Menu** by pressing **Home 1 8 8 8**.
+4. Goto the Apps → Settings → Security → More Security Setting
+5. Enable Unknow Source
+6. Go back to the App screen
+7. Go to File Manager and select our USB stick
+8. Open the **PADS4Philips.apk and click install**
+9. **Click on DONE**
+
+### To configure PADS4 to start automatically on the display:
+
+1. Navigate to **Settings → Signage Display → Source Settings → Custom Apps**.
+2. Select **PADS4** from the list of available applications.
+3. Enable the option **Force Restart Custom App**.
+4. Restart the screen to apply the changes.
+
+### Configure the Screen
+
+When the device is restarted you will see the PADS4 Viewer.
+
+1. Enter the **Server URL** in the format [https://PADS4server/domain](https://servername/domain) 
+2. Fill in the **ViewerName** as required.
+3. Click **Start** to connect.
+
+The PADS4 viewer is now connected and ready for use.
+
+<Note>
+  You may see a message indicating that PADS4 is incompatible with this version of Android. This is due to the screen running a newer Android version. You can safely acknowledge and ignore this message. PADS4 is compatible with Android 14, and this warning will be resolved in a future release.
+</Note>
