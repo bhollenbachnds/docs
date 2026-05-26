@@ -1,0 +1,45 @@
+---
+title: "Introduction"
+---
+
+This document guides through the installation of BonVoy Visitor Journey Management solution that is an add-on solution to the PADS4 CMS and Workspace solution.
+
+## BonVoy Prerequisites
+
+### Minimum Requirements for BonVoy VMS Server
+
+- Windows Server 2019 / 2022 or Windows 10/11
+- IIS 10 or above
+- Microsoft SQL Server 2019 or above 
+- .NET 8 Hosting Bundle 
+- SQLCMD utility installed
+- Minimum 8 GB RAM and 20 GB free disk space
+
+### PADS4 Prerequisites
+
+- PADS4 CMS / Workspace should already be installed and accessible.
+- PADS4 API URL and credentials should be available. 
+- Required PADS4 user should have Admin and VMS access permissions.
+- Ensure the PADS4 API port (80 / 88) is accessible from the BonVoy server.
+- Disable Mail alert from PADS4 while meeting booking.
+
+### Required Ports
+
+- IIS Website Port : 4435
+- SQL Server Port : 1433
+- PADS4 API Port : 80 / 88 
+- HTTPS Port : 443
+
+### Antivirus Exceptions
+
+Exclude the following folders from antivirus real-time scanning:
+
+- C:\\inetpub\\Bonvoy
+- C:\\Program Files\\Bonvoy 
+- C:\\ProgramData\\Bonvoy
+
+Exclude the following processes from antivirus scanning:
+
+- w3wp.exe
+- dotnet.exe
+- VisitorJourneyWorkerService.exe

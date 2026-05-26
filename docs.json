@@ -1389,6 +1389,29 @@
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json"
               }
             ]
+          },
+          {
+            "dropdown": "Add-ons",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Finessetech",
+                "pages": [
+                  {
+                    "group": "BonVoy VMS",
+                    "pages": [
+                      {
+                        "group": "Installation Manual",
+                        "pages": [
+                          "introduction-1",
+                          "installation"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
