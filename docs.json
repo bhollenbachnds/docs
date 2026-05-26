@@ -265,7 +265,7 @@
             "pages": [
               "ctrl-centre/untitled-page",
               {
-                "group": "Using PADS4 Super Users",
+                "group": "Introduction to PADS4 Super User",
                 "pages": [
                   "ctrl-centre/user-interface",
                   "ctrl-centre/diagnostics",
@@ -284,7 +284,6 @@
               {
                 "group": "User Applications",
                 "pages": [
-                  "ctrl-centre/dashboard",
                   "ctrl-centre/content",
                   "ctrl-centre/schedules",
                   {
@@ -350,7 +349,8 @@
                       }
                     ]
                   },
-                  "ctrl-centre/designer"
+                  "ctrl-centre/designer",
+                  "ctrl-centre/dashboard"
                 ]
               },
               {
