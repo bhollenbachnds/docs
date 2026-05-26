@@ -1,0 +1,57 @@
+---
+- title: Installation de BONVOY VMS
+---
+
+Téléchargez le package d'installation BonVoy VMS depuis Finessetech ou recevez-le de la part du partenaire d'implémentation agréé. Exécutez le programme d'installation en tant qu'Administrateur.
+
+## **Écran du programme d'installation – Sélectionner l'emplacement de destination**
+
+Cet écran permet à l'utilisateur de sélectionner le répertoire d'installation de BonVoy VMS.
+
+<Frame>
+  ![File Location](/images/Addons/Finessetech/BonvoyVMS/FileLocation.jpeg)
+</Frame>
+
+* Chemin d'installation – Spécifie l'emplacement où les fichiers BonVoy VMS seront installés.
+
+<Check>
+  Conservez le chemin d'installation par défaut, sauf si le client dispose d'un lecteur d'application dédié.
+</Check>
+
+Cliquez sur Suivant pour continuer l'installation.
+
+## Écran du programme d'installation – Configuration de SQL Server
+
+**Cet écran configure la connexion SQL Server requise pour BonVoy VMS**
+
+<Frame>
+  ![Installer SQL Server](/images/Addons/Finessetech/BonvoyVMS/Installer-SQLServer.png)
+</Frame>
+
+* **SQL Server**: Spécifie le nom de l'instance SQL Server, par exemple `localhost`, `localhost\SQLEXPRESS`, ou `SERVERNAME\INSTANCE`
+* **Nom d'utilisateur**: Spécifie le nom d'utilisateur pour l'authentification SQL.
+* **Mot de passe**: Spécifie le mot de passe pour l'authentification SQL.\\
+
+<Check>
+  L'utilisateur SQL doit avoir la permission de créer ou de mettre à jour la base de données BonVoy.
+</Check>
+
+Cliquez sur Tester la connexion et assurez-vous que la connexion réussit avant de continuer.
+
+Cliquez sur Suivant
+
+## Écran du programme d'installation – Paramètres PADS4 / VMS
+
+Cet écran est utilisé pour configurer l'intégration entre BonVoy et le CMS PADS4.
+
+<Frame>
+  ![Installer PADS4 VMS Setting](/images/Addons/Finessetech/BonVoyVMS/Installer-PADS4-VMSSetting.png)
+</Frame>
+
+* **URL racine de l'API PADS4**: L'URL du serveur PADS4.
+* **Nom d'utilisateur**: Un compte utilisateur PADS4 avec accès **Admin** et **VMS**.
+* **Mot de passe**: Le mot de passe du compte utilisateur PADS4.
+* **URL du serveur BonVoy**: L'URL où l'application web BonVoy est hébergée.
+* **Port du serveur BonVoy**: Le port de l'application IIS utilisé par le serveur BonVoy.
+
+Cliquez sur Suivant
