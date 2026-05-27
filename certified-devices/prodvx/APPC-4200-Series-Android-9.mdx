@@ -1,6 +1,8 @@
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX APPC-4200 series** devices running **Android 9**.
-
 ---
+title: "ABPC-4200-Series"
+---
+
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX APPC-4200 series** devices running **Android 9**.
 
 ## **Before You Start**
 
@@ -8,16 +10,14 @@ This guide provides step-by-step instructions for **installing and configuring P
 
 The following **ProDVX APPC-4200 series** devices are supported:
 
-- **APPC-4200**
-- **APPC-4220**
+- **APPC-4200 (Android 9)**
+- ABPC-4220 (Android 13)
 
 <Warning>
   **_Important: The network settings are disabled by default on these devices._**
 
   - Before proceeding with installation, **enable Wi-Fi and/or Ethernet** in the **Android settings**.
 </Warning>
-
----
 
 ## **Minimum Requirements**
 
@@ -31,19 +31,19 @@ Before installation, ensure your **PADS4 Server** is running **PADS4 version 202
 
 ### **PADS4ProDVX Version**
 
-The **minimum PADS4ProDVX version supporting the APPC-4200 Series** is **PADS4ProDVX 2.0**.
+The **minimum PADS4ProDVX version supporting the APPC-4200 Series** is \
+PADS4ProDVXv2.apk.
 
 ### **Firmware Requirements**
 
 The device must meet the following **firmware requirements**:
 
-| **Kernel** | **Android Version** | **Build**                                              |
-| ---------- | ------------------- | ------------------------------------------------------ |
-| 4.4.167    | 9                   | ABPC-4200.ProDVX.HDMI-1080p-HDMI.V-C0.2.00.13i.2021118 |
+| **Android Version** | **Build** |
+| --- | --- |
+| 9 | ABPC-4200.ProDVX.HDMI-1080p-HDMI.V-C0.2.00.13i.2021118 |
+| 13 | ABPC-4200-series.ProDVX\_013.A26\_03 |
 
 **Firmware updates** can be requested from your **ProDVX dealer**.
-
----
 
 ## **Resetting the Device**
 
@@ -73,24 +73,20 @@ If your device was used before, it is **recommended** to **factory reset** the d
 </Steps>
 
 <Note>
-   The device will automatically restart after the reset is complete.
+  The device will automatically restart after the reset is complete.
 </Note>
-
----
 
 ## **Installing PADS4 Viewer**
 
 Follow the steps below to install and configure **PADS4 Viewer** on your **ProDVX APPC-4200 Series** device.
 
----
-
 ### **Step 1: Install PADS4ProDVX from USB Stick**
 
-**The PADS4ProDVX.apk is available in:**
+**The PADS4ProDVXv2.apk is available in:**
 
 **PADS4 Server Directory:**
 
-```
+```text
 C:\Program Files\PADS4\Clients\Apps
 ```
 
@@ -99,13 +95,11 @@ C:\Program Files\PADS4\Clients\Apps
 
 **Important:** If you download a newer version, **place it in the apps directory** on the **PADS4 Server** to ensure correct installation.
 
----
-
 #### **Installation Steps**
 
 <Steps>
   <Step title="Step One">
-    Copy **PADS4ProDVX.apk** to a **USB stick**.
+    Copy PADS4ProDVXv2.apk to a **USB stick**.
   </Step>
   <Step title="Step Two">
     Insert the **USB stick** into the **ProDVX device**.
@@ -114,7 +108,7 @@ C:\Program Files\PADS4\Clients\Apps
     Open the **Apk Installer app** and allow **access to external storage** if prompted.
   </Step>
   <Step title="Step Four">
-    Browse the USB stick and select **PADS4ProDVX.apk**.
+    Browse the USB stick and select PADS4ProDVXv2.apk.
   </Step>
   <Step title="Step Five">
     If prompted, **enable installation from unknown sources**, then return and select the apk again.
@@ -123,46 +117,21 @@ C:\Program Files\PADS4\Clients\Apps
     Press **Install** when prompted.
   </Step>
   <Step title="Step Seven">
-    Click **Open** once installation is complete.
+    Click **Done **once installation is complete.
   </Step>
 </Steps>
-
----
-
-### **Step 2: Validate Date & Time Configuration**
-
-**Incorrect date & time settings** may cause **certificate errors** or **connection issues**.
-
-#### **Steps to Validate Date & Time**
-
-<Steps>
-  <Step title="Step One">
-    Open **PADS4ProDVX** and navigate to **System Settings**.
-  </Step>
-  <Step title="Step Two">
-    Go to the **Date & Time** menu.
-  </Step>
-  <Step title="Step Three">
-    Configure **date & time** correctly. _(Enable Auto Sync if available.)_
-  </Step>
-  <Step title="Step Four">
-    Return to the **PADS4ProDVX Launcher**.
-  </Step>
-</Steps>
-
----
 
 ### **Step 3: Connecting to PADS4 Server**
 
 **Format:**
 
-```
+```text
 <protocol>://<host>:<port>/<hostpath>/
 ```
 
 **Example:**
 
-```
+```text
 http://localhost/pads4
 ```
 
@@ -195,33 +164,37 @@ http://localhost/pads4
 
 ### **General Features**
 
-| Feature | Description                                                                                                |
-| :-----: | ---------------------------------------------------------------------------------------------------------- |
-| ✅       | **Automatic PADS4 Software Updates** – The **PADS4 Viewer** will update automatically.                     |
-| ✅       | **Offline Mode** – The device will continue playing **scheduled presentations** for **7 days** if offline. |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Automatic PADS4 Software Updates** – The **PADS4 Viewer** will update automatically. |
+| ✅ | **Offline Mode** – The device will continue playing **scheduled presentations** for **7 days** if offline. |
 
 ### **Storage & Hardware Capabilities**
 
-| Feature | Description                                          |
-| :-----: | ---------------------------------------------------- |
-| ✅       | **Supports Android 9** – Required for compatibility. |
-| ❌       | **Wake-on-LAN** – Not supported.                     |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Supports Android 9** – Required for compatibility. |
+| ❌ | **Wake-on-LAN** – Not supported. |
 
 ### **Data & Content Support**
 
-| Feature | Description                                                                     |
-| :-----: | ------------------------------------------------------------------------------- |
-| ✅       | **Real-time Data Providers** – Supports integration with external data sources. |
-| ✅       | **Video, Images, Text, Tables, and Interactive Elements** – Supported.          |
-| ❌       | **Streaming & Flash Content** – Not supported.                                  |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Real-time Data Providers** – Supports integration with external data sources. |
+| ✅ | **Video, Images, Text, Tables, and Interactive Elements** – Supported. |
+| ❌ | **Streaming & Flash Content – Not supported.** |
+
+<Tip>
+  The output is limited to Full HD to ensure smooth playback. Make sure to configure this setting under Display in the Android menu
+</Tip>
 
 ### **Device Management**
 
-| Feature | Description                                 |
-| :-----: | ------------------------------------------- |
-| ✅       | **Remote Management via PADS4 CTRL Center** |
-| ✅       | **Connection State Monitoring & Alerts**    |
-| ❌       | **Shutdown & Wake-on-LAN** – Not supported. |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Remote Management via PADS4 CTRL Center** |
+| ✅ | **Connection State Monitoring & Alerts** |
+| ❌ | **Shutdown & Wake-on-LAN** – Not supported. |
 
 ---
 
