@@ -4,7 +4,7 @@ title: "BONVOY VMS Installation"
 
 Download the BonVoy VMS Installer package from Finessetech or receive it from the authorized implementation partner. Run the installer as Administrator.
 
-## **Installer Screen – Select Destination Location**
+### **Select Destination Location**
 
 This screen allows the user to select the installation directory for BonVoy VMS.
 
@@ -20,7 +20,7 @@ This screen allows the user to select the installation directory for BonVoy VMS.
 
 Click Next to continue installation.
 
-## Installer Screen – SQL Server Setup
+### SQL Server Setup
 
 **This screen configures the SQL Server connection required for BonVoy VMS**
 
@@ -40,7 +40,7 @@ Click Test Connection and ensure the connection succeeds before proceeding.
 
 Click on Next 
 
-## Installer Screen – PADS4 / VMS Settings
+### PADS4 / VMS Settings
 
 This screen is used to configure the integration between BonVoy and the PADS4 CMS.
 
@@ -55,3 +55,47 @@ This screen is used to configure the integration between BonVoy and the PADS4 CM
 - **BonVoy Server Port**: The IIS application port used by the BonVoy server.
 
 Click on next 
+
+### Ready to Install
+
+This screen shows the installation prompt.
+
+<Frame>
+  ![Installer Ready](/images/AddOns/Finessetech/BonvoyVMS/Installer-Ready.png)
+</Frame>
+
+Click on Install
+
+### Installation Progress
+
+This screen shows the installation progress.
+
+<Frame>
+  ![Installer Progress](/images/Addons/Finessetech/BonVoyVMS/Installer-Progress.png)
+</Frame>
+
+During the installation process, the installer automatically performs the following actions:
+
+- Configures the IIS website and application pool
+- Creates the BonVoy database
+- Restores the required database objects
+- Configures application settings
+- Installs and starts the Windows Service
+
+### Installation Complete
+
+<Frame>
+  ![Installer Complete](/images/Addons/Finessetech/BonVoyCMS/Installer-Complete.png)
+</Frame>
+
+Check the box and click **Finish** to open the application in your browser.
+
+## License Activation
+
+**After successful installation:**
+
+1. Open the BonVoy application in your browser.
+2. Navigate to the **License Activation** page.
+3. Upload the provided public key XML file.
+4. Upload the BonVoy license file.
+5. Click **Activate**.
