@@ -284,8 +284,74 @@
               {
                 "group": "User Applications",
                 "pages": [
-                  "ctrl-centre/content",
-                  "ctrl-centre/schedules",
+                  {
+                    "group": "Home",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "Dashboard",
+                    "pages": [
+                      "ctrl-centre/dashboard"
+                    ]
+                  },
+                  {
+                    "group": "Content",
+                    "pages": [
+                      "ctrl-centre/content"
+                    ]
+                  },
+                  {
+                    "group": "Design",
+                    "hidden": true,
+                    "pages": [
+                      "ctrl-centre/designer"
+                    ]
+                  },
+                  {
+                    "group": "CMS 2.0",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "FIDS",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "Schedules",
+                    "pages": [
+                      "ctrl-centre/schedules"
+                    ]
+                  },
+                  {
+                    "group": "IoT",
+                    "pages": [
+                      "ctrl-centre/sensors",
+                      "ctrl-centre/incidents",
+                      "ctrl-centre/sensors/How-to-use-Sensors",
+                      "ctrl-centre/sensors/How-to-create-Incidents",
+                      "ctrl-centre/sensors/workspace/sensors-workspace",
+                      "ctrl-centre/sensors/Sensor-Settings",
+                      {
+                        "group": "Certified Sensors",
+                        "pages": [
+                          "ctrl-centre/sensors/certified-sensors/Certified-Sensors",
+                          "ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
+                          "ctrl-centre/sensors/certified-sensors/Mobotix",
+                          "ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
+                          "ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
+                        ]
+                      },
+                      {
+                        "group": "Gateways",
+                        "pages": [
+                          "ctrl-centre/sensors/gateway/philips-hue",
+                          "ctrl-centre/sensors/gateway/gateway-proxy"
+                        ]
+                      }
+                    ]
+                  },
                   {
                     "group": "Viewers",
                     "pages": [
@@ -312,45 +378,9 @@
                     ]
                   },
                   {
-                    "group": "IoT",
-                    "pages": [
-                      "ctrl-centre/sensors",
-                      "ctrl-centre/incidents"
-                    ]
-                  },
-                  {
                     "group": "Workspace",
-                    "pages": [
-                      "ctrl-centre/sensors/workspace/sensors-workspace"
-                    ]
-                  },
-                  {
-                    "group": "Sensors & IoT",
-                    "pages": [
-                      "ctrl-centre/sensors/How-to-use-Sensors",
-                      "ctrl-centre/sensors/How-to-create-Incidents",
-                      "ctrl-centre/sensors/Sensor-Settings",
-                      {
-                        "group": "Gateways",
-                        "pages": [
-                          "ctrl-centre/sensors/gateway/philips-hue",
-                          "ctrl-centre/sensors/gateway/gateway-proxy"
-                        ]
-                      },
-                      {
-                        "group": "Certified Sensors",
-                        "pages": [
-                          "ctrl-centre/sensors/certified-sensors/Certified-Sensors",
-                          "ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
-                          "ctrl-centre/sensors/certified-sensors/Mobotix",
-                          "ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
-                          "ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
-                        ]
-                      }
-                    ]
-                  },
-                  "ctrl-centre/designer",
-                  "ctrl-centre/dashboard"
+                    "pages": []
+                  }
                 ]
               },
               {
@@ -372,7 +402,17 @@
                       }
                     ]
                   },
-                  "ctrl-centre/licenses",
+                  {
+                    "group": "FIDS Connector",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "Licenses",
+                    "pages": [
+                      "ctrl-centre/licenses"
+                    ]
+                  },
                   {
                     "group": "Users",
                     "pages": [
@@ -398,6 +438,16 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "group": "Workspace Administrator",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "CMS 1.0 Administrator",
+                    "hidden": true,
+                    "pages": []
                   },
                   {
                     "group": "Config",
