@@ -1182,69 +1182,90 @@
                 ]
               },
               {
-                "group": "Workspace Web Application",
+                "group": "User Applications",
                 "pages": [
-                  "modules/workspace/workspace-web-application/introduction",
-                  "modules/workspace/workspace-web-application/searching-for-a-space",
-                  "modules/workspace/workspace-web-application/booking-a-space",
-                  "modules/workspace/workspace-web-application/booking-a-common-space",
-                  "modules/workspace/workspace-web-application/booking-a-group-workspace",
-                  "modules/workspace/workspace-web-application/declaring-remote-work",
-                  "modules/workspace/workspace-web-application/reporting-absence",
-                  "modules/workspace/workspace-web-application/my-calendar",
-                  "modules/workspace/workspace-web-application/searching-for-colleagues",
-                  "modules/workspace/workspace-web-application/special-cases",
-                  "modules/workspace/workspace-web-application/account-settings",
-                  "modules/workspace/workspace-web-application/logging-out",
-                  "modules/workspace/workspace-web-application/appendices"
-                ]
-              },
-              {
-                "group": "Workspace Mobile Application",
-                "pages": [
-                  "modules/workspace/workspace-mobile-application/introduction",
-                  "modules/workspace/workspace-mobile-application/installation"
-                ]
-              },
-              {
-                "group": "Workspace Outlook Plugin",
-                "pages": [
-                  "modules/workspace/workspace-outlook-plugin/introduction",
-                  "modules/workspace/workspace-outlook-plugin/configuration"
-                ]
-              },
-              {
-                "group": "Workspace Administration",
-                "pages": [
-                  "modules/workspace/workspace-admin/introduction",
-                  "modules/workspace/workspace-admin/home",
-                  "modules/workspace/workspace-admin/rooms",
-                  "modules/workspace/workspace-admin/buildings",
-                  "modules/workspace/workspace-admin/room-profiles",
-                  "modules/workspace/workspace-admin/equipment",
-                  "modules/workspace/workspace-admin/defective-equipment",
-                  "modules/workspace/workspace-admin/users",
-                  "modules/workspace/workspace-admin/room-user-profile",
-                  "modules/workspace/workspace-admin/occupancy-sensors",
-                  "modules/workspace/workspace-admin/statistics",
-                  "modules/workspace/workspace-admin/additional-services",
-                  "modules/workspace/workspace-admin/extended-property",
-                  "modules/workspace/workspace-admin/welcome-message"
-                ]
-              },
-              {
-                "group": "Workspace CMS Administration",
-                "pages": [
-                  "modules/workspace/workspace-cms-admin/introduction",
-                  "modules/workspace/workspace-cms-admin/users",
-                  "modules/workspace/workspace-cms-admin/profiles",
-                  "modules/workspace/workspace-cms-admin/plugins",
                   {
-                    "group": "SSO Configurations",
+                    "group": "Workspace Web Application",
                     "pages": [
-                      "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
-                      "modules/workspace/workspace-cms-admin/SSO/how-to-configure-Single-Sign-On-Azure-for-PADS4",
-                      "modules/workspace/workspace-cms-admin/SSO/ibm-security"
+                      "modules/workspace/workspace-web-application/introduction",
+                      "modules/workspace/workspace-web-application/searching-for-a-space",
+                      "modules/workspace/workspace-web-application/booking-a-space",
+                      "modules/workspace/workspace-web-application/booking-a-common-space",
+                      "modules/workspace/workspace-web-application/booking-a-group-workspace",
+                      "modules/workspace/workspace-web-application/declaring-remote-work",
+                      "modules/workspace/workspace-web-application/reporting-absence",
+                      "modules/workspace/workspace-web-application/my-calendar",
+                      "modules/workspace/workspace-web-application/searching-for-colleagues",
+                      "modules/workspace/workspace-web-application/special-cases",
+                      "modules/workspace/workspace-web-application/account-settings",
+                      "modules/workspace/workspace-web-application/logging-out",
+                      "modules/workspace/workspace-web-application/appendices"
+                    ]
+                  },
+                  {
+                    "group": "Workspace Mobile Application",
+                    "pages": [
+                      "modules/workspace/workspace-mobile-application/introduction",
+                      "modules/workspace/workspace-mobile-application/installation"
+                    ]
+                  },
+                  {
+                    "group": "Workspace Outlook Plugin",
+                    "pages": [
+                      "modules/workspace/workspace-outlook-plugin/introduction"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Administration",
+                "pages": [
+                  {
+                    "group": "CMS 1.0 Admin",
+                    "pages": [
+                      "modules/workspace/workspace-cms-admin/introduction",
+                      "modules/workspace/workspace-cms-admin/users",
+                      "modules/workspace/workspace-cms-admin/profiles",
+                      {
+                        "group": "SSO Configurations",
+                        "pages": [
+                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
+                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-Single-Sign-On-Azure-for-PADS4",
+                          "modules/workspace/workspace-cms-admin/SSO/ibm-security"
+                        ]
+                      },
+                      {
+                        "group": "Plugins",
+                        "pages": [
+                          "modules/workspace/workspace-cms-admin/plugins",
+                          "modules/workspace/workspace-cms-admin/untitled-page"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Workspace Administration",
+                    "pages": [
+                      "modules/workspace/workspace-admin/introduction",
+                      "modules/workspace/workspace-admin/home",
+                      "modules/workspace/workspace-admin/rooms",
+                      "modules/workspace/workspace-admin/buildings",
+                      "modules/workspace/workspace-admin/room-profiles",
+                      "modules/workspace/workspace-admin/equipment",
+                      "modules/workspace/workspace-admin/defective-equipment",
+                      "modules/workspace/workspace-admin/users",
+                      "modules/workspace/workspace-admin/room-user-profile",
+                      "modules/workspace/workspace-admin/occupancy-sensors",
+                      "modules/workspace/workspace-admin/statistics",
+                      "modules/workspace/workspace-admin/additional-services",
+                      "modules/workspace/workspace-admin/extended-property",
+                      "modules/workspace/workspace-admin/welcome-message"
+                    ]
+                  },
+                  {
+                    "group": "Workspace Outlook Plugin",
+                    "pages": [
+                      "modules/workspace/workspace-outlook-plugin/configuration"
                     ]
                   }
                 ]
