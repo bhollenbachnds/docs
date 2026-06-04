@@ -1,0 +1,34 @@
+---
+- title: Configuration de Canva
+---
+
+1. Ouvrez un navigateur web et accédez à [https://canva.com/developers](https://canva.com/developers).
+2. Connectez-vous avec votre compte Canva.
+3. Accédez à **Vos intégrations.**
+4. Cliquez sur **Créer une intégration**.
+   <Frame>
+     ![Screenshot 2026 06 03 131053](/images/DigitalSignage/Designer/Screenshot-2026-06-03-131053.png)
+   </Frame>
+5. Choisissez une intégration Publique ou Privée. Acceptez les Conditions d'utilisation pour les développeurs Canva et cliquez sur **Créer une intégration**.
+   <Frame>
+     ![Public Private](/images/DigitalSignage/Designer/PublicPrivate.png)
+   </Frame>
+6. Sur la page de configuration, entrez un nom pour l'intégration. Cliquez sur **Générer un secret**.
+   <Frame>
+     ![Configurate Integration](/images/DigitalSignage/Designer/ConfigurateIntegration.png)
+   </Frame>
+   <Warning>
+     Copiez le **Client ID** et le **Client Secret**, et conservez-les en lieu sûr. Ils sont nécessaires pour la configuration PADS4. Si le Client Secret est perdu, un nouveau doit être généré.
+   </Warning>
+7. Accédez à la section **Scopes** et activez les scopes requis indiqués ci-dessous.
+   <Frame>
+     ![Scopes](/images/DigitalSignage/Designer/Scopes.png)
+   </Frame>
+8. Accédez à la section **Authentication**. \
+   Définissez **URL1** to:\
+   https\://\<PADS4Server>/rdx/NDS.Services.Credentials/api/v1/credentials/canva/auth/callback/\
+   Remplacez `<PADS4Server>` par le nom d'hôte ou l'adresse IP de votre serveur PADS4.
+   <Frame>
+     ![Authentication](/images/DigitalSignage/Designer/Authentication.png)
+   </Frame>
+9. La configuration Canva est maintenant terminée. Procédez à la configuration de l'intégration dans PADS4 en utilisant les identifiants enregistrés.
