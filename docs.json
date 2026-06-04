@@ -399,6 +399,12 @@
                           "ctrl-centre/administration/smtp-oauth2/google",
                           "ctrl-centre/administration/smtp-oauth2/Microsoft"
                         ]
+                      },
+                      {
+                        "group": "Canva",
+                        "pages": [
+                          "pads-4-canva-integration"
+                        ]
                       }
                     ]
                   },
@@ -502,7 +508,7 @@
                         "group": "Configaration",
                         "pages": [
                           "canva-set-up",
-                          "pads-4-canva-integratie"
+                          "pads4-canva-integration"
                         ]
                       },
                       {
