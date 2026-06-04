@@ -390,9 +390,56 @@
                     "group": "Credentials",
                     "pages": [
                       "ctrl-centre/administration/credentials",
-                      "ctrl-centre/administration/teams",
-                      "ctrl-centre/administration/Power-BI",
-                      "ctrl-centre/administration/meta/create-meta-app",
+                      {
+                        "group": "Microsoft Teams",
+                        "pages": [
+                          "ctrl-centre/administration/teams"
+                        ]
+                      },
+                      {
+                        "group": "Microsoft PowerBI",
+                        "pages": [
+                          "ctrl-centre/administration/Power-BI"
+                        ]
+                      },
+                      {
+                        "group": "Identity",
+                        "pages": [
+                          {
+                            "group": "Microsoft Entra ID",
+                            "pages": [
+                              "ctrl-centre/administration/microsoft-entra-id",
+                              "ctrl-centre/administration/credentials/SCIM/microsoft-entra"
+                            ]
+                          },
+                          {
+                            "group": "Microsoft Active Directory",
+                            "pages": [
+                              "ctrl-centre/administration/credentials/active-directory"
+                            ]
+                          },
+                          {
+                            "group": "Okta",
+                            "pages": [
+                              "ctrl-centre/administration/credentials/Okta",
+                              "ctrl-centre/administration/credentials/SCIM/okta"
+                            ]
+                          },
+                          {
+                            "group": "Custom SAML 2.0",
+                            "pages": [
+                              "en/pads-4-ctrl-center/administration/identity/custom-saml-2-0",
+                              "ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "group": "Meta",
+                        "pages": [
+                          "ctrl-centre/administration/meta/create-meta-app"
+                        ]
+                      },
                       {
                         "group": "SMTP-Oauth2",
                         "pages": [
@@ -403,7 +450,16 @@
                       {
                         "group": "Canva",
                         "pages": [
+                          "canva-set-up-1",
                           "pads-4-canva-integration"
+                        ],
+                        "hidden": true
+                      },
+                      {
+                        "group": "Custom OAuth2",
+                        "hidden": true,
+                        "pages": [
+                          "ctrl-centre/administration/custom-o-auth2"
                         ]
                       }
                     ]
@@ -428,19 +484,7 @@
                       {
                         "group": "Identity",
                         "pages": [
-                          "ctrl-centre/administration/microsoft-entra-id",
-                          "ctrl-centre/administration/credentials/Okta",
-                          "en/pads-4-ctrl-center/administration/identity/custom-saml-2-0",
-                          "ctrl-centre/administration/credentials/active-directory",
-                          "ctrl-centre/administration/credentials/role-mapping",
-                          {
-                            "group": "SCIM Configuration",
-                            "pages": [
-                              "ctrl-centre/administration/credentials/SCIM/microsoft-entra",
-                              "ctrl-centre/administration/credentials/SCIM/okta",
-                              "ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
-                            ]
-                          }
+                          "ctrl-centre/administration/credentials/role-mapping"
                         ]
                       }
                     ]
