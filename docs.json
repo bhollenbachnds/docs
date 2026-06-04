@@ -490,6 +490,32 @@
                 ]
               },
               {
+                "group": "Designer (Web)",
+                "hidden": true,
+                "pages": [
+                  {
+                    "group": "Canva Integration",
+                    "hidden": true,
+                    "pages": [
+                      "introduction-2",
+                      {
+                        "group": "Configaration",
+                        "pages": [
+                          "canva-set-up",
+                          "pads-4-canva-integratie"
+                        ]
+                      },
+                      {
+                        "group": "Working with Canva integration",
+                        "pages": [
+                          "the-canva-library"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "group": "PADS4 Windows Applications",
                 "pages": [
                   "modules/digital-signage/introduction",
@@ -1273,43 +1299,6 @@
             ]
           },
           {
-            "dropdown": "FIDS",
-            "groups": [
-              {
-                "group": "Getting Started",
-                "pages": [
-                  "modules/fids/introduction",
-                  "modules/fids/installation",
-                  "modules/fids/Starting-the-FIDS-Operator",
-                  "modules/fids/server-settings",
-                  "modules/fids/setup-a-SQL-server-failover",
-                  {
-                    "group": "SQL Server",
-                    "pages": [
-                      "modules/fids/sql-server/Create-the-database-manually-with-Microsoft-SQL-Server-Management-Studio",
-                      "modules/fids/sql-server/Create-the-database-manually-with-Powershell",
-                      "modules/fids/sql-server/Create-the-database-manually-with-SQL-Statements"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "dropdown": "Visitor Management",
-            "pages": [
-              {
-                "group": "Getting Started",
-                "pages": [
-                  "modules/visitor-management/introduction",
-                  "modules/visitor-management/home-and-creating-users",
-                  "modules/visitor-management/archive",
-                  "modules/visitor-management/settings"
-                ]
-              }
-            ]
-          },
-          {
             "dropdown": "CMS 1.0",
             "groups": [
               {
@@ -1342,6 +1331,43 @@
                   "modules/legacy-cms/administration/add-a-display",
                   "modules/legacy-cms/administration/logout",
                   "modules/legacy-cms/administration/media-prerequisites"
+                ]
+              }
+            ]
+          },
+          {
+            "dropdown": "FIDS",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "modules/fids/introduction",
+                  "modules/fids/installation",
+                  "modules/fids/Starting-the-FIDS-Operator",
+                  "modules/fids/server-settings",
+                  "modules/fids/setup-a-SQL-server-failover",
+                  {
+                    "group": "SQL Server",
+                    "pages": [
+                      "modules/fids/sql-server/Create-the-database-manually-with-Microsoft-SQL-Server-Management-Studio",
+                      "modules/fids/sql-server/Create-the-database-manually-with-Powershell",
+                      "modules/fids/sql-server/Create-the-database-manually-with-SQL-Statements"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "dropdown": "Visitor Management",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "pages": [
+                  "modules/visitor-management/introduction",
+                  "modules/visitor-management/home-and-creating-users",
+                  "modules/visitor-management/archive",
+                  "modules/visitor-management/settings"
                 ]
               }
             ]
@@ -1462,7 +1488,7 @@
             ]
           },
           {
-            "dropdown": "Add-ons",
+            "dropdown": "Plug-ins",
             "hidden": true,
             "groups": [
               {
