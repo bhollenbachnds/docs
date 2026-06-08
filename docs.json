@@ -443,8 +443,19 @@
                       {
                         "group": "SMTP-Oauth2",
                         "pages": [
-                          "ctrl-centre/administration/smtp-oauth2/google",
-                          "ctrl-centre/administration/smtp-oauth2/Microsoft"
+                          {
+                            "group": "Google",
+                            "pages": [
+                              "ctrl-centre/administration/smtp-oauth2/google",
+                              "ctrl-centre/administration/smtp-oauth2/set-up-google-pads-4"
+                            ]
+                          },
+                          {
+                            "group": "Microsoft",
+                            "pages": [
+                              "ctrl-centre/administration/smtp-oauth2/Microsoft"
+                            ]
+                          }
                         ]
                       },
                       {

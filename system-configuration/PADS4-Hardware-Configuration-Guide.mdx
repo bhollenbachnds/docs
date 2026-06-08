@@ -10,12 +10,12 @@ Hardware needs vary based on system purpose—static content requires fewer reso
 
 Requirements scale with the number of Viewers. Use Backup and Sub-Servers for systems over 1000 Viewers; contact [support@pads4.com](mailto:support@pads4.com) for guidance.
 
-| Viewer quantity | CPU      | Memory | Application storage | Content storage | OS                                   | Data server max. quantity |
-| --------------- | -------- | ------ | ------------------- | --------------- | ------------------------------------ | ------------------------- |
-| 1 - 100         | 4 cores  | 16Gb   | 2Gb                 | 16Gb            | Windows Server 2019, 64bit and above | 25                        |
-| 100 - 500       | 8 cores  | 16Gb   | 2Gb                 | 64Gb            | Windows Server 2019, 64bit and above | 25                        |
-| 500             | 8 cores  | 24Gb   | 2Gb                 | 64Gb            | Windows Server 2019, 64bit and above | 100                       |
-| 1000\*          | 16 cores | 32Gb   | 2Gb                 | 256Gb           | Windows Server 2019, 64bit and above | 200                       |
+| Viewer quantity | CPU | Memory | Application storage | Content storage | OS | Data server max. quantity |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 - 100 | 4 cores | 16Gb | 2Gb | 16Gb | Windows Server 2019, 64bit and above | 25 |
+| 100 - 500 | 8 cores | 16Gb | 2Gb | 64Gb | Windows Server 2019, 64bit and above | 25 |
+| 500 | 8 cores | 24Gb | 2Gb | 64Gb | Windows Server 2019, 64bit and above | 100 |
+| 1000\* | 16 cores | 32Gb | 2Gb | 256Gb | Windows Server 2019, 64bit and above | 200 |
 
 \*For \>1000 Viewers, strongly recommend Backup/Sub-Servers.
 
@@ -23,22 +23,22 @@ Requirements scale with the number of Viewers. Use Backup and Sub-Servers for sy
 
 Follow these guidelines for optimal PADS4 performance during configuration and operation.
 
-| Component           | Description                                                                                                                                     |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Disk                | Use SSDs to speed up content synchronization, which heavily impacts server performance.                                                         |
-| Virus scanners      | Exclude PADS4 folders from scanning to avoid slowdowns in content sync and processes.                                                           |
-| Virtual Server      | Assign a static MAC address; dynamic ones disrupt licensing during restarts.                                                                    |
-| Network             | Ensure stable 100 Mbps+ (1 Gbps preferred) for best results.                                                                                    |
-| Content storage     | Size depends on needs; SSDs boost server and Viewer speed. Resize 4K media to Full HD specs for HD displays to cut bandwidth and playback load. |
-| Content permissions | Limit sync to relevant Viewer/User groups to reduce unnecessary transfers.                                                                      |
-| Data Server         | Retrieve only needed data (limit rows/columns); avoid tiny read intervals unless data changes in real time to save CPU and bandwidth.           |
+| Component | Description |
+| --- | --- |
+| Disk | Use SSDs to speed up content synchronization, which heavily impacts server performance. |
+| Virus scanners | Exclude PADS4 folders from scanning to avoid slowdowns in content sync and processes. |
+| Virtual Server | Assign a static MAC address; dynamic ones disrupt licensing during restarts. |
+| Network | Ensure stable 100 Mbps\+ (1 Gbps preferred) for best results. |
+| Content storage | Size depends on needs; SSDs boost server and Viewer speed. Resize 4K media to Full HD specs for HD displays to cut bandwidth and playback load. |
+| Content permissions | Limit sync to relevant Viewer/User groups to reduce unnecessary transfers. |
+| Data Server | Retrieve only needed data (limit rows/columns); avoid tiny read intervals unless data changes in real time to save CPU and bandwidth. |
 
 ## PADS4 Viewer hardware requirements
 
 Below table are the specifications for the PADS4 viewers and viewer types.
 
-| Viewer type                        | CPU     | RAM | App storage | Content storage | OS               | Data providers |
-| ---------------------------------- | ------- | --- | ----------- | --------------- | ---------------- | -------------- |
-| Windows Viewer - (minimum specs)   | 2 cores | 2Gb | 2Gb         | 16Gb            | Windows 10 64bit | 25             |
-| Windows Viewer (recommended specs) | 4 cores | 4Gb | 2Gb         | 128Gb           | Windows 10 64bit | 50             |
-| Android Viewer (recommended specs) | NA      | 4Gb | 1Gb         | 4Gb             | Android          | NA             |
+| Viewer type | CPU | RAM | App storage | Content storage | OS | Data providers |
+| --- | --- | --- | --- | --- | --- | --- |
+| Windows Viewer (minimum specs) | 2 cores (x64) | 2Gb | 2Gb | 16Gb | Windows 10 64bit | 25 |
+| Windows Viewer (recommended specs) | 4 cores (x64) | 4Gb | 2Gb | 128Gb | Windows 10 64bit | 50 |
+| Android Viewer (recommended specs) | NA | 4Gb | 1Gb | 4Gb | Android | NA |
