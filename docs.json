@@ -513,7 +513,22 @@
                   {
                     "group": "Config",
                     "pages": [
-                      "ctrl-centre/administration/config/smtp"
+                      {
+                        "group": "SMTP",
+                        "pages": [
+                          "ctrl-centre/administration/config/smtp"
+                        ]
+                      },
+                      {
+                        "group": "Multi Factor Authentication",
+                        "hidden": true,
+                        "pages": [
+                          "enable-multi-factor-authentication",
+                          "reset-the-multi-factor-authentication",
+                          "log-in-with-mfa",
+                          "log-in-with"
+                        ]
+                      }
                     ]
                   }
                 ]
