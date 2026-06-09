@@ -1,5 +1,5 @@
 ---
-title: "D-Line 4450D"
+title: "D-Line 4550D"
 ---
 
 This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **Philips D-line (4550D) displays**.
@@ -106,7 +106,7 @@ To update the **firmware**, follow the **Philips instructions**:
 
 The **PADS4Philips.apk** file can be found on the **PADS4 Server** in:
 
-```
+```text
 C:\Program Files\PADS4\Foundation\Apps
 ```
 
@@ -128,7 +128,7 @@ Alternatively, download the latest version from [**this link**](http://go.pads4.
     Select **Apps → File Manager**.
   </Step>
   <Step title="Step Five">
-    Open **mnt → usb_storage** and select **PADS4Philips.apk**.
+    Open **mnt → usb\_storage** and select **PADS4Philips.apk**.
   </Step>
   <Step title="Step Six">
     Select **Install** and then **Open** the app.
@@ -139,29 +139,29 @@ Alternatively, download the latest version from [**this link**](http://go.pads4.
 
 ## **3. Supported Features & Limitations**
 
-| Feature | Description                                                                             |
-| :-----: | --------------------------------------------------------------------------------------- |
-| ✅       | **Automatic Software Updates** – PADS4 Viewer updates automatically.                    |
-| ✅       | **Offline Mode** – Device continues running presentations for **7 days** while offline. |
-| ✅       | **Supports HTTP & HTTPS**                                                               |
-| ✅       | **Maximum 1 Video per Page**                                                            |
-| ❌       | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Not supported.            |
-| ✅       | **Streaming Support** – HTTP.                                                           |
-| ✅       | **Cluster Viewer Mode** – Supported.                                                    |
-| ✅       | **Interactive Button, Text, Scrolling Text, Image, Table**                              |
-| ✅       | **PowerPoint & PDF Elements** – _(PowerPoint requires installation on PADS4 Server)_.   |
-| ✅       | **Remote Device Management** – Controlled via **PADS4 Agent**.                          |
-| ✅       | **Wake-on-LAN** – Remotely start the device.                                            |
-| ❌       | **Turn Off Display** – Not supported.                                                   |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Automatic Software Updates** – PADS4 Viewer updates automatically. |
+| ✅ | **Offline Mode** – Device continues running presentations for **7 days** while offline. |
+| ✅ | **Supports HTTP & HTTPS** |
+| ✅ | **Maximum 1 Video per Page** |
+| ❌ | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Not supported. |
+| ✅ | **Streaming Support** – HTTP. |
+| ✅ | **Cluster Viewer Mode** – Supported. |
+| ✅ | **Interactive Button, Text, Scrolling Text, Image, Table** |
+| ✅ | **PowerPoint & PDF Elements** – _(PowerPoint requires installation on PADS4 Server)_. |
+| ✅ | **Remote Device Management** – Controlled via **PADS4 Agent**. |
+| ✅ | **Wake-on-LAN** – Remotely start the device. |
+| ❌ | **Turn Off Display** – Not supported. |
 
 ---
 
 ## **4. Troubleshooting**
 
-| **Problem**                                                               | **Solution**                                                             |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Problem** | **Solution** |
+| --- | --- |
 | **Block Remote Control, Turn Off Display, Shutdown Commands Not Working** | Ensure **SICP over Network** is **enabled** and hosted on **port 5000**. |
-| **Viewer does not start in full screen**                                  | Check **firmware version** and **update if necessary**.                  |
-| **Device fails to connect over Ethernet**                                 | Updating the **firmware** may resolve this issue.                        |
-| **Navigation bar remains visible**                                        | **Firmware update** required.                                            |
-| **Viewer repeatedly asks for content storage permission**                 | Check if **correct firmware version** is installed.                      |
+| **Viewer does not start in full screen** | Check **firmware version** and **update if necessary**. |
+| **Device fails to connect over Ethernet** | Updating the **firmware** may resolve this issue. |
+| **Navigation bar remains visible** | **Firmware update** required. |
+| **Viewer repeatedly asks for content storage permission** | Check if **correct firmware version** is installed. |
