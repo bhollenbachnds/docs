@@ -1,5 +1,5 @@
 ---
-title: "LG WebOS Signage 24"
+title: "LG WebOS 8"
 ---
 
 This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **LG webOS Signage 24 (8.0)** devices.
@@ -130,7 +130,7 @@ Ensure the **correct firmware version** is installed for full **PADS4 Viewer** f
 
 <Steps>
   <Step title="Step One">
-    Copy the `firmware .epk file` into the **LG_MONITOR** folder of a **USB stick**.
+    Copy the `firmware .epk file` into the **LG\_MONITOR** folder of a **USB stick**.
   </Step>
   <Step title="Step Two">
     Insert the **USB stick** into the **LG WebOS8 device**.
@@ -150,32 +150,32 @@ Ensure the **correct firmware version** is installed for full **PADS4 Viewer** f
 
 ## **3. Supported Features & Limitations**
 
-| Feature | Description                                                                             |
-| :-----: | :-------------------------------------------------------------------------------------- |
-| ✅       | **Automatic Software Updates** – HTML5 Viewer updates automatically.                    |
-| ✅       | **Offline Mode** – Device continues running presentations for **7 days** while offline. |
-| ✅       | **Supports HTTP & HTTPS**                                                               |
-| ✅       | **Maximum of one 4K Video**                                                             |
-| ✅       | **Streaming Support** – HTTP, HTTPS, HLS V3, UDP, RTP, RTPS multicast.                  |
-| ✅       | **Cluster Viewer Mode** – Supported.                                                    |
-| ✅       | **Interactive Button, Text, Scrolling Text, Image, Table**                              |
-| ✅       | **PowerPoint & PDF Elements** – _(PowerPoint requires installation on PADS4 Server)_.   |
-| ✅       | **Remote Device Management** – Controlled via **PADS4 CTRL Center & PADS4 Agent**.      |
-| ✅       | **Wake-on-LAN** – Supported.                                                            |
-| ✅       | **Proof of Play Tracking** – Monitors content playback history.                         |
-| ❌       | **Turn Off Display** – Not supported.                                                   |
-| ❌       | **Video Rotation, Reflection, Skew, Flip** – Not supported.                             |
-| ❌       | **Playback Speed Adjustment** – Not supported.                                          |
-| ❌       | **Retrieving screenshots from video content**– Not supported.                           |
+| Feature | Description |
+| :-: | :-- |
+| ✅ | **Automatic Software Updates** – HTML5 Viewer updates automatically. |
+| ✅ | **Offline Mode** – Device continues running presentations for **7 days** while offline. |
+| ✅ | **Supports HTTP & HTTPS** |
+| ✅ | **Maximum of one 4K Video** |
+| ✅ | **Streaming Support** – HTTP, HTTPS, HLS V3, UDP, RTP, RTPS multicast. |
+| ✅ | **Cluster Viewer Mode** – Supported. |
+| ✅ | **Interactive Button, Text, Scrolling Text, Image, Table** |
+| ✅ | **PowerPoint & PDF Elements** – _(PowerPoint requires installation on PADS4 Server)_. |
+| ✅ | **Remote Device Management** – Controlled via **PADS4 CTRL Center & PADS4 Agent**. |
+| ✅ | **Wake-on-LAN** – Supported. |
+| ✅ | **Proof of Play Tracking** – Monitors content playback history. |
+| ❌ | **Turn Off Display** – Not supported. |
+| ❌ | **Video Rotation, Reflection, Skew, Flip** – Not supported. |
+| ❌ | **Playback Speed Adjustment** – Not supported. |
+| ❌ | **Retrieving screenshots from video content**– Not supported. |
 
 ---
 
 ## **4. Troubleshooting**
 
-| **Problem**                             | **Solution**                                                                                                |
-| :-------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| **Connection issues to PADS4 Server**   | Ensure the **correct URL** is configured under **SI Server Settings**.                                      |
-| **Firmware version incorrect**          | Check and **update firmware** to **03.32.01** following **2.2 Updating Firmware**.                          |
-| **Remote control commands not working** | Ensure **block remote control** is disabled in **Device Settings**.                                         |
-| **Screen does not turn off**            | **Turn Off Display** is **not supported** on **webOS Signage 24 (8.0).**                                    |
-| **.Streaming issues**                   | Verify the **stream encoder format** (MP4, MPEGTS, MP2T). Use `rtp://239.0.0.1/?encoding=mpegts` if needed. |
+| **Problem** | **Solution** |
+| :-- | :-- |
+| **Connection issues to PADS4 Server** | Ensure the **correct URL** is configured under **SI Server Settings**. |
+| **Firmware version incorrect** | Check and **update firmware** to **03.32.01** following **2.2 Updating Firmware**. |
+| **Remote control commands not working** | Ensure **block remote control** is disabled in **Device Settings**. |
+| **Screen does not turn off** | **Turn Off Display** is **not supported** on **webOS Signage 24 (8.0).** |
+| **.Streaming issues** | Verify the **stream encoder format** (MP4, MPEGTS, MP2T). Use `rtp://239.0.0.1/?encoding=mpegts` if needed. |

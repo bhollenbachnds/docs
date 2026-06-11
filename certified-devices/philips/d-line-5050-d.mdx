@@ -4,7 +4,7 @@ title: "5050D-Series"
 
 This guide gives step‑by‑step instructions for installing and configuring PADS4 Viewer on Philips 5050D series displays.
 
-## **Prepare the 5050D**
+## **Prepare the 5050D-series**
 
 Before installation, ensure that the **PADS4 Server is set up and configured properly**.
 
@@ -14,17 +14,17 @@ Before installation, ensure that the **PADS4 Server is set up and configured pro
 
 When turning on the device for the first time, the **Configuration Wizard** will appear. If not, **reset the device** as described in **Resetting the Device**.
 
-### **Resetting the Device**
+### **Resetting the 5050D-series**
 
-If the device has been used before, perform a factory reset to clear the storage and avoid software conflicts. 
+If the device has been used before, perform a factory reset to clear the storage and avoid software conflicts.
 
 1. On the Philips remote control, press **Home**, then **1 8 8 8** to open the Android Menu.
-2. Open **Settings**, then select **System Tools → Factory Reset**. 
+2. Open **Settings**, then select **System Tools → Factory Reset**.
 3. Confirm by clicking **Factory Reset** and pressing **OK**.
 
 After the reset, the **Welcome Screen** appears. Continue with the steps in **Configuring the Device**.
 
-### **Configuring the Device**
+### **Configuring the 5050D-series**
 
 1. On the **Welcome Screen**, select your preferred **language** and click **Start**.
 2. On the **Security Settings** screen, ensure **SICP Network Port** is **enabled**. _(Other settings can be enabled or disabled as required.)_
@@ -45,42 +45,45 @@ Ensure the **correct firmware version** is installed for full **PADS4 Viewer** f
 
 Follow these steps to install PADS4 Viewer on Philips D-line (5050D) displays.
 
-### **Installing PADS4Philips from USB Stick**
+### **Downloading the PADS4 Viewer**
 
-The PADS4Philip**s.apk** file can be found on the **PADS4 Server** in:
+The **PADS4Philips.apk** file is available on the PADS4 Server in,
 
 ```text
 https://[PADS4Server]/pads4/apps
 ```
 
+where \[PADS4Server\] should be replaced with the name of your server.\
+Locate the **PADS4Philips.apk** file and copy it to a USB stick
+
 ### **Installation Steps**
 
-1. Copy the  **PADS4Philips.apk** file onto a **USB stick.**
-2. Insert the **USB stick** into the **Philips D-line device**.
-3. Open the **Android Menu** by pressing **Home 1 8 8 8**.
-4. Goto the Apps → Settings → Security → More Security Setting
-5. Enable Unknow Source
-6. Go back to the App screen
-7. Go to File Manager and select our USB stick
-8. Open the **PADS4Philips.apk and click install**
-9. **Click on DONE**
+1. Insert the USB stick into the Philips 5050D-series.
+2. Open the Android Menu by pressing **Home 1 8 8 8**.
+3. Go to **Apps → Settings → Security → More Security Setting**.
+4. Enable **Unknown Source**.
+5. Return to the app screen.
+6. Open **File Manager** and select the USB stick.
+7. Open **PADS4Philips.apk** and tap **Install**.
+8. Tap **Done**
 
-### To configure PADS4 to start automatically on the display:
+### **Configure automatic launch of PADS4**
 
-1. Navigate to **Settings → Signage Display → Source Settings → Custom Apps**.
+1. Go to **Settings → Signage Display → Source Settings → Custom Apps**.
 2. Select **PADS4** from the list of available applications.
-3. Enable the option **Force Restart Custom App**.
+3. Enable **Force Restart Custom App**.
 4. Restart the screen to apply the changes.
 
-### Configure the Screen
+### **Connect the PADS4 Viewer**
 
-When the device is restarted you will see the PADS4 Viewer.
+After the device restarts, the **PADS4 Viewer** will appear.
 
-1. Enter the **Server URL** in the format [https://PADS4server/domain](https://servername/domain) 
-2. Fill in the **ViewerName** as required.
-3. Click **Start** to connect.
+1. Enter the **Server URL** in the following format: `https://[PADS4server]/[Domain]`.
+2. Replace `[PADS4server]` with the name of your server, and replace `[Domain]` with your domain. The default domain is **PADS4**.
+3. Fill in the **ViewerName** if required.
+4. Click **Start** to connect.
 
-The PADS4 viewer is now connected and ready for use.
+The **PADS4 Viewer** is now connected and ready for use.
 
 <Note>
   You may see a message indicating that PADS4 is incompatible with this version of Android. This is due to the screen running a newer Android version. You can safely acknowledge and ignore this message. PADS4 is compatible with Android 14, and this warning will be resolved in a future release.
