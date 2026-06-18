@@ -632,9 +632,9 @@
                           "what-is-a-rules",
                           "creating-a-rules",
                           {
-                            "group": "Untitled Group",
+                            "group": "Advanced rules",
                             "pages": [
-                              "untitled-page"
+                              "Conditions"
                             ]
                           }
                         ]

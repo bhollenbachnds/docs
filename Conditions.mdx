@@ -1,0 +1,46 @@
+---
+title: "Conditions "
+description: "Reference of the condition types you can use when building a rule in PADS4 Designer."
+---
+
+When you create a rule in PADS4, the **condition** (the IF clause) defines the value that PADS4 evaluates during playback. You can compare against fixed values, system information, or data coming from a data provider or Data Vault.
+
+The sections below list every condition type available in the rule editor, grouped by source.
+
+## Static and runtime values
+
+- **Constant** — Use a static value. Manually specify the **Value** to be used as the constant.
+- **Viewer variable** — A viewer variable that is replaced by its actual value at runtime.
+
+## Data provider values
+
+Use these conditions to react to data coming from a data provider or Data Vault.
+
+- **Current Data** — Use the current column and current row of the active Data Vault.
+- **Previous Data** — Use the current column and previous row of the active data provider. Lets you compare two consecutive data values.
+- **Other Column** — Use the current row but a different column of the active data provider. Manually select the **Column** to be used.
+- **Other Data** — Use a specific data provider, column, and row. Manually select the **Data Provider**, **Column**, and **Row** to be used.
+- **Row Count** — Use the number of rows of a specific data provider. Manually select the **Data Provider** to be used.
+- **Current Row Number** — Use the current row number of the active data provider. Only applicable to page elements.
+
+## System date and time
+
+Use these conditions to trigger rules based on the playback PC's clock.
+
+- **System Date** — The system date of the playback PC.
+- **System Date Time** — The combined system date and time of the playback PC.
+- **System Time** — The system time of the playback PC.
+- **System Time (UTC)** — The system time of the playback PC in UTC.
+- **System Long Time** — The system time of the playback PC in long time format.
+- **System Long Time (UTC)** — The system time of the playback PC in long time format and UTC.
+
+## Presentation context
+
+- **Page Name** — The name of the current page in the presentation. Only applicable to pages and page elements.
+- **Page Number** — The sequence number of the current page in the presentation. Only applicable to pages and page elements.
+
+## Viewer 
+
+- **Viewer Name** — The unique viewer name of the viewer that plays the presentation.
+- **Computer Name** — The computer name of the PC on which the presentation plays.
+- **Computer Language Name** — The Microsoft Windows language name of the PC on which the presentation plays.
