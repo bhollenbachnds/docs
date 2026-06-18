@@ -1,0 +1,43 @@
+---
+title: "What is a rules"
+description: "Learn how rules let presentations, pages, and page elements react automatically to events in PADS4."
+---
+
+Rules are one of the most powerful features in PADS4. They let a presentation, page, or page element respond automatically when a predefined situation occurs during playback.
+
+## How a rule works
+
+Every rule has two parts:
+
+- **Condition (IF)** — the situation that PADS4 watches for.
+- **Action (THEN)** — what PADS4 does when that condition is met.
+
+When the condition is true during playback, the action runs.
+
+## Where you can define rules
+
+Rules can be set at three levels:
+
+- **Presentation level** — affect the entire presentation.
+- **Page level** — affect a single page.
+- **Page element level** — affect an individual element on a page.
+
+You can create as many rules as you need at each level, but only one rule of the same type can be active at any given time.
+
+<Tip>
+  Most rules are linked to a data provider so they can react to real-time data events.
+</Tip>
+
+## Examples
+
+**Presentation rule**
+
+- If no real-time data is available, switch to an advertising page. When data becomes available again, switch back to the original page.
+
+**Page rule**
+
+- If the current time is between 10:00 AM and 11:00 AM, hide the page so it is skipped.
+
+**Page element rule**
+
+- If a real-time data value rises above a defined threshold, change the element's background color to red.

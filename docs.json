@@ -570,21 +570,73 @@
                 "hidden": true,
                 "pages": [
                   {
-                    "group": "Canva Integration",
-                    "hidden": true,
+                    "group": "Elements",
                     "pages": [
-                      "introduction-2",
                       {
-                        "group": "Configaration",
+                        "group": "Canva Integration",
+                        "hidden": true,
                         "pages": [
-                          "canva-set-up",
-                          "pads4-canva-integration"
+                          "introduction-2",
+                          {
+                            "group": "Configaration",
+                            "pages": [
+                              "canva-set-up",
+                              "pads4-canva-integration"
+                            ]
+                          },
+                          {
+                            "group": "Working with Canva integration",
+                            "pages": [
+                              "the-canva-library"
+                            ]
+                          }
                         ]
                       },
                       {
-                        "group": "Working with Canva integration",
+                        "group": "Data Vaults",
                         "pages": [
-                          "the-canva-library"
+                          "modules/digital-signage/data-vault/introduction",
+                          "use-a-data-vault"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Properties",
+                    "pages": [
+                      {
+                        "group": "Presentation ",
+                        "pages": []
+                      },
+                      {
+                        "group": "Pages Properties",
+                        "pages": []
+                      },
+                      {
+                        "group": "Playlist Properties",
+                        "pages": []
+                      },
+                      {
+                        "group": "Element Properties",
+                        "pages": []
+                      },
+                      {
+                        "group": "Data Provider Properties",
+                        "pages": [
+                          "use-a-data-vault-1"
+                        ]
+                      },
+                      {
+                        "group": "Rules Properties",
+                        "pages": [
+                          "what-is-a-rules",
+                          "creating-a-rules",
+                          {
+                            "group": "Untitled Group",
+                            "pages": [
+                              "untitled-page"
+                            ]
+                          }
                         ]
                       }
                     ]
@@ -1264,12 +1316,6 @@
                       }
                     ]
                   }
-                ]
-              },
-              {
-                "group": "PADS4 Data Vaults",
-                "pages": [
-                  "modules/digital-signage/data-vault/introduction"
                 ]
               }
             ]

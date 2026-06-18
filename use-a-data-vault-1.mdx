@@ -1,0 +1,47 @@
+---
+title: "Use a Data Vault"
+description: "Display Data Vault content in a PADS4 Designer presentation by linking it to an element on the canvas."
+---
+
+Once a Data Vault is attached to your presentation, you can pull its content into any element on the canvas. The element stays in sync with the Data Vault source defined in PADS4 System Management.
+
+## Before you begin
+
+Make sure that:
+
+- A Data Vault has been added to your presentation. See [Add a Data Vault](/use-a-data-vault).
+
+## Display Data Vault content in a presentation
+
+1. **Place an element on the canvas.** On the **Elements** bar, select the element you want to use and drag its outline onto the canvas.
+   <Frame>
+     <img
+       src="/images/DigitalSignage/Designer/PlaceTextElement.png"
+       alt="Placing an element on the canvas"
+       title="Place Text Element"
+       className="mr-auto"
+       style={{ width:"62%" }}
+     />
+   </Frame>
+2. **Open the Playlist options.** In the **Properties** pane, select **Playlist**, then select the element you just placed on the canvas.
+3. **Choose Data Vault as the source.** From the available playlist options, select **Data Vault**.
+   <Frame>
+     <img
+       src="/images/DigitalSignage/Designer/PlaylistOptions.png"
+       alt="Playlist options with Data Vault highlighted"
+       title="Playlist Options"
+       className="mr-auto"
+       style={{ width:"93%" }}
+     />
+   </Frame>
+4. **Select a Data Vault.** In the Data Vault pane that opens, choose the Data Vault you want to use.
+   <Frame>
+     ![Selecting a Data Vault](/images/DigitalSignage/Designer/SelectDataVault.png)
+   </Frame>
+5. **Select a column.** Pick the column whose values you want to display in the element.
+   <Frame>
+     ![Selecting a column from the Data Vault](/images/DigitalSignage/Designer/DataVaultSelectColumn.png)
+   </Frame>
+6. **Confirm the selection.** Select **OK** to add the content to the element.
+
+The Data Vault content now appears in your PADS4 presentation and updates automatically when the source changes.
