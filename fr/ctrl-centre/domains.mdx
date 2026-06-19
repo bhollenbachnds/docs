@@ -1,0 +1,46 @@
+---
+- title: Domaines PADS4
+---
+
+Les domaines dans PADS4 permettent de gérer plusieurs environnements clients indépendants sur un seul serveur PADS4. Cela permet à différentes organisations ou départements de fonctionner séparément tout en utilisant la même infrastructure.
+
+Avec la prise en charge améliorée des domaines, tous les services et applications PADS4 sont désormais conscients des domaines, et les domaines peuvent être entièrement configurés et gérés via PADS4 CTRL Center.
+
+## **Prérequis**
+
+<Info>
+  Avant de créer un nouveau domaine, assurez-vous que votre \*\*installation PADS4 est mise à jour vers la version 2023.1 \*\*ou ultérieure, car la fonctionnalité de domaine n'est prise en charge qu'à partir de cette version.
+</Info>
+
+Chaque domaine nécessite sa propre **PADS4 license**. Vérifiez que vous avez obtenu la licence nécessaire avant de procéder à la configuration du domaine.
+
+## Création d'un domaine PADS4
+
+Suivez les étapes ci-dessous pour créer un nouveau domaine PADS4.
+
+<Steps>
+  <Step title="Connectez-vous à PADS4 en tant que Root">
+    Connectez-vous à PADS4 en utilisant le compte root qui a été créé lors de l'installation.
+
+    * **Username:** `su\root`
+    * **Password:** `******` *(Votre mot de passe choisi)*
+  </Step>
+
+  <Step title="Configuration du domaine">
+    Vous pouvez maintenant **ajouter un nouveau domaine** ou **modifier le domaine par défaut existant ("pads")**.
+
+    ### **Création d'un nouveau domaine**
+
+    Cliquez sur **+ New** dans le tableau de bord Domains.
+
+    1. **Saisissez les détails du domaine**:\
+       Fournissez un \*\*nom \*\*de domaine (par exemple, "CompanyA" ou "Branch1").
+    2. **DNS Host Name** – Spécifiez le **DNS hostname** du domaine.
+    3. **Certificate File** – Téléchargez le **third-party signed SSL certificate** (`.CRT format`).
+    4. **Private Key File** – Téléchargez la **third-party signed private key** (`.KEY format`).
+
+    Cliquez sur **Create**.
+
+    Cela va **redémarrer les services PADS4** et appliquer les paramètres du domaine.
+  </Step>
+</Steps>
