@@ -1,0 +1,32 @@
+---
+- title: Interface utilisateur
+---
+
+L'interface d'accès racine dans PADS4 est un tableau de bord compact conçu pour l'administration au niveau système. Elle contient généralement trois sections principales : **Diagnostics**, **Migration**, et **Domains**.
+
+<Frame>
+  <img src="/images/RootAccess/RootMenu.png" alt="Root Menu" title="Menu racine" style={{ width:"61%" }} />
+</Frame>
+
+## Diagnostics
+
+La section Diagnostics vous permet de vérifier si le système PADS4 est en bon état.
+
+* Elle exécute une série de tests sur les différents services PADS4.
+* Les résultats sont affichés par service, vous pouvez donc voir quel composant fonctionne correctement et lequel nécessite une attention particulière.
+* Cela permet d'identifier rapidement les problèmes de configuration ou les pannes de service avant de procéder à d'autres configurations ou modifications.
+
+## Migration
+
+La section Migration est utilisée lorsqu'une étape de migration est requise pendant le processus d'installation ou de mise à niveau.
+
+* Elle fournit un aperçu de l'état de la migration et affiche la progression pendant que les données ou les paramètres sont migrés.
+* Vous pouvez surveiller si la migration a commencé, est en cours ou s'est terminée avec succès, ce qui permet de s'assurer que l'environnement est prêt avant de continuer à configurer les domaines.
+
+## Domains
+
+Les domaines PADS4 offrent des capacités de gestion multi-locataires au sein d'un seul serveur PADS4.
+
+* Chaque domaine fonctionne comme un environnement client indépendant avec ses propres utilisateurs, contenu et configurations.
+* Depuis l'interface racine, vous pouvez créer de nouveaux domaines, modifier le domaine par défaut "pads", ou gérer les certificats SSL et les paramètres DNS spécifiques à chaque domaine.
+* Cette section est le centre névralgique de l'administration des domaines au niveau du serveur.
