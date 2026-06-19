@@ -1,6 +1,6 @@
 ---
 - title: Images et intégrations
-- description: Ajouter des images, vidéos et autres éléments HTML
+- description: Ajouter des images, des vidéos et d'autres éléments HTML
 - icon: image
 ---
 
@@ -8,7 +8,7 @@
 
 ## Image
 
-### Utilisation de Markdown
+### Utiliser Markdown
 
 La [syntaxe markdown](https://www.markdownguide.org/basic-syntax/#images) vous permet d'ajouter des images en utilisant le code suivant
 
@@ -16,11 +16,11 @@ La [syntaxe markdown](https://www.markdownguide.org/basic-syntax/#images) vous p
 ![title](/path/image.jpg)
 ```
 
-Notez que la taille du fichier image doit être inférieure à 5 Mo. Sinon, nous recommandons l'hébergement sur un service comme [Cloudinary](https://cloudinary.com/) ou [S3](https://aws.amazon.com/s3/). Vous pouvez ensuite utiliser cette URL et l'intégrer.
+Notez que la taille du fichier image doit être inférieure à 5 Mo. Sinon, nous recommandons l'hébergement sur un service tel que [Cloudinary](https://cloudinary.com/) ou [S3](https://aws.amazon.com/s3/). Vous pouvez ensuite utiliser cette URL et l'intégrer.
 
-### Utilisation des intégrations
+### Utiliser les intégrations
 
-Pour obtenir plus de personnalisation avec les images, vous pouvez également utiliser [embeds](/writing-content/embed) pour ajouter des images
+Pour plus de personnalisation avec les images, vous pouvez également utiliser des [intégrations](/writing-content/embed) pour ajouter des images
 
 ```html
 <img height="200" src="/path/image.jpg" />
@@ -33,12 +33,12 @@ Pour obtenir plus de personnalisation avec les images, vous pouvez également ut
 <br />
 
 <Tip>
-  Mintlify prend en charge [les balises HTML en Markdown](https://www.markdownguide.org/basic-syntax/#html). C'est utile si vous préférez les balises HTML à la syntaxe Markdown, et vous permet de créer une documentation avec une flexibilité infinie.
+  Mintlify prend en charge les [balises HTML dans Markdown](https://www.markdownguide.org/basic-syntax/#html). Cela est utile si vous préférez les balises HTML à la syntaxe Markdown, et vous permet de créer une documentation avec une flexibilité infinie.
 </Tip>
 
 ### iFrames
 
-Charge une autre page HTML dans le document. Le plus souvent utilisé pour intégrer des vidéos.
+Charge une autre page HTML dans le document. Utilisé le plus souvent pour intégrer des vidéos.
 
 ```html
 <iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>

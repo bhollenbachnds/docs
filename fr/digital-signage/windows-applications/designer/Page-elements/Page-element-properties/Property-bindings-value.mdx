@@ -1,0 +1,51 @@
+Les liaisons de propriétés vous permettent de **lier dynamiquement les propriétés des éléments à des valeurs provenant d'un Data Provider**. Vous trouverez ci-dessous une liste des propriétés prises en charge ainsi que leurs types de valeurs et formats attendus.
+
+***
+
+### **Nom de la propriété, type et valeurs possibles**
+
+| **Nom de la propriété**    | **Type** | **Valeurs possibles**                                                                                                         |
+| -------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| **Visible**                | Boolean  | `true` (ou `t`, `1`, `-1`, `yes`), `false` (ou `f`, `0`, `no`)                                                                |
+| **Left**                   | Integer  | Valeur numérique (positive ou négative)                                                                                       |
+| **Top**                    | Integer  | Valeur numérique (positive ou négative)                                                                                       |
+| **Width**                  | Integer  | Valeur numérique (supérieure ou égale à 0)                                                                                    |
+| **Height**                 | Integer  | Valeur numérique (supérieure ou égale à 0)                                                                                    |
+| **Background Color**       | Color    | `#FF00FF` (hex RGB), `#AAFF00FF` (hex ARGB), `12002010` (valeur System.Drawing.Color), `red` (couleur nommée)                 |
+| **Foreground Color**       | Color    | Mêmes formats que Background Color                                                                                            |
+| **Font Name**              | String   | Nom de la police, par ex., `Arial`, `Courier`                                                                                 |
+| **Font Bold**              | Boolean  | `true` (ou `t`, `1`, `-1`, `yes`), &#xA;  `false` (or &#xA;  `f`, &#xA;  `0`, &#xA;  `no`)&#xA;                               |
+| **Taille de police**       | Entier   | Valeur numérique (supérieure ou égale à 1)                                                                                    |
+| **Angle**                  | Entier   | Valeur numérique (0 à 359 degrés)                                                                                             |
+| **Niveau de volume**       | Entier   | Valeur numérique (0 à 100)                                                                                                    |
+| **Couleur de remplissage** | Couleur  | Mêmes formats que Couleur d'arrière-plan                                                                                      |
+| **De droite à gauche**     | Booléen  | `true` (or &#xA;  `t`, &#xA;  `1`, &#xA;  `-1`, &#xA;  `yes`), &#xA;  `false` (or &#xA;  `f`, &#xA;  `0`, &#xA;  `no`)&#xA;   |
+
+***
+
+### **Notes:**
+
+* **Les valeurs booléennes** peuvent être exprimées de plusieurs façons pour plus de flexibilité (par ex.,&#x20;
+  &#x20; `true`,&#x20;
+  &#x20; `yes`,&#x20;
+  &#x20; `1`).
+  &#x20;&#x20;
+* **Les valeurs de couleur** acceptent une variété de formats :
+  * RVB hexadécimal (par ex.,&#x20;
+    &#x20; `#FF00FF`)
+    &#x20;&#x20;
+  * ARVB hexadécimal (par ex.,&#x20;
+    &#x20; `#AAFF00FF`)
+    &#x20;&#x20;
+  * Valeur entière représentant la couleur système (par ex.,&#x20;
+    &#x20; `12002010`)
+    &#x20;&#x20;
+  * Couleur système nommée (par ex.,&#x20;
+    &#x20; `red`)
+    &#x20;&#x20;
+* **Les noms de polices** doivent correspondre aux polices disponibles sur le système.
+* **Niveau de volume** va de&#x20;
+  &#x20; `0` (muet) à&#x20;
+  &#x20; `100` (volume maximum).
+  &#x20;&#x20;
+* **Angle** spécifie la rotation en degrés.
