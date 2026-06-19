@@ -1,79 +1,79 @@
-Le **Office 365 Microsoft Exchange** fournisseur dans **PADS4** permet des connexions à **Exchange Online** (basé sur le cloud). Cela permet de récupérer des données telles que **calendriers, messages de boîte de réception et disponibilité des utilisateurs**.
+Le fournisseur **Office 365 Microsoft Exchange** dans **PADS4** permet de se connecter à **Exchange Online** (basé sur le cloud). Cela permet de récupérer des données telles que les **calendars, inbox messages, and user availability**.
 
 ***
 
 ### **Étapes pour ajouter ou modifier une connexion Office 365 Microsoft Exchange**
 
-#### **1. Démarrer l'Assistant Fournisseur de données**
+#### **1. Démarrer l'Assistant de fournisseur de données**
 
-* Ouvrez l'**Assistant Fournisseur de données** dans **PADS4**.
-* Suivez les étapes pour **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
-* Sélectionnez **Office 365 Microsoft Exchange** comme **type de fournisseur**.
+* Ouvrez le **Data Provider Wizard** dans **PADS4**.
+* Suivez les étapes pour **Adding a Data Provider** ou **Editing a Data Provider**.
+* Sélectionnez **Office 365 Microsoft Exchange** comme **provider type**.
 
 ***
 
 #### **2. Configurer les paramètres de connexion**
 
 * **Spécifier les paramètres de proxy (si nécessaire)**
-  * Si votre organisation utilise un **serveur proxy**, saisissez les paramètres requis.
-  * Contactez votre **administrateur système** pour plus de détails.
+  * Si votre organisation utilise un **proxy server**, saisissez les paramètres requis.
+  * Contactez votre **system administrator** pour plus de détails.
 
 * **S'authentifier auprès de Microsoft Exchange**
-  * Cliquez sur le bouton **Authentifier**.
-  * Une **page de connexion Microsoft** s'ouvrira.
-  * Connectez-vous avec vos **identifiants Exchange Online** et autorisez **PADS4** pour accéder à votre environnement.
+  * Cliquez sur le bouton **Authenticate**.
+  * Une **Microsoft sign-in page** s'ouvrira.
+  * Connectez-vous avec vos **Exchange Online credentials** et autorisez **PADS4** à accéder à votre environnement.
   * Une fois l'authentification réussie, le **status** affichera **successful**.
 
-* **Reauthentication**
+* **Réauthentification**
   * Chaque fois que vous modifiez ce **data provider**, vous devrez vous réauthentifier.
 
-Cliquez sur **Next** pour continuer.
+Cliquez **Next** pour continuer.
 
 ***
 
-#### **3. Choisir la Source de Données à Récupérer**
+#### **3. Choisissez la Source de Données à Récupérer**
 
 Sélectionnez le type de **Exchange data** à récupérer :
 
-| **Option**            | **Description**                                                                                                                                      |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **My Calendar**       | Récupère les événements du calendrier de votre **personal** Exchange calendar.                                                                       |
-| **Shared Calendar**   | Récupère les **shared** calendars en spécifiant des adresses e-mail. Utile pour les **meeting rooms or group events**.                               |
-| **User Availability** | Récupère le **free/busy status** pour les utilisateurs spécifiés. Utile pour les **scheduling applications**.                                        |
-| **My Inbox**          | Récupère les **emails** de votre **personal** inbox. Spécifiez éventuellement un dossier et si vous souhaitez inclure les **subfolders**.            |
-| **Shared Inbox**      | Récupère les emails d'une **shared** inbox en spécifiant des adresses e-mail. Fusionnez éventuellement les données de plusieurs boîtes de réception. |
+| **Option**            | **Description**                                                                                                                                                      |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **My Calendar**       | Récupère les événements du calendrier de votre **personnel** Exchange calendar.                                                                                      |
+| **Shared Calendar**   | Récupère les **partagés** calendriers en spécifiant des adresses e-mail. Utile pour les **salles de réunion ou événements de groupe**.                               |
+| **User Availability** | Récupère le **statut libre/occupé** pour les utilisateurs spécifiés. Utile pour les **applications de planification**.                                               |
+| **My Inbox**          | Récupère les **e-mails** de votre **personnel** boîte de réception. Spécifiez éventuellement un dossier et si vous souhaitez inclure les **sous-dossiers**.          |
+| **Shared Inbox**      | Récupère les e-mails d'une boîte de réception **partagée** en spécifiant des adresses e-mail. Fusionnez éventuellement les données de plusieurs boîtes de réception. |
 
-Cliquez sur **Next** pour continuer.
+Cliquez **Next** pour continuer.
 
 ***
 
 #### **4. Configurer les Options de Filtrage des Données**
 
 * **Include Message Text**
-  * Cochez cette option pour **retrieve the email body** avec les autres métadonnées.
+  * Cochez cette option pour **récupérer le corps de l'e-mail** ainsi que d'autres métadonnées.
 
 * **Specify Date Range (From / Until)**
-  * Utilisez une période **static** ou **dynamic** pour filtrer les résultats.
-  * Réduit **memory usage** et **increases performance**.
+  * Utilisez une période **statique** ou **dynamique** pour filtrer les résultats.
+  * Réduit **l'utilisation de la mémoire** et **améliore les performances**.
 
 **Note:**\
-Si vous récupérez une **large period of data**, cela peut entraîner une **high memory usage**. Utilisez des filtres ou définissez un **maximum number of rows** pour éviter des charges de données excessives.
+Si vous récupérez une **grande période de données**, cela peut entraîner une **utilisation élevée de la mémoire**. Utilisez des filtres ou définissez un **nombre maximum de lignes** pour éviter des chargements de données excessifs.
 
-Cliquez sur **Next** pour continuer.
+Cliquez **Next** pour continuer.
 
 ***
 
 #### **5. Finaliser la Configuration**
 
-* Complétez les étapes restantes dans le **Data Provider Wizard**.
-* Cliquez sur **Finish** pour finaliser la configuration.
+* Complétez les étapes restantes dans l'**Data Provider Wizard**.
+* Cliquez **Finish** pour finaliser la configuration.
 
 ***
 
 ### **Notes Supplémentaires**
 
-* Si **authentication fails**, assurez-vous que votre **Microsoft 365 account** dispose des **permissions** nécessaires pour accéder à **Exchange Online**.
-* Si des **large data sets** causent des problèmes de performance, **limit the time range or the number of rows retrieved**.
-* Si vous utilisez un **proxy server**, assurez-vous que les **proxy settings** sont correctement configurés.
+* Si **l'authentification échoue**, assurez-vous que votre **compte Microsoft 365** dispose des **autorisations** nécessaires pour accéder à **Exchange Online**.
+* Si des **ensembles de données volumineux** causent des problèmes de performance, **limitez la plage de temps ou le nombre de lignes récupérées**.
+* Si vous utilisez un **serveur proxy**, assurez-vous que les **paramètres du proxy** sont correctement configurés.
 
-Cette configuration permet à **PADS4** de récupérer et d'afficher en temps réel les **Exchange data** pour les **emails, calendars, and availability**.
+Cette configuration permet à **PADS4** de récupérer et d'afficher en temps réel les **Exchange data** pour les **e-mails, calendriers et disponibilités**.

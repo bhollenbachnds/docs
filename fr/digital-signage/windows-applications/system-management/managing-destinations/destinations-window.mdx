@@ -1,0 +1,64 @@
+Dans la fenêtre des destinations, vous pouvez voir toutes les destinations qui ont été définies pour votre installation PADS4. Il peut s'agir de visualiseurs, de visualiseurs de zone, de visualiseurs HTML ou de visualiseurs de bureau. En option, les visualiseurs peuvent être organisés en groupes de visualiseurs pour planifier vos présentations PADS4 par groupe. Les destinations peuvent être ajoutées, modifiées ou supprimées.
+
+ 
+
+#### Pour afficher les destinations de votre système PADS4
+
+1. Allez dans le volet de navigation dans la fenêtre principale.
+
+   ![EN System Management Navigationpane Pn](/images/digital-signage/windows-applications/system-management/main-window/EN-SystemManagement-Navigationpane.png)
+2. Cliquez sur Destinations dans la liste des catégories d'informations disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le serveur PADS4 connecté et affichera les résultats dans la fenêtre des destinations. Si votre installation PADS4 comprend des sous-serveurs, la fenêtre des destinations affichera toujours les résultats globaux de toute votre installation PADS4, quel que soit le serveur que vous avez sélectionné.
+
+ 
+
+#### Fenêtre des destinations
+
+La fenêtre des destinations affiche tous les visualiseurs et groupes de visualiseurs de votre installation PADS4. Les destinations répertoriées peuvent avoir été ajoutées manuellement au système ou automatiquement en connectant un nouveau visualiseur PADS4 à votre serveur PADS4, selon vos **paramètres de serveur**.
+
+**Filtre** \
+Dans la barre de ruban, il y a un groupe Filtre qui vous permet de filtrer par type de visualiseur ou de filtrer en fonction d'une valeur de sous-chaîne saisie par l'utilisateur, qui est recherchée dans les colonnes Nom du visualiseur et Description.
+
+![EN System Management Destinationswindow Pn](/images/digital-signage/windows-applications/system-management/managing-destinations/EN-SystemManagement-Destinationswindow.png)
+
+**Nom**
+Le nom unique qui identifie la destination dans le système PADS4. Par défaut, les nouveaux visualiseurs PADS4 connectés seront automatiquement ajoutés au système en utilisant le nom de l'ordinateur comme nom de visualiseur.
+
+**Description**
+La chaîne descriptive qui peut avoir été spécifiée pour donner des informations supplémentaires sur le visualiseur.
+
+**Type**
+Le type défini par le système de votre destination. Les types possibles sont :
+
+| Type de visualiseur | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| :------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Groupe              | Un groupe est une unité logique qui se compose d'autres destinations. Les membres d'un groupe peuvent être des visualiseurs ou d'autres groupes. Les groupes peuvent être imbriqués sans aucune limitation et les visualiseurs ou groupes peuvent être membres d'un nombre illimité de groupes. Les groupes sont généralement utilisés pour organiser vos destinations dans une structure logique et pour les contrôler par groupe au lieu de par visualiseur individuel. |
+| Visualiseur         | Un visualiseur standard représente une instance de l'application standard PADS4 Viewer pour la lecture ciblée de contenu planifié sur un dispositif d'affichage. Cette application PADS4 Viewer est basée sur Microsoft .NET Framework et fonctionne généralement sur une plateforme Microsoft Windows.                                                                                                                                                                   |
+| Zone Viewer         | Un Zone Viewer est un visualiseur spécial. Il peut être accessible comme un élément dans PADS4 Designer pour visualiser le contenu planifié pour ce visualiseur particulier comme une zone dans votre présentation.                                                                                                                                                                                                                                                       |
+| HTML Viewer         | Un HTML Viewer représente une instance de l'application PADS4 HTML5 Viewer pour la lecture ciblée de contenu planifié dans un environnement de navigateur. L'application PADS4 HTML5 Viewer est conçue comme une solution indépendante de la plateforme.                                                                                                                                                                                                                  |
+| Desktop Viewer      | Un Desktop Viewer représente une instance de l'application PADS4 Desktop Viewer pour la lecture ciblée de contenu planifié sur un PC d'utilisateur final. L'application PADS4 Desktop Viewer peut être utilisée comme économiseur d'écran, pour recevoir et visualiser manuellement des messages PADS4 ciblés ou pour l'affichage automatique de messages popup comme alerte.                                                                                             |
+
+ 
+
+**Licence**\
+La licence qui a été attribuée à ce visualiseur. Les visualiseurs ne peuvent être utilisés que lorsqu'ils ont une licence valide. Les licences peuvent être attribuées manuellement en **modifiant une destination** ou comme décrit dans la gestion des licences. Les groupes de visualiseurs ne nécessitent jamais de licence.
+
+<Note>
+  Pour les PADS4 Desktop Viewers, vous ne pouvez pas attribuer de licence. Les PADS4 Desktop Viewers fonctionnent avec des licences simultanées, ce qui signifie que l'application réclamera une licence lors de sa connexion et la libérera à nouveau lors de sa déconnexion.
+</Note>
+
+**Type de licence** \
+Le type de licence de visualiseur qui a été attribué à ce visualiseur. Le type de licence attribué détermine le contenu pris en charge par l'application PADS4 Viewer. Les types possibles sont : BASIC (fonctionnalité très limitée), XPRESS (fonctionnalité limitée) et XPERT (sans restrictions).
+
+**État de la licence**\
+L'état de votre licence attribuée. Les valeurs possibles sont :
+
+| **Statut**        | **Description**                                                                                                                                                                                                                                                                                                                                                     |
+| :---------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| \[Vide]           | La destination listée ne nécessite pas d'attribution de licence.                                                                                                                                                                                                                                                                                                    |
+| Pas de licence    | Le visualiseur n'a pas de licence attribuée. En conséquence, l'application de visualisation ne fonctionnera pas correctement. Vous pouvez attribuer manuellement une licence en **modifiant la destination** ou comme décrit dans la gestion des licences.                                                                                                          |
+| Licence attribuée | Le visualiseur a une licence attribuée, mais la licence n'a pas encore été activée. Lorsque l'application de visualisation se connecte avec succès au PADS4 Server, elle activera automatiquement la licence attribuée et liera ainsi la licence au matériel du PC Viewer. Lorsque le matériel du PC Viewer change, vous devez réattribuer manuellement la licence. |
+| Licences activées | Le visualiseur possède une licence et la licence attribuée a été activée avec succès. Tant que le matériel du PC Viewer ne changera pas, l'application de visualisation fonctionnera avec la licence attribuée.                                                                                                                                                     |
+
+ 

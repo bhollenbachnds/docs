@@ -1,0 +1,199 @@
+---
+- title: LG WebOS Signage 24
+---
+
+Ce guide fournit des instructions étape par étape pour **l'installation et la configuration de PADS4 Viewer** sur **LG webOS Signage 24 (8.0)**.
+
+<Warning>
+  Notre solution actuelle n'est pas en mesure de fournir des captures d'écran du contenu vidéo et ne fournit que des informations de base sur l'appareil. Ces deux points seront traités dans un avenir proche.
+
+  Mis à part ces deux limitations, l'appareil est bien adapté à l'utilisation d'affichage dynamique par PADS4.
+</Warning>
+
+## **1. Première utilisation**
+
+Avant l'installation, assurez-vous que le **serveur PADS4 version 2025.1 est configuré correctement**.
+
+<Note>
+  Ce guide est spécifique à **webOS Signage 24 (8.0).** Si l'**Assistant de configuration** ne démarre pas automatiquement, réinitialisez l'appareil comme décrit dans **1.2 Réinitialisation de l'appareil**.
+</Note>
+
+***
+
+### **1.1 Configuration de l'appareil**
+
+Aucune modification n'est nécessaire avant d'installer le **PADS4 Viewer**. Passez directement à l'**Installation**.
+
+***
+
+### **1.2 Réinitialisation de l'appareil**
+
+Si l'appareil a été utilisé précédemment, effectuez une **réinitialisation d'usine** pour effacer le stockage et éviter les conflits logiciels.
+
+<Steps>
+  <Step title="Étape Un">
+    Appuyez sur le **bouton Paramètres** *(icône d'engrenage sur la télécommande)*.
+  </Step>
+
+  <Step title="Étape Deux">
+    Sélectionnez **Admin**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Sélectionnez **Activer**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Entrez le **code PIN** par défaut : `000000`.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Confirmez pour **démarrer la réinitialisation d'usine**.
+  </Step>
+</Steps>
+
+Après la réinitialisation, l'**Écran d'accueil** apparaîtra. Suivez les étapes dans **1.1 Configuration de l'appareil**.
+
+***
+
+## **2. Installation de PADS4 Viewer**
+
+Suivez ces étapes pour installer le **PADS4 Viewer** sur **LG webOS Signage 24 (8.0)**.
+
+#### **Étapes d'installation**
+
+<Steps>
+  <Step title="Étape Un">
+    Appuyez sur le bouton **Mise en marche**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Appuyez sur le **bouton Paramètres** *(icône d'engrenage sur la télécommande)*.
+  </Step>
+
+  <Step title="Étape Trois">
+    Sélectionnez **EZ Settings**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Sélectionnez **SI Server Settings** dans le menu de droite et appuyez sur **OK**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Réglez **Fully Qualified Domain Name** sur **ON**.
+  </Step>
+
+  <Step title="Étape Six">
+    Définissez l'**URL** pour le **PADS4 Server**:
+
+    * **HTTP:** `http://<server>/pads4/apps/lg.zip`
+    * **HTTPS:** `https://<server>/pads4/apps/lg.zip` *(connexion sécurisée utilisant HTTPS)*
+    * Remplacez `<server>` par l'**adresse IP ou le nom de domaine** du **PADS4 Server**.
+  </Step>
+
+  <Step title="Étape Sept">
+    Réglez **Application Launch Mode** sur **Local**.
+  </Step>
+
+  <Step title="Étape Huit">
+    Réglez **Installation Type** sur **ZIP**.
+  </Step>
+
+  <Step title="Étape Neuf">
+    Sélectionnez **Local Application Upgrade → Remote**.
+  </Step>
+
+  <Step title="Étape Dix">
+    Sélectionnez **Confirm** pour démarrer la mise à niveau.
+  </Step>
+
+  <Step title="Étape Onze">
+    Après le téléchargement, **éteignez/allumez** l'appareil.
+  </Step>
+</Steps>
+
+Après avoir terminé ces étapes, le **PADS4 HTML5 Viewer** se téléchargera et démarrera automatiquement.
+
+* Une **icône d'indicateur de connexion** apparaîtra en bas à gauche de l'écran :
+  * **Vert** = Connexion réussie
+  * **Rouge** = Problème de connexion
+
+Pour résoudre les problèmes, vérifiez les **Paramètres du Viewer** et les **fichiers journaux** pour les erreurs.
+
+***
+
+### **2.1 Vérification du firmware de l'appareil**
+
+Assurez-vous que la **version correcte du firmware** est installée pour une fonctionnalité complète du **PADS4 Viewer**.
+
+<Steps>
+  <Step title="Étape Un">
+    Appuyez sur le **Home button** de la télécommande.
+  </Step>
+
+  <Step title="Étape Deux">
+    Ouvrez le **SI App (ZIP) Dashboard** et vérifiez la **firmware version**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Assurez-vous que la **firmware version** est **03.32.01** *(requise pour PADS4)*.
+  </Step>
+</Steps>
+
+***
+
+### **2.2 Mise à jour du Firmware**
+
+<Steps>
+  <Step title="Étape Une">
+    Copiez le `firmware .epk file` dans le dossier **LG\_MONITOR** d'une **clé USB**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Insérez la **clé USB** dans l'**LG WebOS8 device**.
+  </Step>
+
+  <Step title="Étape Trois">
+    L'**appareil détectera la clé USB** et démarrera la **mise à jour du firmware** automatiquement.
+  </Step>
+</Steps>
+
+***
+
+### **2.3 Ajustement des paramètres du PADS4 Viewer**
+
+* **Appuyez et maintenez le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes** pour accéder aux **Viewer Settings**.
+
+***
+
+## **3. Fonctionnalités prises en charge et limitations**
+
+| Fonctionnalité | Description                                                                                                 |
+| :------------: | :---------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Automatic Software Updates** – HTML5 Viewer se met à jour automatiquement.                                |
+|        ✅       | **Offline Mode** – L'appareil continue d'exécuter les présentations pendant **7 jours** en mode hors ligne. |
+|        ✅       | **Supports HTTP & HTTPS**                                                                                   |
+|        ✅       | **Maximum of one 4K Video**                                                                                 |
+|        ✅       | **Streaming Support** – HTTP, HTTPS, HLS V3, UDP, RTP, RTPS multicast.                                      |
+|        ✅       | **Cluster Viewer Mode** – Pris en charge.                                                                   |
+|        ✅       | **Interactive Button, Text, Scrolling Text, Image, Table**                                                  |
+|        ✅       | **PowerPoint & PDF Elements** – *(PowerPoint requires installation on PADS4 Server)*.                       |
+|        ✅       | **Remote Device Management** – Contrôlé via **PADS4 CTRL Center & PADS4 Agent**.                            |
+|        ✅       | **Wake-on-LAN** – Pris en charge.                                                                           |
+|        ✅       | **Proof of Play Tracking** – Surveille l'historique de lecture du contenu.                                  |
+|        ❌       | **Turn Off Display** – Non pris en charge.                                                                  |
+|        ❌       | **Video Rotation, Reflection, Skew, Flip** – Non pris en charge.                                            |
+|        ❌       | **Playback Speed Adjustment** – Non pris en charge.                                                         |
+|        ❌       | **Retrieving screenshots from video content**– Non pris en charge.                                          |
+
+***
+
+## **4. Dépannage**
+
+| **Problème**                                             | **Solution**                                                                                                              |
+| :------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| **Problèmes de connexion au PADS4 Server**               | Assurez-vous que l'**URL correcte** est configurée dans les **SI Server Settings**.                                       |
+| **Version du firmware incorrecte**                       | Vérifiez et **mettez à jour le firmware** vers **03.32.01** en suivant **2.2 Mise à jour du Firmware**.                   |
+| **Les commandes de la télécommande ne fonctionnent pas** | Assurez-vous que **block remote control** est désactivé dans les **Device Settings**.                                     |
+| **L'écran ne s'éteint pas**                              | **Turn Off Display** n'est **pas pris en charge** sur **webOS Signage 24 (8.0).**                                         |
+| **.Problèmes de streaming**                              | Vérifiez le **format d'encodage du flux** (MP4, MPEGTS, MP2T). Utilisez `rtp://239.0.0.1/?encoding=mpegts` si nécessaire. |

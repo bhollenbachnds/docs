@@ -1,84 +1,76 @@
 Ce guide fournit des instructions étape par étape pour l'installation et la configuration de **PADS4 Viewer** sur les appareils **Crestron TSS-1070-B-S**.
 
-***
-
 ## **1. Première utilisation**
 
 Pendant l'installation, vous devrez configurer l'emplacement du **PADS4 Server**. Il est recommandé de **terminer l'installation du PADS4 Server d'abord** avant de configurer l'appareil Crestron.
 
-<Note>La version minimale du **PADS4 Server** requise pour exécuter **PADS4 on Crestron** est **PADS4 Foundation 2022.3**.</Note>
-
-***
+<Note>
+  La version minimale du **PADS4 Server** requise pour exécuter **PADS4 on Crestron** est **PADS4 Foundation 2022.3**.
+</Note>
 
 ### **1.1 Réinitialisation de l'appareil**
 
-Si l'appareil a déjà été utilisé, une **réinitialisation d'usine** est recommandée pour effacer le stockage et éviter toute interférence avec le logiciel **PADS4 Viewer**.
+Si l'appareil a été utilisé précédemment, une **réinitialisation d'usine** est recommandée pour effacer le stockage et éviter toute interférence avec le logiciel **PADS4 Viewer**.
 
 <Steps>
   <Step title="Première étape">
-    Connectez-vous à **l'interface de configuration web** de l'appareil Crestron.
+    Connectez-vous à l'**interface de configuration web** de l'appareil Crestron.
   </Step>
 
-  <Step title="Deuxième étape">
-    Cliquez sur le **bouton flèche** à côté du **bouton Action** en haut à droite de l'écran.
+  <Step title="Étape Deux">
+    Cliquez sur le **bouton flèche** à côté du **Action button** en haut à droite de l'écran.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Sélectionnez **Restore**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Cliquez sur **Yes** dans la boîte de dialogue de confirmation.
   </Step>
 </Steps>
 
-***
-
 ### **1.2 Mise à jour du firmware**
 
-**PADS4 est inclus avec le firmware Crestron** et ne peut pas être installé séparément.
+**PADS4 est inclus dans le firmware Crestron** et ne peut pas être installé séparément.
 
-<Note>La version minimale du firmware qui inclut **PADS4** est **2.003.1011**.</Note>
-
-***
+<Note>
+  La version minimale du firmware qui inclut **PADS4** est **2.003.1011**.
+</Note>
 
 ## **2. Installation de PADS4 Viewer**
 
 Suivez les instructions ci-dessous pour exécuter **PADS4 Viewer** sur Crestron.
 
-***
-
 ### **2.1 Définir le mode d'application Crestron sur PADS4**
 
-**PADS4** est inclus dans le **firmware Crestron** et peut être installé en sélectionnant **PADS4 comme mode d'application** dans **l'interface de configuration web**.
+**PADS4** est inclus dans le **Crestron firmware** et peut être installé en sélectionnant **PADS4 as the Application Mode** dans l'**interface de configuration web**.
 
 <Steps>
-  <Step title="Première étape">
-    Connectez-vous à **l'interface de configuration web** de l'appareil Crestron.
+  <Step title="Étape Une">
+    Connectez-vous à l'**interface de configuration web** de l'appareil Crestron.
   </Step>
 
-  <Step title="Deuxième étape">
-    Cliquez sur **l'onglet Settings**.
+  <Step title="Étape Deux">
+    Cliquez sur l'onglet **Settings tab**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Sélectionnez **Applications**.
   </Step>
 
-  <Step title="Quatrième étape">
-    Sélectionnez **PADS4** dans le **menu déroulant Application Mode**.
+  <Step title="Étape Quatre">
+    Sélectionnez **PADS4** dans le menu déroulant **Application Mode dropdown**.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Cliquez sur **"Save Changes"** en haut à droite de l'interface web.
   </Step>
 
-  <Step title="Sixième étape">
+  <Step title="Étape Six">
     Cliquez sur **"Yes, Reboot Now"** dans la boîte de dialogue de confirmation.
   </Step>
 </Steps>
-
-***
 
 ### **2.2 Connexion au PADS4 Server**
 
@@ -104,41 +96,37 @@ http://localhost/pads4
 #### **Étapes de connexion**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Une">
     Entrez l'**emplacement du PADS4 Server**.
   </Step>
 
-  <Step title="Deuxième étape">
-    (Optionnel) Spécifiez un **nom de Viewer**. Si laissé vide, le **PADS4 Server** en générera un.
+  <Step title="Étape Deux">
+    (Optionnel) Spécifiez un **Viewer Name**. Si laissé vide, le **PADS4 Server** en générera un.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Appuyez sur le bouton **Start**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Accordez la **permission de stocker définitivement du contenu** sur l'appareil lorsque vous y êtes invité.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Si le **Android System WebView** est obsolète, il sera automatiquement mis à jour.
   </Step>
 
-  <Step title="Sixième étape">
+  <Step title="Étape Six">
     **PADS4 Viewer** sera téléchargé. Attendez que l'installation soit terminée, et le **Viewer démarrera** automatiquement.
   </Step>
 </Steps>
 
-***
-
 ### **2.3 Ajuster les paramètres de PADS4 Viewer**
 
-Pour **ajuster les paramètres de PADS4 Viewer** directement sur l'**écran Crestron**:
+Pour **ajuster les paramètres de PADS4 Viewer** directement sur l'**écran Crestron** :
 
-* **Maintenez enfoncé le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes** pour ouvrir l'**écran d'options**.
+* **Maintenez enfoncé le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes** pour ouvrir l'**Options Screen**.
 * Pour **revenir à l'application PADS4**, appuyez sur le bouton **Launcher Settings**.
-
-***
 
 ## **3. Configuration du capteur d'occupation Crestron**
 
@@ -147,60 +135,56 @@ Pour **ajuster les paramètres de PADS4 Viewer** directement sur l'**écran Cres
 ### **3.1 Appairage du capteur d'occupation avec l'écran**
 
 <Steps>
-  <Step title="Étape une">
+  <Step title="Étape Une">
     Connectez-vous à l'**interface de configuration web** de l'écran Crestron.
   </Step>
 
-  <Step title="Étape deux">
-    Cliquez sur l'onglet **Settings**.
+  <Step title="Étape Deux">
+    Cliquez sur l'onglet **Settings tab**.
   </Step>
 
-  <Step title="Étape trois">
+  <Step title="Étape Trois">
     Ouvrez **Device Pairing**.
   </Step>
 
-  <Step title="Étape quatre">
-    Sélectionnez **POE Occupancy Sensor** dans le menu déroulant **Device Model**.
+  <Step title="Étape Quatre">
+    Sélectionnez **POE Occupancy Sensor** dans le menu déroulant **Device Model dropdown**.
   </Step>
 
-  <Step title="Étape cinq">
-    Saisissez l'**adresse IP** ou le **FQDN** du **capteur**.
+  <Step title="Étape Cinq">
+    Entrez l'**adresse IP** ou le **FQDN** du **capteur**.
   </Step>
 
-  <Step title="Étape six">
+  <Step title="Étape Six">
     Cliquez sur **Save Changes** en haut à droite de l'interface web.
   </Step>
 
-  <Step title="Étape sept">
+  <Step title="Étape Sept">
     Après l'enregistrement, le **Pairing Status** devrait passer à **Online**.
   </Step>
 </Steps>
-
-***
 
 ### **3.2 Trouver le capteur d'occupation dans PADS4 Workspace**
 
 Après l'appairage, le capteur sera **visible dans PADS4 Workspace Admin**.
 
 <Steps>
-  <Step title="Étape une">
+  <Step title="Étape Une">
     Connectez-vous à **PADS4 Workspace Admin**.
   </Step>
 
-  <Step title="Étape deux">
+  <Step title="Étape Deux">
     Cliquez sur **Occupancy Sensors**.
   </Step>
 
-  <Step title="Étape trois">
-    Cliquez sur l'onglet **Sensors**.
+  <Step title="Étape Trois">
+    Cliquez sur l'**onglet Sensors**.
   </Step>
 
-  <Step title="Étape quatre">
-    Le **capteur** sera répertorié dans le **tableau**.
+  <Step title="Étape Quatre">
+    Le **sensor** sera listé dans le **tableau**.
   </Step>
 </Steps>
-
-***
 
 ## **4. Fonctionnalités prises en charge et limitations**
 
@@ -216,13 +200,13 @@ Après l'appairage, le capteur sera **visible dans PADS4 Workspace Admin**.
 
 ### **Contenu et lecture**
 
-| Fonctionnalité | Description                                                                          |
-| :------------: | ------------------------------------------------------------------------------------ |
-|        ✅       | **Supports JPG, PNG, BMP, GIF, Text, Shapes, Tables, Interactive Buttons**           |
-|        ✅       | **Single Video Playback**                                                            |
-|        ❌       | **Streaming Video** – Non pris en charge.                                            |
-|        ✅       | **Content from PADS4 Content Library & URL**                                         |
-|        ✅       | **Web Element** – Utilisation de la **interactive Address Bar** non prise en charge. |
+| Fonctionnalité | Description                                                                         |
+| :------------: | ----------------------------------------------------------------------------------- |
+|        ✅       | **Supports JPG, PNG, BMP, GIF, Text, Shapes, Tables, Interactive Buttons**          |
+|        ✅       | **Single Video Playback**                                                           |
+|        ❌       | **Streaming Video** – Non pris en charge.                                           |
+|        ✅       | **Content from PADS4 Content Library & URL**                                        |
+|        ✅       | **Web Element** – Utilisation de l'**interactive Address Bar** non prise en charge. |
 
 ### **Gestion des appareils**
 
@@ -237,5 +221,10 @@ Après l'appairage, le capteur sera **visible dans PADS4 Workspace Admin**.
 
 ## **5. Limitations générales**
 
-<Warning> **Le stockage de fichiers local pour le contenu n'est pas pris en charge.** </Warning>
-<Warning> **Limite de Proof of Play : Maximum de 50 000 enregistrements stockés hors ligne.** </Warning>
+<Warning>
+  **Le stockage de fichiers local pour le contenu n'est pas pris en charge.**
+</Warning>
+
+<Warning>
+  **Limite de Proof of Play : Maximum de 50 000 enregistrements stockés hors ligne.**
+</Warning>

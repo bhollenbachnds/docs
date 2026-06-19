@@ -1,4 +1,4 @@
-Le **Newmarket Delphi** fournisseur dans **PADS4** vous permet de vous connecter aux **Delphi hospitality feeds** pour récupérer des informations relatives aux emplacements, réservations et fonctions des salles.
+Le fournisseur **Newmarket Delphi** dans **PADS4** vous permet de vous connecter aux **Delphi hospitality feeds** pour récupérer des informations relatives aux emplacements, réservations et fonctions de salle.
 
 ***
 
@@ -6,45 +6,45 @@ Le **Newmarket Delphi** fournisseur dans **PADS4** vous permet de vous connecter
 
 #### **1. Démarrer l'Assistant de fournisseur de données**
 
-* Ouvrez **PADS4** et accédez à l'**Assistant de fournisseur de données**.
-* Sélectionnez **Newmarket Delphi Feed** comme **type de fournisseur**.
-* Cliquez sur **Suivant** pour continuer.
+* Ouvrez **PADS4** et accédez à **Data Provider Wizard**.
+* Sélectionnez **Newmarket Delphi Feed** comme **provider type**.
+* Cliquez sur **Next** pour continuer.
 
 #### **2. Sélectionner la version du serveur**
 
-* Choisissez la **version du serveur** :
-  * **Versions plus anciennes** nécessitent des identifiants différents.
-  * **Versions plus récentes** peuvent offrir de meilleures performances et sécurité.
+* Choisissez la **server version**:
+  * **Older versions** nécessitent des identifiants différents.
+  * **Newer versions** peuvent offrir de meilleures performances et sécurité.
 
 #### **3. S'authentifier auprès de Newmarket Delphi**
 
-* Saisissez les **identifiants Delphi NWS (Newmarket Web Services)**.
-* Cliquez sur **Connecter** (si les identifiants sont enregistrés, le système peut se connecter automatiquement).
+* Saisissez les **Delphi NWS (Newmarket Web Services) credentials**.
+* Cliquez sur **Connect** (si les identifiants sont enregistrés, le système peut se connecter automatiquement).
 
 #### **4. Choisir le type de données à récupérer**
 
-* **Obtenir l'emplacement**
-  * Sélectionnez l'**ID d'emplacement** dans la liste déroulante.
+* **Get Location**
+  * Sélectionnez le **Location ID** dans la liste déroulante.
 
-* **Événements de réservation**
-  * Sélectionnez l'**ID d'emplacement**.
-  * Définissez la **période** *(De/Jusqu'à)*.
-  * Activez **Afficher uniquement les événements publiés** *(facultatif)*.
-  * Activez **Inclure les données d'emplacement** *(ajoute des colonnes liées à l'emplacement)*.
-  * Activez **Inclure les données de salle** *(ajoute des colonnes liées aux salles, peut affecter les performances)*.
+* **Booking Events**
+  * Sélectionnez le **Location ID**.
+  * Définissez la **time period** *(From/Until)*.
+  * Activez **Only show posted events** *(optionnel)*.
+  * Activez **Include location data** *(ajoute des colonnes liées à l'emplacement)*.
+  * Activez **Include room data** *(ajoute des colonnes liées aux salles, peut affecter les performances)*.
 
-* **Fonctions de salle / Fonctions de groupe de salles**
-  * Sélectionnez un ou plusieurs **Emplacements**.
-  * Cochez **ID externe** si vous utilisez des ID d'emplacement externes.
-  * Activez **Inclure les données d'emplacement** *(ajoute des colonnes liées à l'emplacement, peut affecter les performances)*.
+* **Room Functions / Room Group Functions**
+  * Sélectionnez un ou plusieurs **Locations**.
+  * Cochez **External ID** si vous utilisez des ID d'emplacement externes.
+  * Activez **Include location data** *(ajoute des colonnes liées à l'emplacement, peut affecter les performances)*.
 
 #### **5. Configurer les paramètres Delphi Feed plus anciens (version 9.6 et antérieures)**
 
-* Saisissez l'**URL du service Delphi** *(par exemple, [http://your-ip-address/MeetingSpaceServices/Request.asmx](http://your-ip-address/MeetingSpaceServices/Request.asmx))*.
-* Saisissez la **Clé de propriété** *(numéro d'identification du bâtiment)*.
-* Fournissez un **Nom d'utilisateur** *(Système fournisseur)* et un **Mot de passe** *(Clé de licence)*.
+* Saisissez l'**Delphi Service URL** *(par exemple, [http://your-ip-address/MeetingSpaceServices/Request.asmx](http://your-ip-address/MeetingSpaceServices/Request.asmx))*.
+* Saisissez la **Property Key** *(numéro d'identification du bâtiment)*.
+* Fournissez un **Username** *(Vendor System)* et un **Password** *(License Key)*.
 * Choisissez entre :
-  * **Obtenir les caractéristiques de la salle** *(récupère les détails de la salle : nom, étage, description, etc.)*.
+  * **Get Room Characteristics** *(récupère les détails de la salle : nom, étage, description, etc.)*.
   * **Obtenir les informations de la salle** *(récupère les détails de disponibilité de la salle)*.
   * **Inclure les caractéristiques** *(associe automatiquement les détails de la salle)*.
 
@@ -53,17 +53,17 @@ Le **Newmarket Delphi** fournisseur dans **PADS4** vous permet de vous connecter
 * **Clé d'événement** – Filtrer par nom d'événement.
 * **Groupe de salles** – Filtrer par groupe de salles *(sensible à la casse)*.
 * **Exposition** – Filtrer les salles avec des expositions programmées.
-* **Publiable** – Filtrer selon le statut de publication.
+* **Affichable** – Filtrer selon le statut d'affichage.
 * **Langue alternative** – Sélectionner un modèle de langue alternative.
 
 #### **7. Définir la plage de date/heure pour la récupération des données**
 
 * **Aujourd'hui** – Récupère les données pour le jour actuel.
-  * Optionnellement, définissez un **décalage en jours**.
+  * En option, définir un **décalage en jours**.
 * **Maintenant** – Récupère les données actuelles.
-  * Optionnellement, spécifiez un **décalage avant ou après l'heure actuelle**.
-* **Date et heure** – Définissez une **période fixe**.
-* **Prédéfini** – Sélectionnez **Semaine, Semaine prochaine ou Mois**.
+  * En option, spécifier un **décalage avant ou après l'heure actuelle**.
+* **Date et heure** – Définir une **période fixe**.
+* **Prédéfini** – Sélectionner **Semaine, Semaine prochaine ou Mois**.
 
 Cliquez sur **Suivant** pour continuer.
 
@@ -76,12 +76,12 @@ Cliquez sur **Suivant** pour continuer.
 
 ### **Remarques importantes**
 
-* **Considérations de performance** :
-  * L'activation de **Inclure les données de salle** peut **ralentir les performances** en raison du traitement supplémentaire.
-  * Les versions plus anciennes de Delphi nécessitent une **saisie manuelle** des URL de service.
-* **Sécurité et authentification** :
+* **Considérations de performance**:
+  * L'activation de **Include Room Data** peut **ralentir les performances** en raison du traitement supplémentaire.
+  * Les anciennes versions de Delphi nécessitent **une saisie manuelle** des URL de service.
+* **Sécurité et authentification**:
   * Assurez-vous que les **identifiants Delphi** sont corrects pour une intégration fluide.
-* **Personnalisation** :
-  * Utilisez des **filtres** pour **limiter la récupération de données**, évitant les **charges importantes en mémoire**.
+* **Personnalisation**:
+  * Utilisez des **filtres** pour **limiter la récupération de données**, évitant ainsi des **charges mémoire importantes**.
 
-Cette configuration garantit que **PADS4** peut récupérer efficacement des **données d'hôtellerie en temps réel**, ce qui est utile pour **la gestion d'événements, la planification des salles et les informations opérationnelles**.
+Cette configuration garantit que **PADS4** peut récupérer efficacement des **données d'hôtellerie en temps réel**, ce qui est utile pour la **gestion d'événements, la planification des salles et les informations opérationnelles**.

@@ -1,14 +1,18 @@
-Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **Giada DN73 & DN74 devices running Android 7.1**.
+---
+- title: D73 & D74 (Android)
+---
+
+Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **les appareils Giada DN73 & DN74 fonctionnant sous Android 7.1**.
 
 ***
 
 ## **1. Première utilisation**
 
-Pendant l'installation, vous devrez **configurer l'emplacement du PADS4 Server**. Il est recommandé de **terminer d'abord l'installation du PADS4 Server** avant de procéder à la configuration de l'appareil.
+Pendant l'installation, vous devrez **configurer l'emplacement du serveur PADS4**. Il est recommandé de **terminer d'abord l'installation du serveur PADS4** avant de procéder à la configuration de l'appareil.
 
 <Note>
-  La version minimale **PADS4 Server version** requise pour l'application **PADS4Giada app** est **PADS4 Foundation 2022.1**.\
-  La version minimale **PADS4Giada version** supportant **DN73 and DN74** est **PADS4Giada 1.0**.
+  La version minimale **PADS4 Server** requise pour **PADS4Giada app** est **PADS4 Foundation 2022.1**.\
+  La version minimale **PADS4Giada** prenant en charge **DN73 and DN74** est **PADS4Giada 1.0**.
 </Note>
 
 ***
@@ -18,24 +22,24 @@ Pendant l'installation, vous devrez **configurer l'emplacement du PADS4 Server**
 Si l'appareil a déjà été utilisé, une **réinitialisation d'usine** est recommandée pour **effacer le stockage** et **éviter les interférences** avec le **PADS4 Viewer software**.
 
 <Steps>
-  <Step title="Étape Une">
-    Ouvrir **Android Settings**.
+  <Step title="Étape Un">
+    Ouvrez **Android Settings**.
   </Step>
 
   <Step title="Étape Deux">
-    Sélectionner **Backup & Reset**.
+    Sélectionnez **Backup & Reset**.
   </Step>
 
   <Step title="Étape Trois">
-    Sélectionner **Factory Data Reset**.
+    Sélectionnez **Factory Data Reset**.
   </Step>
 
   <Step title="Étape Quatre">
-    Cliquer sur **Reset Tablet**.
+    Cliquez sur **Reset Tablet**.
   </Step>
 
   <Step title="Étape Cinq">
-    Confirmer en cliquant sur **Erase Everything**.
+    Confirmez en cliquant sur **Erase Everything**.
   </Step>
 </Steps>
 
@@ -43,51 +47,51 @@ Si l'appareil a déjà été utilisé, une **réinitialisation d'usine** est rec
 
 ### **1.2 Mise à jour du firmware**
 
-Assurez-vous que les appareils **Giada DN73 & DN74** utilisent des **PADS4-supported firmware versions** avant d'installer l'application **PADS4Giada app**.
+Assurez-vous que les **Giada DN73 & DN74** utilisent des **versions de firmware prises en charge par PADS4** avant d'installer **PADS4Giada app**.
 
 #### **Versions de firmware prises en charge**
 
-| Device   | Firmware Version | Loader Version | Chip Info | Android Tool Version | Download          |
-| -------- | ---------------- | -------------- | --------- | -------------------- | ----------------- |
-| **DN73** | 7.1.00           | 2.44           | RK322H    | 2.38                 | [**Download**](#) |
-| **DN74** | 7.1.00           | 2.45           | RK330C    | 2.63                 | [**Download**](#) |
+| Appareil | Version du firmware | Version du chargeur | Informations sur la puce | Version de l'outil Android | Télécharger          |
+| -------- | ------------------- | ------------------- | ------------------------ | -------------------------- | -------------------- |
+| **DN73** | 7.1.00              | 2.44                | RK322H                   | 2.38                       | [**Télécharger**](#) |
+| **DN74** | 7.1.00              | 2.45                | RK330C                   | 2.63                       | [**Télécharger**](#) |
 
 ***
 
 ### **1.3 Activation de l'accès Superuser par défaut**
 
-Cette étape est **requise** pour activer les **automatic updates** de l'application **PADS4Giada app**. Si l'**Superuser Access** n'est pas accordé, une **manual interaction** sera nécessaire pour les mises à jour.
+Cette étape est **requise** pour activer les **mises à jour automatiques** de **PADS4Giada app**. Si **Superuser Access** n'est pas accordé, une **interaction manuelle** sera nécessaire pour les mises à jour.
 
 <Steps>
-  <Step title="Étape Une">
-    Ouvrir l'application **SuperSU app**.
+  <Step title="Étape Un">
+    Ouvrez l'application **SuperSU**.
   </Step>
 
   <Step title="Étape Deux">
-    Aller dans **Settings**.
+    Allez dans **Settings**.
   </Step>
 
   <Step title="Étape Trois">
-    Cliquer sur **Default Access**.
+    Cliquez sur **Default Access**.
   </Step>
 
   <Step title="Étape Quatre">
-    Sélectionner **Grant** dans la boîte de dialogue qui apparaît.
+    Sélectionnez **Grant** dans la boîte de dialogue qui apparaît.
   </Step>
 
   <Step title="Étape Cinq">
-    Quitter l'application.
+    Quittez l'application.
   </Step>
 </Steps>
 
-*Optional:* Pour réinitialiser l'**screen orientation**, naviguez vers :\
+*Optional:* Pour réinitialiser **l'orientation de l'écran**, naviguez vers :\
 ➡ **Android Settings** → **Display** → **HDMI** → **Screen Rotation** → **Select "0"**.
 
 ***
 
 ## **2. Installation de PADS4 Viewer**
 
-Suivez les étapes ci-dessous pour **install and configure PADS4 Viewer** sur **Giada DN73 and DN74**.
+Suivez les étapes ci-dessous pour **installer et configurer PADS4 Viewer** sur **Giada DN73 et DN74**.
 
 ***
 
@@ -99,21 +103,21 @@ Le fichier **PADS4Giada.apk** est disponible sur le **PADS4 Server** dans le ré
 C:\Program Files\PADS4\Foundation\Apps
 ```
 
-Alternativement, téléchargez la **latest version** depuis [**here**](https://github.com/PADS4/PADS4-Viewer-Giada/releases/latest) et placez-la dans le **PADS4 Server apps directory** pour vous assurer que la version correcte est installée.
+Alternativement, téléchargez la **dernière version** depuis [**ici**](https://github.com/PADS4/PADS4-Viewer-Giada/releases/latest) et placez-la dans le **répertoire des applications du serveur PADS4** pour vous assurer que la version correcte est installée.
 
 #### **Étapes d'installation**
 
 <Steps>
-  <Step title="Étape Une">
-    Copiez le fichier **PADS4Giada.apk** sur une **USB stick**.
+  <Step title="Étape Un">
+    Copiez le fichier **PADS4Giada.apk** sur une **clé USB**.
   </Step>
 
   <Step title="Étape Deux">
-    Insérez la **USB stick** dans l'appareil **Giada DN73/DN74 device**.
+    Insérez la **clé USB** dans **l'appareil Giada DN73/DN74**.
   </Step>
 
   <Step title="Étape Trois">
-    Ouvrez l'application **File Explorer app** sur l'appareil.
+    Ouvrez **File Explorer** sur l'appareil.
   </Step>
 
   <Step title="Étape Quatre">
@@ -121,11 +125,11 @@ Alternativement, téléchargez la **latest version** depuis [**here**](https://g
   </Step>
 
   <Step title="Étape Cinq">
-    Cliquez sur le **APK file** pour l'installer.
+    Cliquez sur le **fichier APK** pour l'installer.
   </Step>
 
   <Step title="Étape Six">
-    Si vous êtes invité par un **security warning**, cliquez sur **Settings**.
+    Si vous recevez un **avertissement de sécurité**, cliquez sur **Settings**.
   </Step>
 
   <Step title="Étape Sept">
@@ -133,7 +137,7 @@ Alternativement, téléchargez la **latest version** depuis [**here**](https://g
   </Step>
 
   <Step title="Étape Huit">
-    Retournez à **File Explorer** et cliquez à nouveau sur le **APK file**.
+    Retournez à **File Explorer** et cliquez à nouveau sur le **fichier APK**.
   </Step>
 
   <Step title="Étape Neuf">
@@ -141,7 +145,7 @@ Alternativement, téléchargez la **latest version** depuis [**here**](https://g
   </Step>
 
   <Step title="Étape Dix">
-    Après l'installation, cliquez sur **Open** pour démarrer l'application **PADS4Giada app**.
+    Après l'installation, cliquez sur **Ouvrir** pour démarrer l'application **PADS4Giada**.
   </Step>
 </Steps>
 
@@ -149,23 +153,23 @@ Alternativement, téléchargez la **latest version** depuis [**here**](https://g
 
 ### **2.2 Validation de la configuration de la date et de l'heure**
 
-Assurez-vous que la **date and time** sont correctement définies pour éviter les **certificate errors** ou les **connection issues**.
+Assurez-vous que la **date et l'heure** sont correctement définies pour éviter les **erreurs de certificat** ou les **problèmes de connexion**.
 
 <Steps>
-  <Step title="Étape Une">
-    Ouvrez l'application **PADS4Giada app**.
+  <Step title="Étape Un">
+    Ouvrez l'application **PADS4Giada**.
   </Step>
 
   <Step title="Étape Deux">
-    Cliquez sur **System Settings** pour ouvrir **Android Settings**.
+    Cliquez sur **System Settings** pour ouvrir les **Paramètres Android**.
   </Step>
 
   <Step title="Étape Trois">
-    Naviguez vers **Date & Time**.
+    Naviguez vers **Date & Heure**.
   </Step>
 
   <Step title="Étape Quatre">
-    Configurez la **correct date and time**.
+    Configurez la **date et l'heure correctes**.
   </Step>
 
   <Step title="Étape Cinq - *Optionnel*">
@@ -175,48 +179,48 @@ Assurez-vous que la **date and time** sont correctement définies pour éviter l
 
 ***
 
-### **2.3 Connexion au PADS4 Server**
+### **2.3 Connexion au serveur PADS4**
 
-**Format d'adresse du PADS4 Server :**
+**Format d'adresse du serveur PADS4 :**
 
 ```
 protocol://host:port/hostpath/  
 ```
 
 * **Protocol:** `HTTP` ou `HTTPS` (dépend du certificat SSL).
-* **Host:** Nom DNS ou **Adresse IP** du **PADS4 Server**.
+* **Host:** Nom DNS ou **adresse IP** du **PADS4 Server**.
 * **Port:** *(Optionnel - à spécifier uniquement si vous utilisez des ports non standard).*
 * **Chemin d'hôte :** Configuré dans **System Management** *`(default: PADS4)`*.
 
 #### **Étapes de connexion**
 
 <Steps>
-  <Step title="Première étape">
-    Saisissez l'**PADS4 Server Location**.
+  <Step title="Étape Un">
+    Entrez l'**emplacement du serveur PADS4**.
   </Step>
 
-  <Step title="Deuxième étape - *Optionnelle*">
+  <Step title="Étape Deux - *Optionnel*">
     Spécifiez un **Viewer Name** (si laissé vide, PADS4 en générera un).
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Appuyez sur **Start**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Accordez la **permission de stocker du contenu** lorsque vous y êtes invité.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Si **Android System WebView** est obsolète, il sera mis à jour automatiquement.
   </Step>
 
-  <Step title="Sixième étape">
+  <Step title="Étape Six">
     Le **PADS4 Viewer** sera **téléchargé et installé**.
   </Step>
 
-  <Step title="Septième étape">
-    Si vous y êtes invité, définissez **PADS4Giada as the Home App** et appuyez sur **Always**.
+  <Step title="Étape Sept">
+    Si vous y êtes invité, définissez **PADS4Giada comme application d'accueil** et appuyez sur **Toujours**.
   </Step>
 </Steps>
 
@@ -224,21 +228,21 @@ protocol://host:port/hostpath/
 
 ### **2.4 Ajustement des paramètres du PADS4 Viewer**
 
-Pour accéder aux **Viewer Settings** :
+Pour accéder aux **Paramètres du Viewer**:
 
-* **Maintenez enfoncé le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes**.
+* **Appuyez et maintenez le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes**.
 
 ***
 
 ### **2.5 Mise à jour du PADS4 Viewer & de l'application PADS4Giada**
 
-Le **PADS4 Viewer & PADS4Giada app** se **mettra à jour automatiquement** lorsque le **PADS4 Server** est mis à jour.
+Le **PADS4 Viewer & l'application PADS4Giada** se **mettront à jour automatiquement** lorsque le **PADS4 Server** est mis à jour.
 
 ***
 
 ### **2.6 Accès au menu Android**
 
-Si vous accédez au **Android Menu** pendant que **PADS4Giada** est en cours d'exécution, l'appareil **redémarrera dans 30 secondes** (car le **Viewer Monitor Service** détecte l'inactivité).
+Si vous accédez au **Menu Android** pendant que **PADS4Giada** est en cours d'exécution, l'appareil **redémarrera dans 30 secondes** (car le **Viewer Monitor Service** détecte l'inactivité).
 
 Pour éviter le redémarrage, **arrêtez l'application PADS4Giada dans les 30 secondes**.
 
@@ -246,7 +250,7 @@ Pour éviter le redémarrage, **arrêtez l'application PADS4Giada dans les 30 se
 
 ## **3. Fonctionnalités prises en charge et limitations**
 
-Ci-dessous sont les fonctionnalités prises en charge et les limitations pour **PADS4 Viewer on Giada DN73 & DN74 (Android 7.1).**
+Ci-dessous sont les fonctionnalités prises en charge et les limitations pour **PADS4 Viewer sur Giada DN73 & DN74 (Android 7.1).**
 
 ***
 
@@ -270,57 +274,57 @@ Ci-dessous sont les fonctionnalités prises en charge et les limitations pour **
 |        ✅       | **Formats d'image** – JPG, PNG, BMP, GIF                                              |
 |        ✅       | **Texte, Ligne, Forme, Texte défilant, Texte formaté, Tableaux, Boutons interactifs** |
 |        ❌       | **Élément Flash** – Non pris en charge.                                               |
-|        ✅       | **Élément Web** – Interactif **Address Bar not supported**.                           |
-|        ✅       | **Couleurs** – Prises en charge (sauf pour les **texture and pattern colors**).       |
+|        ✅       | **Élément Web** – Interactif **Barre d'adresse non prise en charge**.                 |
+|        ✅       | **Couleurs** – Prises en charge (sauf pour les **couleurs de texture et de motif**).  |
 
 ***
 
 ### **3.3 Connectivité de données et intégrations**
 
-| Fonctionnalité | Description                                                                                                                      |
-| :------------: | -------------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Fournisseurs de données** – Prend en charge **70+ PADS4 data providers** pour récupérer et intégrer des données en temps réel. |
-|        ✅       | **Viewer Variables** – Simplifie la gestion du contenu sans modifier les présentations.                                          |
-|        ✅       | **Property Bindings** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.                   |
+| Fonctionnalité | Description                                                                                                                                      |
+| :------------: | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+|        ✅       | **Fournisseurs de données** – Prend en charge **plus de 70 fournisseurs de données PADS4** pour récupérer et intégrer des données en temps réel. |
+|        ✅       | **Variables du Viewer** – Simplifie la gestion du contenu sans modifier les présentations.                                                       |
+|        ✅       | **Liaisons de propriétés** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.                              |
 
 ***
 
 ### **3.4 Règles et automatisation**
 
-| Fonctionnalité | Description                                |
-| :------------: | ------------------------------------------ |
-|        ✅       | **Presentation Rules** – Prises en charge. |
-|        ✅       | **Page Rules** – Prises en charge.         |
-|        ✅       | **Element Rules** – Prises en charge.      |
+| Fonctionnalité | Description                                    |
+| :------------: | ---------------------------------------------- |
+|        ✅       | **Règles de présentation** – Prises en charge. |
+|        ✅       | **Page Rules** – Pris en charge.               |
+|        ✅       | **Element Rules** – Pris en charge.            |
 
 ***
 
 ### **3.5 Gestion des appareils**
 
-| Fonctionnalité | Description                                                                                                                    |
-| :------------: | ------------------------------------------------------------------------------------------------------------------------------ |
-|        ✅       | **Gestion à distance des appareils** – Gérée via **PADS4 CTRL Center & PADS4 Agent**.                                          |
-|        ✅       | **Surveillance de l'état de connexion et alertes** – Envoie des alertes en cas de défaillance du réseau.                       |
-|        ✅       | **Redémarrage et relance du Viewer** – Pris en charge.                                                                         |
-|        ❌       | **Arrêt et Wake-on-LAN** – Non pris en charge.                                                                                 |
-|        ✅       | **Éteindre l'écran** – Pris en charge.                                                                                         |
-|        ✅       | **Capture d'écran** – Récupérer des captures d'écran de l'affichage.                                                           |
-|        ✅       | **Journaux et surveillance du système** – Journaux du Viewer, journaux de synchronisation et informations système disponibles. |
-|        ✅       | **Paramètres du Viewer et installation de polices** – Gérer les paramètres et installer des polices personnalisées.            |
-|        ❌       | **Contrôle des lumières LED** – Non pris en charge.                                                                            |
-|        ✅       | **Proof of Play Tracking** – Surveille l'historique de lecture du contenu.                                                     |
-|        ✅       | **Blackbox Support** – Fournit des journaux système pour le dépannage et le support.                                           |
+| Fonctionnalité | Description                                                                                                              |
+| :------------: | ------------------------------------------------------------------------------------------------------------------------ |
+|        ✅       | **Remote Device Management** – Géré via **PADS4 CTRL Center & PADS4 Agent**.                                             |
+|        ✅       | **Connection State Monitoring & Alerts** – Envoie des alertes pour les pannes réseau.                                    |
+|        ✅       | **Reboot & Restart Viewer** – Pris en charge.                                                                            |
+|        ❌       | **Shutdown & Wake-on-LAN** – Non pris en charge.                                                                         |
+|        ✅       | **Turn Off Display** – Pris en charge.                                                                                   |
+|        ✅       | **Screenshot Capture** – Récupère des captures d'écran de l'affichage.                                                   |
+|        ✅       | **Logs & System Monitoring** – Journaux du visualiseur, journaux de synchronisation et informations système disponibles. |
+|        ✅       | **Viewer Settings & Font Installation** – Gestion des paramètres et installation de polices personnalisées.              |
+|        ❌       | **LED Light Control** – Non pris en charge.                                                                              |
+|        ✅       | **Proof of Play Tracking** – Surveille l'historique de lecture du contenu.                                               |
+|        ✅       | **Blackbox Support** – Fournit des journaux système pour le dépannage et le support.                                     |
 
 ***
 
 ## **4. Limitations générales**
 
 <Warning>
-  **Fournisseurs de données** – **HTML5 Viewer** ne peut pas lire les données directement à partir de sources externes ; elles doivent être récupérées via le **PADS4 Data Server**.
+  **Data Providers** – **HTML5 Viewer** ne peut pas lire les données directement à partir de sources externes ; elles doivent être récupérées via le **PADS4 Data Server**.
 </Warning>
 
 <Warning>
-  **Content Library** – Prend en charge **content from PADS4 Content Library** mais **does not support file paths pointing to a local disk**.
+  **Content Library** – Prend en charge le **content from PADS4 Content Library** mais **does not support file paths pointing to a local disk**.
 </Warning>
 
 <Warning>
