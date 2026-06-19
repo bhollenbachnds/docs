@@ -1,0 +1,89 @@
+---
+- title: Amino H200
+---
+
+Ce manuel fournit des instructions étape par étape pour configurer l'appareil Amino H200 et installer le PADS4 Viewer. Il couvre la configuration initiale, l'installation de l'APK, la configuration du démarrage automatique et la configuration du viewer.
+
+**Appareils compatibles :**
+
+* **Amino H200**
+
+**Configuration minimale requise**
+
+Version PADS4 requise : **2025.1** \
+Firmware: **25.6.2540.10R**
+
+## Installation du PADS4 Viewer dans Amino Orchestrate
+
+Amino utilise une console centrale pour gérer les appareils. Assurez-vous de disposer d'un compte et téléchargez le Generic Android Viewer
+
+1. Dans votre navigateur, ouvrez l'URL : [https://orchestrate.amino.tv/](https://orchestrate.amino.tv/)
+2. Sur la page principale, accédez à Application **sections**.
+3. Cliquez sur **Add Application**.
+4. Entrez PADS4 Viewer comme **Application Name**.
+5. Téléversez le **Generic Android Viewer APK**.
+
+Le viewer est prêt à être déployé sur votre appareil.
+
+## Configurer la configuration dans Orchestra
+
+1. Accédez à **Configurations**
+2. Sélectionnez **Add Configuration** et fournissez un nom pour vos Configurations
+3. Cliquez sur **Add** pour enregistrer les Configurations
+4. Ouvrez l'onglet **Parameters**.
+5. Sélectionnez la **Target Version** du Firmware
+6. Cliquez sur **Save Changes** pour appliquer.
+7. Ouvrez l'onglet **Applications** dans la vue de configuration.
+8. Cliquez sur **Add Action** et sélectionnez votre application PADS4.
+9. Vérifiez que l'application est répertoriée, définissez **Action** sur **Install**, et sélectionnez la **Version** correcte si applicable.
+10. Cliquez sur **Save Changes** pour appliquer.
+
+## Définir le démarrage automatique
+
+1. Ouvrez l'onglet **Parameters**.
+2. Sous **Application Settings**, sélectionnez l'application PADS4 Viewer dans la liste déroulante **Home App**.
+3. Cliquez sur **Save Changes**.
+
+## Ajouter des PADS4 Viewers à Orchestra
+
+1. Accédez à **Devices** et sélectionnez **Device list.**
+2. Cliquez sur **Add Device**.
+3. Entrez le **Serial Number** de votre appareil.
+4. Sous **Configuration**, sélectionnez la configuration que vous souhaitez utiliser.
+5. Une fois que le Viewer est en ligne, le player s'installe.
+
+## Configuration du PADS4 Viewer
+
+Après l'installation, le PADS4 Viewer s'ouvre. Entrez l'adresse de votre serveur PADS4 au format`https://<host>:<port>/<domain>/`
+
+* Optionnellement, entrez un nom de viewer personnalisé.
+* Cliquez sur Start pour vous connecter
+
+Attendez la connexion ; une LED verte et le nom du viewer indiquent le succès.
+
+## Fonctionnalités et possibilités prises en charge
+
+### Gestion des appareils
+
+| Pris en charge | Fonctionnalité                                         |
+| :------------: | :----------------------------------------------------- |
+|        ✅       | Gestion à distance des appareils via PADS4 CTRL Center |
+|        ✅       | Redémarrage & Redémarrage du Viewer                    |
+|        ❌       | Arrêt & Wake-on-LAN                                    |
+|        ✅       | Capture d'écran                                        |
+|        ✅       | Mode Portrait                                          |
+
+### **Lecture & Prise en charge du contenu**
+
+| Pris en charge | Fonctionnalité                                                                                               |
+| :------------: | :----------------------------------------------------------------------------------------------------------- |
+|        ✅       | Jusqu'à 2 vidéos simultanées                                                                                 |
+|        ✅       | Vidéo en streaming                                                                                           |
+|        ✅       | Format d'image : PNG, JPG, BMP, GIF                                                                          |
+|        ✅       | Format vidéo : H264, H265                                                                                    |
+|        ✅       | Texte, Ligne, Forme, Texte défilant, Texte formaté, Tableaux, Boutons interactifs                            |
+|        ✅       | Élément Web                                                                                                  |
+|        ✅       | Fournisseurs de données et Data Vault – Prend en charge plus de 70 fournisseurs de données PADS4             |
+|        ✅       | Variables du Viewer – Simplifie la gestion du contenu sans modifier les présentations                        |
+|        ✅       | Liaisons de propriétés – Permet des propriétés d'éléments dynamiques à l'aide de sources de données externes |
+|        ✅       | Prise en charge des règles sur la présentation, la page et l'élément                                         |
