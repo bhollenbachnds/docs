@@ -1,0 +1,37 @@
+---
+- title: Mise à niveau vers PADS4 2025.2
+---
+
+Pour mettre à niveau vers PADS4 2025.2, votre version actuelle doit être au moins 2022.3, ce qui signifie que PADS4 2022.3 doit d'abord être installé et fonctionnel.
+
+Les versions 2022.2 ou antérieures ne se mettront pas automatiquement à jour vers 2025.2 ; une mise à niveau intermédiaire vers 2022.3 est nécessaire.
+
+### **Notes de version**
+
+Les notes de version de PADS4 2025.2 sont disponibles \[[ici](https://www.netdisplaysystems.com/downloads/ForwardLinks/PADS4relnotes.pdf)]
+
+## Gestion des utilisateurs et migration
+
+La gestion des utilisateurs pour PADS4 Workspace et PADS4 CMS 1.0 a été migrée vers PADS4 CTRL Center, permettant de gérer tous les utilisateurs à partir d'un emplacement unique et centralisé.
+
+Cette migration inclut tous les utilisateurs, licences et rôles attribués de PADS4 Workspace et CMS 1.0, qui sont automatiquement transférés vers PADS4 CTRL Center lors de l'installation. Après l'installation, vous pouvez examiner le processus de migration en vous connectant au portail web avec votre compte Root et en accédant à Migration.
+
+Dans cette section, vous trouverez un aperçu de toutes les étapes de migration. En sélectionnant un élément, vous pouvez consulter des informations détaillées dans Migration Run Details ou ouvrir le Migration Status Report pour un résumé complet.
+
+![Migration Overview Green](/images/MigrationOverviewGreen.png)
+
+## Rôles des visionneuses
+
+Une fois la migration terminée, il est possible que vous ne voyiez aucune visionneuse répertoriée lorsque vous vous connectez, même si toutes les licences sont disponibles. Cela est dû à l'introduction de trois nouveaux rôles pour gérer l'accès aux visionneuses.
+
+<Warning>
+  Pour afficher ou modifier les paramètres des visionneuses, vous devez avoir l'un des rôles de visionneuse attribué à votre compte utilisateur. Pour plus d'informations, consultez User and Roles dans PADS4 CTRL Center → Administrator → User Management.
+</Warning>
+
+## Fonctionnalités obsolètes
+
+Les composants suivants ont été marqués comme obsolètes et ne sont plus inclus dans l'installation :
+
+* TV Element – Remplacé par l'élément Streaming.
+* Flash – Support entièrement abandonné en raison de la technologie obsolète.
+* PADS4 License Wizard – Remplacé par le système de licences basé sur le web disponible via le portail PADS4.
