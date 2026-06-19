@@ -1,0 +1,42 @@
+Ces propriétés définissent le **texte affiché** sur la surface d'un bouton interactif.
+
+***
+
+### **Contenu (Texte)**
+
+Vous pouvez choisir **deux options** pour définir le texte du bouton :
+
+| **Option**                                                      | **Description**                                                                                                                                                                               |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Texte manuel**                                                | Saisissez un **texte fixe/statique** qui sera toujours affiché sur le bouton.                                                                                                                 |
+| **Données externes provenant de la source de données suivante** | Connectez le texte du bouton à des **données en temps réel** provenant d'un fournisseur de données. Le texte se mettra automatiquement à jour en fonction du contenu de la source de données. |
+
+***
+
+### **Fournisseur de données**
+
+* Un **data provider** est une connexion à une source de données externe, telle que :
+  * Tables de base de données, requêtes, procédures stockées.
+  * Fichiers XML, flux RSS et autres formats de données.
+
+* Les fournisseurs de données sont définis au **niveau de la présentation**, les rendant disponibles pour tous les éléments de votre présentation.
+
+* Vous pouvez créer un nouveau fournisseur de données directement en cliquant sur le **bouton à côté de la liste déroulante**.\
+  *(Voir "Travailler avec les fournisseurs de données" pour des conseils détaillés.)*
+
+***
+
+### **Champs à définir pour une source de données externe**
+
+| **Champ**           | **Description**                                                                                                   |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Colonne**         | La colonne spécifique dans la source de données qui contient le texte à afficher.                                 |
+| **Type de contenu** | Détermine **comment** le contenu de la source de données doit être interprété (par exemple, texte brut, formaté). |
+| **Ligne**           | La ligne spécifique dans la source de données à partir de laquelle extraire le texte.                             |
+
+***
+
+### **Remarques**
+
+* Si le **fournisseur de données fournit moins de lignes** que ce qui est spécifié dans la **propriété Row**, **aucun contenu** ne sera affiché sur le bouton.
+* Cette configuration dynamique permet au bouton de **mettre à jour son étiquette automatiquement** en fonction des données en temps réel, améliorant l'interactivité et la réactivité.

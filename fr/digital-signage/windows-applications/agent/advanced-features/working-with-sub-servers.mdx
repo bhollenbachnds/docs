@@ -1,0 +1,27 @@
+L'application PADS4 Agent prend entièrement en charge les installations PADS4 qui, en plus d'un serveur principal central, incluent également des sous-serveurs ou des serveurs de sauvegarde. Les sous-serveurs et/ou serveurs de sauvegarde sont généralement utilisés par les installations PADS4 de grande taille ou critiques. Dans ce cas, chaque sous-serveur gère un sous-ensemble du nombre total de PADS4 Viewers pour réduire la charge système sur le serveur principal et minimiser le trafic réseau. De la même manière, un serveur de sauvegarde peut être utilisé comme mécanisme de secours pour le serveur principal ou un sous-serveur.
+
+Dans une installation PADS4 avec plusieurs serveurs, vous utilisez généralement le PADS4 Agent pour vous connecter au serveur principal du système et à partir de là, surveiller et gérer à distance l'ensemble de l'installation. Cependant, vous pouvez également vous connecter directement à n'importe quel sous-serveur de l'installation. À partir de n'importe quel sous-serveur, vous avez également accès à l'ensemble du système, à moins que votre administrateur système ne vous ait accordé un accès limité en définissant des autorisations spécifiques dans PADS4 System Management.
+
+<Tip>
+  Veuillez noter qu'il existe une différence entre travailler avec une installation PADS4 composée de plusieurs serveurs et se connecter à plusieurs serveurs. La méthode de travail décrite dans cette rubrique est destinée à travailler avec plusieurs serveurs au sein de la <u>même</u> installation PADS4. La procédure pour se connecter à plusieurs serveurs est principalement destinée à travailler avec plusieurs serveurs PADS4 ou <u>différentes</u> installations PADS4 et a été décrite par [Connexion à plusieurs serveurs](/fr/digital-signage/windows-applications/agent/advanced-features/connecting-to-multiple-servers).
+</Tip>
+
+#### **Utilisation du volet de navigation pour une installation PADS4 avec plusieurs serveurs**
+
+Après vous être connecté avec succès à l'un des serveurs PADS4 de votre installation multi-serveurs, vous pouvez utiliser le volet de navigation pour sélectionner une catégorie d'informations et accéder aux nombreuses fonctionnalités intégrées [fonctions du serveur](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/server-functions) ou [fonctions de l'afficheur](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-functions) de l'application PADS4 Agent.
+
+Pour sélectionner une catégorie d'informations d'un serveur PADS4 :
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Server Tab Pn](/images/digital-signage/windows-applications/agent/advanced-features/EN-Agent-server-tab.png)
+2. Sélectionnez le serveur, le sous-serveur ou le serveur de sauvegarde pour lequel vous souhaitez afficher les informations.
+
+   Si un serveur n'est pas accessible depuis le serveur PADS4 auquel vous êtes connecté, alors le serveur est désactivé dans la liste des serveurs.
+3. Cliquez sur une **Category** dans la liste des catégories d'informations de serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées du serveur PADS4 sélectionné et affichera les résultats dans la [zone d'information](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Information%20area.htm) de la fenêtre principale.
+
+<Tip>
+  Si vous avez sélectionné Connexions de serveur, Connexions d'afficheur, Tâches planifiées ou Bibliothèque de contenu comme catégorie d'informations de serveur, le système affichera toujours les résultats globaux de toute votre installation PADS4, quel que soit le serveur que vous avez sélectionné.
+</Tip>

@@ -4,16 +4,16 @@ L'outil **PADS4 Configuration** vous permet de définir et de gérer les paramè
 
 ![Pads4foundationconfiguration Pn](/images/install-pads4/install-pads4-server/PADS4Foundationconfiguration.png)
 
-## **Hosting Configuration**
+## **Configuration d'hébergement**
 
 Spécifiez les paramètres de port pour l'hébergement de **PADS4** et activez éventuellement **HTTPS**.
 
-### **Port Settings**
+### **Paramètres de port**
 
 * **HTTP Port:** Le port utilisé pour héberger le **PADS4 CTRL Center** (par défaut : **80**).
 * **HTTPS Port (SSL):** Port sécurisé pour la communication **SSL-encrypted** (par défaut : **443**).
 
-### **SSL Configuration**
+### **Configuration SSL**
 
 Pour activer **SSL**, configurez les éléments suivants :
 
@@ -21,19 +21,19 @@ Pour activer **SSL**, configurez les éléments suivants :
 * **Certificate File** – Fournissez le fichier de certificat SSL (`.certificate`).
 * **Private Key File** – Spécifiez le fichier de clé privée correspondant (`.private`).
 
-### **Additional Security Settings**
+### **Paramètres de sécurité supplémentaires**
 
 * **Enable HSTS:** Impose des connexions **HTTPS-only** pour une communication sécurisée.
 * **TLS Version:** Choisissez la **TLS version** requise (**1.0, 1.1, 1.2, or 1.3**) lors de l'utilisation de **SSL certificates** avec les domaines PADS4.
 
-### **Message Broker Configuration**
+### **Configuration du Message Broker**
 
-À partir de **PADS4 version 2022.3**, les utilisateurs peuvent sélectionner le **message broker** préféré :
+À partir de **PADS4 version 2022.3**, les utilisateurs peuvent sélectionner le **message broker**:
 
 * **Default:** **NDS Message Broker** (nouveau par défaut à partir de la version **2022.3**).
 * **Alternative:** **RabbitMQ** (disponible pour la compatibilité ascendante).
 
-### **Reverse Proxy Configuration**
+### **Configuration du Proxy Inverse**
 
 À partir de **PADS4 version 2025.1**, les utilisateurs peuvent sélectionner le **reverse proxy.**
 
@@ -42,40 +42,40 @@ Pour activer **SSL**, configurez les éléments suivants :
 
 ***
 
-## **Root User Configuration**
+## **Configuration de l'Utilisateur Root**
 
 * **Username:** Par défaut **`su\root`**.
 * **Password:** Sélectionnez un mot de passe lors de la mise à niveau vers **PADS4 version 2023.1 or higher**.
 
 ***
 
-## **PADS4 Server Settings**
+## **Paramètres du PADS4 Server**
 
-* **IP Address:** Par défaut, le **PADS4 Server** fonctionne sur **localhost (127.0.0.1)**. Généralement, **PADS4 Foundation** et **PADS4 Server** sont installés sur la même machine.
-* **HTTP Port:** Le port de communication par défaut pour **PADS4 Server** est **9005**.
+* **Adresse IP :** Par défaut, le **PADS4 Server** fonctionne sur **localhost (127.0.0.1)**. Généralement, **PADS4 Foundation** et **PADS4 Server** sont installés sur la même machine.
+* **Port HTTP :** Le port de communication par défaut pour **PADS4 Server** est **9005**.
 
 ***
 
 ## **PADS4 Foundation Services**
 
-* **Custom Storage Location:** Si nécessaire, modifiez l'emplacement de **default storage** pour **PADS4 Foundation Services**.
-* **Note:** Ce paramètre **does not** affecte pas le **content folder**. L'emplacement du **content folder** peut être défini en utilisant **PADS4 System Management** pour chaque **domain**.
+* **Emplacement de stockage personnalisé :** Si nécessaire, modifiez l'**emplacement de stockage par défaut** pour **PADS4 Foundation Services**.
+* **Note:** Ce paramètre **n'affecte pas** le **dossier de contenu**. L'emplacement du **dossier de contenu** peut être défini à l'aide de **PADS4 System Management** pour chaque **domaine**.
 
 ***
 
 ## **PADS4 CMS (Legacy)**
 
-* **Default Language:** Définissez la **default language** pour PADS4 CMS.
-* **Public Host (FQDN):** Abandonné dans **PADS4 2023.1** en raison de l'introduction de **PADS4 Domains**.
-* **Database Configuration:** Sélectionnez le type de base de données pour le stockage :
+* **Langue par défaut :** Définissez la **langue par défaut** pour PADS4 CMS.
+* **Hôte public (FQDN) :** Abandonné dans **PADS4 2023.1** en raison de l'introduction de **PADS4 Domains**.
+* **Configuration de la base de données :** Sélectionnez le type de base de données pour le stockage :
   * **SQLite**
   * **SQL Server**
 
 ***
 
-## **Service Selection**
+## **Sélection des services**
 
-Pour optimiser les performances du système, désactivez les **unused microservices** sur le **PADS4 Server**. Voici une liste des **microservices** configurables :
+Pour optimiser les performances du système, désactivez les **microservices inutilisés** sur le **PADS4 Server**. Voici une liste des **microservices** configurables :
 
 * **NDS.PADS4.FIDS.Server**
 * **NDS.Services.CMS**
@@ -108,9 +108,9 @@ Pour optimiser les performances du système, désactivez les **unused microservi
 
 ***
 
-## **Changer la base de données de capteur**
+## **Modifier la base de données des capteurs**
 
-Cliquez [**ici**](#) pour modifier la **sélection du type de base de données de capteur**.
+Cliquez [**ici**](#) pour modifier la **sélection du type de base de données des capteurs**.
 
 ***
 
@@ -136,6 +136,6 @@ Pour vérifier si **PADS4 Server** est opérationnel :
    ```
 
    * Utilisez **`http`** ou **`https`** selon votre configuration.
-   * Remplacez `<port>` par le **port PADS4 Server** réel (par ex., **80, 443, ou 9005**).
+   * Remplacez `<port>` par le **port PADS4 Server** réel (par ex., **80, 443, port personnalisé**).
 
 Si la **page de connexion PADS4 CTRL Center** apparaît, le serveur fonctionne correctement.

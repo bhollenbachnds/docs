@@ -1,4 +1,4 @@
-Le **Microsoft SQL Server** fournisseur dans **PADS4** vous permet de vous connecter à une **SQL Server database**, de récupérer des données et de les utiliser dans votre présentation.
+Le **Microsoft SQL Server** fournisseur dans **PADS4** vous permet de vous connecter à une **SQL Server database**, récupérer des données et les utiliser dans votre présentation.
 
 ***
 
@@ -7,14 +7,14 @@ Le **Microsoft SQL Server** fournisseur dans **PADS4** vous permet de vous conne
 #### **1. Démarrer l'Assistant Fournisseur de Données**
 
 * Ouvrez **PADS4** et accédez à l'**Data Provider Wizard**.
-* Sélectionnez **Microsoft SQL Server** comme **type de fournisseur**.
+* Sélectionnez **Microsoft SQL Server** comme **provider type**.
 * Cliquez sur **Next** pour continuer.
 
 #### **2. Spécifier les paramètres de connexion SQL Server**
 
 * Saisissez le **SQL Server Name**:
-  * Tapez manuellement le **nom du serveur**.
-  * Cliquez sur le **bouton déroulant** pour rechercher et sélectionner un serveur disponible sur votre réseau.
+  * Tapez manuellement le **server name**.
+  * Cliquez sur le **drop-down button** pour rechercher et sélectionner un serveur disponible sur votre réseau.
 * Dans la section **Logon to the Server**, choisissez l'une des méthodes d'authentification :
   * **Windows Authentication** *(utilise les identifiants de l'utilisateur actuel)*.
   * **SQL Server Authentication** *(nécessite un nom d'utilisateur et un mot de passe)*.
@@ -22,10 +22,10 @@ Le **Microsoft SQL Server** fournisseur dans **PADS4** vous permet de vous conne
 
 #### **3. Sélectionner la base de données et la source de données**
 
-* Choisissez la **base de données** dans la liste déroulante.
+* Choisissez la **database** dans la liste déroulante.
 
-* Sélectionnez la **source de données**:
-  * **Tables** – Récupérer des données à partir d'une table spécifique.
+* Sélectionnez la **data source**:
+  * **Tables** – Récupérer des données d'une table spécifique.
   * **Views** – Utiliser une vue SQL Server prédéfinie.
   * **Stored Procedures** – Exécuter une procédure stockée.
   * **SQL Statement** – Saisir manuellement une requête SQL personnalisée.
@@ -44,13 +44,13 @@ Le **Microsoft SQL Server** fournisseur dans **PADS4** vous permet de vous conne
 ### **Remarques importantes**
 
 * **SQL Server Authentication**:
-  * Si vous utilisez **Windows Authentication**, assurez-vous que le **PADS4 service** dispose des **autorisations appropriées**.
-  * Si vous utilisez **SQL Server Authentication**, utilisez un **nom d'utilisateur et mot de passe sécurisés**.
+  * Si vous utilisez **Windows Authentication**, assurez-vous que le **PADS4 service** dispose des **proper permissions**.
+  * Si vous utilisez **SQL Server Authentication**, utilisez un **secure username and password**.
 * **Optimisation des requêtes**:
   * L'utilisation de **Views** ou de **Stored Procedures** est recommandée pour l'efficacité.
-  * Évitez les **requêtes SQL complexes** dans les **SQL Statements** lorsque c'est possible.
+  * Évitez les **complex SQL queries** dans les **SQL Statements** lorsque c'est possible.
 * **Considérations de performance**:
-  * **SQL Server est optimisé** pour traiter les requêtes en interne.
+  * **SQL Server is optimized** pour traiter les requêtes en interne.
   * L'utilisation d'un **PADS4 Data Server** peut ne pas fournir d'avantages supplémentaires.
 
-Cette configuration garantit que **PADS4** peut récupérer efficacement des **données SQL Server en temps réel**, ce qui est utile pour les **présentations dynamiques, tableaux de bord et automatisations**.
+Cette configuration garantit que **PADS4** peut récupérer efficacement des **real-time SQL Server data**, ce qui est utile pour les **dynamic presentations, dashboards, and automation**.
