@@ -1,27 +1,26 @@
-Ce guide fournit des **instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur le **SharpNEC Compute Module 4**.
+---
+- title: Compute Module
+---
 
-***
+Ce guide fournit **des instructions étape par étape** pour installer et configurer **PADS4 Viewer** sur le **SharpNEC Compute Module**
 
-## **Avant de commencer**
+**Avant de commencer**
 
 ### **Appareils SharpNEC pris en charge**
 
-L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
+Le **SharpNEC Compute Module** suivant est pris en charge :
 
-* **SharpNEC Compute Module 4 (CM4)**
+* Compute Module 4 (CM4)
+* Compute Module 5 (CM5)
 
-**Assurez-vous que votre serveur PADS4 est installé et configuré avant de continuer.**
+**Assurez-vous que votre PADS4 Server est installé et configuré avant de continuer.**
 
-***
+## **Configuration minimale requise**
 
-## **Exigences minimales**
+**Version de PADS4 Server :** **2023.2 ou version ultérieure**\
+**Version du firmware :** **1.1.00 ou version ultérieure**
 
-**Version du serveur PADS4 :** **2023.2 ou ultérieure**\
-**Version du firmware :** **1.1.00 ou ultérieure**
-
-**Assurez-vous que le firmware de votre appareil répond aux exigences minimales avant de procéder à l'installation.**
-
-***
+**Assurez-vous que le firmware de votre appareil répond à la configuration minimale requise avant de procéder à l'installation.**
 
 ## **Configuration initiale**
 
@@ -30,115 +29,115 @@ L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
 ### **Mise à jour du firmware de l'écran**
 
 <Steps>
-  <Step title="Première étape">
-    Téléchargez l'**Outil de mise à jour du firmware NEC** depuis le site web de NEC.
+  <Step title="Étape un">
+    Téléchargez le **NEC Firmware Update Tool** depuis le site Web de NEC.
   </Step>
 
-  <Step title="Deuxième étape">
-    Installez l'**outil de mise à jour du firmware** sur votre PC.
+  <Step title="Étape deux">
+    Installez le **firmware update tool** sur votre PC.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape trois">
     Téléchargez la **dernière version du firmware (1.1.00 ou ultérieure)** pour votre **écran NEC**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape quatre">
     Suivez les **instructions à l'écran** pour mettre à jour le firmware.
   </Step>
 </Steps>
 
 ***
 
-### **Installation de l'image OS PADS4**
+### **Installation de l'image PADS4 OS**
 
-**L'appareil démarre à partir d'une image OS PADS4 personnalisée basée sur le Raspberry Pi Compute Module 4.**
+**L'appareil démarre à partir d'une image PADS4 OS personnalisée basée sur le Raspberry Pi Compute Module 4.**
 
 <Steps>
-  <Step title="Première étape">
-    Téléchargez l'**Image OS PADS4** depuis le **PADS4 App Center**.
+  <Step title="Étape un">
+    Téléchargez l'**image PADS4 OS** depuis **PADS4 App Center**.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape deux">
     Installez **Raspberry Pi Imager** et **rpiboot** sur votre PC.
   </Step>
 
-  <Step title="Troisième étape">
-    Éteigne&#x7A;**&#x20;** l'écran.
+  <Step title="Étape trois">
+    Éteignez **** l'écran.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape quatre">
     Déplacez le **commutateur de mode de démarrage** sur la carte d'interface Raspberry Pi **vers le bas**.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape cinq">
     Connectez un **câble Micro-USB** de l'écran au PC.
   </Step>
 
-  <Step title="Sixième étape">
-    Allume&#x7A;**&#x20;** l'écran.
+  <Step title="Étape six">
+    Allumez **** l'écran.
   </Step>
 
-  <Step title="Septième étape">
+  <Step title="Étape sept">
     Exécutez **rpiboot** et attendez que le système monte un nouveau système de fichiers.
   </Step>
 
-  <Step title="Huitième étape">
-    Ouvrez **Raspberry Pi Imager** et sélectionnez **Utiliser personnalisé** dans le menu **Système d'exploitation**.
+  <Step title="Étape huit">
+    Ouvrez **Raspberry Pi Imager** et sélectionnez **Use Custom** dans le menu **Operating System**.
   </Step>
 
-  <Step title="Neuvième étape">
-    Sélectionnez l'**image OS PADS4** que vous avez téléchargée précédemment.
+  <Step title="Étape neuf">
+    Sélectionnez l'**image PADS4 OS** que vous avez téléchargée précédemment.
   </Step>
 
-  <Step title="Dixième étape">
-    Choisissez le **lecteur monté** comme **périphérique cible** pour flasher l'image PADS4.
+  <Step title="Étape dix">
+    Choisissez le **lecteur monté** comme **appareil cible** pour flasher l'image PADS4.
   </Step>
 
-  <Step title="Étape Onze">
+  <Step title="Étape onze">
     Une fois l'installation terminée, **retirez le câble Micro-USB** et déplacez le **commutateur de mode de démarrage vers le haut**.
   </Step>
 
-  <Step title="Étape Douze">
-    Redémarrez l'écran pour **redémarrer** le **PADS4 Viewer Installer**.
+  <Step title="Étape douze">
+    Effectuez un cycle d'alimentation de l'écran pour **redémarrer** le **PADS4 Viewer Installer**.
   </Step>
 </Steps>
 
-**⚠️ Ne remplacez pas le nom d'utilisateur par défaut lors du flashage du système d'exploitation. Changez le mot de passe si nécessaire.**
+**⚠️ Ne remplacez pas le nom d'utilisateur par défaut lors du flashage du système d'exploitation. Modifiez le mot de passe si nécessaire.**
 
 ***
 
 ## **Installation de PADS4 Viewer**
 
-Le **SharpNEC Compute Module 4** est **préconfiguré** pour exécuter le **PADS4 Installer** si le **PADS4 Viewer** n'est pas déjà installé.
+Le **SharpNEC Compute Module** est **préconfiguré** pour exécuter le **PADS4 Installer** si le **PADS4 Viewer** n'est pas déjà installé.
 
 **Pour installer PADS4 Viewer :**
 
 <Steps>
-  <Step title="Étape Un">
-    Saisissez votre **PADS4 Server URL**.
+  <Step title="Étape un">
+    Saisissez votre **URL du PADS4 Server**.
   </Step>
 
-  <Step title="Étape Deux">
-    (Facultatif) Saisissez un **Viewer Name**.
+  <Step title="Étape deux">
+    (Facultatif) Saisissez un **Nom du Viewer**.
   </Step>
 
-  <Step title="Étape Trois">
+  <Step title="Étape trois">
     Suivez les **étapes d'installation** pour télécharger et installer **PADS4 Viewer**.
   </Step>
 
-  <Step title="Étape Quatre">
-    Le **Viewer démarrera** et se **connectera automatiquement** au **PADS4 Server**.
+  <Step title="Étape quatre">
+    Le **Viewer démarrera** et **se connectera automatiquement** au **PADS4 Server**.
   </Step>
 </Steps>
 
 ***
 
-## **Ajustement des paramètres de PADS4 Viewer**
+## **Réglage des paramètres de PADS4 Viewer**
 
 **Pour accéder à l'écran des paramètres de PADS4 Viewer :**
 
 * **Connectez un clavier** à l'appareil.
-* **Faites un clic droit** à l'aide d'une **souris**.
+* **Cliquez avec le bouton droit** à l'aide d'une **souris**.
 
 **Vous pouvez ajuster des paramètres tels que :**\
 **Orientation de l'écran**\
@@ -154,21 +153,21 @@ Le **SharpNEC Compute Module 4** est **préconfiguré** pour exécuter le **PADS
 ### **Réinstallation de PADS4 Viewer**
 
 **Utilisez le PADS4 Installer intégré si :**\
-**Vous devez vous connecter à un serveur ou domaine différent.**\
+**Vous devez vous connecter à un serveur ou un domaine différent.**\
 **Vous souhaitez réinitialiser les paramètres du Viewer.**
 
 **Pour réinstaller PADS4 Viewer :**
 
 <Steps>
-  <Step title="Étape Un">
+  <Step title="Étape un">
     Ouvrez le **menu des paramètres du Viewer**.
   </Step>
 
-  <Step title="Étape Deux">
+  <Step title="Étape deux">
     Cliquez sur **Launcher Settings** dans le **coin inférieur gauche**.
   </Step>
 
-  <Step title="Étape Trois">
+  <Step title="Étape trois">
     Démarrez le **Viewer Installer** et suivez les étapes.
   </Step>
 </Steps>
@@ -177,81 +176,81 @@ Le **SharpNEC Compute Module 4** est **préconfiguré** pour exécuter le **PADS
 
 ## **Connectivité à distance de l'appareil**
 
-**Vous pouvez gérer l'appareil à distance sans connecter de clavier ou de souris.**
+**Vous pouvez gérer l'appareil à distance sans connecter de clavier ni de souris.**
 
 ### **1. VNC Viewer**
 
 **Comment se connecter :**
 
 1. Téléchargez et installez **VNC Viewer** sur votre **PC**.
-2. Saisissez l'**adresse IP** du **Compute Module 4**.
+2. Entrez l'**adresse IP** du **Compute Module 4**.
 
-### **2. Surveillance du serveur Cockpit (pour utilisateurs avancés)**
+### **2. Cockpit Server Monitoring (Pour les utilisateurs avancés)**
 
 **Cockpit est une interface web pour surveiller l'appareil.**\
-**Accès via navigateur :**
+**Accès via le navigateur :**
 
-```
+```text
 https://<hostnameofpi>:9090  
 ```
 
-### **3. SSH (pour utilisateurs avancés)**
+### **3. SSH (Pour les utilisateurs avancés)**
 
 **Vous pouvez vous connecter à l'appareil via SSH pour un accès en ligne de commande.**
 
 ***
 
-## **Fonctionnalités prises en charge et limitations**
+## **Fonctionnalités prises en charge & Limitations**
 
 ### **Fonctionnalités générales**
 
 | Fonctionnalité | Description                                                                                                                 |
 | :------------: | --------------------------------------------------------------------------------------------------------------------------- |
 |        ✅       | **Mises à jour automatiques du logiciel** – Le Viewer se met à jour automatiquement lorsque le PADS4 Server est mis à jour. |
-|        ✅       | **Mode hors ligne** – Lit le contenu programmé pendant **7 jours** en mode hors ligne.                                      |
+|        ✅       | **Mode hors ligne** – Lit le contenu planifié pendant **7 jours** en mode hors ligne.                                       |
 
 ### **Fonctionnalités de l'appareil**
 
+| Fonctionnalité | Description                                                                        |
+| :------------: | ---------------------------------------------------------------------------------- |
+|        ✅       | **Mode Portrait** – L'appareil ajuste automatiquement la rotation.                 |
+|        ✅       | **Cluster Viewer** – Peut être utilisé dans une **configuration en cluster**.      |
+|        ✅       | **Bloquer le contrôle à distance** – Empêcher le contrôle non autorisé de l'écran. |
+|        ✅       | **Éteindre l'écran** – Lorsqu'aucune présentation n'est planifiée.                 |
+
+### **Prise en charge des vidéos & du contenu**
+
 | Fonctionnalité | Description                                                                   |
 | :------------: | ----------------------------------------------------------------------------- |
-|        ✅       | **Mode portrait** – L'appareil ajuste automatiquement la rotation.            |
-|        ✅       | **Cluster Viewer** – Peut être utilisé dans une **configuration en cluster**. |
-|        ✅       | **Blocage de la télécommande** – Empêche le contrôle non autorisé de l'écran. |
-|        ✅       | **Éteindre l'écran** – Lorsqu'aucune présentation n'est programmée.           |
+|        ✅       | **2 vidéos par page** – Prend en charge la lecture fluide.                    |
+|        ✅       | **Rotation, Réflexion, Inclinaison, Retournement de vidéo** – Pris en charge. |
+|        ✅       | **Streaming HTTP** – Pris en charge.                                          |
+|        ❌       | **Prise en charge des éléments Flash** – Non pris en charge.                  |
 
-### **Prise en charge vidéo et contenu**
-
-| Fonctionnalité | Description                                                                |
-| :------------: | -------------------------------------------------------------------------- |
-|        ✅       | **2 vidéos par page** – Prend en charge la lecture fluide.                 |
-|        ✅       | **Rotation, réflexion, inclinaison, retournement vidéo** – Pris en charge. |
-|        ✅       | **Streaming HTTP** – Pris en charge.                                       |
-|        ❌       | **Prise en charge des éléments Flash** – Non pris en charge.               |
-
-### **Gestion des appareils**
+### **Gestion de l'appareil**
 
 | Fonctionnalité | Description                                          |
 | :------------: | ---------------------------------------------------- |
 |        ✅       | **Gestion à distance via PADS4 CTRL Center**         |
-|        ✅       | **Surveillance de l'état de connexion et alertes**   |
+|        ✅       | **Surveillance de l'état de connexion & Alertes**    |
 |        ✅       | **Prise en charge du redémarrage** – Pris en charge. |
-|        ✅       | **Capture d'écran à distance**                       |
+|        ✅       | **Capture de capture d'écran à distance**            |
 |        ❌       | **Prise en charge de l'arrêt** – Non pris en charge. |
 
 ### **Limitations générales**
 
-| Fonctionnalité | Description                                                                                                   |
-| :------------: | ------------------------------------------------------------------------------------------------------------- |
-|        ❌       | **Lecture de fichiers locaux** – Prend uniquement en charge les fichiers de la bibliothèque de contenu PADS4. |
-|        ❌       | **Stockage local des preuves de lecture** – Limité à **50 000 enregistrements**.                              |
-|        ❌       | **Prise en charge de PowerBI** – Non pris en charge.                                                          |
+| Fonctionnalité | Description                                                                                           |
+| :------------: | ----------------------------------------------------------------------------------------------------- |
+|        ❌       | **Lecture de fichiers locaux** – Prend en charge uniquement les fichiers de la PADS4 Content Library. |
+|        ❌       | **Stockage local de la preuve de diffusion** – Limité à **50 000 enregistrements**.                   |
+|        ❌       | **Prise en charge de PowerBI** – Non pris en charge.                                                  |
 
 ***
 
 ## **Étapes finales**
 
-**Votre PADS4 Viewer est maintenant installé et prêt à être utilisé ! 🎉**
+**Votre PADS4 Viewer est maintenant installé et prêt à l'emploi ! 🎉**
 
 **Vérifiez le PADS4 Server pour les mises à jour de statut.**\
-**Ajustez les paramètres via le menu Viewer.**\
-**Utilisez l'accès à distance (VNC, Cockpit, SSH) pour une gestion avancée.**
+**Ajustez les paramètres via le menu du Viewer.**\
+**Utilisez l'accès à distance (VNC, Cockpit, SSH) pour la gestion avancée.**
