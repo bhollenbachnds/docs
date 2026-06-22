@@ -262,7 +262,7 @@ This option requires that the service account has the right to impersonate all r
 New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
 ```
 
-New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
+`New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}`
 
 ```
 New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
