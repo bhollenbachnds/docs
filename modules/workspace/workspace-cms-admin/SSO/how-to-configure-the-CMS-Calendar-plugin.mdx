@@ -258,17 +258,13 @@ Editing, deleting or adding participants can be done using the user calendar (wh
 
 This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, you will have to grant the role **"ApplicationImpersonation"** to the user of the service account following this PowerShell script :
 
-```
+```powershell
 New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
 ```
 
-New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
-
-```
+```powershell
 New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
 ```
-
-New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
 
 ![Image52 Pn](/images/Image52.png)
 
