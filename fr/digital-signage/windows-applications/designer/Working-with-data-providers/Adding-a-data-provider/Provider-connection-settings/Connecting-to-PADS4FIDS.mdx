@@ -1,0 +1,57 @@
+Le type de fournisseur PADS4FIDS vous permet d'accéder aux données du système d'affichage des informations de vol (FIDS), stockées dans le produit PADS4FIDS. Le PADS4FIDS est un produit complémentaire de PADS4 qui peut être acheté séparément. Il peut être utilisé pour gérer et afficher les informations de vol dans votre aéroport, exactement comme vous le souhaitez.
+
+Après avoir choisi PADS4FIDS comme type de fournisseur dans l'assistant de fournisseur de données de PADS4, vous devez spécifier les paramètres appropriés pour vous connecter au système PADS4FIDS.
+
+Pour ajouter/modifier les paramètres de connexion PADS4FIDS de votre fournisseur de données :
+
+1. Démarrez l'assistant de fournisseur de données comme décrit dans Ajout d'un fournisseur de données ou Modification d'un fournisseur de données.
+2. Suivez les instructions de l'assistant jusqu'à la page où vous commencez à spécifier les paramètres de connexion PADS4FIDS.
+
+Spécifiez les paramètres requis pour vous connecter à votre serveur PADS4FIDS :
+
+* Entrez le nom du serveur sur lequel le serveur PADS4FIDS est installé.
+* Si l'URI est plus complexe, utilisez l'URI du serveur FIDS pour saisir l'URI complète permettant de vous connecter au serveur PADS4FIDS. L'URI par défaut est : `http://<Server>/PADS4/FIDS/Database`
+
+Sélectionnez les informations de vol que vous souhaitez recevoir dans la liste déroulante :
+
+* Arrivals: All arriving flights
+* Departures: All departing flights
+* Check-in: Service counters
+* Gates: All exits in the terminal for boarding the plane
+* Baggage belts : Zone de récupération des bagages
+* Flights (all) : Tous les vols à l'arrivée et au départ, souvent utilisés pour les informations du personnel
+
+Spécifiez les paramètres du serveur proxy si la connexion passe par un serveur proxy nécessitant une authentification.
+
+Ensuite, cliquez sur Suivant pour continuer.
+
+En fonction de votre sélection d'informations de vol, l'une des pages suivantes s'affichera :
+
+* Arrivals
+* Departures
+* Check-Ins
+* Gates
+* Baggage belts
+* Flights (staff)
+
+Cliquez sur Suivant pour continuer.
+
+Sélectionnez une période :
+
+* Vous pouvez sélectionner l'un des filtres de vols prédéfinis pour filtrer les vols retournés. Activez la case à cocher pour la catégorie et choisissez masquer ou afficher selon vos besoins.
+* Ces filtres sont définis côté serveur et réduiront la quantité de données envoyées sur le réseau.
+* Spécifiez la période que vous souhaitez utiliser. Par défaut, toutes les données du jour sont sélectionnées. En utilisant les options, vous pouvez sélectionner plusieurs façons d'obtenir des données. Par exemple, si vous souhaitez uniquement les données à partir de l'heure actuelle et au-delà, sélectionnez « now » dans la partie « from » et « today » pour le « until ».
+
+Pour limiter les données en fonction d'un certain statut :
+
+* Activez la case à cocher « Show flights with status » et sélectionnez le statut dans la liste déroulante. Les statuts disponibles sont récupérés depuis le serveur FIDS.
+* Si les informations de vol pour les enregistrements sont sélectionnées, vous aurez également la possibilité d'afficher les enregistrements avec statut.
+* Si les informations de vol pour les arrivées sont sélectionnées, vous aurez également la possibilité d'afficher uniquement les vols arrivés.
+
+Pour supprimer automatiquement le vol après une période, utilisez le paramètre « Hide flights x minutes after actual time of arrival/departure ».
+
+Cliquez sur Aperçu pour afficher les données qui seront lues depuis la base de données avec les options sélectionnées.
+
+Ensuite, cliquez sur Suivant pour continuer.
+
+Terminez l'assistant comme décrit dans Ajout d'un fournisseur de données.
