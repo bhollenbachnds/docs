@@ -606,7 +606,9 @@
                     "pages": [
                       {
                         "group": "Presentation ",
-                        "pages": []
+                        "pages": [
+                          "proof-of-play"
+                        ]
                       },
                       {
                         "group": "Pages Properties",

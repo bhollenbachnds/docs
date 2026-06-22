@@ -1,89 +1,703 @@
-Welcome to the **PADS4 API Documentation**, your complete reference for interacting programmatically with the PADS4 Platform.
+---
+title: "Introduction"
+---
 
-The PADS4 API suite is built to support seamless integration, automation, and scalability of your digital signage and workspace solutions. Whether you're building a custom frontend, integrating with third-party systems, or automating content workflows, this API documentation provides all the tools and endpoints needed to communicate with the PADS4 backend services.
+This section describes all APIs available in a PADS4 Foundation deployment. Each API has its own Swagger/OpenAPI documentation accessible via the PADS4 CTRL Center.
 
-Each API module is designed around a specific domain of functionality within the PADS4 ecosystem. All services follow a RESTful architecture and expose OpenAPI (Swagger) definitions to streamline development and reduce integration effort.
-
-### Available API Groups
-
-The PADS4 API platform is divided into the following functional groups:
-
-- **Domains**  
-  Manage tenant domains and related configuration.
-
-- **Authentication & Authentication Integration**  
-  Handle user login, session management, and integration with third-party identity providers.
-
-- **CMS**  
-  Create and manage content, messages, templates, and digital signage workflows.
-
-- **Configuration**  
-  Access and modify system-wide configuration settings.
-
-- **Content**  
-  Manage media assets, files, and associated metadata.
-
-- **Credentials**  
-  Securely handle credential storage and tokenized access.
-
-- **Data**  
-  Access external and internal data sources integrated into presentations.
-
-- **Device**  
-  Register and monitor player devices across the digital signage network.
-
-- **Email**  
-  Configure and send notifications and alerts.
-
-- **Engine**  
-  Manage backend logic and runtime behavior of services.
-
-- **FIDS Connector**  
-  Integrate with Flight Information Display Systems for transportation environments.
-
-- **Globalization**  
-  Manage language localization and translation settings.
-
-- **License**  
-  Manage product licensing and entitlement tracking.
-
-- **Messaging**  
-  Configure messaging services such as SMS, push notifications, and more.
-
-- **Migration**  
-  Support data transfer and legacy system upgrades.
-
-- **Orchestration**  
-  Coordinate and automate workflows between different services and components.
-
-- **Package**  
-  Manage grouped configurations and presentation packages.
-
-- **Process**  
-  Execute custom logic or trigger internal processes.
-
-- **Replication**  
-  Handle data synchronization across distributed systems.
-
-- **Schedule**  
-  Control presentation playback timing, calendars, and recurring schedules.
-
-- **User SCIM & User Profile**  
-  Support user provisioning, SCIM-compliant directory sync, and user attribute management.
-
-- **Video Conversion**  
-  Automate video transcoding and formatting for compatible playback.
-
-- **Viewer**  
-  Register, configure, and monitor digital signage player endpoints.
-
-- **Web to Image**  
-  Capture and convert web pages into static display images.
+> **Note:** The server address in all URLs below uses `https://saas.pads365.com` as an example. Replace this with your own PADS4 server address when accessing the APIs.
 
 ---
 
-Each group has a dedicated Swagger interface, available via OpenAPI links, allowing developers to explore endpoints, test requests, and build integrations confidently.
+## How to Access the APIs
 
-To begin, choose a group relevant to your integration needs and consult its Swagger documentation. All APIs are secured, and proper authentication is required to make calls to most endpoints.
+Navigate to `https://<your-server>/about` to see all running services. Services with a launch icon link directly to their Swagger UI:
 
-Let’s get started building with PADS4.
+```text
+https://<your-server>/rdx/<ServiceName>/swagger/index.html
+```
+
+The underlying OpenAPI JSON spec is available at:
+
+```text
+https://<your-server>/rdx/<ServiceName>/swagger/v1/swagger.json
+```
+
+---
+
+## Service Overview
+
+| Service | Swagger Path | Endpoints |
+| :-- | :-- | :-- |
+| NDS.Messaging.Broker | `/rdx/NDS.Messaging.Broker/swagger/index.html` | — |
+| NDS.Nginx.Domains | `/rdx/NDS.Nginx.Domains/swagger/index.html` | 12 |
+| NDS.Services.Authentication | `/rdx/NDS.Services.Authentication/swagger/index.html` | 67 |
+| NDS.Services.Authentication.Integration | `/rdx/NDS.Services.Authentication.Integration/swagger/index.html` | 15 |
+| NDS.Services.Cms | `/rdx/NDS.Services.Cms/swagger/index.html` | 35 |
+| NDS.Services.Configuration | `/rdx/NDS.Services.Configuration/swagger/index.html` | ~20 |
+| NDS.Services.Content | `/rdx/NDS.Services.Content/swagger/index.html` | 43 |
+| NDS.Services.Credentials | `/rdx/NDS.Services.Credentials/swagger/index.html` | ~15 |
+| NDS.Services.Crystal | `/crystal/pads/swagger` | — |
+| NDS.Services.Data | `/rdx/NDS.Services.Data/swagger/index.html` | 21 |
+| NDS.Services.Device | `/rdx/NDS.Services.Device/swagger/index.html` | 28 |
+| NDS.Services.Document.Conversion | `/rdx/NDS.Services.Document.Conversion/swagger/index.html` | 14 |
+| NDS.Services.Email | `/rdx/nds.services.email/swagger/index.html` | 16 |
+| NDS.Services.Engine | `/rdx/NDS.Services.Engine/swagger/index.html` | 21 |
+| NDS.Services.FIDS.Connector | `/rdx/NDS.Services.FIDS.Connector/swagger/index.html` | 29 |
+| NDS.Services.Globalization | `/rdx/NDS.Services.Globalization/swagger/index.html` | — |
+| NDS.Services.License | `/rdx/NDS.Services.License/swagger/index.html` | — |
+| NDS.Services.Messaging | `/rdx/NDS.Services.Messaging/swagger/index.html` | 16 |
+| NDS.Services.Migration | `/rdx/NDS.Services.Migration/swagger/index.html` | 20 |
+| NDS.Services.Orchestration | `/rdx/NDS.Services.Orchestration/swagger/index.html` | ~20 |
+| NDS.Services.Package | `/rdx/NDS.Services.Package/swagger/index.html` | — |
+| NDS.Services.PDF.ToImage | `/rdx/NDS.Services.PDF.ToImage/swagger/index.html` | — |
+| NDS.Services.PowerBI | `/rdx/NDS.Services.PowerBI/swagger/index.html` | 21 |
+| NDS.Services.Powerpoint.ToVideo | `/rdx/NDS.Services.Powerpoint.ToVideo/swagger/index.html` | 17 |
+| NDS.Services.Process | `/rdx/NDS.Services.Process/swagger/index.html` | 16 |
+| NDS.Services.Replication | `/rdx/NDS.Services.Replication/swagger/index.html` | 31 |
+| NDS.Services.Schedule | `/rdx/NDS.Services.Schedule/swagger/index.html` | 33 |
+| NDS.Services.Sensor | `/rdx/Nds.Services.Sensor/swagger/index.html` | 31 |
+| NDS.Services.Teams.Integration | `/rdx/NDS.Services.Teams.Integration/swagger/index.html` | 29 |
+| NDS.Services.User.Scim | `/rdx/NDS.Services.User.Scim/swagger/index.html` | 31 |
+| NDS.Services.UserProfile | `/rdx/NDS.Services.UserProfile/swagger/index.html` | 16 |
+| NDS.Services.Video.Conversion | `/rdx/NDS.Services.Video.Conversion/swagger/index.html` | 24 |
+| NDS.Services.Viewer | `/rdx/NDS.Services.Viewer/swagger/index.html` | 65 |
+| NDS.Services.Web.ToImage | `/rdx/NDS.Services.Web.ToImage/swagger/index.html` | 15 |
+| NDS.Util.WorkerHost | `/rdx/NDS.Util.WorkerHost/swagger/index.html` | — |
+| NDS.Visitor.Management | `/rdx/NDS.Visitor.Management/swagger/index.html` | 80 |
+| NDS.Windows.Gateway | `/rdx/NDS.Windows.Gateway/swagger/index.html` | — |
+
+---
+
+## Detailed Service Descriptions
+
+### NDS.Messaging.Broker
+
+An internal message broker that facilitates asynchronous communication between PADS4 microservices. This service manages the underlying message bus infrastructure and is not typically called directly by external clients.
+
+---
+
+### NDS.Nginx.Domains
+
+Manages domain configuration for the PADS4 Nginx reverse proxy. Used to add, remove, and validate domain routing for multi-tenant deployments.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/Domain` | List all configured domains |
+| POST | `/api/v1/Domain` | Add a new domain |
+| DELETE | `/api/v1/Domain` | Remove a domain |
+| GET | `/api/v1/Domain/validate` | Validate a domain configuration |
+| POST | `/api/v1/Domain/reset` | Reset domain configuration |
+| POST | `/api/v1/Domain/restart` | Restart the domain service |
+
+---
+
+### NDS.Services.Authentication
+
+The core identity and access management service. Handles users, roles, groups, claims, and external identity provider integrations (LDAP, SAML, OAuth, SCIM).
+
+**Controllers / functional areas:**
+
+- **Account** — Local account management (login, password reset)
+- **User** — Create, read, update, delete users
+- **Role** — Role management and assignment
+- **Membership** — Group membership operations
+- **Claim** — Attribute/claim mapping for identity tokens
+- **LdapProvider** — Configure and query LDAP/Active Directory connections
+- **ExternalAuthenticationProvider** — Register external identity providers (OAuth, SAML, etc.)
+- **ExternalAuthentication** — Initiate external auth flows
+- **ExternalUserGroupMapping** / **ExternalUserGroup** — Map external groups to PADS4 roles
+- **AuthenticationIdentityProvider** — Identity provider configuration
+- **Scim** — SCIM provisioning endpoints (users and groups)
+- **ReplicationClient** — Internal replication diagnostics
+
+**Sample endpoints:**
+
+| Method | Path |
+| :-- | :-- |
+| GET/POST | `/api/v1/User` |
+| GET/POST | `/api/v1/Role` |
+| POST | `/api/v1/ExternalAuthentication/Logon` |
+| GET/POST | `/api/v1/LdapProvider` |
+| GET/POST | `/api/v1/Claim/GetAll` |
+
+---
+
+### NDS.Services.Authentication.Integration
+
+Handles SAML2 single sign-on integration. Provides the SP-side endpoints that identity providers redirect to during SAML authentication flows.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/{domain}/saml2/Login/{providerId}` | Initiate SAML2 login for a provider |
+| POST | `/api/v1/{domain}/saml2/Authenticate/{providerId}` | Process SAML2 assertion callback |
+
+---
+
+### NDS.Services.Cms
+
+The Content Management System service. Manages CMS messages (digital signage messages/playlists), templates, and template categories. Supports permissions at the content level.
+
+**Controllers / functional areas:**
+
+- **cms/message** — Create, read, update, delete CMS messages; manage thumbnails and ordering
+- **cms/template** — Manage content templates; retrieve thumbnails
+- **cms/templatecategory** — Organise templates into categories; manage category permissions
+- **cms/permissions** — Hierarchical permission queries
+
+**Sample endpoints:**
+
+| Method | Path |
+| :-- | :-- |
+| GET/POST | `/api/v1/cms/message` |
+| GET | `/api/v1/cms/message/thumbnail/{messageId}` |
+| GET/POST | `/api/v1/cms/template` |
+| GET/POST | `/api/v1/cms/templatecategory` |
+| POST | `/api/v1/cms/templatecategory/setpermission` |
+
+---
+
+### NDS.Services.Configuration
+
+Stores and retrieves system and domain configuration settings. Also manages feature flags that control which capabilities are enabled per domain.
+
+**Controllers / functional areas:**
+
+- **Configuration** — General system configuration key-value store
+- **DomainConfig** — Per-domain configuration overrides
+- **Feature** — Feature flag management by domain
+
+**Sample endpoints:**
+
+| Method | Path |
+| :-- | :-- |
+| GET/POST | `/api/v1/Configuration` |
+| POST | `/api/v1/Configuration/delete` |
+| GET/POST | `/api/v1/DomainConfig` |
+| GET | `/api/v1/Feature` |
+| GET | `/api/v1/Feature/{domain}` |
+| GET | `/api/v1/Feature/raw` |
+
+---
+
+### NDS.Services.Content
+
+Manages the PADS4 content library — files, fonts, and Canva integrations. Handles uploading, retrieving, and organising digital signage content assets.
+
+**Controllers / functional areas:**
+
+- **content** — Core content library management (upload, retrieve, delete assets)
+- **font** — Font management for use in presentations
+- **canva** — Integration with Canva for creating content from Canva designs
+- **ReplicationClient** — Internal replication diagnostics
+
+**Sample endpoints:**
+
+| Method | Path |
+| :-- | :-- |
+| GET/POST/DELETE | `/api/v1/content` |
+| GET/POST | `/api/v1/font` |
+| GET/POST | `/api/v1/canva` |
+
+---
+
+### NDS.Services.Credentials
+
+Manages stored credentials used by PADS4 integrations (e.g., data source credentials, third-party API keys). Provides a secure credential vault for use by other services.
+
+---
+
+### NDS.Services.Crystal
+
+A legacy reporting service based on SAP Crystal Reports. Generates formatted reports for use in PADS4 presentations and dashboards. Accessed at `/crystal/pads/swagger`.
+
+---
+
+### NDS.Services.Data
+
+Manages data sources and data sets used by PADS4 presentations. Allows creating, querying, and deleting data sources, and provides a DataVault for storing structured data.
+
+**Controllers / functional areas:**
+
+- **Data** — Data source lifecycle management
+- **DataVault** — Store and query structured data records with schema management
+- **Landscape** — Data landscape/overview
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v1/Data/CreateDataSource` | Register a new data source |
+| POST | `/api/v1/Data/GetDataSourceData` | Query data from a source |
+| POST | `/api/v1/Data/DeleteDataSource` | Remove a data source |
+| POST | `/api/v1/Data/SendDataSet` | Push a dataset |
+| GET/POST | `/api/v1/DataVault` | Read/write DataVault records |
+| GET | `/api/v1/DataVault/schema` | Retrieve DataVault schema |
+| GET | `/api/v1/Landscape` | Get data landscape overview |
+
+---
+
+### NDS.Services.Device
+
+Manages PADS4 hardware devices (displays, players) and their gateways. Handles device registration, configuration, command dispatch, and status tracking.
+
+**Controllers / functional areas:**
+
+- **device** — Device inventory: search, update, remove, send commands, get state and stats
+- **gateway** — Register and configure gateway devices that bridge Windows agents
+- **webhook** — Device event webhooks
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/device` | List devices |
+| POST | `/api/v1/device/sendCommand` | Send a command to a device |
+| POST | `/api/v1/device/removeDevices` | Remove devices |
+| POST | `/api/v1/device/search` | Search/filter devices |
+| GET | `/api/v1/device/getState` | Get current device state |
+| GET | `/api/v1/device/stats` | Device statistics |
+| POST | `/api/v1/gateway/register` | Register a gateway |
+| POST | `/api/v1/gateway/updateConfig` | Update gateway configuration |
+
+---
+
+### NDS.Services.Document.Conversion
+
+Converts documents (e.g., Office files) to formats suitable for display on PADS4 screens. Supports asynchronous conversion jobs.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v1/Document/convert` | Submit a document for conversion |
+
+---
+
+### NDS.Services.Email
+
+Sends emails from PADS4 workflows. Manages SMTP configuration and allows sending transactional messages triggered by PADS4 events (e.g., visitor check-in notifications, alerts).
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v1/mail` | Send an email |
+| POST | `/api/v1/mail/ensureSmtpConfiguration` | Validate/apply SMTP configuration |
+| POST | `/api/v1/mail/testSmtpConnection` | Test SMTP connectivity |
+
+---
+
+### NDS.Services.Engine
+
+The PADS4 data engine. Manages datasets used at runtime by presentations — handles uploads, invalidation, and dataset lifecycle for dynamic content.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/engine` | Engine status |
+| GET/POST | `/api/v1/engine/dataset` | Manage engine datasets |
+| POST | `/api/v1/engine/dataset/Invalidate` | Force a dataset refresh |
+| POST | `/api/v1/engine/dataset/Upload` | Upload dataset content |
+
+---
+
+### NDS.Services.FIDS.Connector
+
+Connects PADS4 to Flight Information Display System (FIDS) data sources. Manages message sources, parsers, handlers, and the incoming flight/departure message queue.
+
+**Controllers / functional areas:**
+
+- **connection** — Connection status per domain
+- **message** — Incoming FIDS messages: list, view details, requeue, download
+- **messagesource** — Configure FIDS data sources, parsers, and handlers
+- **ReplicationClient** — Internal replication diagnostics
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/connection/status/{domain}` | Check FIDS connection status |
+| GET | `/api/v1/message` | List received FIDS messages |
+| POST | `/api/v1/message/requeue` | Requeue a failed message |
+| GET | `/api/v1/messagesource` | List configured message sources |
+| GET | `/api/v1/messagesource/types` | Available source types |
+| POST | `/api/v1/messagesource/parser` | Configure a message parser |
+| POST | `/api/v1/messagesource/handler` | Configure a message handler |
+
+---
+
+### NDS.Services.Globalization
+
+Provides internationalisation and localisation support across PADS4 — translations, locale management, and multi-language string resources.
+
+---
+
+### NDS.Services.License
+
+Manages PADS4 software licensing. Validates license keys, tracks feature entitlements, and enforces seat limits for viewers and users.
+
+---
+
+### NDS.Services.Messaging
+
+Provides a real-time pub/sub messaging layer for PADS4 components. Clients subscribe to topics and receive push notifications when relevant events occur.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v1/messaging/subscribe` | Subscribe to a messaging topic |
+| GET | `/api/v1/messaging` | List active subscriptions |
+| POST | `/api/v1/messaging/unsubscribe` | Unsubscribe from a topic |
+
+---
+
+### NDS.Services.Migration
+
+Handles database schema migrations across PADS4 services. Tracks migration history, triggers migration runs, and reports migration status for each service.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/migration` | List available migrations |
+| GET | `/api/v1/migration/details` | Get migration details |
+| POST | `/api/v1/migration/run` | Execute pending migrations |
+| GET | `/api/v1/migration/getMigrationStatus` | Check current migration status |
+| GET | `/api/v1/migration/getMigrationRuns` | View migration run history |
+
+---
+
+### NDS.Services.Orchestration
+
+Coordinates multi-step workflows across PADS4 services. Acts as a workflow engine that sequences operations (e.g., content publishing pipelines, scheduled actions) with support for replication.
+
+---
+
+### NDS.Services.Package
+
+Manages PADS4 application and content packages — installable bundles that can be deployed to viewers. Supports packaging, versioning, and distribution of updates.
+
+---
+
+### NDS.Services.PDF.ToImage
+
+Converts PDF documents to image files (e.g., PNG/JPEG) for use in PADS4 presentations. Supports rendering individual pages from multi-page PDFs.
+
+---
+
+### NDS.Services.PowerBI
+
+Integrates Microsoft Power BI reports and dashboards into PADS4 content. Manages Azure App Registrations for authentication, and Power BI items (reports, dashboards) for display.
+
+**Controllers / functional areas:**
+
+- **power-bi/azure-app-registration** — Manage Azure AD app registrations for Power BI OAuth
+- **power-bi/item** — Register and manage Power BI items (reports/dashboards) to embed
+- **power-bi/item-data** — Retrieve live data from a registered Power BI item
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET/POST | `/api/v1/power-bi/azure-app-registration` | Manage Azure app registrations |
+| GET/POST | `/api/v1/power-bi/item` | Register Power BI items |
+| GET | `/api/v1/power-bi/item/types` | List available item types |
+| GET | `/api/v1/power-bi/item-data` | Fetch live item data |
+
+---
+
+### NDS.Services.Powerpoint.ToVideo
+
+Converts Microsoft PowerPoint presentations to video files for playback on PADS4 screens. Supports asynchronous conversion jobs with status polling.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v1/Powerpoint/Conversion/upload` | Upload a PowerPoint file for conversion |
+| POST | `/api/v1/Powerpoint/Conversion` | Start a conversion job |
+| GET | `/api/v1/Powerpoint/Conversion/status/{jobId}` | Poll conversion job status |
+| GET | `/api/v1/Powerpoint/Conversion/{jobId}` | Download the converted video |
+
+---
+
+### NDS.Services.Process
+
+Runs PADS4 automation processes — user-defined workflows or scripts triggered by events or schedules. Exposes both internal and public-facing process endpoints.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v1/process` | Trigger a process |
+| GET | `/api/v1/process/getResult` | Retrieve process result |
+| POST | `/api/v1/public-process` | Trigger a publicly accessible process |
+
+---
+
+### NDS.Services.Replication
+
+Manages data replication between PADS4 nodes in a distributed or multi-site deployment. Controls replication topology, monitors change sets, and provides administrative tools for managing node state.
+
+**Controllers / functional areas:**
+
+- **Replication/Admin** — Node management: status, addresses, reset, remove, forward/reset/expropriate replication tables
+- **Replication/Diagnostics** — Change set state, replication state, job state, bus diagnostics
+- **ReplicationClient/Diagnostics** — Content transfer state, bus diagnostics
+- **Management** — Message queue management (requeue errors, purge errors)
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/Replication/Admin` | Get replication admin status |
+| GET | `/api/v1/Replication/Admin/Servers` | List replication servers |
+| POST | `/api/v1/Replication/Admin/ResetCollectionNode` | Reset a collection node |
+| GET | `/api/v1/Replication/Diagnostics/replicationState` | Current replication state |
+| GET | `/api/v1/Replication/Diagnostics/replicationJobsState` | Active replication jobs |
+
+---
+
+### NDS.Services.Schedule
+
+Manages schedules and scheduling rules for PADS4 content and events. Supports recurring schedules (via iCalendar RRULEs), exceptions, and occurrence queries.
+
+**Controllers / functional areas:**
+
+- **Schedule** — Create, read, update, delete schedules; generate human-readable descriptions and RRULEs
+- **Occurrence** — Query occurrences for a schedule (by date range, by group); check if a schedule has occurrences
+- **Exception** — Manage schedule exceptions (one-off overrides to recurring rules)
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET/POST/PUT | `/api/v1/Schedule` | Manage schedules |
+| DELETE | `/api/v1/Schedule/{id}` | Delete a schedule |
+| POST | `/api/v1/Schedule/humanize` | Get a human-readable description |
+| POST | `/api/v1/Schedule/rrule` | Generate an RRULE string |
+| GET | `/api/v1/Occurrence/forDates` | List occurrences for a date range |
+| POST | `/api/v1/Occurrence/hasOccurrences` | Check if schedule has occurrences |
+| GET/POST/PUT/DELETE | `/api/v1/Exception` | Manage schedule exceptions |
+
+---
+
+### NDS.Services.Sensor
+
+Integrates IoT sensors and environmental data with PADS4. Manages sensor devices, areas, events, and incidents — enabling content and alerts that respond to real-world conditions (e.g., occupancy, air quality, presence detection).
+
+**Controllers / functional areas:**
+
+- **area** — Define physical areas monitored by sensors; configure area rules
+- **device** — Register and manage sensor devices; view stats and supported auth types
+- **events** — Retrieve sensor event stream
+- **image** — Capture/store images associated with sensor events
+- **incident** — Create and manage incidents triggered by sensor data; query statistics and resolution metrics
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET/POST/DELETE | `/api/v1/area` | Manage monitored areas |
+| GET | `/api/v1/area/rules` | Get area rules |
+| GET/POST/DELETE | `/api/v1/device` | Manage sensor devices |
+| GET | `/api/v1/device/types` | Available device types |
+| GET | `/api/v1/events` | Sensor event stream |
+| POST | `/api/v1/incident` | Create an incident |
+| POST | `/api/v1/incident/statistics` | Incident statistics |
+
+---
+
+### NDS.Services.Teams.Integration
+
+Integrates Microsoft Teams with PADS4. Enables Teams meeting creation and room booking directly from PADS4 room displays, using Azure AD app registrations and delegated user tokens.
+
+**Controllers / functional areas:**
+
+- **azure-app-registration** — Manage Azure AD app registrations for Teams access
+- **azure-ad-user** — Manage Azure AD user accounts used for Teams calls
+- **azure-ad-token** — Store and retrieve Azure AD tokens for delegated access
+- **azure-config** — Azure environment configuration
+- **meeting** — Create Teams meetings
+- **teams-calls** — Retrieve call tokens and create meetings via Teams Calls
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET/POST | `/api/v1/teams/azure-app-registration` | Manage Azure app registrations |
+| GET/POST | `/api/v1/teams/azure-ad-user/store` | Register an Azure AD user |
+| POST | `/api/v1/teams/azure-ad-token/store` | Store an Azure AD token |
+| POST | `/api/v1/teams/meeting` | Create a Teams meeting |
+| GET | `/api/v1/teams/azure-config` | Get Azure configuration |
+
+---
+
+### NDS.Services.User.Scim
+
+Implements the SCIM 2.0 protocol for automated user and group provisioning. Allows identity providers (e.g., Azure AD, Okta) to push user and group changes directly to PADS4.
+
+**Controllers / functional areas:**
+
+- **scim/ServiceProviderConfig** — SCIM service provider metadata
+- **scim/ResourceTypes** — Supported SCIM resource types
+- **scim/Schemas** — SCIM schema definitions
+- **scim/users** — Full CRUD for user provisioning
+- **scim/groups** — Full CRUD for group provisioning
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/scim/ServiceProviderConfig` | SCIM provider capabilities |
+| GET | `/api/v1/scim/users` | List users |
+| POST | `/api/v1/scim/users` | Create a user |
+| PATCH | `/api/v1/scim/users/{id}` | Update a user |
+| DELETE | `/api/v1/scim/users/{id}` | Remove a user |
+| GET/POST/PATCH/DELETE | `/api/v1/scim/groups/{id}` | Group operations |
+
+---
+
+### NDS.Services.UserProfile
+
+Stores and retrieves extended user profile data for PADS4 users — custom attributes, preferences, and profile information beyond core identity data.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/UserProfiles` | List user profiles |
+| POST | `/api/v1/UserProfiles` | Create or update a user profile |
+
+---
+
+### NDS.Services.Video.Conversion
+
+Converts video files to formats optimised for playback on PADS4 screens. Supports asynchronous conversion jobs and thumbnail generation.
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v1/Video/Conversion/upload` | Upload a video file for conversion |
+| POST | `/api/v1/Video/Conversion` | Start a conversion job |
+| GET | `/api/v1/Video/Conversion/status/{jobId}` | Poll conversion status |
+| GET | `/api/v1/Video/Conversion/{jobId}` | Download converted video |
+| POST | `/api/v1/Video/thumbnail/upload` | Upload a custom thumbnail |
+| GET | `/api/v1/Video/thumbnail` | Retrieve a video thumbnail |
+
+---
+
+### NDS.Services.Viewer
+
+The central service for managing PADS4 viewer (display) devices. Handles the full lifecycle of viewers — registration, scheduling, clustering, permissions, variables, and remote control operations.
+
+**Controllers / functional areas:**
+
+- **Viewer** — Core viewer management: create, edit, delete, list, filter viewers
+- **Viewer/Cluster** — Group viewers into clusters for synchronized playback
+- **Viewer/Schedule** — Assign content schedules to viewers; manage weights and recurrence exceptions
+- **Viewer/permissions** — Hierarchical permission management
+- **Viewer/ViewerVariables** — Define and set per-viewer variables for dynamic content; import/export support
+- **ShadowedViewer** — Manage shadowed (mirrored) viewer configurations
+- **Remote operations** — Screenshot capture, reboot, restart, content library reset, log retrieval, system info
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/Viewer` | List all viewers |
+| GET | `/api/v1/Viewer/{id}` | Get a specific viewer |
+| POST | `/api/v1/Viewer/CreateViewer` | Register a new viewer |
+| POST | `/api/v1/Viewer/EditViewer` | Update viewer settings |
+| POST | `/api/v1/Viewer/DeleteViewer` | Remove a viewer |
+| POST | `/api/v1/Viewer/RebootViewer` | Remotely reboot a viewer |
+| POST | `/api/v1/Viewer/RestartViewer` | Restart viewer software |
+| POST | `/api/v1/Viewer/screenshot` | Capture a live screenshot |
+| POST | `/api/v1/Viewer/Schedule/create` | Assign a schedule to a viewer |
+| POST | `/api/v1/Viewer/Cluster` | Create a viewer cluster |
+| GET | `/api/v1/Viewer/ViewerVariables` | List viewer variables |
+| POST | `/api/v1/Viewer/ViewerVariables` | Set viewer variable values |
+| GET | `/api/v1/Viewer/GetViewerLogs` | Retrieve viewer logs |
+| GET | `/api/v1/Viewer/GetViewerSystemInfo` | Retrieve system information |
+
+---
+
+### NDS.Services.Web.ToImage
+
+Renders web pages (URLs) to static image snapshots for embedding in PADS4 presentations.
+
+**Key endpoint:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| GET | `/api/v1/Web/Conversion` | Render a web URL to an image |
+
+---
+
+### NDS.Util.WorkerHost
+
+A background worker host that runs scheduled and event-driven background tasks for other PADS4 services. Not a user-facing API.
+
+---
+
+### NDS.Visitor.Management
+
+A full visitor management system integrated with PADS4 displays. Manages visitor pre-registration, check-in/check-out, meetings, kiosk flows, and administrative reporting.
+
+**Controllers / functional areas:**
+
+- **Auth** — Login/logout for the visitor management system
+- **dashboard/visitors** — Full visitor CRUD: register, check in/out, view history, QR codes, invitations (v1 and v2 API)
+- **dashboard/visitors/external** — Manage external (non-internal) visitors and their visits
+- **kiosk/visitors** — Self-service kiosk flows: validate badge, check in/out, pre-register, self-update
+- **Lookup** — Reference data: available hosts and locations
+- **settings** — System settings, feature flags, API keys, time zone configuration
+- **admin/visitors** — Administrative bulk operations (archive)
+
+**Key endpoints:**
+
+| Method | Path | Description |
+| :-- | :-- | :-- |
+| POST | `/api/v2/dashboard/visitors` | Register a visitor |
+| GET | `/api/v2/dashboard/visitors` | List visitors |
+| PUT | `/api/v2/dashboard/visitors/checkin` | Check in a visitor |
+| PUT | `/api/v2/dashboard/visitors/checkout` | Check out a visitor |
+| GET | `/api/v2/dashboard/visitors/history` | Visitor history |
+| GET | `/api/v2/dashboard/visitors/qr-code/{number}` | Get visitor QR code |
+| POST | `/api/v2/dashboard/visitors/confirmInvitation` | Confirm an invitation |
+| POST | `/api/kiosk/visitors/checkin` | Kiosk self check-in |
+| POST | `/api/kiosk/visitors/pre-register` | Kiosk pre-registration |
+| GET | `/api/Lookup/hosts` | Available hosts |
+| GET | `/api/Lookup/locations` | Available locations |
+| GET/PUT | `/api/settings` | System settings |
+
+---
+
+### NDS.Windows.Gateway
+
+The Windows-based gateway agent that connects on-premises Windows machines to the PADS4 cloud platform. Enables PADS4 to manage and display content on Windows devices. This is a client-side agent rather than a REST API.
+
+---
+
+## Common Patterns
+
+All PADS4 microservices share a consistent set of infrastructure endpoints:
+
+| Path | Description |
+| :-- | :-- |
+| `GET /api/v1/health` | Health check |
+| `GET /api/v1/health/clean` | Deep health check |
+| `GET /api/v1/diagnostics/toggles` | Feature toggles |
+| `GET /api/v1/diagnostics/configuration` | Current configuration |
+| `GET /api/v1/diagnostics/circuitbreakers` | Circuit breaker status |
+| `GET /migration` | Migration status |
+| `GET /version` | Service version |
+| `POST /api/v1/Management/RequeueErrorMessages` | Requeue failed messages |
+| `POST /api/v1/Management/PurgeErrorMessages` | Purge failed messages |
