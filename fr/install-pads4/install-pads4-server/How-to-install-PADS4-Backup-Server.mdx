@@ -1,0 +1,27 @@
+---
+- title: Installer un serveur de sauvegarde PADS4
+---
+
+Le processus d'installation correspond à la configuration du serveur PADS4. Voir [Install PADS4 Server](/fr/install-pads4/install-pads4-server/Install-the-PADS4-server) et exécutez le programme d'installation.
+
+## Configuration d'un serveur de sauvegarde
+
+Pour configurer un serveur de sauvegarde, effectuez les étapes suivantes dans PADS4 System Management sur le serveur principal :
+
+1. Ouvrez **PADS4 System Management** sur le serveur principal.
+2. Dans le menu de gauche, sélectionnez **Servers**.​
+3. Dans la barre de ruban, cliquez sur **Add Backup Server**.
+4. Entrez un **nom d'affichage** pour le sous-serveur tel qu'il doit apparaître dans PADS4.
+5. Vérifiez qu'une **licence valide** est attribuée au serveur de sauvegarde.
+
+## Configuration des ports réseau
+
+PADS4 utilise des ports réseau spécifiques pour ses communications internes et ses services. Consultez la page [**Network Ports Configuration**](/fr/network-requirements) pour la liste complète des ports et paramètres requis.
+
+Pour plus de détails sur la façon dont les données sont synchronisées entre les serveurs principal, secondaire et de sauvegarde, consultez la page [**Replication with Sub and Backup Servers**](/fr/network-requirements).
+
+## Exigences d'installation du serveur
+
+<Warning>
+  N'installez pas **PADS4 Foundation** sur un poste de travail ou un PC Viewer. Il doit fonctionner sur un **serveur dédié**.
+</Warning>

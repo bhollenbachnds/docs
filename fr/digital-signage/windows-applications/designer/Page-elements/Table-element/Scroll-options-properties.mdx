@@ -1,0 +1,44 @@
+Les **options de défilement** définissent la façon dont le **défilement des données** est géré dans l'élément tableau, notamment **les lignes sans défilement, l'affichage des données groupées et les transitions de page automatiques**.
+
+***
+
+## **Faire défiler les données une fois et afficher la page suivante**
+
+* **Enabled:** Le tableau fait défiler toutes les **lignes de données une seule fois**. Après l'affichage de la dernière ligne, la présentation **passe automatiquement à la page suivante**.
+* **Disabled:** Le tableau continue de défiler **indéfiniment**, en bouclant sur les données disponibles.
+
+> **Meilleur cas d'utilisation :**
+>
+> * Lorsque le nombre de **lignes de données est inconnu**, mais que vous devez vous assurer que **chaque ligne est affichée exactement une fois** avant de passer à la page suivante.
+
+***
+
+## **Ne pas faire défiler les X premières lignes**
+
+* **Définir un nombre fixe de lignes** qui **restent toujours visibles** pendant que les autres lignes défilent.
+* Utile pour **afficher des informations critiques ou hautement prioritaires** en haut du tableau.
+
+> **Exemple d'utilisation :**
+>
+> * **Aéroports** : Les **cinq premières lignes** restent statiques pour afficher les vols qui partent bientôt, tandis que les autres vols défilent en dessous.
+> * **Marchés boursiers** : Les **principales entreprises** restent visibles, tandis que les **actions moins critiques défilent**.
+
+***
+
+## **Défilement des données, Regrouper par**
+
+* Affiche **des ensembles de données groupées** un à la fois avant de passer au groupe suivant.
+* **Sélectionner une colonne** qui contient les informations de regroupement.
+* Le **fournisseur de données doit déjà être trié** selon la colonne de groupe sélectionnée.
+
+> **Exemple d'utilisation :**
+>
+> * **Réservations de chambres d'hôtel** : Affiche d'abord les **réservations de la chambre 101**, puis passe à la **chambre 102**, puis à la **chambre 103**, etc.
+> * **Rapports de ventes d'entreprise** : Affiche les données de ventes **regroupées par département**, garantissant que les données de chaque département sont affichées séparément.
+
+***
+
+## **Remarques importantes**
+
+* **Chaque élément d'une ligne doit avoir le défilement des données activé** pour qu'il défile dans le tableau.
+* **Le tri doit être configuré dans les paramètres du fournisseur de données** — l'élément tableau ne **pas** trier les données automatiquement.

@@ -1,0 +1,60 @@
+Ces propriétés définissent le **contenu textuel** affiché par un **élément basé sur du texte**. Vous pouvez ajouter un **élément de texte unique** ou créer une **liste de lecture d'éléments textuels** qui seront affichés en séquence.
+
+***
+
+## **Gestion de la liste de lecture**
+
+Vous pouvez :
+
+* **Ajouter, modifier ou supprimer** des éléments textuels.
+* **Réorganiser** l'ordre des éléments de la liste de lecture.
+* **Utiliser les boutons de navigation** pour parcourir les éléments de la liste de lecture.
+* Afficher la **durée totale** de tous les éléments de la liste de lecture.
+
+***
+
+## **Options des éléments de liste de lecture basés sur du texte**
+
+| **Type**                      | **Description**                                                                                                                                           |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Texte**                     | Affiche du **texte statique** saisi directement dans l'élément.                                                                                           |
+| **Text from Content Library** | Référence un **fichier texte** stocké dans la **bibliothèque de contenu PADS4** (recommandé). Le contenu est automatiquement synchronisé sur tous les PC. |
+| **Text from File**            | Référence un **fichier texte en dehors de la bibliothèque de contenu**. Ces fichiers **doivent être distribués manuellement** sur les PC.                 |
+| **No Text**                   | Crée une **pause** dans la liste de lecture, utile pour les ajustements de synchronisation.                                                               |
+
+***
+
+## **Contenu**
+
+* **Saisir directement du texte statique** ou fournir une **référence de fichier** selon le type choisi.
+* Si vous utilisez **Text from File**, assurez-vous que le chemin du fichier est **correct et accessible**.
+
+***
+
+## **Durée**
+
+* Spécifie le **temps d'affichage (en secondes)** pour chaque élément textuel ou pause dans la liste de lecture.
+* La synchronisation détermine combien de temps le texte reste visible avant de passer à l'élément suivant.
+
+***
+
+## **Effet**
+
+* Sélectionnez un **effet de transition entrant** pour chaque élément de la liste de lecture.
+* Définissez la **durée de l'effet (en secondes)**.
+
+***
+
+## **Considérations supplémentaires**
+
+* **Gestion du texte multiligne**:
+  * Si vous saisissez plusieurs lignes manuellement, appuyez sur **\[Enter]** pour séparer les lignes.
+  * Pour les fichiers texte, les **Data Source Text Conversion Properties** déterminent la façon dont le texte multiligne est traité.
+
+* **Gestion des données en temps réel**:
+  * Si l'élément textuel est connecté à une **source de données**, **les propriétés de la liste de lecture sont désactivées**.
+  * Le contenu de l'élément sera plutôt déterminé par le **flux de données en temps réel**.
+
+* **Mise à jour des fichiers texte**:
+  * Lors de l'utilisation de fichiers texte, **seules les références de fichiers** sont incluses dans la présentation.
+  * Si le **fichier texte est mis à jour**, le nouveau contenu sera utilisé lors de la lecture **sans modifier la présentation elle-même**.

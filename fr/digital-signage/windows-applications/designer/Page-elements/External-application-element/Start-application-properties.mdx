@@ -1,0 +1,63 @@
+Ces propriétés définissent **quelle application externe** sera lancée par l'élément Application externe et comment elle se comportera au démarrage.
+
+***
+
+### **Démarrer l'application**
+
+* **Ne pas démarrer cette application si elle est déjà en cours d'exécution**\
+  Si activé, PADS4 ne **démarrera pas une nouvelle instance** de l'application externe si elle est déjà en cours d'exécution.\
+  À la place, il va **activer** l'instance en cours d'exécution.
+
+***
+
+### **Application**
+
+Options pour spécifier quelle application doit être lancée :
+
+| Option            | Description                                                                                          |
+| ----------------- | ---------------------------------------------------------------------------------------------------- |
+| **Manuel**        | Saisir manuellement le **chemin complet** vers l'exécutable de l'application.                        |
+| **Data Provider** | Définir dynamiquement le chemin de l'application via un **data provider**, une colonne et une ligne. |
+
+* **Application**:\
+  Le **chemin complet du fichier** de l'exécutable à lancer. Vous pouvez utiliser le **bouton Parcourir** pour localiser le fichier.
+
+> **Remarque**: Le chemin est **absolu** et doit être valide sur le périphérique de lecture.
+
+***
+
+### **Data Provider (Alternative optionnelle au mode Manuel)**
+
+Un **Data Provider** peut être utilisé pour déterminer dynamiquement quelle application démarrer :
+
+* **Data Provider**: La source de données externe (table, requête, XML, RSS, etc.).
+* **Colonne**: La colonne spécifique dans la source de données contenant le chemin de l'application.
+* **Ligne**: La ligne à partir de laquelle lire la valeur de l'application.
+
+***
+
+### **Arguments**
+
+Certaines applications acceptent des **arguments de ligne de commande** pour des options de lancement avancées (par ex., ouvrir un fichier, démarrer en mode silencieux).
+
+| Option            | Description                                                                             |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| **Manuel**        | Spécifier manuellement les arguments utilisés pour lancer l'application.                |
+| **Data Provider** | Définir dynamiquement les arguments via un **data provider**, une colonne et une ligne. |
+
+* **Arguments**:\
+  La chaîne complète des arguments de ligne de commande à utiliser lors du lancement de l'application.
+
+***
+
+### **Remarques & Conseils**
+
+* Si **des espaces** sont présents dans le chemin de l'application ou des arguments, PADS4 **ajoute automatiquement** des guillemets `""`, donc **vous n'avez pas besoin de les ajouter manuellement**, sauf si requis **à l'intérieur de** la commande.
+* **Exemple** pour exécuter une présentation PowerPoint sans afficher la fenêtre PowerPoint :
+  ```
+  Application: C:\Program Files\Microsoft Office\Powerpoint Viewer\PPTView.exe  
+  Arguments: /s sample.ppt
+  ```
+* Si le data provider contient **moins de lignes** que ce qui est spécifié dans le champ **Ligne**, **aucune application ne sera démarrée**.
+* **Les guillemets** sont ajoutés automatiquement si nécessaire (par ex., pour les chemins de fichiers contenant des espaces).
+* Utile lors de l'intégration d'outils externes, de fichiers ou de processus dans votre flux de travail de présentation PADS4.

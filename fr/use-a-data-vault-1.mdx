@@ -1,0 +1,36 @@
+---
+- title: Utiliser un Data Vault dans une présentation Designer
+- description: Liez un Data Vault à un élément du canevas PADS4 Designer afin que
+    l'élément reste synchronisé avec le contenu géré dans System Management.
+---
+
+Une fois qu'un Data Vault est attaché à votre présentation, vous pouvez extraire son contenu dans n'importe quel élément du canevas. L'élément reste synchronisé avec la source Data Vault définie dans PADS4 System Management.
+
+## Avant de commencer
+
+Assurez-vous que :
+
+* Un Data Vault a été ajouté à votre présentation. Voir [Add a Data Vault](/fr/use-a-data-vault).
+
+## Afficher le contenu d'un Data Vault dans une présentation
+
+1. **Placez un élément sur le canevas.** Dans la **Elements** barre, sélectionnez l'élément que vous souhaitez utiliser et faites glisser son contour sur le canevas.
+   <Frame>
+     <img src="/images/DigitalSignage/Designer/PlaceTextElement.png" alt="Placing an element on the canvas" title="Place Text Element" className="mr-auto" style={{ width:"62%" }} />
+   </Frame>
+2. **Ouvrez les options de Playlist.** Dans le **Properties** volet, sélectionnez **Playlist**, puis sélectionnez l'élément que vous venez de placer sur le canevas.
+3. **Choisissez Data Vault comme source.** Parmi les options de playlist disponibles, sélectionnez **Data Vault**.
+   <Frame>
+     <img src="/images/DigitalSignage/Designer/PlaylistOptions.png" alt="Playlist options with Data Vault highlighted" title="Playlist Options" className="mr-auto" style={{ width:"93%" }} />
+   </Frame>
+4. **Sélectionnez un Data Vault.** Dans le volet Data Vault qui s'ouvre, choisissez le Data Vault que vous souhaitez utiliser.
+   <Frame>
+     ![Selecting a Data Vault](/images/DigitalSignage/Designer/SelectDataVault.png)
+   </Frame>
+5. **Sélectionnez une colonne.** Choisissez la colonne dont vous souhaitez afficher les valeurs dans l'élément.
+   <Frame>
+     ![Selecting a column from the Data Vault](/images/DigitalSignage/Designer/DataVaultSelectColumn.png)
+   </Frame>
+6. **Confirmez la sélection.** Sélectionnez **OK** pour ajouter le contenu à l'élément.
+
+Le contenu du Data Vault apparaît désormais dans votre présentation PADS4 et se met à jour automatiquement lorsque la source change.

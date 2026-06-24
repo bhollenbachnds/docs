@@ -1,0 +1,85 @@
+Grâce aux fonctions d'utilisation de la mémoire, vous pouvez analyser l'utilisation de la mémoire d'un PADS4 Viewer ou l'utilisation de la mémoire enregistrée dans un fichier boîte noire. Vous pouvez afficher l'utilisation de la mémoire de l'ensemble du système ou des processus PADS4 individuels. Le journal d'utilisation de la mémoire d'un PADS4 Viewer peut être effacé ou enregistré dans un fichier, avec d'autres informations de boîte noire.
+
+ 
+
+#### **Pour afficher le journal d'utilisation de la mémoire d'un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Utilisation de la mémoire** dans la liste des catégories d'informations du viewer disponibles.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées auprès du Viewer sélectionné et afficher les résultats dans la fenêtre d'utilisation de la mémoire.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>les deux</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Pour afficher le journal d'utilisation de la mémoire d'un fichier boîte noire**
+
+1. Assurez-vous que la boîte noire a été [ajoutée](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) à l'application.
+2. Cliquez sur l'onglet **Boîte noire** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Blackboxtab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Blackboxtab.png)
+3. Sélectionnez l'élément boîte noire dans la liste des boîtes noires disponibles.
+4. Cliquez sur **Utilisation de la mémoire** dans la liste des catégories d'informations de boîte noire disponibles.
+
+Après cela, le système ouvrira automatiquement le fichier black box pour récupérer les informations demandées et afficher les résultats dans la fenêtre d'utilisation de la mémoire.
+
+ 
+
+#### **Fenêtre d'utilisation de la mémoire**
+
+La fenêtre d'utilisation de la mémoire affiche l'utilisation de la mémoire de votre PADS4 Viewer au cours de la période récente. Cela vous permet de voir rapidement s'il y a une augmentation de la mémoire utilisée au fil du temps. Une augmentation permanente de la mémoire utilisée est généralement le signe d'une fuite mémoire dans l'un des processus en cours d'exécution sur votre PC et peut, après un certain temps, provoquer le blocage de votre PC.
+
+![EN Agent Memoryusage Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Memoryusage.png)
+
+Le système PADS4 enregistre automatiquement l'utilisation de la mémoire sur votre PC Viewer toutes les 15 minutes.
+
+Lorsque vous sélectionnez l'un des éléments d'utilisation de la mémoire répertoriés dans le tableau, le système marque automatiquement le point correspondant dans le graphique affiché. Inversement, si vous cliquez sur un point dans le graphique affiché, le système sélectionne automatiquement l'élément répertorié dans le tableau qui correspond à ce point.
+
+ 
+
+#### **Vues**
+
+Vous pouvez afficher l'utilisation de la mémoire de l'ensemble du PC Viewer ou l'utilisation de la mémoire des processus PADS4 individuels. Pour modifier la vue de la fenêtre d'utilisation de la mémoire, cliquez sur l'un des boutons suivants dans le **Home** menu de la barre de ruban :
+
+![EN Agent Ribbon System Memory Usage Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-SystemMemoryUsage.png)
+
+* Affiche l'utilisation de la mémoire de l'ensemble du PC Viewer. Cela inclut non seulement les processus PADS4, mais tous les processus en cours d'exécution sur votre PC Viewer.
+
+  ![EN Agent Ribbon Process Memory Usage Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ProcessMemoryUsage.png)
+* Affiche l'utilisation de la mémoire des processus PADS4 individuels sur le PC Viewer. Dans la fenêtre d'utilisation de la mémoire, sélectionnez le **Process** pour lequel vous souhaitez afficher l'utilisation de la mémoire.
+
+Dans la **Process Memory Usage** vue, non seulement la mémoire utilisée, mais aussi des informations sur le nombre de handles et de threads utilisés sont fournies. Comme pour la mémoire utilisée, si le nombre de handles ou de threads augmente de façon permanente, cela peut entraîner des problèmes tels qu'un Viewer qui ne répond plus.
+
+ 
+
+#### **Effacement du journal d'utilisation de la mémoire**
+
+En effaçant le journal d'utilisation de la mémoire, vous pouvez redémarrer le processus de journalisation de votre PADS4 Viewer. Pour effacer le journal d'utilisation de la mémoire :
+
+1. Cliquez sur **Clear Log** dans le **Home** menu.
+
+   ![EN Agent Ribbon Clear Log Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ClearLog.png)
+2. Cliquez sur **Yes** pour confirmer que vous souhaitez effacer le journal d'utilisation de la mémoire.
+
+Après cela, tous les messages du journal pour l'utilisation de la mémoire système et l'utilisation de la mémoire des processus seront supprimés du journal sur le PC PADS4 Viewer.
+
+ 
+
+#### **Enregistrement du journal d'utilisation de la mémoire**
+
+Pour enregistrer le journal d'utilisation de la mémoire afin de l'analyser ou de le comparer hors ligne ultérieurement, vous pouvez l'enregistrer avec d'autres informations de la [black box](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) de votre Viewer. Pour enregistrer le journal d'utilisation de la mémoire :
+
+1. Cliquez sur **Save Black Box** dans le **Home** menu.
+2. Entrez un **File name** et cliquez sur **Save** pour enregistrer les informations.
+
+Après cela, le fichier black box sera enregistré sur votre ordinateur.
+
+<Tip>
+  Chaque PADS4 Viewer crée automatiquement une soi-disant black box dans laquelle des informations précieuses sur PADS4 sont stockées. Cela inclut des informations système et divers journaux. Lorsque vous rencontrez un problème avec un PADS4 Viewer, la black box est la source d'information idéale pour analyser la situation et identifier le problème. Ainsi, lorsque vous contactez le support pour un problème avec un PADS4 Viewer, il est conseillé d'envoyer toujours le fichier black box.
+</Tip>
