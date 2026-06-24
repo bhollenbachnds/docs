@@ -1,0 +1,50 @@
+Si votre installation PADS4 comprend, en plus d'un serveur principal, des sous-serveurs ou des serveurs de sauvegarde, vous pouvez utiliser les fonctions de connexion au serveur pour vérifier à distance l'état de connexion de vos serveurs PADS4. Pour une installation PADS4 ne comportant qu'un seul serveur (principal), la fenêtre des connexions au serveur n'est pas applicable et n'est pas disponible.
+
+ 
+
+#### **Pour vérifier l'état de connexion de vos serveurs PADS4**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Sélectionnez un **Server** dans la liste des serveurs disponibles.
+
+   Étant donné que les informations sur les connexions au serveur sont des informations globales, le serveur que vous sélectionnez ici n'a pas d'importance.
+3. Cliquez sur **Server Connections** dans la liste des catégories d'informations serveur disponibles.
+
+Après cela, le système récupère automatiquement les informations demandées auprès du serveur PADS4 connecté et affiche les résultats dans la fenêtre des connexions au serveur.
+
+ 
+
+#### **Fenêtre des connexions au serveur**
+
+Dans la fenêtre des connexions au serveur, vous pouvez voir en un coup d'œil quels serveurs PADS4 fonctionnent correctement et quels serveurs PADS4 ont perdu la connexion réseau avec le serveur principal.
+
+![EN Agent Server Connections Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-ServerConnections.png)
+
+<Tip>
+  Pour chaque serveur PADS4 répertorié, l'icône placée devant l'icône reflète son état de connexion. Dans le cas particulier où vous êtes connecté à un sous-serveur et que ce sous-serveur ne peut pas atteindre le serveur principal, le sous-serveur affichera une icône d'avertissement, tandis que les autres serveurs afficheront une icône d'erreur. Cela ne signifie pas nécessairement que ces serveurs ne fonctionneront pas, mais cela signifie que votre serveur connecté est incapable de déterminer l'état de ces serveurs.
+</Tip>
+
+**Server**\
+\
+Le nom unique qui identifie le serveur PADS4 au sein du système PADS4.
+
+**Rôle**\
+Le rôle du serveur au sein du système PADS4. Les rôles possibles sont : serveur principal, sous-serveur et serveur de sauvegarde. Chaque installation PADS4 possède exactement un serveur principal.
+
+**Statut**\
+Le statut du serveur PADS4. Si le statut est « déconnecté », le serveur n'a très probablement aucune connexion réseau avec son serveur PADS4 parent et ne sera pas en mesure de recevoir des mises à jour concernant les présentations planifiées ou le contenu. Les informations précédemment reçues ont été mises en cache localement par le serveur PADS4 et, par conséquent, le serveur peut encore fonctionner correctement. Les serveurs PADS4 peuvent fonctionner hors ligne pendant une période maximale d'une semaine. Durant cette période, ils doivent être en mesure de se reconnecter avec succès au serveur PADS4 principal, directement ou indirectement.
+
+**Connecté depuis**\
+\
+L'horodatage du moment depuis lequel le serveur dispose d'une connexion fonctionnelle avec le serveur PADS4 principal.
+
+**Déconnecté depuis**\
+\
+L'horodatage du moment depuis lequel le serveur a perdu sa connexion avec le serveur PADS4 principal. Si aucun horodatage n'est affiché, cela signifie que le serveur ne s'est jamais connecté avec succès au serveur PADS4 principal depuis son démarrage.
+
+**Licence**\
+La licence qui a été attribuée à ce serveur. Les serveurs ne peuvent se connecter avec succès au serveur PADS4 principal que s'ils disposent d'une licence valide. Les licences peuvent être attribuées à l'aide de l'application PADS4 System Management.
+
+Lorsque vous sélectionnez un élément de serveur dans la fenêtre des connexions au serveur, des informations détaillées supplémentaires sur ce serveur s'affichent en bas de la fenêtre. Cela inclut l'**adresse IP** du serveur.

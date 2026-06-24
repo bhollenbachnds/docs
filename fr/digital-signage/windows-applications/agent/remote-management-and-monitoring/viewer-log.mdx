@@ -1,0 +1,79 @@
+Avec les fonctions de journal du viewer, vous pouvez consulter les messages de journal de votre PADS4 (HTML5) Viewer ou d'un fichier black box. Le journal du viewer d'un PADS4 Viewer peut être effacé ou enregistré dans un fichier, ainsi que d'autres informations black box.
+
+ 
+
+#### **Pour afficher les messages de journal d'un PADS4 (HTML5) Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Viewer log** dans la liste des catégories d'informations du viewer disponibles.
+
+Ensuite, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées auprès du Viewer sélectionné et afficher les résultats dans la fenêtre du journal du viewer.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations du viewer demandées que lorsque vous aurez sélectionné <u>les deux</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+#### **Pour afficher les messages de journal d'un fichier black box**
+
+1. Assurez-vous que le black box a été [ajouté](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) à l'application.
+2. Cliquez sur l'onglet **Black Box** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Blackboxtab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Blackboxtab.png)
+3. Sélectionnez l'élément black box dans la liste des black boxes disponibles.
+4. Cliquez sur **Viewer log** dans la liste des catégories d'informations black box disponibles.
+
+Ensuite, le système ouvrira automatiquement le fichier black box pour récupérer les informations demandées et afficher les résultats dans la fenêtre du journal du viewer.
+
+ 
+
+#### **Fenêtre du journal du viewer**
+
+La fenêtre du journal du viewer affiche tous les messages de journal générés par l'application PADS4 Viewer ou PADS4 Controller. Lorsque vous rencontrez un problème avec un PADS4 Viewer, le journal du Viewer est généralement le point de départ pour trouver la cause de votre problème.
+
+![EN Agent Viewerlog Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Viewerlog.png)
+
+Vous pouvez éventuellement utiliser les boutons bascule en bas de la fenêtre du journal du viewer pour filtrer les messages affichés. Par exemple, lorsque vous souhaitez uniquement voir les avertissements et les messages d'erreur.\
+Le bouton ci-dessous à droite copie l'élément sélectionné dans le **presse-papiers**. Une autre façon est d'utiliser le bouton droit de la souris sur l'élément et de sélectionner copier dans le presse-papiers dans le menu.
+
+**Niveau**\
+Une icône indiquant si l'élément journalisé est un message d'information, un avertissement ou une erreur.
+
+**Horodatage**\
+Date et heure auxquelles l'élément a été journalisé.
+
+**Source**\
+Nom du processus qui a journalisé l'élément. Si le processus est PADS4 Viewer, le nom du viewer qui identifie le PADS4 Viewer est indiqué.
+
+**Message**\
+Le message réel qui est journalisé.
+
+ 
+
+#### **Effacement du journal du viewer**
+
+En effaçant le journal du Viewer, vous pouvez redémarrer le processus de journalisation de votre PADS4 Viewer. Pour effacer le journal du Viewer :
+
+1. Cliquez sur **Clear Log** dans le menu **Home**.
+
+   ![EN Agent Ribbon Clear Log Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-ClearLog.png)
+2. Cliquez sur **Yes** pour confirmer que vous souhaitez effacer le journal du Viewer.
+
+Ensuite, tous les messages de journal seront supprimés du journal du viewer sur le PC PADS4 Viewer.
+
+ 
+
+#### **Enregistrement du journal du (HTML5) Viewer**
+
+Pour enregistrer le journal du Viewer afin de le consulter hors ligne ultérieurement, vous pouvez l'enregistrer avec d'autres informations [black box](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) de votre Viewer. Pour enregistrer le journal du viewer :
+
+1. Cliquez sur **Save Black Box** dans le menu **Home**.
+2. Saisissez un **Nom de fichier** et cliquez sur **Save** pour enregistrer les informations.
+
+Ensuite, le fichier black box sera enregistré sur votre ordinateur.
+
+<Tip>
+  Chaque PADS4 Viewer crée automatiquement ce qu'on appelle un black box dans lequel des informations précieuses sur PADS4 sont stockées. Cela inclut les informations système et divers journaux. Lorsque vous rencontrez un problème avec un PADS4 (HTML5) Viewer, le black box est la source d'information idéale pour analyser la situation et identifier le problème. Ainsi, lorsque vous contactez le support pour un problème avec un PADS4 (HTML5) Viewer, il est conseillé d'envoyer toujours le fichier black box.
+</Tip>

@@ -1,20 +1,24 @@
-Le **Calendar table** dans Microsoft Exchange Server contient des informations détaillées sur **les événements programmés, les réunions et les rendez-vous**. Voici une ventilation des **colonnes et types de données**.
+---
+- title: Connexion d'une table de calendrier Microsoft Exchange Server
+---
+
+Le **tableau Calendrier** dans Microsoft Exchange Server contient des informations détaillées sur **les événements planifiés, les réunions et les rendez-vous**. Vous trouverez ci-dessous une description des **colonnes et types de données**.
 
 ***
 
-### **Colonnes et descriptions de la table Calendar**
+### **Colonnes et descriptions du tableau Calendrier**
 
-| **Nom de colonne**         | **Type de données** | **Description**                                                                           |
+| **Nom de la colonne**      | **Type de données** | **Description**                                                                           |
 | -------------------------- | ------------------- | ----------------------------------------------------------------------------------------- |
 | **Subject**                | String              | Titre de l'événement.                                                                     |
-| **Body**                   | String              | Description de l'événement (*Inclus en option*).                                          |
+| **Body**                   | String              | Description de l'événement (*Inclus facultativement*).                                    |
 | **UniqueBody**             | String              | Affiche la partie du corps qui est unique à la conversation dont cet élément fait partie. |
 | **Importance**             | String              | Priorité de l'événement (**High, Normal, Low**).                                          |
 | **Start**                  | Date                | Date et heure de début de l'événement.                                                    |
-| **Start\_DayOfWeek**       | Integer             | Représentation numérique du jour de la semaine de début.                                  |
+| **Start\_DayOfWeek**       | Integer             | Représentation numérique du jour de début de la semaine.                                  |
 | **End**                    | Date                | Date et heure de fin de l'événement.                                                      |
-| **End\_DayOfWeek**         | Integer             | Représentation numérique du jour de la semaine de fin.                                    |
-| **Location**               | String              | Emplacement physique ou virtuel où se déroule l'événement.                                |
+| **End\_DayOfWeek**         | Integer             | Représentation numérique du jour de fin de la semaine.                                    |
+| **Location**               | String              | Lieu physique ou virtuel où se déroule l'événement.                                       |
 | **Duration**               | Integer             | Durée de l'événement (unité par défaut : minutes).                                        |
 | **DurationInSeconds**      | Integer             | Durée de l'événement en secondes.                                                         |
 | **DurationInMinutes**      | Integer             | Durée de l'événement en minutes.                                                          |
@@ -31,22 +35,22 @@ Le **Calendar table** dans Microsoft Exchange Server contient des informations d
 | **RecurrentStartDate**     | Date                | Date de début de la **série d'événements récurrents**.                                    |
 | **RecurrentEndDate**       | Date                | Date de fin de la **série d'événements récurrents**.                                      |
 | **IsReminderSet**          | Boolean             | Indique si un rappel est défini pour cet événement (**True/False**).                      |
-| **NetShowUrl**             | String              | URL de la réunion en ligne **Microsoft NetShow**.                                         |
-| **OriginalStart**          | Date                | La date de début originale avant que des modifications ne soient apportées.               |
+| **NetShowUrl**             | String              | URL de la **Microsoft NetShow** réunion en ligne.                                         |
+| **OriginalStart**          | Date                | La date de début originale avant toute modification.                                      |
 | **DateTimeCreated**        | Date                | La date et l'heure de création de l'événement.                                            |
 | **DateTimeSent**           | Date                | La date et l'heure d'envoi de l'invitation à l'événement.                                 |
 | **DateTimeReceived**       | Date                | La date et l'heure de réception de l'invitation à l'événement.                            |
 | **AppointmentType**        | String              | Type de rendez-vous (**Single, RecurringMaster, Occurrence, Exception**).                 |
 | **HasAttachments**         | Boolean             | Indique si l'événement comporte des pièces jointes (**True/False**).                      |
 | **Sensitivity**            | String              | Visibilité de l'événement (**Normal, Personal, Private, Confidential**).                  |
-| **Status**                 | String              | **Statut de disponibilité hérité** de l'événement.                                        |
+| **Status**                 | String              | **Statut Libre/Occupé hérité** de l'événement.                                            |
 | **Categories**             | String              | Catégories associées à cet événement.                                                     |
 | **IsUnmodified**           | Boolean             | Indique si l'événement a été modifié après sa création (**True/False**).                  |
 | **LastModifiedTime**       | Date                | La date et l'heure de la dernière modification de l'événement.                            |
 | **LastModifiedName**       | String              | Le nom de la personne qui a modifié l'événement en dernier.                               |
-| **RequiredAttendees**      | String              | Liste des participants **obligatoires**.                                                  |
-| **OptionalAttendees**      | String              | Liste des participants **facultatifs**.                                                   |
-| **Resources**              | String              | Liste des **ressources** (salles, équipements) réservées pour cette réunion.              |
+| **RequiredAttendees**      | String              | Liste des **obligatoires** participants.                                                  |
+| **OptionalAttendees**      | String              | Liste des **facultatifs** participants.                                                   |
+| **Ressources**             | String              | Liste de **ressources** (salles, équipements) réservées pour cette réunion.               |
 
 ***
 
@@ -55,4 +59,4 @@ Le **Calendar table** dans Microsoft Exchange Server contient des informations d
 * Cette structure de table est utilisée dans **PADS4** lors de la récupération des données de calendrier depuis **Microsoft Exchange Server**.
 * Certains champs (comme **Body, UniqueBody**) peuvent être **optionnels** selon vos paramètres Exchange.
 * **Événements récurrents** ont des propriétés supplémentaires comme **RecurrentStartDate, RecurrentEndDate**.
-* **Réunions en ligne** ont des attributs spécifiques comme **IsOnlineMeeting et NetShowUrl**.
+* **Réunions en ligne** ont des attributs spécifiques comme **IsOnlineMeeting and NetShowUrl**.
