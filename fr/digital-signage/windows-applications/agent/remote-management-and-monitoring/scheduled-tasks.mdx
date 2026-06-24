@@ -1,0 +1,207 @@
+Avec les fonctions de tâches planifiées, vous pouvez afficher les tâches planifiées de votre PADS4 Server ou PADS4 Viewer. Sur votre serveur, les tâches planifiées peuvent être ajoutées, modifiées ou supprimées.
+
+ 
+
+#### **Pour afficher les tâches planifiées de votre PADS4 Server**
+
+1. Cliquez sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquez sur **Scheduled tasks** dans la liste des catégories d'informations serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le PADS4 Server connecté et affichera les résultats dans la fenêtre des tâches planifiées. Si votre installation PADS4 comprend des sous-serveurs, la fenêtre des tâches planifiées affichera toujours les résultats globaux de l'ensemble de votre installation PADS4, quel que soit le serveur que vous avez sélectionné.
+
+ 
+
+#### **Pour afficher les tâches planifiées d'un PADS4 Viewer**
+
+1. Cliquez sur l'onglet **Viewer** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Viewertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Viewertab.png)
+2. Sélectionnez un Viewer dans la liste des destinations disponibles.
+3. Cliquez sur **Scheduled tasks** dans la liste des catégories d'informations viewer disponibles.
+
+Après cela, le système se connectera automatiquement au PADS4 Server connecté pour récupérer les informations demandées depuis le Viewer sélectionné et afficher les résultats dans la fenêtre des tâches planifiées.
+
+<Warning>
+  L'application PADS4 ne pourra commencer à récupérer les informations viewer demandées que lorsque vous aurez sélectionné <u>à la fois</u> un Viewer et une Catégorie dans le volet de navigation.
+</Warning>
+
+ 
+
+#### **Fenêtre des tâches planifiées**
+
+La fenêtre des tâches planifiées affiche toutes les tâches qui ont été planifiées pour votre PADS4 Server ou PADS4 Viewer. Cela vous permet de vérifier quand certaines tâches seront exécutées et d'inspecter les résultats des tâches terminées.
+
+![EN Agent Scheduledtasks Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Scheduledtasks.png)
+
+Dans la fenêtre des tâches planifiées de votre PADS4 Server, toutes les tâches planifiées de votre serveur et de tous ses viewers sont affichées. Dans la fenêtre des tâches planifiées d'un PADS4 Viewer, seules les tâches applicables à ce viewer sont affichées.
+
+**Tâche**\
+Description définie par le système de la tâche planifiée.
+
+**Planification**\
+Description générée indiquant quand la tâche sera exécutée.
+
+**Statut**\
+Indique si la tâche est en attente d'exécution, est en cours d'exécution ou a été terminée.
+
+**Dernière exécution**\
+Si la tâche a été exécutée au moins une fois, cette information indique si la dernière exécution a réussi ou échoué.
+
+**Destinations**\
+Affiche toutes les destinations pour lesquelles la tâche a été planifiée. Pour les tâches serveur, la valeur 'Server' sera affichée.
+
+ 
+
+#### **Résultats de la tâche**
+
+Si vous sélectionnez une tâche dans la fenêtre des tâches planifiées qui a été exécutée au moins une fois, les **Résultats de la tâche** affichent des détails sur l'exécution de la tâche.
+
+**Heure planifiée**\
+Date et heure auxquelles l'exécution de la tâche était planifiée.
+
+**Destination**\
+\
+Destination où la tâche a été exécutée. Il peut s'agir du serveur de votre système ou d'un viewer. Une exception est la tâche Wake-on-LAN, pour laquelle le Viewer est répertorié tandis que la tâche est exécutée sur le serveur.
+
+**Heure de début**\
+Horodatage du moment où la tâche a été démarrée.
+
+**Durée**\
+\
+Les heures, minutes et secondes nécessaires à l'exécution de la tâche. Lorsque l'exécution de votre tâche a pris moins d'une seconde, une valeur de 1 seconde est affichée.
+
+**Statut**\
+\
+Indique si la tâche est en cours d'exécution ou terminée. Lorsqu'elle est terminée, indique si l'exécution a réussi ou échoué.
+
+**Message**\
+Affiche des informations sur le résultat de la tâche.\
+Si le message est 'See details', vous pouvez cliquer sur le bouton **Details** pour consulter les résultats détaillés de la tâche. La façon dont les résultats détaillés sont affichés dépend du type de tâche.
+
+ 
+
+Par défaut, les tâches planifiées terminées sont automatiquement supprimées après 7 jours. Cette option peut être ajustée en modifiant les paramètres serveur de votre installation PADS4 via l'application PADS4 System Management.
+
+Les tâches Wake-on-LAN présentent quelques exceptions. Bien que les tâches Wake-on-LAN soient exécutées sur votre serveur, le viewer est répertorié comme destination. De plus, lorsque vous consultez les tâches planifiées d'un viewer, la tâche Wake-on-LAN sera incluse dans la liste, alors que cette tâche réside en réalité sur le serveur.
+
+Dans le volet des résultats de la tâche, vous pouvez voir si le signal Wake-on-LAN a été envoyé avec succès par PADS4 Server. Cela ne signifie PAS automatiquement que la fonction Wake-on-LAN a été reçue avec succès par le viewer. Si le viewer a été allumé avec succès, vous verrez normalement son statut Viewer et son statut Controller dans la [fenêtre des connexions viewer](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Viewer%20connections.htm) mis à jour sur 'connected'.
+
+ 
+
+#### **Gestion des tâches planifiées**
+
+Depuis la fenêtre des tâches planifiées, vous pouvez planifier à distance de nouvelles tâches, modifier des tâches planifiées existantes ou supprimer des tâches planifiées. De nouvelles tâches planifiées peuvent être créées de zéro ou en dupliquant et en modifiant une tâche existante. Les tâches peuvent être désactivées pour les désactiver temporairement.
+
+<Warning>
+  Les tâches planifiées - non seulement les tâches serveur, mais aussi les tâches viewer - ne peuvent être gérées que sur votre PADS4 Server. Les fonctions de gestion des tâches planifiées ne sont PAS disponibles dans la fenêtre des tâches planifiées d'un PADS4 Viewer.
+</Warning>
+
+Lors de la planification d'une tâche, il existe une distinction entre les tâches serveur et les tâches viewer. Lorsque vous planifiez une tâche serveur qui doit être traitée par votre PADS4 Server connecté, la tâche est automatiquement transmise au bon PADS4 Server où elle est stockée localement. Les tâches viewer planifiées sont également automatiquement transmises au bon PADS4 Server, mais le PADS4 Server transmet à son tour la tâche au bon PADS4 Viewer où elle est stockée localement. Ce système de transmission automatique des tâches garantit que votre tâche sera exécutée au bon endroit et au bon moment, même lorsque le système est temporairement hors ligne.
+
+ 
+
+#### **Pour ajouter une nouvelle tâche planifiée**
+
+1. Cliquez sur **New Task** dans le menu **Home**.
+
+   ![EN Agent Ribbon Newtask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Newtask.png)
+2. Sélectionnez la tâche que vous souhaitez planifier et cliquez sur **Next** pour continuer.
+
+   ![EN Agent Taskwizard Choosetask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Choosetask.png)
+
+   Vous pouvez choisir parmi les tâches suivantes :
+
+   | **Tâche**                     | **Type**     | **Description**                                                                                                                                                                                                                                                                                                     |
+   | :---------------------------- | :----------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | Update software               | Tâche viewer | Téléchargez et/ou installez la dernière mise à jour logicielle sur un ou plusieurs Viewer PCs. Pour plus de détails sur la tâche de mise à jour logicielle, consultez la description de la fenêtre [PADS Software](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software). |
+   | Restart process               | Tâche viewer | Redémarrez le processus PADS4 Viewer sur un ou plusieurs Viewer PCs. Pour plus de détails sur la tâche de redémarrage du processus, consultez la description de la fenêtre [Viewer connections](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections).                |
+   | Reboot                        | Tâche viewer | Redémarrez un ou plusieurs PC Viewer. Pour plus de détails sur la tâche de redémarrage, consultez la description de la [Connexions Viewer](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) fenêtre.                                                             |
+   | Arrêter                       | Tâche Viewer | Éteignez un ou plusieurs PC Viewer. Pour plus de détails sur la tâche d'arrêt, consultez la description de la [Connexions Viewer](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) fenêtre.                                                                      |
+   | Wake-on-LAN                   | Tâche Viewer | Allumez un ou plusieurs PC Viewer via wake-on-LAN. Pour plus de détails sur la tâche wake-on-LAN, consultez la description de la [Connexions Viewer](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) fenêtre.                                                   |
+   | Installer une police          | Tâche Viewer | Installez des polices sur un ou plusieurs PC Viewer. Pour plus de détails sur la tâche d'installation de police, consultez la description de la [Polices](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Fonts.htm) fenêtre.                                 |
+   | Mettre à jour le logiciel     | Tâche Server | Téléchargez et/ou installez la dernière mise à jour logicielle sur votre PC Server. Pour plus de détails sur la tâche de mise à jour du logiciel, consultez la description de la [Logiciel PADS](/fr/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software) fenêtre.           |
+   | Redémarrer le processus       | Tâche Server | Redémarrez le processus PADS4 Server sur votre PC Server.                                                                                                                                                                                                                                                           |
+   | Rapport de statut des alertes | Tâche Server | Générez un rapport de statut avec des détails sur les alertes générées au cours d'une certaine période.                                                                                                                                                                                                             |
+3. Spécifiez les paramètres spécifiques à la tâche et cliquez sur **Suivant** pour continuer.
+
+   Si vous avez sélectionné la **Mettre à jour le logiciel** tâche, il vous sera demandé l'action de téléchargement et/ou d'installation à effectuer et si le système doit effectuer automatiquement un redémarrage après l'installation. Lorsque vous avez sélectionné la **Installer une police** tâche, il vous est demandé de spécifier les fichiers de polices à installer.
+
+   Si la tâche sélectionnée ne nécessite pas de paramètres spécifiques, cette étape sera automatiquement ignorée.
+4. Sélectionnez les Viewers pour lesquels vous souhaitez planifier la tâche et cliquez sur **Suivant** pour continuer.
+
+   Si vous avez sélectionné une tâche server, cette étape sera automatiquement ignorée.
+
+   ![EN Agent Taskwizard Selectdestinations Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Selectdestinations.png)
+
+   Lorsque vous sélectionnez un groupe de viewers comme destination, tous les viewers membres de ce groupe seront automatiquement inclus.
+5. Spécifiez quand votre tâche doit être exécutée.
+
+   ![EN Agent Taskwizard Specifyperiod Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Specifyperiod.png)
+
+   Vous pouvez planifier l'exécution de votre tâche à un moment précis en sélectionnant **Maintenant** ou en spécifiant une **Heure de début**,
+
+   Pour rendre votre tâche récurrente, cliquez sur le bouton de récurrence.
+
+   ![EN Agent Taskwizard Recurrencebutton Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Recurrencebutton.png)
+
+   Spécifiez dans la fenêtre des paramètres de récurrence quand vous souhaitez que les occurrences de votre tâche planifiée aient lieu et cliquez sur **OK**.
+
+   ![EN Agent Taskwizard Recurrenceoptions Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Recurrenceoptions.png)
+6. Cliquez sur **Terminer** pour terminer l'assistant.
+
+Après cela, votre tâche sera créée et transmise à votre PADS4 Server ou PADS4 Viewer, où elle est stockée localement.
+
+ 
+
+#### **Pour dupliquer une tâche planifiée**
+
+1. Cliquez sur la tâche planifiée dans la fenêtre des tâches planifiées pour la sélectionner.
+2. Cliquez sur **Dupliquer** dans le **Accueil** menu.
+
+   ![EN Agent Ribbon Duplicatetask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Duplicatetask.png)
+
+Après cela, une copie exacte de la tâche sera créée et transmise à votre PADS4 Server ou PADS4 Viewer, où elle est stockée localement.
+
+<Warning>
+  Lorsque vous avez créé une tâche dupliquée, vous devez toujours modifier la planification de votre tâche dupliquée. Sinon, vous aurez deux tâches identiques s'exécutant au même moment pour les mêmes destinations, ce qui peut entraîner des conflits.
+</Warning>
+
+ 
+
+#### **Pour modifier une tâche planifiée**
+
+1. Cliquez sur la tâche planifiée dans la fenêtre des tâches planifiées pour la sélectionner.
+2. Cliquez sur **Modifier** dans le **Accueil** menu.
+
+   ![EN Agent Ribbon Edittask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Edittask.png)
+3. Suivez les instructions de l'assistant de tâche planifiée comme décrit ci-dessus.
+
+Après avoir terminé l'assistant, la tâche mise à jour sera transmise à votre PADS4 Server ou PADS4 Viewer, où elle est stockée localement.
+
+ 
+
+#### **Pour supprimer une tâche planifiée**
+
+1. Cliquez sur la tâche planifiée dans la fenêtre des tâches planifiées pour la sélectionner.
+2. Cliquez sur **Supprimer** dans le **Accueil** menu.
+
+   ![EN Agent Ribbon Deletetask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Deletetask.png)
+3. Cliquez sur **Oui** pour confirmer que vous souhaitez supprimer la tâche.
+
+Après cela, votre tâche ainsi que tous les résultats de la tâche seront supprimés de votre PADS4 Server ou PADS4 Viewer.
+
+ 
+
+#### **Pour désactiver une tâche planifiée**
+
+1. Cliquez sur la tâche planifiée dans la fenêtre des tâches planifiées pour la sélectionner.\
+   Le statut de la tâche doit avoir une valeur autre que 'désactivé'.
+2. Cliquez sur **Désactiver** dans le **Accueil** menu.
+
+   ![EN Agent Ribbon Disabletask Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Ribbon-Disabletask.png)
+
+Après cela, votre tâche sera désactivée sur votre PADS4 Server ou PADS4 Viewer pour empêcher toute exécution ultérieure.
+
+Pour réactiver la tâche planifiée, vous devez sélectionner à nouveau la tâche et cliquer sur **Activer** dans le **Accueil** menu.
