@@ -1,0 +1,27 @@
+---
+- title: Installer un PADS4 Sub Server
+---
+
+Le processus d'installation correspond à la configuration du serveur PADS4. Voir [Install PADS4 Server](/fr/install-pads4/install-pads4-server/Install-the-PADS4-server) et exécutez le programme d'installation.
+
+## Configuration d'un sous-serveur
+
+Pour configurer un sous-serveur, effectuez les étapes suivantes dans PADS4 System Management sur le serveur principal :​
+
+1. Ouvrez **PADS4 System Management** sur le serveur principal.
+2. Dans le menu de gauche, sélectionnez **Servers**.​
+3. Dans la barre de ruban, cliquez sur **Add Sub Server**.
+4. Saisissez un **nom d'affichage** pour le sous-serveur tel qu'il doit apparaître dans PADS4.
+5. Vérifiez qu'une **licence valide** est attribuée au sous-serveur.
+
+## Configuration des ports réseau
+
+PADS4 utilise des ports réseau spécifiques pour ses communications internes et ses services. Consultez la page [**Configuration des ports réseau** ](/fr/network-requirements)page pour la liste complète des ports et paramètres requis.
+
+Pour plus de détails sur la façon dont les données sont synchronisées entre les serveurs Principal, Secondaire et de Sauvegarde, voir la [**Réplication avec les serveurs Secondaire et de Sauvegarde**](/fr/network-requirements) page.
+
+## Exigences d'installation du serveur
+
+<Warning>
+  N'installez pas **PADS4 Foundation** sur un poste de travail ou un PC Viewer. Il doit fonctionner sur un **serveur dédié**.
+</Warning>

@@ -1,0 +1,61 @@
+Ces propriétés définissent le **contenu web** affiché par le **Web Page Element**. Vous pouvez sélectionner une **seule page web** ou créer une **playlist** de plusieurs pages à afficher séquentiellement.
+
+***
+
+## **Gestion de la Playlist**
+
+* Ajouter, modifier, réorganiser ou supprimer des éléments de la playlist.
+* Utilisez les contrôles de navigation pour parcourir les éléments de la playlist.
+* La **durée totale** de tous les éléments est affichée.
+
+***
+
+## **Éléments de la Playlist de Pages Web**
+
+Le **Type** spécifie la source du contenu web.
+
+| **Option**                    | **Description**                                                                                                                                                                                                                                                                     |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **HTML**                      | Affiche du **contenu HTML intégré** au lieu d'un site web complet.                                                                                                                                                                                                                  |
+| **HTML from Content Library** | Charge un fichier HTML **stocké dans la PADS4 Content Library** (recommandé). Les fichiers de la bibliothèque **se synchronisent sur tous les systèmes**.                                                                                                                           |
+| **Web Page**                  | Affiche un **site web depuis Internet ou un Intranet**. Nécessite un **accès à Internet**. Peut également référencer des **fichiers HTML stockés en dehors de la bibliothèque de contenu**. Ces fichiers doivent être **distribués manuellement** sur tous les systèmes de lecture. |
+| **Separator**                 | Crée une **pause** dans la playlist sans affichage de contenu.                                                                                                                                                                                                                      |
+
+***
+
+## **Configuration du Contenu**
+
+* Saisissez **du code HTML, une URL de site web ou un chemin de fichier**, en fonction du **Type** sélectionné.
+* Utilisez le bouton **parcourir** pour sélectionner un fichier depuis la **Content Library** ou votre système local.
+* **Les fichiers HTML externes** doivent inclure le **chemin de fichier complet**.
+
+**Tip:**\
+Le Web Page Element prend en charge **tout contenu** qu'un navigateur web peut afficher, y compris **des applications tierces, des éléments interactifs et des médias en streaming**.
+
+***
+
+## **Durée**
+
+* Définit **la durée (en secondes)** pendant laquelle chaque élément reste à l'écran avant de passer au suivant.
+* **Les Separators** introduisent des **pauses** dans la playlist.
+
+***
+
+## **Recadrage et Ajustements d'Affichage**
+
+* **Crop** : Découpe une partie de la page web pour l'affichage.
+* **Offset (Left, Top)** : Définit la **position de départ en pixels** dans l'élément.
+* **Recadrage Interactif** : Utilisez l'**outil de recadrage** pour ajuster manuellement la portion visible.
+* **Taille du Conteneur du Navigateur Web** :
+  * Empêche le **réalignement** indésirable des éléments web.
+  * Définissez une **taille fixe** plus grande que la zone visible pour maintenir la **cohérence de la mise en page**.
+
+***
+
+## **Considérations Supplémentaires**
+
+* **Fuites Mémoire** : Certaines pages web contiennent des éléments qui **provoquent des fuites mémoire**, pouvant entraîner des **problèmes de performances** lors de la lecture.
+* **Mises à Jour en Direct** :
+  * Les pages web et les fichiers HTML sont **référencés**, non intégrés.
+  * Si le **fichier source ou le site web** est mis à jour, les modifications apparaissent **automatiquement** lors de la lecture.
+* **Connexion à une Source de Données** : Si le Web Page Element est **lié à une source de données**, les paramètres de la playlist sont **désactivés**, et le contenu affiché est déterminé **en temps réel**.

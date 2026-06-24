@@ -1,39 +1,35 @@
-Ce guide fournit des instructions étape par étape pour **l'installation et la configuration de PADS4 Viewer** sur l'appareil **Hikvision DS-D6032FN**.
-
-***
+Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur le **Hikvision DS-D6032FN**.
 
 ## **1. Première utilisation**
 
 Avant l'installation, assurez-vous que le **PADS4 Server est correctement configuré**.
 
 <Note>
-  La version minimale **PADS4 Server** requise est **PADS4 Foundation 2023.1**.
+  La version minimale du **PADS4 Server** requise est **PADS4 Foundation 2023.1**.
 </Note>
-
-***
 
 ### **1.1 Réinitialisation de l'appareil**
 
 Si l'appareil a été utilisé précédemment, effectuez une **réinitialisation d'usine** pour effacer le stockage et éviter les conflits logiciels.
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape 1">
     Ouvrez l'**écran d'accueil** de l'appareil.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape 2">
     Ouvrez l'**application Paramètres**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape 3">
     Cliquez sur **Système** dans le **menu Paramètres**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape 4">
     Faites défiler vers le bas et sélectionnez **Restaurer les paramètres d'usine**.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape 5">
     Cliquez sur **Confirmer** dans la boîte de dialogue qui apparaît.
   </Step>
 </Steps>
@@ -42,22 +38,22 @@ Si l'appareil a été utilisé précédemment, effectuez une **réinitialisation
 
 ### **1.2 Mise à jour du firmware**
 
-Assurez-vous que le **firmware est mis à jour** à au moins **V1.7.1 build 20230424** avant d'installer PADS4.
+Assurez-vous que le **firmware est mis à jour** vers au moins **V1.7.1 build 20230424** avant d'installer PADS4.
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape 1">
     Copiez le fichier firmware **update.zip** dans le **répertoire racine** d'une clé USB.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape 2">
     Insérez la **clé USB** dans l'appareil.
   </Step>
 
-  <Step title="Troisième étape">
-    L'appareil devrait détecter la **mise à jour du firmware par USB** et vous inviter à l'installer.
+  <Step title="Étape Trois">
+    L'appareil devrait détecter la **mise à jour du firmware USB** et demander l'installation.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Suivez les instructions à l'écran pour installer la **mise à jour du firmware**.
   </Step>
 </Steps>
@@ -72,47 +68,47 @@ Suivez les étapes ci-dessous pour installer et configurer **PADS4 Viewer sur le
 
 ### **2.1 Installation de PADS4 depuis une clé USB**
 
-Le fichier **PADS4Hikvision.apk** est disponible sur le **PADS4 Server** in:
+Le **PADS4Hikvision.apk** fichier est disponible sur le **PADS4 Server** in:
 
 ```
 C:\Program Files\PADS4\Foundation\Apps  
 ```
 
-Alternativement, téléchargez la dernière version depuis [**here**](https://github.com/PADS4/PADS4-Viewer-HikVision/releases/latest) et placez-la dans le **PADS4 Server apps directory** pour garantir l'installation de la version correcte.
+Vous pouvez également télécharger la dernière version depuis [**ici**](https://github.com/PADS4/PADS4-Viewer-HikVision/releases/latest) et le placer dans le **répertoire des applications du PADS4 Server** pour s'assurer que la version correcte est installée.
 
 #### **Étapes d'installation**
 
 <Steps>
-  <Step title="Première étape">
-    Copiez le fichier **PADS4Hikvision.apk** sur une **clé USB**.
+  <Step title="Étape Un">
+    Copiez le **PADS4Hikvision.apk** fichier sur une **clé USB**.
   </Step>
 
-  <Step title="Deuxième étape">
-    Insérez la **clé USB** dans l'appareil **Hikvision DS-D6032FN device**.
+  <Step title="Étape Deux">
+    Insérez la **clé USB** dans le **périphérique Hikvision DS-D6032FN**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Ouvrez l'**écran d'accueil** de l'appareil.
   </Step>
 
-  <Step title="Quatrième étape">
-    Ouvrez l'application **FileBrowser app**.
+  <Step title="Étape Quatre">
+    Ouvrez l'**application FileBrowser**.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Sélectionnez **USB DISK** dans la liste.
   </Step>
 
-  <Step title="Sixième étape">
+  <Step title="Étape Six">
     Cliquez sur **PADS4Hikvision.apk**.
   </Step>
 
-  <Step title="Septième étape">
+  <Step title="Étape Sept">
     Lorsque vous êtes invité avec **"Voulez-vous installer cette application ?"**, cliquez sur **Installer**.
   </Step>
 
-  <Step title="Huitième étape">
-    Une fois installée, cliquez sur **Ouvrir** pour lancer l'application **PADS4 Hikvision app**.
+  <Step title="Étape Huit">
+    Une fois installé, cliquez sur **Ouvrir** pour lancer l'**application PADS4 Hikvision**.
   </Step>
 </Steps>
 
@@ -128,29 +124,29 @@ protocol://host:port/hostpath/
 
 * **Protocol:** `http` ou `https` (dépend du certificat SSL).
 * **Host:** Nom DNS ou **adresse IP** du **PADS4 Server**.
-* **Port:** *(Optionnel - à spécifier uniquement si vous utilisez des ports non standard).*
+* **Port:** *(Facultatif - à spécifier uniquement si vous utilisez des ports non par défaut).*
 * **Chemin d'hôte :** Configuré dans **System Management** *`(default: PADS4)`*.
 
 #### **Étapes de connexion**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Un">
     Entrez l'**emplacement du PADS4 Server**.
   </Step>
 
-  <Step title="Deuxième étape - *Optionnelle*">
-    Spécifiez un **Viewer Name** (si laissé vide, PADS4 en générera un).
+  <Step title="Étape Deux - *Facultatif*">
+    Spécifiez un **Nom de Viewer** (si laissé vide, PADS4 en générera un).
   </Step>
 
-  <Step title="Troisième étape">
-    Appuyez sur **Start**.
+  <Step title="Étape Trois">
+    Appuyez sur **Démarrer**.
   </Step>
 
-  <Step title="Quatrième étape">
-    Accordez la **permission d'accéder aux photos, médias et fichiers** lorsque vous y êtes invité.
+  <Step title="Étape Quatre">
+    Accordez **l'autorisation d'accéder aux photos, aux médias et aux fichiers** lorsque vous y êtes invité.
   </Step>
 
-  <Step title="Cinquième étape">
+  <Step title="Étape Cinq">
     Le **PADS4 Viewer** sera **téléchargé et installé**.
   </Step>
 </Steps>
@@ -159,78 +155,78 @@ protocol://host:port/hostpath/
 
 ### **2.3 Ajustement des paramètres du PADS4 Viewer**
 
-* **Appuyez et maintenez le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes** pour accéder aux **Viewer Settings**.
+* **Appuyez et maintenez le bouton gauche de la souris** ou **touchez l'écran pendant 3 secondes** pour accéder aux **Paramètres du Viewer**.
 
 ***
 
 ### **2.4 Mise à jour du PADS4 Viewer & de l'application PADS4 Hikvision**
 
-Le **PADS4 Viewer & PADS4 Hikvision app** se **mettront à jour automatiquement** lorsque le **PADS4 Server** est mis à jour.
+Le **PADS4 Viewer & l'application PADS4 Hikvision** se **mettra à jour automatiquement** lorsque le **PADS4 Server** est mis à jour.
 
 ***
 
 ### **2.5 Accès au menu Android**
 
-Si vous accédez au **Android Menu** pendant que **PADS4 is running**, l'appareil **redémarrera dans 30 secondes** (car le **Viewer Monitor Service** détecte l'inactivité).
+Si vous accédez au **menu Android** pendant que **PADS4 est en cours d'exécution**, l'appareil va **redémarrer dans 30 secondes** (car le **Viewer Monitor Service** détecte l'inactivité).
 
 Pour éviter le redémarrage, **arrêtez l'application PADS4 Hikvision dans les 30 secondes**.
 
 ***
 
-## **3. Fonctionnalités prises en charge et limitations**
+## **3. Fonctionnalités prises en charge & Limitations**
 
 ### **3.1 Fonctionnalités générales**
 
-| Fonctionnalité | Description                                                                                                            |
-| :------------: | ---------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Automatic PADS4 Software Updates** – Le Viewer se met à jour automatiquement lorsque le PADS4 Server est mis à jour. |
-|        ✅       | **Offline Mode** – L'appareil continue d'exécuter les présentations pendant **7 jours** en mode hors ligne.            |
+| Fonctionnalité | Description                                                                                                                       |
+| :------------: | --------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel PADS4** – Le Viewer se met à jour automatiquement lorsque le PADS4 Server est mis à jour. |
+|        ✅       | **Mode hors ligne** – L'appareil continue d'exécuter les présentations pendant **7 jours** en mode hors ligne.                    |
 
 ***
 
 ### **3.2 Capacités de l'appareil**
 
-| Fonctionnalité | Description                                                                                                               |
-| :------------: | ------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Portrait Mode** – Pris en charge. L'appareil pivote automatiquement.                                                    |
-|        ✅       | **Remote Control Blocking** – Empêche l'interaction avec l'écran via la télécommande.                                     |
-|        ✅       | **Supports HTTP & HTTPS**                                                                                                 |
-|        ✅       | **Turn Off Display** – L'écran s'éteint lorsqu'aucune présentation n'est programmée, réduisant la consommation d'énergie. |
-|        ✅       | **Cluster Viewer** – Prend en charge le **Cluster Mode**.                                                                 |
-|        ✅       | **MD5 File Integrity Check** – Assure l'intégrité du contenu.                                                             |
-|        ❌       | **Master Volume Control** – Le volume ne peut être ajusté qu'au niveau de l'élément.                                      |
+| Fonctionnalité | Description                                                                                                                               |
+| :------------: | ----------------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mode Portrait** – Pris en charge. L'appareil pivote automatiquement.                                                                    |
+|        ✅       | **Blocage de la télécommande** – Empêche l'interaction avec l'écran via la télécommande.                                                  |
+|        ✅       | **Prend en charge HTTP & HTTPS**                                                                                                          |
+|        ✅       | **Désactivation de l'affichage** – L'affichage s'éteint lorsqu'aucune présentation n'est programmée, réduisant la consommation d'énergie. |
+|        ✅       | **Cluster Viewer** – Prend en charge le **mode Cluster**.                                                                                 |
+|        ✅       | **Vérification de l'intégrité des fichiers MD5** – Garantit l'intégrité du contenu.                                                       |
+|        ❌       | **Contrôle du volume principal** – Le volume ne peut être ajusté qu'au niveau de l'élément.                                               |
 
 ***
 
-### **3.3 Prise en charge de la lecture et du contenu**
+### **3.3 Lecture & Prise en charge du contenu**
 
-| Fonctionnalité | Description                                                                                          |
-| :------------: | ---------------------------------------------------------------------------------------------------- |
-|        ✅       | **Maximum Videos Supported** – Jusqu'à **2 vidéos simultanées** par page.                            |
-|        ❌       | **Streaming Video** – Non pris en charge.                                                            |
-|        ✅       | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Pris en charge.                        |
-|        ✅       | **Image, Text, Line, Shape, Scrolling Text, Tables, Buttons, Web Elements**                          |
-|        ✅       | **PowerPoint & PDF Elements** – Pris en charge *(PowerPoint requires installation on PADS4 Server)*. |
-|        ❌       | **Flash Elements** – Non pris en charge.                                                             |
-
-***
-
-### **3.4 Connectivité de données et intégrations**
-
-| Fonctionnalité | Description                                                                                                             |
-| :------------: | ----------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Data Providers** – Prend en charge **70+ PADS4 data providers** pour récupérer et intégrer des données en temps réel. |
-|        ✅       | **Viewer Variables** – Simplifie la gestion du contenu sans modifier les présentations.                                 |
-|        ✅       | **Property Bindings** – Permet des propriétés d'éléments dynamiques utilisant des sources de données externes.          |
+| Fonctionnalité | Description                                                                                                     |
+| :------------: | --------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Nombre maximum de vidéos prises en charge** – Jusqu'à **2 vidéos simultanées** par page.                      |
+|        ❌       | **Streaming Video** – Non pris en charge.                                                                       |
+|        ✅       | **Rotation vidéo, vidéos transparentes, reflet, inclinaison, retournement** – Pris en charge.                   |
+|        ✅       | **Image, texte, ligne, forme, texte défilant, tableaux, boutons, éléments Web**                                 |
+|        ✅       | **Éléments PowerPoint et PDF** – Pris en charge *(PowerPoint nécessite une installation sur le serveur PADS4)*. |
+|        ❌       | **Éléments Flash** – Non pris en charge.                                                                        |
 
 ***
 
-### **3.5 Device Management**
+### **3.4 Connectivité des données et intégrations**
 
-| Fonctionnalité | Description                                                                          |
-| :------------: | ------------------------------------------------------------------------------------ |
-|        ✅       | **Remote Device Management** – Géré via **PADS4 CTRL Center & PADS4 Agent**.         |
-|        ✅       | **Reboot & Restart Viewer** – Pris en charge.                                        |
-|        ✅       | **Screenshot Capture** – Récupérer des captures d'écran d'affichage.                 |
-|        ✅       | **Proof of Play Tracking** – Surveille l'historique de lecture du contenu.           |
-|        ✅       | **Blackbox Support** – Fournit des journaux système pour le dépannage et le support. |
+| Fonctionnalité | Description                                                                                                                                         |
+| :------------: | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Fournisseurs de données** – Prend en charge **70+ fournisseurs de données PADS4** pour la récupération et l'intégration de données en temps réel. |
+|        ✅       | **Variables du Viewer** – Simplifie la gestion du contenu sans modifier les présentations.                                                          |
+|        ✅       | **Liaisons de propriétés** – Permet des propriétés d'éléments dynamiques à l'aide de sources de données externes.                                   |
+
+***
+
+### **3.5 Gestion des appareils**
+
+| Fonctionnalité | Description                                                                                           |
+| :------------: | ----------------------------------------------------------------------------------------------------- |
+|        ✅       | **Gestion des appareils à distance** – Géré via **PADS4 CTRL Center et PADS4 Agent**.                 |
+|        ✅       | **Redémarrage et relance du Viewer** – Pris en charge.                                                |
+|        ✅       | **Capture d'écran** – Récupérer les captures d'écran de l'affichage.                                  |
+|        ✅       | **Suivi de la preuve de diffusion** – Surveille l'historique de lecture du contenu.                   |
+|        ✅       | **Prise en charge de la boîte noire** – Fournit des journaux système pour le dépannage et le support. |

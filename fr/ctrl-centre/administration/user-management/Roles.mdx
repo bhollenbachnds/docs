@@ -1,30 +1,34 @@
+---
+- title: Utilisateurs et Rôles
+---
+
 Dans notre dernière version, 2025.1, nous introduisons notre nouveau système de gestion des utilisateurs.
 
-Ce changement fondamental déplace les paramètres de gestion des utilisateurs de l'application System Management vers le portail Web PADS4.
+Ce changement fondamental déplace les paramètres de gestion des utilisateurs de l'application System Management vers le PADS4 Web Portal.
 
-Avec ce changement, nous avons également introduit des Rôles pour affiner davantage la partie gestion des utilisateurs de PADS4.
+Avec ce changement, nous avons également introduit les Roles pour affiner davantage la partie gestion des utilisateurs de PADS4.
 
-Les rôles vous permettront d'attribuer rapidement un certain ensemble de licences et d'autorisations à un utilisateur.
+Les Roles vous permettront d'attribuer rapidement un ensemble de licences et de permissions à un utilisateur.
 
 <Warning>
-  Le nouveau système de gestion des utilisateurs n'est pas encore compatible avec Legacy CMS et Workspace
+  Le nouveau système de gestion des utilisateurs n'est pas compatible avec Legacy CMS et Workspace dans PADS4 version 2025.1, cela a été ajouté dans PADS4 version 2025.2.
 </Warning>
 
-## Comment utiliser les rôles dans PADS4
+## Comment utiliser les roles dans PADS4
 
 <Info>
-  Les licences System Management et License Management sont nécessaires pour administrer vos utilisateurs et rôles
+  Les licences System Management et License Management sont requises pour administrer vos utilisateurs et roles
 </Info>
 
-* Vous pouvez y accéder en vous connectant à votre portail Web PADS4 avec votre compte Administrateur. Allez dans le Tableau de bord, et en bas à gauche, accédez à **Users**.
+* Vous pouvez y accéder en vous connectant à votre PADS4 Web Portal avec votre compte Administrateur. Accédez au Dashboard, et en bas à gauche, allez dans **Users**.
 
-![Users Pn](/images/ctrl-centre/administration/user-management/Users.png)
+<img src="/images/ctrl-centre/administration/user-management/Users.png" alt="Users Pn" style={{ width:"50%" }} />
 
-* Sur le côté gauche, vous pouvez basculer entre les Utilisateurs et les Rôles
+* Sur le côté gauche, vous pouvez basculer entre les Users et les Roles
 
-![Users Overview Pn](/images/ctrl-centre/administration/user-management/Users-overview.png)
+<img src="/images/ctrl-centre/administration/user-management/Users-overview.png" alt="Users Overview Pn" style={{ width:"51%" }} />
 
-* Dans l'aperçu des utilisateurs, vous verrez les utilisateurs et leurs informations correspondantes comme :
+* Dans l'aperçu des utilisateurs, vous verrez les utilisateurs et leurs informations correspondantes telles que :
   * Name
   * Username
   * Roles
@@ -32,13 +36,28 @@ Les rôles vous permettront d'attribuer rapidement un certain ensemble de licenc
 
 ![Single User Summary Pn](/images/ctrl-centre/administration/user-management/single-user-summary.png)
 
-* Dans la section Rôles, vous obtiendrez l'aperçu suivant des rôles disponibles, y compris les rôles par défaut, qui sont expliqués ci-dessous.
+* Dans la section Roles, vous obtiendrez l'aperçu suivant des roles disponibles, y compris les roles par défaut, qui sont expliqués ci-dessous.
 
-![Role Overview Pn](/images/ctrl-centre/administration/user-management/role-overview.png)
+![Default Roles](/images/ctrl-centre/administration/user-management/default-roles.png)
 
-## Rôles par défaut
+### Rechercher des utilisateurs
 
-Il y a 5 rôles par défaut :
+Utilisez la fonction de recherche pour localiser rapidement des utilisateurs spécifiques dans le système. Elle effectue des recherches dans les champs clés : Name, Username, Roles et License. C'est idéal pour les administrateurs gérant PADS4.
+
+**Comment effectuer une recherche**
+
+1. Saisissez des mots-clés dans la zone de recherche (par ex., "john.doe", "admin role" ou "Cms users group").
+2. Les résultats se filtrent dynamiquement au fur et à mesure que vous tapez — pas besoin d'appuyer sur Entrée.
+
+**Exporter les résultats**
+
+Cliquez sur le bouton **Export** pour télécharger les résultats au format Excel. Cela développe la vue pour une analyse en masse ou des rapports. Les données exportées incluent toutes les colonnes visibles pour une importation facile ailleurs.
+
+## Roles par défaut
+
+<Note>
+  Dans PADS4 version 2025.1, il existe cinq roles par défaut ; depuis PADS4 version 2025.2, cinq roles supplémentaires ont été ajoutés, lesquels sont listés plus loin dans l'article.
+</Note>
 
 ### CMS Advanced users group
 
@@ -75,34 +94,93 @@ Il y a 5 rôles par défaut :
 | ----------- | ----------------- | ----------- |
 | Content     | Read/Write/Delete |             |
 
-## Personnalisation des rôles
+<Note>
+  Avec la sortie de PADS4 version 2025.2, les roles par défaut ci-dessous ont été ajoutés.
+</Note>
 
-* Vous pouvez modifier ces rôles selon votre configuration préférée, ou vous pouvez créer vos propres rôles où vous pouvez spécifier d'autres rôles dont il est membre, ou attribuer certaines licences.
+<Danger>
+  Veuillez noter que les roles de viewer nécessitent une licence Agent ou System Management (uniquement pour le statut en ligne/hors ligne / suppression des viewers) pour être efficaces en dehors de CMS2.0, car les roles servent uniquement à définir des permissions une fois que l'accès a été accordé par la licence attribuée à l'utilisateur.
 
-![New Roles Pn](/images/ctrl-centre/administration/user-management/new-roles.png)
+  Vous pouvez choisir d'ajuster les roles de viewer par défaut pour ajouter automatiquement cette licence à l'utilisateur auquel ce role est attribué.
+</Danger>
 
-![Create Role Pn](/images/ctrl-centre/administration/user-management/create-role.png)
+### Viewer manager group
 
-* Avec ces rôles ou les rôles que vous avez créés, vous pouvez ensuite préciser davantage l'accès que vous accordez aux utilisateurs ayant un certain rôle aux applications disponibles dans le portail Web PADS4.
+| Application      | Access     | Inheritance |
+| ---------------- | ---------- | ----------- |
+| Viewers          | Read/Write |             |
+| **Restrictions** |            |             |
+| No restrictions  |            |             |
 
-### Content library
+### Viewer observer group
 
-* Faites un clic droit sur le dossier pour lequel vous souhaitez modifier/examiner l'accès et appuyez sur **"Edit access"**
+| Application                                     | Access | Inheritance |
+| ----------------------------------------------- | ------ | ----------- |
+| Viewers                                         | Read   |             |
+| **Restrictions**                                |        |             |
+| Impossible de redémarrer / relancer les viewers |        |             |
+| Impossible de modifier les permissions d'accès  |        |             |
+| Impossible de modifier les paramètres du viewer |        |             |
 
-![Content Access Pn](/images/ctrl-centre/administration/user-management/content-access.png)
+### Viewer user group
 
-* Un aperçu des rôles et des utilisateurs avec leurs droits sur ce dossier particulier s'affichera et vous permettra d'ajouter ou de supprimer des rôles et des utilisateurs.
+| Application                                     | Access     | Inheritance |
+| ----------------------------------------------- | ---------- | ----------- |
+| Viewers                                         | Read/Write |             |
+| **Restrictions**                                |            |             |
+| Impossible de modifier les permissions d'accès  |            |             |
+| Impossible de modifier les paramètres du viewer |            |             |
+
+### Workspace users group
+
+| Application | Access     | Inheritance |
+| ----------- | ---------- | ----------- |
+| Workspace   | Read/Write |             |
+
+### CMS 1.0 administrators group
+
+| Application | Access     | Inheritance |
+| ----------- | ---------- | ----------- |
+| CMS 1.0     | Read/Write |             |
+
+## Personnalisation des roles
+
+* Vous pouvez modifier ces roles selon votre configuration préférée, ou vous pouvez créer vos propres Roles dans lesquels vous pouvez spécifier d'autres roles dont il est membre, ou attribuer certaines licences.
+
+<img src="/images/ctrl-centre/administration/user-management/new-roles.png" alt="New Roles Pn" style={{ width:"65%" }} />
+
+<img src="/images/ctrl-centre/administration/user-management/create-role.png" alt="Create Role Pn" style={{ width:"78%" }} />
+
+* Avec ces roles ou les roles créés par vous-même, vous pouvez ensuite préciser davantage l'accès que vous accordez aux utilisateurs ayant un certain role aux applications disponibles dans le PADS4 Web Portal.
+
+### Bibliothèque de contenu
+
+* Faites un clic droit sur le dossier pour lequel vous souhaitez modifier/consulter l'accès et appuyez sur **"Edit access"**
+
+<img src="/images/ctrl-centre/administration/user-management/content-access.png" alt="Content Access Pn" style={{ width:"71%" }} />
+
+* Un aperçu des roles et des utilisateurs avec leurs droits sur ce dossier particulier s'affichera et vous permettra d'ajouter ou de supprimer des roles et des utilisateurs.
 
 ![Content Access 2 Pn](/images/ctrl-centre/administration/user-management/content-access-2.png)
 
-### Catégories du Web designer
+### Catégories Web designer
 
 * Cliquez sur les 3 points à droite de votre catégorie et cliquez sur **"Edit access"**
 
-![Webdesigner Category Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png)
+<img src="/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png" alt="Webdesigner Category Access Pn" style={{ width:"57%" }} />
 
-### Modèles du Web designer
+### Modèles Web designer
 
-* Passez votre souris sur un modèle et cliquez sur les trois points, cliquez sur **"Edit access"**
+* Survolez un modèle avec votre souris et cliquez sur les trois points, puis cliquez sur **"Edit access"**
 
 ![Webdesigner Template Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-template-access.png)
+
+### Viewers & Groupes de viewers
+
+* En vue arborescente, faites un clic droit sur le groupe de viewers et cliquez sur **"Edit Access"**
+
+<img src="/images/ctrl-centre/administration/user-management/treeview-perm.png" alt="Treeview Perm" style={{ width:"61%" }} />
+
+* En vue détaillée, survolez avec votre souris le groupe de viewers ou le viewer et appuyez sur les trois points pour "**Edit access"**.
+
+<img src="/images/ctrl-centre/administration/user-management/detailviewer-perm.png" alt="Detailviewer Perm" style={{ width:"65%" }} />
