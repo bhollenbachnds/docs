@@ -1,4 +1,4 @@
-Comme indiqué dans la *Récurrence* vue d'ensemble, PADS4 Scheduler vous permet de définir **des planifications répétitives** en utilisant des modèles de récurrence personnalisables. La récurrence peut être appliquée aux planifications **Simple**, **Playlist**, et **Advanced** et garantit que le contenu est affiché de manière répétée sur des intervalles définis sans avoir besoin de créer des planifications en double.
+Comme indiqué dans la *Récurrence* vue d'ensemble, PADS4 Scheduler vous permet de définir des **planifications répétitives** à l'aide de modèles de récurrence personnalisables. La récurrence peut être appliquée aux planifications **Simple**, **Playlist** et **Avancée** et garantit que le contenu est affiché de manière répétée à des intervalles définis sans avoir à créer des planifications en double.
 
 ***
 
@@ -6,16 +6,16 @@ Comme indiqué dans la *Récurrence* vue d'ensemble, PADS4 Scheduler vous permet
 
 Vous pouvez appliquer la récurrence de deux façons :
 
-* Pendant la création de la planification dans l'**Assistant de planification** en cliquant sur le bouton **Récurrence**.
-* Depuis la **Barre de ruban** en sélectionnant la fonction **Récurrence** (voir le sujet *Récurrence* pour plus de détails).
+* Lors de la création d'une planification dans l'**Assistant de planification** en cliquant sur le bouton **Récurrence**.
+* Depuis la **Barre de ruban** en sélectionnant la fonction **Récurrence** (voir la rubrique *Récurrence* pour plus de détails).
 
-Une fois accessible, la fenêtre **Paramètres de récurrence** apparaîtra.
+Une fois accessible, la fenêtre **Paramètres de récurrence** s'affichera.
 
 ***
 
 ## Fenêtre des paramètres de récurrence
 
-Cette fenêtre est divisée en quatre sections principales :
+Cette fenêtre est divisée en quatre sections clés :
 
 1. **Période**
 2. **Type**
@@ -26,68 +26,68 @@ Chacune est décrite ci-dessous.
 
 ***
 
-### 1. Période : Définir la durée
+### 1. Période : Définir la plage de temps
 
-Dans cette section, vous définissez les **conditions de début et de fin** globales du modèle de récurrence.
+Dans cette section, vous définissez les **conditions de début et de fin** du modèle de récurrence.
 
-* **Date de début** : Spécifie quand la récurrence commence.
-* **Options de fin** :
-  * **Par date de fin** : Se termine à une date spécifique.
+* **Date de début** : Indique quand la récurrence commence.
+* **Options de fin**:
+  * **Par date de fin** : Se termine à une date précise.
   * **Par nombre d'occurrences** : Se termine après un nombre défini de répétitions.
-  * **Pas de date de fin** : Se répète indéfiniment.
+  * **Sans date de fin** : Se répète indéfiniment.
 
 ***
 
 ### 2. Type : Définir le modèle de récurrence
 
-PADS4 Scheduler offre **quatre types de récurrence**, chacun avec des options de configuration flexibles :
+PADS4 Scheduler propose **quatre types de récurrence**, chacun avec des options de configuration flexibles :
 
 #### **Quotidien**
 
 * Se répète tous les *X* jours
-* En option, restreindre aux jours de semaine uniquement
+* Optionnellement, limiter aux jours de semaine uniquement
 
 #### **Hebdomadaire**
 
-* Sélectionnez des jours spécifiques de la semaine (par ex., lun, mer, ven)
-* Choisissez l'intervalle de répétition en semaines (par ex., toutes les 2 semaines)
+* Sélectionner des jours spécifiques de la semaine (ex. : lun., mer., ven.)
+* Choisir l'intervalle de répétition en semaines (ex. : toutes les 2 semaines)
 
 #### **Mensuel**
 
 * Deux options de configuration :
-  * **Par date** : par ex., chaque 15 du mois
-  * **Par modèle** : par ex., *Deuxième mardi* tous les 3 mois
+  * **Par date** : ex., le 15 de chaque mois
+  * **Par modèle** : ex., *Deuxième mardi* de tous les 3 mois
     * Choose: `first`, `second`, `third`, `fourth`, `last`
-    * Puis sélectionnez : `day`, `weekday`, `weekend day`, ou un jour spécifique (par ex., lundi)
+    * Puis sélectionner : `day`, `weekday`, `weekend day`, ou un jour spécifique (ex. : lundi)
 
 #### **Annuel**
 
-* Similaire à Mensuel, avec deux options :
-  * **Par date** : par ex., 23 mars chaque année
-  * **Par modèle** : par ex., *Dernier vendredi* d'avril
-    * Définissez l'ordinal, le jour de la semaine et le mois
+* Similaire au mensuel, avec deux options :
+  * **Par date** : ex., le 23 mars chaque année
+  * **Par modèle** : ex., *Dernier vendredi* d'avril
+    * Définir l'ordinal, le jour de la semaine et le mois
 
 ***
 
-### 3. Dans une journée : Répétition basée sur le temps
+### 3. Dans une journée : Répétition basée sur l'heure
 
-Cette section définit **quand pendant une journée** le contenu doit être affiché :
+Cette section définit **à quel moment dans une journée** le contenu doit être affiché :
 
-* **De / Jusqu'à** : Définissez la plage horaire quotidienne (par exemple, 08:00–18:00)
+* **De / Jusqu'à** : Définir la plage horaire quotidienne (ex. : 08:00–18:00)
 
-Vous pouvez également spécifier une granularité plus fine dans cette plage horaire :
+Vous pouvez également spécifier une granularité plus fine dans cette plage :
 
-* **Ininterrompu** : Afficher en continu dans la plage horaire
+* **Sans interruption** : Afficher en continu dans la plage horaire
 * **Plusieurs minutes par heure**
 * **Plusieurs minutes par X minutes**
 
-> Ceci est utile lorsque vous souhaitez que le contenu n'apparaisse qu'à intervalles, comme 10 minutes toutes les heures.
+> Ceci est utile lorsque vous souhaitez que le contenu apparaisse uniquement à intervalles, par exemple 10 minutes toutes les heures.
 
 ***
 
-### 4. Description : Examinez le résumé de récurrence
+### 4. Description : Examiner le résumé de récurrence
 
-La **Description** se met à jour dynamiquement au fur et à mesure que vous ajustez les paramètres. Elle fournit un **résumé lisible** du modèle de récurrence pour une vérification facile.
+La **Description** section se met à jour dynamiquement lorsque vous ajustez les paramètres. Elle fournit un **résumé lisible** du modèle de récurrence pour une vérification facile.
 
 Exemple de sortie :\
-*"Se produit chaque lundi et mercredi, de 08:00 à 18:00, à partir du 1er mars, se terminant après 10 occurrences."*
+*"Se produit chaque lundi et mercredi, de 08h00 à 18h00, à partir du 1er mars, se terminant après 10 occurrences."*

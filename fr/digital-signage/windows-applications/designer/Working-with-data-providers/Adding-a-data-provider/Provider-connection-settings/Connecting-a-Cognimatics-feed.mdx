@@ -1,18 +1,18 @@
-Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics devices** pour les **données de mesure d'audience**, telles que le **comptage de personnes**, la **surveillance des files d'attente** et l'**analyse démographique**.
+Le **fournisseur de flux Cognimatics** permet l'intégration avec **les appareils Cognimatics** pour **les données de mesure d'audience**, telles que **le comptage de personnes**, **la surveillance des files d'attente**, et **l'analyse démographique**.
 
 ***
 
-## **Étapes pour ajouter ou modifier un Cognimatics Data Provider**
+## **Étapes pour ajouter ou modifier un fournisseur de données Cognimatics**
 
-### **1. Démarrer l'Assistant Data Provider**
+### **1. Démarrer l'assistant de fournisseur de données**
 
-* Suivez les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**.
+* Suivez les étapes dans **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**.
 * Choisissez **Cognimatics** comme type de fournisseur.
 
 ### **2. Configurer les paramètres de connexion Cognimatics**
 
-* Entrez l'**HTTP Address (IP Address)** de l'**application Cognimatics**.
-* Alternativement, spécifiez une **URL manuelle** avec tous les paramètres.
+* Entrez l'**adresse HTTP (adresse IP)** de l'**application Cognimatics**.
+* Vous pouvez également spécifier une **URL manuelle** avec tous les paramètres.
 
 ### **3. Sélectionner la source active**
 
@@ -24,18 +24,18 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 
 #### **Données en temps réel**
 
-* Affiche le **nombre actuel de personnes** entrant ou sortant d'un lieu.
+* Affiche le **nombre de personnes actuel** entrant ou sortant d'un lieu.
 
 #### **Données basées sur une période**
 
 * Récupère les **résultats statistiques** pour une période spécifique :
 
-| Option de période | Description                                   |
-| ----------------- | --------------------------------------------- |
-| **None**          | Aucune plage de temps n'est appliquée.        |
-| **Today**         | Données pour **aujourd'hui** uniquement.      |
-| **Yesterday**     | Données pour **hier** uniquement.             |
-| **Manual**        | Sélection personnalisée de la plage de dates. |
+| Option de période | Description                                |
+| ----------------- | ------------------------------------------ |
+| **Aucune**        | Aucune plage de temps n'est appliquée.     |
+| **Aujourd'hui**   | Données pour **aujourd'hui** uniquement.   |
+| **Hier**          | Données pour **hier** uniquement.          |
+| **Manuel**        | Sélection de plage de dates personnalisée. |
 
 ***
 
@@ -43,99 +43,99 @@ Le **Cognimatics feed provider** permet l'intégration avec les **Cognimatics de
 
 ### **Compteur de personnes**
 
-| Champ             | Type      | Description                                 |
-| ----------------- | --------- | ------------------------------------------- |
-| **Name**          | String    | Nom du lecteur.                             |
-| **Serial**        | String    | Numéro de série du logiciel.                |
-| **In**            | Integer   | Nombre de personnes entrées.                |
-| **Out**           | Integer   | Nombre de personnes sorties.                |
-| **People Inside** | Integer   | Différence entre les valeurs `In`In`Out`Out |
-| **Timestamp**     | Date/Time | Heure d'enregistrement des données.         |
+| Champ                       | Type       | Description                                 |
+| --------------------------- | ---------- | ------------------------------------------- |
+| **Nom**                     | Chaîne     | Nom du lecteur.                             |
+| **Série**                   | Chaîne     | Numéro de série du logiciel.                |
+| **Entrée**                  | Entier     | Nombre de personnes entrées.                |
+| **Sortie**                  | Entier     | Nombre de personnes sorties.                |
+| **Personnes à l'intérieur** | Entier     | Différence entre les valeurs `In` et `Out`. |
+| **Horodatage**              | Date/Heure | Heure d'enregistrement des données.         |
 
-### **Surveillance de flux unidirectionnel**
+### **Surveillance du flux unidirectionnel**
 
-| Champ             | Type      | Description                             |
-| ----------------- | --------- | --------------------------------------- |
-| **Name**          | String    | Nom du lecteur.                         |
-| **Serial**        | String    | Numéro de série du logiciel.            |
-| **In**            | Integer   | Nombre de personnes qui sont entrées.   |
-| **Out**           | Integer   | Nombre de personnes qui sont sorties.   |
-| **People Inside** | Integer   | Différence entre `In` et `Out` valeurs. |
-| **Timestamp**     | Date/Time | Heure d'enregistrement des données.     |
+| Champ                       | Type       | Description                                 |
+| --------------------------- | ---------- | ------------------------------------------- |
+| **Nom**                     | Chaîne     | Nom du lecteur.                             |
+| **Série**                   | Chaîne     | Numéro de série du logiciel.                |
+| **Entrée**                  | Entier     | Nombre de personnes entrées.                |
+| **Sortie**                  | Entier     | Nombre de personnes sorties.                |
+| **Personnes à l'intérieur** | Entier     | Différence entre les valeurs `In` et `Out`. |
+| **Horodatage**              | Date/Heure | Heure d'enregistrement des données.         |
 
-### **Queue Monitoring**
+### **Surveillance des files d'attente**
 
-| Champ               | Type      | Description                                        |
-| ------------------- | --------- | -------------------------------------------------- |
-| **Serial**          | String    | Numéro de série du logiciel.                       |
-| **Name**            | String    | Nom de l'appareil.                                 |
-| **Region 1 Name**   | String    | Nom de **Region 1**.                               |
-| **Region 1 People** | Integer   | Personnes dans **Region 1**.                       |
-| **People Inside**   | Integer   | Nombre total de personnes dans toutes les régions. |
-| **Region 2 Name**   | String    | Nom de **Region 2**.                               |
-| **Region 2 People** | Integer   | Personnes dans **Region 2**.                       |
-| **Region 3 Name**   | String    | Nom de **Region 3**.                               |
-| **Region 3 People** | Integer   | Personnes dans **Region 3**.                       |
-| **Timestamp**       | Date/Time | Heure d'enregistrement des données.                |
+| Champ                          | Type       | Description                                        |
+| ------------------------------ | ---------- | -------------------------------------------------- |
+| **Série**                      | Chaîne     | Numéro de série du logiciel.                       |
+| **Nom**                        | Chaîne     | Nom de l'appareil.                                 |
+| **Nom de la région 1**         | Chaîne     | Nom de la **Région 1**.                            |
+| **Personnes dans la région 1** | Entier     | Personnes dans la **Région 1**.                    |
+| **Personnes à l'intérieur**    | Entier     | Nombre total de personnes dans toutes les régions. |
+| **Nom de la région 2**         | Chaîne     | Nom de la **Région 2**.                            |
+| **Personnes dans la région 2** | Entier     | Personnes dans la **Région 2**.                    |
+| **Nom de la région 3**         | Chaîne     | Nom de la **Région 3**.                            |
+| **Personnes dans la région 3** | Entier     | Personnes dans la **Région 3**.                    |
+| **Horodatage**                 | Date/Heure | Heure d'enregistrement des données.                |
 
-### **Occupancy Monitoring**
+### **Surveillance de l'occupation**
 
-| Champ             | Type      | Description                             |
-| ----------------- | --------- | --------------------------------------- |
-| **Name**          | String    | Nom du lecteur.                         |
-| **Serial**        | String    | Numéro de série du logiciel.            |
-| **In**            | Integer   | Nombre de personnes qui sont entrées.   |
-| **Out**           | Integer   | Nombre de personnes qui sont sorties.   |
-| **People Inside** | Integer   | Différence entre `In` et `Out` valeurs. |
-| **Timestamp**     | Date/Time | Heure d'enregistrement des données.     |
+| Champ                       | Type       | Description                                 |
+| --------------------------- | ---------- | ------------------------------------------- |
+| **Nom**                     | Chaîne     | Nom du lecteur.                             |
+| **Série**                   | Chaîne     | Numéro de série du logiciel.                |
+| **Entrée**                  | Entier     | Nombre de personnes entrées.                |
+| **Sortie**                  | Entier     | Nombre de personnes sorties.                |
+| **Personnes à l'intérieur** | Entier     | Différence entre les valeurs `In` et `Out`. |
+| **Horodatage**              | Date/Heure | Heure d'enregistrement des données.         |
 
-### **Demographics Analysis**
+### **Analyse démographique**
 
-| Champ               | Type      | Description                                  |
-| ------------------- | --------- | -------------------------------------------- |
-| **Time Start**      | Date/Time | Première observation de visage enregistrée.  |
-| **Time End**        | Date/Time | Dernière observation de visage enregistrée.  |
-| **Gender Average**  | Integer   | -1 = Femme, 1 = Homme.                       |
-| **Age Average**     | Integer   | Âge moyen estimé.                            |
-| **Boxsize Average** | Integer   | Taille moyenne estimée de **face box size**. |
-| **Gender Last**     | Integer   | Dernier **gender** enregistré.               |
-| **Age Last**        | Integer   | Dernier **age** enregistré.                  |
-| **Boxsize Last**    | Integer   | Dernière **box size** enregistrée.           |
+| Champ                          | Type       | Description                                    |
+| ------------------------------ | ---------- | ---------------------------------------------- |
+| **Heure de début**             | Date/Heure | Première observation de visage enregistrée.    |
+| **Heure de fin**               | Date/Heure | Dernière observation de visage enregistrée.    |
+| **Moyenne de genre**           | Entier     | -1 = Féminin, 1 = Masculin.                    |
+| **Moyenne d'âge**              | Entier     | Âge moyen estimé.                              |
+| **Moyenne de taille de boîte** | Entier     | Moyenne estimée **taille de boîte de visage**. |
+| **Dernier genre**              | Entier     | Dernier **genre**.                             |
+| **Dernier âge**                | Entier     | Dernier **âge**.                               |
+| **Dernière taille de boîte**   | Entier     | Dernière **taille de boîte**.                  |
 
 ***
 
 ## **6. Terminer la configuration**
 
-* Cliquez sur **Next** pour continuer.
-* Complétez l'assistant comme décrit dans **Adding a Data Provider**.
+* Cliquez sur **Suivant** pour continuer.
+* Complétez l'assistant comme décrit dans **Ajout d'un fournisseur de données**.
 
 ***
 
 ## **Considérations importantes**
 
 * **Assurez-vous que la source correcte est sélectionnée :**
-  * Si une **inactive source** est sélectionnée, le bouton **Preview** renverra une **404 error**.
+  * Si une **source inactive** est sélectionnée, le bouton **Aperçu** renverra une **erreur 404**.
 
 * **Vérifiez l'accès réseau :**
-  * Si vous utilisez **PADS4 Data Server**, assurez-vous que le **Cognimatics feed** est **accessible** depuis le **server's network**.
-  * Si **not** vous n'utilisez pas de **Data Server**, chaque **PADS4 Viewer** doit avoir **direct access** au flux Cognimatics.
+  * Si vous utilisez **PADS4 Data Server**, assurez-vous que le **flux Cognimatics** est **accessible** depuis le **réseau du serveur**.
+  * Si **vous n'utilisez pas** de **Data Server**, chaque **PADS4 Viewer** doit avoir un **accès direct** au flux Cognimatics.
 
 * **Consultez la documentation Cognimatics :**
-  * Pour les **detailed field descriptions** et les **device configurations**, consultez la **Cognimatics official documentation**.
+  * Pour **les descriptions détaillées des champs** et **les configurations des appareils**, référez-vous à **la documentation officielle de Cognimatics**.
 
 ***
 
 ## **Dépannage**
 
 * **Aucune donnée n'apparaît ?**
-  * Vérifiez que l'**HTTP Address/IP** est correcte.
-  * Assurez-vous que l'**Cognimatics device** est allumé et actif.
-  * Vérifiez si la **correct source** est sélectionnée.
+  * Vérifiez que **l'adresse HTTP/IP** est correcte.
+  * Assurez-vous que **l'appareil Cognimatics** est allumé et actif.
+  * Vérifiez si la **source correcte** est sélectionnée.
 
 * **Valeurs de données inattendues ?**
-  * Confirmez que la **selected time range** correspond aux données que vous attendez.
-  * Si vous utilisez le **Real-Time Mode**, assurez-vous que le flux de données est mis à jour.
+  * Confirmez que **la plage de temps sélectionnée** correspond aux données que vous attendez.
+  * Si vous utilisez **le mode temps réel**, assurez-vous que le flux de données est mis à jour.
 
 ***
 
-En configurant un **Cognimatics data feed** dans **PADS4**, les entreprises peuvent **analyser le flux de clients, les temps d'attente et les informations démographiques** en **real-time**, optimisant leurs **contenu et opérations d'affichage dynamique**.
+En configurant un **flux de données Cognimatics** dans **PADS4**, les entreprises peuvent **analyser le flux de clients, les temps d'attente et les informations démographiques** en **temps réel**, optimisant ainsi leur **contenu d'affichage dynamique et leurs opérations**.

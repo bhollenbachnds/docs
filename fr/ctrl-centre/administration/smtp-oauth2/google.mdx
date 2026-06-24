@@ -1,0 +1,121 @@
+---
+- title: Google
+---
+
+<Warning>
+  Cet article nécessite que vous disposiez d'au moins la version PADS4 2025.2.
+</Warning>
+
+Ce document fournit des instructions étape par étape pour créer des identifiants OAuth2 pour l'authentification SMTP en utilisant les plateformes Google et Microsoft. Ce document suppose que le lecteur possède une connaissance de base de Google Cloud Platform.
+
+## **1. Créer un projet Google Cloud**
+
+* Naviguer vers la Google Cloud Console : [https://console.cloud.google.com/](https://console.cloud.google.com/)
+* Cliquer sur le menu déroulant du projet en haut de la page et sélectionner '\*\*Select a Project' \*\*puis cliquer sur **'New Project'.**
+  * **Nom du projet** : Saisir un nom descriptif pour votre projet
+  * **Emplacement** : Sélectionner l'emplacement approprié ou laisser par défaut
+
+![Google Smtp1](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp1.png)
+
+* Cliquer sur **Create** pour créer votre projet
+
+![Google Smtp2](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp2.png)
+
+## **2. Activer l'API Gmail**
+
+* Dans votre projet nouvellement créé, aller à **API's & Services > Library**
+* Rechercher "Gmail API" dans la barre de recherche
+
+![Google Smtp3](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp3.png)
+
+* Cliquer sur **Gmail API** dans les résultats
+* Cliquer sur le bouton **Enable** pour activer l'API Gmail pour votre projet
+
+![Google Smtp4](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp4.png)
+
+## **3. Configurer l'écran de consentement OAuth**
+
+* Naviguer vers **API's & Services > OAuth consent screen**
+
+![Google Smtp5](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp5.png)
+
+* Cliquer sur **Get started**
+* Remplir les informations requises sur l'application
+  * Appname: Name of your application e.g **PADS4**
+  * E-mail d'assistance utilisateur : Sélectionner votre adresse e-mail
+  * Informations de contact du développeur : Saisir votre adresse e-mail
+
+![Google Smtp6](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp6.png)
+
+* Sélectionner le type d'utilisateur
+  * Internal: For Google Workspace users only ( recommended if applicable )
+  * External: For any Google account user
+* Cliquer sur **Save and continue**
+
+## **4. Créer des identifiants OAuth2**
+
+* Aller à **API's & Services > Clients**
+
+![Google Smtp7](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp7.png)
+
+* Cliquer sur **Create client**
+* Sélectionner **Web application** comme type d'application ( Web application )
+* Saisir un nom pour votre client OAuth
+
+![Google Smtp8](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp8.png)
+
+* Sous **Autherized redirect URI's**, cliquer sur \*\*Add URI \*\*et saisir :
+  * http\://\<host>:\<port>/credentials/generic/authorize/callback
+    * **Host:** Nom DNS ou adresse IP de votre PADS4 Web Portal
+    * **Port:** Facultatif, si le PADS4 Web Portal n'utilise pas les ports par défaut pour HTTP ou HTTPS, vous devez spécifier le numéro de port.
+
+![Google Smtp9](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp9.png)
+
+* Cliquer sur **create**
+* Une boîte de dialogue apparaîtra avec votre**client ID**  et **client secret**.  Copier ou télécharger ces valeurs et les stocker en lieu sûr, car vous en aurez besoin pour la configuration PADS4
+
+![Google Smtp10](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp10.png)
+
+## **5. Configuration dans PADS4**
+
+Pour commencer :
+
+* Ouvrez votre **navigateur web**.
+* Accédez à l'**URL du serveur PADS4** (soit un nom DNS, soit une adresse IP).
+* Connectez-vous à l'aide d'un **compte Administrateur**.
+
+Une fois connecté :
+
+* Cliquez sur **Dashboard**.
+* Utilisez le **Toggle Sidebar** bouton en **haut à droite** de l'écran.
+* Accédez à **Credentials**.
+* Puis sélectionnez **Providers**.
+* Cliquez sur **New**
+
+![SMTP Oauth2white](/images/ctrl-centre/administration/smtp-oauth2/SMTP-Oauth2White.png)
+
+* Sélectionnez **SMTPOAuth2**
+
+![SMTP Oath2w](/images/ctrl-centre/administration/smtp-oauth2/SMTP-Oath2W.png)
+
+* Remplissez les informations comme suit :
+  * **App name :** Représente le nom de votre fournisseur dans PADS4 (peut être n'importe quelle valeur)
+  * **SMTP Provider :** Google
+  * **App (client) ID :** Récupéré depuis Google Cloud Console décrit à l'étape 4
+  * **Client Secret :** Récupéré depuis Google Cloud Console décrit à l'étape 4
+* Cliquez sur **create**
+* Accédez maintenant à la page de vue d'ensemble et sélectionnez le fournisseur SMTP que vous venez de configurer.
+* Cliquez sur connect, choisissez votre compte utilisateur et accordez l'accès demandé.
+
+![Provider Overview](/images/ctrl-centre/administration/smtp-oauth2/Provider-overview.png)
+
+## Comment utiliser cette configuration dans la configuration SMTP.
+
+Une fois connecté :
+
+* Cliquez sur **Home**.
+* Utilisez le **Toggle Sidebar** bouton en **haut à gauche** de l'écran.
+* Accédez à **Config**.
+* Puis appuyez sur **Edit**
+
+![Smtp Oauth](/images/ctrl-centre/administration/config/smtp-oauth.png)

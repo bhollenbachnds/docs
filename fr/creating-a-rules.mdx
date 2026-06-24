@@ -1,0 +1,43 @@
+---
+- title: Création d'une règle dans PADS4 Designer
+- description: Guide étape par étape pour ajouter une règle dans PADS4 Designer
+    qui associe une condition à une action et s'exécute lors de la lecture de la
+    présentation.
+---
+
+Une règle associe une **condition** à une **action**. Lorsque la condition est remplie pendant la lecture, l'action s'exécute. La plupart des conditions sont liées à un fournisseur de données, ce qui permet aux règles de répondre aux événements de données en temps réel.
+
+## Créer une règle
+
+1. **Ouvrir les propriétés des règles.** Dans le **Properties** volet, sélectionnez **Rules**, puis sélectionnez l'élément auquel vous souhaitez appliquer la règle.
+   <Frame>
+     <img src="/images/DigitalSignage/Designer/RulesOnElements.png" alt="Rules option in the Properties pane" title="Rules On Elements" className="mr-auto" style={{ width:"54%" }} />
+   </Frame>
+2. **Ajouter une nouvelle règle.** Sélectionnez **Add Rule**.
+   <Frame>
+     <img src="/images/DigitalSignage/Designer/AddRule.png" alt="Add Rule button" title="Add Rule" className="mr-auto" />
+   </Frame>
+3. **Ouvrir le volet des règles.** Le volet des règles s'ouvre, prêt à vous permettre de définir la condition et l'action.
+   <Frame>
+     ![Rules pane in Designer](/images/DigitalSignage/Designer/RulesScreenWeb.png)
+   </Frame>
+4. **Ajouter une condition.** Sélectionnez **Add Condition**.
+   <Frame>
+     ![Add Condition button](/images/DigitalSignage/Designer/AddCondition.png)
+   </Frame>
+5. **Configurer la condition.** Renseignez les détails qui décrivent quand la règle doit se déclencher.
+   <Frame>
+     ![Configuring the rule condition](/images/DigitalSignage/Designer/AddCondition-1.png)
+   </Frame>
+6. **Définir l'action.** Sélectionnez **Set Properties** pour spécifier ce qui se passe lorsque la condition est remplie.
+   <Frame>
+     ![Set Properties button](/images/DigitalSignage/Designer/SetProperties.png)
+   </Frame>
+7. **Choisir les propriétés à modifier.** Dans l'écran **Configure Rule Properties**, modifiez une ou plusieurs propriétés que l'action doit mettre à jour.
+   <Frame>
+     ![Configure Rule Properties screen](/images/DigitalSignage/Designer/ConfigureRuleProperties.png)
+   </Frame>
+8. **Enregistrer les propriétés.** Sélectionnez **Save** pour confirmer les modifications des propriétés.
+9. **Enregistrer la règle.** Sélectionner **Enregistrer** à nouveau pour stocker la règle sur l'élément.
+
+La règle est maintenant active et s'exécutera chaque fois que sa condition sera remplie lors de la lecture.

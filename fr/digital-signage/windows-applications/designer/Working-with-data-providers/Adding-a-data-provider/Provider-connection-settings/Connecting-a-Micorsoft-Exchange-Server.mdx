@@ -1,121 +1,111 @@
-Le fournisseur **Microsoft Exchange Server** dans **PADS4** vous permet de vous connecter aux **Microsoft Exchange Servers** (Office 2010 ou 2007 SP1) pour récupérer des données de **calendrier, boîte de réception ou contacts**.
+---
+- title: Connexion à un Microsoft Exchange Server
+---
+
+Le **Microsoft Exchange Server** fournisseur dans **PADS4** vous permet de vous connecter aux **Microsoft Exchange Servers** (Office 2010 ou 2007 SP1) pour récupérer des données de **calendrier, de boîte de réception ou de contacts**.
 
 ***
 
 ### **Étapes pour ajouter ou modifier une connexion Microsoft Exchange Server**
 
-#### **1. Démarrer l'Assistant de Fournisseur de Données**
+#### **1. Démarrer l'assistant de fournisseur de données**
 
-* Ouvrez **Data Provider Wizard** dans **PADS4**.
-* Suivez les étapes pour **Ajouter un Fournisseur de Données** ou **Modifier un Fournisseur de Données**.
+* Ouvrez le **Data Provider Wizard** dans **PADS4**.
+* Suivez les étapes pour **Ajouter un fournisseur de données** ou **Modifier un fournisseur de données**.
 * Sélectionnez **Microsoft Exchange Server** comme **type de fournisseur**.
 
 ***
 
-#### **2. Configurer les Paramètres de Connexion**
+#### **2. Configurer les paramètres de connexion**
 
-* **Sélectionner la Version du Microsoft Exchange Server**
-  * Choisissez la **version d'Exchange Server** appropriée parmi les options disponibles.
-
-* **Choisir la Configuration Automatique ou Manuelle**
+* **Sélectionner la version de Microsoft Exchange Server**
+  * Choisissez la **version d'Exchange Server** parmi les options disponibles.
+* **Choisir la configuration automatique ou manuelle**
 
   * **Automatique**:
-    * Saisissez l'**Adresse E-mail** d'un **compte Exchange**.
+    * Entrez l'**adresse e-mail** d'un **compte Exchange**.
   * **Manuel**:
-    * Saisissez l'**URL du Serveur Exchange** pour établir une connexion.
+    * Entrez l'**URL du serveur Exchange** pour établir une connexion.
 
-  **Exemple d'URL:**
+  **Exemple d'URL :**
 
   ```
   https://YourSmallBusinessServer/EWX/Exchange.asmx
   ```
-
-* **Saisir les Identifiants de Connexion**
-  * Fournissez un **Nom d'Utilisateur, Mot de Passe et Domaine** d'un compte valide du Serveur Exchange.
-
-* **Accéder à la Boîte aux Lettres d'un Autre Utilisateur (Optionnel)**
-  * Saisissez une **Adresse E-mail** pour récupérer les données de la boîte aux lettres d'un autre utilisateur.
-
-* **Usurper l'Identité d'un Autre Utilisateur (Optionnel)**
-  * Saisissez une **Adresse E-mail** pour usurper l'identité d'un utilisateur différent.
+* **Saisir les identifiants de connexion**
+  * Fournissez un **nom d'utilisateur, un mot de passe et un domaine** d'un compte Exchange Server valide.
+* **Accéder à la boîte aux lettres d'un autre utilisateur (facultatif)**
+  * Entrez une **adresse e-mail** pour récupérer les données de la boîte aux lettres d'un autre utilisateur.
+* **Emprunter l'identité d'un autre utilisateur (facultatif)**
+  * Entrez une **adresse e-mail** pour emprunter l'identité d'un autre utilisateur.
 
 Cliquez sur **Suivant** pour continuer.
 
 ***
 
-#### **3. Sélectionner la Source de Données à Connecter**
+#### **3. Sélectionner la source de données à laquelle se connecter**
 
 * **Calendrier**
   * Récupère les données du calendrier.
-  * En option, activez **Inclure le Texte du Message** pour récupérer les détails des événements.
-  * *Note:* La récupération du corps du message **peut causer des problèmes de performance**.
-
-* **Boîte de Réception**
-  * Récupère les emails de la **Boîte de Réception**.
-  * En option, spécifiez:
-    * Un **(sous-)dossier** spécifique pour récupérer les emails.
-    * **Inclure le Texte du Message** (pour le corps de l'email).
-
+  * Activez éventuellement **Inclure le texte du message** pour récupérer les détails des événements.
+  * *Note:* La récupération du corps du message **peut entraîner des problèmes de performances**.
+* **Boîte de réception**
+  * Récupère les e-mails de la **boîte de réception**.
+  * Spécifiez éventuellement :
+    * Un **(sous-)dossier** spécifique à partir duquel récupérer les e-mails.
+    * **Inclure le texte du message** (pour le corps de l'e-mail).
 * **Contacts**
-  * Récupère la liste des contacts du compte Exchange.
-
-* **Dossiers Publics**
-  * Accédez aux **dossiers publics** utilisés pour le partage d'informations au sein d'une organisation.
+  * Récupère la liste de contacts du compte Exchange.
+* **Dossiers publics**
+  * Accédez aux **dossiers publics** utilisés pour les informations partagées au sein d'une organisation.
   * *Note:* Les dossiers publics n'ont pas d'**adresse SMTP** et sont accessibles via l'**API EWS**.
-
-* **Calendrier de Ressources**
-  * Récupère les données des ressources **de salles et de réunions**.
+* **Calendrier des ressources**
+  * Récupère les **données des salles et des réunions**.
   * Spécifiez **une ou plusieurs adresses e-mail** pour accéder à plusieurs calendriers de ressources.
-  * En option, activez **Inclure le Texte du Message** pour récupérer les détails.
-
-* **Disponibilité des Utilisateurs**
-  * Récupère le **statut de disponibilité** des utilisateurs.
+  * Activez éventuellement **Inclure le texte du message** pour récupérer les détails.
+* **Disponibilité des utilisateurs**
+  * Récupère le **statut libre/occupé** des utilisateurs.
   * Spécifiez **une ou plusieurs adresses e-mail** pour obtenir des données de disponibilité fusionnées.
 
 ***
 
-#### **4. Définir la Plage Horaire pour la Récupération des Données**
+#### **4. Définir la plage de temps pour la récupération des données**
 
 * **Aujourd'hui**
-  * Récupère les données de l'emploi du temps **d'aujourd'hui**.
-  * En option, appliquez un **décalage** en jours.
-
+  * Récupère les données du **planning d'aujourd'hui**.
+  * Appliquez éventuellement un **décalage** en jours.
 * **Maintenant**
-  * Récupère les données à partir de **la date et l'heure actuelles**.
-  * En option, spécifiez un **décalage avant ou après** l'heure actuelle.
-
-* **Date et Heure**
+  * Récupère les données à partir de la **date et heure actuelles**.
+  * Spécifiez éventuellement un **décalage avant ou après** l'heure actuelle.
+* **Date et heure**
   * Récupère les données pour une **période fixe**.
-
 * **Prédéfini**
-  * Sélectionnez une période prédéfinie:
-    * **Cette Semaine**
-    * **Semaine Prochaine**
-    * **Ce Mois**
+  * Sélectionnez une période prédéfinie :
+    * **Cette semaine**
+    * **Semaine prochaine**
+    * **Ce mois-ci**
 
-**Note Importante:**
+**Remarque importante :**
 
-* La récupération de données pour des **longues périodes** peut causer des **problèmes de performance** en raison de grandes quantités de données stockées.
+* La récupération de données sur de **longues périodes** peut entraîner des **problèmes de performances** en raison de grandes quantités de données stockées.
 * Utilisez des **filtres** ou **limitez le nombre de lignes** pour éviter une récupération excessive de données.
 
 Cliquez sur **Suivant** pour continuer.
 
 ***
 
-#### **5. Terminer la Configuration**
+#### **5. Finaliser la configuration**
 
-* Suivez les étapes restantes dans l'**Assistant de Fournisseur de Données**.
+* Suivez les étapes restantes dans l'**Assistant de fournisseur de données**.
 * Cliquez sur **Terminer** pour finaliser la configuration.
 
 ***
 
-### **Notes Supplémentaires**
+### **Notes supplémentaires**
 
-* **Utilisation d'un Serveur de Données PADS4?**
-  * Assurez-vous que l'**URL du Serveur Exchange** est **accessible depuis le Serveur PADS4**.
-
-* **Pas d'Utilisation d'un Serveur de Données PADS4?**
-  * Assurez-vous que **PADS4 Designer** (pour la prévisualisation) et tous les **PADS4 Viewers** peuvent accéder au Serveur Exchange.
-
-* **Éviter les Charges de Données Importantes**
+* **Vous utilisez un serveur de données PADS4 ?**
+  * Assurez-vous que l'**URL du serveur Exchange** est **accessible depuis le serveur PADS4**.
+* **Vous n'utilisez pas de serveur de données PADS4 ?**
+  * Assurez-vous que **PADS4 Designer** (pour la prévisualisation) et tous les **PADS4 Viewers** peuvent accéder au serveur Exchange.
+* **Éviter les chargements de données volumineux**
   * Lors de la récupération de **longues périodes de données**, utilisez des filtres pour limiter l'utilisation de la mémoire.

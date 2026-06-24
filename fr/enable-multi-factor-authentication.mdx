@@ -1,0 +1,23 @@
+---
+- title: Activer l'authentification multi-facteurs
+- description: Activez la MFA dans PADS4 depuis l'écran de configuration de
+    l'authentification multi-facteurs, définissez l'émetteur, choisissez
+    optionnel ou obligatoire, et sélectionnez une date d'application.
+---
+
+L'authentification multi-facteurs (MFA) ajoute une couche de sécurité supplémentaire en demandant aux utilisateurs de vérifier leur identité avec plus d'une méthode, comme un mot de passe associé à un code ou une application d'authentification. Dans PADS4, la MFA peut être activée depuis l'écran **Multi-Factor Authentication Configuration**
+
+## **Configurer la MFA dans PADS4**
+
+Utilisez cet écran pour activer la MFA, décider si elle est facultative ou obligatoire, et définir la date à partir de laquelle l'application commence. L'exemple présenté utilise **PADS4 Server** comme émetteur, active la MFA, la rend obligatoire et fixe la date d'application au **30/06/2026**
+
+<Frame>
+  ![MFA Screen](/images/CTRLCenter/Config/MFA-Screen.png)
+</Frame>
+
+* **Émetteur -** L'**Émetteur** identifie PADS4 auprès du fournisseur MFA. Donnez-lui un nom approprié et reconnaissable, et comme bonne pratique, utilisez le nom du PADS4 Server, tel que **PADS4 Server** dans l'exemple présenté.
+* **Activé -** Sélectionnez **Enabled** pour activer la MFA dans PADS4. Lorsque cette option n'est pas sélectionnée, la MFA n'est pas utilisée pour l'environnement.
+* **Obligatoire -** Cochez cette case si la MFA doit être obligatoire pour tous les utilisateurs. Laissez-la décochée si la MFA doit être disponible mais non imposée à tous.
+* Date d'application - Utilisez **Enforcement Date** pour définir quand la MFA obligatoire commence. À partir de cette date, les utilisateurs sont tenus de se conformer à l'exigence MFA configurée.
+
+Cliquez sur **Update** pour enregistrer et appliquer la configuration. Cliquez sur **Cancel** pour ignorer les modifications non enregistrées et laisser les paramètres actuels inchangés.

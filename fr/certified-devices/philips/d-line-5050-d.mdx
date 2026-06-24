@@ -1,0 +1,90 @@
+---
+- title: Série 5050D
+---
+
+Ce guide fournit des instructions étape par étape pour l'installation et la configuration de PADS4 Viewer sur les écrans de la série Philips 5050D.
+
+## **Préparer la série 5050D**
+
+Avant l'installation, assurez-vous que le **PADS4 Server est configuré et paramétré correctement**.
+
+<Note>
+  La **version minimale du PADS4 Server** requise est **PADS4 Foundation 2025.1**.
+</Note>
+
+Lors de la première mise en marche de l'appareil, l'**Assistant de Configuration** apparaîtra. Sinon, **réinitialisez l'appareil** comme décrit dans **Réinitialisation de l'appareil**.
+
+### **Réinitialisation de la série 5050D**
+
+Si l'appareil a déjà été utilisé, effectuez une réinitialisation d'usine pour effacer le stockage et éviter les conflits logiciels.
+
+1. Sur la télécommande Philips, appuyez sur **Home**, puis sur **1 8 8 8** pour ouvrir le menu Android.
+2. Ouvrez **Settings**, puis sélectionnez **System Tools → Factory Reset**.
+3. Confirmez en cliquant sur **Factory Reset** et en appuyant sur **OK**.
+
+Après la réinitialisation, l'**Écran de bienvenue** apparaît. Continuez avec les étapes décrites dans **Configuration de l'appareil**.
+
+### **Configuration de la série 5050D**
+
+1. Sur l'**Écran de bienvenue**, sélectionnez votre **langue** préférée et cliquez sur **Start**.
+2. Sur l'écran **Security Settings**, assurez-vous que **SICP Network Port** est **activé**. *(Les autres paramètres peuvent être activés ou désactivés selon les besoins.)*
+3. Sur l'écran **Network Settings**, sélectionnez et configurez le **type de réseau**.
+4. Sur l'écran **Signage Display Settings**, appuyez sur **Skip**.
+5. Sur l'écran **Clone Media Files**, appuyez sur **Skip**.
+6. Appuyez sur **Finish** pour terminer la configuration.
+
+### **Vérification du firmware de l'appareil**
+
+Assurez-vous que la **version correcte du firmware** est installée pour bénéficier de toutes les fonctionnalités de **PADS4 Viewer**.
+
+1. Ouvrez le menu Android en appuyant sur Home 1 8 8 8.
+2. Ouvrez Settings → Sélectionnez About.
+3. Assurez-vous que le numéro de build est FB01.05 *(requis pour PADS4)*.
+
+## **Installation de PADS4 Viewer**
+
+Suivez ces étapes pour installer PADS4 Viewer sur les écrans Philips D-line (5050D).
+
+### **Téléchargement de PADS4 Viewer**
+
+Le fichier **PADS4Philips.apk** est disponible sur le serveur PADS4 dans,
+
+```text
+https://[PADS4Server]/pads4/apps
+```
+
+où \[PADS4Server] doit être remplacé par le nom de votre serveur.\
+Localisez le fichier **PADS4Philips.apk** et copiez-le sur une clé USB
+
+### **Étapes d'installation**
+
+1. Insérez la clé USB dans le Philips 5050D-series.
+2. Ouvrez le menu Android en appuyant sur **Home 1 8 8 8**.
+3. Accédez à **Apps → Settings → Security → More Security Setting**.
+4. Activez **Unknown Source**.
+5. Retournez à l'écran des applications.
+6. Ouvrez **File Manager** et sélectionnez la clé USB.
+7. Ouvrez **PADS4Philips.apk** et appuyez sur **Install**.
+8. Appuyez sur **Done**
+
+### **Configurer le lancement automatique de PADS4**
+
+1. Accédez à **Settings → Signage Display → Source Settings → Custom Apps**.
+2. Sélectionnez **PADS4** dans la liste des applications disponibles.
+3. Activez **Force Restart Custom App**.
+4. Redémarrez l'écran pour appliquer les modifications.
+
+### **Connecter le PADS4 Viewer**
+
+Après le redémarrage de l'appareil, le **PADS4 Viewer** apparaîtra.
+
+1. Saisissez l'**URL du serveur** au format suivant : `https://[PADS4server]/[Domain]`.
+2. Remplacez `[PADS4server]` par le nom de votre serveur, et remplacez `[Domain]` par votre domaine. Le domaine par défaut est **PADS4**.
+3. Renseignez le **ViewerName** si nécessaire.
+4. Cliquez sur **Start** pour vous connecter.
+
+Le **PADS4 Viewer** est maintenant connecté et prêt à l'emploi.
+
+<Note>
+  Il est possible qu'un message indique que PADS4 est incompatible avec cette version d'Android. Cela est dû au fait que l'écran utilise une version plus récente d'Android. Vous pouvez ignorer ce message en toute sécurité. PADS4 est compatible avec Android 14, et cet avertissement sera résolu dans une prochaine version.
+</Note>

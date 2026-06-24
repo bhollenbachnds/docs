@@ -1,0 +1,106 @@
+---
+- title: Microsoft
+---
+
+<Warning>
+  Cet article nécessite que vous disposiez au moins de la version PADS4 2025.2.
+</Warning>
+
+Ce document fournit des instructions étape par étape pour créer des identifiants OAuth2 pour l'authentification SMTP à l'aide des plateformes Google et Microsoft. Ce document suppose que le lecteur a une connaissance de base du portail Microsoft Azure.
+
+## **1. Enregistrer une application**
+
+* Accédez à [https://portal.azure.com/](https://portal.azure.com/) et connectez-vous avec un compte disposant de privilèges administratifs pour Microsoft Entra ID
+* Dans le menu de gauche, sélectionnez **Inscriptions d'applications**
+* Configurez l'application :
+
+![MS Smtp1](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp1.png)
+
+* Utilisez les informations suivantes :
+  * **Name:** Entrez un nom descriptif (ex. : Gateway SMTP App)
+  * **Types de comptes pris en charge :** Comptes dans ce répertoire organisationnel uniquement
+  * **URI de redirection :** L'URI de redirection spécifie où le serveur d'autorisation doit renvoyer l'utilisateur après une authentification réussie pour retourner un jeton d'accès à son compte de messagerie.
+    * **Type** : Web
+    * **URL:** http\://\<host>:\<port>/credentials/generic/authorize/callback
+      * **Host** : Nom DNS ou adresse IP de votre portail Web PADS4
+      * **Port:** Facultatif, si votre instance PADS4 n'utilise pas les ports par défaut pour HTTP ou HTTPS.
+* Une fois les informations renseignées, cliquez sur "**Enregistrer**".
+* Sur la page de présentation de l'application, copiez maintenant l'**ID d'application (client)** et l'**ID de répertoire (locataire)**. Ces informations sont requises pour la configuration de votre passerelle.
+
+![MS Smtp2](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp2.png)
+
+## **2. Créer un secret client**
+
+* Accédez à **Certificats et secrets** > **Secrets client** > **Nouveau secret client**.
+* Ajoutez une description (ex. : "SMTP Secret") et sélectionnez une période d'expiration (ex. : 24 mois).
+* Cliquez sur**Ajouter**, **puis copiez immédiatement** la **valeur** du secret client. **Remarque** : **Cette valeur n'est affichée qu'une seule fois**, et vous ne pourrez pas la récupérer après avoir quitté cette page. Si vous la perdez, vous devrez en générer une nouvelle. Il s'agit de votre "**ClientSecret**".
+* Conservez-le en lieu sûr, car il donne accès à votre application
+
+## **3. Configurer les autorisations API**
+
+* Dans la navigation de gauche de la page de présentation de votre application, cliquez sur **Autorisations API > +Ajouter** une autorisation
+* Sélectionnez Microsoft Graph
+
+![MS Smtp3](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp3.png)
+
+* Choisissez les autorisations **déléguées > Rechercher** offline access
+
+![MS Smpt4](/images/ctrl-centre/administration/smtp-oauth2/MS-smpt4.png)
+
+* Ajouter l'autorisation **offline\_access**.
+
+![MS Smtp5](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp5.png)
+
+* Recherchez l'autorisation **SMTP.Send** et ajoutez également cette autorisation.
+
+![MS Smtp6](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp6.png)
+
+## **5. Configuration dans PADS4**
+
+Pour commencer :
+
+* Ouvrez votre **navigateur web**.
+* Accédez à l'**URL du serveur PADS4** (soit un nom DNS, soit une adresse IP).
+* Connectez-vous à l'aide d'un **compte Administrateur**.
+
+Une fois connecté :
+
+* Cliquez sur **Dashboard**.
+* Utilisez le bouton **Toggle Sidebar** situé en **haut à gauche** de l'écran.
+* Accédez à **Credentials**.
+* Puis sélectionnez **Providers**.
+* Cliquez sur **New**
+
+![SMTP Oauth2white](/images/ctrl-centre/administration/smtp-oauth2/SMTP-Oauth2White.png)
+
+* Sélectionnez **SMTPOAuth2**
+
+![MS Smtp7](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp7.png)
+
+* Remplissez les informations comme suit :
+  * **App name :** Représente le nom de votre fournisseur dans PADS4 (peut être n'importe quelle valeur)
+  * **SMTP Provider :** Microsoft
+  * **App (client) ID :** ID d'application provenant d'Azure/Entra ID décrit à la fin de l'étape 1
+  * **Client Secret :** Récupéré depuis Azure/Entra ID décrit à la fin de l'étape 1
+  * **Tenant ID :** ID de répertoire provenant d'Azure/Entra ID décrit à la fin de l'étape 1
+* Cliquez sur **create**
+* Accédez maintenant à la page de présentation et sélectionnez le fournisseur SMTP que vous venez de configurer.
+* Cliquez sur connect, choisissez votre compte utilisateur et accordez l'accès demandé.
+
+## Comment utiliser cette configuration dans la configuration SMTP.
+
+Une fois connecté :
+
+* Cliquez sur **Home**.
+* Utilisez le bouton **Toggle Sidebar** situé en **haut à gauche** de l'écran.
+* Accédez à **Config**.
+* Puis appuyez sur **Edit**
+
+![Smtp Oauth](/images/ctrl-centre/administration/config/smtp-oauth.png)
+
+* Activez **Use OAuth**
+* Sélectionnez votre fournisseur OAuth et votre nom d'utilisateur que vous venez de configurer.
+* Remplissez le reste des détails de votre serveur SMTP et de votre adresse
+* Vous pouvez ensuite tester la connexion en bas à gauche, ce qui affichera une coche verte si la connexion est correctement configurée.
+
+![Smtp Test Connection](/images/ctrl-centre/administration/config/smtp-test-connection.png)

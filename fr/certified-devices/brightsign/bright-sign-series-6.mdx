@@ -1,0 +1,188 @@
+---
+- title: BrightSign Series-6
+---
+
+Ce guide fournit des instructions étape par étape pour installer et configurer **PADS4 Viewer** sur **BrightSign Series-6** players.
+
+## **Avant de commencer**
+
+### **Players BrightSign Series-6 pris en charge**
+
+Les **players BrightSign Series-6** suivants sont pris en charge :
+
+* BrightSign HD6
+* BrightSign XD6
+
+## **Configuration minimale requise**
+
+### **Version du PADS4 Server**
+
+Avant l'installation, assurez-vous que votre **PADS4 Server** exécute **PADS4 version 2023.2** ou une version ultérieure.
+
+<Note>
+  Il est recommandé de **terminer l'installation du PADS4 Server en premier** avant de configurer votre player BrightSign.
+</Note>
+
+### **Version du BrightSign OS**
+
+Votre player BrightSign doit exécuter **BrightSign OS 9.1.92.2 ou une version ultérieure**.
+
+Si votre appareil BrightSign ne répond pas à cette exigence, mettez à jour le système d'exploitation en utilisant l'une des méthodes suivantes :
+
+1. **BNS.cloud** – Une plateforme de gestion réseau BrightSign basée sur le cloud pour les mises à jour de firmware à distance.
+2. **BrightAuthor:connected** – Permet les mises à jour de firmware directement depuis votre PC.
+
+## **Exigences de stockage**
+
+* Le seul **périphérique de stockage pris en charge** pour **PADS4 sur les players BrightSign** est une **carte microSD**.
+* Assurez-vous d'avoir une **carte microSD compatible** insérée avant de procéder à l'installation.
+
+## **Génération du PADS4 Viewer pour les players BrightSign**
+
+L'**application PADS4 Viewer** pour les players BrightSign peut être générée directement depuis le **PADS4 Server**.
+
+### **Étapes pour générer le PADS4 Viewer**
+
+<Steps>
+  <Step title="Étape 1">
+    Ouvrez un **navigateur web** sur votre ordinateur.
+  </Step>
+
+  <Step title="Étape 2">
+    Accédez au **PADS4 BrightSign Player Wizard** en utilisant le format suivant :
+
+    ```text
+    https://[yourPADS4Server]/[domain]/Apps/Brightsign  
+    ```
+
+    * Remplacez **\[yourPADS4Server]** par le **nom DNS ou l'adresse IP** de votre **PADS4 Server**.
+    * Remplacez **\[domain]** par votre **nom de domaine PADS4**.
+  </Step>
+
+  <Step title="Étape 3">
+    Exemple d'URL :
+
+    ```text
+    https://example.pads365.com/PADS4/Apps/Brightsign  
+    ```
+  </Step>
+
+  <Step title="Étape 4">
+    Appuyez sur **Entrée** pour lancer le **PADS4 BrightSign Player Wizard**.
+  </Step>
+</Steps>
+
+## **Utilisation du PADS4 BrightSign Player Wizard**
+
+Le **PADS4 BrightSign Player Wizard** se compose de **trois étapes** :
+
+### **Étape 1 : Configurer le PADS4 Server**
+
+* L'**URL du PADS4 Server** sera **automatiquement renseignée** en fonction de l'adresse saisie dans votre navigateur.
+* Vérifiez que l'URL est correcte et cliquez sur **Suivant** pour continuer.
+
+### **Étape 2 : Télécharger les fichiers du player BrightSign**
+
+* Cliquez sur le bouton **Télécharger** pour télécharger un **fichier ZIP** contenant l'**application BrightSign Player**.
+* Une fois le téléchargement terminé, cliquez sur **Suivant** pour continuer.
+
+### **Étape 3 : Extraire et déployer les fichiers**
+
+<Steps>
+  <Step title="Étape 1">
+    Extrayez le **fichier ZIP téléchargé**.
+  </Step>
+
+  <Step title="Étape 2">
+    Insérez une **carte microSD** dans le lecteur de carte de votre ordinateur.\\
+
+    <Note>
+      Assurez-vous que la carte microSD est **vide** avant de continuer.
+    </Note>
+  </Step>
+
+  <Step title="Étape 3">
+    Copiez le **contenu extrait** du fichier ZIP sur la **carte microSD**.
+  </Step>
+</Steps>
+
+## **Finalisation de l'installation sur votre player BrightSign**
+
+Une fois la **carte microSD** préparée, procédez à l'installation sur votre **player BrightSign**.
+
+<Steps>
+  <Step title="Étape 1">
+    Retirez la **carte microSD** de votre ordinateur.
+  </Step>
+
+  <Step title="Étape 2">
+    Insérez la **carte microSD** dans le **slot microSD désigné** sur votre **player BrightSign**.
+  </Step>
+
+  <Step title="Étape 3">
+    Si le **player BrightSign** est déjà sous tension, il devrait **détecter et démarrer automatiquement** l'**application PADS4 Viewer** après l'insertion de la carte microSD.
+  </Step>
+
+  <Step title="Étape 4 - *Si PADS4 Viewer ne se lance pas automatiquement*">
+    Appuyez sur le bouton **Reset** sur le **player BrightSign** pour redémarrer l'appareil.
+  </Step>
+
+  <Step title="Étape 5">
+    Au redémarrage, le **PADS4 Viewer** devrait **se lancer automatiquement**.
+  </Step>
+</Steps>
+
+**Félicitations !** Vous avez installé avec succès le **PADS4 Viewer** sur votre **player BrightSign**.
+
+***
+
+## **Finalisation de la configuration de votre PADS4 BrightSign Player**
+
+* Au premier lancement, le **PADS4 Viewer** sur votre **player BrightSign** affichera un nom par défaut, tel que :
+  ```text
+  BrightSign0002  
+  ```
+* Pour attribuer un **nom personnalisé**, utilisez le **PADS4 CTRL Center** pour mettre à jour le **Viewer Name**.
+
+## **Fonctionnalités prises en charge et limitations**
+
+### **Fonctionnalités générales**
+
+| Fonctionnalité | Description                                                                                                                    |
+| :------------: | :----------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel PADS4** – Le **PADS4 Viewer** se mettra à jour automatiquement.                        |
+|        ✅       | **Mode hors ligne** – L'appareil continuera à lire les **présentations planifiées** pendant **7 jours** en cas de déconnexion. |
+
+### **Capacités de stockage et matérielles**
+
+| Fonctionnalité | Description                                                                                |
+| :------------: | :----------------------------------------------------------------------------------------- |
+|        ✅       | **Prend en charge le stockage microSD** – Requis pour l'installation et le fonctionnement. |
+|        ✅       | **Prend en charge BrightSign OS 9.0.120+** – Requis pour la compatibilité.                 |
+|        ❌       | **Prise en charge du stockage USB** – Non pris en charge.                                  |
+
+### **Prise en charge des données et du contenu**
+
+| Fonctionnalité | Description                                                                                                     |
+| :------------: | :-------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Fournisseurs de données en temps réel** – Prend en charge l'intégration avec des sources de données externes. |
+|        ✅       | **Vidéo, images, texte, tableaux et éléments interactifs** – Pris en charge dans les présentations.             |
+
+### **Gestion des appareils**
+
+| Fonctionnalité | Description                                                                         |
+| :------------: | :---------------------------------------------------------------------------------- |
+|        ✅       | **Gestion à distance via PADS4 CTRL Center**                                        |
+|        ✅       | **Surveillance de l'état de connexion et alertes**                                  |
+|        ❌       | **Redémarrage, arrêt, Wake-on-LAN** – Non pris en charge.                           |
+|        ✅       | **Redémarrer le Viewer, récupérer les journaux, modifier les paramètres du Viewer** |
+
+## **Remarques importantes**
+
+<Warning>
+  **Intégrité des fichiers de contenu** – La **PADS4 Content Library** vérifie l'intégrité des fichiers à l'aide de la **somme de contrôle MD5** lors de la synchronisation.
+</Warning>
+
+<Warning>
+  **Limitations de la preuve de diffusion** – Un maximum de **50 000 enregistrements** peuvent être stockés localement. Les enregistrements les plus anciens seront supprimés une fois la limite atteinte.
+</Warning>

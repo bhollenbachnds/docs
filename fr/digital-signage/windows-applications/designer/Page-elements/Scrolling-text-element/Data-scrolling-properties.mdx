@@ -1,0 +1,45 @@
+Lorsqu'un **élément de texte défilant** est connecté à une **source de données**, ces propriétés définissent comment les **données en temps réel** défilent. **Le défilement des données** parcourt les lignes de données en boucle, tandis que le **défilement visuel** détermine comment le texte se déplace sur l'écran.
+
+***
+
+## **Paramètres de défilement des données**
+
+### **Utiliser le défilement des données**
+
+* Active ou désactive le **défilement des données en temps réel** dans l'élément.
+
+### **Taille du pas de défilement**
+
+* Définit le nombre de **lignes** dont l'élément avance à chaque actualisation des données.
+* Example:
+  * Si **Row = 2** et **Scrolling Step Size = 3**, l'élément affichera **Row 2, Row 5, Row 8**, et ainsi de suite.
+  * Une fois toutes les lignes disponibles affichées, l'élément **revient au début** à Row 2.
+
+**Important:**
+
+* Lorsque plusieurs éléments avec **défilement des données** sont placés dans une **ligne de tableau**, ils **doivent** avoir la **même taille de pas de défilement** pour rester synchronisés.
+
+***
+
+## **Défilement de données alternatif (pour les éléments de tableau uniquement)**
+
+Lorsqu'un **élément de texte défilant** fait partie d'une **ligne de tableau**, des options supplémentaires sont disponibles :
+
+### **Nombre de lignes**
+
+* Limite le défilement aux **N premières lignes** de la source de données.
+* Utile pour afficher uniquement les **actualités les plus récentes** d'un **flux RSS** ou d'une base de données.
+
+**Tip:**
+
+* Si vous avez besoin d'afficher uniquement les **principales actualités**, utilisez **Nombre de lignes** pour limiter le défilement aux dernières entrées.
+
+***
+
+## **Notes supplémentaires**
+
+* **Défilement des données** les propriétés ne sont disponibles que si l'élément est **connecté à une source de données**.
+* Les données affichées sont déterminées par :
+  * **Propriété Ligne** (position de départ).
+  * **Taille du pas de défilement** (nombre de lignes à ignorer par actualisation).
+* Le processus de défilement **boucle** à travers toutes les lignes disponibles et **redémarre** lorsqu'il atteint la fin.

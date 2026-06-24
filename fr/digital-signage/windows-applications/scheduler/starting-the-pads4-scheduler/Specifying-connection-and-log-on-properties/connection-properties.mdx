@@ -1,4 +1,4 @@
-Le **Connection Properties** section vous permet de configurer et de gérer les connexions entre PADS4 Scheduler et votre PADS4 Server. Cela inclut les méthodes de connexion, les identifiants de connexion, les paramètres de synchronisation et les options HTTP.
+La **Connection Properties** vous permet de configurer et de gérer les connexions entre PADS4 Scheduler et votre PADS4 Server. Cela inclut les méthodes de connexion, les identifiants de connexion, les paramètres de synchronisation et les options HTTP.
 
 ***
 
@@ -6,7 +6,7 @@ Le **Connection Properties** section vous permet de configurer et de gérer les 
 
 Pour gérer les connexions au serveur :
 
-1. Naviguez vers l'onglet **Home** dans la barre de ruban.
+1. Accédez à l'onglet **Home** dans la barre de ruban.
 2. Dans la section **Connections**, cliquez sur le bouton **Manage**.\
    Cela ouvre la fenêtre **PADS4 Server Connections**.
 
@@ -18,31 +18,31 @@ Depuis la fenêtre PADS4 Server Connections, vous pouvez :
 
 * **Add...** une nouvelle connexion PADS4 Server
 * **Edit...** une connexion existante
-* **Remove...** une connexion qui n'est plus nécessaire
+* **Remove...** une connexion dont vous n'avez plus besoin
 
 ***
 
 ## Ajout ou modification d'une connexion au serveur
 
-Que vous créiez une nouvelle connexion ou que vous modifiiez une connexion existante, la fenêtre de configuration est la même.
+Que vous créiez une nouvelle connexion ou que vous en modifiiez une existante, la fenêtre de configuration est la même.
 
 ### Paramètres de l'onglet Connection
 
 #### **Connection Name**
 
-Un nom unique utilisé pour identifier cette connexion au serveur dans l'interface du Scheduler.
+Un nom unique utilisé pour identifier cette connexion au serveur dans l'interface de Scheduler.
 
 #### **Application Startup Option**
 
-Choisissez si vous souhaitez **automatically connect** à ce serveur lorsque PADS4 Scheduler démarre.
+Choisissez si vous souhaitez **vous connecter automatiquement** à ce serveur au démarrage de PADS4 Scheduler.
 
 #### **Types de connexion au serveur**
 
-| Option            | Description                                                                                                                                                         |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Automatic**     | Détecte automatiquement le serveur. Recommandé uniquement lorsqu'un seul PADS4 Server existe dans votre réseau local. Nécessite que le port UDP 3702 soit ouvert.   |
-| **This Computer** | Suppose que PADS4 Server fonctionne sur la même machine que le Scheduler. Préféré pour les configurations locales.                                                  |
-| **Other**         | Spécifiez manuellement le nom d'hôte, l'adresse IP ou l'entrée DNS du serveur. Facultativement, cliquez sur **Search...** pour détecter les serveurs sur le réseau. |
+| Option            | Description                                                                                                                                                              |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Automatic**     | Détecte automatiquement le serveur. Recommandé uniquement lorsqu'un seul PADS4 Server existe dans votre réseau local. Nécessite que le port UDP 3702 soit ouvert.        |
+| **This Computer** | Suppose que PADS4 Server s'exécute sur la même machine que le Scheduler. Préférable pour les configurations locales.                                                     |
+| **Other**         | Spécifiez manuellement le nom d'hôte, l'adresse IP ou l'entrée DNS du serveur. Vous pouvez également cliquer sur **Search...** pour détecter les serveurs sur le réseau. |
 
 > **Advanced Options** : Vous pouvez définir un numéro de port personnalisé si le serveur utilise des ports non standard. Le numéro de port doit correspondre à la configuration dans **PADS4 System Management**.
 
@@ -50,10 +50,10 @@ Choisissez si vous souhaitez **automatically connect** à ce serveur lorsque PAD
 
 ### HTTP Settings
 
-Utilisé pour la communication basée sur le web comme la journalisation d'audit ou la synchronisation.
+Utilisé pour la communication web telle que la journalisation d'audit ou la synchronisation.
 
 * **Automatic** : Paramètres par défaut basés sur la configuration du serveur.
-* **Manual** : Spécifiez un **Host Path** et un **Port** personnalisés, utile lors de l'utilisation de routeurs, de proxys ou de redirection de port.
+* **Manual** : Spécifiez un **Host Path** et un **Port** personnalisés, utile lors de l'utilisation de routeurs, de proxies ou de la redirection de ports.
 
 ***
 
@@ -62,29 +62,29 @@ Utilisé pour la communication basée sur le web comme la journalisation d'audit
 Spécifiez les informations de connexion pour votre connexion au serveur.
 
 * **Username** : Le nom d'utilisateur pour l'authentification au serveur.
-* **Password** : (Facultatif) Mot de passe enregistré. Si laissé vide, l'utilisateur sera invité à le saisir.
+* **Password** : (Facultatif) Mot de passe enregistré. S'il est laissé vide, l'utilisateur sera invité à le saisir.
 * **Automatic Login** : Tente automatiquement de se connecter lors de la connexion. En cas d'échec, l'utilisateur est invité à saisir ses identifiants.
 
-> **Tip:** Combinez **Automatic Login** avec **Automatically start this connection** pour vous connecter de manière transparente lors du lancement de l'application.
+> **Tip:** Combinez **Automatic Login** avec **Automatically start this connection** pour vous connecter de manière transparente au lancement de l'application.
 
 ***
 
 ### Onglet Synchronization
 
-Contrôlez comment le contenu des présentations est synchronisé entre le Scheduler et le Server.
+Contrôlez la façon dont le contenu de présentation est synchronisé entre le Scheduler et le Server.
 
 * **Synchronization Activation** :
   * **Automatic** : Synchronise lors des modifications
-  * **Manual** : Synchronise uniquement lorsque l'utilisateur l'initie
+  * **Manual** : Synchronise uniquement lorsque l'utilisateur en prend l'initiative
   * **Never** : Désactive la synchronisation
 
-> Si le serveur et le Scheduler sont sur la même machine, la synchronisation peut ne pas être nécessaire.
+> Si le serveur et le Scheduler se trouvent sur la même machine, la synchronisation peut ne pas être nécessaire.
 
 * **PADS4 Content Library Storage Folder** :\
   Définissez un dossier local pour le stockage du contenu si l'emplacement par défaut ne convient pas.
 
 * **Domain** :\
-  Utilisez ce champ si le serveur héberge plusieurs domaines PADS4, ou si vous gérez plusieurs connexions de serveur et que vous devez les garder séparées. Sinon, choisissez **Automatic**.
+  Utilisez ce champ si le serveur héberge plusieurs domaines PADS4, ou si vous gérez plusieurs connexions au serveur et que vous devez les garder séparées. Sinon, choisissez **Automatic**.
 
 ***
 

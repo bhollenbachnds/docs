@@ -1,0 +1,45 @@
+---
+- title: Qu'est-ce qu'une règle dans PADS4 Designer
+- description: Découvrez comment les règles PADS4 associent des conditions à des
+    actions afin que les présentations, les pages et les éléments réagissent
+    automatiquement aux événements pendant la lecture.
+---
+
+Les règles sont l'une des fonctionnalités les plus puissantes de PADS4. Elles permettent à une présentation, une page ou un élément de page de réagir automatiquement lorsqu'une situation prédéfinie se produit pendant la lecture.
+
+## Fonctionnement d'une règle
+
+Chaque règle comporte deux parties :
+
+* **Condition (IF)** — la situation que PADS4 surveille.
+* **Action (THEN)** — ce que PADS4 fait lorsque cette condition est remplie.
+
+Lorsque la condition est vraie pendant la lecture, l'action s'exécute.
+
+## Où définir des règles
+
+Les règles peuvent être définies à trois niveaux :
+
+* **Niveau présentation** — affectent l'ensemble de la présentation.
+* **Niveau page** — affectent une seule page.
+* **Niveau élément de page** — affectent un élément individuel sur une page.
+
+Vous pouvez créer autant de règles que nécessaire à chaque niveau, mais une seule règle du même type peut être active à un moment donné.
+
+<Tip>
+  La plupart des règles sont liées à un fournisseur de données afin de pouvoir réagir aux événements de données en temps réel.
+</Tip>
+
+## Exemples
+
+**Règle de présentation**
+
+* Si aucune donnée en temps réel n'est disponible, basculer vers une page publicitaire. Lorsque les données redeviennent disponibles, revenir à la page d'origine.
+
+**Règle de page**
+
+* Si l'heure actuelle est comprise entre 10h00 et 11h00, masquer la page afin qu'elle soit ignorée.
+
+**Règle d'élément de page**
+
+* Si une valeur de données en temps réel dépasse un seuil défini, changer la couleur d'arrière-plan de l'élément en rouge.
