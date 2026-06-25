@@ -1336,7 +1336,13 @@
                     "group": "Workspace Web Application",
                     "pages": [
                       "modules/workspace/workspace-web-application/introduction",
-                      "modules/workspace/workspace-web-application/searching-for-a-space",
+                      {
+                        "group": "Search a room",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/searching-for-a-space",
+                          "modules/workspace/workspace-web-application/FavouriteRoom"
+                        ]
+                      },
                       "modules/workspace/workspace-web-application/booking-a-space",
                       "modules/workspace/workspace-web-application/booking-a-common-space",
                       "modules/workspace/workspace-web-application/booking-a-group-workspace",
