@@ -1343,17 +1343,62 @@
                           "modules/workspace/workspace-web-application/FavouriteRoom"
                         ]
                       },
-                      "modules/workspace/workspace-web-application/booking-a-space",
-                      "modules/workspace/workspace-web-application/booking-a-common-space",
-                      "modules/workspace/workspace-web-application/booking-a-group-workspace",
-                      "modules/workspace/workspace-web-application/declaring-remote-work",
-                      "modules/workspace/workspace-web-application/reporting-absence",
-                      "modules/workspace/workspace-web-application/my-calendar",
-                      "modules/workspace/workspace-web-application/searching-for-colleagues",
-                      "modules/workspace/workspace-web-application/special-cases",
-                      "modules/workspace/workspace-web-application/account-settings",
-                      "modules/workspace/workspace-web-application/logging-out",
-                      "modules/workspace/workspace-web-application/appendices"
+                      {
+                        "group": "Book a space",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/booking-a-space",
+                          "modules/workspace/workspace-web-application/booking-a-common-space",
+                          "modules/workspace/workspace-web-application/booking-a-group-workspace"
+                        ]
+                      },
+                      {
+                        "group": "Remote work",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/declaring-remote-work"
+                        ]
+                      },
+                      {
+                        "group": "Report absence",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/reporting-absence"
+                        ]
+                      },
+                      {
+                        "group": "My Calendar",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/my-calendar"
+                        ]
+                      },
+                      {
+                        "group": "Search Colleagues",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/searching-for-colleagues"
+                        ]
+                      },
+                      {
+                        "group": "Special Cases",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/special-cases"
+                        ]
+                      },
+                      {
+                        "group": "Account Settings",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/account-settings"
+                        ]
+                      },
+                      {
+                        "group": "Log out",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/logging-out"
+                        ]
+                      },
+                      {
+                        "group": "Workflows",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/Workflows"
+                        ]
+                      }
                     ]
                   },
                   {
