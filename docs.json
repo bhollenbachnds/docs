@@ -109,7 +109,7 @@
                   {
                     "group": "Amino",
                     "pages": [
-                      "amino-h200"
+                      "certified-devices/Amino/amino-h200"
                     ]
                   },
                   {
@@ -536,7 +536,7 @@
             ]
           },
           {
-            "dropdown": "Digital Signage",
+            "dropdown": "PADS4 Digital Signage",
             "groups": [
               {
                 "group": "Getting Started",
@@ -1321,7 +1321,7 @@
             ]
           },
           {
-            "dropdown": "Workspace",
+            "dropdown": "PADS4 Workspace",
             "groups": [
               {
                 "group": "Getting Started",
@@ -1472,7 +1472,7 @@
             ]
           },
           {
-            "dropdown": "CMS 1.0",
+            "dropdown": "PADS4 CMS 1.0",
             "groups": [
               {
                 "group": "Getting Started",
@@ -1509,7 +1509,7 @@
             ]
           },
           {
-            "dropdown": "FIDS",
+            "dropdown": "PASD4 FIDS",
             "groups": [
               {
                 "group": "Getting Started",
