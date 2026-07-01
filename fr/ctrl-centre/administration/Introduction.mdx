@@ -1,0 +1,46 @@
+---
+- title: Introduction
+---
+
+Ce guide vous accompagne dans la configuration requise pour intégrer **Microsoft Power BI** avec **PADS4** via **Microsoft Azure**. Ce guide suppose que vous êtes familier avec l'administration de Power BI, les inscriptions d'applications Azure et la méthode d'authentification par principal de service.
+
+## Ce que vous allez configurer
+
+Pour réaliser l'intégration, vous devrez :
+
+* Inscrire une application dans Azure Active Directory et créer un principal de service.
+* Accorder à ce principal de service l'accès aux espaces de travail Power BI que vous souhaitez intégrer.
+* Attribuer une capacité Power BI à ces espaces de travail.
+* Saisir les informations d'identification obtenues dans PADS4 CTRL Center.
+
+## Considérations et limitations
+
+Examinez ces limitations avant de commencer — elles affectent ce qui peut être intégré et quels utilisateurs sont pris en charge.
+
+**Non pris en charge**
+
+* **My Workspace** n'est pas pris en charge lors de l'authentification avec un principal de service.
+* Les utilisateurs ne peuvent pas se connecter au portail Power BI à l'aide d'un principal de service.
+* **Gestion des dataflows** n'est pas prise en charge.
+* Les rapports qui utilisent **Row-Level Security (RLS)** ne sont pas pris en charge.
+
+**Périmètre pris en charge**
+
+* Seul **l'intégration de rapports et de tableaux de bord** est prise en charge.
+
+**Prérequis**
+
+* **Droits d'administrateur Power BI** sont requis pour activer le principal de service dans les **Paramètres développeur** de Power BI.
+* **Les espaces de travail nécessitent une capacité Power BI**, ce qui peut entraîner des coûts Azure supplémentaires. Sans capacité, les rapports peuvent afficher un avertissement ou ne pas s'afficher dans le PADS4 Viewer.
+* Versions minimales de navigateur :
+  * **Chrome** 95
+  * **Firefox** 94
+  * **Edge** 120
+
+<Note>
+  Pour plus d'informations sur les capacités et l'intégration en production, consultez la [documentation Power BI Embedded](https://learn.microsoft.com/en-us/power-bi/developer/embedded/move-to-production).
+</Note>
+
+## Étapes suivantes
+
+Poursuivez avec les pages de configuration de cette section pour inscrire l'application Azure, configurer Power BI et connecter PADS4 CTRL Center.

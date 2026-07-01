@@ -1,0 +1,57 @@
+---
+- title: Configuration PowerBI
+- description: Trouvez le workspace, le report et le dashboard IDs Power BI dont
+    PADS4 a besoin pour intégrer du contenu dans une présentation.
+---
+
+Pour afficher un rapport ou un tableau de bord Power BI dans PADS4, vous avez besoin de deux identifiants provenant de Power BI :
+
+* Le **Workspace ID** de l'espace de travail qui contient l'élément.
+* Le **Report ID** ou le **Dashboard ID** de l'élément que vous souhaitez intégrer.
+
+Les deux valeurs sont visibles dans l'URL du rapport ou du tableau de bord dans [Power BI Home](https://app.powerbi.com).
+
+## Avant de commencer
+
+Assurez-vous d'avoir :
+
+* Complété la [Configuration Azure](/fr/ctrl-centre/administration/azure-set-up-1) et la [Configuration de l'administrateur des services PowerBI](/fr/ctrl-centre/administration/power-bi-admin-set-up).
+* Accès à l'espace de travail Power BI qui contient le rapport ou le tableau de bord que vous souhaitez intégrer.
+
+## Trouver les identifiants dans l'URL Power BI
+
+Ouvrez le rapport ou le tableau de bord dans Power BI et inspectez l'URL dans la barre d'adresse de votre navigateur.
+
+### Rapports
+
+Une URL de rapport ressemble à ceci :
+
+```text
+https://app.powerbi.com/groups/2a72e361-1e1a-43ed-a048-b44b8d2baaae/reports/d4a2c463-c469-4a58-906c-74a7bbe158ba/ReportSectiond8ab5d035cceb8586528?experience=power-bi
+```
+
+* **Workspace ID** — la valeur entre `/groups/` et `/reports/`.
+* **Report ID** — la valeur entre `/reports/` et `/ReportSection`.
+
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIReports.png" alt="Power BI report URL highlighting the workspace and report IDs" />
+
+### Dashboards
+
+L'URL d'un dashboard ressemble à ceci :
+
+```text
+https://app.powerbi.com/groups/947c4e75-b0c4-4488-aab9-ffc2b67285db/dashboards/ed6ae326-b545-44ec-8524-f951f94a0fd2?experience=power-bi
+```
+
+* **Workspace ID** — la valeur entre `/groups/` et `/dashboards/`.
+* **Dashboard ID** — la valeur après `/dashboards/` et avant `?`.
+
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIDashboard.png" alt="Power BI dashboard URL highlighting the workspace and dashboard IDs" />
+
+## Saisir les IDs dans PADS4 CTRL Center
+
+Une fois le workspace ID et le report ou dashboard ID copiés, ouvrez la configuration Power BI dans PADS4 CTRL Center et collez les valeurs dans les champs correspondants pour intégrer l'élément dans votre présentation.
+
+<Tip>
+  Un workspace peut contenir plusieurs reports et dashboards. Répétez cette étape pour chaque élément que vous souhaitez intégrer — le workspace ID reste le même, seul le report ou dashboard ID change.
+</Tip>

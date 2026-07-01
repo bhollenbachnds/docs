@@ -1,0 +1,59 @@
+Ces propriétés définissent le **contenu textuel** affiché par l'élément **Rich Text**. Vous pouvez saisir un **élément de texte unique** ou créer une **liste de lecture d'éléments textuels** qui seront lus séquentiellement.
+
+***
+
+### **Éditeur Rich Text avancé**
+
+* **La mise en forme de base** (gras, italique, souligné, etc.) est disponible dans la barre d'outils.
+* Pour accéder aux **fonctionnalités avancées** (intégration de fournisseur de données, règles, et plus), cliquez sur l'icône **Éditeur avancé**.
+
+***
+
+### **Gestion des éléments de la liste de lecture**
+
+* **Ajouter** de nouveaux éléments textuels.
+* **Modifier** les éléments existants.
+* **Changer l'ordre** des éléments textuels.
+* **Supprimer** des éléments textuels.
+* **Naviguer** dans les éléments de la liste de lecture à l'aide des boutons en bas.
+* **Durée totale** de la liste de lecture est affichée.
+
+**Important:** Pour la gestion générale des listes de lecture, consultez **Travailler avec les listes de lecture**.
+
+***
+
+### **Propriétés des éléments de liste de lecture basés sur le texte**
+
+| **Option**                                  | **Description**                                                                                                                                      |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Texte**                                   | Texte statique saisi directement dans l'élément.                                                                                                     |
+| **Texte depuis la bibliothèque de contenu** | Utilise un fichier texte stocké dans la **bibliothèque de contenu** PADS4 (recommandé).                                                              |
+| **Texte depuis un fichier**                 | Référence un fichier texte externe en dehors de la bibliothèque de contenu. **Non synchronisé automatiquement**—nécessite une distribution manuelle. |
+| **Aucun texte**                             | Insère une entrée vide, créant une pause dans la liste de lecture.                                                                                   |
+
+***
+
+### **Propriété de contenu**
+
+* Affiche le **contenu textuel** ou la **référence du fichier texte** en fonction du type sélectionné.
+* **Parcourir la bibliothèque de contenu** ou le **système de fichiers local** pour sélectionner des fichiers.
+* Si **Texte depuis un fichier** est sélectionné, assurez-vous que le **chemin complet du fichier** est inclus.
+
+***
+
+### **Propriétés supplémentaires de la liste de lecture**
+
+| **Propriété** | **Description**                                                             |
+| ------------- | --------------------------------------------------------------------------- |
+| **Durée**     | Spécifie la durée d'affichage du texte (en secondes).                       |
+| **Effet**     | Applique un **effet de transition entrant** et définit la durée de l'effet. |
+
+***
+
+### **Remarques**
+
+* **Texte multiligne :** Utilisez la **touche \[Entrée]** pour séparer les lignes. Le retour à la ligne dans l'éditeur **ne signifie pas automatiquement** un affichage multiligne.
+* **Fichiers texte brut :** Les **paramètres de conversion de texte de source de données** déterminent la façon dont le texte multiligne est géré.
+* **Formats pris en charge :** L'élément Rich Text peut lire les **fichiers texte brut (TXT), Rich Text Format (RTF) et HTML**.
+* **Références de fichiers uniquement :** Si vous utilisez des fichiers texte externes, seules les **références** sont stockées. Si le fichier texte est mis à jour, la **dernière version** sera utilisée lors de la lecture.
+* **Contenu piloté par les données :** Lorsqu'il est lié à une **source de données**, les propriétés de la liste de lecture deviennent **désactivées**, car les données en temps réel déterminent le contenu de manière dynamique.

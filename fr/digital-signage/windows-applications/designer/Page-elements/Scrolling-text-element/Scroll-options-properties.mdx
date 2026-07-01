@@ -1,0 +1,43 @@
+Ces propriétés contrôlent comment **les éléments de texte** apparaissent et se déplacent dans l'**élément de texte défilant**.
+
+***
+
+## **Options de défilement**
+
+### **Options de défilement du texte**
+
+Déterminez comment le nouveau texte est introduit dans l'élément de texte défilant :
+
+| **Option**                                             | **Description**                                                                                                                              |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ligne par ligne**                                    | Affiche une ligne à la fois. Chaque ligne est affichée séparément, et la ligne suivante n'apparaît qu'après la disparition de la précédente. |
+| **Directement après le texte précédent**               | Le nouveau texte est placé **immédiatement après** le texte précédent, garantissant un effet de défilement continu sans interruption.        |
+| **Lorsque le texte précédent a défilé hors de la vue** | Le nouveau texte commence **uniquement après** que le texte précédent a **complètement disparu** de la vue.                                  |
+
+***
+
+### **Paramètres supplémentaires**
+
+#### **Concaténer plusieurs lignes de texte en une seule ligne**
+
+* Si activé, **les retours à la ligne forcés (sauts de ligne)** à l'intérieur d'une seule entrée de texte sont **supprimés**.
+* L'intégralité du texte est traitée comme **une seule ligne continue** lors du défilement.
+* Ne peut pas être utilisé en combinaison avec le mode **Ligne par ligne**.
+
+#### **Ne pas faire défiler lorsque le texte s'adapte**
+
+* Lorsqu'il est activé, PADS4 calcule si le **texte entier (y compris les séparateurs)** s'adapte à la **zone de l'élément**.
+* Si le texte s'adapte, il restera **statique** au lieu de défiler.
+* Si le texte **dépasse** la zone de l'élément, le défilement **démarrera automatiquement**.
+
+#### **Afficher immédiatement les modifications du texte**
+
+* Lorsqu'il est connecté à une **source de données**, l'activation de ce paramètre garantit que **toutes les mises à jour du texte sont reflétées immédiatement**.
+* Le processus de défilement est **interrompu**, et le **nouveau texte commence à défiler immédiatement**.
+
+***
+
+## **Remarques**
+
+* **Le mode "Ligne par ligne"** ne peut pas être utilisé avec **"Concaténer plusieurs lignes de texte en une seule ligne"**, car ils **sont en conflit de comportement**.
+* Assurer un **défilement fluide** nécessite une configuration soigneuse de **la longueur du texte, l'espacement des séparateurs et la fréquence de mise à jour**.

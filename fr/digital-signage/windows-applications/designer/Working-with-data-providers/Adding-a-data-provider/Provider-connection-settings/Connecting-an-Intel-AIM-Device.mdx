@@ -1,0 +1,82 @@
+Le **Intel AIM (Audience Impression Metric)** fournisseur dans **PADS4** permet la collecte en temps réel de **données analytiques d'audience** à l'aide de **la technologie de reconnaissance faciale par caméra**. Cela permet aux entreprises de recueillir des informations sur **le genre, le groupe d'âge, la durée de visionnage et l'engagement de l'audience**.
+
+***
+
+## **Étapes pour ajouter/modifier une connexion Intel AIM dans PADS4**
+
+### **1. Démarrer l'assistant de fournisseur de données**
+
+* Ouvrez le **Data Provider Wizard** en suivant les étapes dans **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**.
+* Sélectionnez **Intel AIM** comme **type de fournisseur**.
+
+***
+
+### **2. Configurer les paramètres de connexion Intel AIM**
+
+#### **Spécifier l'emplacement du logiciel AIM**
+
+* **Version:** Actuellement, seule la **version 1** est prise en charge.
+* **Server:** Entrez l'**adresse réseau** (adresse IP ou nom d'hôte) du PC sur lequel le logiciel AIM est en cours d'exécution.
+* **Numéro de port :** Le **port par défaut** pour la communication AIM est **12500**.
+
+Cliquez sur **Tester** pour vérifier la connexion.
+
+***
+
+### **3. Sélectionner le mode de collecte de données**
+
+Choisissez comment le **fournisseur AIM** collecte et traite les données :
+
+* **Audience en temps réel :**
+  * Récupère les données uniquement pour le **moment présent**.
+* **Audience en temps réel et historique :**
+  * Récupère **les données en temps réel et historiques**.
+* **Supprimer les informations sur l'audience après une période spécifique :**
+  * Supprime automatiquement **les données** après une **période de temps** spécifiée.
+  * Cela garantit que la **table de données** reste centrée sur les interactions récentes.
+
+⚠ **Note:**\
+Si une période de temps est définie, **le nombre total de spectateurs** (par exemple, le nombre total de spectateurs masculins) ne reflétera que les spectateurs dans le **délai spécifié**.
+
+Cliquez sur **Suivant** pour continuer.
+
+***
+
+### **4. Terminer la configuration**
+
+* Cliquez sur **Terminer** pour finaliser la connexion Intel AIM.
+* Le **PADS4 Viewer** affichera désormais en temps réel les **données analytiques d'audience**.
+
+***
+
+## **Considérations importantes**
+
+### **Fréquence de rafraîchissement des données élevée**
+
+* Pour **détecter avec précision** les spectateurs, définissez une **fréquence de rafraîchissement élevée**.
+* Un **faible taux de rafraîchissement** peut entraîner des **détections manquées**.
+
+### **Aperçu de la structure des données**
+
+Chaque ligne de la **table de données Intel AIM** représente un spectateur détecté individuellement. Le système capture des détails tels que **le genre, la tranche d'âge, l'horodatage, la durée de visionnage et la position**.
+
+| Colonne                              | Type de données | Description                                                                                                                     |
+| ------------------------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **ID**                               | Long            | ID unique pour chaque spectateur.                                                                                               |
+| **Genre**                            | Integer         | 0 = Inconnu, 1 = Masculin, 2 = Féminin                                                                                          |
+| **Groupe d'âge**                     | Integer         | 0 = Inconnu, 1 = Enfant (\<16), 2 = Adolescent (16-19), 3 = Jeune adulte (19-34), 4 = Adulte plus âgé (34-64), 5 = Senior (>65) |
+| **Horodatage**                       | Date            | Date et heure de détection.                                                                                                     |
+| **Temps de visionnage (s)**          | Long            | Temps passé devant la caméra (secondes).                                                                                        |
+| **Largeur/Hauteur du visage**        | Long            | Taille du visage détecté.                                                                                                       |
+| **Total des spectateurs masculins**  | Long            | Total des hommes détectés.                                                                                                      |
+| **Total des spectatrices féminines** | Long            | Total des femmes détectées.                                                                                                     |
+
+Le **spectateur le plus récent** est répertorié dans la **première ligne**.
+
+***
+
+## **Cas d'utilisation**
+
+* **Commerce de détail & Publicité :** Mesurer **l'engagement du public** pour la signalétique numérique.
+* **Événements & Expositions :** Comprendre les **données démographiques** des participants.
+* **Sécurité & Analytique :** Améliorer **la surveillance des foules** dans les espaces publics.

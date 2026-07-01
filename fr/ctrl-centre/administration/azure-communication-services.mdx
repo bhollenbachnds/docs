@@ -1,0 +1,39 @@
+---
+- title: Azure Communication Services
+- description: Créez une ressource Azure Communication Services et récupérez la
+    chaîne de connexion utilisée par l'intégration PADS4 Microsoft Teams.
+---
+
+L'intégration PADS4 Microsoft Teams repose sur **Azure Communication Services** pour rejoindre et gérer les réunions Teams. Ce guide vous explique comment créer la ressource et récupérer la chaîne de connexion dont PADS4 CTRL Center a besoin.
+
+## Avant de commencer
+
+Assurez-vous de disposer de :
+
+* Un **abonnement Azure** avec l'autorisation de créer des ressources.
+* Avoir effectué l' [Azure Set-up](/fr/ctrl-centre/administration/azure-set-up) d'enregistrement d'application pour l'intégration Teams.
+
+## Étape 1 : Créer une ressource Communication Services
+
+1. Connectez-vous au [Microsoft Azure Portal](https://portal.azure.com).
+2. Accédez à **Azure Communication Services** et sélectionnez **Créer**.
+3. Configurez la ressource :
+   * **Abonnement** — sélectionnez votre abonnement Azure.
+   * **Groupe de ressources** — choisissez un groupe existant ou créez-en un nouveau.
+   * **Nom** — tout nom de référence pour la ressource.
+   * **Géographie** — choisissez la région la plus proche de vos utilisateurs.
+4. Sélectionnez **Review + create**, puis **Create**.
+
+## Étape 2 : Récupérer la chaîne de connexion principale
+
+PADS4 CTRL Center a besoin de la **Primary Connection String** de la ressource.
+
+1. Ouvrez la ressource Communication Services que vous venez de créer.
+2. Dans le menu de gauche, sélectionnez **Keys**.
+3. Copiez la **Primary key connection string**.
+
+<Warning>
+  Traitez la chaîne de connexion comme un mot de passe. Stockez-la de manière sécurisée et faites-la pivoter si elle a pu être exposée.
+</Warning>
+
+Vous pouvez maintenant saisir cette valeur dans PADS4 CTRL Center pour finaliser l'intégration Microsoft Teams.
