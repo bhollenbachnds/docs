@@ -1,0 +1,87 @@
+---
+title: "Azure Set-up"
+description: "Register an application in Azure Active Directory so PADS4 CTRL Center can integrate with Microsoft Teams."
+---
+
+To connect **Microsoft Teams** to PADS4 CTRL Center, register a new application in **Azure Active Directory (AAD)**. The steps below walk you through the registration, the optional claim, API scope, and client secret that the integration needs.
+
+## Before you begin
+
+Make sure that you have:
+
+- An **Azure AD tenant** and permission to create app registrations.
+- The DNS name or IP address of your **PADS4 CTRL Center** deployment (and its port, if it isn't using the default HTTP/HTTPS ports).
+- Access to the PADS4 CTRL Center administration area, where you will enter the values collected at the end of this guide.
+
+## Step 1: Create the app registration
+
+1. Sign in to the [Microsoft Azure Portal](https://portal.azure.com).
+2. Go to **Azure Active Directory** \> **App Registrations** and select **New Registration**.
+3. Configure the registration:
+   - **Name** — any reference name for the integration.
+   - **Supported account types** — select **Single-tenant** or **Multi-tenant** based on your requirements. Personal Microsoft accounts are **not** supported.
+   - **Redirect URI**:
+     - Platform: **Single Page Application (SPA)**.
+     - URI:
+       ```text
+       https://<host>:<port>/credentials/oauth2/authorize/callback
+       ```
+       Replace `<host>` with the DNS name or IP address of PADS4 CTRL Center. Include `<port>` only if CTRL Center isn't using the default HTTP/HTTPS ports.
+4. Select **Register**.
+
+## Step 2: Add the Login hint optional claim
+
+This claim enables re-authentication in PADS4 CTRL Center so access tokens can be renewed manually.
+
+1. Open your **App Registration**.
+2. In the left menu, select **Token Configuration**.
+3. Select **Add Optional Claim**.
+4. Choose **Token type: ID**.
+5. Enable **login\_hint**.
+6. Select **Add**.
+
+## Step 3: Expose an API scope
+
+The scope allows the PADS4 Teams integration to join Teams meetings on behalf of users.
+
+1. In the **App Registration**, select **Expose an API**.
+2. Set an **Application ID URI**:
+   ```text
+   api://your-custom-uri
+   ```
+   The URI must start with `api://` and cannot contain spaces or special characters.
+3. Select **Save and continue**.
+4. Select **Add a scope** and define:
+   - **Scope name** — a unique name, no spaces or special characters.
+   - **Who can consent?** — **Admins and users**.
+   - **Admin consent display name** — any reference name.
+   - **User consent display name** — any reference name.
+   - **State** — **Enabled**.
+5. Select **Add scope**.
+
+<Note>
+  The full scope URI is the **Application ID URI \+ scope name**. You will enter it in PADS4 CTRL Center.
+</Note>
+
+## Step 4: Create a client secret
+
+The client secret lets the PADS4 Teams integration join Teams meetings without requiring users to log in every time.
+
+1. In the **App Registration**, select **Certificates & secrets**.
+2. Select **New client secret**.
+3. Enter a description and choose an expiration duration.
+4. Select **Add**.
+5. **Copy the client secret value immediately** — it isn't shown again after you leave the page.
+
+<Warning>
+  Create and configure a new client secret before the current one expires, otherwise the Microsoft Teams integration will stop working.
+</Warning>
+
+## Step 5: Collect the values for PADS4 CTRL Center
+
+Gather the following from your app registration. You'll enter them in PADS4 CTRL Center to complete the integration.
+
+- **Application (Client) ID** — from **App Registration** \> **Overview**.
+- **Directory (Tenant) ID** — from **App Registration** \> **Overview**.
+- **Client secret** — the value copied in Step 4.
+- **Scope name** — from **Expose an API**.

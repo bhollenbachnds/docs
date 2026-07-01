@@ -1,0 +1,28 @@
+---
+title: "Licensing"
+description: "Assign the Microsoft 365 licenses required for user accounts that connect Microsoft Teams to PADS4."
+---
+
+Each user account that participates in the PADS4 Microsoft Teams integration must have the correct Microsoft 365 licenses. Without them, PADS4 cannot access mailboxes or join Teams meetings on the user's behalf.
+
+## Required licenses
+
+Assign the following **Microsoft 365 E3** licenses (or an equivalent plan that includes both services) to every integrated user:
+
+- **Exchange Online (Plan 2)** — required for mailbox and calendar access.
+- **Microsoft Teams** — required for meeting join and participation.
+
+## Assign the licenses
+
+1. Sign in to the [Microsoft 365 Admin Center](https://admin.microsoft.com).
+2. Go to **Users** \> **Active users**.
+3. Select the user account you want to configure.
+4. Open the **Licenses and apps** tab.
+5. Enable:
+   - **Exchange Online (Plan 2)**
+   - **Microsoft Teams**
+6. Select **Save changes**.
+
+<Tip>
+  Repeat these steps for every user who needs to be represented in PADS4, including any shared or room accounts used by meeting rooms.
+</Tip>

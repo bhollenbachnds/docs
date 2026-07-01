@@ -393,13 +393,22 @@
                       {
                         "group": "Microsoft Teams",
                         "pages": [
-                          "ctrl-centre/administration/teams"
+                          "ctrl-centre/administration/teams",
+                          "ctrl-centre/administration/azure-set-up",
+                          "ctrl-centre/administration/azure-communication-services",
+                          "ctrl-centre/administration/licensing",
+                          "ctrl-centre/administration/pads-4-set-up"
                         ]
                       },
                       {
                         "group": "Microsoft PowerBI",
                         "pages": [
-                          "ctrl-centre/administration/Power-BI"
+                          "ctrl-centre/administration/Introduction",
+                          "ctrl-centre/administration/azure-set-up-1",
+                          "ctrl-centre/administration/power-bi-admin-set-up",
+                          "ctrl-centre/administration/power-bi-set-up",
+                          "ctrl-centre/administration/power-bi-in-ctrl-center",
+                          "ctrl-centre/administration/power-bi-in-presentation"
                         ]
                       },
                       {
