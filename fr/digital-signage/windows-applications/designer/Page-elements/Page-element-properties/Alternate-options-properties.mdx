@@ -1,0 +1,60 @@
+Ces propriétés contrôlent la façon dont un élément bascule entre les éléments de sa liste de lecture pendant la lecture.
+
+### Lire toute la liste de lecture
+
+* **Si désactivé**:\
+  Seul le **premier élément de la liste de lecture** sera lu.
+
+* **Si activé**:\
+  Tous les éléments de la liste de lecture seront lus selon l'une des méthodes suivantes :
+
+#### Méthodes de lecture (lorsque "Lire toute la liste de lecture" est activé)
+
+1. **Lire en utilisant les durées de la liste de lecture**:\
+   Chaque élément de la liste de lecture sera lu pendant la durée **définie dans la liste de lecture** elle-même.
+
+2. **Lire en utilisant l'intervalle d'alternance de page**:\
+   Tous les éléments de la liste de lecture seront lus pendant la **même durée fixe**, telle que spécifiée dans l'**Intervalle d'alternance** des propriétés de page.
+
+   **Note importante**:
+
+   * Lorsque cette option est utilisée, **plusieurs éléments** qui l'utilisent vont **synchroniser** leur basculement de liste de lecture.
+   * Si les éléments ont un nombre différent d'éléments dans la liste de lecture, le système calculera quel élément doit s'afficher à chaque point dans le temps, afin qu'ils restent alignés.
+
+***
+
+### Exemple de synchronisation
+
+Considérons **deux éléments** avec des longueurs de liste de lecture différentes :
+
+| **Élément 1 (4 éléments)**    | **Élément 2 (2 éléments)**    |
+| ----------------------------- | ----------------------------- |
+| Élément de liste de lecture 1 | Élément de liste de lecture 1 |
+| Élément de liste de lecture 2 | Élément de liste de lecture 2 |
+| Élément de liste de lecture 3 | Élément de liste de lecture 1 |
+| Élément de liste de lecture 4 | Élément de liste de lecture 2 |
+| Élément de liste de lecture 1 | Élément de liste de lecture 1 |
+| Élément de liste de lecture 2 | Élément de liste de lecture 2 |
+
+Dans cet exemple :
+
+* **Élément de liste de lecture 1** des deux éléments sera **toujours affiché en même temps**.
+* Le système aligne automatiquement les cycles, même avec des longueurs de liste différentes.
+
+***
+
+### Lecture synchronisée sur tous les Viewers
+
+Lorsque **Lire en utilisant l'intervalle d'alternance de page** est actif, l'alternance des éléments de la liste de lecture est **synchronisée sur tous les Viewers** (écrans/lecteurs).
+
+* Cela garantit une **alternance simultanée** sur tous les écrans connectés.
+* Assurez-vous que les paramètres de synchronisation du système sont correctement configurés pour prendre en charge ce comportement.
+
+***
+
+### Résumé
+
+* **Lire toute la liste de lecture** : Permet de parcourir tous les éléments de la liste de lecture.
+* Choisissez entre **les durées individuelles des éléments** ou un **intervalle d'alternance uniforme**.
+* La synchronisation maintient plusieurs éléments et appareils en phase.
+* Utile pour l'affichage de contenu coordonné sur plusieurs zones ou écrans.

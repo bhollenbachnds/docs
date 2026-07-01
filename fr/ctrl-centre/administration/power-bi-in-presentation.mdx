@@ -1,0 +1,53 @@
+---
+- title: PowerBI in Presentation
+- description: Intégrez un rapport ou un tableau de bord Power BI dans une
+    présentation PADS4 à l'aide du jeton généré dans Credential Manager.
+---
+
+Une fois que vous disposez d'un identifiant de jeton pour un rapport ou un tableau de bord Power BI, vous pouvez afficher le contenu sur un PADS4 Viewer en pointant un **élément Web** vers une URL dédiée.
+
+## Avant de commencer
+
+Assurez-vous d'avoir :
+
+* Complété l'étape [PowerBI in CTRL Center](/fr/ctrl-centre/administration/power-bi-in-ctrl-center) et copié l'**identifiant de jeton** pour le rapport ou le tableau de bord.
+* Une présentation PADS4 ouverte dans Designer avec un **élément Web** que vous pouvez configurer.
+
+## Construire l'URL Power BI
+
+Utilisez le format suivant :
+
+```text
+<protocol>://<host>:<port>/PowerBI/<token id>
+```
+
+* **protocole** — `http` ou `https`. Utilisez `https` lorsque le PADS4 Server dispose d'un certificat SSL public valide.
+* **hôte** — nom DNS ou adresse IP du **PADS4 Server**.
+* **port** — optionnel. À inclure uniquement si le PADS4 Server n'utilise pas les ports HTTP/HTTPS par défaut.
+* **identifiant de jeton** — la valeur générée dans **Credential Manager** pour le rapport ou le tableau de bord.
+
+**Exemple**
+
+```text
+https://test.pads4.com/PowerBI/fb7090-5904-4931-962e-a02c4af39
+```
+
+## Afficher le rapport ou le tableau de bord
+
+1. Dans PADS4 Designer, placez un **élément Web** sur la page de présentation.
+2. Définissez l'URL de l'élément sur la valeur que vous avez construite ci-dessus.
+3. Enregistrez la présentation et publiez-la sur le Viewer cible.
+
+Le Viewer chargera le rapport ou le tableau de bord Power BI en utilisant les identifiants associés au jeton.
+
+## Vérifications finales
+
+Avant de vous appuyer sur l'intégration en production, confirmez :
+
+* Le **principal de service** a été ajouté à chaque **espace de travail** Power BI dont vous souhaitez intégrer le contenu.
+* Les **autorisations API** requises sont activées dans les **paramètres du locataire** de l'administration Power BI.
+* Les **espaces de travail cibles disposent d'une capacité Power BI** assignée, afin que les rapports n'affichent pas de bannière d'avertissement ou n'échouent pas à s'afficher dans le Viewer.
+
+<Check>
+  Une fois ces vérifications effectuées, PADS4 est entièrement intégré à Power BI et prêt à afficher des rapports et des tableaux de bord sur n'importe quel Viewer.
+</Check>

@@ -1,10 +1,10 @@
-Ce guide fournit **des instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur **Sony BZxx Series Displays**.
+Ce guide fournit **des instructions étape par étape** pour installer et configurer **PADS4 Viewer** sur **Sony BZxx Series Displays**.
 
 ***
 
 ## **Modèles Sony BZxx pris en charge**
 
-Les **Sony BZxx Series** suivants sont pris en charge :
+Les **Sony BZxx Series** écrans suivants sont pris en charge :
 
 * **BZ53L**
 * **BZ50L**
@@ -17,9 +17,9 @@ Les **Sony BZxx Series** suivants sont pris en charge :
 
 ***
 
-## **Exigences minimales**
+## **Configuration minimale requise**
 
-**Version PADS4 Server :** **2024.2.6 ou ultérieure**\
+**Version de PADS4 Server :** **2024.2.6 ou ultérieure**\
 **Version du firmware :** **6.7612 ou ultérieure**
 
 **Assurez-vous que le firmware de votre appareil répond aux exigences minimales avant de procéder à l'installation.**
@@ -31,65 +31,65 @@ Les **Sony BZxx Series** suivants sont pris en charge :
 **Avant d'installer PADS4, vous devez vérifier la version du firmware.**
 
 **Comment vérifier la version actuelle du firmware :**\
-1️. **Allez à** `Settings -> About -> Android TV OS Build`\
+1️. **Aller à** `Settings -> About -> Android TV OS Build`\
 2️. **Vérifiez le numéro de version avant "release keys"**\
-3️. **Si une connexion Internet est disponible**, vérifiez les mises à jour du firmware sous `About`\
-4️. **Si aucune connexion Internet n'est disponible**, téléchargez le dernier firmware depuis **la page de firmware de Sony**
+3️. **Si une connexion Internet est disponible**, recherchez les mises à jour du firmware sous `About`\
+4️. **Si aucune connexion Internet n'est disponible**, téléchargez le dernier firmware depuis **la page firmware de Sony**
 
 ***
 
-## **Installation de PADS4Sony à partir d'une clé USB**
+## **Installation de PADS4Sony depuis une clé USB**
 
-**Vous allez installer PADS4Sony à partir d'une clé USB.**
+**Vous allez installer PADS4Sony depuis une clé USB.**
 
 **Étapes pour installer PADS4Sony :**
 
 <Steps>
-  <Step title="Première étape">
-    Téléchargez le **fichier .pkg PADS4Sony** depuis [ici sur **PADS4 Github**.](https://github.com/PADS4/PADS4-Viewer-Sony/releases/latest)
+  <Step title="Étape Un">
+    Téléchargez le **fichier .pkg PADS4Sony** depuis [**ici sur PADS4 Github.**](https://github.com/PADS4/PADS4-Viewer-Sony/releases/latest)
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape Deux">
     Copiez le **fichier .pkg** sur une **clé USB** et insérez la clé dans l'écran Sony.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape Trois">
     Effectuez une **réinitialisation d'usine** sur l'écran :
 
-    * **Allez à** `Settings -> System -> About -> Reset -> Factory Data Reset`
+    * **Aller à** `Settings -> System -> About -> Reset -> Factory Data Reset`
     * **Choisissez** "Tout effacer"
     * **(Ignorez cette étape si vous configurez un nouvel écran)**
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     L'écran va **commencer une réinitialisation d'usine dans les 15 secondes** et **redémarrer**.
   </Step>
 
-  <Step title="Cinquième étape">
-    **Lorsque l'écran de configuration initiale apparaît (sélection de la langue), ne commencez pas le processus de configuration.**
+  <Step title="Étape Cinq">
+    **Lorsque l'écran de configuration initiale apparaît (sélection de la langue), ne démarrez pas le processus de configuration.**
   </Step>
 
-  <Step title="Sixième étape">
-    L'écran va **détecter** le `bpk` fichier sur la **clé USB** et présenter l'**écran d'installation du package**.
+  <Step title="Étape Six">
+    L'écran va **détecter** le `bpk` fichier sur la **clé USB** et afficher l'**écran d'installation du package**.
   </Step>
 
-  <Step title="Septième étape">
+  <Step title="Étape Sept">
     **Choisissez "Installer"** et suivez les instructions à l'écran.
   </Step>
 
-  <Step title="Huitième étape">
+  <Step title="Étape Huit">
     Après l'installation, le téléviseur ouvrira un **écran d'activation**.
   </Step>
 
-  <Step title="Neuvième étape">
-    Faites défiler jusqu'en bas et **sélectionnez "Activer cette application d'administration d'appareil."**
+  <Step title="Étape Neuf">
+    Faites défiler vers le bas et **sélectionnez "Activer cette application d'administration de l'appareil".**
   </Step>
 
-  <Step title="Dixième étape">
-    Un **message "L'installation est terminée"** apparaîtra. **Retirez la clé USB** et sélectionnez **OK**.
+  <Step title="Étape Dix">
+    Un **message "Installation terminée"** apparaîtra. **Retirez la clé USB** et sélectionnez **OK**.
   </Step>
 
-  <Step title="Onzième étape">
+  <Step title="Étape Onze">
     L'écran reviendra à l'**écran de configuration initiale**. **Terminez la configuration** mais **ignorez l'étape de connexion au compte Google**.
   </Step>
 </Steps>
@@ -111,7 +111,7 @@ Les **Sony BZxx Series** suivants sont pris en charge :
 **Protocol:** `http` ou `https` (selon le certificat SSL)\
 **Host:** `DNS name` ou `IP address` du PADS4 Server\
 **Port:** **Optionnel** (à utiliser uniquement si le PADS4 Server n'est pas sur les ports HTTP/HTTPS par défaut)\
-**Chemin d'hôte par défaut :** `PADS4`
+**Hostpath par défaut :** `PADS4`
 
 **Exemple de configuration :**
 
@@ -124,28 +124,28 @@ http://localhost/pads4
 ### **Étapes pour se connecter au PADS4 Server**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape Un">
     Entrez l'**emplacement du PADS4 Server**.
   </Step>
 
-  <Step title="Deuxième étape">
-    (Facultatif) Entrez un **nom de Viewer** (ou laissez le PADS4 Server en générer un).
+  <Step title="Étape Deux">
+    (Optionnel) Entrez un **nom de Viewer** (ou laissez le PADS4 Server en générer un).
   </Step>
 
-  <Step title="Troisième étape">
-    Appuyez sur **Démarrer**.
+  <Step title="Étape Trois">
+    Appuyez sur **Start**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape Quatre">
     Attendez que le **téléchargement du Viewer soit terminé**, puis le Viewer démarrera.
   </Step>
 
-  <Step title="Cinquième étape">
-    Lorsque vous y êtes invité, **accordez l'autorisation** de stocker définitivement du contenu sur l'appareil.
+  <Step title="Étape Cinq">
+    Lorsque vous y êtes invité, **accordez la permission** de stocker du contenu de façon permanente sur l'appareil.
   </Step>
 </Steps>
 
-**Maintenant, le PADS4 Viewer va démarrer et se connecter au PADS4 Server.**
+**Le PADS4 Viewer va maintenant démarrer et se connecter au PADS4 Server.**
 
 ***
 
@@ -156,9 +156,9 @@ http://localhost/pads4
 **Étapes pour accéder aux paramètres :**\
 1️. **Connectez une souris à l'appareil.**\
 2️. **Faites un clic droit avec la souris** pour ouvrir le **menu des paramètres du Viewer**.\
-3️. **Effectuez des ajustements** pour l'orientation de l'écran, les paramètres d'affichage, etc.
+3️. **Effectuez des ajustements** concernant l'orientation de l'écran, les paramètres d'affichage, etc.
 
-**Vous pouvez également revenir à la configuration de PADS4Sony en cliquant sur le bouton "Paramètres du lanceur".**
+**Vous pouvez également revenir à la configuration de PADS4Sony en cliquant sur le bouton "Launcher Settings".**
 
 ***
 
@@ -177,15 +177,15 @@ http://localhost/pads4
 
 **Pour accéder aux paramètres rapides :**
 
-1. **Appuyez sur le bouton "Options"** sur la télécommande.\
-   2️. Ajustez divers **paramètres rapides** à partir de ce menu.
+1. **Appuyez sur le bouton « Options »** sur la télécommande.\
+   2️. Ajustez divers **paramètres rapides** depuis ce menu.
 
-**Pour accéder au menu complet des paramètres :**\
-1️. **Appuyez sur le bouton "Home"** sur la télécommande.\
-2️. L'application **PADS4 se fermera**.\
-3️. **Pour redémarrer PADS4, allez à**: `Settings -> System -> Restart`.
+**Pour accéder au menu des paramètres complets :**\
+1️. **Appuyez sur le bouton « Home »** sur la télécommande.\
+2️. L'**application PADS4 se fermera**.\
+3️. **Pour redémarrer PADS4, accédez à** : `Settings -> System -> Restart`.
 
-**Maintenant l'application PADS4 démarrera automatiquement.**
+**L'application PADS4 démarrera maintenant automatiquement.**
 
 ***
 
@@ -196,41 +196,41 @@ http://localhost/pads4
 | Fonctionnalité | Description                                                                                                               |
 | :------------: | ------------------------------------------------------------------------------------------------------------------------- |
 |        ✅       | **Mises à jour automatiques du logiciel** – L'application PADS4Sony se met à jour lorsque le serveur PADS4 se met à jour. |
-|        ✅       | **Mode hors ligne** – Lit le contenu programmé pendant **7 jours** en mode hors ligne.                                    |
+|        ✅       | **Mode hors ligne** – Lit le contenu planifié pendant **7 jours** en mode hors ligne.                                     |
 
 ### **Fonctionnalités de l'appareil**
 
-| Fonctionnalité | Description                                                                                    |
-| :------------: | ---------------------------------------------------------------------------------------------- |
-|        ✅       | **Mode portrait** – Pris en charge, mais **le menu de l'appareil n'est pas pris en charge**.   |
-|        ❌       | **Blocage de la télécommande** – Non pris en charge.                                           |
-|        ✅       | **Cluster Viewer** – Pris en charge.                                                           |
-|        ✅       | **Éteindre l'écran** – Le rétroéclairage s'éteint lorsqu'aucune présentation n'est programmée. |
+| Fonctionnalité | Description                                                                                           |
+| :------------: | ----------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mode Portrait** – Pris en charge, mais **le menu de l'appareil n'est pas pris en charge**.          |
+|        ❌       | **Blocage de la télécommande** – Non pris en charge.                                                  |
+|        ✅       | **Cluster Viewer** – Pris en charge.                                                                  |
+|        ✅       | **Désactivation de l'écran** – Le rétroéclairage s'éteint lorsqu'aucune présentation n'est planifiée. |
 
-### **Prise en charge vidéo et contenu**
+### **Prise en charge des vidéos et du contenu**
 
 | Fonctionnalité | Description                                                                           |
 | :------------: | ------------------------------------------------------------------------------------- |
 |        ✅       | **2 vidéos par page** – Prend en charge la lecture fluide (**1920x1080**).            |
 |        ❌       | **Rotation, chevauchement, inclinaison, retournement de vidéo** – Non pris en charge. |
 |        ✅       | **Streaming** – Prend en charge le streaming HTTP.                                    |
-|        ✅       | **Mode 4K (3840x2160)** – Disponible au **Q1 2025**.                                  |
+|        ✅       | **Mode 4K (3840x2160)**                                                               |
 
 ### **Gestion des appareils**
 
-| Fonctionnalité | Description                                                     |
-| :------------: | --------------------------------------------------------------- |
-|        ✅       | **Gestion à distance via PADS4 CTRL Center**                    |
-|        ✅       | **Redémarrage de l'appareil, redémarrage du visualiseur**       |
-|        ✅       | **Récupération des captures d'écran et des journaux**           |
-|        ❌       | **Prise en charge du blocage de la télécommande et de l'arrêt** |
+| Fonctionnalité | Description                                                        |
+| :------------: | ------------------------------------------------------------------ |
+|        ✅       | **Gestion à distance via PADS4 CTRL Center**                       |
+|        ✅       | **Redémarrage de l'appareil, redémarrage du Viewer**               |
+|        ✅       | **Récupération des captures d'écran (sauf vidéo) et des journaux** |
+|        ❌       | **Blocage de la télécommande et prise en charge de l'arrêt**       |
 
 ***
 
 ## **Étapes finales**
 
-**Votre PADS4 Viewer est maintenant installé et prêt à être utilisé ! 🎉**
+**Votre PADS4 Viewer est maintenant installé et prêt à l'emploi ! 🎉**
 
-**Vérifiez le serveur PADS4 pour les mises à jour de statut.**\
-**Ajustez les paramètres via le menu du visualiseur.**\
+**Vérifiez les mises à jour de statut sur le serveur PADS4.**\
+**Ajustez les paramètres via le menu du Viewer.**\
 **Utilisez l'accès à distance pour une gestion avancée.**

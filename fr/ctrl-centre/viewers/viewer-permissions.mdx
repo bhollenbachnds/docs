@@ -1,0 +1,46 @@
+---
+- title: Permissions de viewer
+---
+
+<Warning>
+  Cet article s'applique à PADS4 version 2025.2 et supérieure.
+
+  Toutes les versions antérieures disposent de l'administration des autorisations du Viewer dans l'application PADS4 System Management.
+</Warning>
+
+Les **autorisations du Viewer** dans **PADS4** vous permet d'avoir un contrôle granulaire sur lesquels **groupe(s) de viewers** et **viewer(s)** sont visibles pour chaque utilisateur spécifique. De cette façon, vous pouvez configurer précisément ce qu'un utilisateur final est en mesure de voir et de contrôler.
+
+## **Permissions de viewer par défaut**
+
+Les permissions de viewer fonctionnent de manière similaire aux permissions de contenu dans le PADS4 Web Portal ; sur chaque groupe de viewers ou viewer, vous pouvez faire un clic droit et un menu contextuel apparaîtra avec la possibilité d'ouvrir le menu **"Accès"**.
+
+* Dans la vue Détail des viewers :
+
+![Detailviewer Perm](/images/ctrl-centre/viewers/detailviewer-perm.png)
+
+* Dans la vue Arborescence des viewers :
+
+![Treeview Perm](/images/ctrl-centre/viewers/treeview-perm.png)
+
+Une fois que vous ouvrez le menu **Accès**, vous obtenez un aperçu des permissions actuellement définies sur ce groupe de viewers ou viewer.
+
+![Viewer Pm](/images/ctrl-centre/viewers/viewer-pm.png)
+
+## Comment configurer les permissions
+
+Si vous souhaitez restreindre un certain groupe de viewers (ou viewer), il est conseillé de procéder comme suit :
+
+Connectez-vous avec votre compte administrateur et accédez à la section **Utilisateurs**.
+
+* [Créer un nouveau rôle](https://docs.pads4.com/ctrl-centre/administration/user-management/Roles#customizing-roles)
+* Attribuez votre rôle nouvellement créé à l'utilisateur qui nécessite des restrictions de viewer.
+* Supprimez les rôles de viewer par défaut s'ils sont attribués.
+* Accédez maintenant à l'aperçu des Viewers et faites un clic droit sur un groupe de viewers / viewer que vous souhaitez que l'utilisateur puisse voir.
+* Cliquez sur **Accès**
+* Ajoutez maintenant votre rôle nouvellement créé à la liste et accordez-lui au moins la permission **lecture** afin qu'il puisse voir le groupe de viewers / viewer.
+  * Ajoutez d'autres permissions si nécessaire.
+* Désormais, si l'utilisateur auquel le nouveau rôle est attribué se connecte, il ne verra que le groupe de viewers / viewer auquel son rôle est assigné.
+
+<Info>
+  Lorsque vous avez plusieurs rôles attribués avec des permissions différentes, rappelez-vous que le rôle le plus restrictif prévaut toujours sur tout autre rôle que vous pourriez avoir attribué.
+</Info>

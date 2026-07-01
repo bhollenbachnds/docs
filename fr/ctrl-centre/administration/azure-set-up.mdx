@@ -1,0 +1,88 @@
+---
+- title: Configuration Azure
+- description: Enregistrez une application dans Azure Active Directory afin que
+    PADS4 CTRL Center puisse s'intégrer à Microsoft Teams.
+---
+
+Pour connecter **Microsoft Teams** à PADS4 CTRL Center, enregistrez une nouvelle application dans **Azure Active Directory (AAD)**. Les étapes ci-dessous vous guident à travers l'enregistrement, la revendication optionnelle, la portée de l'API et le secret client dont l'intégration a besoin.
+
+## Avant de commencer
+
+Assurez-vous d'avoir :
+
+* Un **Azure AD tenant** et l'autorisation de créer des enregistrements d'applications.
+* Le nom DNS ou l'adresse IP de votre **PADS4 CTRL Center** (et son port, s'il n'utilise pas les ports HTTP/HTTPS par défaut).
+* Accès à la zone d'administration de PADS4 CTRL Center, où vous saisirez les valeurs collectées à la fin de ce guide.
+
+## Étape 1 : Créer l'enregistrement de l'application
+
+1. Connectez-vous au [Microsoft Azure Portal](https://portal.azure.com).
+2. Accédez à **Azure Active Directory** > **App Registrations** et sélectionnez **New Registration**.
+3. Configurez l'enregistrement :
+   * **Name** — tout nom de référence pour l'intégration.
+   * **Supported account types** — sélectionnez **Single-tenant** ou **Multi-tenant** selon vos besoins. Les comptes Microsoft personnels ne sont **pas** pris en charge.
+   * **Redirect URI**:
+     * Platform: **Single Page Application (SPA)**.
+     * URI:
+       ```text
+       https://<host>:<port>/credentials/oauth2/authorize/callback
+       ```
+       Remplacez `<host>` par le nom DNS ou l'adresse IP de PADS4 CTRL Center. Incluez `<port>` uniquement si CTRL Center n'utilise pas les ports HTTP/HTTPS par défaut.
+4. Sélectionnez **Register**.
+
+## Étape 2 : Ajouter la revendication optionnelle Login hint
+
+Cette revendication permet la ré-authentification dans PADS4 CTRL Center afin que les jetons d'accès puissent être renouvelés manuellement.
+
+1. Ouvrez votre **App Registration**.
+2. Dans le menu de gauche, sélectionnez **Token Configuration**.
+3. Sélectionnez **Add Optional Claim**.
+4. Choisissez **Token type: ID**.
+5. Activez **login\_hint**.
+6. Sélectionnez **Add**.
+
+## Étape 3 : Exposer une portée d'API
+
+La portée permet à l'intégration PADS4 Teams de rejoindre des réunions Teams au nom des utilisateurs.
+
+1. Dans l'**App Registration**, sélectionnez **Expose an API**.
+2. Définissez un **Application ID URI**:
+   ```text
+   api://your-custom-uri
+   ```
+   L'URI doit commencer par `api://` et ne peut pas contenir d'espaces ni de caractères spéciaux.
+3. Sélectionnez **Save and continue**.
+4. Sélectionnez **Add a scope** et définissez :
+   * **Scope name** — un nom unique, sans espaces ni caractères spéciaux.
+   * **Who can consent?** — **Admins and users**.
+   * **Admin consent display name** — tout nom de référence.
+   * **User consent display name** — tout nom de référence.
+   * **State** — **Enabled**.
+5. Sélectionnez **Add scope**.
+
+<Note>
+  L'URI de portée complète est l'**Application ID URI + scope name**. Vous le saisirez dans PADS4 CTRL Center.
+</Note>
+
+## Étape 4 : Créer un secret client
+
+Le secret client permet à l'intégration PADS4 Teams de rejoindre des réunions Teams sans que les utilisateurs aient à se connecter à chaque fois.
+
+1. Dans l'**App Registration**, sélectionnez **Certificates & secrets**.
+2. Sélectionnez **New client secret**.
+3. Saisissez une description et choisissez une durée d'expiration.
+4. Sélectionnez **Add**.
+5. **Copiez immédiatement la valeur du secret client** — elle n'est plus affichée après avoir quitté la page.
+
+<Warning>
+  Créez et configurez un nouveau secret client avant l'expiration du secret actuel, sinon l'intégration Microsoft Teams cessera de fonctionner.
+</Warning>
+
+## Étape 5 : Collecter les valeurs pour PADS4 CTRL Center
+
+Rassemblez les éléments suivants depuis votre enregistrement d'application. Vous les saisirez dans PADS4 CTRL Center pour finaliser l'intégration.
+
+* **Application (Client) ID** — depuis **App Registration** > **Overview**.
+* **Directory (Tenant) ID** — depuis **App Registration** > **Overview**.
+* **Client secret** — la valeur copiée à l'étape 4.
+* **Scope name** — depuis **Expose an API**.

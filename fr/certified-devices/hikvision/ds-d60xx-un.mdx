@@ -1,0 +1,49 @@
+---
+- title: DS-D60xxUN
+---
+
+Ce guide fournit des instructions étape par étape pour installer et configurer le PADS4 Web Launcher sur les écrans Android Hikvision DS-D60xxUN. Il couvre la configuration initiale, l'installation de l'APK, la configuration du démarrage automatique et la configuration du viewer.
+
+### Appareils compatibles :
+
+* **DS-D60xxUN-DL**
+* **DS-D60xxUN-DP**
+
+### Configuration minimale requise
+
+Version PADS4 requise : **2024.1**
+
+Firmware de l'appareil : **V3.0.2003 build 20250107**
+
+## Prérequis
+
+Téléchargez le dernier PADS4WebLauncher.apk depuis votre serveur PADS4 (par ex., https\://\[your-server]/\[domain]/apps) ou depuis [ici](https://github.com/PADS4/PADS4-Viewer-Android/releases/tag/v1.3), et copiez-le sur une clé USB.
+
+Assurez-vous que le serveur PADS4 est configuré et accessible.
+
+### Installation de PADS4 Viewer
+
+1. Allumez l'écran et accédez au menu des applications installées.
+2. Insérez la clé USB dans l'écran.
+3. Sélectionnez **FileBrowser**.
+4. Naviguez jusqu'au lecteur USB et sélectionnez **PADS4WebLauncher.apk**.
+5. Cliquez sur **Continuer** sur l'invite d'avertissement.
+6. Cliquez sur **Installer** et attendez la fin de l'installation.
+7. Sélectionnez **Terminé**, puis fermez FileBrowser
+
+### Activation du démarrage automatique
+
+1. Accédez à **Paramètres** sur l'écran.
+2. Accédez à **Gestion des applications**.
+3. Sélectionnez Exécuter au démarrage.
+4. **Activez Exécuter** au démarrage.
+5. Sélectionnez **PADS4 Web Launcher** dans la liste.
+6. Redémarrez l'écran pour appliquer les modifications.
+
+## Configuration de la connexion
+
+1. Lancez le PADS4 Web Launcher.
+2. Saisissez l' **URL du serveur** au format `<protocol>://<host>:<port>/<hostpath>/`
+3. Renseignez le **ViewerName** selon les besoins.
+4. Cliquez sur **Démarrer** pour vous connecter.\
+   Le viewer PADS4 est maintenant connecté et prêt à l'emploi.

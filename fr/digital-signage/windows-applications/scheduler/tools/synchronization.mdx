@@ -1,57 +1,57 @@
-Lorsqu'elle est activée dans les **PADS4 Server settings**, la synchronisation du contenu garantit que la **Content Library** locale sur votre PADS4 Scheduler reste synchronisée avec le serveur central. Cela s'applique à tous les types de médias, y compris les présentations PADS4, les fichiers vidéo, les images et autres contenus pris en charge.
+Lorsqu'elle est activée dans les **paramètres du serveur PADS4**, la synchronisation du contenu garantit que la **Bibliothèque de contenu** locale sur votre PADS4 Scheduler reste synchronisée avec le serveur central. Cela s'applique à tous les types de médias, y compris les présentations PADS4, les fichiers vidéo, les images et tout autre contenu pris en charge.
 
-PADS4 prend en charge la **two-way synchronization** : toutes les modifications effectuées localement ou sur le serveur — comme l'ajout, la modification ou la suppression de contenu — sont automatiquement ou manuellement synchronisées entre les systèmes.
+PADS4 prend en charge la **synchronisation bidirectionnelle** : toute modification effectuée localement ou sur le serveur — comme l'ajout, la modification ou la suppression de contenu — est automatiquement ou manuellement synchronisée entre les systèmes.
 
 ***
 
-## Configuration de la Synchronisation du Contenu
+## Configuration de la synchronisation du contenu
 
 Pour configurer la synchronisation :
 
-1. Ouvrez l'onglet **Tools** dans la barre de ruban.
-2. Dans la section **Synchronization**, cliquez sur **Options**.
+1. Ouvrez l'onglet **Outils** dans la barre de ruban.
+2. Dans la section **Synchronisation**, cliquez sur **Options**.
 
-La fenêtre **Synchronization Settings** s'ouvrira.
+La fenêtre **Paramètres de synchronisation** s'ouvrira.
 
-### Options de Configuration
+### Options de configuration
 
-* **Content Library Synchronization Activation**\
+* **Activation de la synchronisation de la bibliothèque de contenu**\
   Choisissez l'un des modes de synchronisation suivants :
-  * **Automatically** – La synchronisation démarre lorsqu'un changement de contenu est détecté.
-  * **Manually** – Nécessite une synchronisation initiée par l'utilisateur.
-  * **Never** – Désactive complètement la synchronisation.
+  * **Automatiquement** – La synchronisation démarre lorsqu'une modification du contenu est détectée.
+  * **Manuellement** – Nécessite une synchronisation initiée par l'utilisateur.
+  * **Jamais** – Désactive entièrement la synchronisation.
 
-* **PADS4 Content Library Storage Folder**\
+* **Dossier de stockage de la bibliothèque de contenu PADS4**\
   Définit le dossier local où le contenu synchronisé est stocké.
-  * **Automatic** est recommandé si vous n'utilisez pas plusieurs serveurs ou domaines.
+  * **Automatique** est recommandé si vous n'utilisez pas plusieurs serveurs ou domaines.
 
 Cliquez sur **OK** pour appliquer les paramètres.
 
 > **Note:**\
-> Si **PADS4 Server** et **PADS4 Scheduler** sont installés sur le même ordinateur, assurez-vous de sélectionner **This Computer** dans les paramètres de connexion. Cela désactive automatiquement la synchronisation puisque les deux composants partagent le même contenu local.
+> Si **PADS4 Server** et **PADS4 Scheduler** sont installés sur le même ordinateur, veillez à sélectionner **Cet ordinateur** dans les paramètres de connexion. Cela désactive automatiquement la synchronisation car les deux composants partagent le même contenu local.
 
-> Lorsque plusieurs applications PADS4 (par exemple, Scheduler, Designer) s'exécutent sur le même PC et se connectent au même serveur, elles partagent le même processus de synchronisation.
+> Lorsque plusieurs applications PADS4 (par ex., Scheduler, Designer) s'exécutent sur le même PC et se connectent au même serveur, elles partagent le même processus de synchronisation.
 
 ***
 
-## Démarrage de la Synchronisation du Contenu
+## Démarrage de la synchronisation du contenu
 
-Si la synchronisation **Automatic** est activée, le système lancera la synchronisation lorsqu'il détectera des modifications dans la bibliothèque de contenu.
+Si la synchronisation **Automatique** est activée, le système lancera la synchronisation lorsqu'il détectera des modifications dans la bibliothèque de contenu.
 
-Si **Manuel** la synchronisation est activée :
+Si la synchronisation **Manuelle** est activée :
 
-1. Allez à l'onglet **Tools**.
-2. Cliquez sur **Synchronize Now** dans la section **Synchronization**.
+1. Accédez à l'onglet **Outils**.
+2. Cliquez sur **Synchroniser maintenant** dans la section **Synchronisation**.
 
-La fenêtre **Synchronization Progress** s'ouvrira et affichera la progression de la session en cours.
+La fenêtre **Progression de la synchronisation** s'ouvrira et affichera la progression de la session en cours.
 
 Une fois la synchronisation terminée, le journal affichera :
 
-> *"The synchronization session has finished."*
+> *"La session de synchronisation est terminée."*
 
-Cliquez sur **Close** pour fermer la fenêtre.
+Cliquez sur **Fermer** pour quitter la fenêtre.
 
-> Si vous utilisez la synchronisation automatique, cliquer sur **Synchronize Now** démarrera manuellement le processus ou affichera sa progression actuelle.
+> Si vous utilisez la synchronisation automatique, cliquer sur **Synchroniser maintenant** démarrera manuellement le processus ou affichera sa progression actuelle.
 
 ***
 
@@ -59,10 +59,10 @@ Cliquez sur **Close** pour fermer la fenêtre.
 
 Pour arrêter une session de synchronisation en cours :
 
-1. Si la fenêtre **Synchronization Progress** est ouverte, vous pouvez simplement cliquer sur **Close**.
-2. Alternativement, cliquez sur **Cancel** dans la section **Tools > Synchronization**.
+1. Si la **Synchronization Progress** fenêtre est ouverte, vous pouvez simplement cliquer sur **Close**.
+2. Sinon, cliquez sur **Cancel** dans la section **Tools > Synchronization**.
 
-> Si le bouton **Cancel** est désactivé, aucun processus de synchronisation n'est actuellement en cours.
+> Si le **Cancel** bouton est désactivé, aucun processus de synchronisation n'est en cours d'exécution.
 
 ***
 
@@ -75,11 +75,11 @@ Pour vérifier l'état de synchronisation en temps réel ou consulter les journa
 
 ### Détail de la fenêtre
 
-* **État de la synchronisation**
+* **Synchronization Status**
   * Barre de progression supérieure : affiche la progression globale de la synchronisation.
-  * Barre de progression inférieure : affiche la progression de l'élément actuel.
-  * Une fois terminé, une seule barre de progression est visible à 100%.
+  * Barre de progression inférieure : affiche la progression de l'élément en cours.
+  * Une fois terminé, une seule barre de progression est visible à 100 %.
 
-* **Progression du téléchargement / Journal**
-  * Affiche les journaux de la session actuelle ou la plus récente.
-  * Cliquez sur **Refresh** pour mettre à jour l'affichage du journal avec les dernières informations.
+* **Download Progress / Log**
+  * Affiche les journaux de la session en cours ou de la session la plus récente.
+  * Cliquez sur **Refresh** pour mettre à jour la vue du journal avec les dernières informations.

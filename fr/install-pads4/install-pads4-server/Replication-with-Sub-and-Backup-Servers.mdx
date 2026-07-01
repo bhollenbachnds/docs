@@ -1,0 +1,36 @@
+---
+- title: Replication-with-Sub-and-Backup-Servers
+---
+
+# Modifications de la synchronisation avec PADS4 version 2021.3
+
+Avec l'introduction de **PADS4 version 2021.3**, le **mécanisme de synchronisation** entre les serveurs PADS4 a été mis à jour. Ce changement peut avoir un impact sur les installations existantes où des **serveurs PADS4 secondaires et/ou de sauvegarde** sont utilisés.
+
+## Nouveau mécanisme de réplication dans PADS4 version 2021.3
+
+Dans les versions précédentes de PADS4, la réplication suivait un **modèle de connexion unidirectionnel**, où le **serveur secondaire/de sauvegarde** initiait une connexion vers le **serveur principal** pour la synchronisation.
+
+À partir de **PADS4 version 2021.3**, le processus de réplication a été amélioré. Le **serveur principal** et les **serveurs secondaires/de sauvegarde** peuvent désormais tous deux **initier** la connexion, permettant un processus de synchronisation plus **flexible et résilient**.
+
+Cette mise à jour introduit une **exigence réseau** clé :
+
+* Un **port hôte** doit être **ouvert** dans le pare-feu pour la communication entre les serveurs.
+* Les **serveurs principaux** et les **serveurs secondaires/de sauvegarde** doivent être en mesure d'établir une **connexion bidirectionnelle** pour que la réplication fonctionne correctement.
+
+## Exigences de configuration du pare-feu
+
+À partir de **PADS4 version 2021.3**, la réplication entre les serveurs **nécessite** that:
+
+* Le **Main Server** doit être en mesure d'initier une connexion avec le **Sub/Backup Server**.
+* Le **Sub/Backup Server** doit être en mesure d'initier une connexion avec le **Main Server**.
+* Les **ports hôtes** appropriés doivent être **ouverts dans le pare-feu** pour autoriser le trafic dans les deux sens.
+
+Cela diffère des versions précédentes, où seul le **Sub/Backup Server** était responsable de l'initiation de la connexion au **Main Server**.
+
+## **Note importante**
+
+<Note>
+  **Une connexion réseau full-duplex est requise entre le Main Server et les Sub/Backup Servers.** Les deux serveurs doivent être en mesure d'établir une connexion directe l'un avec l'autre pour une réplication et une synchronisation correctes.
+</Note>
+
+Cette nouvelle méthode de réplication garantit un processus de synchronisation **plus robuste et plus efficace**, réduisant les perturbations potentielles dans les opérations d'affichage dynamique.

@@ -1,50 +1,50 @@
-À la **deuxième étape** du **Data Provider Wizard**, vous définissez un **nom unique** pour votre fournisseur de données et configurez les paramètres pour **la récupération de données en temps réel**.
+À la **deuxième étape** de l'**Assistant Fournisseur de données**, vous définissez un **nom unique** pour votre fournisseur de données et configurez les paramètres pour la **récupération de données en temps réel**.
 
 ***
 
 ## **Étapes pour configurer les paramètres généraux du fournisseur**
 
-1. **Démarrer le Data Provider Wizard**
-   * Suivez les étapes dans **Adding a Data Provider** ou **Editing a Data Provider**
+1. **Démarrer l'Assistant Fournisseur de données**
+   * Suivez les étapes dans **Ajout d'un fournisseur de données** ou **Modification d'un fournisseur de données**
 2. **Saisir un nom unique pour le fournisseur**
-   * Attribuez un **Provider Name** (doit être unique dans votre présentation)
-   * Facultativement, saisissez une **Description**
-3. **Décider d'utiliser ou non le PADS4 Data Server**
+   * Attribuer un **Nom du fournisseur** (doit être unique dans votre présentation)
+   * Facultativement, saisir une **Description**
+3. **Décider d'utiliser ou non le serveur de données PADS4**
    * **Activer ou désactiver** l'option :\
-     **"Make use of the Data Server for retrieval of Data"**
+     **"Utiliser le serveur de données pour la récupération des données"**
    * Si **activé**, les données en temps réel sont récupérées de manière centralisée via le **PADS4 Data Server**
    * Si **désactivé**, chaque **PADS4 Viewer** récupère les données **individuellement**
-4. **Activer la mise en cache (Facultatif)**
-   * **Use Design Cache** : Stocke les données de la source pour **l'aperçu en phase de conception**
-   * **Generate Sample Values** : Crée des **valeurs d'espace réservé** si la source de données n'est pas disponible
+4. **Activer la mise en cache (facultatif)**
+   * **Utiliser le cache de conception** : Stocke les données de la source pour la **prévisualisation en mode conception**
+   * **Générer des valeurs d'exemple** : Crée des **valeurs de remplacement** si la source de données est indisponible
 5. **Passer à l'étape suivante**
 
 ***
 
 ## **Utilisation du PADS4 Data Server**
 
-Le **PADS4 Data Server** récupère et distribue **des données en temps réel** à tous les Viewers connectés.
+Le **PADS4 Data Server** récupère et distribue les **données en temps réel** à tous les Viewers connectés.
 
 ### **Comparaison des méthodes de récupération de données**
 
-| **Fonctionnalité**           | **Utilisation du PADS4 Data Server**                   | **Récupération individuelle des données**                          |
-| ---------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------ |
-| **Récupération des données** | Une seule requête pour tous les Viewers                | Chaque Viewer récupère les données séparément                      |
-| **Performance**              | Optimisée (réduit les requêtes de base de données)     | Plus de charge sur la source de données                            |
-| **Cas d'utilisation**        | Réseaux à grande échelle, sources de données lentes    | Requêtes spécifiques au Viewer (par ex., filtrage par Viewer Name) |
-| **Support de basculement**   | Bascule vers un serveur PADS4 de secours si nécessaire | Pas de redondance intégrée                                         |
+| **Fonctionnalité**                 | **Utilisation du PADS4 Data Server**                  | **Récupération individuelle des données**                         |
+| ---------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------- |
+| **Récupération des données**       | Requête unique pour tous les Viewers                  | Chaque Viewer récupère les données séparément                     |
+| **Performance**                    | Optimisée (réduit les requêtes de base de données)    | Charge plus importante sur la source de données                   |
+| **Cas d'utilisation**              | Réseaux à grande échelle, sources de données lentes   | Requêtes spécifiques au Viewer (ex. : filtrage par nom de Viewer) |
+| **Prise en charge du basculement** | Bascule vers un PADS4 Server de secours si nécessaire | Aucune redondance intégrée                                        |
 
 ### **Quand activer le PADS4 Data Server**
 
 ✔ **Recommandé si :**
 
-* **Multiple Viewers** ont besoin des **mêmes données** en même temps
-* Votre **source de données est lente ou externe** (par ex., APIs, bases de données distantes)
-* Vous souhaitez **réduire le trafic réseau et la charge de la base de données**
+* **Plusieurs Viewers** ont besoin des **mêmes données** en même temps
+* Votre **source de données est lente ou externe** (ex. : API, bases de données distantes)
+* Vous souhaitez **réduire le trafic réseau et la charge sur la base de données**
 
 ✘ **Non recommandé si :**
 
-* Chaque **Viewer nécessite des données différentes** (par ex., filtrées par emplacement)
+* Chaque **Viewer nécessite des données différentes** (ex. : filtré par emplacement)
 * La **base de données optimise déjà les requêtes** pour plusieurs connexions
 
 ***
@@ -53,26 +53,26 @@ Le **PADS4 Data Server** récupère et distribue **des données en temps réel**
 
 La mise en cache peut **améliorer les performances** et **permettre la conception hors ligne** lorsque les données en direct ne sont pas disponibles.
 
-| **Option de mise en cache** | **Fonction**                                                                 |
-| --------------------------- | ---------------------------------------------------------------------------- |
-| **Use Design Cache**        | Enregistre **jusqu'à 999 lignes** de données pour une utilisation hors ligne |
-| **Generate Sample Values**  | Remplace les données manquantes par du **texte d'espace réservé**            |
-| **Idéal pour**              | Concevoir des présentations **sans accès aux données en direct**             |
+| **Option de mise en cache**         | **Fonction**                                                                 |
+| ----------------------------------- | ---------------------------------------------------------------------------- |
+| **Utiliser le cache de conception** | Enregistre **jusqu'à 999 lignes** de données pour une utilisation hors ligne |
+| **Générer des valeurs d'exemple**   | Remplace les données manquantes par un **texte de remplacement**             |
+| **Idéal pour**                      | Concevoir des présentations **sans accès aux données en direct**             |
 
 ### **Exemple de cas d'utilisation**
 
-Un **concepteur** doit créer une **mise en page basée sur des données** mais n'a pas **d'accès à la base de données**. En utilisant des **données mises en cache**, il peut toujours **concevoir et tester** la mise en page.
+Un **concepteur** doit créer une **mise en page pilotée par les données** mais n'a pas **accès à la base de données**. En utilisant des **données en cache**, il peut quand même **concevoir et tester** la mise en page.
 
 ***
 
-## **Considérations de basculement et de sauvegarde**
+## **Considérations relatives au basculement et à la sauvegarde**
 
-* Si le **PADS4 Data Server** tombe en panne, un **Backup PADS4 Server** (si configuré) prend le relais.
-* Si le **Data Server est désactivé**, assurez-vous que **chaque Viewer** peut **accéder indépendamment** à la source de données.
+* Si le **PADS4 Data Server** tombe en panne, un **PADS4 Server de sauvegarde** (si configuré) prend le relais.
+* Si le **serveur de données est désactivé**, assurez-vous que **chaque Viewer** peut **accéder de manière indépendante** à la source de données.
 
 ***
 
 ## **Étapes finales**
 
-* **Cliquez sur Next** pour passer aux **Connection Settings**
-* Complétez le **Data Provider Wizard**
+* **Cliquer sur Suivant** pour passer aux **Paramètres de connexion**
+* Terminer l'**Assistant Fournisseur de données**

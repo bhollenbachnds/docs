@@ -1,0 +1,41 @@
+---
+- title: Diagnostics
+---
+
+La section Diagnostics fournit des outils pour surveiller l'état de votre système PADS4. La page Vue d'ensemble offre un résumé visuel rapide de l'état de votre environnement PADS4.
+
+### **Vue d'ensemble des diagnostics**
+
+Utilisez cette page pour vérifier en un coup d'œil si votre configuration PADS4 est opérationnelle. Dans une configuration à serveur unique, l'état du serveur apparaît avec un point vert à côté du nom du serveur s'il est en ligne.
+
+<Frame>
+  <img src="/images/RootAccess/SingleServerOverview.png" alt="Single Server Overview" title="Vue d'ensemble du serveur unique" className="mx-auto" style={{ width:"56%" }} />
+</Frame>
+
+### **Configurations multi-serveurs**
+
+Pour les environnements distribués, plusieurs serveurs et leur état de synchronisation s'affichent de manière similaire, aidant à identifier les problèmes rapidement. Les indicateurs verts confirment la connectivité ; d'autres couleurs signalent des problèmes nécessitant une attention.
+
+La page de configuration multi-serveurs inclut des graphiques qui visualisent les métriques de synchronisation. Ces graphiques affichent le nombre de modifications en attente de traitement entre les serveurs.
+
+<Frame>
+  ![Multiple Server Overview](/images/RootAccess/MultipleServerOverview.png)
+</Frame>
+
+Les graphiques suivent la quantité de modifications (par exemple, les mises à jour de contenu ou les tâches) qui doivent être synchronisées et traitées entre le serveur principal et les sous-serveurs. Des volumes élevés peuvent indiquer des retards ; surveillez pour assurer une distribution rapide et la santé du système.
+
+<Frame>
+  ![Multiple Server Overview Busy](/images/RootAccess/MultipleServerOverviewBusy.png)
+</Frame>
+
+## Services
+
+Sur le côté gauche de la page, tous les services PADS4 sont répertoriés avec des indicateurs d'état. Une coche verte indique que le service est en bonne santé ; un point d'exclamation rouge signale un problème.
+
+<Frame>
+  <img src="/images/RootAccess/ServicesOverview.png" alt="Services Overview" title="Vue d'ensemble des services" className="mr-auto" style={{ width:"58%" }} />
+</Frame>
+
+### **État du service**
+
+Cliquez sur n'importe quel service pour afficher son fichier journal pour des diagnostics détaillés. Cela aide à résoudre les erreurs telles que les échecs de démarrage ou les problèmes de connectivité dans les services Foundation ou les microservices. Les journaux révèlent les horodatages, les erreurs et les événements pour une résolution rapide.

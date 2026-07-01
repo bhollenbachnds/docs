@@ -1,0 +1,54 @@
+---
+- title: Configuration Azure
+- description: Enregistrez une application Azure Active Directory et créez le
+    secret client utilisé par l'intégration PADS4 Power BI.
+---
+
+Pour connecter **Power BI** à PADS4, vous devez d'abord enregistrer une nouvelle application dans **Microsoft Azure Active Directory**. L'enregistrement génère l'ID client, l'ID de locataire et le secret client dont PADS4 CTRL Center a besoin.
+
+## Avant de commencer
+
+Assurez-vous d'avoir :
+
+* Un **locataire Azure AD** et l'autorisation de créer des enregistrements d'applications.
+* Consulté l'[Introduction](/fr/ctrl-centre/administration/Introduction) pour les limitations qui s'appliquent à l'approche par principal de service.
+
+## Étape 1 : Créer l'enregistrement de l'application
+
+1. Connectez-vous au [Microsoft Azure Portal](https://portal.azure.com).
+2. Accédez à **Azure Active Directory** > **Inscriptions d'applications** et sélectionnez **Nouvelle inscription**.
+3. Configurez l'inscription :
+   * **Nom** — tout nom de référence pour l'intégration.
+   * **Types de comptes pris en charge** — sélectionnez **Locataire unique** ou **Multi-locataire** selon vos besoins. **N'activez pas** les comptes Microsoft personnels.
+   * **URI de redirection** — laissez vide. L'intégration Power BI n'en nécessite pas.
+4. Sélectionnez **Inscrire**.
+
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerbi-register.png" alt="New app registration form in the Azure portal" />
+
+## Étape 2 : Créer un secret client
+
+Le secret client permet à PADS4 de s'authentifier auprès de Power BI en tant que principal de service.
+
+1. Dans l'enregistrement de l'application, sélectionnez **Certificats et secrets** dans le menu de gauche.
+2. Ouvrez l'onglet **Secrets client** et sélectionnez **Nouveau secret client**.
+3. Entrez une description et choisissez une durée d'expiration.
+4. Sélectionnez **Ajouter**.
+5. **Copiez immédiatement la valeur du secret client** — elle ne sera plus visible après avoir quitté la page.
+
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/powerbiClientSecret.png" alt="Client secret listed in Certificates and secrets" />
+
+<Warning>
+  Créez et configurez un nouveau secret client avant l'expiration du secret actuel, sinon l'intégration Power BI cessera de fonctionner.
+</Warning>
+
+## Étape 3 : Collecter les valeurs pour PADS4 CTRL Center
+
+Rassemblez les éléments suivants depuis votre enregistrement d'application. Vous les saisirez dans PADS4 CTRL Center pour finaliser l'intégration.
+
+| Valeur                           | Où la trouver                                      |
+| :------------------------------- | :------------------------------------------------- |
+| **ID d'application (client)**    | Inscription d'application > Vue d'ensemble         |
+| **ID de répertoire (locataire)** | Inscription d'application > Vue d'ensemble         |
+| **Secret client**                | Inscription d'application > Certificats et secrets |
+
+<img height="200" src="/images/ctrl-centre/credentials/powerbi/PowerBIClientID.png" alt="Application and Directory IDs in the app registration Overview" />
