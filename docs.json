@@ -15,8 +15,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Contact",
-        "href": "mailto:support@pads4.com"
+        "href": "mailto:support@pads4.com",
+        "label": "Contact"
       }
     ],
     "primary": {
@@ -469,11 +469,11 @@
                       },
                       {
                         "group": "Canva",
+                        "hidden": true,
                         "pages": [
                           "canva-set-up-1",
                           "pads-4-canva-integration"
-                        ],
-                        "hidden": true
+                        ]
                       },
                       {
                         "group": "Custom OAuth2",
@@ -1592,103 +1592,128 @@
               },
               {
                 "group": "Authentication",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Authentication Integration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication.Integration//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication.Integration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "CMS",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Cms//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Cms//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Configuration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Configuration//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Configuration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Content",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Content//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Content//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Credentials",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Data",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Device",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Email",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.email//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/nds.services.email//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Engine",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Engine//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Engine//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "FIDS Connector",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.FIDS.Connector//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.FIDS.Connector//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Globalization",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Globalization//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Globalization//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "License",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.License//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.License//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Messaging",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Messaging//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Messaging//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Migration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Migration//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Migration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Orchestration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Orchestration//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Orchestration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Package",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Process",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Replication",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Replication//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Replication//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Schedule",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "User SCIM",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.User.Scim//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.User.Scim//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "User Profile",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.UserProfile//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.UserProfile//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Video Conversion",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Video.Conversion//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Video.Conversion//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Viewer",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Viewer//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Viewer//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Web to Image",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json",
+                "pages": []
               }
             ]
           },
@@ -1722,29 +1747,31 @@
         "dropdowns": [
           {
             "dropdown": "Guide d'installation",
+            "icon": "rocket",
+            "color": {
+              "light": "#00ADBA",
+              "dark": "#00ADBA"
+            },
             "groups": [
               {
                 "group": "Mise en route",
                 "pages": [
                   "fr/introduction",
-                  "fr/exigences-systeme",
-                  "fr/exigences-reseau",
-                  "fr/prerequis",
-                  "fr/vue-d-ensemble-des-modules",
-                  "fr/appareils-de-visionnage-certifies"
+                  "fr/system-requirements",
+                  "fr/network-requirements",
+                  "fr/prerequisites"
                 ]
               },
               {
                 "group": "Informations de mise à niveau",
                 "pages": [
-                  "fr/upgrade-info/mise-a-niveau-vers-PADS4-2025-1"
+                  "fr/upgrade-info/upgrading-to-pads-4-2025-2",
+                  "fr/upgrade-info/Upgrading-to-PADS4-2025.1"
                 ]
               },
               {
                 "group": "Configuration du système",
                 "pages": [
-                  "fr/system-configuration/PADS4-Configuration-Selection",
-                  "fr/system-configuration/Active-Directory-Configuration",
                   "fr/system-configuration/PADS4-Hardware-Configuration-Guide",
                   "fr/system-configuration/Microsoft-Windows-Group-Polocies"
                 ]
@@ -1756,46 +1783,65 @@
                   {
                     "group": "Installer les serveurs PADS4",
                     "pages": [
-                      "fr/install-pads4/install-pads4-server/installer-le-serveur-principal-PADS4",
-                      "fr/install-pads4/install-pads4-server/lecteur-virtuel-et-serveurs-PADS4",
-                      "fr/install-pads4/install-pads4-server/replication-avec-serveurs-secondaires-et-sauvegarde",
-                      "fr/install-pads4/install-pads4-server/installer-le-serveur-secondaire-PADS4",
-                      "fr/install-pads4/install-pads4-server/installer-le-serveur-de-sauvegarde-PADS4",
-                      "fr/install-pads4/install-pads4-server/entrer-la-cle-de-produit-PADS4",
-                      "fr/install-pads4/install-pads4-server/PADS4-Configuration",
-                      "fr/install-pads4/install-pads4-server/selection-du-type-de-base-de-donnees-capteurs"
-                    ]
-                  },
-                  {
-                    "group": "Installer les visionneuses PADS4",
-                    "pages": [
-                      "fr/install-pads4/install-pads4-viewer/installer-le-visionneur-windows-PADS4",
-                      "fr/install-pads4/install-pads4-viewer/installer-le-visionneur-windows-HTML5-PADS4",
-                      "fr/install-pads4/install-pads4-viewer/installer-le-visionneur-android-generique-PADS4"
+                      "fr/install-pads4/install-pads4-server/Install-the-PADS4-server",
+                      "fr/install-pads4/install-pads4-server/How-to-install-PADS4-Sub-Server",
+                      "fr/install-pads4/install-pads4-server/How-to-install-PADS4-Backup-Server",
+                      {
+                        "group": "Configuration de PADS4 Foundation",
+                        "pages": [
+                          "fr/install-pads4/install-pads4-server/PADS4-Configuration"
+                        ]
+                      },
+                      "fr/install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers",
+                      "fr/install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers"
                     ]
                   }
                 ]
               },
               {
-                "group": "Installer PADS4 sur des appareils certifiés",
+                "group": "Installer les viewers PADS4",
+                "icon": "tv",
                 "pages": [
                   {
-                    "group": "Aopen",
+                    "group": "Microsoft Windows",
                     "pages": [
-                      "fr/certified-devices/aopen/AT1032TP"
+                      "fr/certified-devices/windows/Windows-Viewer",
+                      "fr/certified-devices/windows/Windows-HTML5-Viewer"
                     ]
                   },
                   {
-                    "group": "BrightSign",
+                    "group": "Viewer Android générique",
                     "pages": [
-                      "fr/certified-devices/brightsign/BrightSign-Series-5",
-                      "fr/certified-devices/brightsign/BrightSign-Series-4"
+                      "fr/certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
                     ]
                   },
                   {
                     "group": "Google Chrome OS",
                     "pages": [
                       "fr/certified-devices/chromeOS/ChromeOS"
+                    ]
+                  },
+                  {
+                    "group": "Amino",
+                    "pages": [
+                      "fr/certified-devices/Amino/amino-h200"
+                    ]
+                  },
+                  {
+                    "group": "Aopen",
+                    "pages": [
+                      "fr/certified-devices/aopen/untitled-page",
+                      "fr/certified-devices/aopen/e",
+                      "fr/certified-devices/aopen/chrome-box",
+                      "fr/certified-devices/aopen/1032TP-Series"
+                    ]
+                  },
+                  {
+                    "group": "BrightSign",
+                    "pages": [
+                      "fr/certified-devices/brightsign/bright-sign-series-6",
+                      "fr/certified-devices/brightsign/BrightSign-Series-5",
+                      "fr/certified-devices/brightsign/BrightSign-Series-4"
                     ]
                   },
                   {
@@ -1813,24 +1859,30 @@
                   {
                     "group": "Giada",
                     "pages": [
+                      "fr/certified-devices/giada/DN84",
+                      "fr/certified-devices/giada/DN76",
+                      "fr/certified-devices/giada/dn-74-android",
+                      "fr/certified-devices/giada/D73-and-D74",
                       "fr/certified-devices/giada/DM-Series",
                       "fr/certified-devices/giada/D6-Series",
                       "fr/certified-devices/giada/F-Series",
                       "fr/certified-devices/giada/F108D",
-                      "fr/certified-devices/giada/D73-and-D74"
-                    ]
-                  },
-                  {
-                    "group": "Generic Android Viewer",
-                    "pages": [
-                      "fr/certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
+                      "fr/certified-devices/giada/chrome-os-flex"
                     ]
                   },
                   {
                     "group": "HikVision",
                     "pages": [
+                      "fr/certified-devices/hikvision/ds-dt-60-p",
+                      "fr/certified-devices/hikvision/ds-d60xx-un",
                       "fr/certified-devices/hikvision/DS-D60C-B",
                       "fr/certified-devices/hikvision/DS-D6032FN"
+                    ]
+                  },
+                  {
+                    "group": "Hisense",
+                    "pages": [
+                      "fr/certified-devices/Hisense/DM66D"
                     ]
                   },
                   {
@@ -1846,12 +1898,15 @@
                   {
                     "group": "iiyama",
                     "pages": [
-                      "fr/certified-devices/iiyama/54-and-60-Series"
+                      "fr/certified-devices/iiyama/54-and-60-Series",
+                      "fr/certified-devices/iiyama/TW1025LASC",
+                      "fr/certified-devices/iiyama/i-iyama-tw-1023-asc"
                     ]
                   },
                   {
                     "group": "LG",
                     "pages": [
+                      "fr/certified-devices/lg/webOS-8",
                       "fr/certified-devices/lg/webOS-6",
                       "fr/certified-devices/lg/webOS-4.1"
                     ]
@@ -1860,25 +1915,27 @@
                     "group": "Philips",
                     "pages": [
                       "fr/certified-devices/philips/32BDL5150I",
+                      "fr/certified-devices/philips/25BDL4150I-32BDL5150I",
+                      "fr/certified-devices/philips/d-line-5050-d",
                       "fr/certified-devices/philips/4650D",
                       "fr/certified-devices/philips/3650Q",
                       "fr/certified-devices/philips/4550D",
                       "fr/certified-devices/philips/3550Q",
                       "fr/certified-devices/philips/10BDL4551T",
-                      "fr/certified-devices/philips/CRD50",
-                      "fr/certified-devices/philips/25BDL4150I-32BDL5150I"
+                      "fr/certified-devices/philips/CRD50"
                     ]
                   },
                   {
                     "group": "ProDVX",
                     "pages": [
+                      "fr/certified-devices/prodvx/appc_s_series",
                       "fr/certified-devices/prodvx/APPC-R23-series-Android-12",
                       "fr/certified-devices/prodvx/APPC-R23-series-Android-11",
                       "fr/certified-devices/prodvx/APPC-10SLBe-Android-11",
                       "fr/certified-devices/prodvx/APPC-4200-Series-Android-9",
-                      "fr/certified-devices/prodvx/IPPC-Series-Windows",
                       "fr/certified-devices/prodvx/UW-series-Android-8.1",
-                      "fr/certified-devices/prodvx/APPC-series-RK3288-Android-8.1"
+                      "fr/certified-devices/prodvx/APPC-series-RK3288-Android-8.1",
+                      "fr/certified-devices/prodvx/IPPC-Series-Windows"
                     ]
                   },
                   {
@@ -1889,16 +1946,17 @@
                       "fr/certified-devices/qbic/BXP-321",
                       "fr/certified-devices/qbic/TD-0350",
                       "fr/certified-devices/qbic/TD-1050",
-                      "fr/certified-devices/qbic/TD-1060"
+                      "fr/certified-devices/qbic/TD-1060",
+                      "fr/certified-devices/qbic/td-1070"
                     ]
                   },
                   {
                     "group": "Samsung",
                     "pages": [
+                      "fr/certified-devices/samsung/EMDX-076D",
                       "fr/certified-devices/samsung/Tizen-7.0-SSSP10",
                       "fr/certified-devices/samsung/Tizen-6.5-SSSP10",
-                      "fr/certified-devices/samsung/Tizen-5.0-SSSP7",
-                      "fr/certified-devices/samsung/EMDX-076D"
+                      "fr/certified-devices/samsung/Tizen-5.0-SSSP7"
                     ]
                   },
                   {
@@ -1912,90 +1970,289 @@
                     "pages": [
                       "fr/certified-devices/sony/BZxx-series"
                     ]
-                  },
-                  {
-                    "group": "Windows",
-                    "pages": [
-                      "fr/certified-devices/windows/Windows-Viewer",
-                      "fr/certified-devices/windows/Windows-HTML5-Viewer"
-                    ]
                   }
                 ]
               }
             ]
           },
           {
-            "dropdown": "PADS4 Ctrl Center",
-            "groups": [
+            "dropdown": "PADS4 Super User",
+            "pages": [
+              "fr/ctrl-centre/untitled-page",
               {
-                "group": "Mise en route",
+                "group": "Introduction à PADS4 Super User",
                 "pages": [
-                  "fr/ctrl-centre/introduction",
-                  "fr/ctrl-centre/creation-de-compte",
-                  "fr/ctrl-centre/tableau-de-bord",
-                  "fr/ctrl-centre/contenu",
-                  "fr/ctrl-centre/plannings",
-                  "fr/ctrl-centre/visionneurs",
-                  "fr/ctrl-centre/capteurs",
-                  "fr/ctrl-centre/incidents",
-                  "fr/ctrl-centre/clusters",
-                  "fr/ctrl-centre/variables-du-visionneur",
-                  "fr/ctrl-centre/licences",
-                  "fr/ctrl-centre/domaines"
+                  "fr/ctrl-centre/user-interface",
+                  "fr/ctrl-centre/diagnostics",
+                  "fr/ctrl-centre/migration-overview",
+                  "fr/ctrl-centre/domains"
+                ]
+              },
+              "fr/install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
+              "fr/ctrl-centre/account-creation"
+            ]
+          },
+          {
+            "dropdown": "PADS4 Ctrl Center",
+            "pages": [
+              "fr/ctrl-centre/introduction",
+              {
+                "group": "Applications utilisateur",
+                "pages": [
+                  {
+                    "group": "Accueil",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "Tableau de bord",
+                    "pages": [
+                      "fr/ctrl-centre/dashboard"
+                    ]
+                  },
+                  {
+                    "group": "Contenu",
+                    "pages": [
+                      "fr/ctrl-centre/content"
+                    ]
+                  },
+                  {
+                    "group": "Design",
+                    "hidden": true,
+                    "pages": [
+                      "fr/ctrl-centre/designer"
+                    ]
+                  },
+                  {
+                    "group": "CMS 2.0",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "FIDS",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "Planifications",
+                    "pages": [
+                      "fr/ctrl-centre/schedules"
+                    ]
+                  },
+                  {
+                    "group": "IoT",
+                    "pages": [
+                      "fr/ctrl-centre/sensors",
+                      "fr/ctrl-centre/incidents",
+                      "fr/ctrl-centre/sensors/How-to-use-Sensors",
+                      "fr/ctrl-centre/sensors/How-to-create-Incidents",
+                      "fr/ctrl-centre/sensors/workspace/sensors-workspace",
+                      "fr/ctrl-centre/sensors/Sensor-Settings",
+                      {
+                        "group": "Capteurs certifiés",
+                        "pages": [
+                          "fr/ctrl-centre/sensors/certified-sensors/Certified-Sensors",
+                          "fr/ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
+                          "fr/ctrl-centre/sensors/certified-sensors/Mobotix",
+                          "fr/ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
+                          "fr/ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
+                        ]
+                      },
+                      {
+                        "group": "Passerelles",
+                        "pages": [
+                          "fr/ctrl-centre/sensors/gateway/philips-hue",
+                          "fr/ctrl-centre/sensors/gateway/gateway-proxy"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Viewers",
+                    "pages": [
+                      "fr/ctrl-centre/viewers/viewers",
+                      "fr/ctrl-centre/viewers/viewer-permissions",
+                      {
+                        "group": "Cluster",
+                        "pages": [
+                          "fr/ctrl-centre/clusters",
+                          "fr/ctrl-centre/cluster/what-is-a-cluster",
+                          "fr/ctrl-centre/cluster/cluster-example",
+                          "fr/ctrl-centre/cluster/create-a-cluster",
+                          "fr/ctrl-centre/cluster/Cluster-related-Viewer-Variables"
+                        ]
+                      },
+                      {
+                        "group": "Variables de viewer",
+                        "pages": [
+                          "fr/ctrl-centre/viewer-variables/introduction",
+                          "fr/ctrl-centre/viewer-variables",
+                          "fr/ctrl-centre/viewer-variables/System-Viewer-Variables"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Workspace",
+                    "pages": []
+                  }
                 ]
               },
               {
                 "group": "Administration",
                 "pages": [
-                  "fr/ctrl-centre/administration/identifiants",
-                  "fr/ctrl-centre/administration/teams",
-                  "fr/ctrl-centre/administration/Power-BI",
-                  "fr/ctrl-centre/administration/credentials/active-directory",
-                  "fr/ctrl-centre/administration/activer-SSO",
                   {
-                    "group": "Meta",
+                    "group": "Identifiants",
                     "pages": [
-                      "fr/ctrl-centre/administration/meta/creer-meta-app"
+                      "fr/ctrl-centre/administration/credentials",
+                      {
+                        "group": "Microsoft Teams",
+                        "pages": [
+                          "fr/ctrl-centre/administration/teams",
+                          "fr/ctrl-centre/administration/azure-set-up",
+                          "fr/ctrl-centre/administration/azure-communication-services",
+                          "fr/ctrl-centre/administration/licensing",
+                          "fr/ctrl-centre/administration/pads-4-set-up"
+                        ]
+                      },
+                      {
+                        "group": "Microsoft PowerBI",
+                        "pages": [
+                          "fr/ctrl-centre/administration/Introduction",
+                          "fr/ctrl-centre/administration/azure-set-up-1",
+                          "fr/ctrl-centre/administration/power-bi-admin-set-up",
+                          "fr/ctrl-centre/administration/power-bi-set-up",
+                          "fr/ctrl-centre/administration/power-bi-in-ctrl-center",
+                          "fr/ctrl-centre/administration/power-bi-in-presentation"
+                        ]
+                      },
+                      {
+                        "group": "Identité",
+                        "pages": [
+                          {
+                            "group": "Microsoft Entra ID",
+                            "pages": [
+                              "fr/ctrl-centre/administration/microsoft-entra-id",
+                              "fr/ctrl-centre/administration/credentials/SCIM/microsoft-entra"
+                            ]
+                          },
+                          {
+                            "group": "Microsoft Active Directory",
+                            "pages": [
+                              "fr/ctrl-centre/administration/credentials/active-directory"
+                            ]
+                          },
+                          {
+                            "group": "Okta",
+                            "pages": [
+                              "fr/ctrl-centre/administration/credentials/Okta",
+                              "fr/ctrl-centre/administration/credentials/SCIM/okta"
+                            ]
+                          },
+                          {
+                            "group": "Custom SAML 2.0",
+                            "pages": [
+                              "fr/en/pads-4-ctrl-center/administration/identity/custom-saml-2-0",
+                              "fr/ctrl-centre/administration/credentials/SCIM/custom-saml-2.0"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "group": "Meta",
+                        "pages": [
+                          "fr/ctrl-centre/administration/meta/create-meta-app"
+                        ]
+                      },
+                      {
+                        "group": "SMTP-Oauth2",
+                        "pages": [
+                          {
+                            "group": "Google",
+                            "pages": [
+                              "fr/ctrl-centre/administration/smtp-oauth2/google",
+                              "fr/ctrl-centre/administration/smtp-oauth2/set-up-google-pads-4"
+                            ]
+                          },
+                          {
+                            "group": "Microsoft",
+                            "pages": [
+                              "fr/ctrl-centre/administration/smtp-oauth2/Microsoft"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "group": "Canva",
+                        "hidden": true,
+                        "pages": [
+                          "fr/canva-set-up-1",
+                          "fr/pads-4-canva-integration"
+                        ]
+                      },
+                      {
+                        "group": "Custom OAuth2",
+                        "hidden": true,
+                        "pages": [
+                          "fr/ctrl-centre/administration/custom-o-auth2"
+                        ]
+                      }
                     ]
                   },
                   {
-                    "group": "Gestion des utilisateurs",
-                    "pages": [
-                      "fr/ctrl-centre/administration/user-management/Roles"
-                    ]
-                  }
-                ]
-              },
-              {
-                "group": "Cluster",
-                "pages": [
-                  "fr/ctrl-centre/cluster/qu-est-ce-qu-un-cluster",
-                  "fr/ctrl-centre/cluster/exemple-de-cluster",
-                  "fr/ctrl-centre/cluster/creer-un-cluster",
-                  "fr/ctrl-centre/cluster/cluster-lie-aux-variables-du-visionneur"
-                ]
-              },
-              {
-                "group": "Variables de visionneuse",
-                "pages": [
-                  "fr/ctrl-centre/viewer-variables/introduction",
-                  "fr/ctrl-centre/viewer-variables/variables-du-visionneur-systeme"
-                ]
-              },
-              {
-                "group": "Capteurs",
-                "pages": [
-                  "fr/ctrl-centre/sensors/utiliser-des-capteurs",
-                  "fr/ctrl-centre/sensors/creer-des-incidents",
-                  "fr/ctrl-centre/sensors/parametres-des-capteurs",
+                    "group": "Connecteur FIDS",
+                    "hidden": true,
+                    "pages": []
+                  },
                   {
-                    "group": "Capteurs certifiés",
+                    "group": "Licences",
                     "pages": [
-                      "fr/ctrl-centre/sensors/certified-sensors/Certified-Sensors",
-                      "fr/ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
-                      "fr/ctrl-centre/sensors/certified-sensors/Mobotix",
-                      "fr/ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
-                      "fr/ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
+                      "fr/ctrl-centre/licenses"
+                    ]
+                  },
+                  {
+                    "group": "Utilisateurs",
+                    "pages": [
+                      "fr/ctrl-centre/administration/user-management/Roles",
+                      "fr/ctrl-centre/administration/user-management/Permissions",
+                      "fr/ctrl-centre/administration/user-management/cms-workspace",
+                      {
+                        "group": "Identité",
+                        "pages": [
+                          "fr/ctrl-centre/administration/credentials/role-mapping"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Administrateur Workspace",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "Administrateur CMS 1.0",
+                    "hidden": true,
+                    "pages": []
+                  },
+                  {
+                    "group": "Configuration",
+                    "pages": [
+                      {
+                        "group": "SMTP",
+                        "pages": [
+                          "fr/ctrl-centre/administration/config/smtp"
+                        ]
+                      },
+                      {
+                        "group": "Authentification multi-facteurs",
+                        "hidden": true,
+                        "pages": [
+                          "fr/enable-multi-factor-authentication",
+                          "fr/reset-the-multi-factor-authentication",
+                          "fr/log-in-with-mfa",
+                          "fr/log-in-with"
+                        ]
+                      }
                     ]
                   }
                 ]
@@ -2003,7 +2260,7 @@
             ]
           },
           {
-            "dropdown": "Affichage dynamique",
+            "dropdown": "PADS4 Digital Signage",
             "groups": [
               {
                 "group": "Mise en route",
@@ -2013,25 +2270,124 @@
                 ]
               },
               {
-                "group": "PADS4 Web Designer",
+                "group": "Designer (Web)",
                 "pages": [
-                  "fr/modules/digital-signage/web-designer/introduction"
+                  {
+                    "group": "Interface utilisateur",
+                    "pages": [
+                      "fr/user-interface",
+                      {
+                        "group": "Menu",
+                        "pages": [
+                          "fr/menu"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Éléments",
+                    "pages": [
+                      "fr/introductions",
+                      {
+                        "group": "Texte, heure et date",
+                        "pages": [
+                          "fr/text"
+                        ]
+                      },
+                      {
+                        "group": "Forme",
+                        "pages": [
+                          "fr/shape"
+                        ]
+                      },
+                      {
+                        "group": "Média",
+                        "pages": [
+                          "fr/media"
+                        ]
+                      },
+                      {
+                        "group": "Intégration Canva",
+                        "pages": [
+                          "fr/introduction-2",
+                          {
+                            "group": "Configuration",
+                            "pages": [
+                              "fr/canva-set-up",
+                              "fr/pads4-canva-integration"
+                            ]
+                          },
+                          {
+                            "group": "Utilisation de l'intégration Canva",
+                            "pages": [
+                              "fr/the-canva-library"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "group": "Coffres de données",
+                        "pages": [
+                          "fr/modules/digital-signage/data-vault/introduction",
+                          "fr/use-a-data-vault"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Propriétés",
+                    "pages": [
+                      {
+                        "group": "Présentation ",
+                        "pages": []
+                      },
+                      {
+                        "group": "Propriétés des pages",
+                        "pages": []
+                      },
+                      {
+                        "group": "Propriétés de la playlist",
+                        "pages": []
+                      },
+                      {
+                        "group": "Propriétés de l'élément",
+                        "pages": []
+                      },
+                      {
+                        "group": "Propriétés du fournisseur de données",
+                        "pages": [
+                          "fr/use-a-data-vault-1"
+                        ]
+                      },
+                      {
+                        "group": "Propriétés des règles",
+                        "pages": [
+                          "fr/what-is-a-rules",
+                          "fr/creating-a-rules",
+                          {
+                            "group": "Règles avancées",
+                            "pages": [
+                              "fr/Conditions"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 ]
               },
               {
                 "group": "PADS4 CMS",
                 "pages": [
                   "fr/modules/digital-signage/cms/introduction",
-                  "fr/modules/digital-signage/cms/connexion",
-                  "fr/modules/digital-signage/cms/page-d-accueil",
+                  "fr/modules/digital-signage/cms/homepage",
                   "fr/modules/digital-signage/cms/categories",
-                  "fr/modules/digital-signage/cms/creer-un-modele",
-                  "fr/modules/digital-signage/cms/bibliotheque",
-                  "fr/modules/digital-signage/cms/creer-un-nouveau-message",
-                  "fr/modules/digital-signage/cms/publier-un-message",
+                  "fr/en/digital-signage/pads-4-web-designer/templates",
+                  "fr/modules/digital-signage/cms/publish-a-message",
                   "fr/modules/digital-signage/cms/publications",
-                  "fr/modules/digital-signage/cms/ordre-de-diffusion",
-                  "fr/modules/digital-signage/cms/fonctionnalites-supplementaires"
+                  "fr/modules/digital-signage/cms/library",
+                  "fr/modules/digital-signage/cms/ordering",
+                  "fr/modules/digital-signage/cms/more-features"
                 ]
               },
               {
@@ -2056,7 +2412,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les présentations",
+                        "group": "Travailler avec des présentations",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Content-Library",
@@ -2074,7 +2430,7 @@
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Closing-a-presentation",
                           "fr/digital-signage/windows-applications/designer/Working-with-presentations/Auto-save-and-recover",
                           {
-                            "group": "Propriétés de présentation",
+                            "group": "Propriétés de la présentation",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Working-with-presentations/presentation-properties/Introduction",
                               "fr/digital-signage/windows-applications/designer/Working-with-presentations/presentation-properties/General-properties",
@@ -2091,7 +2447,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les pages",
+                        "group": "Travailler avec des pages",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Creating-a-page",
@@ -2102,7 +2458,7 @@
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Clearing-a-page",
                           "fr/digital-signage/windows-applications/designer/Working-with-pages/Removing-a-page",
                           {
-                            "group": "Propriétés de page",
+                            "group": "Propriétés de la page",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Working-with-pages/Page-properties/Introduction",
                               "fr/digital-signage/windows-applications/designer/Working-with-pages/Page-properties/General-properties",
@@ -2127,13 +2483,13 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les éléments de page",
+                        "group": "Travailler avec des éléments de page",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Using-the-grid",
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Adding-a-page-element",
                           {
-                            "group": "Sélection des éléments de page",
+                            "group": "Sélectionner des éléments de page",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Selecting-page-elements/Introduction",
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Selecting-page-elements/Selecting-one-page-element",
@@ -2151,7 +2507,7 @@
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Removing-page-elements",
                           "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Undoing-actions",
                           {
-                            "group": "Actions de formatage",
+                            "group": "Actions de mise en forme",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Formatting-actions/Introduction",
                               "fr/digital-signage/windows-applications/designer/Working-with-page-elements/Formatting-actions/Changing-the-display-order-of-pages",
@@ -2200,7 +2556,7 @@
                             ]
                           },
                           {
-                            "group": "Élément d'application externe",
+                            "group": "Élément application externe",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/External-application-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/External-application-element/Application-window-properties",
@@ -2210,7 +2566,7 @@
                             ]
                           },
                           {
-                            "group": "Élément Flash Player",
+                            "group": "Élément lecteur Flash",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Flash-player-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Flash-player-element/Interactivity-properties",
@@ -2219,14 +2575,14 @@
                             ]
                           },
                           {
-                            "group": "Élément de texte formaté",
+                            "group": "Élément texte formaté",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Formated-text-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Formated-text-element/Content-properties"
                             ]
                           },
                           {
-                            "group": "Élément de bouton interactif",
+                            "group": "Élément bouton interactif",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Interactive-button-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Interactive-button-element/Button-style-properties",
@@ -2237,7 +2593,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de ligne",
+                            "group": "Élément ligne",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Line-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Line-element/Line-properties",
@@ -2245,7 +2601,7 @@
                             ]
                           },
                           {
-                            "group": "Élément multimédia",
+                            "group": "Élément multimédia mixte",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Mixed-media-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Mixed-media-element/Playlist-properties"
@@ -2287,7 +2643,7 @@
                             ]
                           },
                           {
-                            "group": "Élément d'image",
+                            "group": "Élément image",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Picture-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Picture-element/Playlist-properties"
@@ -2301,7 +2657,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de présentation dans la page",
+                            "group": "Élément présentation dans la page",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Presentation-in-page-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Presentation-in-page-element/Background-color-properties",
@@ -2309,7 +2665,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de texte enrichi",
+                            "group": "Élément texte enrichi",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Rich-text-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Rich-text-element/Playlist-properties",
@@ -2318,7 +2674,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de communication RS-232",
+                            "group": "Élément communication RS-232",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/RS-232-communication-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/RS-232-communication-element/Playlist-properties",
@@ -2326,7 +2682,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de texte défilant",
+                            "group": "Élément texte défilant",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Scrolling-text-element/Data-scrolling-properties",
@@ -2337,7 +2693,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de forme",
+                            "group": "Élément forme",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Shape-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Shape-element/Outline-properties",
@@ -2345,7 +2701,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de tableau",
+                            "group": "Élément tableau",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Table-element/Introduction",
                               {
@@ -2364,7 +2720,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de texte",
+                            "group": "Élément texte",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Text-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Text-element/Data-source-text-conversion-properties",
@@ -2397,7 +2753,7 @@
                             ]
                           },
                           {
-                            "group": "Élément de page Web",
+                            "group": "Élément page web",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Web-page-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Web-page-element/Behavior-properties",
@@ -2410,14 +2766,14 @@
                             ]
                           },
                           {
-                            "group": "Élément de lecteur de document PDF",
+                            "group": "Élément lecteur de documents PDF",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/PDF-document-reader-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/PDF-document-reader-element/Playlist-properties"
                             ]
                           },
                           {
-                            "group": "Élément de visionneuse de zone",
+                            "group": "Élément viewer de zone",
                             "pages": [
                               "fr/digital-signage/windows-applications/designer/Page-elements/Zone-Viewer-element/Introduction",
                               "fr/digital-signage/windows-applications/designer/Page-elements/Zone-Viewer-element/Zone-viewer-properties"
@@ -2432,7 +2788,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les listes de lecture",
+                        "group": "Travailler avec des playlists",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-playlists/Introduction",
                           "fr/digital-signage/windows-applications/designer/Working-with-playlists/Managing-playlists",
@@ -2441,7 +2797,7 @@
                         ]
                       },
                       {
-                        "group": "Travailler avec les fournisseurs de données",
+                        "group": "Travailler avec des fournisseurs de données",
                         "pages": [
                           "fr/digital-signage/windows-applications/designer/Working-with-data-providers/Introduction",
                           {
@@ -2500,17 +2856,17 @@
                     ]
                   },
                   {
-                    "group": "Planificateur",
+                    "group": "Scheduler",
                     "pages": [
                       "fr/digital-signage/windows-applications/scheduler/introduction",
                       {
-                        "group": "Démarrer le planificateur",
+                        "group": "Démarrer le Scheduler",
                         "pages": [
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/starting-the-application",
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/connecting-to-your-PADS4-server",
                           "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/logging-on-to-your-PADS4-server",
                           {
-                            "group": "Spécifier les propriétés de connexion et d'identification",
+                            "group": "Spécifier les propriétés de connexion et d'ouverture de session",
                             "pages": [
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/connection-properties",
                               "fr/digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/logon-properties"
@@ -2561,7 +2917,7 @@
                             ]
                           },
                           {
-                            "group": "Création de planifications",
+                            "group": "Créer des planifications",
                             "pages": [
                               {
                                 "group": "Assistant de planification",
@@ -2579,7 +2935,7 @@
                                 ]
                               },
                               {
-                                "group": "Utilisation du glisser-déposer",
+                                "group": "Utiliser le glisser-déposer",
                                 "pages": [
                                   "fr/digital-signage/windows-applications/scheduler/scheduling-presentations/creating-schedules/using-drag-and-drop/Drag-&-drop-a-presentation-from-Windows-Explorer"
                                 ]
@@ -2587,7 +2943,7 @@
                             ]
                           },
                           {
-                            "group": "Modification des planifications",
+                            "group": "Modifier des planifications",
                             "pages": [
                               "fr/digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/introduction",
                               "fr/digital-signage/windows-applications/scheduler/scheduling-presentations/editing-schedules/editing-the-design-of-your-schedule",
@@ -2599,7 +2955,7 @@
                             ]
                           },
                           {
-                            "group": "Suppression des planifications",
+                            "group": "Supprimer des planifications",
                             "pages": [
                               "fr/digital-signage/windows-applications/scheduler/scheduling-presentations/removing-schedules/removing-a-schedule",
                               "fr/digital-signage/windows-applications/scheduler/scheduling-presentations/removing-schedules/removing-a-recurring-schedule"
@@ -2691,7 +3047,7 @@
                     "pages": [
                       "fr/digital-signage/windows-applications/system-management/introduction",
                       {
-                        "group": "Démarrer la gestion du système PADS4",
+                        "group": "Démarrer PADS4 System Management",
                         "pages": [
                           "fr/digital-signage/windows-applications/system-management/starting-pads4-system-management/starting-the-application",
                           "fr/digital-signage/windows-applications/system-management/starting-pads4-system-management/connecting-to-your-pads4-server",
@@ -2706,20 +3062,13 @@
                         ]
                       }
                     ]
-                  },
-                  "fr/modules/digital-signage/licenses"
-                ]
-              },
-              {
-                "group": "Coffres de données PADS4",
-                "pages": [
-                  "fr/modules/digital-signage/data-vault/introduction"
+                  }
                 ]
               }
             ]
           },
           {
-            "dropdown": "Workspace",
+            "dropdown": "PADS4 Workspace",
             "groups": [
               {
                 "group": "Mise en route",
@@ -2728,69 +3077,141 @@
                 ]
               },
               {
-                "group": "Application Web Workspace",
+                "group": "Applications utilisateur",
                 "pages": [
-                  "fr/modules/workspace/workspace-web-application/introduction",
-                  "fr/modules/workspace/workspace-web-application/searching-for-a-space",
-                  "fr/modules/workspace/workspace-web-application/booking-a-space",
-                  "fr/modules/workspace/workspace-web-application/booking-a-common-space",
-                  "fr/modules/workspace/workspace-web-application/booking-a-group-workspace",
-                  "fr/modules/workspace/workspace-web-application/declaring-remote-work",
-                  "fr/modules/workspace/workspace-web-application/reporting-absence",
-                  "fr/modules/workspace/workspace-web-application/my-calendar",
-                  "fr/modules/workspace/workspace-web-application/searching-for-colleagues",
-                  "fr/modules/workspace/workspace-web-application/special-cases",
-                  "fr/modules/workspace/workspace-web-application/account-settings",
-                  "fr/modules/workspace/workspace-web-application/logging-out",
-                  "fr/modules/workspace/workspace-web-application/appendices"
-                ]
-              },
-              {
-                "group": "Application mobile Workspace",
-                "pages": [
-                  "fr/modules/workspace/workspace-mobile-application/introduction",
-                  "fr/modules/workspace/workspace-mobile-application/installation"
-                ]
-              },
-              {
-                "group": "Plugin Outlook Workspace",
-                "pages": [
-                  "fr/modules/workspace/workspace-outlook-plugin/introduction",
-                  "fr/modules/workspace/workspace-outlook-plugin/configuration"
-                ]
-              },
-              {
-                "group": "Administration Workspace",
-                "pages": [
-                  "fr/modules/workspace/workspace-admin/introduction",
-                  "fr/modules/workspace/workspace-admin/home",
-                  "fr/modules/workspace/workspace-admin/rooms",
-                  "fr/modules/workspace/workspace-admin/buildings",
-                  "fr/modules/workspace/workspace-admin/room-profiles",
-                  "fr/modules/workspace/workspace-admin/equipment",
-                  "fr/modules/workspace/workspace-admin/defective-equipment",
-                  "fr/modules/workspace/workspace-admin/users",
-                  "fr/modules/workspace/workspace-admin/room-user-profile",
-                  "fr/modules/workspace/workspace-admin/occupancy-sensors",
-                  "fr/modules/workspace/workspace-admin/statistics",
-                  "fr/modules/workspace/workspace-admin/additional-services",
-                  "fr/modules/workspace/workspace-admin/extended-property",
-                  "fr/modules/workspace/workspace-admin/welcome-message"
-                ]
-              },
-              {
-                "group": "Administration CMS Workspace",
-                "pages": [
-                  "fr/modules/workspace/workspace-cms-admin/introduction",
-                  "fr/modules/workspace/workspace-cms-admin/users",
-                  "fr/modules/workspace/workspace-cms-admin/profiles",
-                  "fr/modules/workspace/workspace-cms-admin/plugins",
                   {
-                    "group": "Configurations SSO",
+                    "group": "Application web Workspace",
                     "pages": [
-                      "fr/modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
-                      "fr/modules/workspace/workspace-cms-admin/SSO/how-to-configure-Single-Sign-On-Azure-for-PADS4",
-                      "fr/modules/workspace/workspace-cms-admin/SSO/ibm-security"
+                      "fr/modules/workspace/workspace-web-application/introduction",
+                      {
+                        "group": "Rechercher une salle",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/searching-for-a-space",
+                          "fr/modules/workspace/workspace-web-application/FavouriteRoom"
+                        ]
+                      },
+                      {
+                        "group": "Réserver un espace",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/booking-a-space",
+                          "fr/modules/workspace/workspace-web-application/booking-a-common-space",
+                          "fr/modules/workspace/workspace-web-application/booking-a-group-workspace"
+                        ]
+                      },
+                      {
+                        "group": "Travail à distance",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/declaring-remote-work"
+                        ]
+                      },
+                      {
+                        "group": "Signaler une absence",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/reporting-absence"
+                        ]
+                      },
+                      {
+                        "group": "Mon calendrier",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/my-calendar"
+                        ]
+                      },
+                      {
+                        "group": "Rechercher des collègues",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/searching-for-colleagues"
+                        ]
+                      },
+                      {
+                        "group": "Cas particuliers",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/special-cases"
+                        ]
+                      },
+                      {
+                        "group": "Paramètres du compte",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/account-settings"
+                        ]
+                      },
+                      {
+                        "group": "Se déconnecter",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/logging-out"
+                        ]
+                      },
+                      {
+                        "group": "Flux de travail",
+                        "pages": [
+                          "fr/modules/workspace/workspace-web-application/Workflows"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Application mobile Workspace",
+                    "pages": [
+                      "fr/modules/workspace/workspace-mobile-application/introduction",
+                      "fr/modules/workspace/workspace-mobile-application/installation"
+                    ]
+                  },
+                  {
+                    "group": "Plugin Outlook Workspace",
+                    "pages": [
+                      "fr/modules/workspace/workspace-outlook-plugin/introduction"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Administration",
+                "pages": [
+                  {
+                    "group": "Admin CMS 1.0",
+                    "pages": [
+                      "fr/modules/workspace/workspace-cms-admin/introduction",
+                      "fr/modules/workspace/workspace-cms-admin/users",
+                      "fr/modules/workspace/workspace-cms-admin/profiles",
+                      {
+                        "group": "Configurations SSO",
+                        "pages": [
+                          "fr/modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
+                          "fr/modules/workspace/workspace-cms-admin/SSO/how-to-configure-Single-Sign-On-Azure-for-PADS4",
+                          "fr/modules/workspace/workspace-cms-admin/SSO/ibm-security"
+                        ]
+                      },
+                      {
+                        "group": "Plugins",
+                        "pages": [
+                          "fr/modules/workspace/workspace-cms-admin/plugins",
+                          "fr/modules/workspace/workspace-cms-admin/untitled-page"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Administration Workspace",
+                    "pages": [
+                      "fr/modules/workspace/workspace-admin/introduction",
+                      "fr/modules/workspace/workspace-admin/home",
+                      "fr/modules/workspace/workspace-admin/rooms",
+                      "fr/modules/workspace/workspace-admin/buildings",
+                      "fr/modules/workspace/workspace-admin/room-profiles",
+                      "fr/modules/workspace/workspace-admin/equipment",
+                      "fr/modules/workspace/workspace-admin/defective-equipment",
+                      "fr/modules/workspace/workspace-admin/users",
+                      "fr/modules/workspace/workspace-admin/room-user-profile",
+                      "fr/modules/workspace/workspace-admin/occupancy-sensors",
+                      "fr/modules/workspace/workspace-admin/statistics",
+                      "fr/modules/workspace/workspace-admin/additional-services",
+                      "fr/modules/workspace/workspace-admin/extended-property",
+                      "fr/modules/workspace/workspace-admin/welcome-message"
+                    ]
+                  },
+                  {
+                    "group": "Plugin Outlook Workspace",
+                    "pages": [
+                      "fr/modules/workspace/workspace-outlook-plugin/configuration"
                     ]
                   }
                 ]
@@ -2798,44 +3219,7 @@
             ]
           },
           {
-            "dropdown": "FIDS",
-            "groups": [
-              {
-                "group": "Mise en route",
-                "pages": [
-                  "fr/modules/fids/introduction",
-                  "fr/modules/fids/installation",
-                  "fr/modules/fids/demarrer-l-operateur-FIDS",
-                  "fr/modules/fids/parametres-du-serveur",
-                  "fr/modules/fids/configurer-un-relais-SQL-server",
-                  {
-                    "group": "SQL Server",
-                    "pages": [
-                      "fr/modules/fids/sql-server/creer-la-base-manuellement-avec-Microsoft-SQL-server-management-studio",
-                      "fr/modules/fids/sql-server/creer-la-base-manuellement-avec-Powershell",
-                      "fr/modules/fids/sql-server/creer-la-base-manuellement-avec-requetes-SQL"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "dropdown": "Gestion des visiteurs",
-            "groups": [
-              {
-                "group": "Mise en route",
-                "pages": [
-                  "fr/modules/visitor-management/introduction",
-                  "fr/modules/visitor-management/home-and-creating-users",
-                  "fr/modules/visitor-management/archive",
-                  "fr/modules/visitor-management/settings"
-                ]
-              }
-            ]
-          },
-          {
-            "dropdown": "Legacy CMS",
+            "dropdown": "PADS4 CMS 1.0",
             "groups": [
               {
                 "group": "Mise en route",
@@ -2872,6 +3256,43 @@
             ]
           },
           {
+            "dropdown": "PASD4 FIDS",
+            "groups": [
+              {
+                "group": "Mise en route",
+                "pages": [
+                  "fr/modules/fids/introduction",
+                  "fr/modules/fids/installation",
+                  "fr/modules/fids/Starting-the-FIDS-Operator",
+                  "fr/modules/fids/server-settings",
+                  "fr/modules/fids/setup-a-SQL-server-failover",
+                  {
+                    "group": "SQL Server",
+                    "pages": [
+                      "fr/modules/fids/sql-server/Create-the-database-manually-with-Microsoft-SQL-Server-Management-Studio",
+                      "fr/modules/fids/sql-server/Create-the-database-manually-with-Powershell",
+                      "fr/modules/fids/sql-server/Create-the-database-manually-with-SQL-Statements"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "dropdown": "Gestion des visiteurs",
+            "pages": [
+              {
+                "group": "Mise en route",
+                "pages": [
+                  "fr/modules/visitor-management/introduction",
+                  "fr/modules/visitor-management/home-and-creating-users",
+                  "fr/modules/visitor-management/archive",
+                  "fr/modules/visitor-management/settings"
+                ]
+              }
+            ]
+          },
+          {
             "dropdown": "Référence API",
             "groups": [
               {
@@ -2882,107 +3303,155 @@
               },
               {
                 "group": "Domaines",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Nginx.Domains//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Authentification",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication//swagger/v1/swagger.json",
+                "pages": []
               },
               {
-                "group": "Intégration d'authentification",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication.Integration//swagger/v1/swagger.json"
+                "group": "Intégration de l'authentification",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication.Integration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "CMS",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Cms//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Cms//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Configuration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Configuration//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Configuration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Contenu",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Content//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Content//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Identifiants",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Données",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Appareil",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json",
+                "pages": []
               },
               {
-                "group": "Email",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.email//swagger/v1/swagger.json"
+                "group": "E-mail",
+                "openapi": "https://saas.pads365.com/rdx/nds.services.email//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Moteur",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Engine//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Engine//swagger/v1/swagger.json",
+                "pages": []
               },
               {
-                "group": "Connecteur FIDS",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.FIDS.Connector//swagger/v1/swagger.json"
+                "group": "FIDS Connector",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.FIDS.Connector//swagger/v1/swagger.json",
+                "pages": []
               },
               {
-                "group": "Globalisation",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Globalization//swagger/v1/swagger.json"
+                "group": "Mondialisation",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Globalization//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Licence",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.License//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.License//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Messagerie",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Messaging//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Messaging//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Migration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Migration//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Migration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Orchestration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Orchestration//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Orchestration//swagger/v1/swagger.json",
+                "pages": []
               },
               {
-                "group": "Package",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json"
+                "group": "Paquet",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Processus",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Réplication",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Replication//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Replication//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Planification",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json",
+                "pages": []
               },
               {
-                "group": "SCIM utilisateur",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.User.Scim//swagger/v1/swagger.json"
+                "group": "User SCIM",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.User.Scim//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Profil utilisateur",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.UserProfile//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.UserProfile//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Conversion vidéo",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Video.Conversion//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Video.Conversion//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Visionneuse",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Viewer//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Viewer//swagger/v1/swagger.json",
+                "pages": []
               },
               {
                 "group": "Web vers image",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json",
+                "pages": []
+              }
+            ]
+          },
+          {
+            "dropdown": "Plug-ins",
+            "hidden": true,
+            "groups": [
+              {
+                "group": "Finessetech",
+                "pages": [
+                  {
+                    "group": "BonVoy VMS",
+                    "pages": [
+                      {
+                        "group": "Manuel d'installation",
+                        "pages": [
+                          "fr/introduction-1",
+                          "fr/installation"
+                        ]
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -2999,6 +3468,7 @@
     "options": [
       "chatgpt",
       "claude"
-    ]
+    ],
+    "display": "header"
   }
 }
