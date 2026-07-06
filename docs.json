@@ -471,8 +471,7 @@
                         "pages": [
                           "canva-set-up-1",
                           "pads-4-canva-integration"
-                        ],
-                        "hidden": true
+                        ]
                       },
                       {
                         "group": "Custom OAuth2",
