@@ -303,7 +303,6 @@
                   },
                   {
                     "group": "Design",
-                    "hidden": true,
                     "pages": [
                       "ctrl-centre/designer"
                     ]
@@ -530,7 +529,6 @@
                       },
                       {
                         "group": "Multi Factor Authentication",
-                        "hidden": true,
                         "pages": [
                           "enable-multi-factor-authentication",
                           "reset-the-multi-factor-authentication",
@@ -678,7 +676,6 @@
               {
                 "group": "PADS4 Windows Applications",
                 "pages": [
-                  "modules/digital-signage/introduction",
                   {
                     "group": "Designer",
                     "pages": [
@@ -1137,7 +1134,8 @@
                             ]
                           }
                         ]
-                      }
+                      },
+                      "modules/digital-signage/introduction"
                     ]
                   },
                   {
