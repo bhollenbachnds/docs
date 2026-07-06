@@ -555,36 +555,44 @@
                 ]
               },
               {
-                "group": "PADS4 CMS and Designer",
+                "group": "Designer (Web)",
                 "pages": [
                   {
-                    "group": "User Interface Designer",
+                    "group": "User Interface",
                     "pages": [
-                      "en/digital-signage/pads-4-cms-and-designer/user-interface-designer/untitled-page"
+                      "user-interface",
+                      {
+                        "group": "Menu",
+                        "pages": [
+                          "menu"
+                        ]
+                      }
                     ]
                   },
-                  "modules/digital-signage/cms/introduction",
-                  "modules/digital-signage/cms/homepage",
-                  "modules/digital-signage/cms/categories",
-                  "en/digital-signage/pads-4-web-designer/templates",
-                  "modules/digital-signage/cms/publish-a-message",
-                  "modules/digital-signage/cms/publications",
-                  "modules/digital-signage/cms/library",
-                  "modules/digital-signage/cms/ordering",
-                  "modules/digital-signage/cms/more-features"
-                ]
-              },
-              {
-                "group": "Designer (Web)",
-                "hidden": true,
-                "pages": [
                   {
                     "group": "Elements",
                     "pages": [
                       "introductions",
                       {
+                        "group": "Text and Time and Date",
+                        "pages": [
+                          "text"
+                        ]
+                      },
+                      {
+                        "group": "Shape",
+                        "pages": [
+                          "shape"
+                        ]
+                      },
+                      {
+                        "group": "Media",
+                        "pages": [
+                          "media"
+                        ]
+                      },
+                      {
                         "group": "Canva Integration",
-                        "hidden": true,
                         "pages": [
                           "introduction-2",
                           {
@@ -651,6 +659,20 @@
                       }
                     ]
                   }
+                ]
+              },
+              {
+                "group": "PADS4 CMS",
+                "pages": [
+                  "modules/digital-signage/cms/introduction",
+                  "modules/digital-signage/cms/homepage",
+                  "modules/digital-signage/cms/categories",
+                  "en/digital-signage/pads-4-web-designer/templates",
+                  "modules/digital-signage/cms/publish-a-message",
+                  "modules/digital-signage/cms/publications",
+                  "modules/digital-signage/cms/library",
+                  "modules/digital-signage/cms/ordering",
+                  "modules/digital-signage/cms/more-features"
                 ]
               },
               {
