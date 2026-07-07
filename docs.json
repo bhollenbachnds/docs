@@ -80,6 +80,12 @@
                       "install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers",
                       "install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers"
                     ]
+                  },
+                  {
+                    "group": "Install PADS4 Windows applications",
+                    "pages": [
+                      "windows-tools"
+                    ]
                   }
                 ]
               },
