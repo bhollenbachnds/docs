@@ -84,7 +84,7 @@
                   {
                     "group": "Install PADS4 Windows applications",
                     "pages": [
-                      "windows-tools"
+                      "install-pads4/install-pads4-client/PADS4-Windows-applications"
                     ]
                   }
                 ]
