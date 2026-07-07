@@ -255,6 +255,12 @@
                     "pages": [
                       "certified-devices/sony/BZxx-series"
                     ]
+                  },
+                  {
+                    "group": "Innes",
+                    "pages": [
+                      "innes_DMB300_DMB400"
+                    ]
                   }
                 ]
               }
