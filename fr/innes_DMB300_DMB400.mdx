@@ -1,0 +1,142 @@
+---
+- title: Innes DMB300 et DMB400
+- description: Configurez les appareils Innes DMB300 et DMB400 pour exécuter le
+    PADS4 HTML5 Viewer et vous connecter à un PADS4 Server.
+---
+
+Les Innes DMB300 et DMB400 fonctionnent sous **Gekkota OS** et se connectent à PADS4 via le HTML5 Viewer. Ce guide vous accompagne dans la mise à jour du firmware, la configuration de l'appareil et l'installation du Viewer.
+
+## Avant de commencer
+
+Assurez-vous d'avoir :
+
+* Installé et configuré un **PADS4 Server** — effectuez cette étape avant de configurer l'appareil.
+* Le **numéro de licence d'usine** de l'appareil (envoyé par e-mail lors de la commande de l'appareil).
+* Un accès réseau à la **console d'administration** à l'adresse `http://<device_IP_address>/`.
+* Contacté votre représentant PADS4 pour obtenir les fichiers supplémentaires côté serveur requis pour les Innes DMB300/DMB400.
+
+<Warning>
+  Vous devez installer des logiciels supplémentaires sur le PADS4 Server avant d'utiliser les Innes DMB300 ou DMB400. Contactez votre représentant PADS4 pour obtenir et configurer ces fichiers.
+</Warning>
+
+## Versions minimales
+
+| Appareil | PADS4 Server minimum |
+| :------- | :------------------- |
+| DMB300   | PADS4 2025.1         |
+| DMB400   | PADS4 2025.1         |
+
+## Premier accès
+
+Les deux appareils exposent une console d'administration à l'adresse `http://<device_IP_address>/`. Identifiants par défaut :
+
+* **Username:** `admin`
+* **Password:** `admin`
+
+À la sortie de l'emballage, l'appareil affiche une **Mire de test** — un graphique utilisé pour faciliter la configuration. Désactivez-la dans la console d'administration sous **Maintenance** avant de diffuser du contenu PADS4.
+
+<Frame>
+  ![Innes DMB300/DMB400 Administration console](/images/Certify-Devices/Innes/DMB300Config.png)
+</Frame>
+
+## Mettre à jour le firmware
+
+PADS4 prend en charge **Gekkota OS 5**, le firmware de l'appareil doit donc être mis à niveau vers une version compatible. Dans la console d'administration, ouvrez **Maintenance > Middleware** et déposez le fichier `.frm` dans la zone **Déposer le fichier ici**.
+
+| Appareil | Firmware minimum | Téléchargement                                                                                      |
+| :------- | :--------------- | :-------------------------------------------------------------------------------------------------- |
+| DMB300   | 5.10.10          | [V5.10.11](https://www.innes.pro/en/support/index.php?DMB300/Firmware_and_documentation_for_DMB300) |
+| DMB400   | 5.11.10          | [V5.11.10](https://www.innes.pro/en/support/index.php?DMB400/Firmware_and_documentation_for_DMB400) |
+
+<Warning>
+  Lors de la mise à niveau d'un DMB300 vers Gekkota OS 5, contactez [Qeedji Support](https://www.innes.pro/en/support/) avant de procéder.
+</Warning>
+
+## Configurer les paramètres préalables de l'appareil
+
+PADS4 configure la plupart des paramètres de l'appareil automatiquement, mais certains doivent être définis manuellement au préalable. Configurez-les dans l'ordre indiqué — la console d'administration vous invitera à valider et à redémarrer au fur et à mesure.
+
+| Paramètre                          | Emplacement                   | Ce qu'il faut configurer                                                                                                                                                                 |
+| :--------------------------------- | :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Licence**                        | Configuration > License       | Saisissez le numéro de licence figurant dans votre e-mail d'usine s'il n'est pas déjà renseigné.                                                                                         |
+| **Nom d'hôte**                     | Configuration > Administrator | Définissez un nom d'hôte unique par appareil (par exemple, `Room-D-Amsterdam-1`).                                                                                                        |
+| **Préférences**                    | Maintenance > Preferences     | Définissez `innes.app-profile.addon-manager.*.*.*.authorized = true`. Si vous utilisez des écrans tactiles HDMI/USB, définissez également `innes.hid.pointer-event.*.authorized = true`. |
+| **Date et heure**                  |                               | Sélectionnez la valeur **UTC Date and Time**, puis sélectionnez **Now**.                                                                                                                 |
+| **Configuration de l'application** | Configuration > App           | Sélectionnez le bouton radio **Pull Webdav** et configurez l'URL (voir ci-dessous).                                                                                                      |
+
+**Format de l'URL Pull Webdav**
+
+```text
+<protocol>://<PADS4_server>:<port>/<PADS4_hostpath>/Innes/
+```
+
+* **protocole** — `http`, ou `https` si le serveur utilise un certificat SSL signé publiquement.
+* **port** — facultatif. À inclure uniquement si le PADS4 Server utilise des ports HTTP/HTTPS non standard.
+* **PADS4\_server** — nom DNS ou adresse IP du PADS4 Server.
+* **PADS4\_hostpath** — la valeur `hostpath` configurée dans PADS4 System Management. La valeur par défaut est `PADS4`.
+
+Assurez-vous que **Use this URL for status server and software and configurations installation server** est coché.
+
+## Installer le PADS4 Viewer et se connecter au serveur
+
+Une fois les paramètres préalables enregistrés et l'appareil redémarré, il télécharge automatiquement la dernière version du PADS4 HTML5 Viewer depuis votre serveur. Cela peut prendre quelques minutes. Une fois le Viewer démarré, il se connecte au PADS4 Server, et les paramètres du Viewer tels que l'orientation de l'écran peuvent être gérés depuis **PADS4 Agent**.
+
+### Ajuster les paramètres du Viewer sur l'appareil
+
+Pour ouvrir l'écran d'options sur l'appareil, maintenez le **bouton gauche de la souris** (ou appuyez sur l'écran) pendant **3 secondes**.
+
+<Note>
+  En raison des limitations de ressources des deux appareils, l'utilisation des paramètres du Viewer directement sur l'appareil n'est pas entièrement prise en charge. Préférez PADS4 Agent pour la configuration.
+</Note>
+
+### Mise à jour du Viewer
+
+Après l'installation initiale, la mise à niveau du PADS4 Server déclenche automatiquement la mise à jour du Viewer vers la version correspondante.
+
+### Installer le Viewer avec un script (avancé)
+
+Pour une configuration programmatique — utile lors de la configuration de nombreux appareils — le Viewer peut être installé à l'aide d'un script de configuration JavaScript fourni avec le PADS4 Server.
+
+L'emplacement par défaut du script sur une installation PADS4 est :
+
+```text
+C:\Program Files\PADS4\Clients\Apps\Innes\anonymous\.setup\configuration.js
+```
+
+Modifiez le script en suivant les instructions contenues dans le fichier, puis téléversez-le sur l'appareil à l'aide d'un client WebDAV. Pour Windows, nous recommandons [WinSCP](https://winscp.net/eng/index.php).
+
+**Téléverser avec WinSCP**
+
+1. Démarrez WinSCP et attendez que la boîte de dialogue de connexion s'affiche.
+2. Sélectionnez le **WebDAV** protocole de fichier.
+3. Saisissez l'**adresse IP** de l'appareil (port par défaut `80`).
+4. Saisissez le **nom d'utilisateur** et le **mot de passe** de l'appareil (voir [Premier accès](#first-time-access)).
+5. Cliquez sur **Login** et attendez que WinSCP se connecte.
+6. Dans le volet gauche (système de fichiers local), naviguez jusqu'au répertoire des applications PADS4.
+7. Dans le volet droit (appareil), naviguez jusqu'à `/.extension`.
+8. Faites glisser `configuration.js` du volet gauche vers le volet droit.
+
+WinSCP prend également en charge [les transferts de fichiers automatisés](https://winscp.net/eng/docs/guide_automation) via des scripts, ce qui est utile lors du provisionnement de nombreux appareils. Contactez [Qeedji Support](https://www.innes.pro/en/support/) pour obtenir des conseils.
+
+<Tip>
+  Lors de l'utilisation d'un script automatisé, ajoutez un temps d'attente d'au moins **5 secondes** entre les appareils pour éviter de surcharger le PADS4 Server.
+</Tip>
+
+## Fonctionnalités prises en charge
+
+| Fonctionnalité          | DMB300 / DMB400 | Notes                                                    |
+| :---------------------- | :-------------- | :------------------------------------------------------- |
+| Paysage et portrait     | ✅               | Pris en charge                                           |
+| Bloquer la télécommande | ❌               | Non pris en charge                                       |
+| Vidéo                   | ✅               | Maximum 1 vidéo sur DMB300 ; maximum 3 vidéos sur DMB400 |
+| Image                   | ✅               | JPG, PNG, GIF                                            |
+| Ligne et forme          | ✅               | Pris en charge                                           |
+| Texte défilant          | ✅               | Pris en charge                                           |
+| Texte formaté           | ✅               | Pris en charge                                           |
+| Tableau                 | ✅               | Pris en charge                                           |
+| Bouton interactif       | ❌               | Non pris en charge                                       |
+| Web                     | ✅               | Pris en charge                                           |
+| Actualiser l'appareil   | ✅               | Pris en charge                                           |
+| Redémarrer l'appareil   | ✅               | Pris en charge                                           |
+| Éteindre l'appareil     | ✅               | Pris en charge                                           |
+| Éteindre l'écran        | ❌               | Non pris en charge                                       |
