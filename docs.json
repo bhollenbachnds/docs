@@ -87,7 +87,7 @@
                 "group": "Install PADS4 Viewers",
                 "icon": "tv",
                 "pages": [
-                  "introduction-3",
+                  "Install-PADS4-Viewer/introduction",
                   {
                     "group": "Microsoft Windows",
                     "pages": [
