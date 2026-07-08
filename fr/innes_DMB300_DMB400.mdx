@@ -1,0 +1,142 @@
+---
+- title: Innes DMB300 et DMB400
+---
+
+## **Première utilisation**
+
+Lors de l'installation, vous devrez configurer l'emplacement du serveur PADS4. Il est recommandé de terminer l'installation du serveur PADS4 en premier, avant de poursuivre les installations sur l'appareil.
+
+<Info>
+  Pour l'installation des Innes DMB300 et DMB400, vous avez besoin de logiciels supplémentaires sur votre serveur PADS4. Contactez votre
+</Info>
+
+Versions PADS4 minimales :
+
+| Appareil | Serveur PADS4 |
+| :------- | :------------ |
+| DMB300   | PADS4 2025.1  |
+| DMB400   | PADS4 2025.1  |
+
+Les deux appareils fournissent une interface utilisateur de console d'administration accessible via un navigateur web à l'URL **http\://\<device\_IP\_address>/**. Par défaut, les identifiants de connexion sont :
+
+* Username: **admin**
+* Password: **admin**
+
+Par défaut en sortie d'usine, le contenu de l'appareil est une *Test Card*, un graphique affichant des informations pour faciliter la configuration de l'appareil. Ce contenu par défaut doit être désactivé avant de pouvoir être remplacé par du contenu PADS4. Vous pouvez le faire dans la section *Maintenance* de la console d'administration.
+
+<Frame>
+  ![Dmb300config](/images/Certify-Devices/Innes/DMB300Config.png)
+</Frame>
+
+## **Mise à jour du firmware**
+
+PADS4 prend en charge Gekkota OS version 5 ; par conséquent, le firmware de l'appareil doit être mis à niveau en conséquence. Les versions disponibles pour votre modèle d'appareil et les liens de téléchargement sont inclus dans le tableau ci-dessous. La version de firmware appropriée peut être installée dans la page ***Maintenance > Middleware*** de la console d'administration en déposant le fichier *.frm* dans l'emplacement **Drop file here**. Contactez [Qeedji Support](https://www.innes.pro/en/support/) si une aide supplémentaire est nécessaire.
+
+**NOTE: If upgrading DMB300 to version 5, it is highly recommended to contact [Qeedji Support](https://www.innes.pro/en/support/).**
+
+| Appareil | Version minimale du firmware | Lien de téléchargement                                                                              |
+| :------- | :--------------------------- | :-------------------------------------------------------------------------------------------------- |
+| DMB300   | 5.10.10                      | [V5.10.11](https://www.innes.pro/en/support/index.php?DMB300/Firmware_and_documentation_for_DMB300) |
+| DMB400   | 5.11.10                      | [V5.11.10](https://www.innes.pro/en/support/index.php?DMB400/Firmware_and_documentation_for_DMB400) |
+
+## **Paramètres préalables de l'appareil**
+
+Après la mise à jour du firmware, vous devriez disposer de l'ensemble des paramètres disponibles pour configurer votre appareil. **Note** que PADS4 configurera automatiquement les paramètres de l'appareil nécessaires pour fonctionner de manière transparente avec l'appareil, mais avant de l'installer, quelques paramètres (listés dans le tableau ci-dessous) doivent être configurés manuellement. Lors de l'utilisation de la console d'administration, la plupart des paramètres vous inviteront à valider (et redémarrer). Il est donc conseillé de configurer l'appareil dans le même ordre que celui indiqué dans le tableau.
+
+| Paramètre                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| :----------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Licence                        | Le numéro de licence est enregistré en usine lors de la commande de l'appareil et vous est envoyé par e-mail. S'il n'est pas déjà défini, vous pouvez le saisir dans le panneau *Configuration > License*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Nom d'hôte                     | Dans *Configuration > Administrator*, saisissez une valeur unique pour chaque appareil. Il est recommandé de saisir les valeurs de nom d'hôte en utilisant des informations basées sur le bâtiment et l'emplacement (ex. *Room-D-Amsterdam-1*).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Préférences                    | Dans *Maintenance > Preferences*, définissez les valeurs comme suit : 1.       [innes.app](http://innes.app)-profile.addon-manager.\*.\*.\*.authorized **= true.** 2.       innes.hid.pointer-event.\*.authorized **= true** (si écrans tactiles HDMI/USB).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Date et heure                  | Mettez à jour la date et l'heure de votre appareil en cliquant sur la valeur **UTC Date and Time** puis cliquez sur le bouton **Now**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Configuration de l'application | Dans *Configuration > App*, sélectionnez le bouton radio **Pull Webdav** puis définissez les champs de saisie comme suit : 1.       Url : **\<Protocol>://\<PADS4\_server>:\<Port>/\<PADS4\_hostpath>/Innes/** a.       *Protocol* – soit http soit https si le serveur est hébergé avec un certificat SSL signé publiquement. b.       *Port (optionnel)* – si le serveur PADS4 est configuré pour utiliser des ports non par défaut pour http ou https, vous devez spécifier le port. *c.*       *PADS4\_server* – le nom de domaine ou l'adresse IP du serveur PADS4. *d.*       *PADS4\_hostpath* – la valeur *hostpath* configurée dans PADS4 System Management. La valeur par défaut est **PADS4**. 2.       Assurez-vous que *Use this URL for status server and software and configurations installation server* est **coché.** |
+
+## **Installation du PADS4 Viewer et connexion au serveur PADS4**
+
+Après avoir configuré l'appareil avec les paramètres et redémarré l'appareil, comme décrit dans le chapitre précédent, l'appareil téléchargera automatiquement la dernière version du PADS4 HTML5 Viewer – cela peut prendre un certain temps, veuillez attendre que cela se termine. Une fois terminé, le Viewer démarrera et se connectera au serveur PADS4. Les paramètres du Viewer, tels que l'orientation de l'écran, peuvent ensuite être configurés avec le PADS4 Agent. Pour les utilisateurs avancés ayant des cas d'utilisation complexes, veuillez consulter la section 2.3 pour savoir comment
+
+### **Ajuster les paramètres du PADS4 Viewer à l'aide de l'écran des options**
+
+Vous pouvez ajuster les paramètres du PADS4 Viewer directement sur l'écran. Pour accéder à l'écran des options sur l'appareil lui-même, maintenez le bouton gauche de la souris enfoncé ou touchez l'écran pendant 3 secondes.
+
+**Note**: En raison des limitations de ressources sur les deux appareils, l'utilisation des paramètres du Viewer n'est pas entièrement prise en charge.
+
+### **Mise à jour du PADS4 Viewer**
+
+Après l'installation initiale du PADS4 Viewer, si vous mettez à jour le serveur PADS4, le PADS4 Viewer se mettra automatiquement à jour vers la version disponible sur le serveur PADS4.
+
+### **Installer le PADS4 Viewer à l'aide d'un script (pour les utilisateurs avancés)**
+
+Pour les utilisateurs ayant des connaissances en programmation, le Viewer peut également être installé à l'aide d'un script de configuration écrit en JavaScript. Un cas d'utilisation possible est la commodité lorsque plusieurs appareils doivent être configurés sans les connecter d'abord à un PC hôte. Votre installation du serveur PADS4 inclut un script de configuration qui se trouve dans le dossier apps du répertoire d'installation de PADS4. Le répertoire apps par défaut de PADS4 est **C:\Program Files\PADS4\Clients\Apps**. Le dossier **Innes** est contenu dans le répertoire apps ainsi que le script de configuration qui s'y trouve. Par exemple, si vous avez installé PADS4 dans le répertoire par défaut, le chemin vers le script serait :
+
+C:\Program Files\PADS4\Clients\Apps\Innes\anonymous\\.setup\configuration.js
+
+Le script peut ensuite être modifié selon les besoins en utilisant la documentation du fichier comme guide. Pour télécharger le script sur l'appareil, vous aurez besoin d'un client WebDAV. Pour les utilisateurs Windows, nous recommandons [WinSCP](https://winscp.net/eng/index.php), un client de transfert de fichiers gratuit et open-source.
+
+Une fois téléchargé, suivez les étapes ci-dessous pour installer le PADS4 Viewer à l'aide de WinSCP.
+
+| Étape | Description                                                                                                                                                                                                                               |
+| :---- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 01    | Démarrez WinSCP et attendez la boîte de dialogue de connexion.                                                                                                                                                                            |
+| 02    | Sélectionnez le *WebDAV* protocole de fichier.                                                                                                                                                                                            |
+| 03    | Entrez l'adresse IP de l'appareil. Le port par défaut est 80.                                                                                                                                                                             |
+| 04    | Entrez le nom d'utilisateur et le mot de passe de l'appareil (voir [Première utilisation](#_First_time_use))                                                                                                                              |
+| 05    | Cliquez sur Connexion et attendez que WinSCP se connecte.                                                                                                                                                                                 |
+| 06    | Dans le volet gauche, votre système de fichiers local, naviguez jusqu'au répertoire des applications PADS4 (voir [Installer le PADS4 Viewer à l'aide d'un script de configuration (pour les utilisateurs avancés)](#_Install_the_PADS4)). |
+| 07    | Dans le volet droit, naviguez jusqu'à **/.extension.**                                                                                                                                                                                    |
+| 08    | Cliquez et faites glisser le *configuration.js* du volet gauche vers le volet droit.                                                                                                                                                      |
+
+WinSCP prend également en charge les [transferts de fichiers automatisés](https://winscp.net/eng/docs/guide_automation) via des scripts, ce qui peut être particulièrement utile pour installer PADS4 sur de nombreux appareils en temps opportun. Contactez [Qeedji Support](https://www.innes.pro/en/support/) pour toute demande supplémentaire.
+
+**Remarque**: Si la configuration est effectuée via un script automatisé, il est recommandé d'implémenter un temps d'attente de 5 secondes ou plus pour éviter de surcharger le serveur PADS4.
+
+# **Fonctionnalités prises en charge & limitations**
+
+Les fonctionnalités et limitations suivantes sont liées aux Innes DMB300 et DMB400.
+
+| **Zone**                                          | **Support**                                                                                                                                                                                                                               |
+| :------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modèles d'affichage                               | Pris en charge                                                                                                                                                                                                                            |
+| Mode portrait                                     | Pris en charge                                                                                                                                                                                                                            |
+| Block Remote Control                              | Non pris en charge                                                                                                                                                                                                                        |
+| HTTPS                                             | Pris en charge                                                                                                                                                                                                                            |
+|                                                   |                                                                                                                                                                                                                                           |
+| Vidéo                                             | Maximum de 1 vidéo sur DMB300 et maximum de 3 vidéos sur DMB400                                                                                                                                                                           |
+|                                                   | Streaming non pris en charge                                                                                                                                                                                                              |
+| Image                                             | Prise en charge de JPG, PNG, SVG, GIF                                                                                                                                                                                                     |
+| Texte                                             | Pris en charge                                                                                                                                                                                                                            |
+| Ligne                                             | Pris en charge                                                                                                                                                                                                                            |
+| Forme                                             | Pris en charge                                                                                                                                                                                                                            |
+| Texte défilant                                    | Pris en charge                                                                                                                                                                                                                            |
+| Texte formaté                                     | Pris en charge                                                                                                                                                                                                                            |
+| Tableau                                           | Pris en charge                                                                                                                                                                                                                            |
+| Bouton interactif                                 | Non pris en charge                                                                                                                                                                                                                        |
+| Playlist                                          | Contenu de la bibliothèque de contenu PADS4 & URL pris en charge                                                                                                                                                                          |
+| Web                                               | Pris en charge<br />\*L'utilisation de la barre d'adresse interactive n'est pas prise en charge                                                                                                                                           |
+| Couleurs                                          | Pris en charge<br />\*Les couleurs de texture et de motif ne sont pas prises en charge                                                                                                                                                    |
+|                                                   |                                                                                                                                                                                                                                           |
+| Fournisseurs de données                           | Tous les fournisseurs de données PADS4 (70+) pris en charge                                                                                                                                                                               |
+| Transitions                                       | Pris en charge<br />\*Les stores horizontaux et verticaux ne sont pas pris en charge                                                                                                                                                      |
+| Règles                                            | Règles de présentation, de page et d'élément prises en charge                                                                                                                                                                             |
+| Stockage hors ligne de la bibliothèque de contenu | La bibliothèque de contenu PADS4 est stockée sur l'appareil local                                                                                                                                                                         |
+| Vérification MD5                                  | L'intégrité des fichiers de la bibliothèque de contenu PADS4 est vérifiée lors de la synchronisation à l'aide de MD5                                                                                                                      |
+| Planifications hors ligne                         | Toutes les présentations planifiées sont mises en cache localement                                                                                                                                                                        |
+| Données hors ligne                                | Les données récupérées auprès des fournisseurs de données sont mises en cache localement                                                                                                                                                  |
+| Liaisons de propriétés                            | Pris en charge                                                                                                                                                                                                                            |
+| Variables du Viewer                               | Pris en charge                                                                                                                                                                                                                            |
+| Mises à jour logicielles                          | Mises à jour logicielles automatiques prises en charge                                                                                                                                                                                    |
+| Éteindre l'écran                                  | Éteindre l'écran lorsqu'aucune présentation n'est planifiée                                                                                                                                                                               |
+| LED                                               | Non pris en charge                                                                                                                                                                                                                        |
+| NFC                                               | Non pris en charge                                                                                                                                                                                                                        |
+| PADS4 Ctrl Center                                 | PADS4 Ctrl Center pris en charge. <br />\*Les fonctionnalités Viewer suivantes : Capture d'écran, Journal du Viewer, Journal de synchronisation, Paramètres du Viewer, Informations système, Boîte noire du Viewer et Preuve de diffusion |
+|                                                   | Actualisation de l'appareil prise en charge                                                                                                                                                                                               |
+|                                                   | Redémarrage de l'appareil pris en charge                                                                                                                                                                                                  |
+|                                                   | Arrêt de l'appareil non pris en charge.                                                                                                                                                                                                   |
+|                                                   | Affichage de l'état de connexion actuel pris en charge                                                                                                                                                                                    |
+|                                                   | Variables du Viewer prises en charge                                                                                                                                                                                                      |
+|                                                   | Surveillance & Alertes prises en charge<br />\*La fonctionnalité suivante : Connexions réseau                                                                                                                                             |
+|                                                   | Wake On Lan non pris en charge.                                                                                                                                                                                                           |
+
+\\
+
+\\
