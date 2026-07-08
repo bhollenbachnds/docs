@@ -1,257 +1,321 @@
-Ce guide fournit des **instructions étape par étape** pour l'installation et la configuration de **PADS4 Viewer** sur le **SharpNEC Compute Module 4**.
+---
+- title: Installer le PADS4 Viewer sur Sharp/NEC CM4 et CM5
+- description: Installez, configurez et mettez à jour le PADS4 HTML5 Viewer sur
+    les appareils de signalétique numérique Sharp/NEC Compute Module 4 et CM5
+    exécutant l'image Sharp/NEC Pi.
+---
 
-***
+# PADS4 Viewer sur Sharp/NEC CM4 & CM5
 
-## **Avant de commencer**
+Cet article décrit comment installer et configurer le PADS4 Viewer sur les appareils Sharp/NEC Compute Module 4 (CM4) et Compute Module 5 (CM5).
 
-### **Appareils SharpNEC pris en charge**
+## Installation de l'image Sharp/NEC Compute Module
 
-L'appareil **SharpNEC Compute Module 4** suivant est pris en charge :
+Sharp/NEC fournit une image Raspberry Pi personnalisée qui est nécessaire pour exécuter des applications web sur le Compute Module.
 
-* **SharpNEC Compute Module 4 (CM4)**
+Si votre appareil n'exécute pas l'image Sharp/NEC, installez-la en suivant la section **Flashage manuel du Raspberry Pi via USB** de la *Quick Reference Guide for Sharp MPi4 Kit 4.1*.
 
-**Assurez-vous que votre serveur PADS4 est installé et configuré avant de continuer.**
+Lors de l'installation :
 
-***
+1. Sélectionnez **Custom Image**.
+2. Sélectionnez l'image Sharp/NEC actuelle.
 
-## **Exigences minimales**
+> **Remarque**
+>
+> Au moment de la rédaction, l'image actuelle est :
+>
+> `Sharp_4.1_EU_20250501.img`
+>
+> Cette version d'image peut changer dans les versions futures.
 
-**Version du serveur PADS4 :** **2023.2 ou ultérieure**\
-**Version du firmware :** **1.1.00 ou ultérieure**
+Après l'installation, configurez un nom d'hôte unique pour l'appareil.
 
-**Assurez-vous que le firmware de votre appareil répond aux exigences minimales avant de procéder à l'installation.**
+## Autoriser l'accès à l'API Sharp/NEC
 
-***
+Par défaut, l'image Sharp/NEC autorise uniquement les applications s'exécutant sur localhost à accéder à l'API.
 
-## **Configuration initiale**
+Connectez-vous au Compute Module via SSH.
 
-**Avant d'installer PADS4, vous devez mettre à jour le firmware de l'appareil et l'image du système d'exploitation.**
+**Identifiants par défaut**
 
-### **Mise à jour du firmware de l'écran**
+| Paramètre         | Valeur             |
+| :---------------- | :----------------- |
+| Nom d'utilisateur | `user`             |
+| Mot de passe      | `CM@SHARPdisplays` |
 
-<Steps>
-  <Step title="Première étape">
-    Téléchargez l'**Outil de mise à jour du firmware NEC** depuis le site web de NEC.
-  </Step>
+Ouvrez le fichier de configuration :
 
-  <Step title="Deuxième étape">
-    Installez l'**outil de mise à jour du firmware** sur votre PC.
-  </Step>
-
-  <Step title="Troisième étape">
-    Téléchargez la **dernière version du firmware (1.1.00 ou ultérieure)** pour votre **écran NEC**.
-  </Step>
-
-  <Step title="Quatrième étape">
-    Suivez les **instructions à l'écran** pour mettre à jour le firmware.
-  </Step>
-</Steps>
-
-***
-
-### **Installation de l'image OS PADS4**
-
-**L'appareil démarre à partir d'une image OS PADS4 personnalisée basée sur le Raspberry Pi Compute Module 4.**
-
-<Steps>
-  <Step title="Première étape">
-    Téléchargez l'**Image OS PADS4** depuis le **PADS4 App Center**.
-  </Step>
-
-  <Step title="Deuxième étape">
-    Installez **Raspberry Pi Imager** et **rpiboot** sur votre PC.
-  </Step>
-
-  <Step title="Troisième étape">
-    Éteigne&#x7A;**&#x20;** l'écran.
-  </Step>
-
-  <Step title="Quatrième étape">
-    Déplacez le **commutateur de mode de démarrage** sur la carte d'interface Raspberry Pi **vers le bas**.
-  </Step>
-
-  <Step title="Cinquième étape">
-    Connectez un **câble Micro-USB** de l'écran au PC.
-  </Step>
-
-  <Step title="Sixième étape">
-    Allume&#x7A;**&#x20;** l'écran.
-  </Step>
-
-  <Step title="Septième étape">
-    Exécutez **rpiboot** et attendez que le système monte un nouveau système de fichiers.
-  </Step>
-
-  <Step title="Huitième étape">
-    Ouvrez **Raspberry Pi Imager** et sélectionnez **Utiliser personnalisé** dans le menu **Système d'exploitation**.
-  </Step>
-
-  <Step title="Neuvième étape">
-    Sélectionnez l'**image OS PADS4** que vous avez téléchargée précédemment.
-  </Step>
-
-  <Step title="Dixième étape">
-    Choisissez le **lecteur monté** comme **périphérique cible** pour flasher l'image PADS4.
-  </Step>
-
-  <Step title="Étape Onze">
-    Une fois l'installation terminée, **retirez le câble Micro-USB** et déplacez le **commutateur de mode de démarrage vers le haut**.
-  </Step>
-
-  <Step title="Étape Douze">
-    Redémarrez l'écran pour **redémarrer** le **PADS4 Viewer Installer**.
-  </Step>
-</Steps>
-
-**⚠️ Ne remplacez pas le nom d'utilisateur par défaut lors du flashage du système d'exploitation. Changez le mot de passe si nécessaire.**
-
-***
-
-## **Installation de PADS4 Viewer**
-
-Le **SharpNEC Compute Module 4** est **préconfiguré** pour exécuter le **PADS4 Installer** si le **PADS4 Viewer** n'est pas déjà installé.
-
-**Pour installer PADS4 Viewer :**
-
-<Steps>
-  <Step title="Étape Un">
-    Saisissez votre **PADS4 Server URL**.
-  </Step>
-
-  <Step title="Étape Deux">
-    (Facultatif) Saisissez un **Viewer Name**.
-  </Step>
-
-  <Step title="Étape Trois">
-    Suivez les **étapes d'installation** pour télécharger et installer **PADS4 Viewer**.
-  </Step>
-
-  <Step title="Étape Quatre">
-    Le **Viewer démarrera** et se **connectera automatiquement** au **PADS4 Server**.
-  </Step>
-</Steps>
-
-***
-
-## **Ajustement des paramètres de PADS4 Viewer**
-
-**Pour accéder à l'écran des paramètres de PADS4 Viewer :**
-
-* **Connectez un clavier** à l'appareil.
-* **Faites un clic droit** à l'aide d'une **souris**.
-
-**Vous pouvez ajuster des paramètres tels que :**\
-**Orientation de l'écran**\
-**Configuration de l'URL du serveur**\
-**Paramètres réseau**
-
-***
-
-## **Mise à jour et réinstallation de PADS4 Viewer**
-
-**PADS4 Viewer se met à jour automatiquement lorsque vous mettez à jour le PADS4 Server.**
-
-### **Réinstallation de PADS4 Viewer**
-
-**Utilisez le PADS4 Installer intégré si :**\
-**Vous devez vous connecter à un serveur ou domaine différent.**\
-**Vous souhaitez réinitialiser les paramètres du Viewer.**
-
-**Pour réinstaller PADS4 Viewer :**
-
-<Steps>
-  <Step title="Étape Un">
-    Ouvrez le **menu des paramètres du Viewer**.
-  </Step>
-
-  <Step title="Étape Deux">
-    Cliquez sur **Launcher Settings** dans le **coin inférieur gauche**.
-  </Step>
-
-  <Step title="Étape Trois">
-    Démarrez le **Viewer Installer** et suivez les étapes.
-  </Step>
-</Steps>
-
-***
-
-## **Connectivité à distance de l'appareil**
-
-**Vous pouvez gérer l'appareil à distance sans connecter de clavier ou de souris.**
-
-### **1. VNC Viewer**
-
-**Comment se connecter :**
-
-1. Téléchargez et installez **VNC Viewer** sur votre **PC**.
-2. Saisissez l'**adresse IP** du **Compute Module 4**.
-
-### **2. Surveillance du serveur Cockpit (pour utilisateurs avancés)**
-
-**Cockpit est une interface web pour surveiller l'appareil.**\
-**Accès via navigateur :**
-
-```
-https://<hostnameofpi>:9090  
+```bash
+cd /sharp/controls
+sudo nano web-comms.py
 ```
 
-### **3. SSH (pour utilisateurs avancés)**
+Localisez la configuration CORS :
 
-**Vous pouvez vous connecter à l'appareil via SSH pour un accès en ligne de commande.**
+```python
+CORS(
+    app,
+    resources={r"/*": {"origins": "http://127.0.0.1"}},
+    methods=["GET", "POST"]
+)
+```
 
-***
+Remplacez `http://127.0.0.1` par l'URL de votre environnement PADS4.
 
-## **Fonctionnalités prises en charge et limitations**
+Par exemple :
 
-### **Fonctionnalités générales**
+```python
+CORS(
+    app,
+    resources={r"/*": {"origins": "https://pads4.contoso.com"}},
+    methods=["GET", "POST"]
+)
+```
 
-| Fonctionnalité | Description                                                                                                                 |
-| :------------: | --------------------------------------------------------------------------------------------------------------------------- |
-|        ✅       | **Mises à jour automatiques du logiciel** – Le Viewer se met à jour automatiquement lorsque le PADS4 Server est mis à jour. |
-|        ✅       | **Mode hors ligne** – Lit le contenu programmé pendant **7 jours** en mode hors ligne.                                      |
+Pour autoriser toutes les origines, utilisez :
 
-### **Fonctionnalités de l'appareil**
+```python
+resources={r"/*": {"origins": "*"}}
+```
 
-| Fonctionnalité | Description                                                                   |
-| :------------: | ----------------------------------------------------------------------------- |
-|        ✅       | **Mode portrait** – L'appareil ajuste automatiquement la rotation.            |
-|        ✅       | **Cluster Viewer** – Peut être utilisé dans une **configuration en cluster**. |
-|        ✅       | **Blocage de la télécommande** – Empêche le contrôle non autorisé de l'écran. |
-|        ✅       | **Éteindre l'écran** – Lorsqu'aucune présentation n'est programmée.           |
+Enregistrez le fichier et redémarrez l'appareil.
 
-### **Prise en charge vidéo et contenu**
+## Configuration du Viewer
 
-| Fonctionnalité | Description                                                                |
-| :------------: | -------------------------------------------------------------------------- |
-|        ✅       | **2 vidéos par page** – Prend en charge la lecture fluide.                 |
-|        ✅       | **Rotation, réflexion, inclinaison, retournement vidéo** – Pris en charge. |
-|        ✅       | **Streaming HTTP** – Pris en charge.                                       |
-|        ❌       | **Prise en charge des éléments Flash** – Non pris en charge.               |
+L'image Sharp/NEC contient un point de terminaison de configuration utilisé pour configurer le comportement de démarrage du navigateur.
 
-### **Gestion des appareils**
+Open:
 
-| Fonctionnalité | Description                                          |
-| :------------: | ---------------------------------------------------- |
-|        ✅       | **Gestion à distance via PADS4 CTRL Center**         |
-|        ✅       | **Surveillance de l'état de connexion et alertes**   |
-|        ✅       | **Prise en charge du redémarrage** – Pris en charge. |
-|        ✅       | **Capture d'écran à distance**                       |
-|        ❌       | **Prise en charge de l'arrêt** – Non pris en charge. |
+```text
+http://<ip-address-or-hostname>/config
+```
 
-### **Limitations générales**
+Téléchargez le fichier de configuration.
 
-| Fonctionnalité | Description                                                                                                   |
-| :------------: | ------------------------------------------------------------------------------------------------------------- |
-|        ❌       | **Lecture de fichiers locaux** – Prend uniquement en charge les fichiers de la bibliothèque de contenu PADS4. |
-|        ❌       | **Stockage local des preuves de lecture** – Limité à **50 000 enregistrements**.                              |
-|        ❌       | **Prise en charge de PowerBI** – Non pris en charge.                                                          |
+**Identifiants par défaut**
 
-***
+| Paramètre         | Valeur             |
+| :---------------- | :----------------- |
+| Nom d'utilisateur | `user`             |
+| Mot de passe      | `CM@SHARPdisplays` |
 
-## **Étapes finales**
+Ouvrez le fichier de configuration dans un éditeur de texte et configurez les paramètres.
 
-**Votre PADS4 Viewer est maintenant installé et prêt à être utilisé ! 🎉**
+### host
 
-**Vérifiez le PADS4 Server pour les mises à jour de statut.**\
-**Ajustez les paramètres via le menu Viewer.**\
-**Utilisez l'accès à distance (VNC, Cockpit, SSH) pour une gestion avancée.**
+Spécifie le serveur PADS4.
+
+Valeurs possibles :
+
+* `127.0.0.1`
+* Adresse IP du serveur PADS4
+* Nom d'hôte du serveur PADS4
+
+Lorsqu'une adresse IP ou un nom d'hôte est spécifié, le Viewer attend que le serveur soit accessible.
+
+Lorsque `127.0.0.1` est spécifié, le Viewer démarre même lorsque l'appareil est hors ligne.
+
+> **Remarque**
+>
+> L'utilisation de `127.0.0.1` nécessite que l'application Viewer soit hébergée via HTTPS.
+
+### auto\_close\_browser
+
+Valeur recommandée :
+
+```text
+false
+```
+
+### wait\_for\_time\_server
+
+Lorsqu'il est activé, le Viewer démarre uniquement après la synchronisation de l'heure.
+
+### url
+
+URL de l'application PADS4 Viewer.
+
+Example:
+
+```text
+https://<server>/pads4/apps/viewer/
+```
+
+### incognito\_mode
+
+Valeur recommandée :
+
+```text
+false
+```
+
+### autorefresh
+
+Valeur recommandée :
+
+```text
+false
+```
+
+### ntp\_server
+
+Spécifie le serveur NTP.
+
+Le serveur PADS4 peut également être utilisé comme serveur NTP.
+
+Téléversez le fichier de configuration modifié et redémarrez l'appareil.
+
+## Mise à jour du Viewer
+
+Après l'installation initiale, les mises à jour du Viewer sont installées automatiquement.
+
+Lorsque le serveur PADS4 est mis à niveau, le Viewer se met automatiquement à jour vers la version disponible sur le serveur.
+
+## Fonctionnalités prises en charge
+
+| Fonctionnalité                      | Prise en charge  |
+| :---------------------------------- | :--------------- |
+| Modèles d'affichage                 | Pris en charge   |
+| Mode Portrait                       | Pris en charge   |
+| HTTPS                               | Pris en charge   |
+| Texte                               | Pris en charge   |
+| Texte formaté                       | Pris en charge   |
+| Texte défilant                      | Pris en charge   |
+| Ligne                               | Pris en charge   |
+| Forme                               | Pris en charge   |
+| Tableau                             | Pris en charge   |
+| Bouton interactif                   | Pris en charge   |
+| Capture d'écran                     | Pris en charge   |
+| Contenu web                         | Pris en charge\* |
+| Couleurs                            | Pris en charge\* |
+| Liaisons de propriétés              | Pris en charge   |
+| Variables du Viewer                 | Pris en charge   |
+| Règles                              | Pris en charge   |
+| Bibliothèque de contenu hors ligne  | Pris en charge   |
+| Planifications hors ligne           | Pris en charge   |
+| Données hors ligne                  | Pris en charge   |
+| Mises à jour automatiques du Viewer | Pris en charge   |
+| Éteindre l'écran                    | Pris en charge   |
+| PADS4 Ctrl Center                   | Pris en charge   |
+
+\* La barre d'adresse interactive n'est pas prise en charge.
+
+\* Les couleurs de texture et de motif ne sont pas prises en charge.
+
+## Prise en charge vidéo
+
+| Fonctionnalité | Prise en charge    |
+| :------------- | :----------------- |
+| Lecture vidéo  | Pris en charge     |
+| Streaming HTTP | Pris en charge     |
+| Streaming RTP  | Non pris en charge |
+| Streaming RTSP | Non pris en charge |
+| Streaming MMS  | Non pris en charge |
+| Streaming UDP  | Non pris en charge |
+
+## Prise en charge des images
+
+| Format | Prise en charge |
+| :----- | :-------------- |
+| JPG    | Pris en charge  |
+| PNG    | Pris en charge  |
+| SVG    | Pris en charge  |
+| GIF    | Pris en charge  |
+
+## Fonctionnalités non prises en charge
+
+| Fonctionnalité                           |
+| :--------------------------------------- |
+| Bloquer la télécommande                  |
+| Flash                                    |
+| LED                                      |
+| NFC                                      |
+| Wake-on-LAN                              |
+| Arrêter l'appareil depuis le Ctrl Center |
+
+## Prise en charge du PADS4 Ctrl Center
+
+Fonctionnalités prises en charge :
+
+* Capture d'écran
+* Journal du Viewer
+* Journal de synchronisation
+* Paramètres du Viewer
+* Informations système
+* Boîte noire du Viewer
+* Proof of Play
+* Actualiser l'appareil
+* Redémarrer l'appareil
+* Variables du Viewer
+* Surveillance & Alertes
+* État de connexion actuel
+
+## \\
+
+\
+**Fonctionnalités prises en charge & Limitations**
+
+### [**​**](https://docs.pads4.com/certified-devices/sharpnec/Compute-Module-4#general-features)
+
+**Fonctionnalités générales**
+
+| **Fonctionnalité** | **Description**                                                                                                              |
+| :----------------: | :--------------------------------------------------------------------------------------------------------------------------- |
+|          ✅         | **Mises à jour automatiques du logiciel** – Le Viewer se met à jour automatiquement lorsque le serveur PADS4 est mis à jour. |
+|          ✅         | **Mode hors ligne** – Lit le contenu planifié pendant **7 jours** en mode hors ligne.                                        |
+
+### [**​**](https://docs.pads4.com/certified-devices/sharpnec/Compute-Module-4#device-features)
+
+**Fonctionnalités de l'appareil**
+
+| **Fonctionnalité** | **Description**                                                               |
+| :----------------: | :---------------------------------------------------------------------------- |
+|          ✅         | **Mode Portrait** – L'appareil ajuste automatiquement la rotation.            |
+|          ✅         | **Cluster Viewer** – Peut être utilisé dans une **configuration en cluster**. |
+|          ✅         | **Bloquer la télécommande** – Empêcher le contrôle non autorisé de l'écran.   |
+|          ✅         | **Éteindre l'écran** – Lorsqu'aucune présentation n'est planifiée.            |
+
+### [**​**](https://docs.pads4.com/certified-devices/sharpnec/Compute-Module-4#video-&-content-support)
+
+**Prise en charge des vidéos & du contenu**
+
+| **Fonctionnalité** | **Description**                                                               |
+| :----------------: | :---------------------------------------------------------------------------- |
+|          ✅         | **2 vidéos par page** – Prend en charge la lecture fluide.                    |
+|          ✅         | **Rotation, réflexion, inclinaison, retournement de vidéo** – Pris en charge. |
+|          ✅         | **Streaming HTTP** – Pris en charge.                                          |
+|          ❌         | **Prise en charge des éléments Flash** – Non pris en charge.                  |
+
+### [**​**](https://docs.pads4.com/certified-devices/sharpnec/Compute-Module-4#device-management)
+
+**Gestion des appareils**
+
+| **Fonctionnalité** | **Description**                                      |
+| :----------------: | :--------------------------------------------------- |
+|          ✅         | **Gestion à distance via PADS4 CTRL Center**         |
+|          ✅         | **Surveillance de l'état de connexion & Alertes**    |
+|          ✅         | **Prise en charge du redémarrage** – Pris en charge. |
+|          ✅         | **Capture de capture d'écran à distance**            |
+|          ❌         | **Prise en charge de l'arrêt** – Non pris en charge. |
+
+### [**​**](https://docs.pads4.com/certified-devices/sharpnec/Compute-Module-4#general-limitations)
+
+**Limitations générales**
+
+| **Fonctionnalité** | **Description**                                                                                               |
+| :----------------: | :------------------------------------------------------------------------------------------------------------ |
+|          ❌         | **Lecture de fichiers locaux** – Prend uniquement en charge les fichiers de la bibliothèque de contenu PADS4. |
+|          ❌         | **Stockage local du Proof of Play** – Limité à **50 000 enregistrements**.                                    |
+|          ❌         | **Prise en charge de PowerBI** – Non pris en charge.                                                          |
+
+## Fonctionnalités prises en charge & Limitations
+
+### Fonctionnalités générales
+
+### Fonctionnalités de l'appareil
+
+### Prise en charge des vidéos & du contenu
+
+### Gestion des appareils
+
+### Limitations générales
