@@ -1,74 +1,81 @@
-Les variables de visualisation, également connues sous le nom de **Dynamic Filtering**, vous permettent de créer un **contenu d'affichage dynamique intelligent et efficace**. Au lieu de concevoir plusieurs présentations pour différents visualiseurs, vous pouvez utiliser les variables de visualisation pour adapter automatiquement le contenu en fonction de valeurs prédéfinies.
+---
+- title: Viewer Variables et filtrage dynamique
+- description: Utilisez les Viewer Variables dans PADS4 CTRL Center pour filtrer
+    dynamiquement le contenu par affichage, comme les numéros de salle, afin
+    qu'une seule présentation serve de nombreux viewers.
+---
+
+Les variables Viewer, également connues sous le nom de **Filtrage dynamique**, vous permettent de créer du **contenu de signalétique numérique intelligent et efficace**. Au lieu de concevoir plusieurs présentations pour différents spectateurs, vous pouvez utiliser les variables Viewer pour adapter automatiquement le contenu en fonction de valeurs prédéfinies.
 
 ***
 
 ## **Exemple de salle de réunion**
 
-Imaginez la gestion de 50 panneaux de porte de salle de réunion dans votre réseau d'affichage dynamique. Chaque panneau affiche un numéro de salle unique. Traditionnellement, vous auriez besoin de 50 présentations distinctes.
+Imaginez gérer 50 panneaux de porte de salle de réunion dans votre réseau de signalétique numérique. Chaque panneau affiche un numéro de salle unique. Traditionnellement, vous auriez besoin de 50 présentations distinctes.
 
-Avec les variables de visualisation, vous concevez une seule présentation et laissez le système insérer dynamiquement le numéro de salle correct pour chaque écran.
+Avec les variables Viewer, vous concevez une seule présentation et laissez le système insérer dynamiquement le numéro de salle correct pour chaque affichage.
 
 ***
 
-## **Création d'une variable de visualisation**
+## **Créer une variable Viewer**
 
 ### **Steps:**
 
 1. Ouvrez PADS4 CTRL Center.
-2. Allez dans la catégorie de menu **Viewers**.
+2. Accédez à la **Viewers** catégorie de menu.
 3. Sélectionnez **Variables** dans la section qui s'ouvre.
-4. Créez une nouvelle variable de visualisation :
+4. Créez une nouvelle variable Viewer :
    * Entrez un nom, par exemple, **MeetingRoomName**.
    * Cliquez sur **Create** pour ajouter la variable.
 5. Maintenant, chaque **Viewer** peut avoir sa propre valeur unique pour **MeetingRoomName**.
 
 ***
 
-## **Conception d'une présentation avec des variables de visualisation**
+## **Conception d'une présentation avec les Viewer Variables**
 
 1. Créez un champ de texte dans PADS4 Designer.
-2. Insérez la variable de visualisation comme **#MeetingRoomName#**.
-3. Planifiez la présentation pour vos visualiseurs.
+2. Insérez la Viewer Variable sous la forme **#MeetingRoomName#**.
+3. Planifiez la présentation sur vos Viewers.
 
-Chaque visualiseur affichera son **Meeting Room Name** attribué sans nécessiter de présentations séparées.
+Chaque Viewer affichera le **Meeting Room Name** qui lui est attribué sans avoir besoin de présentations séparées.
 
 ***
 
 ## **Adaptation dynamique du contenu**
 
-Les variables de visualisation ne se limitent pas aux numéros de salle. Vous pouvez les utiliser pour :
+Les Viewer Variables ne se limitent pas aux numéros de salle. Vous pouvez les utiliser pour :
 
 * Données basées sur la localisation
 * Panneaux directionnels
 * Adresses IP
-* Heures d'ouverture
+* Horaires d'ouverture
 * Messages personnalisés
 
 ### **Example: SQL Integration**
 
-Si vous récupérez des données d'une base de données, vous pouvez insérer des Variables Viewer dans les requêtes SQL :
+Si vous récupérez des données depuis une base de données, vous pouvez insérer des Viewer Variables dans des requêtes SQL :
 
 ```sql
 SELECT * FROM Table WHERE [field1] = #MeetingRoomName#
 ```
 
-Cela garantit que la requête filtre dynamiquement les données en fonction de la Variable Viewer.
+Cela garantit que la requête filtre dynamiquement les données en fonction de la Viewer Variable.
 
 ***
 
-## **Où les Variables Viewer peuvent-elles être utilisées ?**
+## **Où les Viewer Variables peuvent-elles être utilisées ?**
 
 * Champs de texte dans les présentations
 * Requêtes SQL dans les fournisseurs de données
 * Éléments de playlist pour la rotation dynamique du contenu
 
-Viewer Variables**ne peuvent pas** être utilisées dans les champs de mot de passe.
+Les Viewer Variables **ne peuvent pas** être utilisées dans les champs de mot de passe.
 
 ***
 
-## **Comment fonctionnent les Variables Viewer**
+## **Fonctionnement des Viewer Variables**
 
-PADS4 analyse automatiquement tous les textes pour détecter les Variables Viewer (formatées comme `#VariableName#`) et les remplace par les valeurs assignées.
+PADS4 analyse automatiquement tout le texte à la recherche de Viewer Variables (formatées sous la forme `#VariableName#`) et les remplace par les valeurs attribuées.
 
 Si un **nom de salle de réunion** change, il suffit de mettre à jour la valeur dans **Viewer Variables**—il n'est pas nécessaire de modifier la présentation.
 
@@ -76,4 +83,4 @@ Si un **nom de salle de réunion** change, il suffit de mettre à jour la valeur
 
 ## **Conclusion**
 
-Les Variables Viewer simplifient la gestion du contenu en permettant une personnalisation dynamique sur plusieurs Viewers. Cela garantit un système d'affichage dynamique évolutif, efficace et flexible avec un minimum de mises à jour manuelles.
+Les Viewer Variables simplifient la gestion du contenu en permettant une personnalisation dynamique sur plusieurs Viewers. Cela garantit un système d'affichage dynamique évolutif, efficace et flexible avec un minimum de mises à jour manuelles.

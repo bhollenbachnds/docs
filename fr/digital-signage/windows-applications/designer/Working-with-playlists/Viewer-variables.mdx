@@ -1,113 +1,113 @@
-**Variables du Viewer** permettent la personnalisation dynamique du contenu en remplaçant des espaces réservés par des valeurs en temps réel pour chaque **Viewer**. Ces variables peuvent être utilisées dans **les champs de texte, les fournisseurs de données, les règles, les filtres et d'autres éléments**, garantissant que le contenu affiché est spécifique à chaque Viewer sans nécessiter de présentations séparées.
+**Variables du Viewer** permettent la personnalisation dynamique du contenu en remplaçant les espaces réservés par des valeurs en temps réel pour chaque **Viewer**. Ces variables peuvent être utilisées dans les **champs de texte, fournisseurs de données, règles, filtres et autres éléments**, garantissant que le contenu affiché est spécifique à chaque Viewer sans nécessiter de présentations séparées.
 
 ***
 
-## **Gestion des Variables du Viewer**
+## **Gestion des variables du Viewer**
 
-### **System Management (Niveau Administrateur)**
+### **Gestion du système (niveau administrateur)**
 
-* Les Variables du Viewer sont créées dans **PADS4 System Management**.
-* Chaque variable a une **valeur par défaut** assignée.
+* Les variables du Viewer sont créées dans **PADS4 System Management**.
+* Chaque variable possède une **valeur par défaut** assignée.
 * Ces variables s'appliquent à tous les Viewers sauf si elles sont remplacées.
 * Les utilisateurs **ne peuvent pas ajouter ou supprimer des variables** via **PADS4 Agent**.
 
-### **PADS4 Agent (Niveau Utilisateur)**
+### **PADS4 Agent (niveau utilisateur)**
 
-* Les variables du Viewer peuvent être **modifiées** via **PADS4 Agent (onglet Server)**.
+* Les variables du Viewer peuvent être **modifiées** via **PADS4 Agent (onglet Serveur)**.
 * Les modifications effectuées ici **écrasent** les valeurs par défaut définies dans **System Management**.
 
-### **Options du Viewer (Ajustement Local)**
+### **Options du Viewer (ajustement local)**
 
 * La **fenêtre Options du Viewer** dans l'application **PADS4 Viewer** permet des **ajustements locaux**.
 * Ces modifications **remplacent à la fois les paramètres de System Management et de PADS4 Agent**.
 
 ***
 
-## **Utilisation des Variables du Viewer**
+## **Utilisation des variables du Viewer**
 
-### **Comment les Variables du Viewer sont identifiées**
+### **Comment les variables du Viewer sont identifiées**
 
-* Une Variable du Viewer s'écrit comme `#VariableName#`.
+* Une variable du Viewer s'écrit comme `#VariableName#`.
 * Example: `#Store Name#`.
 
-### **Utilisation des Variables du Viewer dans les éléments textuels**
+### **Utilisation des variables du Viewer dans les éléments de texte**
 
 * Example:
-  * **System Management:** `#Store Name# = New York Health`
-  * **Élément de texte:** `Welcome to #Store Name#!`
-  * **Sortie affichée:** `Welcome to New York Health!`
+  * **System Management :** `#Store Name# = New York Health`
+  * **Élément de texte :** `Welcome to #Store Name#!`
+  * **Résultat affiché :** `Welcome to New York Health!`
 
-Cette méthode permet **d'utiliser une seule présentation à travers plusieurs emplacements** tout en ajustant dynamiquement le texte.
+Cette méthode permet d'utiliser **une seule présentation sur plusieurs emplacements** tout en ajustant dynamiquement le texte.
 
 ***
 
-## **Où les Variables du Viewer peuvent-elles être utilisées?**
+## **Où les variables du Viewer peuvent-elles être utilisées ?**
 
 ### **Champs basés sur du texte**
 
-* Contenu textuel des playlists.
+* Contenu textuel de la playlist.
 * Conditions des règles.
 * Liaisons de propriétés.
-* Connexions aux fournisseurs de données.
+* Connexions des fournisseurs de données.
 
 ### **Fournisseurs de données**
 
-* Utilisées dans **le tri, le filtrage, les expressions, les références de fichiers, les paramètres, les requêtes SQL**.
+* Utilisé dans **tri, filtrage, expressions, références de fichiers, paramètres, requêtes SQL**.
 
-### **Cas d'utilisation pour l'automatisation**
+### **Cas d'utilisation de l'automatisation**
 
-* **Filtrage par taille de magasin:**
-  * Si un magasin a une **Variable du Viewer pour la taille** (`L, XL, XXL`), seuls les produits pertinents pour cette taille sont affichés.
-* **Contenu basé sur la localisation:**
-  * Une **Variable du Viewer basée sur le GPS** permet **d'afficher des cartes ou des publicités spécifiques à l'emplacement**.
-* **Une seule présentation pour plusieurs Viewers:**
-  * Au lieu de créer plusieurs présentations, **une seule présentation peut être utilisée avec des Variables du Viewer** pour modifier **dynamiquement les noms de magasins, les adresses ou les promotions**.
-
-***
-
-## **Quand NE PAS utiliser les Variables du Viewer**
-
-* **Pour des mises à jour continues en temps réel** (par exemple, des cours boursiers qui changent rapidement).
-* Dans ces cas, un **fournisseur de données** devrait être utilisé à la place.
+* **Filtrage par taille de magasin :**
+  * Si un magasin possède une **Variable Viewer pour la taille** (`L, XL, XXL`), seuls les produits correspondant à cette taille sont affichés.
+* **Contenu basé sur la localisation :**
+  * Une **Variable Viewer basée sur le GPS** permet **l'affichage de cartes ou de publicités spécifiques à un lieu**.
+* **Une seule présentation pour plusieurs Viewers :**
+  * Au lieu de créer plusieurs présentations, **une seule présentation peut être utilisée avec des Variables Viewer** pour modifier **les noms de magasins, adresses ou promotions de manière dynamique**.
 
 ***
 
-## **Quand les Variables du Viewer sont-elles mises à jour?**
+## **Quand NE PAS utiliser les Variables Viewer**
 
-### **À l'intérieur de la source de données**
+* **Pour les mises à jour en temps réel continues** (par ex., des cours boursiers changeant rapidement).
+* Dans ces cas, un **fournisseur de données** doit être utilisé à la place.
 
-* Lorsque le **Viewer récupère des données**, les **variables sont remplacées immédiatement**.
+***
+
+## **Quand les Variables Viewer sont-elles mises à jour ?**
+
+### **Dans la source de données**
+
+* Lorsque le **Viewer récupère les données**, les **variables sont remplacées immédiatement**.
 * Si le **fournisseur de données se met à jour**, les **nouvelles valeurs sont appliquées**.
 
 ### **Dans les fournisseurs de données**
 
-* Si une **Variable du Viewer** est utilisée dans **des filtres, des tris ou des requêtes**, elle est **remplacée au début de la récupération des données**.
-* Si un fournisseur de données **se met à jour une fois par heure**, **les Variables du Viewer ne se mettent à jour qu'après le prochain cycle de lecture**.
+* Si une **Variable Viewer** est utilisée dans **des filtres, du tri ou des requêtes**, elle est **remplacée au début de la récupération des données**.
+* Si un fournisseur de données **se met à jour une fois par heure**, **les Variables Viewer ne se mettent à jour qu'après le prochain cycle de lecture**.
 
 ### **Dans les présentations**
 
-* Lorsqu'une **présentation se charge**, **les Variables du Viewer dans les éléments (texte, images, vidéos) sont remplacées**.
+* Lorsqu'une **présentation se charge**, **les Variables Viewer dans les éléments (texte, images, vidéos) sont remplacées**.
 
 ### **Dans les règles**
 
-* **Les Variables du Viewer dans les règles** sont remplacées **uniquement lorsque la règle est vérifiée**.
-* **Les vérifications de règles ne se déclenchent pas automatiquement** si une Variable du Viewer change.
+* **Les Variables Viewer dans les règles** sont remplacées **uniquement lorsque la règle est vérifiée**.
+* **Les vérifications de règles ne se déclenchent pas automatiquement** si une Variable Viewer change.
 
 ### **Dans les liaisons de propriétés**
 
-* Si un **fournisseur de données se met à jour à un intervalle défini**, les **nouvelles valeurs des Variables du Viewer remplacent les anciennes**.
-* Cependant, modifier une Variable du Viewer **ne force pas le fournisseur de données à se rafraîchir**.
+* Si un **fournisseur de données se met à jour à un intervalle défini**, les **nouvelles valeurs des Variables Viewer remplacent les anciennes**.
+* Cependant, modifier une Variable Viewer **ne force pas le fournisseur de données à se rafraîchir**.
 
 ### **Dans les playlists**
 
-* Si la **playlist ne contient qu'un seul élément**, la **Variable du Viewer n'est remplacée qu'une seule fois** (elle ne se met pas à jour).
-* Si **l'alternance de playlist est activée**, la **Variable du Viewer est remplacée par de nouvelles valeurs après chaque intervalle**.
+* Si la **playlist ne contient qu'un seul élément**, la **Variable Viewer n'est remplacée qu'une seule fois** (elle ne se met pas à jour).
+* Si **l'alternance de playlist est activée**, la **Variable Viewer est remplacée par de nouvelles valeurs après chaque intervalle**.
 
 ***
 
-## **Principaux avantages des Variables du Viewer**
+## **Principaux avantages des Variables Viewer**
 
-* **Une présentation peut être utilisée à travers plusieurs emplacements**, réduisant la duplication.
-* **Personnalisation automatisée du contenu**, comme les noms et emplacements des magasins.
+* **Une seule présentation peut être utilisée sur plusieurs sites**, réduisant la duplication.
+* **Personnalisation automatisée du contenu**, comme les noms et emplacements de magasins.
 * **Fonctionne parfaitement avec les fournisseurs de données, les filtres et les règles**.
-* **Mises à jour efficaces sans reconcevoir les présentations**.
+* **Mises à jour efficaces sans avoir à reconcevoir les présentations**.

@@ -1,0 +1,46 @@
+---
+- title: PADS4 Set-up
+- description: Saisissez les valeurs Azure et Communication Services que vous avez
+    collectées dans PADS4 CTRL Center pour finaliser l'intégration Microsoft
+    Teams.
+---
+
+Une fois l'enregistrement de l'application Azure, la ressource Communication Services et les licences utilisateur en place, vous pouvez finaliser l'intégration Microsoft Teams dans PADS4 CTRL Center.
+
+## Avant de commencer
+
+Assurez-vous d'avoir complété :
+
+* [Azure Set-up](/fr/ctrl-centre/administration/azure-set-up) — enregistrement de l'application, portée et secret client.
+* [Azure Communication Services](/fr/ctrl-centre/administration/azure-communication-services) — ressource et chaîne de connexion principale.
+* [Licensing](/fr/ctrl-centre/administration/licensing) — licences Microsoft 365 requises attribuées aux utilisateurs.
+
+## Valeurs à collecter
+
+Collectez les valeurs suivantes avant d'ouvrir PADS4 CTRL Center :
+
+| Valeur                                  | Où la trouver                             |
+| :-------------------------------------- | :---------------------------------------- |
+| **Application (Client) ID**             | App Registration > Overview               |
+| **Directory (Tenant) ID**               | App Registration > Overview               |
+| **Client secret**                       | App Registration > Certificates & secrets |
+| **Nom de la portée**                    | App Registration > Expose an API          |
+| **Chaîne de connexion de clé primaire** | Communication Services > Keys             |
+
+## Finaliser l'intégration dans PADS4 CTRL Center
+
+1. Connectez-vous à **PADS4 CTRL Center** en tant qu'administrateur.
+2. Ouvrez Credentials.
+3. Cliquez sur Providers et sélectionnez New.
+4. Sélectionnez les **Microsoft Teams integration** paramètres.
+5. Saisissez chaque valeur du tableau ci-dessus.
+6. Enregistrez la configuration.
+7. Vérifiez la connexion en rejoignant une réunion Teams via PADS4.
+
+<Check>
+  Si la réunion de test se connecte avec succès, l'intégration Microsoft Teams est entièrement configurée.
+</Check>
+
+<Tip>
+  Si la connexion échoue, vérifiez à nouveau le secret client (il ne peut être copié qu'au moment de sa création) et confirmez que l'utilisateur concerné dispose à la fois des licences Exchange Online (Plan 2) et Microsoft Teams.
+</Tip>

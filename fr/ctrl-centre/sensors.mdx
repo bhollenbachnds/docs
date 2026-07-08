@@ -1,0 +1,79 @@
+---
+- title: Capteurs
+---
+
+Le **Sensors** fonctionnalité dans PADS4 vous permet d'intégrer **des caméras, des logiciels de gestion de caméras et d'autres appareils** qui génèrent des données en temps réel. Ces données peuvent être utilisées dans PADS4 pour déclencher **des incidents** ou créer **des règles** qui affectent les présentations d'affichage dynamique.
+
+## **Capteurs certifiés**
+
+Certains capteurs, notamment les caméras, peuvent fournir **des mesures d'audience** et **des données de perception faciale**, notamment :
+
+* Nombre de personnes détectées
+* Estimation du groupe d'âge
+* Identification du genre
+* Attributs faciaux (par exemple, présence d'une barbe)
+* Si une personne porte un masque
+
+Les **fonctionnalités disponibles dépendent du modèle de capteur**. Certains appareils nécessitent **un logiciel tiers** pour l'intégration. Pour une liste des appareils pris en charge, consultez la **page des capteurs certifiés**.
+
+Ces données de capteurs peuvent être utilisées dans PADS4 pour **déclencher des incidents** et **appliquer des règles** dans les présentations en fonction d'informations en temps réel.
+
+## **Aperçu des capteurs dans PADS4**
+
+La **Vue d'ensemble** affiche tous les **Capteurs** ajoutés. Un **indicateur vert** à côté d'un capteur signifie que PADS4 a établi une connexion réussie.
+
+### **Ajout d'un nouveau capteur**
+
+Pour ajouter un capteur, suivez ces étapes :
+
+1. Cliquez sur **+ New** dans la section **Vue d'ensemble**.
+2. Sélectionnez le **type de capteur** (par exemple, Caméra, Logiciel de gestion de capteurs).
+3. Choisissez le **modèle spécifique ou le type de logiciel**.
+4. (Facultatif) Ajoutez une **description** et un **emplacement** pour une identification facile.
+5. Fournissez le **nom d'hôte et les identifiants** pour permettre à PADS4 de se connecter au capteur.
+
+## **Utilisation des zones pour regrouper les capteurs**
+
+Une **Zone** est un **regroupement physique ou logique de plusieurs capteurs**. Cela est utile pour **combiner plusieurs caméras de comptage de personnes** afin de suivre le nombre total de visiteurs sur plusieurs points d'entrée.
+
+### **Création d'une nouvelle zone**
+
+1. Cliquez sur **+ New** dans la section **Zone**.
+2. Attribuez un **nom** à la Zone.
+3. (Facultatif) Fournissez une **description**.
+4. Sélectionnez un ou plusieurs **Capteurs** à inclure.
+   * Les capteurs **peuvent être assignés à plusieurs zones** si nécessaire.
+5. Définissez des **Règles d'incident** pour la Zone.
+   * Lorsqu'une condition de règle est remplie, **un incident est généré** dans le **PADS4 CTRL Center**.
+
+## **Configuration des règles d'incident pour les capteurs**
+
+Les règles d'incident permettent **la détection automatisée de conditions spécifiques** et déclenchent des alertes. Ces règles peuvent être appliquées aux zones pour améliorer la sécurité, la conformité ou l'efficacité opérationnelle.
+
+### **Règles d'incident disponibles**
+
+| **Règle**                       | **Description**                                                                                                                                   |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Pas de masque**               | Si la caméra prend en charge la détection de masque, un incident est créé lorsqu'une personne sans masque est détectée.                           |
+| **Nombre maximum de personnes** | Déclenche un incident si le nombre de personnes dans une zone dépasse la limite définie.                                                          |
+| **Température maximale**        | Déclenche un incident si la température corporelle détectée dépasse un seuil spécifié.                                                            |
+| **Alarmes Milestone**           | Permet l'intégration avec le **système de gestion vidéo Milestone** pour déclencher des incidents basés sur des conditions de caméra prédéfinies. |
+
+**Remarques importantes :**
+
+* Assurez-vous que les **valeurs de température** correspondent aux **paramètres d'unité (Celsius ou Fahrenheit) de la caméra**.
+* Pour les **alarmes Milestone**, définissez le nom de l'alarme dans PADS4 pour qu'il corresponde à celui utilisé dans **Milestone**.
+
+## **Incidents dans PADS4**
+
+Les incidents détectés par les capteurs sont gérés dans le **PADS4 CTRL Center**. Pour plus de détails, consultez la page **Comment utiliser les incidents**.
+
+## **Utilisation des données de capteurs dans PADS4 Designer**
+
+PADS4 permet **l'intégration des données de capteurs** dans les présentations d'affichage dynamique. Les options disponibles comprennent :
+
+* **Déclencheurs basés sur des événements** provenant de caméras avec reconnaissance faciale détaillée.
+* **Données au niveau de la zone** agrégées à partir de plusieurs capteurs.
+* **Déclencheurs basés sur des incidents** pour des ajustements de contenu dynamiques.
+
+En utilisant les **données de capteurs**, vous pouvez créer des **expériences réactives en temps réel** d'affichage dynamique basées sur **les conditions environnementales réelles**.

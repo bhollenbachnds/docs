@@ -1,6 +1,6 @@
-La **homepage** du PADS4 Visitor Management System (VMS) fournit une vue d'ensemble des visiteurs actifs et pré-enregistrés, des actions système, et un accès aux fonctionnalités principales telles que la **user creation**, les **archives**, et les **settings**.
+La **page d'accueil** du PADS4 Visitor Management System (VMS) fournit une vue d'ensemble des visiteurs actifs et pré-enregistrés, des actions système, et donne accès aux fonctionnalités principales telles que la **création d'utilisateurs**, **les archives**, et les **paramètres**.
 
-Ce tableau de bord central sert de point de départ pour gérer les entrées des invités, configurer l'environnement et gérer les enregistrements le jour même.
+Ce tableau de bord central constitue votre point de départ pour gérer les entrées des invités, configurer l'environnement et gérer les enregistrements le jour même.
 
 ***
 
@@ -9,52 +9,52 @@ Ce tableau de bord central sert de point de départ pour gérer les entrées des
 Depuis la page d'accueil, vous pouvez :
 
 * **Créer une nouvelle entrée de visiteur**
-* **Consulter les enregistrements archivés des invités**
-* **Accéder aux paramètres du système**
+* **Consulter les dossiers d'invités archivés**
+* **Accéder aux paramètres système**
 
-Nous allons commencer par vous guider à travers le processus de création d'un nouvel utilisateur.
+Nous allons commencer par parcourir le processus de création d'un nouvel utilisateur.
 
 ***
 
 ## Options du tableau de bord en haut à droite
 
-* **Language Selection** : PADS4 VMS prend en charge **English** et **French**.
-* **Logout** : Utilisez **user icon** dans le coin supérieur droit pour vous déconnecter en toute sécurité du système.
+* **Sélection de la langue** : PADS4 VMS prend en charge **l'anglais** et **le français**.
+* **Déconnexion**: Utilisez l'**icône utilisateur** dans le coin supérieur droit pour vous déconnecter du système en toute sécurité.
 
 ***
 
 ## Création d'une nouvelle entrée de visiteur
 
-Pour créer un nouveau visiteur, les champs suivants sont **required** :
+Pour créer un nouveau visiteur, les champs suivants sont **obligatoires**:
 
-* **Email Address**
-* **Assigned Host** (de Workspace)
-* **Assigned Building** (de Workspace)
+* **Adresse e-mail**
+* **Hôte assigné** (depuis Workspace)
+* **Bâtiment assigné** (depuis Workspace)
 
 ### Champs optionnels :
 
-* First Name / Last Name
-* Company Name
-* Visit Purpose
-* Expected Arrival and Departure Time
+* Prénom / Nom
+* Nom de l'entreprise
+* Objet de la visite
+* Heure d'arrivée et de départ prévues
 
-### Notification par e-mail et auto-enregistrement
+### Notification par e-mail et auto-inscription
 
 Une fois le visiteur créé :
 
-* Il reçoit un **automated email** avec les instructions d'enregistrement.
-* L'e-mail comprend un **lien de pré-inscription**, leur permettant de :
-  * Modifier leurs informations personnelles (nom, entreprise, etc.)
-  * Confirmer leur présence
-* Les visiteurs pré-inscrits peuvent **se valider** sur place à l'aide d'un code QR ou d'un code PIN.
+* Il reçoit un **e-mail automatique** avec les instructions d'enregistrement.
+* L'e-mail contient un **lien de pré-inscription**, lui permettant de :
+  * Modifier ses informations personnelles (nom, entreprise, etc.)
+  * Confirmer sa présence
+* Les visiteurs pré-enregistrés peuvent **se valider eux-mêmes** sur place à l'aide d'un QR code ou d'un code PIN.
 
 ***
 
-## Inscription sur place (Lien Kiosque VMS)
+## Inscription sur site (lien du kiosque VMS)
 
-Pour l'enregistrement autonome sur place :
+Pour l'auto-enregistrement sur site :
 
-Déployez **des tablettes interactives, des ordinateurs portables ou des PADS4 Viewers** avec des navigateurs configurés pour ouvrir l'**URL du Kiosque VMS** :
+Déployez des **tablettes interactives, ordinateurs portables ou PADS4 Viewers** avec des navigateurs configurés pour ouvrir l'**URL du kiosque VMS**:
 
 ```
 https://yourpads4domain.com/VMS/Kiosk/welcome
@@ -66,8 +66,8 @@ ou
 http://<public-ip>/VMS/Kiosk/welcome
 ```
 
-> **Important (PADS4 version 2022.3 et plus récente) :**\
-> Utilisez la **structure d'URL spécifique au domaine correcte** pour éviter les problèmes de licence dans les environnements multi-domaines :
+> **Important (PADS4 version 2022.3 et ultérieure) :**\
+> Utilisez la **structure d'URL correcte spécifique au domaine** pour éviter les problèmes de licence dans les environnements multi-domaines :
 
 ```
 https://serverlocation/VMS/Kiosk/domain
@@ -81,28 +81,28 @@ https://serverlocation/VMS/Kiosk/pads
 
 ***
 
-## Enregistrement par Code QR ou PIN
+## Enregistrement par QR code ou PIN
 
-Les visiteurs peuvent s'enregistrer en utilisant soit :
+Les visiteurs peuvent s'enregistrer en utilisant :
 
-* Un **Code QR** (appareils équipés d'une caméra requis)
+* Un **QR code** (appareils avec caméra requis)
 * Un **PIN attribué aléatoirement**
 
-> Les navigateurs demanderont l'autorisation d'accéder à la caméra si le scan de code QR est utilisé. Navigateurs pris en charge : Chrome, Edge, Firefox, Internet Explorer.
+> Les navigateurs demanderont l'autorisation d'accéder à la caméra si le scan de QR code est utilisé. Navigateurs pris en charge : Chrome, Edge, Firefox, Internet Explorer.
 
 ***
 
 ## Boutons d'action du tableau de bord
 
-Une fois qu'un utilisateur est enregistré, les actions suivantes sont disponibles via le **Bouton d'Action** :
+Une fois un utilisateur enregistré, les actions suivantes sont disponibles via le **Bouton d'action**:
 
 ### Pour tous les utilisateurs enregistrés :
 
-* **Enregistrement manuel** – Enregistrer directement l'utilisateur depuis le tableau de bord.
-* **Modifier l'utilisateur** – Mettre à jour les détails personnels et les informations de contact.
-* **Supprimer l'utilisateur** – Retirer l'utilisateur du système.
+* **Enregistrement manuel** – Enregistrez directement l'utilisateur depuis le tableau de bord.
+* **Modifier l'utilisateur** – Mettre à jour les informations personnelles et les coordonnées.
+* **Supprimer l'utilisateur** – Supprimer l'utilisateur du système.
 
 ### Pour les utilisateurs enregistrés :
 
-* **Imprimer un badge d'identification** – Télécharger ou imprimer un badge visiteur personnalisé. Le style du badge peut être configuré sous l'onglet **Paramètres**.
-* **Départ manuel** – Déconnecter l'utilisateur lorsque sa visite est terminée.
+* **Imprimer le badge d'identité** – Téléchargez ou imprimez un badge visiteur personnalisé. Le style du badge peut être configuré dans l'onglet **Paramètres**.
+* **Départ manuel** – Déconnectez l'utilisateur lorsque sa visite est terminée.
