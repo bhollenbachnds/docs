@@ -327,12 +327,6 @@
                     ]
                   },
                   {
-                    "group": "FIDS",
-                    "pages": [
-                      "fids"
-                    ]
-                  },
-                  {
                     "group": "Schedules",
                     "pages": [
                       "ctrl-centre/schedules"
@@ -398,7 +392,15 @@
                   },
                   {
                     "group": "Workspace",
-                    "pages": []
+                    "pages": [
+                      "pads-4-workspace"
+                    ]
+                  },
+                  {
+                    "group": "FIDS",
+                    "pages": [
+                      "fids"
+                    ]
                   }
                 ]
               },
