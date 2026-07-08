@@ -3,45 +3,51 @@ title: "PADS4 CTRL Center introduction"
 description: "Overview of the PADS4 CTRL Center web console used to manage, configure, and monitor your PADS4 deployment from a single interface."
 ---
 
-PADS4 CTRL Center is the central hub for managing and optimizing your PADS4 environment, providing an intuitive web interface to monitor, configure, and control your system.
+PADS4 CTRL Center is the central web console for administering your PADS4 environment. From a single interface you can monitor system status, configure integrations, manage users and permissions, and control connected components across every PADS4 module.
 
-## PADS4 CTRL Center overview
+## What you can do in CTRL Center
 
-PADS4 CTRL Center is a web-based management console used to administer and supervise your entire PADS4 deployment. Through this interface, you can monitor system status, adjust configuration settings, and control connected components from a single location.
+Use CTRL Center to:
 
-## Starting PADS4 CTRL Center
+- **Switch between PADS4 applications** you have access to (for example Design, CMS 2.0, Schedules and Workspace).
+- **Manage users and roles**, and review the effective permissions across Content, Viewers, and CMS 2.0.
+- **Configure** your PADS4 deployment — servers, integrations (Microsoft Teams, Power BI, and more), and credentials.
+- **Monitor playback and system health** for viewers and servers.
 
-To open PADS4 CTRL Center, enter the following URL in your browser:
+## Open CTRL Center
 
-`http(s)://servername:portnumber`
+Open a supported browser and go to:
 
-Use `https` in secured environments; in all other cases you can use `http`. The `servername` specifies the server where PADS4 CTRL Center is installed, and the `portnumber` is optional when the application is hosted on port 80.
+```text
+http(s)://<servername>:<portnumber>
+```
 
-<Card title="Supported web browsers" type="note">
-  PADS4 CTRL Center officially supports the following web browsers:
+- **servername** — the DNS name or IP address of the machine running PADS4 CTRL Center.
+- **portnumber** — optional. Include it only if CTRL Center is not hosted on the default HTTP/HTTPS port.
+- Use **https** in production or secured environments; **http** is only appropriate for internal test setups.
 
-  - Google Chrome
-  - Microsoft Edge
+<Note>
+  PADS4 CTRL Center officially supports **Google Chrome** and **Microsoft Edge**. Other browsers are not supported and may not function correctly.
+</Note>
 
-  Other browsers are not supported and may not function as expected
-</Card>
+## Log in
 
-## **Logging in to PADS4 CTRL Center**
-
-To log in to PADS4 CTRL Center, follow these steps:
-
-- Open a supported web browser and navigate to the PADS4 CTRL Center URL.
-- The PADS4 Login page is displayed.
-- Enter your Username and Password, then click Log In.
+1. Open a supported browser and navigate to the CTRL Center URL.
+2. On the PADS4 login page, enter your **username** and **password**.
+3. Select **Log in**.
 
 <img
   height="200"
   src="/images/ctrl-centre/login.png"
+  alt="PADS4 CTRL Center login page"
 />
 
-- When valid credentials are entered, the PADS4 CTRL Center homepage is displayed.
-- If you have permissions for more than one application, a list of available applications is shown. Select the application you want to open.
+4. If your account has access to more than one PADS4 application, choose the application you want to open from the app switcher.
 
 <Frame>
-  ![App Switcher](/images/CTRL-Center/App-switcher-1.png)
+  ![PADS4 application switcher after login](/images/CTRL-Center/App-switcher-1.png)
 </Frame>
+
+<Tip>
+  Use CTRL Center as your starting point for every task. From here you can jump directly to Credentials, User management, and the other PADS4 applications you have access to.
+</Tip>
