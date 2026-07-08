@@ -1,47 +1,51 @@
-**PADS4 CTRL Center** est votre hub central pour **gérer et optimiser** votre **PADS4 system**. Il fournit une interface conviviale pour **surveiller, configurer et contrôler** votre environnement PADS4 efficacement.
+---
+- title: Introduction à PADS4 CTRL Center
+- description: Présentation de la console web PADS4 CTRL Center utilisée pour
+    gérer, configurer et surveiller votre déploiement PADS4 depuis une interface
+    unique.
+---
 
-***
+PADS4 CTRL Center est la console web centrale pour administrer votre environnement PADS4. Depuis une interface unique, vous pouvez surveiller l'état du système, configurer les intégrations, gérer les utilisateurs et les permissions, et contrôler les composants connectés dans tous les modules PADS4.
 
-## **Démarrer PADS4 CTRL Center**
+## Ce que vous pouvez faire dans CTRL Center
 
-http(s)://servername:portnumber
+Utilisez CTRL Center pour :
 
-https est utilisé dans les environnements sécurisés, sinon utilisez http.
+* **Basculer entre les applications PADS4** auxquelles vous avez accès (par exemple Design, CMS 2.0, Schedules et Workspace).
+* **Gérer les utilisateurs et les rôles**, et examiner les permissions effectives sur le contenu, les Viewers et CMS 2.0.
+* **Configurer** votre déploiement PADS4 — serveurs, intégrations (Microsoft Teams, Power BI, et plus), et identifiants.
+* **Surveiller la lecture et la santé du système** pour les viewers et les serveurs.
 
-Servername spécifie sur quel serveur PADS4 CTRL Center est installé.
+## Ouvrir CTRL Center
 
-Le numéro de port est optionnel lorsqu'il est hébergé sur le port 80
+Ouvrez un navigateur pris en charge et accédez à :
 
-<Warning>
-  Seuls Google Chrome et Microsoft Edge sont pris en charge
-</Warning>
+```text
+http(s)://<servername>:<portnumber>
+```
 
-***
+* **servername** — le nom DNS ou l'adresse IP de la machine exécutant PADS4 CTRL Center.
+* **portnumber** — facultatif. Incluez-le uniquement si CTRL Center n'est pas hébergé sur le port HTTP/HTTPS par défaut.
+* Utilisez **https** dans les environnements de production ou sécurisés ; **http** convient uniquement aux configurations de test internes.
 
-## **Comment se connecter**
+<Note>
+  PADS4 CTRL Center prend officiellement en charge **Google Chrome** et **Microsoft Edge**. Les autres navigateurs ne sont pas pris en charge et peuvent ne pas fonctionner correctement.
+</Note>
 
-Ouvrez un navigateur web et spécifiez l'URL pour démarrer le portail web PADS4.
+## Se connecter
 
-Consultez la page Démarrer PADS4 CTRL Center pour des informations détaillées sur l'URL.
+1. Ouvrez un navigateur pris en charge et accédez à l'URL de CTRL Center.
+2. Sur la page de connexion PADS4, entrez votre **nom d'utilisateur** et **mot de passe**.
+3. Sélectionnez **Se connecter**.
 
-* Lorsque le portail est ouvert, la page de connexion PADS4 s'affiche.
-* Spécifiez votre nom d'utilisateur et mot de passe et appuyez sur Log In.
-* Si vous n'avez pas encore de compte, créez-en un d'abord en suivant les étapes [décrites ici](/fr/ctrl-centre/creation-de-compte).
+<img height="200" src="/images/ctrl-centre/login.png" alt="PADS4 CTRL Center login page" />
 
-<img height="200" src="/images/ctrl-centre/login.png" />
+4. Si votre compte a accès à plusieurs applications PADS4, choisissez l'application que vous souhaitez ouvrir depuis le sélecteur d'applications.
 
-Lorsque des identifiants valides sont saisis, la page d'accueil de PADS4 CTRL Center s'affiche.
+<Frame>
+  ![PADS4 application switcher after login](/images/CTRL-Center/App-switcher-1.png)
+</Frame>
 
-* Lorsque vous avez des autorisations pour plusieurs des applications ci-dessus, elles s'afficheront après la saisie des identifiants.
-
-<img height="200" src="/images/ctrl-centre/module-selector.png" />
-
-* Sélectionnez l'application que vous souhaitez dans la liste des applications disponibles.
-
-***
-
-## **Comment ouvrir les applications Workspace / Digital Signage / Wayfinding / Video wall**
-
-* Après avoir saisi vos identifiants lors de la connexion, une liste d'applications pour lesquelles vous avez des autorisations s'affiche. Si ce n'est pas le cas, demandez des autorisations à votre administrateur système.
-* Sélectionnez l'application qui doit être affichée dans la liste des applications disponibles.
-* Vous serez redirigé vers l'application appropriée.
+<Tip>
+  Utilisez CTRL Center comme point de départ pour chaque tâche. De là, vous pouvez accéder directement aux Identifiants, à la gestion des utilisateurs et aux autres applications PADS4 auxquelles vous avez accès.
+</Tip>
