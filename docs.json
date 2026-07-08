@@ -643,7 +643,10 @@
                     "pages": [
                       {
                         "group": "Presentation ",
-                        "pages": []
+                        "pages": [
+                          "presentation-display-name",
+                          "proof-of-play"
+                        ]
                       },
                       {
                         "group": "Pages Properties",
