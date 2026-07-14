@@ -1,3 +1,7 @@
+---
+- title: APPC R23 series (Android 12)
+---
+
 Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **les appareils ProDVX APPC-R23 fonctionnant sous Android 12**.
 
 **Appareils compatibles :**
@@ -15,7 +19,7 @@ Ce guide fournit des instructions étape par étape pour **installer et configur
 * **APPC-12XP (R23-7222)**
 * **APPC-13XP (R23-7222)**
 
-**Version minimale requise de PADS4 :** **2024.1**
+**Version PADS4 minimale requise :** **2024.1**
 
 ***
 
@@ -26,28 +30,28 @@ Ce guide fournit des instructions étape par étape pour **installer et configur
 Si l'appareil a déjà été utilisé, effectuez une **réinitialisation d'usine** pour libérer de l'espace de stockage et éviter les conflits logiciels.
 
 <Steps>
-  <Step title="Première étape">
-    Ouvrez **Paramètres Android**.
+  <Step title="Étape un">
+    Ouvrez **Android Settings**.
   </Step>
 
-  <Step title="Deuxième étape">
-    Cliquez sur **Système**.
+  <Step title="Étape deux">
+    Cliquez sur **System**.
   </Step>
 
-  <Step title="Troisième étape">
-    Cliquez sur **Options de réinitialisation**.
+  <Step title="Étape trois">
+    Cliquez sur **Reset options**.
   </Step>
 
-  <Step title="Quatrième étape">
-    Sélectionnez **Effacer toutes les données (réinitialisation d'usine)**.
+  <Step title="Étape quatre">
+    Sélectionnez **Erase all data (factory reset)**.
   </Step>
 
-  <Step title="Cinquième étape">
-    Cliquez sur **EFFACER TOUTES LES DONNÉES**.
+  <Step title="Étape cinq">
+    Cliquez sur **ERASE ALL DATA**.
   </Step>
 
-  <Step title="Sixième étape">
-    Confirmez en cliquant à nouveau sur **EFFACER TOUTES LES DONNÉES**.
+  <Step title="Étape six">
+    Confirmez en cliquant sur **ERASE ALL DATA** à nouveau.
   </Step>
 </Steps>
 
@@ -59,7 +63,7 @@ Si l'appareil a déjà été utilisé, effectuez une **réinitialisation d'usine
 
 ### **1.2 S'assurer que le serveur PADS4 est installé**
 
-Pendant l'installation, vous devez **spécifier l'emplacement du serveur PADS4**. Il est **recommandé** de **installer et configurer le serveur PADS4** avant de configurer l'appareil.
+Lors de l'installation, vous devez **spécifier l'emplacement du serveur PADS4**. Il est **recommandé** de **installer et configurer le serveur PADS4** avant de configurer l'appareil.
 
 ***
 
@@ -70,20 +74,20 @@ Pendant l'installation, vous devez **spécifier l'emplacement du serveur PADS4**
 #### **Vérifier si l'API ProDVX est en cours d'exécution**
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape un">
     Recherchez l'**icône PA** dans la **barre d'état Android**.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape deux">
     Si l'icône est absente, **faites glisser la barre d'état vers le bas** et vérifiez les notifications.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape trois">
     Recherchez une notification indiquant **"ProDVX API (AOSP) is running."**
   </Step>
 
-  <Step title="Quatrième étape">
-    Si l'API n'est **pas installée**, téléchargez-la depuis [**ici**](#) et installez-la avant de continuer.
+  <Step title="Étape quatre">
+    Si l'API n'est **pas installée**, téléchargez-la depuis [**ici**](https://github.com/PADS4/PADS4-Viewer-ProDVX-r23/releases/download/1.0/ProDVX-API-AOSP-v1.3d.apk) et installez-la avant de continuer.
   </Step>
 </Steps>
 
@@ -95,22 +99,22 @@ PADS4 **utilise un jeton API par défaut** pour l'authentification de l'API ProD
 
 #### **Remplacer le jeton par défaut (si nécessaire)**
 
-Si vous avez **un jeton API personnalisé**, suivez ces étapes :
+Si vous disposez **d'un jeton API personnalisé**, suivez ces étapes :
 
 <Steps>
-  <Step title="Première étape">
+  <Step title="Étape un">
     Accédez à **C:\Program Files\PADS4\Foundation\Apps** sur le **serveur PADS4**.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape deux">
     Localisez le fichier **prodvx-api-token.txt**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape trois">
     Ouvrez le fichier et **remplacez le jeton existant** par votre **jeton API personnalisé**.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape quatre">
     Enregistrez le fichier.
   </Step>
 </Steps>
@@ -125,76 +129,75 @@ Si vous avez **un jeton API personnalisé**, suivez ces étapes :
 
 **Serveur PADS4 :**
 
-```
+```text
 https://[yourPADS4Server]/[domain]/apps
 ```
 
-*******`(Replace [yourPADS4Server] with your server's IP or name, and [domain] with your PADS4 domain – default is PADS4.)`*******
+***`(Replace [yourPADS4Server] with your server's IP or name, and [domain] with your PADS4 domain – default is PADS4.)`***
 
-**Github:** [Download Latest PADS4ProDVXv2 APK](https://github.com/PADS4/PADS4-Viewer-ProDVX-r23/releases/latest)
+**Github:** [Télécharger le dernier APK PADS4ProDVXv2](https://github.com/PADS4/PADS4-Viewer-ProDVX-r23/releases/latest)
 
-**Important:** Si vous téléchargez une version plus récente, **placez-la également dans le répertoire des applications** sur le **serveur PADS4**. Sinon, le serveur installera l'ancienne version lorsque l'appareil se connectera.
+**Important:** Si vous téléchargez une version plus récente, **placez-la également dans le répertoire apps** sur le **serveur PADS4**. Sinon, le serveur installera l'ancienne version lorsque l'appareil se connectera.
 
 ***
 
 ### **2.2 Installer PADS4 Viewer**
 
 <Steps>
-  <Step title="Première étape">
-    Copiez le **PADS4ProDVXv2.apk** sur une **clé USB**.
+  <Step title="Étape un">
+    Copiez le fichier **PADS4ProDVXv2.apk** sur une **clé USB**.
   </Step>
 
-  <Step title="Deuxième étape">
+  <Step title="Étape deux">
     Insérez la **clé USB** dans l'**appareil ProDVX**.
   </Step>
 
-  <Step title="Troisième étape">
+  <Step title="Étape trois">
     Ouvrez l'**application Explorer** sur l'appareil.
   </Step>
 
-  <Step title="Quatrième étape">
+  <Step title="Étape quatre">
     Cliquez sur **USB** et localisez **PADS4ProDVXv2.apk**.
   </Step>
 
-  <Step title="Cinquième étape">
-    Cliquez sur **CONTINUER** lorsque vous y êtes invité.
+  <Step title="Étape cinq">
+    Cliquez sur **CONTINUE** lorsque vous y êtes invité.
   </Step>
 
-  <Step title="Sixième étape">
-    Cliquez sur **INSTALLER** lorsque vous y êtes invité.
+  <Step title="Étape six">
+    Cliquez sur **INSTALL** lorsque vous y êtes invité.
   </Step>
 
-  <Step title="Septième étape">
-    Attendez que l'installation soit terminée, puis cliquez sur **TERMINÉ**.
+  <Step title="Étape sept">
+    Attendez que l'installation soit terminée, puis cliquez sur **DONE**.
   </Step>
 </Steps>
 
 ***
 
-### **2.3 Configurer PADS4 Viewer pour qu'il démarre automatiquement**
+### **2.3 Configurer PADS4 Viewer pour démarrer automatiquement**
 
-**Utilisez soit :**
+**Utilisez l'une ou l'autre des options :**
 
-**Le logiciel ProDVX ProMGR** *(Contactez ProDVX pour plus de détails)*\
-**Les paramètres de l'appareil Android** *(Suivez les étapes ci-dessous)*
+**Logiciel ProDVX ProMGR** *(Contactez ProDVX pour plus de détails)*<br />**Paramètres de l'appareil Android** *(Suivez les étapes ci-dessous)*
 
 #### **Activer le démarrage automatique dans les paramètres Android**
 
 <Steps>
-  <Step title="Première étape">
-    Ouvrez **Paramètres Android**.
+  <Step title="Étape un">
+    Ouvrez **Android Settings**.
   </Step>
 
-  <Step title="Deuxième étape">
-    Accédez à **Paramètres système → Options d'affichage dynamique**.
+  <Step title="Étape deux">
+    Accédez à **System Settings → Digital Signage Options**.
   </Step>
 
-  <Step title="Troisième étape">
-    Sélectionnez **Démarrage automatique de l'application**.
+  <Step title="Étape trois">
+    Sélectionnez **Auto Start Application**.
   </Step>
 
-  <Step title="Quatrième étape">
-    Cliquez sur **Démarrer l'application**, puis sélectionnez **PADS4ProDVXv2**.
+  <Step title="Étape quatre">
+    Cliquez sur **Démarrer l'application**, puis sélectionner **PADS4ProDVXv2**.
   </Step>
 </Steps>
 
@@ -206,13 +209,13 @@ https://[yourPADS4Server]/[domain]/apps
 
 **Format:**
 
-```
+```text
 <protocol>://<host>:<port>/<hostpath>/
 ```
 
 **Example:**
 
-```
+```text
 https://mydomain.pads365.com/pads4/
 ```
 
@@ -220,39 +223,38 @@ https://mydomain.pads365.com/pads4/
 
 <Steps>
   <Step title="Première étape">
-    Saisissez l'**Adresse du serveur PADS4**.
+    Entrer l'**adresse du serveur PADS4**.
   </Step>
 
   <Step title="Deuxième étape">
-    (Facultatif) Saisissez un **Nom de Viewer personnalisé**.
+    (Facultatif) Entrer un **nom de Viewer personnalisé**.
   </Step>
 
   <Step title="Troisième étape">
-    Cliquez sur **Démarrer**.
+    Cliquer sur **Démarrer**.
   </Step>
 
   <Step title="Quatrième étape">
-    Accordez les **autorisations d'accès** aux **photos, médias et fichiers**.
+    Accorder les **autorisations d'accès** à **photos, médias et fichiers**.
   </Step>
 
   <Step title="Cinquième étape">
-    Le **PADS4 Viewer va télécharger** et démarrer automatiquement.
+    Le **PADS4 Viewer va se télécharger** et démarrer automatiquement.
   </Step>
 </Steps>
 
 ***
 
-## **4. Ajustement et mise à jour de PADS4 Viewer**
+## **4. Ajuster et mettre à jour PADS4 Viewer**
 
 ### **4.1 Ajuster les paramètres du Viewer**
 
 **Pour ouvrir l'écran des options :**
 
-**Maintenez le bouton gauche de la souris enfoncé** ou **touchez l'écran pendant 3 secondes**.\
-Cliquez sur **Launcher Settings** pour revenir à l'application **PADS4ProDVXv2**.
+**Maintenir le bouton gauche de la souris enfoncé** ou **appuyer sur l'écran pendant 3 secondes**.<br />Cliquer sur **Launcher Settings** pour revenir à l'application **PADS4ProDVXv2**.
 
 ***
 
 ### **4.2 Mise à jour de PADS4 Viewer et PADS4ProDVXv2**
 
-**Si vous mettez à jour le serveur PADS4**, à la fois **PADS4 Viewer** et **PADS4ProDVXv2** se **mettront à jour automatiquement** vers la dernière version.
+**Si vous mettez à jour le serveur PADS4**, les deux **PADS4 Viewer** et **PADS4ProDVXv2** vont **se mettre à jour automatiquement** vers la dernière version.
