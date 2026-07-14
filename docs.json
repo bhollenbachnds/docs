@@ -1,6 +1,5 @@
 {
   "theme": "mint",
-  "$schema": "https://mintlify.com/docs.json",
   "name": "PADS4 Platform",
   "colors": {
     "primary": "#00ADBA",
@@ -15,8 +14,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Contact",
-        "href": "mailto:support@pads4.com"
+        "href": "mailto:support@pads4.com",
+        "label": "Contact"
       }
     ],
     "primary": {
@@ -24,6 +23,18 @@
       "label": "Support Portal",
       "href": "https://support.pads4.com"
     }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://linkedin.com/company/pads-4"
+    }
+  },
+  "contextual": {
+    "options": [
+      "chatgpt",
+      "claude"
+    ],
+    "display": "header"
   },
   "navigation": {
     "languages": [
@@ -225,10 +236,10 @@
                       "certified-devices/prodvx/APPC-R23-series-Android-11",
                       "certified-devices/prodvx/APPC-10SLBe-Android-11",
                       "certified-devices/prodvx/APPC-4200-Series-Android-9",
+                      "certified-devices/prodvx/appc-series-rk-32",
                       "certified-devices/prodvx/UW-series-Android-8.1",
                       "certified-devices/prodvx/APPC-series-RK3288-Android-8.1",
-                      "certified-devices/prodvx/IPPC-Series-Windows",
-                      "certified-devices/prodvx/appc-series-rk-32"
+                      "certified-devices/prodvx/IPPC-Series-Windows"
                     ]
                   },
                   {
@@ -3011,17 +3022,6 @@
           }
         ]
       }
-    ]
-  },
-  "footer": {
-    "socials": {
-      "linkedin": "https://linkedin.com/company/pads-4"
-    }
-  },
-  "contextual": {
-    "options": [
-      "chatgpt",
-      "claude"
     ]
   }
 }
