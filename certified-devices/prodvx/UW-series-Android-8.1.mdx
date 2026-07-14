@@ -1,6 +1,8 @@
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX UW-Series devices** running **Android 8.1**.
-
 ---
+title: "UW-series-Android-8.1"
+---
+
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **ProDVX UW-Series devices** running **Android 8.1**.
 
 ## **Before You Start**
 
@@ -20,18 +22,17 @@ The following **ProDVX UW-Series** devices are supported:
 
 **Firmware Requirements:**
 
-| Device | Firmware Version                  |
-| :----: | --------------------------------- |
-| UW-24  | ProDVX-UW24-R03V3.2-D0.2-20221009 |
-| UW-28  | ProDVX-UW28-R03V3.2-D0.2-20221009 |
-| UW-37  | ProDVX-UW37-R03-37-D0.2-20211210  |
+| Device | Firmware Version |
+| :-: | --- |
+| UW-24 | ProDVX-UW24-R03V3.2-D0.2-20221009 |
+| UW-28 | ProDVX-UW28-R03V3.2-D0.2-20221009 |
+| UW-37 | ProDVX-UW37-R03-37-D0.2-20211210 |
 
 <Note>
-   Firmware updates can be requested from your **ProDVX dealer**.
+  Firmware updates can be requested from your **ProDVX dealer**.
 </Note>
 
-**Important:**\
-By default, **network settings are disabled** on the device. Before installation, go to **Android Settings** and ensure **Wi-Fi** or **Ethernet** is enabled.
+**Important:**<br />By default, **network settings are disabled** on the device. Before installation, go to **Android Settings** and ensure **Wi-Fi** or **Ethernet** is enabled.
 
 ---
 
@@ -69,12 +70,11 @@ Follow these steps to install **PADS4 Viewer** on your **ProDVX UW-Series device
 
 **PADS4 Server Directory:**
 
-```
+```text
 C:\Program Files\PADS4\Clients\Apps
 ```
 
-**Official Download Link:**\
-[Download PADS4ProDVX APK](https://github.com/PADS4/PADS4-Viewer-ProDVX-x-series/releases/latest)
+**Official Download Link:**<br />[Download PADS4ProDVX APK](https://github.com/PADS4/PADS4-Viewer-ProDVX-x-series/releases/latest)
 
 **Transfer to USB Stick:**
 
@@ -138,13 +138,13 @@ Incorrect date and time settings can cause **certificate errors** and **connecti
 
 **Format:**
 
-```
+```text
 <protocol>://<host>:<port>/<domain>/
 ```
 
 **Example:**
 
-```
+```text
 https://example.pads365.com/pads4
 ```
 
@@ -191,8 +191,7 @@ After installation, **PADS4 Viewer** will automatically update when the **PADS4 
 
 **If you access the Android menu while PADS4 is running, the device will reboot after 30 seconds.**
 
-To prevent this:\
-**Stop the PADS4ProDVX app within 30 seconds** before making changes.
+To prevent this:<br />**Stop the PADS4ProDVX app within 30 seconds** before making changes.
 
 ---
 
@@ -200,43 +199,40 @@ To prevent this:\
 
 ### **General Features**
 
-| Feature | Description                                           |
-| :-----: | ----------------------------------------------------- |
-| ✅       | **Automatic PADS4 Software Updates**                  |
-| ✅       | **Offline Mode (Plays scheduled content for 7 days)** |
-| ✅       | **Supports HTTP & HTTPS Protocols**                   |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Automatic PADS4 Software Updates** |
+| ✅ | **Offline Mode (Plays scheduled content for 7 days)** |
+| ✅ | **Supports HTTP & HTTPS Protocols** |
 
 ### **Device Capabilities**
 
-| Feature | Description                                               |
-| :-----: | --------------------------------------------------------- |
-| ✅       | **Portrait Mode** (Automatically adjusts)                 |
-| ✅       | **Turn off Display (Backlight Off when No Presentation)** |
-| ✅       | **Volume Level Control**                                  |
-| ❌       | **Wake-on-LAN Not Supported**                             |
-| ❌       | **Remote Shutdown Not Supported**                         |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Portrait Mode** (Automatically adjusts) |
+| ✅ | **Turn off Display (Backlight Off when No Presentation)** |
+| ✅ | **Volume Level Control** |
+| ❌ | **Wake-on-LAN Not Supported** |
+| ❌ | **Remote Shutdown Not Supported** |
 
 ### **Content Support**
 
-| Feature | Description                                               |
-| :-----: | --------------------------------------------------------- |
-| ✅       | **JPG, PNG, BMP, GIF Image Support**                      |
-| ✅       | **Video (Max 1 per page, Landscape Mode Only)**           |
-| ❌       | **Seamless Video Playback Not Supported**                 |
-| ❌       | **Video Rotation Not Supported**                          |
-| ✅       | **Scrolling Text, Tables, Formatted Text Supported**      |
-| ✅       | **PowerPoint (Requires PADS4 Server Installation)**       |
-| ❌       | **Flash Content, Interactive Data Sorting Not Supported** |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **JPG, PNG, BMP, GIF Image Support** |
+| ✅ | **Video (Max 1 per page, Landscape Mode Only)** |
+| ❌ | **Seamless Video Playback Not Supported** |
+| ❌ | **Video Rotation Not Supported** |
+| ✅ | **Scrolling Text, Tables, Formatted Text Supported** |
+| ✅ | **PowerPoint (Requires PADS4 Server Installation)** |
+| ❌ | **Flash Content, Interactive Data Sorting Not Supported** |
 
 ---
 
 ## **Troubleshooting**
 
-**Issue:** **Video transition effects not working**\
-**Reason:** Device hardware limitations.
+**Issue:** **Video transition effects not working**<br />**Reason:** Device hardware limitations.
 
-**Issue:** **Device fails to connect to the network**\
-**Solution:** Ensure Wi-Fi or Ethernet is enabled.
+**Issue:** **Device fails to connect to the network**<br />**Solution:** Ensure Wi-Fi or Ethernet is enabled.
 
-**Issue:** **PADS4 Viewer restarts frequently**\
-**Solution:** Check **PADS4 Server connection** and **WebView updates**.
+**Issue:** **PADS4 Viewer restarts frequently**<br />**Solution:** Check **PADS4 Server connection** and **WebView updates**.
