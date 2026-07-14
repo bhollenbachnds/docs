@@ -1,0 +1,82 @@
+---
+- title: "APPC S-series (Andriod "
+---
+
+Ce manuel fournit des instructions étape par étape pour configurer l'appareil ProDVX APPC S-series et installer le PADS4 Viewer. Il couvre la configuration initiale, l'installation de l'APK, la configuration du démarrage automatique et la configuration du viewer.
+
+**Appareils compatibles :**
+
+* **APPC-10SFA**
+* **APPC-10SFN**
+* **APPC-10SF**
+* **APPC-10S**
+
+**Configuration minimale requise**
+
+Version PADS4 requise : **2024.1**
+
+Firmware ProDVX : **PPC-10N-S-series.R25.ProDVX\_013.A25\_02**
+
+## Configuration initiale de l'appareil
+
+Allumez l'appareil ProDVX APPC 10SFA pour commencer la configuration.
+
+* Sur l'écran de bienvenue, **acceptez** les Conditions générales, puis cliquez sur Démarrer​
+* (Facultatif) Activez ou désactivez ProMGR et cliquez sur Continuer.
+* **Activez** l'API PRODVX, car PADS4 en dépend pour fonctionner correctement, puis cliquez sur Continuer.​
+* **Désactivez** AutoStart et cliquez sur Continuer.
+* Réglez le **délai d'expiration** de l'écran sur Jamais et cliquez sur Continuer.
+* Cliquez sur **Redémarrer** l'appareil pour appliquer les modifications.
+
+## Installation du PADS4 Viewer APK
+
+Téléchargez le dernier PADS4ProDVXv2.apk depuis votre serveur PADS4 (par ex., https\://\[your-server]/\[domain]/apps) ou depuis des sources officielles, et copiez-le sur une clé USB.
+
+1. Insérez la clé USB dans l'appareil ProDVX.
+2. Ouvrez l'application Fichiers et sélectionnez la clé USB.
+3. Appuyez sur **PADS4ProDVXv2.apk**.
+4. Cliquez sur **Continuer** sur le message d'avertissement.
+5. Cliquez sur **Installer** pour continuer.
+6. Une fois terminé, cliquez sur **Terminé**.
+
+## Configuration du démarrage automatique
+
+Lancez l'**application AutoStart** depuis le tiroir d'applications après l'installation. Cliquez sur Démarrer l'application, sélectionnez PADS4ProDVXv2, puis fermez AutoStart et redémarrez l'appareil.
+
+Cela garantit que le PADS4 Viewer se lance automatiquement au démarrage.
+
+## Configuration du PADS4 Viewer
+
+Après le redémarrage, le PADS4 Viewer s'ouvre. Entrez l'adresse de votre serveur PADS4 au format`https://<host>:<port>/<domain>/`
+
+* Facultativement, entrez un nom de viewer personnalisé.
+* Cliquez sur Démarrer pour vous connecter
+
+Attendez la connexion ; une LED verte et le nom du viewer indiquent le succès.
+
+## Fonctionnalités et possibilités prises en charge
+
+### Gestion des appareils
+
+| Pris en charge | Fonctionnalité                                         |
+| :------------: | :----------------------------------------------------- |
+|        ✅       | Gestion à distance des appareils via PADS4 CTRL Center |
+|        ✅       | Redémarrage et redémarrage du Viewer                   |
+|        ❌       | Arrêt et Wake-on-LAN                                   |
+|        ✅       | Capture d'écran                                        |
+|        ✅       | Mode Portrait                                          |
+
+### **Lecture et prise en charge du contenu**
+
+| Pris en charge | Fonctionnalité                                                                                               |
+| :------------: | ------------------------------------------------------------------------------------------------------------ |
+|        ✅       | Jusqu'à 2 vidéos simultanées                                                                                 |
+|        ✅       | Vidéo en streaming                                                                                           |
+|        ✅       | Format d'image : PNG, JPG, BMP, GIF                                                                          |
+|        ✅       | Format vidéo : H264, H265                                                                                    |
+|        ✅       | Texte, Ligne, Forme, Texte défilant, Texte formaté, Tableaux, Boutons interactifs                            |
+|        ✅       | Élément Web                                                                                                  |
+|        ✅       | Fournisseurs de données et Data Vault – Prend en charge plus de 70 fournisseurs de données PADS4             |
+|        ✅       | Variables du Viewer – Simplifie la gestion du contenu sans modifier les présentations                        |
+|        ✅       | Liaisons de propriétés – Permet des propriétés d'éléments dynamiques à l'aide de sources de données externes |
+|        ✅       | Prise en charge des règles sur la présentation, la page et l'élément                                         |
