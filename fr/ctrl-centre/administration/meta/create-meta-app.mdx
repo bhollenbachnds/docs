@@ -1,0 +1,68 @@
+---
+- title: Meta
+---
+
+Ce document suppose que le lecteur est familier avec la plateforme développeur Meta, notamment la façon de créer et de soumettre des applications pour examen.
+
+Les étapes ci-dessous expliquent comment créer et configurer une application Meta spécifiquement pour l'intégration avec **PADS4**.
+
+## Créer une nouvelle application
+
+### Étape 1 : Accéder à la plateforme développeur Meta
+
+Accédez à la page des applications développeur Meta :<br />[https://developers.facebook.com/apps](https://developers.facebook.com/apps)
+
+### Étape 2 : Créer une nouvelle application
+
+Cliquez sur le bouton **Create App**.<br />
+
+<Frame>
+  ![Meta Create App](/images/CTRLCenter/Credentials/Meta/MetaCreateApp.png)
+</Frame>
+
+### Étape 3 : Sélectionner un portefeuille d'entreprise (Optionnel)
+
+Vous pouvez choisir un portefeuille d'entreprise. Cela peut également être sélectionné ultérieurement lors de la connexion à l'application avec un utilisateur.<br />
+
+<img src="/images/CTRLCenter/Credentials/Meta/MetaBusinessPortofolio.png" alt="Meta Business Portofolio" title="Meta Business Portofolio" style={{ width:"86%" }} />
+
+### Étape 4 : Choisir le cas d'utilisation
+
+Pour le cas d'utilisation, sélectionnez **Other**.<br />
+
+<img src="/images/CTRLCenter/Credentials/Meta/MetaUseCaseOther.png" alt="Meta Use Case Other" title="Meta Use Case Other" />
+
+### Étape 5 : Sélectionner le type d'application
+
+Choisissez **Business** comme type d'application.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/business-app-type.png" />
+
+### Étape 6 : Saisir les détails de l'application
+
+Remplissez les détails requis de l'application. Vous pouvez également sélectionner un portefeuille d'entreprise ici si vous ne l'avez pas encore fait.<br />
+
+<img src="/images/CTRLCenter/Credentials/Meta/MetaCreateAppDetails.png" alt="Meta Create App Details" title="Meta Create App Details" />
+
+### Étape 7 : Accéder au tableau de bord de l'application
+
+Une fois votre application créée, vous serez redirigé vers le **Dashboard** de l'application.
+
+Ajoutez le produit **Facebook Login for Business** en cliquant sur le bouton **Set Up** sur sa tuile.
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/setup-button.png" />
+
+### Étape 8 : Configurer l'URI de redirection
+
+Accédez à **Settings** sous **Facebook Login for Business**.
+
+Dans le champ **Valid OAuth Redirect URIs**, saisissez ce qui suit :
+
+```text
+https://<host>:<port>/credentials/generic/authorize/callback
+```
+
+<img height="200" src="/images/ctrl-centre/credentials/meta/redirect.png" />
+
+* **Hôte** : nom DNS ou adresse IP de votre PADS4 Ctrl Center
+* **Port** : (Optionnel) À inclure si votre PADS4 Ctrl Center n'utilise pas les ports HTTP/HTTPS par défaut
