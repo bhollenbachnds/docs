@@ -1,0 +1,49 @@
+---
+- title: Prérequis d'installation de PADS4
+- description: Composants que le programme d'installation de PADS4 Foundation
+    ajoute à votre serveur, notamment le proxy inverse, le courtier de messages,
+    les runtimes .NET et WebView2.
+---
+
+Lors du processus d'installation, PADS4 installera les prérequis suivants :
+
+### Inclus dans le programme d'installation de PADS4
+
+Tous les prérequis seront installés/mis à jour par le programme d'installation de PADS4 Foundation. Ne pré-installez pas ces composants au préalable sur un serveur ou une station de travail pour la mise en liste blanche ou d'autres questions liées au projet, car cela peut perturber le fonctionnement de PADS4 Foundation.
+
+| Package                                                                       | Description                                                                                                                    |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| PADS4 Reverse Proxy                                                           | Équilibreur de charge de proxy inverse basé sur YARP avec de meilleures performances que NGinx                                 |
+| PADS4 Message Broker                                                          | Système de messagerie par défaut ; il gère la communication interne entre les microservices PADS4                              |
+| PADS4 Package Manager                                                         | Outil principal pour installer, mettre à jour ou supprimer PADS4 ; le désinstaller séparément empêche la suppression de PADS4. |
+| Microsoft ASP.NET 10                                                          | Framework .NET pour le middleware PADS4                                                                                        |
+| Microsoft .NET Runtime 10                                                     | Framework .NET pour le middleware PADS4                                                                                        |
+| Microsoft Edge WebView2 Runtime                                               | Moteur de rendu des éléments web                                                                                               |
+| Microsoft Visual C++ 2015-2022 <br />Redistribuable (x64 & x84) - 14.32.31332 | Composants d'exécution pour les applications C++                                                                               |
+| Dokan 1.5.1.1000 bundle                                                       | Bibliothèque de lecteur virtuel pour la bibliothèque de contenu                                                                |
+| NGinx Reverse Proxy                                                           | Équilibreur de charge haute performance utilisé par PADS4                                                                      |
+| Microsoft ASP.NET 8 (obsolète depuis 2026.1)                                  | Framework .NET pour le middleware PADS4                                                                                        |
+| Microsoft .NET Runtime 8 (obsolète depuis 2026.1)                             | Framework .NET pour le middleware PADS4                                                                                        |
+| Microsoft .NET Runtime 6 (obsolète depuis 2025.1)                             | Framework .NET hérité pour le middleware                                                                                       |
+| Microsoft ASP.NET 6   (obsolète depuis 2025.1)                                | Framework .NET hérité pour le middleware                                                                                       |
+| Erlang 24.0 (obsolète depuis 2022.3)                                          | Bibliothèque de concurrence et de tolérance aux pannes.                                                                        |
+| RabbitMQ Server 3.9.1 (obsolète depuis 2022.3)                                | Courtier de messagerie hérité                                                                                                  |
+
+### Téléchargé lors de l'installation
+
+Ceux-ci peuvent être récupérés automatiquement s'ils sont absents sur les systèmes plus anciens
+
+| Package                        | Description                                   |
+| ------------------------------ | --------------------------------------------- |
+| Microsoft .NET Framework 4.7.2 | Framework commun ; téléchargé s'il est absent |
+| Microsoft .NET Framework 4.6.2 | Framework commun ; téléchargé s'il est absent |
+
+### Prérequis optionnels
+
+Ceux-ci dépendent de votre configuration et de vos modules.
+
+| Package              | Description                                                                                                                        |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| IIS                  | Requis pour PADS4 Digital Signage CMS 1.0 & PADS4 Workspace,                                                                       |
+| SQL Server           | La valeur par défaut est SQLite (aucune installation requise) ; utilisez SQL pour PADS4 FIDS et PADS4 CMS 1.0 si vous le souhaitez |
+| Microsoft Powerpoint | Nécessaire sur le serveur PADS4 pour convertir les fichiers PPT au format HTML5 Viewer                                             |
