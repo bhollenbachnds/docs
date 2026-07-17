@@ -9,28 +9,30 @@ During the installation process, PADS4 will install the following prerequisites:
 
 All the prerequisites will be installed/updated by the PADS4 Foundation installer. Do not pre-install these components beforehand on a server or workstation for white listing or other project related matters, this can disrupt the functional operation of the PADS4 Foundation product.
 
-| Package                                                                        | Description                                                                                               | | |
-| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- | --- | --- |
-| PADS4 Reverse Proxy                                                            | YARP‑based reverse proxy load balancer with better performance than NGinx                                 | | |
-| PADS4 Message Broker                                                           | Default messaging system; it handles internal communication between PADS4 microservices                   | | |
-| PADS4 Package Manager                                                          | Core tool for installing, updating, or removing PADS4; uninstalling it separately prevents PADS4 removal. | | |
-| Microsoft .NET Runtime 8                                                       | .NET framework for PADS4 middleware                                                                       | | |
-| Microsoft ASP.NET 8                                                            | .NET framework for PADS4 middleware                                                                       | | |
-| Microsoft Edge WebView2 Runtime                                                | Web element rendering engine                                                                              | | |
-| Microsoft Visual C++ 2015-2022 <br />Redistributable (x64 & x84) - 14.32.31332 | Runtime components for C++ apps                                                                           | | |
-| Dokan 1.5.1.1000 bundle                                                        | Virtual drive library for Content Library                                                                 | | |
-| NGinx Reverse Proxy                                                            | High‑performance load balancer used by PADS4                                                              | | |
-| Microsoft .NET Runtime 6 (deprecated since 2025.1)                             | Legacy .NET framework for middleware                                                                      | | |
-| Microsoft ASP.NET 6   (deprecated since 2025.1)                                | Legacy .NET framework for middleware                                                                      | | |
-| Erlang 24.0 (deprecated from 2022.3)                                           | Concurrency and fault tolerance library.                                                                  | | |
-| RabbitMQ Server 3.9.1 (deprecated from 2022.3)                                 | Legacy messaging broker                                                                                   | | |
+| Package | Description |
+| --- | --- |
+| PADS4 Reverse Proxy | YARP‑based reverse proxy load balancer with better performance than NGinx |
+| PADS4 Message Broker | Default messaging system; it handles internal communication between PADS4 microservices |
+| PADS4 Package Manager | Core tool for installing, updating, or removing PADS4; uninstalling it separately prevents PADS4 removal. |
+| Microsoft ASP.NET 10 | .NET framework for PADS4 middleware |
+| Microsoft .NET Runtime 10 | .NET framework for PADS4 middleware |
+| Microsoft Edge WebView2 Runtime | Web element rendering engine |
+| Microsoft Visual C\+\+ 2015-2022 <br />Redistributable (x64 & x84) - 14.32.31332 | Runtime components for C\+\+ apps |
+| Dokan 1.5.1.1000 bundle | Virtual drive library for Content Library |
+| NGinx Reverse Proxy | High‑performance load balancer used by PADS4 |
+| Microsoft ASP.NET 8 (deprecated since 2026.1) | .NET framework for PADS4 middleware |
+| Microsoft .NET Runtime 8 (deprecated since 2026.1) | .NET framework for PADS4 middleware |
+| Microsoft .NET Runtime 6 (deprecated since 2025.1) | Legacy .NET framework for middleware |
+| Microsoft ASP.NET 6   (deprecated since 2025.1) | Legacy .NET framework for middleware |
+| Erlang 24.0 (deprecated from 2022.3) | Concurrency and fault tolerance library. |
+| RabbitMQ Server 3.9.1 (deprecated from 2022.3) | Legacy messaging broker |
 
 ### Downloaded During Installation
 
 These may be fetched automatically if missing on older systems
 
-| Package                        | Description                            |
-| ------------------------------ | -------------------------------------- |
+| Package | Description |
+| --- | --- |
 | Microsoft .NET Framework 4.7.2 | Common framework; downloaded if absent |
 | Microsoft .NET Framework 4.6.2 | Common framework; downloaded if absent |
 
@@ -38,8 +40,8 @@ These may be fetched automatically if missing on older systems
 
 These depend on your configuration and modules.
 
-| Package              | Description                                                                                  |
-| -------------------- | -------------------------------------------------------------------------------------------- |
-| IIS                  | Required for PADS4 Digital Signage CMS 1.0 & PADS4 Workspace,                                |
-| SQL Server           | Default is SQLite (no install needed); use SQL for PADS4 FIDS and PADS4 CMS 1.0 if preferred |
-| Microsoft Powerpoint | Needed on PADS4 Server for converting PPT to HTML5 Viewer format                             |
+| Package | Description |
+| --- | --- |
+| IIS | Required for PADS4 Digital Signage CMS 1.0 & PADS4 Workspace, |
+| SQL Server | Default is SQLite (no install needed); use SQL for PADS4 FIDS and PADS4 CMS 1.0 if preferred |
+| Microsoft Powerpoint | Needed on PADS4 Server for converting PPT to HTML5 Viewer format |
