@@ -60,10 +60,8 @@
               },
               {
                 "group": "Upgrade Information",
-                "pages": [
-                  "upgrade-info/upgrading-to-pads-4-2025-2",
-                  "upgrade-info/Upgrading-to-PADS4-2025.1"
-                ]
+                "pages": [],
+                "hidden": true
               },
               {
                 "group": "System Configuration",
@@ -76,6 +74,13 @@
                 "group": "Install PADS4",
                 "pages": [
                   "install-pads4/Downloads",
+                  {
+                    "group": "PADS4 Upgrade Guidance for Older Versions",
+                    "pages": [
+                      "upgrade-info/upgrading-to-pads-4-2025-2",
+                      "upgrade-info/Upgrading-to-PADS4-2025.1"
+                    ]
+                  },
                   {
                     "group": "Install PADS4 Servers",
                     "pages": [
