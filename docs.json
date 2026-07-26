@@ -1654,10 +1654,6 @@
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
               },
               {
-                "group": "Crystal",
-                "openapi": "https://saas.pads365.com/crystal/pads/swagger/docs/v1"
-              },
-              {
                 "group": "Data",
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
               },
