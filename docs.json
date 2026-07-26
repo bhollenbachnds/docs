@@ -1667,7 +1667,7 @@
               },
               {
                 "group": "Document Conversion",
-                "openapi": "https://saas.pads365.com//rdx/NDS.Services.Document.Conversion//swagger/v1/swagger.json"
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Document.Conversion//swagger/v1/swagger.json"
               },
               {
                 "group": "Domains",
