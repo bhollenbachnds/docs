@@ -1654,12 +1654,24 @@
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
               },
               {
+                "group": "Crystal",
+                "openapi": "https://saas.pads365.com/crystal/pads/swagger/docs/v1"
+              },
+              {
                 "group": "Data",
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
               },
               {
                 "group": "Device",
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json"
+              },
+              {
+                "group": "Document Conversion",
+                "openapi": "https://saas.pads365.com//rdx/NDS.Services.Document.Conversion//swagger/v1/swagger.json"
+              },
+              {
+                "group": "Domains",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Nginx.Domains//swagger/v1/swagger.json"
               },
               {
                 "group": "Email",
@@ -1698,6 +1710,10 @@
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json"
               },
               {
+                "group": "Powerpoint to Video",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Powerpoint.ToVideo//swagger/v1/swagger.json"
+              },
+              {
                 "group": "Process",
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json"
               },
@@ -1708,6 +1724,14 @@
               {
                 "group": "Schedule",
                 "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json"
+              },
+              {
+                "group": "Sensor",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Sensor//swagger/v1/swagger.json"
+              },
+              {
+                "group": "Teams Integration",
+                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Teams.Integration//swagger/v1/swagger.json"
               },
               {
                 "group": "User SCIM",
