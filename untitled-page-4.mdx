@@ -1,0 +1,12 @@
+---
+title: "History"
+---
+
+**History** (`/history`) is the connectivity-reliability view — uptime, outages, and per-device timelines — built entirely from the plugin's own local database (not a live PADS4 call), populated by a background status monitor. **Data is retained for 3 months**; the date pickers won't let you go further back.
+
+- **Date range**: defaults to the last 30 days, clamped to the 3-month retention window.
+- **Summary cards**: devices with data in range, total outage incidents (and how many are still ongoing), and total recorded offline time.
+- **Devices table**: per-device uptime percentage, number of status checks, incident count, and total offline time. Search by name or device ID; sort any column.
+- **View chart**: opens a modal with a step-line chart of that device's online/offline status over the selected range, plus the percentage of checks that were online. Long ranges are automatically downsampled for readability (noted in the modal when this happens).
+
+> Uptime percentage is the share of periodic status _checks_ that found the device online — it is not wall-clock uptime. Only _completed_ outages (both a start and an end recorded) count toward the offline-time totals; an outage still in progress is flagged separately as "ongoing" and excluded from the duration sum.

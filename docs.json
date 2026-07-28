@@ -1654,6 +1654,10 @@
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
               },
               {
+                "group": "Crystal",
+                "openapi": "https://saas.pads365.com/crystal/pads/swagger/docs/v1"
+              },
+              {
                 "group": "Data",
                 "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
               },
@@ -1753,7 +1757,6 @@
           },
           {
             "dropdown": "Plug-ins",
-            "hidden": true,
             "groups": [
               {
                 "group": "Finessetech",
@@ -1770,9 +1773,46 @@
                       }
                     ]
                   }
+                ],
+                "hidden": true
+              },
+              {
+                "group": "Reporting Plugin",
+                "pages": [
+                  {
+                    "group": "Installation",
+                    "pages": [
+                      "untitled-page"
+                    ]
+                  },
+                  {
+                    "group": "User Guide",
+                    "pages": [
+                      "getting-started",
+                      "untitled-page-1",
+                      "untitled-page-2",
+                      "untitled-page-3",
+                      "untitled-page-4",
+                      "untitled-page-5",
+                      "cms-2-0-1",
+                      "licenses",
+                      "reports",
+                      "scheduled-reports"
+                    ]
+                  },
+                  {
+                    "group": "Administration",
+                    "pages": [
+                      "overview",
+                      "settings",
+                      "license-and-activation",
+                      "troubleshooting"
+                    ]
+                  }
                 ]
               }
-            ]
+            ],
+            "icon": "plug"
           }
         ]
       },

@@ -1,0 +1,29 @@
+---
+title: "Getting Started"
+---
+
+### Logging In
+
+The plugin has two completely separate login pages and two kinds of account:
+
+|  | **PADS4 user** (`/login`) | **Administrator** (`/admin/login`) |
+| :-- | :-- | :-- |
+| Credentials | Your PADS4 username, password, and domain | A local account stored only in this plugin |
+| Requires | **Management / All** in PADS4 claims | Nothing PADS4-side — this account is separate from PADS4 entirely |
+| Sees | Dashboard, Distribution, Synchronization, History, Proof of play, CMS 2.0, Licenses, Reports, Scheduled reports | Overview, Settings, License & activation |
+| Purpose | Day-to-day reporting and monitoring | One-time and ongoing configuration of the plugin itself |
+
+There's a link on each login page to switch to the other. The default administrator account is `admin `**/** `changeme` — you are forced to change this password on first sign-in and cannot skip it.
+
+### The product license gate
+
+Separately from PADS4 licensing, **this plugin itself** needs to be activated with an NDS-issued license key. Until an administrator activates it:
+
+- Administrators are redirected straight to **License & activation** and can't reach Settings.
+- PADS4 users are blocked at sign-in with a message that the installation isn't activated (or has expired).
+
+See Administration - License and Activation for how to activate.
+
+### Navigation
+
+The left-hand navigation changes based on which kind of account you're signed in as. PADS4 users see the reporting features (Dashboard through Scheduled reports); administrators see Overview, Settings, and License. There is no combined view — an administrator who also needs to use the reporting features signs out and back in as a PADS4 user.

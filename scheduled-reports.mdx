@@ -1,0 +1,13 @@
+---
+title: "Scheduled Reports"
+---
+
+**Scheduled reports** (`/scheduled`) emails a PDF on a recurring cadence — Connectivity, Offline devices, or Device distribution (proof of play isn't schedulable). Requires SMTP to be configured in Settings first; if it isn't, a banner says so and schedules simply won't send until it is.
+
+1. Click **Add schedule**.
+2. Choose **Report type** and **Cadence** (Daily / Weekly / Monthly).
+3. Enter one or more **Recipients** (comma- or semicolon-separated email addresses — validated before you can submit).
+4. Set the **Device scope** using the same group-tree/brand/device panel described in [Section 9](#9-reports).
+5. Click **Create schedule**.
+
+The **Active schedules** table lists everything configured, with a scope summary column, an **Enabled/Disabled** toggle (pauses delivery without deleting the schedule), and **Delete** (with a confirmation dialog — this can't be undone). Schedule changes take effect immediately; no server restart is needed.

@@ -1,0 +1,39 @@
+---
+title: "Troubleshooting"
+---
+
+### "This installation has not been activated" / "...license has expired" at PADS4 login
+
+The product license needs attention — sign in as administrator and check [Section 13](#13-administration--license--activation).
+
+### Forced to change the admin password and can't remember the original
+
+There's no self-service reset for the local administrator account from the login page. This needs direct server/database access — contact whoever deployed the instance.
+
+### PADS4 user can't sign in ("Not authorized" / claims error)
+
+The account needs **Management / All** in its PADS4 claims. This is set in PADS4 itself, not in this plugin.
+
+### Dashboard/Distribution/Synchronization show nothing or fail to load
+
+These call PADS4 live. Check the PADS4 connection in **Settings** (administrator) — use **Test PADS4 connection** — and confirm the service account credentials haven't expired or been locked out in PADS4.
+
+### History / CMS 2.0 / Proof of Play show little or no data
+
+These are all populated by **background** monitors, not live calls. Confirm in Settings that the relevant monitor is configured (PADS4 connection for History/CMS; the Proof of play section for that page) and give it time — a fresh install backfills history gradually rather than all at once. Proof of Play shows an explicit progress banner while this is happening.
+
+### "The last sync/collection failed" banners
+
+The background monitor's most recent attempt hit an error, but you're still looking at the last good snapshot, not stale-forever data — it retries automatically on the next interval. If it persists across several intervals, re-check the PADS4 connection in Settings.
+
+### Reports preview says "Select at least one device" and won't proceed
+
+You picked individual devices in the "Fine-tune individual devices" panel and then cleared the selection back to zero, which the app treats as an incomplete scope rather than silently falling back to "all devices." Either pick devices again, or use **Clear device selection** to fully exit device-picker mode and return to group/brand scope.
+
+### Scheduled reports aren't arriving
+
+Confirm SMTP is configured and tested in Settings, confirm the schedule is toggled **Enabled**, and check the recipient addresses on the schedule row. Schedule changes apply immediately, so a freshly created or re-enabled schedule doesn't need a restart to start working — only the next cadence tick.
+
+### CSV opens with garbled characters, or a cell shows a leading apostrophe
+
+The leading apostrophe on some cells is intentional — it's a safety measure that stops spreadsheet apps from treating PADS4-sourced text (device or content names) as a formula. It has no effect on the underlying data.

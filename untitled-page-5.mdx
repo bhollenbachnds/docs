@@ -1,0 +1,26 @@
+---
+title: "Proof of Play"
+---
+
+**Proof of Play** (`/proof-of-play`) answers "what played, where, and how much" — built from PADS4's play-log data, synced continuously into the plugin's local database in the background (not fetched live per page view, which is what makes this page fast).
+
+If PADS4 isn't configured yet, this page shows a plain message asking an administrator to complete Settings instead of any data.
+
+### Banners you might see
+
+- **Collecting proof-of-play history — X of Y days synced.** Appears while the background sync is still backfilling history after first setup (or after retention settings change). It updates itself automatically every 10 seconds — data appears in the tables as each day finishes syncing, no need to reload the page.
+- **"The last sync from PADS4 failed. Showing the most recently collected data."** The background sync hit an error on its most recent attempt; you're looking at the last successful data, not a live failure of the page itself.
+
+### Filters
+
+Date range (both dates inclusive), an optional time-of-day window (From/To hour), Device, Element, and a free-text Search box that matches content, element, or device name (debounced — it waits for you to stop typing before querying).
+
+### The three views
+
+1. **Summary** — grouped by device \+ element \+ content: play count, total time on screen, average completion, first/last play. Sort by Plays or Duration.
+2. **By media** — grouped by content title first (which is usually what you actually want to know: "how many times did _this_ run, and where"). Expand a row to see its per-device breakdown. Sort by Plays, Duration, or number of Devices.
+3. **Event log** — the raw play-by-play list: every individual play event with start time (plus UTC offset if non-zero), device, element, content, duration, whether it played to completion, and whether the device's monitor was reported on.
+
+A **Plays per day** bar chart sits above the tables, reflecting your current filters.
+
+**Create report from this view**: the button in the page header jumps to Reports with your current date range, device/element filters, and search term carried over, ready to export.

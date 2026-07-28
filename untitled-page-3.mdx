@@ -1,0 +1,12 @@
+---
+title: "Synchronization"
+---
+
+**Synchronization** (`/synchronization`) reviews how content sync sessions from PADS4 to individual players have been going — useful for diagnosing a player that isn't getting new content.
+
+1. **Choose players**: search and select one or more viewers from the list at the top (checkbox list with group/brand and an online/offline dot). Use **Select visible** to grab everyone currently matching your search, or **Clear** to start over.
+2. Click **Load sync logs**. If you change the selection afterward, a **"Selection changed — load again"** hint appears so you know your on-screen results are stale.
+3. Once loaded, you get two tabs:
+   - **Sync sessions** — one row per sync session per viewer: status (Completed / Failed / In progress / Info), file count, total size, time since the previous session, and a summary message.
+   - **File log** — one row per file transferred: filename, size, whether it uploaded successfully, status, and message. PADS4 doesn't report per-file transfer duration, so only timestamps and sizes are shown.
+4. Filter either tab by free-text search and status. On the File log tab, a **"Files with names only"** checkbox hides housekeeping entries with no filename.
