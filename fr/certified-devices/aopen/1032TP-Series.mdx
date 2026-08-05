@@ -1,0 +1,240 @@
+## **Première utilisation**
+
+Lors de l'installation, vous devrez configurer l'**emplacement du PADS4 Server**. Il est recommandé de **terminer l'installation du PADS4 Server en premier** avant de configurer l'appareil.
+
+<Note>
+  La version minimale du **PADS4 Server** requise pour l'**application PADS4 AOpen** est **2024.1**.
+</Note>
+
+## **Modèles pris en charge**
+
+* AOpen AT1032TP
+* AOpen eTILE-X1032TP
+
+<Note>
+  La prise en charge du X1032TP a été ajoutée dans la version PADS4 2025.1. Si une prise en charge est requise pour ce modèle particulier sur des versions PADS4 plus anciennes, remplacez l'APK sur votre serveur par le dernier téléchargement disponible du PADS4AOpen.apk.
+</Note>
+
+## **Installation du PADS4 AOpen Viewer**
+
+Le **PADS4AOpen.apk** est disponible sur le **PADS4 Server** dans le **dossier Apps** du répertoire d'installation :
+
+```
+C:\Program Files\PADS4\Foundation\Apps  
+```
+
+Vous pouvez également télécharger la dernière version depuis [**ici**](https://github.com/PADS4/PADS4-Viewer-AOpen/releases/download/v1.0/PADS4AOpen.apk).
+
+<Note>
+  Si vous téléchargez la dernière version, assurez-vous que l'APK est également placé dans le répertoire **Apps** sur le **PADS4 Server**. Si le serveur contient une version différente, il installera cette version lors de la connexion.
+</Note>
+
+### **Étapes d'installation**
+
+<Steps>
+  <Step title="Étape 1">
+    Copiez le **PADS4AOpen.apk** sur une **clé USB**.
+  </Step>
+
+  <Step title="Étape 2">
+    Insérez la **clé USB** dans l'appareil.
+  </Step>
+
+  <Step title="Étape 3">
+    Ouvrez l'**application Gestionnaire de fichiers** sur l'appareil.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Accédez à la **clé USB** et ouvrez **PADS4AOpen.apk**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Un avertissement apparaîtra indiquant que l'installation depuis des sources inconnues n'est pas autorisée.
+  </Step>
+
+  <Step title="Étape Six">
+    Accédez aux **Paramètres** et autorisez l'installation depuis cette source.
+  </Step>
+
+  <Step title="Étape Sept">
+    Appuyez sur le bouton **Retour** et installez l'application.
+  </Step>
+
+  <Step title="Étape Huit">
+    Après l'installation, ouvrez l'application **PADS4 AOpen**.
+  </Step>
+</Steps>
+
+***
+
+## **Connexion au PADS4 Server**
+
+Une fois installé, le **PADS4 Viewer** doit être connecté au **PADS4 Server**.
+
+### **Format d'adresse du PADS4 Server :**
+
+```
+protocol://host:port/hostpath/  
+```
+
+* **Protocol:** Utilisez `http` ou `https` selon qu'un certificat SSL est appliqué ou non.
+* **Host:** Le nom DNS ou l'adresse IP du **PADS4 Server**.
+* **Port:** À spécifier uniquement si le **PADS4 Server** n'utilise pas les ports HTTP/HTTPS par défaut.
+* **Chemin d'hôte :** Configuré dans **System Management** (par défaut : `PADS4`).
+
+**Example:**
+
+```
+http://localhost/pads4  
+```
+
+### **Étapes de connexion**
+
+<Steps>
+  <Step title="Étape Un">
+    Entrez le **PADS4 Server Location**.
+  </Step>
+
+  <Step title="Étape Deux">
+    (Facultatif) Spécifiez un **Viewer Name**. Si laissé vide, le **PADS4 Server** en générera un.
+  </Step>
+
+  <Step title="Étape Trois">
+    Définissez **PADS4 AOpen Viewer** comme **application d'accueil** et sélectionnez **Toujours**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Appuyez sur **Démarrer**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Autorisez l'**application PADS4 AOpen** à modifier les paramètres système.
+  </Step>
+
+  <Step title="Étape Six">
+    Activez **"Autoriser la modification des paramètres système"** et appuyez sur le bouton **Retour**.
+  </Step>
+
+  <Step title="Étape Sept">
+    Appuyez sur **Démarrer** à nouveau.
+  </Step>
+
+  <Step title="Étape Huit">
+    Accordez la **permission de stocker du contenu** sur l'appareil lorsque vous y êtes invité.
+  </Step>
+</Steps>
+
+Une fois terminé, le **PADS4 Viewer** devrait se connecter au **PADS4 Server**. Des paramètres supplémentaires tels que l'**orientation de l'écran** et les **restrictions de télécommande** peuvent être configurés à l'aide de **PADS4 Agent** ou des **Viewer Settings**.
+
+***
+
+## **Ajustement des options du PADS4 Viewer**
+
+* **Appuyez longuement sur l'écran** pour ouvrir le menu.
+* Les options peuvent également être modifiées à distance via **PADS4 CTRL Center** ou **PADS4 Agent**.
+
+***
+
+## **Accès au menu Android**
+
+1. Ouvrez le **Viewer Menu**.
+2. Cliquez sur **Launcher Settings**.
+3. Cliquez sur l'**icône d'engrenage** dans le coin inférieur droit.
+4. Le menu **Paramètres Android** s'ouvrira.
+
+<Note>
+  Si **"Masquer la barre d'état"** est activé, le seul moyen de quitter les Paramètres Android est de **redémarrer l'appareil** en débranchant l'alimentation.
+</Note>
+
+***
+
+## **Désactivation de la barre de navigation Android**
+
+(Facultatif) La barre de navigation peut être désactivée pour empêcher toute interaction non autorisée.
+
+### **Steps:**
+
+1. Ouvrez les **Viewer Options**.
+2. Cliquez sur **Launcher Settings**.
+3. Cliquez sur l'**icône d'engrenage** dans le coin inférieur droit.
+4. Sélectionnez **System Tools**.
+5. Cliquez sur **Disable Navigation Bar**.
+
+<Note>
+  Si désactivée, le seul moyen de quitter les paramètres est de **redémarrer l'appareil** en débranchant l'alimentation.
+</Note>
+
+***
+
+## **Effectuer une réinitialisation d'usine**
+
+Pour restaurer l'appareil aux paramètres d'usine :
+
+1. Ouvrez les **Paramètres Android**.
+2. Accédez à **Sauvegarde et réinitialisation**.
+3. Sélectionnez **Réinitialisation des données d'usine**.
+4. (Facultatif) Sélectionnez **Effacer la carte SD**.
+5. Appuyez sur **Réinitialiser la tablette**.
+6. Confirmez avec **Tout effacer**.
+
+***
+
+## **Fonctionnalités prises en charge et limitations**
+
+### **Fonctionnalités générales**
+
+| Fonctionnalité | Description                                                                                                                           |
+| :------------: | ------------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel PADS4** – Le HTML5 Viewer se met à jour automatiquement.                                      |
+|        ✅       | **Mode hors ligne** – L'appareil continuera à lire les présentations et à mettre à jour les plannings pendant **7 jours** hors ligne. |
+
+### **Capacités de l'appareil**
+
+| Fonctionnalité | Description                                                                                              |
+| :------------: | -------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mode Portrait** – L'appareil pivote automatiquement.                                                   |
+|        ✅       | **Block Remote Control** – Empêche toute utilisation non autorisée.                                      |
+|        ✅       | **Supports HTTP & HTTPS**                                                                                |
+|        ❌       | **Turn Off Display** – Non pris en charge.                                                               |
+|        ✅       | **Cluster Viewer** – Peut être utilisé dans le cadre d'une configuration en cluster.                     |
+|        ✅       | **LED Light Bar** – Prend en charge plusieurs couleurs (Rouge, Vert, Bleu, Cyan, Jaune, Magenta, Blanc). |
+
+### **Elements Supported**
+
+| Fonctionnalité | Description                                                                                                                      |
+| :------------: | -------------------------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Video Element** – Prend en charge **1 vidéo** à la fois.                                                                       |
+|        ❌       | **Video Rotation, Seamless Videos, Reflection, Skew, Flip** – Non pris en charge.                                                |
+|        ✅       | **Streaming HTTP, Images (JPG, PNG, BMP, GIF), Text, Line, Shapes, Scrolling Text, Formatted Text, Tables, Interactive Buttons** |
+|        ❌       | **Flash & Clipping Effects** – Non pris en charge.                                                                               |
+|        ✅       | **PDF Display** – Nécessite une licence Xpert.                                                                                   |
+
+### **Data Connections**
+
+**Data connections** permettent l'intégration avec des sources de données externes.
+
+| Fonctionnalité | Description                                                                         |
+| :------------: | ----------------------------------------------------------------------------------- |
+|        ✅       | **Supports 70+ Data Providers** – Récupère des données en temps réel.               |
+|        ✅       | **Viewer Variables** – Gestion centralisée du contenu.                              |
+|        ✅       | **Property Bindings** – Modifie dynamiquement les éléments en fonction des données. |
+
+### **Device Management**
+
+| Fonctionnalité | Description                                                                                                      |
+| :------------: | ---------------------------------------------------------------------------------------------------------------- |
+|        ✅       | **Connection State Monitoring & Alerts**                                                                         |
+|        ❌       | **Reboot, Shutdown, Wake-On-LAN** – Non pris en charge.                                                          |
+|        ✅       | **Restart Viewer, Take Screenshots, Retrieve Logs, Edit Viewer Settings, Install Fonts, Proof of Play Tracking** |
+
+***
+
+## **Notes importantes**
+
+<Warning>
+  **Intégrité des fichiers de contenu** – La **PADS4 Content Library** vérifie l'intégrité des fichiers à l'aide d'un **checksum MD5** lors de la synchronisation.
+</Warning>
+
+<Warning>
+  **Limitations du Proof of Play** – Un maximum de **50 000 enregistrements** peuvent être stockés localement pendant les périodes hors ligne. Lorsque la limite est atteinte, les enregistrements les plus anciens sont supprimés en premier.
+</Warning>
