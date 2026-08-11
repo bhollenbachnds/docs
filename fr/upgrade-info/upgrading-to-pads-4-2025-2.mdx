@@ -1,0 +1,69 @@
+---
+- title: Mise à niveau depuis une version antérieure à 2025.2
+---
+
+Pour mettre à niveau vers PADS4 2025.2, votre version actuelle doit être au moins 2022.3, ce qui signifie que PADS4 2022.3 doit être installé et en cours d'exécution au préalable.
+
+Les versions 2022.2 ou antérieures ne se mettront pas à jour automatiquement vers la version 2025.2 ; une mise à niveau intermédiaire vers la version 2022.3 est requise.
+
+<Warning>
+  Mise à jour des comptes utilisateurs et de la sécurité
+
+  À partir de la version 2025.1, les utilisateurs par défaut User1 et Administrator ont été supprimés pour renforcer la sécurité. Lors de la configuration, vous devez créer un nouveau compte utilisateur. Cet utilisateur est créé par l'utilisateur Root, dont le mot de passe est défini pendant le processus d'installation.
+</Warning>
+
+### **Notes de version**
+
+Les notes de version de PADS4 2025.2 sont disponibles \[[ici](https://www.netdisplaysystems.com/downloads/ForwardLinks/PADS4relnotes.pdf)]
+
+## Gestion des utilisateurs et migration
+
+La gestion des utilisateurs pour PADS4 Workspace et PADS4 CMS 1.0 a été migrée vers PADS4 CTRL Center, permettant à tous les utilisateurs d'être gérés depuis un emplacement unique et centralisé.
+
+Cette migration inclut tous les utilisateurs, licences et rôles attribués de PADS4 Workspace et CMS 1.0, qui sont automatiquement transférés vers PADS4 CTRL Center lors de l'installation. Après l'installation, vous pouvez examiner le processus de migration en vous connectant au portail web avec votre compte Root et en accédant à Migration.
+
+Dans cette section, vous trouverez un aperçu de toutes les étapes de migration. En sélectionnant un élément, vous pouvez afficher des informations détaillées dans Migration Run Details ou ouvrir le Migration Status Report pour un résumé complet.
+
+![Migration Overview Green](/images/MigrationOverviewGreen.png)
+
+## Mise à jour de l'URL de réponse Azure Single Sign-on
+
+<Warning>
+  Cette modification doit être appliquée avant la mise à jour vers 2025.2. Elle peut également être appliquée à tout moment avant la migration, car cela n'affecterait pas l'installation actuelle.
+</Warning>
+
+À partir de la version PADS4 **2025.2**, l'URL de réponse attendue sur le fournisseur d'identité externe change pour prendre en charge l'utilisation multi-domaines.
+
+Pour que le SSO PADS4 continue de fonctionner comme avant, vous devez ajouter une URL de réponse supplémentaire spécifique au domaine à l'application Azure Enterprise existante utilisée pour PADS4.
+
+Suivez ces étapes :
+
+1. Accédez à [https://entra.microsoft.com](https://entra.microsoft.com)
+2. Sélectionnez **Entra ID**.
+3. Ouvrez Enterprise applications → All applications.
+4. Recherchez et sélectionnez l'application que vous avez créée pour PADS4.
+5. Dans le menu Manage à gauche, sélectionnez Single sign-on.
+6. Sur la page Single sign-on, dans la section Basic SAML Configuration, cliquez sur Edit.
+7. Dans le panneau Basic SAML Configuration, sous Reply URL (Assertion Consumer Service URL), cliquez sur Add reply URL.
+8. Dans la nouvelle ligne, entrez l'URL de réponse liée au domaine dans la première colonne, par exemple :<br /><br />https\://\[PADS4Server]/rdx/nds.services.authentication.integration/api/v1/**pads**/Saml2/Acs<br />
+   <Frame>
+     ![Entra ID Basic SAML Configuration Reply URL](/images/install-pads4/EntraID_Basic_SAML_Configuration_Reply-URL.png "Entra ID Basic SAML Configuration Reply URL")
+   </Frame>
+9. Dans cet exemple, **pads** est le segment de domaine ajouté à l'URL de réponse existante. Si votre domaine est différent du domaine par défaut `pads` domaine, remplacez `pads` dans l'URL par votre propre valeur de domaine.
+10. Cliquez sur Save en haut du panneau pour appliquer les modifications.
+
+## Rôles des viewers
+
+Une fois la migration terminée, il est possible que vous ne voyiez aucun viewer répertorié lorsque vous vous connectez, même si toutes les licences sont disponibles. Cela est dû à l'introduction de trois nouveaux rôles pour gérer l'accès des viewers.
+
+<Warning>
+  Pour afficher ou modifier les paramètres des viewers, vous devez avoir l'un des rôles de viewer attribué à votre compte utilisateur. Pour plus d'informations, consultez User and Roles dans PADS4 CTRL Center → Administrator → User Management.
+</Warning>
+
+## Fonctionnalités obsolètes
+
+Les composants suivants ont été marqués comme obsolètes et ne sont plus inclus dans l'installation :
+
+* Élément TV – Remplacé par l'élément Streaming.
+* Flash – Prise en charge entièrement abandonnée en raison d'une technologie dépassée.
+* PADS4 License Wizard – Remplacé par le système de licences basé sur le web disponible via le portail PADS4.
