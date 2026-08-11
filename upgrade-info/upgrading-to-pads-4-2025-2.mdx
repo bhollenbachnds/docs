@@ -26,6 +26,32 @@ In this section, you’ll find an overview of all migration steps. By selecting 
 
 ![Migration Overview Green](/images/MigrationOverviewGreen.png)
 
+## Updating Azure Single Sign-on Reply URL
+
+<Warning>
+  This change have to be applied before the update to 2025.2. It can also be applied at any time before the migration as this would not affect the current installation.
+</Warning>
+
+From PADS4 version **2025.2**, the expected Reply URL on the external identity provider changes to support multi-domain usage.
+
+To keep PADS4 SSO working as before, you must add an additional domain-specific Reply URL to the existing Azure Enterprise Application used for PADS4.
+
+Follow these steps:
+
+1. Go to https://entra.microsoft.com
+2. Select **Entra ID**.
+3. Open Enterprise applications → All applications.
+4. Search for and select the application you created for PADS4.
+5. In the left-hand Manage menu, select Single sign-on.
+6. On the Single sign-on page, in the Basic SAML Configuration section, click Edit.
+7. In the Basic SAML Configuration panel, under Reply URL (Assertion Consumer Service URL), click Add reply URL.
+8. In the new row, enter the domain-related Reply URL in the first column, for example:<br /><br />https://\[PADS4Server\]/rdx/nds.services.authentication.integration/api/v1/**pads**/Saml2/Acs<br />
+   <Frame>
+     ![Entra ID Basic SAML Configuration Reply URL](/images/install-pads4/EntraID_Basic_SAML_Configuration_Reply-URL.png "Entra ID Basic SAML Configuration Reply URL")
+   </Frame>
+9. In this example, **pads** is the domain segment added to the existing Reply URL. If your domain is different from the default `pads` domain, replace `pads` in the URL with your own domain value.
+10. Click Save at the top of the panel to apply the changes.
+
 ## Viewer Roles
 
 After the migration is complete, you may not see any viewers listed when you log in, even though all licenses are available. This is because three new roles have been introduced to manage viewer access.

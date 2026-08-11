@@ -59,11 +59,6 @@
                 ]
               },
               {
-                "group": "Upgrade Information",
-                "pages": [],
-                "hidden": true
-              },
-              {
                 "group": "System Configuration",
                 "pages": [
                   "system-configuration/PADS4-Hardware-Configuration-Guide",
@@ -1781,9 +1776,7 @@
                 "pages": [
                   {
                     "group": "Installation",
-                    "pages": [
-                      "untitled-page"
-                    ]
+                    "pages": []
                   },
                   {
                     "group": "User Guide",
