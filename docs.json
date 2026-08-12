@@ -1502,7 +1502,12 @@
                         "group": "Plugins",
                         "pages": [
                           "modules/workspace/workspace-cms-admin/plugins",
-                          "modules/workspace/workspace-cms-admin/untitled-page"
+                          "untitled-page",
+                          "untitled-page-6",
+                          "untitled-page-7",
+                          "untitled-page-8",
+                          "untitled-page-9",
+                          "untitled-page-10"
                         ]
                       }
                     ]
