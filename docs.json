@@ -1494,12 +1494,12 @@
                         "group": "Plugins",
                         "pages": [
                           "modules/workspace/workspace-cms-admin/plugins",
-                          "untitled-page",
-                          "untitled-page-6",
+                          "Workspace/Administrator/ActiveDirectory",
+                          "Workspace/Administrator/SMTP",
                           "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
-                          "untitled-page-8",
+                          "Workspace/Administrator/Ca",
                           "Workspace/Administrator/External-Occupancy-Sensor",
-                          "untitled-page-10"
+                          "Workspace/Administrator/Workspace-Application-Setting"
                         ]
                       }
                     ]
