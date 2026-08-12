@@ -1491,22 +1491,14 @@
                       "modules/workspace/workspace-cms-admin/users",
                       "modules/workspace/workspace-cms-admin/profiles",
                       {
-                        "group": "SSO Configurations",
-                        "pages": [
-                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
-                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-Single-Sign-On-Azure-for-PADS4",
-                          "modules/workspace/workspace-cms-admin/SSO/ibm-security"
-                        ]
-                      },
-                      {
                         "group": "Plugins",
                         "pages": [
                           "modules/workspace/workspace-cms-admin/plugins",
                           "untitled-page",
                           "untitled-page-6",
-                          "untitled-page-7",
+                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
                           "untitled-page-8",
-                          "untitled-page-9",
+                          "Workspace/Administrator/External-Occupancy-Sensor",
                           "untitled-page-10"
                         ]
                       }

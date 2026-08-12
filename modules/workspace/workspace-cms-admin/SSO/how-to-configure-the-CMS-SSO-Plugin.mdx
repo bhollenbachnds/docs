@@ -1,37 +1,41 @@
-This manual can only be followed if you have configured SSO inyour Azure / Entra ID environment. You can follow this article to do so : **Single Sign On (Azure)**
-
-Now that all of the above information has been gathered, PADS4CMS can now be configured to make use of SSO.
+---
+title: "Single Sign-on (SSO)"
+---
 
 <Warning>
-  From PADS4 2025.2 onward, this feature is part of PADS4 CTRL Center. For more information, see CTRL Center \> Administration \> Identity.
+  From **PADS4 2025.2 onward**, this feature is part of PADS4 CTRL Center. For more information, see CTRL Center \> Administration \> Identity.
 </Warning>
+
+This manual can only be followed if you have configured SSO in your Azure / Entra ID environment. 
+
+Now that all of the above information has been gathered, PADS4CMS can now be configured to make use of SSO.
 
 ## Important :
 
 In order for SSO to function correctly, PADS4 must be configured with use of HTTPS. In order to achieve this, you would need to follow this guide with use of an SSL certificate.
 
-## Step 1 : Navigate to your PADS4 CMS  instance in abrowser
+## Step 1 : Navigate to your PADS4 CMS  instance in a browser
 
 Sign in with an Administrator account and select "CMS Admin"
 
 ![CM Sadmin Pn](/images/CMSadmin.png)
 
-## Step 2 : Select "Plugins" in the left pane and then "Single Sign-on (SSO)
+## Step 2 : Select "Plugins" in the left pane and then "Single Sign-on (SSO)"
 
-Enable the pluging on the **top right**, next to **"Type"**, select the **"Azure AD"** option in the drop down list
+Enable the plugin on the **top right**, next to **"Type"**, select the **"Azure AD"** option in the drop down list
 
 ![Pluging Type Azure AD Pn](/images/Pluging-Type-AzureAD.png)
 
 ## Step 3 : Insert the information obtained from the previous section
 
-| Known in Azure Active Directory | Know in PADS4                               |
-| ------------------------------- | ------------------------------------------- |
-| Azure AD Identifier             | Federation Service Identifier               |
-| URL of Relying Party            | URL of Relying party                        |
-| SMAL SSO URL                    | SAML SSO URL                                |
-| App Federation Metadata         | Federation Metada URL                       |
-| Certificate (Raw)               | Certificate of the federation server (.cer) |
-| Object ID                       | Active directory group ID                   |
+| Known in Azure Active Directory | Know in PADS4 |
+| --- | --- |
+| Azure AD Identifier | Federation Service Identifier |
+| URL of Relying Party | URL of Relying party |
+| SAML SSO URL | SAML SSO URL |
+| App Federation Metadata | Federation Metada URL |
+| Certificate (Raw) | Certificate of the federation server (.cer) |
+| Object ID | Active directory group ID |
 
 ### Important :
 
@@ -39,11 +43,11 @@ The copied string for the **“ URL of the relying party ”** in the CMS SSO co
 
 (Where "pads" is the default domain) Example: The Azure copied link looks like this:
 
-https://robin.pads365.com/crystal/pads/Saml2
+[https://robin.pads365.com/crystal/pads/Saml2](https://robin.pads365.com/crystal/pads/Saml2)
 
 however, it should be like this instead
 
-https://robin.pads365.com/crystal/pads
+[https://robin.pads365.com/crystal/pads](https://robin.pads365.com/crystal/pads)
 
 Upload the Application Certificate (Raw) that you have downloadedfrom Azure here:
 
@@ -70,7 +74,6 @@ Save the configuration then log out and you should now see thebelow **“Single 
 ## Important Notes :
 
 1. When you SSL Certificate expires, be sure to upload the new certificate and private key in this section upon renewal
-
    ![Uploadnewcertificate Pn](/images/Uploadnewcertificate.png)
 2. When you federation certificate expires, be sure to upload the new certificate and private key in this section upon renewal
 
