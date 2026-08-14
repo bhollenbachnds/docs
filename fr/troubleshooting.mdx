@@ -1,0 +1,39 @@
+---
+- title: Dépannage
+---
+
+### « This installation has not been activated » / « ...license has expired » lors de la connexion à PADS4
+
+La licence du produit nécessite une attention — connectez-vous en tant qu'administrateur et vérifiez [Section 13](#13-administration--license--activation).
+
+### Contraint de changer le mot de passe administrateur et impossible de se souvenir de l'original
+
+Il n'existe pas de réinitialisation en libre-service pour le compte administrateur local depuis la page de connexion. Cela nécessite un accès direct au serveur/à la base de données — contactez la personne qui a déployé l'instance.
+
+### L'utilisateur PADS4 ne peut pas se connecter (« Not authorized » / erreur de claims)
+
+Le compte a besoin de **Management / All** dans ses claims PADS4. Cela est défini dans PADS4 lui-même, et non dans ce plugin.
+
+### Le tableau de bord/la distribution/la synchronisation n'affichent rien ou ne parviennent pas à se charger
+
+Ceux-ci appellent PADS4 en direct. Vérifiez la connexion PADS4 dans **Settings** (administrateur) — utilisez **Test PADS4 connection** — et confirmez que les identifiants du compte de service n'ont pas expiré ou n'ont pas été verrouillés dans PADS4.
+
+### History / CMS 2.0 / Proof of Play affichent peu ou pas de données
+
+Ceux-ci sont tous alimentés par des moniteurs **en arrière-plan**, et non par des appels en direct. Confirmez dans Settings que le moniteur concerné est configuré (connexion PADS4 pour History/CMS ; la section Proof of play pour cette page) et accordez-lui du temps — une nouvelle installation reconstitue l'historique progressivement plutôt que tout à la fois. Proof of Play affiche une bannière de progression explicite pendant ce processus.
+
+### Bannières « The last sync/collection failed »
+
+La tentative la plus récente du moniteur en arrière-plan a rencontré une erreur, mais vous consultez toujours le dernier instantané valide, et non des données définitivement obsolètes — il réessaie automatiquement à l'intervalle suivant. Si le problème persiste sur plusieurs intervalles, revérifiez la connexion PADS4 dans Settings.
+
+### L'aperçu des rapports indique « Select at least one device » et ne continue pas
+
+Vous avez sélectionné des appareils individuels dans le panneau « Fine-tune individual devices » puis avez effacé la sélection jusqu'à zéro, ce que l'application traite comme une portée incomplète plutôt que de revenir silencieusement à « tous les appareils ». Sélectionnez à nouveau des appareils, ou utilisez **Clear device selection** pour quitter complètement le mode de sélection d'appareils et revenir à la portée groupe/marque.
+
+### Les rapports planifiés n'arrivent pas
+
+Confirmez que SMTP est configuré et testé dans Settings, confirmez que le planning est activé sur **Enabled**, et vérifiez les adresses des destinataires sur la ligne du planning. Les modifications de planning s'appliquent immédiatement, donc un planning nouvellement créé ou réactivé n'a pas besoin d'un redémarrage pour commencer à fonctionner — seulement le prochain déclenchement de la cadence.
+
+### Le CSV s'ouvre avec des caractères illisibles, ou une cellule affiche une apostrophe en début
+
+L'apostrophe en début de certaines cellules est intentionnelle — c'est une mesure de sécurité qui empêche les applications de tableur de traiter le texte provenant de PADS4 (noms d'appareils ou de contenus) comme une formule. Elle n'a aucun effet sur les données sous-jacentes.
