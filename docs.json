@@ -1494,12 +1494,22 @@
                         "group": "Plugins",
                         "pages": [
                           "modules/workspace/workspace-cms-admin/plugins",
-                          "Workspace/Administrator/ActiveDirectory",
-                          "Workspace/Administrator/SMTP",
-                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
-                          "Workspace/Administrator/Ca",
+                          {
+                            "group": "Calendar",
+                            "pages": [
+                              "Workspace/Administrator/Introduction"
+                            ]
+                          },
                           "Workspace/Administrator/External-Occupancy-Sensor",
-                          "Workspace/Administrator/Workspace-Application-Setting"
+                          "Workspace/Administrator/Workspace-Application-Setting",
+                          {
+                            "group": "Deprecated",
+                            "pages": [
+                              "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
+                              "Workspace/Administrator/ActiveDirectory",
+                              "Workspace/Administrator/SMTP"
+                            ]
+                          }
                         ]
                       }
                     ]
@@ -1509,18 +1519,53 @@
                     "pages": [
                       "modules/workspace/workspace-admin/introduction",
                       "modules/workspace/workspace-admin/home",
-                      "modules/workspace/workspace-admin/rooms",
-                      "modules/workspace/workspace-admin/buildings",
-                      "modules/workspace/workspace-admin/room-profiles",
-                      "modules/workspace/workspace-admin/equipment",
-                      "modules/workspace/workspace-admin/defective-equipment",
-                      "modules/workspace/workspace-admin/users",
-                      "modules/workspace/workspace-admin/room-user-profile",
-                      "modules/workspace/workspace-admin/occupancy-sensors",
-                      "modules/workspace/workspace-admin/statistics",
-                      "modules/workspace/workspace-admin/additional-services",
-                      "modules/workspace/workspace-admin/extended-property",
-                      "modules/workspace/workspace-admin/welcome-message"
+                      {
+                        "group": "Rooms and Buildings",
+                        "pages": [
+                          "modules/workspace/workspace-admin/rooms",
+                          "modules/workspace/workspace-admin/buildings",
+                          "modules/workspace/workspace-admin/room-profiles",
+                          "modules/workspace/workspace-admin/extended-property"
+                        ]
+                      },
+                      {
+                        "group": "Users",
+                        "pages": [
+                          "modules/workspace/workspace-admin/users",
+                          "modules/workspace/workspace-admin/room-user-profile"
+                        ]
+                      },
+                      {
+                        "group": "Equipment",
+                        "pages": [
+                          "modules/workspace/workspace-admin/equipment",
+                          "modules/workspace/workspace-admin/defective-equipment"
+                        ]
+                      },
+                      {
+                        "group": "Additional Services",
+                        "pages": [
+                          "modules/workspace/workspace-admin/additional-services"
+                        ]
+                      },
+                      {
+                        "group": "IoT",
+                        "pages": [
+                          "modules/workspace/workspace-admin/occupancy-sensors"
+                        ]
+                      },
+                      {
+                        "group": "Statisics",
+                        "pages": [
+                          "modules/workspace/workspace-admin/statistics"
+                        ]
+                      },
+                      {
+                        "group": "Welcome Message",
+                        "pages": [
+                          "modules/workspace/workspace-admin/welcome-message"
+                        ]
+                      }
                     ]
                   },
                   {
