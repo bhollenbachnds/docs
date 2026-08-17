@@ -1,0 +1,76 @@
+---
+- title: Create-the-database-manually-with-Microsoft-SQL-Server-Management-Studio
+---
+
+Cette section fournit des instructions étape par étape pour créer manuellement la base de données **PADS4FIDS** à l'aide de **SQL Server Management Studio (SSMS)**.
+
+***
+
+## **Étape 1 : Ouvrir SQL Server Management Studio**
+
+1. Lancez **SQL Server Management Studio**.
+2. Connectez-vous au **Moteur de base de données**.
+3. Dans l'**Explorateur d'objets**, développez votre instance SQL Server.
+4. Faites un clic droit sur **Bases de données**.
+5. Sélectionnez **Nouvelle base de données...**
+
+***
+
+## **Étape 2 : Créer la base de données**
+
+1. Dans le **Nom de la base de données** champ, entrez :
+   ```text
+   PADS4FIDS
+   ```
+2. Cliquez sur **OK** pour créer la base de données.
+
+***
+
+## **Étape 3 : Vérifier la connexion NT AUTHORITY\SYSTEM**
+
+1. Développez le nœud **Sécurité**.
+2. Développez **Connexions**.
+3. Recherchez la connexion :
+   ```text
+   NT AUTHORITY\SYSTEM
+   ```
+
+* Si elle **existe déjà**, faites un clic droit dessus et choisissez **Propriétés**, puis passez à l'**Étape 6**.
+* Si elle **n'existe pas**, continuez avec l'**Étape 4**.
+
+***
+
+## **Étape 4 : Créer la connexion NT AUTHORITY\SYSTEM**
+
+1. Faites un clic droit sur **Connexions**.
+2. Sélectionnez **Nouvelle connexion...**
+
+***
+
+## **Étape 5 : Configurer la nouvelle connexion**
+
+1. Dans le **Nom de connexion** champ, entrez :
+   ```text
+   NT AUTHORITY\SYSTEM
+   ```
+2. Sélectionnez **Authentification Windows**.
+3. Ne **pas** entrer de mot de passe.
+
+***
+
+## **Étape 6 : Attribuer les autorisations de base de données**
+
+1. Dans la fenêtre **Propriétés de connexion**, sélectionnez **Mappage d'utilisateur** dans le menu de gauche.
+2. Dans la section **Utilisateurs mappés à cette connexion**, cochez la case à côté de :
+   ```text
+   PADS4FIDS
+   ```
+3. Dans la section **Appartenance au rôle de base de données pour : PADS4FIDS**, cochez le rôle :
+   ```text
+   db_owner
+   ```
+4. Cliquez sur **OK** pour enregistrer les modifications.
+
+***
+
+La base de données PADS4FIDS est maintenant configurée et prête à l'emploi.
