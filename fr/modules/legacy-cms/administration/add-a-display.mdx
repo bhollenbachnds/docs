@@ -1,26 +1,41 @@
-Les écrans représentent les écrans physiques ou virtuels où le contenu d'affichage dynamique est présenté. Chaque écran doit être enregistré dans le système pour recevoir et afficher le contenu programmé.
+---
+- title: Écrans
+---
 
-### Étapes pour ajouter un écran
+### Aperçu des écrans
 
-1. Naviguez vers la section **Displays** dans l'interface Administrateur.
+Ici, vous pouvez ajouter des écrans qui fonctionnent avec vos formulaires et messages PADS4 CMS.
 
-2. Sélectionnez l'option **Add New Display**.
+Un bref rappel : Si vous travaillez avec un système PADS4 configuré et que vous souhaitez que les utilisateurs envoient des messages à tous les Viewers connectés, vous devrez les ajouter manuellement ici dans la section Signalétique numérique / écrans de PADS4 CMS.
 
-3. Saisissez les informations requises :
-   * **Display Name** : Un nom unique et descriptif pour identifier l'écran (par exemple, "TV du hall" ou "Écran de salle de réunion").
-   * **Location** (facultatif) : Aide à organiser et gérer les écrans selon leur emplacement physique.
-   * **Group** (si applicable) : Assignez l'écran à un groupe existant pour la programmation ou la gestion en masse.
+Note: the Viewers cannot have special characters in the name, so make sure to rename your Viewers to generic names before implementation here in PADS4 CMS Digital Signage.
 
-4. Notez le **Display Token** ou **Activation Code** généré par le système. Il sera utilisé pour activer le logiciel de lecture sur l'écran physique.
+### Ajout d'écrans
 
-5. Installez le logiciel de lecture d'affichage dynamique sur l'écran ou l'appareil.
+Sur le côté gauche, vous avez un aperçu de vos écrans.&#x20;
 
-6. Lancez le lecteur et saisissez le jeton/code pour associer l'écran à votre système.
+Conseil rapide : Utilisez l'onglet Destinations de PADS4 System Management | ou les Connexions Viewer de PADS4 Agent comme référence pour savoir quels écrans vous souhaitez ajouter au module Signalétique numérique de PADS4 CMS.
 
-7. Une fois connecté, l'écran apparaîtra comme en ligne dans l'interface Administrateur et pourra commencer à recevoir du contenu.
+Vue en mosaïque ou vue en liste : En sélectionnant l'icône de vue en mosaïque ou en liste, vous modifiez la vue de vos écrans ajoutés.
 
-### Notes
+Si vous souhaitez ajouter un écran, sélectionnez l'icône + jaune en bas du volet gauche.
 
-* Un écran doit être connecté à Internet ou au réseau local pour communiquer avec le CMS.
-* Les écrans peuvent être organisés en groupes pour faciliter la programmation.
-* Vous pouvez modifier ou supprimer des écrans à tout moment.
+•  Cliquez sur l'icône + sous le volet Écrans.<br />• Créez un nom pour votre viewer (copiez le nom du Viewer dans l'onglet Destinations de l'application PADS4 System Management. Ce champ est sensible à la casse, et assurez-vous qu'il n'y a pas de caractères spéciaux.)<br />•  Sélectionnez un fuseau horaire pour l'écran.<br />• Vous pouvez choisir d'attribuer l'écran à tous les profils, ou sélectionner des profils spécifiques.
+
+Vous pouvez modifier/supprimer un groupe en cliquant sur l'écran individuel, puis en cliquant sur l'icône crayon ou l'icône corbeille.
+
+Une fois que vous avez créé un écran, vous pouvez l'affecter à un groupe.
+
+### Création de groupes
+
+Vous pouvez ajouter plusieurs écrans à un groupe dans PADS4 CMS. Dans le volet de droite, vous aurez un aperçu de vos groupes et vous pourrez sélectionner une vue en mosaïque ou en liste de ces groupes (tout comme la section des écrans).
+
+•  Cliquez sur l'icône + sous le volet Groupes.<br />• Créez un nom pour votre groupe<br />• Le groupe apparaîtra maintenant dans le volet Groupes.<br />• Ajoutez un écran en le faisant glisser et en le déposant dans le groupe.<br />• Si vous double-cliquez sur le groupe, il affichera quels Viewers se trouvent dans le groupe.<br />• Optionnellement, vous pouvez créer des sous-groupes au sein des groupes. Accédez à l'intérieur d'un groupe et sélectionnez l'icône +
+
+Vous pouvez modifier/supprimer un groupe en cliquant sur le groupe individuel, puis en cliquant sur l'icône crayon ou l'icône corbeille.
+
+#### Ajout d'un écran à un groupe
+
+Sélectionnez simplement un écran dans le volet gauche et faites-le glisser et déposez-le dans le groupe sélectionné. Il apparaîtra dans le groupe. Si vous souhaitez ajouter un écran à un sous-groupe, vous devrez naviguer jusqu'à l'emplacement du sous-groupe. Faites ensuite glisser et déposez l'écran dans le sous-groupe.
+
+Il est possible d'affecter des groupes à plusieurs niveaux au sein des groupes, ou de les ajouter à plusieurs groupes.
