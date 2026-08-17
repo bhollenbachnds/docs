@@ -1,0 +1,45 @@
+---
+- title: Rapports
+---
+
+**Rapports** (`/reports`) génère des exports CSV ou PDF à la demande, avec un aperçu en direct avant le téléchargement.
+
+### Types de rapports
+
+Choisis via les onglets en haut :
+
+| Type                           | Ce qu'il couvre                                                                            |
+| :----------------------------- | :----------------------------------------------------------------------------------------- |
+| **Connectivité**               | Statut en ligne/hors ligne pour chaque appareil dans la portée, avec les durées hors ligne |
+| **Appareils hors ligne**       | Appareils actuellement hors ligne, ou incidents hors ligne dans une plage de dates         |
+| **Distribution des appareils** | Comment les appareils sont répartis entre les marques et les groupes                       |
+| **Preuve de diffusion**        | Ce qui a été diffusé, le nombre de diffusions, les durées et les événements                |
+
+### En direct vs. historique
+
+Pour Connectivité, Appareils hors ligne et Distribution des appareils, une case à cocher **"Utiliser une plage de dates historique"** contrôle le mode :
+
+* **Désactivé (par défaut)** : un **instantané en direct** de l'état actuel de PADS4.
+* **Activé** : données limitées à une plage de dates sélectionnée, extraites de l'historique local du plugin (soumises à la même rétention de 3 mois que History/CMS).
+
+La preuve de diffusion nécessite toujours une plage de dates (pas de mode en direct) et ne comprend que des jours entiers.
+
+### Portée des appareils
+
+Sous les options de rapport, un panneau **Portée des appareils** vous permet de restreindre les appareils inclus :
+
+* **Arborescence de groupes** : cochez un groupe pour l'inclure ainsi que tout ce qui se trouve en dessous. Vous pouvez désormais **exclure un sous-groupe spécifique d'un parent autrement sélectionné** — cochez le parent, puis décochez uniquement l'enfant que vous souhaitez exclure ; l'enfant affiche une étiquette "Exclu" et une case à cocher non remplie au lieu d'être indiscernable de "jamais sélectionné".
+* **Marque** filtre (sélection unique), combinable avec l'arborescence de groupes.
+* **Affiner les appareils individuels** (réductible) : recherchez et sélectionnez manuellement des appareils spécifiques plutôt que des groupes entiers. La sélection d'un seul appareil ici bascule entièrement la portée vers "ces appareils précis" et remplace les filtres de groupe/marque.
+* La **barre de portée active** en bas résume toujours ce qui est actuellement en vigueur (par ex. "12 sur 40 appareils · Groupe : Région A (sauf Magasin 5) · Marque : Samsung").
+* Si vous sélectionnez des appareils individuels via le panneau de réglage fin puis ramenez votre sélection à zéro, l'application bloque la génération de rapports avec un avertissement jusqu'à ce que vous sélectionniez à nouveau des appareils ou effaciez entièrement le sélecteur pour revenir à la portée groupe/marque.
+
+Les rapports de preuve de diffusion utilisent une portée différente et plus simple : un nom d'Element facultatif et une Recherche en texte libre, repris automatiquement si vous êtes arrivé ici via **"Créer un rapport depuis cette vue"** depuis la page Proof of Play.
+
+### Aperçu et téléchargement
+
+Le panneau de droite affiche un aperçu en direct : cartes KPI, graphiques correspondant à ce qui est affiché à l'écran pour ce type de rapport, et un échantillon de lignes (le jeu de données complet ne se trouve que dans le téléchargement réel — l'aperçu est limité à 15–20 lignes selon le type de rapport). Une bannière de portée/période en haut de l'aperçu indique exactement ce que vous êtes sur le point de télécharger.
+
+Choisissez **CSV** ou **PDF** avec le sélecteur de format, puis **Télécharger**. Les PDF sont mis en forme pour correspondre au style de l'application. Les exports CSV neutralisent automatiquement toute cellule susceptible d'être interprétée comme une formule de tableur (mesure de protection, invisible en utilisation normale).
+
+Un panneau extensible **"Comment ce rapport fonctionne"** explique, par type de rapport, exactement ce que les contrôles de plage de dates et de portée affectent.

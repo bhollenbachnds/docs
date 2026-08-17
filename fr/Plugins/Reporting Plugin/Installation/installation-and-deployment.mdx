@@ -1,0 +1,121 @@
+---
+- title: Installation et déploiement
+---
+
+## Plugin de reporting PADS4 — Installation
+
+**Guide d'installation Windows (Setup.exe)**
+
+Le plugin de reporting PADS4 est installé sur Windows avec un seul **Setup.exe** installateur. La machine cible n'a besoin de **rien de préinstallé**. Après l'installation, le plugin s'exécute en tant que service Windows qui démarre automatiquement avec la machine.
+
+Pour savoir comment utiliser l'application après l'installation, consultez notre Guide d'administration.
+
+***
+
+## 1. Prérequis
+
+| Élément | Exigence                                                                                                                                                                                                        |
+| :------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| OS      | Windows Server 2019+ ou Windows 10/11 (64 bits)                                                                                                                                                                 |
+| Accès   | Droits administrateur pour exécuter l'installateur                                                                                                                                                              |
+| Réseau  | La machine doit pouvoir atteindre l'instance PADS4. L'accès à Internet n'est nécessaire que pour **en ligne** activation de licence — l'activation hors ligne est disponible pour les sites isolés (air-gapped) |
+| PADS4   | Une instance PADS4 accessible, ainsi qu'un compte de service avec **Management / All** claims pour la surveillance en arrière-plan                                                                              |
+| Disque  | Petit au départ ; augmente avec l'historique conservé, limité par les fenêtres de rétention configurées dans Settings                                                                                           |
+
+***
+
+## 2. Ce que fait l'installateur
+
+| Élément                    | Valeur                                                                                                                              |
+| :------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Emplacement d'installation | `C:\Program Files\PADS4 Reporting Plugin` — fichiers d'application uniquement, en lecture seule après la configuration              |
+| Emplacement des données    | `C:\ProgramData\PADS4 Reporting Plugin` — base de données SQLite, activation de licence, secret de session, journaux de service     |
+| Service Windows            | **PADS4 Reporting Plugin** (id `PADS4ReportingPlugin`) — démarrage automatique au démarrage, redémarrage automatique en cas d'échec |
+| Interface web              | `http://localhost:3001`, avec une règle de pare-feu Windows optionnelle proposée lors de la configuration                           |
+| Journaux                   | `C:\ProgramData\PADS4 Reporting Plugin\logs\` — sortie du service, archivée par taille                                              |
+
+Conserver toutes les données d'exécution sous ProgramData signifie que les mises à niveau et même les désinstallations ne touchent jamais la base de données, l'historique, les paramètres ou l'activation de licence.
+
+***
+
+## 3. Installation
+
+1. Exécuter `PADS4-Reporting-Plugin-Setup.exe` en tant qu'administrateur.
+2. Confirmer le répertoire d'installation.
+3. Choisir d'ajouter la **règle de pare-feu** pour le port TCP 3001 — nécessaire si les utilisateurs ouvrent l'application depuis d'autres machines plutôt que sur le serveur lui-même.
+4. La configuration enregistre et démarre le service, puis propose d'ouvrir `http://localhost:3001`.
+
+***
+
+## 4. Premier lancement & Activation
+
+1. Ouvrir l'application dans un navigateur et accéder à la connexion **Administrateur** (`/admin/login`, ou suivre le lien "Se connecter en tant qu'administrateur" depuis la page de connexion habituelle).
+2. Se connecter avec les identifiants par défaut : `admin` **/** `changeme`.
+3. Vous serez obligé de **changer le mot de passe** immédiatement — le mot de passe par défaut n'est jamais utilisable au-delà de la première connexion.
+4. Vous arriverez ensuite sur **Licence & activation**. L'application ne peut pas être configurée ou utilisée tant que cette installation n'est pas activée :
+   * **Activation en ligne** : saisissez la clé de licence reçue, cliquez sur **Activer**. L'application contacte directement le serveur de licences de NDS.
+   * **Activation hors ligne** (pas d'accès internet depuis cette machine) : copiez l'**ID d'installation** affiché sur la page, demandez un fichier d'activation à NDS en utilisant cet ID et votre clé de licence, puis téléversez le fichier `.lic` ici.
+5. Une fois activé, ouvrir **Settings** et configurer, au minimum :
+   * **Connexion PADS4** — URL de base, nom d'utilisateur/mot de passe du compte de service, domaine. Utiliser **Tester la connexion PADS4** pour confirmer avant d'enregistrer.
+   * **Moniteur de statut** intervalle d'interrogation (fréquence de vérification de la connectivité des appareils).
+   * **Moniteur CMS**, **Proof of play**, et **Livraison par e-mail (SMTP)** selon les besoins — voir le Manuel pour la description de chaque champ.
+6. Se déconnecter, puis se reconnecter via la **page de connexion habituelle** en utilisant les identifiants d'utilisateur PADS4 réels (un utilisateur PADS4 a besoin de **Management / All** claims pour être autorisé à accéder) afin de vérifier que les tableaux de bord et les rapports se chargent correctement.
+
+***
+
+## 5. HTTPS & Cookies de session
+
+Les cookies de session nécessitent par défaut **HTTPS obligatoire**. Si l'application n'est accessible que via HTTP simple (tests, accès interne uniquement par IP), désactivez cette option dans **Settings → Deployment → Secure session cookies** — sinon la connexion échouera silencieusement, car le navigateur ne renverra pas un cookie `Secure` via HTTP. Ce paramètre nécessite un redémarrage du service pour prendre effet.
+
+Pour la production, placez un proxy inverse avec terminaison TLS (IIS avec ARR, ou nginx) devant `http://localhost:3001` avec un vrai certificat, et laissez les cookies sécurisés **activés**.
+
+***
+
+## 6. Opérations de service
+
+```powershell
+Get-Service PADS4ReportingPlugin
+Restart-Service PADS4ReportingPlugin
+Stop-Service PADS4ReportingPlugin
+```
+
+Ou utiliser `services.msc` → **PADS4 Reporting Plugin**.
+
+| Chemin                                                              | Objectif                                                                                                                                                               |
+| :------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `C:\Program Files\PADS4 Reporting Plugin`                           | Fichiers d'application (ne pas modifier, sauf le XML de service ci-dessous)                                                                                            |
+| `C:\Program Files\PADS4 Reporting Plugin\PADS4ReportingService.xml` | Définition du service — modifier la ligne `&lt;arguments&gt;` pour changer le port (`--port &lt;n&gt;`) ou le chemin de la base de données, puis redémarrer le service |
+| `C:\ProgramData\PADS4 Reporting Plugin\reporting.db`                | Base de données SQLite (paramètres, historique, état de la licence)                                                                                                    |
+| `C:\ProgramData\PADS4 Reporting Plugin\logs\`                       | Journaux de service                                                                                                                                                    |
+
+***
+
+## 7. Mise à niveau
+
+Exécuter le nouveau Setup.exe par-dessus l'installation existante. Il arrête le service en cours d'exécution, remplace les fichiers d'application et réenregistre/démarre le service automatiquement. Tout ce qui se trouve sous `C:\ProgramData\PADS4 Reporting Plugin` — base de données, historique, activation de licence, tous les paramètres — survit à la mise à niveau sans être modifié. Aucune étape de sauvegarde/restauration séparée n'est requise, bien que sauvegarder `reporting.db` au préalable ne soit jamais inutile.
+
+***
+
+## 8. Désinstallation
+
+Supprimer via **Applications & fonctionnalités** (ou le programme de désinstallation dans le répertoire d'installation). Le service et la règle de pare-feu sont supprimés, mais le répertoire de données est **délibérément conservé** afin qu'une réinstallation ultérieure récupère la base de données et la licence existantes — le programme de désinstallation indique où il se trouve. Supprimer `C:\ProgramData\PADS4 Reporting Plugin` manuellement pour une suppression complète.
+
+***
+
+## 9. Dépannage
+
+**L'installateur avertit d'un éditeur inconnu (SmartScreen)**<br />L'installateur n'est pas encore signé par un code. Choisissez "Plus d'informations → Exécuter quand même" si vous l'avez obtenu directement auprès de NDS.
+
+**Le service ne démarre pas après l'installation**<br />Vérifier les journaux dans `C:\ProgramData\PADS4 Reporting Plugin\logs\`. La cause la plus fréquente est qu'une autre application utilise déjà le port 3001 — changer le port dans le XML de service (voir [Section 6](#6-service-operations)) et redémarrer.
+
+**La page de connexion se charge mais les sessions ne persistent pas / la connexion échoue silencieusement**<br />La discordance de cookie sécurisé décrite dans la [Section 5](#5-https--session-cookies) : l'application est accessible via HTTP simple avec les cookies sécurisés toujours activés (par défaut). Désactivez le paramètre pour une utilisation HTTP uniquement, ou placez TLS devant.
+
+**"Cette installation n'a pas été activée" bloque la connexion des utilisateurs PADS4**<br />La licence du produit a expiré ou n'a jamais été activée. Un administrateur doit se connecter et résoudre le problème sur la **Licence & activation** page.
+
+**Le moniteur de statut / moniteur CMS ne collecte rien**<br />Configurez la connexion PADS4 et le compte de service dans les Paramètres (connexion administrateur). Les paramètres s'appliquent immédiatement sans redémarrage du service — les cookies sécurisés constituent la seule exception.
+
+**Impossible d'accéder à l'application depuis une autre machine**<br />La règle de pare-feu a été ignorée lors de l'installation. Rajoutez-la : `netsh advfirewall firewall add rule name="PADS4 Reporting Plugin" dir=in action=allow protocol=TCP localport=3001` (invite élevée), ou relancez le programme d'installation avec la tâche de pare-feu cochée.
+
+**Les rapports planifiés n'envoient pas d'e-mail**<br />Configurez le SMTP dans les Paramètres, puis utilisez **Envoyer un e-mail de test** sur cette même page avant de vous fier à une vraie planification.
+
+***

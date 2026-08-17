@@ -1,0 +1,29 @@
+---
+- title: Premiers pas
+---
+
+### Connexion
+
+Le plugin dispose de deux pages de connexion entièrement distinctes et de deux types de compte :
+
+|              | **Utilisateur PADS4** (`/login`)                                                                                | **Administrateur** (`/admin/login`)                              |
+| :----------- | :-------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------- |
+| Identifiants | Votre nom d'utilisateur, mot de passe et domaine PADS4                                                          | Un compte local stocké uniquement dans ce plugin                 |
+| Nécessite    | **Management / All** dans les claims PADS4                                                                      | Rien du côté PADS4 — ce compte est entièrement distinct de PADS4 |
+| Accès à      | Dashboard, Distribution, Synchronization, History, Proof of play, CMS 2.0, Licenses, Reports, Scheduled reports | Overview, Settings, License & activation                         |
+| Objectif     | Rapports et surveillance au quotidien                                                                           | Configuration ponctuelle et continue du plugin lui-même          |
+
+Un lien sur chaque page de connexion permet de basculer vers l'autre. Le compte administrateur par défaut est `admin `**/** `changeme` — vous êtes obligé de modifier ce mot de passe lors de la première connexion et ne pouvez pas ignorer cette étape.
+
+### La vérification de la licence du produit
+
+Indépendamment des licences PADS4, **ce plugin lui-même** doit être activé avec une clé de licence émise par NDS. Tant qu'un administrateur ne l'a pas activé :
+
+* Les administrateurs sont redirigés directement vers **License & activation** et ne peuvent pas accéder à Settings.
+* Les utilisateurs PADS4 sont bloqués à la connexion avec un message indiquant que l'installation n'est pas activée (ou a expiré).
+
+Consultez Administration - License and Activation pour savoir comment activer.
+
+### Navigation
+
+La navigation dans le panneau de gauche change selon le type de compte avec lequel vous êtes connecté. Les utilisateurs PADS4 voient les fonctionnalités de reporting (Dashboard jusqu'à Scheduled reports) ; les administrateurs voient Overview, Settings et License. Il n'existe pas de vue combinée — un administrateur qui a également besoin d'utiliser les fonctionnalités de reporting se déconnecte et se reconnecte en tant qu'utilisateur PADS4.

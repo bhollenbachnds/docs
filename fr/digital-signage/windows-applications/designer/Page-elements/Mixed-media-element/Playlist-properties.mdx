@@ -1,0 +1,44 @@
+Ces propriétés définissent **les éléments multimédias (images, vidéos, flux)** qui seront affichés dans votre élément Mixed Media. Vous pouvez créer un **affichage d'élément unique** ou une **playlist** qui exécute les fichiers multimédias de manière séquentielle.
+
+***
+
+### **Gestion de la Playlist**
+
+* **Ajouter**, **modifier**, **réorganiser**, ou **supprimer** des éléments dans votre playlist.
+* Les éléments de la playlist peuvent être gérés en **vue détaillée** ou en **vue liste**.
+* **Boutons de navigation** en bas de la fenêtre de playlist vous permettent de vous déplacer dans la liste.
+* **Durée totale** affiche la durée cumulée de tous les éléments de la playlist.
+
+> **Important:**\
+> Pour des conseils approfondis sur la gestion des playlists, voir **Travailler avec les listes de lecture**.
+
+***
+
+### **Élément de Playlist : Options de Type**
+
+| **Type**                                    | **Description**                                                                                                                                                                        |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Média depuis la bibliothèque de contenu** | Référence un **fichier image ou vidéo** existant stocké dans la **PADS4 Content Library** (recommandé). Les fichiers sont **automatiquement synchronisés** sur tous les PC du système. |
+| **Média depuis une URL**                    | Une **référence URL directe** vers une source multimédia (par ex., image ou vidéo hébergée sur le web).                                                                                |
+| **Flux vidéo**                              | Une **URL de flux** de référence (par ex., caméra IP ou service de diffusion en direct).                                                                                               |
+| **Séparateur**                              | Un **élément vide** de playlist, utilisé pour créer une **pause** dans la séquence.                                                                                                    |
+
+***
+
+### **Propriétés de chaque élément de Playlist**
+
+| **Propriété**                               | **Description**                                                                                                                 |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Média depuis la bibliothèque de contenu** | Contient la **référence de fichier relative** vers un élément de la bibliothèque de contenu.                                    |
+| **Média depuis une URL**                    | Contient l'**URL** pointant vers la source multimédia.                                                                          |
+| **Flux vidéo**                              | Contient la **référence d'URL de flux**.                                                                                        |
+| **Durée**                                   | Durée (en secondes) pendant laquelle l'élément sera affiché. Si c'est une **vidéo**, sa durée naturelle est utilisée.           |
+| **Effet**                                   | **Effet de transition** appliqué lorsque l'élément apparaît (par ex., fondu, glissement) et **durée de l'effet** (en secondes). |
+
+***
+
+### **Remarques clés**
+
+* **Seules les références** aux fichiers multimédias sont incluses, **pas** le média lui-même. Cela permet des **mises à jour automatiques** pendant la lecture si le fichier source change.
+* **Propriétés de la liste de lecture** sont **désactivées** lorsque l'élément est lié à une **source de données**. Dans ce cas, le contenu multimédia est contrôlé par des **données en temps réel**.
+* **Les séparateurs** sont un moyen utile d'**insérer des pauses** sans média entre les éléments d'une séquence.
