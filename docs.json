@@ -287,10 +287,10 @@
           {
             "dropdown": "PADS4 Super User",
             "pages": [
-              "ctrl-centre/untitled-page",
               {
                 "group": "Introduction to PADS4 Super User",
                 "pages": [
+                  "ctrl-centre/untitled-page",
                   "ctrl-centre/user-interface",
                   "ctrl-centre/diagnostics",
                   "ctrl-centre/migration-overview",
@@ -1495,13 +1495,27 @@
                         "pages": [
                           "modules/workspace/workspace-cms-admin/plugins",
                           {
+                            "group": "IoT",
+                            "pages": [
+                              "modules/workspace/workspace-admin/occupancy-sensors",
+                              {
+                                "group": "Occupancy Sensor",
+                                "hidden": true,
+                                "pages": [
+                                  "Workspace/Administrator/External-Occupancy-Sensor",
+                                  "untitled-page",
+                                  "untitled-page-6",
+                                  "untitled-page-8"
+                                ]
+                              }
+                            ]
+                          },
+                          {
                             "group": "Calendar",
                             "pages": [
                               "Workspace/Administrator/Introduction"
                             ]
                           },
-                          "Workspace/Administrator/External-Occupancy-Sensor",
-                          "Workspace/Administrator/Workspace-Application-Setting",
                           {
                             "group": "Deprecated",
                             "pages": [
@@ -1511,7 +1525,8 @@
                             ]
                           }
                         ]
-                      }
+                      },
+                      "Workspace/Administrator/Workspace-Application-Setting"
                     ]
                   },
                   {
@@ -1546,12 +1561,6 @@
                         "group": "Additional Services",
                         "pages": [
                           "modules/workspace/workspace-admin/additional-services"
-                        ]
-                      },
-                      {
-                        "group": "IoT",
-                        "pages": [
-                          "modules/workspace/workspace-admin/occupancy-sensors"
                         ]
                       },
                       {
@@ -1590,26 +1599,22 @@
               {
                 "group": "User Guide",
                 "pages": [
-                  "modules/legacy-cms/user-guide/login",
                   "modules/legacy-cms/user-guide/homepage",
-                  "modules/legacy-cms/user-guide/categories",
-                  "modules/legacy-cms/user-guide/masks",
                   "modules/legacy-cms/user-guide/messages",
                   "modules/legacy-cms/user-guide/content",
-                  "modules/legacy-cms/user-guide/text-area",
                   "modules/legacy-cms/user-guide/broadcast",
-                  "modules/legacy-cms/user-guide/history",
-                  "modules/legacy-cms/user-guide/logout"
+                  "modules/legacy-cms/user-guide/history"
                 ]
               },
               {
                 "group": "Administration",
                 "pages": [
-                  "modules/legacy-cms/administration/login",
                   "modules/legacy-cms/administration/create-a-profile",
                   "modules/legacy-cms/administration/create-a-user",
                   "modules/legacy-cms/administration/add-a-display",
-                  "modules/legacy-cms/administration/logout",
+                  "modules/legacy-cms/user-guide/categories",
+                  "modules/legacy-cms/user-guide/masks",
+                  "modules/legacy-cms/user-guide/text-area",
                   "modules/legacy-cms/administration/media-prerequisites"
                 ]
               }
