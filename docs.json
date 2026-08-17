@@ -103,7 +103,7 @@
                 "group": "PADS4 Certified Devices",
                 "icon": "tv",
                 "pages": [
-                  "PADS4-Certified-Devices/introduction",
+                  "certified-devices/introduction",
                   {
                     "group": "Microsoft Windows",
                     "pages": [
