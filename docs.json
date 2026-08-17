@@ -100,10 +100,10 @@
                 ]
               },
               {
-                "group": "Install PADS4 Viewers",
+                "group": "PADS4 Certified Devices",
                 "icon": "tv",
                 "pages": [
-                  "Install-PADS4-Viewer/introduction",
+                  "PADS4-Certified-Devices/introduction",
                   {
                     "group": "Microsoft Windows",
                     "pages": [
