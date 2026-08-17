@@ -1,32 +1,55 @@
 ---
-title: "Messages"
+title: "Forms & Messages"
 ---
 
-Messages are the actual content pieces that get displayed on your screens. They are created using a combination of categories and masks, and typically include text, images, or media elements depending on the layout defined in the mask.
+## Forms overview
 
-### Creating a New Message
+If you have created a form, you will brought back to the Forms dashboard within the Category section. This will showcase your form with the following properties:
 
-To create a message:
+The left tabs and color coded categories will showcase all the available and setup categories in your PADS4 CMS environment. You can easily switch between categories here.
 
-1. **Go to the ‘Messages’ section**<br />Select **Messages** from the main navigation menu.
-2. **Click 'Create Message' or the Add (\+) button**<br />This will open the message creation page.
-3. **Select a Category and a Mask**
-   - Choose the appropriate **Category** to organize your message.
-   - Select a **Mask** that determines the layout of the message.
-4. **Fill in the message fields**<br />The fields available will depend on the mask you’ve selected. Common input types include:
-   - **Text areas**
-   - **Image uploads**
-   - **Video links or uploads**
-   - **Scrolling text**
-   - **Dynamic elements** (e.g., time, date, weather)
-5. **Customize each content area**<br />Input or upload the required media and text into the predefined zones.
-6. **Save your message**<br />The message will now appear in the list and can be previewed, edited, or published.
+In the middle you will find an overview of your created forms.
 
-### Managing Messages
+• Screenshot: The screenshot that was setup in the form as a reference.<br />• Form name: The form name is displayed here<br />• State: This displays the current state of the form. When created, the default setting is active. You can toggle this option active/inactive here in the dashboard.
 
-- **Edit**: Open any message to update its content.
-- **Delete**: Remove messages that are no longer needed.
-- **Search / Filter**: Use the filters to quickly locate messages by category, mask, or date.
-- **Sort**: You can sort the message list by date, title, or other available columns.
+- Clicking on the Select option will allow you to send to the Messages dashboard.<br />- Clicking on the pencil icon will allow you to edit, duplicate or delete the form.
 
-Messages can be previewed before publishing to ensure they appear as intended.
+#### Messages
+
+When you select the Select option on your form, you will be directed to the messages dashboard. Here you can see all the messages that users have created in your PADS4 CMS Digital Signage environment. When using it for the first time, it will be empty. You will see the setup forms with color coding on the left-hand side.
+
+In the middle you will find an overview of your created messages :
+
+• Label: Name you have provided.<br />• Property name: Name that the field has provided.<br />• Start Date: The start date of the message<br />• End Date: The end date of the message<br />• State: showcases if the message is actively scheduled (past/current/future).<br />• Status: showcases the active/inactive state of the message<br />• Author: showcases which user created the message
+
+If you select the pencil icon, you can:
+
+- Preview the message on the presentation (if you have enabled Preview in the form)<br />- Edit the message<br />- Duplicate the message<br />- Delete the message
+
+#### Adding a message
+
+By selecting the Add a message or the \+ icon in the upper-right corner, you can add a message. This message is defined by the form that has been setup by the Administrator or User (profile). This is constructed in the following manner:
+
+**Broadcast**: by default the message will be scheduled for 1 full workday (24 hours) at the moment of creation. You can edit the recurrence by selecting the yellow calendar icon on the right. You can alter the start date/time & select a defined date/time or select the  "No end date" option. This will enable the message to always be current.
+
+By clicking on the circular arrow icon, you will enable more recurrence options:
+
+**Schedule type**:<br />\*\*\* Daily. you can select if the message is displayed per day, or every day of the week.<br />\*\*\* Weekly: you can select which day of the week the messages are displayed and/or alternating weeks.
+
+**A day**: customize the start and end time for each day.
+
+When you have selected your preference, click on the Save button to return to the message.
+
+**Form**: the message will display the sections/fields that have been setup in the form for the user to create/setup.
+
+**Screens**: select the groups/screens to which this message will be displayed.
+
+When you have setup your broadcast schedule, the form/message and selected the Screens, click on the save icon to head back to the Messages dashboard.
+
+#### Messages order
+
+Beneath the messages, you can create a custom order of messages. Simply hoover your mouse over the left column of the message, and a six dot icon will appear. Now drag & drop your message to a preferred position.
+
+You can confirm the position per message by looking at the Order column on the right.
+
+Note: if you want to select other ways of sorting the data of the messages in your presentation, please setup the filter/sort data section of PADS4 CMS Dataprovider in the Designer.

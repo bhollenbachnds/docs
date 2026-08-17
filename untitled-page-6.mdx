@@ -2,13 +2,21 @@
 title: "Sigfox"
 ---
 
-To enable Sigfox, perform the steps below:
+Sigfox Sensors can be used to automatically book a room when it detects people in the meetingroom. This article explains how to connect these sensors to PADS4 so they can be used with meeting rooms.
 
-1. Set the toggle to ON.
-2. Select SIGFOX as Source type.
-3. Enter the SIGFOX endpoint URL (default is https://sigfox.crystalunivers.com).
-4. Fill in the Login, Password, and Installation Reference.<br />
+The Sigfox sensors and credentials are provided and managed by NDS and are ready to use out of the box. Please follow the below described steps to add the sensors to PADS4:
+
+1. Enable the module and fill in the information, login credentials are provided by NDS
    <Frame>
      ![Sig Fox Conf](/images/Workspace/Administrator/SigFox-conf.png "Sig Fox Conf")
    </Frame>
-5. Click Save
+2. Navigate to PADS4 Workspace Admin
+3. Navigate to Occupancy Sensors
+4. The Sigfox occupancy sensor will be listed here and will allow you to change the name of the sensor and assign it to a meetingroom. Please do note that it can take a few minutes for the sensors to show up.<br />
+   <Frame>
+     ![Sig Fox Sensors](/images/SigFox-Sensors.png "Sig Fox Sensors")
+   </Frame>
+
+Remarks:
+
+- The use of occupancy sensors have to be enabled for the roomprofile the meetingroom is a member of, this can be configured in the Room Profiles section of PADS4 Workspace Admin.
