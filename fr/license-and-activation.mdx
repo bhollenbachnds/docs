@@ -1,0 +1,20 @@
+---
+- title: Licence & Activation
+---
+
+**License** (`/license`, administrateur uniquement) gère *l'activation propre à ce plugin* — distincte de la licence applicative propre à PADS4.
+
+### Carte d'état
+
+Affiche l'état actuel (Actif / Expiré / Non activé), le titulaire de la licence, la clé de licence, le mode d'activation (En ligne ou fichier Hors ligne), la date d'activation, l'expiration (ou "Jamais (perpétuelle)"), les jours restants, la dernière vérification en ligne, et l'**Installation ID** unique de cette installation (avec un bouton de copie en un clic — nécessaire pour les demandes d'activation hors ligne).
+
+### Activation
+
+* **En ligne** : collez la clé de licence qui vous a été délivrée et cliquez sur **Activate**. Nécessite que ce serveur puisse atteindre directement le serveur de licences.
+* **Hors ligne** (pas d'accès internet depuis ce serveur) : copiez l'Installation ID depuis la carte d'état, demandez un fichier d'activation à NDS en utilisant cet ID ainsi que votre clé de licence (depuis n'importe quelle machine disposant d'un accès internet), puis utilisez **Upload activation file…** pour sélectionner le `.lic` fichier reçu. Le fichier est validé côté client pour vérifier une taille raisonnable avant l'envoi.
+
+### Suppression d'une licence
+
+Une fois active, une option **Remove license…** apparaît (après une étape de confirmation, car elle arrête immédiatement l'utilisation de l'application jusqu'à une nouvelle activation). Utilisez cette option lors du transfert d'une licence vers une autre installation.
+
+Une licence active est périodiquement revalidée en arrière-plan ; si cette vérification échoue, un avertissement apparaît sur cette page décrivant le problème sans nécessairement désactiver l'application immédiatement (le comportement de grâce dépend des conditions de la licence).
