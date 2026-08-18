@@ -1,0 +1,12 @@
+---
+- title: Dashboard
+---
+
+Le **Dashboard** (`/`) est la page d'accueil des utilisateurs PADS4 — une vue en direct et en temps réel de la connectivité de chaque appareil, récupérée depuis PADS4 à chaque chargement (cette page n'utilise pas d'interrogation ; actualisez pour obtenir les dernières données).
+
+* **Cartes récapitulatives**: nombre total d'appareils, nombre en ligne, nombre hors ligne, avec pourcentages.
+* **Filtres**: recherche en texte libre (nom de l'appareil), statut (en ligne/hors ligne), groupe, marque. Les filtres se combinent et les résultats sont paginés (15 par page).
+* **Colonnes du tableau**: Nom, Statut, En ligne depuis, Hors ligne depuis, Durée hors ligne, Groupe, Marque — cliquez sur n'importe quel en-tête de colonne pour trier ; cliquez à nouveau pour inverser.
+* **États vides**: si les filtres ne retournent aucun résultat, un bouton **Clear all filters** est proposé directement dans le message d'état vide.
+
+Cette page reflète toujours l'état actuel de PADS4 au moment où vous l'avez chargée — elle n'utilise pas la base de données d'historique locale du plugin.

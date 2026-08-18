@@ -1,0 +1,185 @@
+Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur **les écrans Philips T-line (13BDL4150IW)**.
+
+***
+
+## **1. Première utilisation**
+
+Avant l'installation, assurez-vous que le **serveur PADS4 est correctement configuré et paramétré**.
+
+📌 **Version minimale requise du serveur PADS4 :** **PADS4 Foundation 2025.1**
+
+Lors de la première mise sous tension de l'appareil, l'**Assistant de configuration** s'affichera. Si ce n'est pas le cas, **réinitialisez l'appareil** comme décrit dans **1.2 Réinitialisation de l'appareil**.
+
+***
+
+### **1.1 Configuration de l'appareil**
+
+<Steps>
+  <Step title="Étape Un">
+    Sur l'**écran d'accueil**, sélectionnez votre **langue** préférée et cliquez sur **Start**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Sur l'écran **Security Settings**, assurez-vous que le **SICP Network Port** est **activé**. *(Les autres paramètres peuvent être activés ou désactivés selon les besoins.)*
+  </Step>
+
+  <Step title="Étape Trois">
+    Sur l'écran **Signage Display Settings**, appuyez sur **Skip**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Sur l'écran **Network Settings**, sélectionnez et configurez le **type de réseau**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Sur l'écran **Clone Media Files**, appuyez sur **Skip**.
+  </Step>
+
+  <Step title="Étape Six">
+    Appuyez sur **Finish** pour terminer la configuration.
+  </Step>
+</Steps>
+
+L'appareil affichera **Philips Media Player App**.
+
+***
+
+### **1.2 Réinitialisation de l'appareil**
+
+Si l'appareil a déjà été utilisé, effectuez une **réinitialisation d'usine** pour effacer le stockage et éviter les conflits logiciels.
+
+<Steps>
+  <Step title="Étape Un">
+    Ouvrez le **menu Android** en appuyant sur **Home** puis sur le **Volume Down** bouton derrière le **display**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Entrez le **Admin Password** *(Par défaut : 1234)*.
+  </Step>
+
+  <Step title="Étape Trois">
+    Ouvrez **Settings**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Sélectionnez **Signage Display → System Tools → Factory Reset**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Cliquez sur **Factory Reset** et confirmez en appuyant sur **OK**.
+  </Step>
+</Steps>
+
+Après la réinitialisation, le **Welcome Screen** apparaîtra. Suivez les étapes dans **1.1 Configuring the Device**.
+
+***
+
+## **2. Installation de PADS4 Viewer**
+
+Suivez ces étapes pour installer le **PADS4 Viewer** sur **Philips T-line (10BDL4551T)**.
+
+***
+
+### **2.1 Vérification du firmware de l'appareil**
+
+Assurez-vous que la **version correcte du firmware** est installée pour une **PADS4 Viewer** fonctionnalité complète.
+
+<Steps>
+  <Step title="Étape Un">
+    Ouvrez le **Android Menu** en appuyant sur **Home + Volume Down**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Entrez le **Admin Password** *(Par défaut : 1234)*.
+  </Step>
+
+  <Step title="Étape Trois">
+    Ouvrez **Settings**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Sélectionnez **About**.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Assurez-vous que le **Build Number** est **FB01.03T** *(requis pour PADS4)*.
+  </Step>
+</Steps>
+
+***
+
+### **2.2 Mise à jour du firmware de l'appareil**
+
+Pour mettre à jour le **firmware**, suivez les **instructions Philips**:
+
+📌 **Guide de mise à jour du firmware :** [Download Firmware Instructions](https://www.dropbox.com/s/isi1ksa6pyy9oig/10BDL4551TLatestReleaseFW.pdf?dl=0)\
+📌 **Centre de téléchargement Philips :** [Download Center](https://www.dropbox.com/s/fje9ge0ao8at6rq/One_Link.xlsm?dl=0)
+
+***
+
+### **2.3 Installation de PADS4Philips depuis une clé USB**
+
+Le **PADS4Philips.apk** fichier se trouve sur le **PADS4 Server** in:
+
+```
+C:\Program Files\PADS4\Foundation\Apps
+```
+
+Vous pouvez également télécharger la dernière version depuis [**ce lien**](http://go.pads4.com/?fwlink=1006) et le placer dans le **répertoire apps sur le PADS4 Server**.
+
+#### **Étapes d'installation**
+
+<Steps>
+  <Step title="Étape Un">
+    Copiez le **PADS4Philips.apk** fichier sur une **clé USB**.
+  </Step>
+
+  <Step title="Étape Deux">
+    Insérez la **clé USB** dans le **Philips T-line device**.
+  </Step>
+
+  <Step title="Étape Trois">
+    Ouvrez le **Android Menu** en appuyant sur **Home + Volume Down**.
+  </Step>
+
+  <Step title="Étape Quatre">
+    Entrez le **Admin Password** *(Par défaut : 1234)*.
+  </Step>
+
+  <Step title="Étape Cinq">
+    Sélectionnez **Storage → USB Drive** et ouvrez **PADS4Philips.apk**.
+  </Step>
+
+  <Step title="Étape Six">
+    Sélectionnez **Install** puis **Open** l'application.
+  </Step>
+</Steps>
+
+***
+
+## **3. Fonctionnalités prises en charge & Limitations**
+
+| Fonctionnalité | Description                                                                                            |
+| :------------: | :----------------------------------------------------------------------------------------------------- |
+|        ✅       | **Mises à jour automatiques du logiciel** – PADS4 Viewer se met à jour automatiquement.                |
+|        ✅       | **Mode hors ligne** – L'appareil continue d'exécuter les présentations pendant **7 jours** hors ligne. |
+|        ✅       | **Prend en charge HTTP & HTTPS**                                                                       |
+|        ✅       | **Maximum 2 vidéos par page**                                                                          |
+|        ✅       | **Prise en charge du streaming** – HTTP.                                                               |
+|        ✅       | **Mode Cluster Viewer** – Pris en charge.                                                              |
+|        ✅       | **Bouton interactif, Texte, Texte défilant, Image, Tableau**                                           |
+|        ✅       | **Éléments PowerPoint & PDF** – *(PowerPoint nécessite une installation sur PADS4 Server)*.            |
+|        ✅       | **Gestion à distance des appareils** – Contrôlé via **PADS4 Agent**.                                   |
+|        ❌       | **Wake-on-LAN & Arrêt non pris en charge**                                                             |
+
+***
+
+## **4. Dépannage**
+
+| **Problème**                                                                             | **Solution**                                                                           |
+| :--------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------- |
+| **Bloquer la télécommande, Éteindre l'écran, Les commandes d'arrêt ne fonctionnent pas** | Assurez-vous que **SICP over Network** est **activé** et hébergé sur le **port 5000**. |
+| **Le Viewer ne démarre pas en plein écran**                                              | Vérifiez la **version du firmware** et **mettez à jour si nécessaire**.                |
+| **L'appareil ne parvient pas à se connecter via Ethernet**                               | La mise à jour du **firmware** peut résoudre ce problème.                              |
+| **La barre de navigation reste visible**                                                 | **Mise à jour du firmware** requise.                                                   |
+| **Le Viewer demande répétitivement l'autorisation de stockage de contenu**               | Vérifiez si la **version correcte du firmware** est installée.                         |

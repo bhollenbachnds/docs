@@ -1,0 +1,26 @@
+---
+- title: Preuve de diffusion
+---
+
+**Preuve de diffusion** (`/proof-of-play`) répond à « quoi a été diffusé, où, et combien » — construit à partir des données du journal de diffusion de PADS4, synchronisées en continu dans la base de données locale du plugin en arrière-plan (et non récupérées en direct à chaque affichage de page, ce qui rend cette page rapide).
+
+Si PADS4 n'est pas encore configuré, cette page affiche un message simple demandant à un administrateur de compléter les Paramètres au lieu d'afficher des données.
+
+### Bannières que vous pourriez voir
+
+* **Collecte de l'historique de preuve de diffusion — X sur Y jours synchronisés.** S'affiche pendant que la synchronisation en arrière-plan est encore en train de remplir l'historique après la première configuration (ou après un changement des paramètres de rétention). Elle se met à jour automatiquement toutes les 10 secondes — les données apparaissent dans les tableaux au fur et à mesure que chaque jour termine sa synchronisation, sans besoin de recharger la page.
+* **« La dernière synchronisation depuis PADS4 a échoué. Affichage des données les plus récemment collectées. »** La synchronisation en arrière-plan a rencontré une erreur lors de sa dernière tentative ; vous consultez les dernières données réussies, et non un échec en direct de la page elle-même.
+
+### Filtres
+
+Plage de dates (les deux dates incluses), une fenêtre horaire optionnelle (heure De/À), Appareil, Élément, et une zone de recherche en texte libre qui correspond au contenu, à l'élément ou au nom de l'appareil (avec délai — elle attend que vous ayez arrêté de taper avant d'effectuer la requête).
+
+### Les trois vues
+
+1. **Résumé** — regroupé par appareil + élément + contenu : nombre de diffusions, temps total à l'écran, complétion moyenne, première/dernière diffusion. Trier par Diffusions ou Durée.
+2. **Par média** — regroupé d'abord par titre de contenu (ce qui est généralement ce que vous voulez vraiment savoir : « combien de fois *ceci* a-t-il été diffusé, et où »). Développez une ligne pour voir sa répartition par appareil. Trier par Diffusions, Durée ou nombre d'Appareils.
+3. **Journal des événements** — la liste brute des diffusions : chaque événement de diffusion individuel avec l'heure de début (plus le décalage UTC si non nul), l'appareil, l'élément, le contenu, la durée, si la diffusion a été complète, et si le moniteur de l'appareil était signalé actif.
+
+Un **Graphique de diffusions par jour** se trouve au-dessus des tableaux, reflétant vos filtres actuels.
+
+**Créer un rapport depuis cette vue** : le bouton dans l'en-tête de page accède aux Rapports avec votre plage de dates actuelle, les filtres d'appareil/élément et le terme de recherche reportés, prêts à l'exportation.
