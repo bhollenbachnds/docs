@@ -2,36 +2,46 @@
 title: "Buildings"
 ---
 
-The **Buildings** tab allows administrators to define a complete location structure and upload a floor map to be displayed in the user application interface. This enables users to easily navigate and locate rooms within a physical office space.
+The **Buildings** tab lets administrators create a location hierarchy and assign floor maps. Users can use this structure in the PADS4 Workspace app to find rooms and navigate within an office location.
 
-{/* TODO: missing image — original placeholder referenced /mnt/data/image.png with alt: "Buildings Tab – Location Structure" */}
+## Create a location structure
 
-## Creating a New Location Structure
+Create a hierarchy for your organization’s locations, such as country, city, building, and floor. You can then assign rooms to each floor.
 
-To set up a new location and its internal structure, follow these steps:
+1. Click **Create new location** in the lower-left corner.
+2. Enter the country where the building is located.
+3. Right-click the country, select **Create**, and enter the city.
+4. Right-click the city, select **Create**, and enter the building name.
+5. Right-click the building, select **Create**, and enter a floor name or number.
+6. Select a floor to assign rooms and configure its floor map.
 
-1. Click **Create New Location**.
-2. Enter the name of the company or organization.
+## Assign rooms
 
-Next, build the hierarchy by right-clicking each level and selecting **Create**:
+Assign imported or manually created rooms to the selected building floor.
 
-- **Company Name** → Create a new office location.
-- **Office Location** → Add a building address or name.
-- **Building** → Specify and add floors.
+1. Select the required building floor.
+2. Click **Import Rooms** or the **\+** icon.
+3. Select the rooms to assign to the floor.
+4. Click **Save** in the lower-left corner.
 
-Once a floor has been added, you can begin importing rooms that belong to that specific floor by using the **Import Rooms** function.
+## Add or edit a floor map 
 
-## Adding a Floor Map
+You can add a floor map to each floor. Before configuring the floor map, import or create the required rooms in the **Rooms** section.
 
-1. Select the floor in the building structure.
+1. Select the required floor.
 2. Click **Edit**.
-3. Click the **Add an Image** option next to _Floor Map_.
-4. The content library will open. You can choose an existing image or upload a new floor map.
-5. Click **Save** to confirm.
+3. Enter or update the **Full name** and **Short name**.
+4. Select a floor map image from the content available in your PADS4 CMS Content Management profile, or upload a new image.
+5. Click **Save**.
+6. Click **Edit Floor Map** next to the selected image.
 
-The selected map will now appear under the _Floor Map_ section.
+Assign room locations to the floor map:
 
-To map room positions on the floor plan:
+1. Select a room.
+2. Click the location of the room on the floor map. PADS4 CMS assigns latitude and longitude coordinates and adds a circular room button.
+3. Adjust the size of the room button if required. The default size is 30.
+4. Set the room to Inactive if it is temporarily unavailable.
 
-- Select **Edit Floor Map**
-- Drag and assign rooms to their respective locations on the map.
+Use the Edit and Preview toggle in the upper-right corner to switch between editing the map and previewing how the floor map and room buttons appear in the Workspace app.
+
+To remove an assigned room and its floor map settings, select the room and click **Delete**. Delete rooms individually.

@@ -1495,6 +1495,13 @@
                         "pages": [
                           "modules/workspace/workspace-cms-admin/plugins",
                           {
+                            "group": "Calendar",
+                            "pages": [
+                              "Workspace/Administrator/Introduction",
+                              "Workspace/Administrator/Calendar/Google-Calendar"
+                            ]
+                          },
+                          {
                             "group": "IoT",
                             "pages": [
                               {
@@ -1508,12 +1515,8 @@
                               }
                             ]
                           },
-                          {
-                            "group": "Calendar",
-                            "pages": [
-                              "Workspace/Administrator/Introduction"
-                            ]
-                          },
+                          "Workspace/Administrator/Automated-Report",
+                          "Workspace/Administrator/Workspace-Application-Setting",
                           {
                             "group": "Deprecated",
                             "pages": [
@@ -1524,11 +1527,9 @@
                               "Workspace/Administrator/MappedIn",
                               "Workspace/Administrator/Mersive"
                             ]
-                          },
-                          "Workspace/Administrator/Automated-Report"
+                          }
                         ]
-                      },
-                      "Workspace/Administrator/Workspace-Application-Setting"
+                      }
                     ]
                   },
                   {
@@ -1539,9 +1540,18 @@
                       {
                         "group": "Rooms and Buildings",
                         "pages": [
-                          "modules/workspace/workspace-admin/rooms",
+                          {
+                            "group": "Rooms",
+                            "pages": [
+                              "modules/workspace/workspace-admin/rooms",
+                              "modules/workspace/workspace-admin/adding-room",
+                              "modules/workspace/workspace-admin/import-rooms",
+                              "modules/workspace/workspace-admin/modular-spaced",
+                              "modules/workspace/workspace-admin/common-area",
+                              "modules/workspace/workspace-admin/room-profiles"
+                            ]
+                          },
                           "modules/workspace/workspace-admin/buildings",
-                          "modules/workspace/workspace-admin/room-profiles",
                           "modules/workspace/workspace-admin/extended-property"
                         ]
                       },
@@ -1550,6 +1560,12 @@
                         "pages": [
                           "modules/workspace/workspace-admin/users",
                           "modules/workspace/workspace-admin/room-user-profile"
+                        ]
+                      },
+                      {
+                        "group": "IoT",
+                        "pages": [
+                          "modules/workspace/workspace-admin/occupancy-sensor"
                         ]
                       },
                       {

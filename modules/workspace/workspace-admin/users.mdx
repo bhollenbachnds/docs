@@ -2,33 +2,45 @@
 title: "Users"
 ---
 
-The **Room Users** tab allows administrators to create or import users who will have access to the **PADS4 Workspace User Interface**.
+The **Room Users** tab allows administrators to manage users who can access the PADS4 Workspace user interface. The tab lists all users registered in PADS4.
 
-{/* TODO: missing image — original placeholder referenced /mnt/data/image.png with alt: "Room Users Management Screen" */}
+## Add a room user
 
-## Adding a Room User
+- **Name:** Enter the user’s full name. The value must contain between 6 and 50 characters.
+- **Password:** Enter a password for the user.
+- **Confirm password:** Re-enter the password. The value must exactly match the password entered in the **Password** field.
+- **Profile:** Select the applicable user profile. By default, users can view and book all available rooms. User profiles can restrict access so that users can view and book only assigned rooms.
 
-To add a new user, click the **Add Room User** button.
+### Additional information
 
-### Manual User Creation
+- **E-mail:** Enter the user’s email address.
+- **Name:** Enter the user’s last name or surname.
+- **First Name:** Enter the user’s first name.
+- **NFC Number:** Enter the user’s NFC card number. For example, users can use an NFC access card to quickly book a room.
+- **Teleworking:** Select this option if the user works from an off-site location.
+- **Prevent Room Booking:** Select this option to prevent the user from booking rooms.
+- **Booking request enabled:** Select this option to allow the user to send booking requests to their manager.
 
-To manually add a user, select **Add a Room User** and complete the required fields.
+## Rooms
 
-### General Information
+Use the **Rooms** section to specify which rooms the user can view and book.
 
-- **Login**<br />The username for the account.
-- **Password / Confirm Password**<br />Required to secure the account.
-- **Profile**<br />Assign the user to a specific Room User Profile.
-- **Email**<br />User’s email address.
-- **Name / First Name**<br />The surname and given name of the user.
-- **NFC Number**<br />If applicable, enter the user's NFC identifier (used for room check-ins via NFC).
-- **Teleworking**<br />Enable this option if the user primarily works from home.
-- **Prevent Room Booking**<br />If selected, the user will be able to view rooms but not book them.
+## Delegation
 
-### Room Access
+Use the **Delegation** section to allow the user to make room bookings on behalf of another user.
 
-Specify which rooms this user can **view** and/or **book** within the PADS4 Workspace interface.
+## Teleworking
 
-### Delegation
+The **Teleworking** tab allows administrators to manage the number of days a user can work from home or another remote location.
 
-Assign users who must approve room bookings made by this user, if required.
+Use the Teleworking tab to define the user’s remote-working allowance. You can specify the maximum number of days the user may work from home and create schedules for different time periods.
+
+For each schedule period, define the start and end date and the permitted number of teleworking days. This allows you to apply different remote-working arrangements during specific periods, such as temporary policies, seasonal schedules, or individual agreements.
+
+## Meeting management
+
+- **Enable bookings overview:** Enables the **Manager** tab for the user, next to the **Delegation** tab. This allows the user to edit meetings in rooms for which they are assigned as a manager.
+
+## Manager
+
+Use the **Manager** section to allow the user to edit meetings in rooms that they manage.
