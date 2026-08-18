@@ -1,0 +1,12 @@
+---
+- title: Historique
+---
+
+**History** (`/history`) est la vue de fiabilité de connectivité — disponibilité, pannes et chronologies par appareil — construite entièrement à partir de la base de données locale du plugin (et non d'un appel PADS4 en direct), alimentée par un moniteur d'état en arrière-plan.**Les données sont conservées pendant 3 mois** ; les sélecteurs de date ne vous permettent pas de remonter plus loin.
+
+* **Plage de dates** : par défaut les 30 derniers jours, limitée à la fenêtre de rétention de 3 mois.
+* **Cartes récapitulatives** : appareils avec des données dans la plage, nombre total d'incidents de panne (et combien sont encore en cours), et temps total hors ligne enregistré.
+* **Tableau des appareils** : pourcentage de disponibilité par appareil, nombre de vérifications d'état, nombre d'incidents et temps total hors ligne. Recherche par nom ou identifiant d'appareil ; tri de n'importe quelle colonne.
+* **Voir le graphique** : ouvre une fenêtre modale avec un graphique en courbes en escalier de l'état en ligne/hors ligne de cet appareil sur la plage sélectionnée, ainsi que le pourcentage de vérifications où l'appareil était en ligne. Les longues plages sont automatiquement sous-échantillonnées pour la lisibilité (indiqué dans la fenêtre modale lorsque cela se produit).
+
+> Le pourcentage de disponibilité est la part des vérifications d'état périodiques *effectuées* qui ont trouvé l'appareil en ligne — il ne s'agit pas de la disponibilité en temps réel. Uniquement *terminé* les pannes (ayant à la fois un début et une fin enregistrés) sont comptabilisées dans les totaux de temps hors ligne ; une panne encore en cours est signalée séparément comme « en cours » et exclue de la somme des durées.
