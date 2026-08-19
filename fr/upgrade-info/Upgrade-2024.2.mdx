@@ -1,0 +1,21 @@
+---
+- title: Mise à niveau vers PADS4 2024.2
+---
+
+Si vous souhaitez mettre à niveau vers PADS4 2024.2, votre version actuelle de PADS4 doit être au minimum PADS4 2022.3. Cela signifie que vous devez avoir PADS4 2022.3 installé et en cours d'exécution avant de mettre à jour vers 2024.2.
+
+Toute version antérieure à 2022.2 et inférieure ne se mettra pas automatiquement à jour vers 2024.2, et vous devrez effectuer une mise à niveau intermédiaire vers PADS4 2022.3.
+
+À partir de la version 2024.2 et au-delà, nous avons mis en place un nouveau système central de gestion des utilisateurs.
+
+Cela offre une approche plus rationalisée de la gestion des utilisateurs et des rôles avec la gestion des utilisateurs dans le PADS4 Web Portal
+
+Comme il s'agit d'un changement important, cela nécessite quelques points supplémentaires à prendre en compte lors de la mise à niveau d'un environnement multi-serveurs, comme décrit ci-dessous.
+
+##  **Mise à niveau des installations multi-serveurs**
+
+Pour mettre en œuvre la fonctionnalité de gestion centrale des utilisateurs, des modifications ont été apportées à la base de données PADS4, c'est pourquoi **vous devez d'abord mettre à jour le PADS4 Main Server** puis le sous-serveur. Cela a plusieurs raisons :
+
+* Le Main Server bloquera les connexions effectuées avec des versions de serveur antérieures à 2024.2, car la base de données PADS4 a changé, et les anciennes implémentations ne comprendront pas les nouveaux objets utilisateur.
+* La migration des licences et des utilisateurs est uniquement exécutée sur le Main Server et ceux-ci sont ensuite répliqués vers les sous-serveurs. Ainsi, lors de la mise à jour d'un sous-serveur en premier, il est possible que vous ne puissiez plus vous connecter à ce serveur, selon que l'utilisateur existait dans la base de données du service d'authentification.
+* Le sous-serveur 2024.2 ne se connectera pas aux Main Servers fonctionnant avec une version antérieure à 2024.2, pour la même raison que les Main Servers.
