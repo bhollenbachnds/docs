@@ -1,33 +1,47 @@
-L'onglet **Buildings** permet aux administrateurs de définir une structure complète de localisation et de télécharger un plan d'étage à afficher dans l'interface de l'application utilisateur. Cela permet aux utilisateurs de naviguer facilement et de localiser des salles dans un espace de bureau physique.
+---
+- title: Buildings
+---
 
-{/* TODO: missing image — original placeholder referenced /mnt/data/image.png with alt: "Buildings Tab – Location Structure" */}
+L'**Buildings** onglet permet aux administrateurs de créer une hiérarchie de lieux et d'attribuer des plans d'étage. Les utilisateurs peuvent utiliser cette structure dans l'application PADS4 Workspace pour trouver des salles et naviguer au sein d'un bureau.
 
-## Création d'une nouvelle structure de localisation
+## Créer une structure de localisation
 
-Pour configurer un nouvel emplacement et sa structure interne, suivez ces étapes :
+Créez une hiérarchie pour les emplacements de votre organisation, tels que le pays, la ville, le bâtiment et l'étage. Vous pouvez ensuite attribuer des salles à chaque étage.
 
-1. Cliquez sur **Create New Location**.
-2. Saisissez le nom de l'entreprise ou de l'organisation.
+1. Cliquer **Create new location** dans le coin inférieur gauche.
+2. Entrez le pays où se trouve le bâtiment.
+3. Faites un clic droit sur le pays, sélectionnez **Create**, et entrez la ville.
+4. Faites un clic droit sur la ville, sélectionnez **Create**, et entrez le nom du bâtiment.
+5. Faites un clic droit sur le bâtiment, sélectionnez **Create**, et entrez un nom ou un numéro d'étage.
+6. Sélectionnez un étage pour attribuer des salles et configurer son plan d'étage.
 
-Ensuite, construisez la hiérarchie en faisant un clic droit sur chaque niveau et en sélectionnant **Create** :
+## Attribuer des salles
 
-* **Company Name** → Créez un nouvel emplacement de bureau.
-* **Office Location** → Ajoutez une adresse ou un nom de bâtiment.
-* **Building** → Spécifiez et ajoutez des étages.
+Attribuez des salles importées ou créées manuellement à l'étage du bâtiment sélectionné.
 
-Une fois qu'un étage a été ajouté, vous pouvez commencer à importer les salles qui appartiennent à cet étage spécifique en utilisant la fonction **Import Rooms**.
+1. Sélectionnez l'étage du bâtiment requis.
+2. Cliquez sur **Import Rooms** ou l'icône **+**.
+3. Sélectionnez les salles à attribuer à l'étage.
+4. Cliquez sur **Save** dans le coin inférieur gauche.
 
-## Ajout d'un plan d'étage
+## Ajouter ou modifier un plan d'étage
 
-1. Sélectionnez l'étage dans la structure du bâtiment.
+Vous pouvez ajouter un plan d'étage à chaque étage. Avant de configurer le plan d'étage, importez ou créez les salles requises dans la section **Rooms**.
+
+1. Sélectionnez l'étage requis.
 2. Cliquez sur **Edit**.
-3. Cliquez sur l'option **Add an Image** à côté de *Floor Map*.
-4. La bibliothèque de contenu s'ouvrira. Vous pouvez choisir une image existante ou télécharger un nouveau plan d'étage.
-5. Cliquez sur **Save** pour confirmer.
+3. Saisissez ou mettez à jour le **Full name** et le **Short name**.
+4. Sélectionnez une image de plan d'étage parmi le contenu disponible dans votre profil PADS4 CMS Content Management, ou téléchargez une nouvelle image.
+5. Cliquez sur **Save**.
+6. Cliquez sur **Edit Floor Map** à côté de l'image sélectionnée.
 
-Le plan sélectionné apparaîtra maintenant dans la section *Floor Map*.
+Attribuez les emplacements des salles au plan d'étage :
 
-Pour cartographier les positions des salles sur le plan d'étage :
+1. Sélectionnez une salle.
+2. Cliquez sur l'emplacement de la salle sur le plan d'étage. PADS4 CMS attribue des coordonnées de latitude et de longitude et ajoute un bouton de salle circulaire.
+3. Ajustez la taille du bouton de salle si nécessaire. La taille par défaut est 30.
+4. Définissez la salle comme Inactive si elle est temporairement indisponible.
 
-* Sélectionnez **Edit Floor Map**
-* Faites glisser et attribuez les salles à leurs emplacements respectifs sur le plan.
+Utilisez le bouton bascule Edit et Preview dans le coin supérieur droit pour alterner entre la modification du plan et l'aperçu de l'apparence du plan d'étage et des boutons de salle dans l'application Workspace.
+
+Pour supprimer une salle attribuée et ses paramètres de plan d'étage, sélectionnez la salle et cliquez sur **Delete**. Supprimez les salles individuellement.

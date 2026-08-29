@@ -1,0 +1,12 @@
+---
+- title: Synchronization
+---
+
+**Synchronization** (`/synchronization`) examine comment les sessions de synchronisation de contenu de PADS4 vers les lecteurs individuels se sont déroulées — utile pour diagnostiquer un lecteur qui ne reçoit pas de nouveau contenu.
+
+1. **Choisir des lecteurs**: recherchez et sélectionnez un ou plusieurs viewers dans la liste en haut (liste de cases à cocher avec groupe/marque et un point en ligne/hors ligne). Utilisez **Select visible** pour sélectionner tous ceux qui correspondent actuellement à votre recherche, ou **Clear** pour recommencer.
+2. Cliquez sur **Load sync logs**. Si vous modifiez la sélection par la suite, un message **"Selection changed — load again"** apparaît pour vous indiquer que les résultats affichés sont obsolètes.
+3. Une fois chargé, vous obtenez deux onglets :
+   * **Sync sessions** — une ligne par session de synchronisation par viewer : statut (Completed / Failed / In progress / Info), nombre de fichiers, taille totale, temps depuis la session précédente, et un message récapitulatif.
+   * **File log** — une ligne par fichier transféré : nom du fichier, taille, si le téléchargement a réussi, statut et message. PADS4 ne rapporte pas la durée de transfert par fichier, donc seuls les horodatages et les tailles sont affichés.
+4. Filtrez chaque onglet par recherche en texte libre et par statut. Dans l'onglet File log, une case à cocher **"Files with names only"** masque les entrées de maintenance sans nom de fichier.

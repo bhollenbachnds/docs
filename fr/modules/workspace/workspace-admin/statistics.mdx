@@ -1,21 +1,41 @@
-L'onglet **Statistics** fournit des rapports et des données analytiques sur l'utilisation des salles dans le **PADS4 Workspace Module**. Les rapports peuvent refléter à la fois les **live data** et les **historical data**, aidant les administrateurs à évaluer l'utilisation des salles et à optimiser l'efficacité de l'espace de travail.
+---
+- title: Statistiques
+---
 
-{/* TODO: missing image — original placeholder referenced /mnt/data/image.png with alt: "Statistics Reporting Screen" */}
+L'**Statistiques** L'onglet fournit des rapports et des données analytiques sur l'utilisation des salles et des espaces de travail dans PADS4 Workspace. Utilisez ces rapports pour évaluer l'occupation, le comportement de réservation et l'efficacité des espaces de travail. Les statistiques peuvent afficher des données en direct ou des données historiques pour une période et un emplacement sélectionnés.
 
-## Types de rapports
+## Modules de données statistiques
 
-Le tableau de bord comprend divers graphiques et métriques tels que :
+PADS4 Workspace inclut les modules statistiques suivants par défaut :
 
-* **Workspace Occupancy Rate**
-* **Non-Bookable Room Occupancy Rate**
-* **Distribution of Workspace Occupancy Bookings**
-* **Distribution of Workspace Occupancy Duration**
+* **Taux d'occupation des espaces de travail :** Affiche l'occupation moyenne des espaces de travail réservables.
+* **Taux d'occupation des salles non réservables :** Affiche l'occupation moyenne des salles non réservables.
+* **Distribution des réservations d'occupation des espaces de travail :** Affiche la distribution du nombre de réservations d'espaces de travail.
+* **Distribution de la durée d'occupation des espaces de travail :** Affiche la distribution des durées de réservation.
+* **Taux d'annulation automatique des réservations :** Affiche le taux auquel les salles réservées sont annulées automatiquement.
+* **Taux de libération automatique des réservations :** Affiche le taux auquel les salles réservées sont libérées automatiquement.
 
-## Exportation des rapports
+Pour chaque module, utilisez les icônes dans le coin supérieur droit pour :
 
-Pour exporter des données du tableau de bord :
+* Basculer entre les vues tableau et graphique.
+* Développer le module en vue pleine largeur.
+* Revenir à la vue standard demi-page du module.
 
-1. Sélectionnez le **dropdown menu** à côté des options de filtre ou de sélection de date.
-2. Choisissez **Export** pour télécharger le rapport.
+## Filtrer les statistiques
 
-{/* TODO: missing image — original placeholder referenced /mnt/data/image.png with alt: "Export Option" */}
+Utilisez les options du ruban supérieur pour filtrer les données affichées sur le tableau de bord.
+
+* **Données en direct :** Met à jour le tableau de bord au fur et à mesure que les salles et les espaces de travail sont utilisés. Désactivez cette option pour réduire le trafic réseau.
+* **Date de début / Date de fin :** Définissez la période pour laquelle les statistiques sont affichées.
+* **Locations:** Sélectionnez un ou plusieurs emplacements pour lesquels afficher les statistiques.
+* **Apply:** Applique les filtres de plage de dates et d'emplacement sélectionnés au tableau de bord.
+* **Export:** Exporte les modules statistiques sélectionnés vers un fichier PDF ou Microsoft Excel.
+
+Pour filtrer et exporter les statistiques :
+
+1. Configurez les paramètres requis **Date de début**, **Date de fin**, et **Emplacements**.
+2. Activez ou désactivez **Données en direct**, selon les besoins.
+3. Cliquez sur **Appliquer** pour actualiser le tableau de bord.
+4. Cliquez sur **Exporter**.
+5. Sélectionnez les modules de rapport à inclure.
+6. Sélectionnez PDF ou Microsoft Excel comme format d'exportation.

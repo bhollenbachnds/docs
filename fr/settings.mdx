@@ -1,0 +1,38 @@
+---
+- title: Settings
+---
+
+**Settings** (`/settings`, administrateur uniquement, bloqué jusqu'à ce que la licence du produit soit active) configure chaque intégration backend. La plupart des modifications s'appliquent immédiatement à l'enregistrement ; la seule exception (cookies sécurisés) nécessite un redémarrage du service.
+
+### Connexion PADS4
+
+URL de base, nom d'utilisateur/mot de passe du compte de service, domaine (par défaut `PADS` si vide), et une taille de lot d'informations système (utilisée lors de la récupération des métadonnées par device pour la Distribution). **Tester la connexion PADS4** valide les identifiants par rapport à l'URL de base saisie avant l'enregistrement. Ceci est requis pour la connexion des utilisateurs PADS4 et chaque moniteur en arrière-plan.
+
+### Moniteur de statut
+
+Fréquence d'exécution du sondage en arrière-plan de connectivité — basculer entre les secondes (minimum 10) ou les minutes. Cela influence indirectement la fraîcheur du Dashboard (via les instantanés) et alimente directement l'Historique.
+
+### Moniteur CMS
+
+Intervalle de sondage en minutes (minimum 1, par défaut 5) pour le collecteur en arrière-plan CMS 2.0. L'historique est conservé pendant 3 mois quel que soit l'intervalle.
+
+### Proof of play
+
+* **Chemin de base de l'API** — le segment de chemin OData sous lequel PADS4 expose les journaux de proof-of-play.
+* **Intervalle de synchronisation (minutes)** — fréquence à laquelle la synchronisation en arrière-plan vérifie les jours nouveaux/mis à jour.
+* **Conserver l'historique pendant (jours)** — fenêtre de rétention ; les événements plus anciens sont purgés automatiquement. Le volume total stocké se stabilise une fois cette fenêtre remplie (les données anciennes sont supprimées au fur et à mesure que de nouvelles données arrivent).
+* **Plage de requête maximale (jours)** — la plage de dates la plus large qu'un seul rapport ou une requête de page est autorisé à demander à la fois. C'est ce qui maintient les performances des requêtes constantes quel que soit le volume d'historique conservé.
+* **Concurrence de synchronisation** — nombre de jours récupérés depuis PADS4 en parallèle lors d'un passage de synchronisation/remplissage.
+* **Date sélectionnable la plus ancienne** — plancher pour les sélecteurs de date sur Proof of Play et Rapports.
+
+### Cache de Distribution
+
+Âge maximum (en minutes) avant qu'un instantané de Distribution mis en cache soit considéré comme obsolète et récupéré à nouveau depuis PADS4.
+
+### Envoi d'e-mails (SMTP)
+
+Hôte, port, nom d'utilisateur/mot de passe, adresse d'expédition, options Sécurisé (TLS implicite à la connexion, généralement port 465) ou STARTTLS, et une option « accepter les certificats auto-signés » (uniquement pour les réseaux internes de confiance — elle désactive la vérification des certificats). **Envoyer un e-mail de test** envoie un vrai message à une adresse que vous fournissez, en utilisant ce qui est actuellement dans le formulaire (y compris un mot de passe non enregistré), afin que vous puissiez vérifier avant de valider.
+
+### Déploiement
+
+**Cookies de session sécurisés (HTTPS uniquement)** — activé par défaut. Laissez activé pour tout déploiement derrière un vrai TLS ; désactivez uniquement pour les tests en HTTP simple (voir Installation & Déploiement §5). **Nécessite un redémarrage du service** pour prendre effet — c'est le seul paramètre de cette page qui ne s'applique pas en direct.

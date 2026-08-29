@@ -1,45 +1,46 @@
-L'onglet **Room Users** permet aux administrateurs de créer ou d'importer des utilisateurs qui auront accès à **PADS4 Workspace User Interface**.
+---
+- title: Utilisateurs
+---
 
-{/* TODO: missing image — original placeholder referenced /mnt/data/image.png with alt: "Room Users Management Screen" */}
+L'onglet **Room Users** permet aux administrateurs de gérer les utilisateurs pouvant accéder à l'interface utilisateur PADS4 Workspace. L'onglet liste tous les utilisateurs enregistrés dans PADS4.
 
 ## Ajouter un utilisateur de salle
 
-Pour ajouter un nouvel utilisateur, cliquez sur le bouton **Add Room User**.
+* **Name:** Entrez le nom complet de l'utilisateur. La valeur doit contenir entre 6 et 50 caractères.
+* **Password:** Entrez un mot de passe pour l'utilisateur.
+* **Confirmer le mot de passe :** Ressaisissez le mot de passe. La valeur doit correspondre exactement au mot de passe saisi dans le champ **Mot de passe**.
+* **Profile:** Sélectionnez le profil utilisateur applicable. Par défaut, les utilisateurs peuvent consulter et réserver toutes les salles disponibles. Les profils utilisateur peuvent restreindre l'accès afin que les utilisateurs ne puissent consulter et réserver que les salles qui leur sont assignées.
 
-### Création manuelle d'utilisateur
+### Informations supplémentaires
 
-Pour ajouter manuellement un utilisateur, sélectionnez **Add a Room User** et complétez les champs requis.
+* **E-mail:** Entrez l'adresse e-mail de l'utilisateur.
+* **Name:** Entrez le nom de famille ou le patronyme de l'utilisateur.
+* **Prénom :** Entrez le prénom de l'utilisateur.
+* **Numéro NFC :** Entrez le numéro de carte NFC de l'utilisateur. Par exemple, les utilisateurs peuvent utiliser une carte d'accès NFC pour réserver rapidement une salle.
+* **Teleworking:** Sélectionnez cette option si l'utilisateur travaille depuis un site distant.
+* **Empêcher la réservation de salles :** Sélectionnez cette option pour empêcher l'utilisateur de réserver des salles.
+* **Demande de réservation activée :** Sélectionnez cette option pour permettre à l'utilisateur d'envoyer des demandes de réservation à son responsable.
 
-### Informations générales
+## Salles
 
-* **Login**\
-  Le nom d'utilisateur pour le compte.
+Utilisez la **Salles** section pour spécifier les salles que l'utilisateur peut consulter et réserver.
 
-* **Password / Confirm Password**\
-  Requis pour sécuriser le compte.
+## Délégation
 
-* **Profile**\
-  Attribuer l'utilisateur à un profil d'utilisateur de salle spécifique.
+Utilisez la **Délégation** section pour permettre à l'utilisateur d'effectuer des réservations de salles au nom d'un autre utilisateur.
 
-* **Email**\
-  Adresse e-mail de l'utilisateur.
+## Télétravail
 
-* **Name / First Name**\
-  Le nom de famille et le prénom de l'utilisateur.
+L'onglet **Télétravail** permet aux administrateurs de gérer le nombre de jours pendant lesquels un utilisateur peut travailler depuis chez lui ou depuis un autre lieu distant.
 
-* **NFC Number**\
-  Le cas échéant, entrez l'identifiant NFC de l'utilisateur (utilisé pour les enregistrements de salle via NFC).
+Utilisez l'onglet Télétravail pour définir l'allocation de travail à distance de l'utilisateur. Vous pouvez spécifier le nombre maximum de jours pendant lesquels l'utilisateur peut travailler depuis chez lui et créer des plannings pour différentes périodes.
 
-* **Teleworking**\
-  Activez cette option si l'utilisateur travaille principalement depuis son domicile.
+Pour chaque période de planning, définissez la date de début et de fin ainsi que le nombre de jours de télétravail autorisés. Cela vous permet d'appliquer différentes modalités de travail à distance pendant des périodes spécifiques, telles que des politiques temporaires, des plannings saisonniers ou des accords individuels.
 
-* **Prevent Room Booking**\
-  Si cette option est sélectionnée, l'utilisateur pourra voir les salles mais ne pourra pas les réserver.
+## Gestion des réunions
 
-### Room Access
+* **Activer l'aperçu des réservations :** Active l'onglet **Responsable** pour l'utilisateur, à côté de l'onglet **Délégation** . Cela permet à l'utilisateur de modifier les réunions dans les salles pour lesquelles il est désigné comme responsable.
 
-Spécifiez quelles salles cet utilisateur peut **view** et/ou **book** dans l'interface PADS4 Workspace.
+## Responsable
 
-### Delegation
-
-Attribuez des utilisateurs qui doivent approuver les réservations de salle effectuées par cet utilisateur, si nécessaire.
+Utilisez la **Responsable** section pour permettre à l'utilisateur de modifier les réunions dans les salles qu'il gère.
