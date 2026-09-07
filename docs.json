@@ -1815,7 +1815,9 @@
                 "group": "Web to Image",
                 "pages": []
               }
-            ]
+            ],
+            "icon": "gear-api",
+            "hidden": true
           },
           {
             "dropdown": "Plug-ins",
