@@ -3,6 +3,25 @@ title: "Exchange online"
 hidden: true
 ---
 
+<Info>
+  [EWS in Exchange Online will be End of Life in Q4 - 2026](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online), please make sure to migrate your registered application to make use of the Microsoft Graph API as follows when you have an existing application registered as below:
+
+  Make sure to add the following permissions to your existing application registration:
+
+  | Permission | Required | Description |
+  | --- | --- | --- |
+  | **Calendars.ReadWrite ** | Yes | Read and synchronize room calendar events. |
+  | ** [Place.Read](http://Place.Read).All** | Optional | Required only when importing rooms from Microsoft Places or Room Lists. |
+
+  After updating the permissions, **Administrator Consent** must be granted to the application before the service can authenticate successfully. 
+
+  Within PADS4 - CMS 1.0 Admin, the Calendar configuration must then be updated: 
+
+  - Change the calendar provider from **Exchange O365** to **Graph API**.  
+
+  - Configure the **Webhook Notification URL**, if required. This setting is optional when the notification endpoint uses the same DNS host name already configured for the application.  
+</Info>
+
 Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticating with the new OAuth 2.0 setting within Exchange 365 (Azure), you will need a different type of account verification. You will need to add the PADS4 CMS/Workspace app within Microsoft Entra ID and add a service account. Follow the steps below to configure your Microsoft Entra ID environment for use with PADS4. Register the application
 
 1. Open a browser and navigate to the Microsoft Entra ID admin center and login using a personal account (aka: Microsoft Account) or Work or School Account.
