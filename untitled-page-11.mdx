@@ -17,9 +17,15 @@ hidden: true
 
   Within PADS4 - CMS 1.0 Admin, the Calendar configuration must then be updated: 
 
+  ![Calendar Graph API](/images/Workspace/Administrator/Calendar-GraphAPI.png "Calendar Graph API")
+
   - Change the calendar provider from **Exchange O365** to **Graph API**.  
 
   - Configure the **Webhook Notification URL**, if required. This setting is optional when the notification endpoint uses the same DNS host name already configured for the application.  
+
+  <Note>
+    _The webhook notification endpoint must be publicly accessible over HTTPS to receive Microsoft Graph change notifications._
+  </Note>
 </Info>
 
 Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticating with the new OAuth 2.0 setting within Exchange 365 (Azure), you will need a different type of account verification. You will need to add the PADS4 CMS/Workspace app within Microsoft Entra ID and add a service account. Follow the steps below to configure your Microsoft Entra ID environment for use with PADS4. Register the application
@@ -160,3 +166,33 @@ Add-DistributionGroupMember -Identity "MyRoomList" -Member [room01@contoso.com](
 Get-DistributionGroup -Identity "Room list name"
 
 When you have successfully set up the app registration & created the service account you can fill in the Calendar plugin configuration inside the CMS admin portal.
+
+![Calendar Configuration](/images/Calendar-configuration.jpg "Calendar Configuration")
+
+**Exchange Server:** [http://outlook.office365.com](http://outlook.office365.com) / example
+
+**Application ID:** The application ID from Azure
+
+**Tenant ID:** The directory tenant ID from Azure
+
+**Client secret Key:** The client secret key from Azure.
+
+**Default service account:** The default service account from Azure directory for retrieving the access.
+
+**Impersonation:** Described below
+
+**Room list address:** The SMTP URL of the room list that you have configured. This will allow you to import rooms in Workspace.
+
+**Allow online meeting creation:** This option needs to be turned on to enable Microsoft Teams meeting support.
+
+You can also define if the teams meeting option should be selected by default in workspace event creation if you set the following option:
+
+·       Go to CMS Administration
+
+·       Open the "Workspace application settings"
+
+·       Check "Enable online meeting creation by default"
+
+·       Click save
+
+![Workspace Application Settings](/images/Workspace-application-settings.png "Workspace Application Settings")
