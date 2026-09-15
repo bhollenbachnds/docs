@@ -1,34 +1,32 @@
 ---
 title: "Exchange online"
-hidden: true
 ---
 
-<Info>
+<Warning>
   [EWS in Exchange Online will be End of Life in Q4 - 2026](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online), please make sure to migrate your registered application to make use of the Microsoft Graph API as follows when you have an existing application registered as below:
 
   Make sure to add the following permissions to your existing application registration:
 
   | Permission | Required | Description |
   | --- | --- | --- |
-  | **Calendars.ReadWrite ** | Yes | Read and synchronize room calendar events. |
-  | ** [Place.Read](http://Place.Read).All** | Optional | Required only when importing rooms from Microsoft Places or Room Lists. |
+  | Calendars.ReadWrite | Yes | Read and synchronize room calendar events. |
+  | [Place.Read](http://Place.Read).All | Optional | Required only when importing rooms from Microsoft Places or Room Lists. |
 
-  After updating the permissions, **Administrator Consent** must be granted to the application before the service can authenticate successfully. 
+  After updating the permissions, **Administrator Consent** must be granted to the application before the service can authenticate successfully.
 
   Within PADS4 - CMS 1.0 Admin, the Calendar configuration must then be updated: 
 
   ![Calendar Graph API](/images/Workspace/Administrator/Calendar-GraphAPI.png "Calendar Graph API")
 
   - Change the calendar provider from **Exchange O365** to **Graph API**.  
-
   - Configure the **Webhook Notification URL**, if required. This setting is optional when the notification endpoint uses the same DNS host name already configured for the application.  
 
   <Note>
     _The webhook notification endpoint must be publicly accessible over HTTPS to receive Microsoft Graph change notifications._
   </Note>
-</Info>
+</Warning>
 
-Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticating with the new OAuth 2.0 setting within Exchange 365 (Azure), you will need a different type of account verification. You will need to add the PADS4 CMS/Workspace app within Microsoft Entra ID and add a service account. Follow the steps below to configure your Microsoft Entra ID environment for use with PADS4. Register the application
+Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticating with the new OAuth 2.0 setting within Exchange 365 (Azure), you will need a different type of account verification. You will need to add the PADS4 CMS/Workspace app within Microsoft Entra ID and add a service account. Follow the steps below to configure your Microsoft Entra ID environment for use with PADS4. Register the application
 
 1. Open a browser and navigate to the Microsoft Entra ID admin center and login using a personal account (aka: Microsoft Account) or Work or School Account.
 2. Select Identity in the left-hand navigation, then select App registrations under Applications.
@@ -46,7 +44,6 @@ Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authentica
 To use application permissions, follow these additional steps.
 
 1. Select **Manifest** in the left-hand navigation under **Manage**.
-
 2. Locate the **requiredResourceAccess** property in the manifest, and add the following inside the square brackets ([]):
 
 `{`<br />`  "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",`<br />`  "resourceAccess": [`<br />`    {`<br />`      "id": "dc890d15-9560-4a4c-9b7f-a736ec74ec4e",`<br />`      "type": "Role"`<br />`    }`<br />`  ]`<br />`}`
@@ -60,11 +57,10 @@ To use application permissions, follow these additional steps.
 
 ![API Permissions](/images/API-permissions.jpg "API Permissions")
 
-In case you want to add Microsoft Teams meeting support to Workspace, continue the configuration below. If you do not want to add Microsoft Teams meeting support you can proceed to step 9. 
+In case you want to add Microsoft Teams meeting support to Workspace, continue the configuration below. If you do not want to add Microsoft Teams meeting support you can proceed to step 9.
 
-6. Select Add a permission 
-
-7. Select the following permission "**Microsoft Graph > Calendars.ReadWrite**" and select Add. 
+6. Select Add a permission
+7. Select the following permission "**Microsoft Graph > Calendars.ReadWrite**" and select Add.
 
 8. Grant admin consent to that permission.
 
