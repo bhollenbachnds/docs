@@ -1,0 +1,172 @@
+---
+title: "NDS.Services.Engine"
+---
+
+## Overview
+
+The PADS4 presentation rendering engine. Manages engine instances, rendering jobs, and the lifecycle of content playback. Used to trigger on-demand renders and retrieve rendered output.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Services.Engine/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Services.Engine/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Services.Engine` |
+| Total endpoints | 23 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/engine` | Get |
+| `GET` | `/api/v1/engine/dataset` | Get Data Sets |
+| `POST` | `/api/v1/engine/dataset` | Register Data Set |
+| `POST` | `/api/v1/engine/dataset/Invalidate` | Invalidate Data Record |
+| `POST` | `/api/v1/engine/dataset/UploadRecord` | Upload Data Set |
+| `POST` | `/api/v1/engine/dataset/Upload` | Upload |
+| `POST` | `/api/v1/engine/dataset/RequestDataSet` | Request Data Set |
+| `GET` | `/api/v1/engine/message/test` | Test |
+| `POST` | `/api/v1/engine/message` | Get Messages |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### GET `/api/v1/engine`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/engine/dataset`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/engine/dataset`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/engine/dataset/Invalidate`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset/Invalidate' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/engine/dataset/UploadRecord`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset/UploadRecord' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/engine/dataset/Upload`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset/Upload' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.

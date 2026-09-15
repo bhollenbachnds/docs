@@ -1,0 +1,169 @@
+---
+title: "NDS.Services.Configuration"
+---
+
+## Overview
+
+Stores and retrieves system-wide and domain-level configuration key-value pairs. Used by other services to read runtime settings, feature flags, and deployment-specific configuration.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Services.Configuration` |
+| Total endpoints | 22 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/Configuration` | Get Config Nodes |
+| `POST` | `/api/v1/Configuration` | Set Config Nodes |
+| `POST` | `/api/v1/Configuration/delete` | Delete Config Nodes |
+| `GET` | `/api/v1/DomainConfig` | Get Domain Config |
+| `POST` | `/api/v1/DomainConfig` | Save Domain Config |
+| `GET` | `/api/v1/Feature` | Get Features |
+| `GET` | `/api/v1/Feature/{domain}` | Get Features2 |
+| `GET` | `/api/v1/Feature/raw` | Get Features Raw |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### GET `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Configuration/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration/delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/Feature`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Feature'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.

@@ -2,3 +2,124 @@
 title: "PADS4 API reference introduction"
 description: "Overview of the PADS4 REST API reference, including authentication, the sample plant store endpoints, and how to use the interactive request examples."
 ---
+
+## Authentication
+
+PADS4 Foundation uses **cookie-based session authentication** — not Bearer tokens.
+
+### 1. Log in
+
+```bash
+curl -c cookies.txt -X POST \
+  'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"Username":"Administrator","Password":"<password>","Domain":"pads"}'
+```
+
+**Response body:**
+
+```json
+{
+  "Claims": [
+    {"Name": "userId",      "Value": "d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a"},
+    {"Name": "displayName", "Value": "Administrator"},
+    {"Name": "email",       "Value": "admin@pads4.com"}
+  ],
+  "Code": 0,
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+The server sets a `Set-Cookie` header containing the session cookie. The response body is an array of **16 identity claims** (user ID, display name, email, domain, roles, etc.) — it is NOT a token you send back.
+
+### 2. Use the session cookie
+
+```bash
+# Reuse the saved cookie in all subsequent calls
+curl -b cookies.txt 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message'
+```
+
+**In Postman:** After running the Logon request, Postman stores the session cookie and includes it automatically in subsequent requests to the same domain.
+
+**In fetch / browser:**
+
+```js
+fetch('/rdx/NDS.Services.Cms/api/v1/cms/message', { credentials: 'include' })
+```
+
+---
+
+## PADS4 REST Conventions
+
+PADS4 Foundation uses a **non-standard REST pattern** that differs from typical CRUD APIs:
+
+| Operation | Conventional REST | PADS4 Pattern |
+| --- | --- | --- |
+| List / filter | `GET /resource` | `POST /resource` with filter body |
+| Create | `POST /resource` | `POST /resource/store` with `Id: null` |
+| Update | `PUT /resource/<built-in function id>` | `POST /resource/store` with existing `Id` |
+| Get one | `GET /resource/<built-in function id>` | `GET /resource/{id}` ✓ standard |
+| Delete one | `DELETE /resource/<built-in function id>` | `DELETE /resource/{id}` ✓ standard |
+| Bulk delete | N/A | `POST /resource/delete` with ID array |
+
+**Why POST for listing?** PADS4 passes filter/pagination parameters in the request body (complex objects with `PageIndex`, `PageSize`, filters, sorts). This avoids the URL length limits and URL-encoding complexity of large filter sets in query strings.
+
+### List example
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+### Create example
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message/store' \
+  -H 'Content-Type: application/json' \
+  -d '{"MessageId": null, "Name": "Welcome Screen", "IsEnabled": true}'
+```
+
+---
+
+## Standard Response Envelope
+
+All PADS4 API responses wrap their payload in a standard envelope:
+
+```json
+{
+  "Data": { ... },
+  "Code": "OK",
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+| Field | Type | Description |
+| --- | --- | --- |
+| `Code` | string | `"OK"` on success, or an error code string |
+| `Succeeded` | bool | `true` on success |
+| `Message` | string\|null | Human-readable error message, null on success |
+
+---
+
+## Common Infrastructure Endpoints
+
+Every PADS4 microservice exposes these endpoints regardless of its domain:
+
+| Method | Path | Description |
+| --- | --- | --- |
+| GET | `/api/v1/health` | Basic health check |
+| GET | `/api/v1/health/clean` | Deep health check |
+| GET | `/api/v1/diagnostics/toggles` | Feature flag states |
+| GET | `/api/v1/diagnostics/configuration` | Active configuration dump |
+| GET | `/api/v1/diagnostics/configurationex` | Extended configuration |
+| GET | `/api/v1/diagnostics/circuitbreakers` | Circuit breaker status |
+| POST | `/api/v1/diagnostics/events` | Query diagnostic events |
+| GET | `/migration` | Migration version status |
+| GET | `/version` | Service version string |
+| POST | `/api/v1/Management/RequeueErrorMessages` | Requeue failed messages |
+| POST | `/api/v1/Management/PurgeErrorMessages` | Purge failed messages |
+
+---

@@ -1,0 +1,167 @@
+---
+title: "NDS.Nginx.Domains"
+---
+
+## Overview
+
+Manages domain routing configuration for the PADS4 Nginx reverse proxy. Controls which hostnames are routed to which PADS4 tenant environments in multi-tenant deployments.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Nginx.Domains/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Nginx.Domains/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Nginx.Domains` |
+| Total endpoints | 20 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/Domain` | Get All |
+| `POST` | `/api/v1/Domain` | Save |
+| `DELETE` | `/api/v1/Domain` | Delete |
+| `GET` | `/api/v1/Domain/validate` | Validate Configuration |
+| `POST` | `/api/v1/Domain/reset` | Save Domain List |
+| `POST` | `/api/v1/Domain/restart` | Restart |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### GET `/api/v1/Domain`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Domain`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### DELETE `/api/v1/Domain`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+---
+
+### GET `/api/v1/Domain/validate`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain/validate'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Domain/reset`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain/reset' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Domain/restart`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain/restart' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.

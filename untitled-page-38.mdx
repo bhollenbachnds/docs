@@ -1,0 +1,174 @@
+---
+title: "NDS.Services.User.Scim"
+---
+
+## Overview
+
+SCIM 2.0 user provisioning endpoint for PADS4. Allows identity providers (Azure AD, Okta, etc.) to automatically provision, update, and deprovision users via the standard SCIM protocol.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Services.User.Scim/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Services.User.Scim/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Services.User.Scim` |
+| Total endpoints | 31 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/scim/ServiceProviderConfig` | Get Service Provider Config |
+| `GET` | `/api/v1/scim/ResourceTypes` | Get Resource Type |
+| `GET` | `/api/v1/scim/Schemas` | Get Schemas |
+| `GET` | `/api/v1/scim/groups` | Get Groups |
+| `POST` | `/api/v1/scim/groups` | Create Group |
+| `GET` | `/api/v1/scim/groups/{id}` | Get Group |
+| `PATCH` | `/api/v1/scim/groups/{id}` | Patch Group |
+| `PUT` | `/api/v1/scim/groups/{id}` | Update Group |
+| `DELETE` | `/api/v1/scim/groups/{id}` | Delete Group |
+| `GET` | `/api/v1/scim/users` | Get Users |
+| `POST` | `/api/v1/scim/users` | Create User |
+| `GET` | `/api/v1/scim/users/{id}` | Get User |
+| `PATCH` | `/api/v1/scim/users/{id}` | Patch User |
+| `PUT` | `/api/v1/scim/users/{id}` | Update User |
+| `DELETE` | `/api/v1/scim/users/{id}` | Delete User |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Get Content Transfer State |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics` | Get Bus Diagnostics |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### GET `/api/v1/scim/ServiceProviderConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/ServiceProviderConfig'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/scim/ResourceTypes`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/ResourceTypes'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/scim/Schemas`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/Schemas'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/scim/groups`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/groups'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/scim/groups`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/groups' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/scim/groups/{id}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/groups/{id}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.

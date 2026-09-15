@@ -1,0 +1,172 @@
+---
+title: "NDS.Services.Teams.Integration"
+---
+
+## Overview
+
+Microsoft Teams integration for PADS4. Syncs room calendars, meeting data, and Teams presence information with PADS4 Workspace displays. Manages the OAuth connection to Microsoft 365.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Services.Teams.Integration/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Services.Teams.Integration/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Services.Teams.Integration` |
+| Total endpoints | 29 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/teams/azure-ad-token` | Get Azure Ad Tokens |
+| `POST` | `/api/v1/teams/azure-ad-token/store` | Create Azure Ad Tokens |
+| `DELETE` | `/api/v1/teams/azure-ad-token/{azureAdTokenId}` | Delete Azure Ad Token |
+| `GET` | `/api/v1/teams/azure-ad-user` | Get Azure Ad Users |
+| `GET` | `/api/v1/teams/azure-ad-user/{azureAdUserId}` | Get Azure Ad User |
+| `DELETE` | `/api/v1/teams/azure-ad-user/{azureAdUserId}` | Delete Azure Ad Token |
+| `POST` | `/api/v1/teams/azure-ad-user/store` | Store Azure Ad User |
+| `GET` | `/api/v1/teams/azure-app-registration` | Get Azure App Registrations |
+| `GET` | `/api/v1/teams/azure-app-registration/{azureAppRegistrationId}` | Get Azure App Registration |
+| `DELETE` | `/api/v1/teams/azure-app-registration/{azureAppRegistrationId}` | Delete Azure Ad Token |
+| `POST` | `/api/v1/teams/azure-app-registration/store` | Store Azure App Registration |
+| `GET` | `/api/v1/teams/azure-config` | Get Azure Config |
+| `POST` | `/api/v1/teams/meeting` | Get Meetings |
+| `GET` | `/api/v1/teams/teams-calls/token/{azureAdUserId}` | Get Teams Calls Token |
+| `POST` | `/api/v1/teams/teams-calls/meeting` | Get Teams Calls Meeting |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### GET `/api/v1/teams/azure-ad-token`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-token'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/teams/azure-ad-token/store`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-token/store' \
+  -H 'Content-Type: application/json' \
+  -d '{"Id": null, "Name": "Example", "IsActive": true}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Id": 42, "Code": "OK", "Succeeded": true, "Message": null}
+```
+
+---
+
+### DELETE `/api/v1/teams/azure-ad-token/{azureAdTokenId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-token/{azureAdTokenId}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+---
+
+### GET `/api/v1/teams/azure-ad-user`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-user'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/teams/azure-ad-user/{azureAdUserId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-user/{azureAdUserId}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### DELETE `/api/v1/teams/azure-ad-user/{azureAdUserId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-user/{azureAdUserId}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.

@@ -1,0 +1,212 @@
+---
+title: "NDS.Services.Viewer"
+---
+
+## Overview
+
+Controls PADS4 viewer applications: remote commands (restart, reload, screenshot), status monitoring, log retrieval, software update management, and viewer configuration. The primary service for managing what's running on display hardware.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Services.Viewer/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Services.Viewer/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Services.Viewer` |
+| Total endpoints | 65 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `POST` | `/api/v1/Viewer/Cluster/Get` | Get Clusters |
+| `GET` | `/api/v1/Viewer/Cluster/Viewers` | Get Cluster Viewers |
+| `POST` | `/api/v1/Viewer/Cluster` | Save Cluster |
+| `POST` | `/api/v1/Viewer/Cluster/Delete` | Delete Cluster |
+| `GET` | `/api/v1/Viewer/Licenses` | Get Viewer Licenses |
+| `GET` | `/api/v1/Viewer/priorities` | Get Priorities |
+| `POST` | `/api/v1/Viewer/Schedule` | Get Schedules |
+| `POST` | `/api/v1/Viewer/Schedule/updateWeights` | Update Schedule Weights |
+| `POST` | `/api/v1/Viewer/Schedule/create` | Create Schedule |
+| `POST` | `/api/v1/Viewer/Schedule/edit` | Edit Schedule |
+| `POST` | `/api/v1/Viewer/Schedule/delete` | Delete Schedule |
+| `POST` | `/api/v1/Viewer/Schedule/content/delete` | Delete Schedule Content |
+| `POST` | `/api/v1/Viewer/Schedule/saveRecurrenceException` | Save Recurrence Exception |
+| `GET` | `/api/v1/Viewer/Schedule/presentationInfo` | Get Presentation Info |
+| `POST` | `/api/v1/ShadowedViewer/delete` | Delete Shadowed Viewers |
+| `POST` | `/api/v1/ShadowedViewer/update` | Update Shadowed Viewers |
+| `GET` | `/api/v1/ShadowedViewer/destinationRoot` | Get Destination Root |
+| `POST` | `/api/v1/Viewer/getContextPermissions` | Get Context Permissions |
+| `POST` | `/api/v1/Viewer/getPermissions` | Get Permissions |
+| `POST` | `/api/v1/Viewer/setPermissions` | Set Permissions |
+| `POST` | `/api/v1/Viewer/deleteDestinationRelations` | Remove Destination Releation |
+| `POST` | `/api/v1/Viewer/setDestinationParents` | Set Destination Parents |
+| `GET` | `/api/v1/Viewer` | Get |
+| `POST` | `/api/v1/Viewer/screenshot` | Get Screenshots |
+| `POST` | `/api/v1/Viewer/names` | Get Viewer Names |
+| `GET` | `/api/v1/Viewer/GetViewerStats` | Get Viewer Stats |
+| `POST` | `/api/v1/Viewer/Filtered` | Get Viewers Filtered |
+| `GET` | `/api/v1/Viewer/{id}` | Get By I D |
+| `POST` | `/api/v1/Viewer/RebootViewer` | Reboot Viewer |
+| `POST` | `/api/v1/Viewer/RestartViewer` | Restart Viewer |
+| `POST` | `/api/v1/Viewer/ResetViewerContentLibrary` | Reset Viewer Content Library |
+| `GET` | `/api/v1/Viewer/GetViewerBlackBox` | Get Viewer Black Box |
+| `POST` | `/api/v1/Viewer/GetViewerScheduleInfo` | Get Viewer Schedule Info |
+| `POST` | `/api/v1/Viewer/GetViewerLogs` | Get Viewer Logs |
+| `POST` | `/api/v1/Viewer/GetViewerSyncLogs` | Get Viewer Sync Logs |
+| `POST` | `/api/v1/Viewer/GetViewerSystemInfo` | Get Viewer System Info |
+| `POST` | `/api/v1/Viewer/CreateViewer` | Create Viewer |
+| `POST` | `/api/v1/Viewer/EditViewer` | Edit Viewer |
+| `POST` | `/api/v1/Viewer/DeleteViewer` | Delete Viewer |
+| `POST` | `/api/v1/Viewer/GetViewerSettings` | Get Viewer Settings |
+| `POST` | `/api/v1/Viewer/EditViewerSettings` | Edit Viewer Settings |
+| `POST` | `/api/v1/Viewer/getHierarchyPermissions` | Get Hierarchy Permissions |
+| `GET` | `/api/v1/Viewer/ViewerVariables` | Get Viewer Variables |
+| `POST` | `/api/v1/Viewer/ViewerVariables` | Edit Viewer Variables |
+| `GET` | `/api/v1/Viewer/ViewerVariables/Export` | Export Viewer Variables |
+| `POST` | `/api/v1/Viewer/ViewerVariables/Import` | Import Viewer Variables |
+| `POST` | `/api/v1/Viewer/ViewerVariables/CompleteImport` | Complete Import |
+| `POST` | `/api/v1/Viewer/ViewerVariables/Delete` | Delete Viewer Variables |
+| `POST` | `/api/v1/Viewer/ViewerVariables/Values` | Edit Viewer Variable Values |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Get Content Transfer State |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics` | Get Bus Diagnostics |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### POST `/api/v1/Viewer/Cluster/Get`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster/Get' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/Viewer/Cluster/Viewers`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster/Viewers'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Viewer/Cluster`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Viewer/Cluster/Delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster/Delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/Viewer/Licenses`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Licenses'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/Viewer/priorities`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/priorities'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.
