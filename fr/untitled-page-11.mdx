@@ -1,0 +1,219 @@
+---
+- title: Exchange online
+---
+
+<Info>
+  [EWS dans Exchange Online sera en fin de vie au T4 - 2026](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online), veuillez vous assurer de migrer votre application enregistrée pour utiliser l'API Microsoft Graph comme suit si vous avez une application existante enregistrée comme ci-dessous :
+
+  Assurez-vous d'ajouter les permissions suivantes à l'enregistrement de votre application existante :
+
+  | Permission                              | Requis    | Description                                                                                        |
+  | --------------------------------------- | --------- | -------------------------------------------------------------------------------------------------- |
+  | **Calendars.ReadWrite**                 | Oui       | Lire et synchroniser les événements du calendrier de salle.                                        |
+  | **[Place.Read](http://Place.Read).All** | Optionnel | Requis uniquement lors de l'importation de salles depuis Microsoft Places ou des listes de salles. |
+
+  Après la mise à jour des permissions, **Administrator Consent** doit être accordé à l'application avant que le service puisse s'authentifier avec succès.
+
+  Dans PADS4 - CMS 1.0 Admin, la configuration du calendrier doit ensuite être mise à jour :&#x20;
+
+  ![Calendar Graph API](/images/Workspace/Administrator/Calendar-GraphAPI.png "Calendar Graph API")
+
+  * Changez le fournisseur de calendrier de **Exchange O365** vers **Graph API**. &#x20;
+
+  * Configurez l' **URL de notification Webhook**, si nécessaire. Ce paramètre est optionnel lorsque le point de terminaison de notification utilise le même nom d'hôte DNS déjà configuré pour l'application. &#x20;
+
+  <Note>
+    *Le point de terminaison de notification webhook doit être accessible publiquement via HTTPS pour recevoir les notifications de changement de Microsoft Graph.*
+  </Note>
+</Info>
+
+Microsoft a renommé Azure Active Directory en Microsoft Entra ID. Lors de l'authentification avec le nouveau paramètre OAuth 2.0 dans Exchange 365 (Azure), vous aurez besoin d'un type différent de vérification de compte. Vous devrez ajouter l'application PADS4 CMS/Workspace dans Microsoft Entra ID et ajouter un compte de service. Suivez les étapes ci-dessous pour configurer votre environnement Microsoft Entra ID pour une utilisation avec PADS4. Enregistrer l'application
+
+1. Ouvrez un navigateur et accédez au centre d'administration Microsoft Entra ID et connectez-vous à l'aide d'un compte personnel (alias : compte Microsoft) ou d'un compte professionnel ou scolaire.
+2. Sélectionnez Identité dans la navigation de gauche, puis sélectionnez Inscriptions d'applications sous Applications.
+
+![Entra ID](/images/Entra-ID.png "Entra ID")
+
+3. Sélectionnez Nouvelle inscription. Sur la page Inscrire une application, définissez les valeurs comme suit.<br /> a. Définissez le Nom avec un nom convivial pour votre application.<br /> b. Définissez les Types de comptes pris en charge selon le choix qui correspond à votre scénario.<br /> c. Pour l'URI de redirection, changez la liste déroulante sur Client public (mobile et bureau) et définissez la valeur sur :  **urn:ietf:wg:oauth:2.0:oob**
+
+![Register An Application](/images/Register-an-application.jpg "Register An Application")
+
+4. Choisissez Inscrire. Sur la page suivante, copiez les valeurs de l'ID d'application (client) et de l'ID de répertoire (locataire) et enregistrez-les, vous en aurez besoin plus tard pour configurer le plugin de calendrier dans CMS.
+
+# Configurer pour l'authentification par application uniquement
+
+Pour utiliser les autorisations d'application, suivez ces étapes supplémentaires.
+
+1. Sélectionnez **Manifest** dans la navigation de gauche sous **Manage**.
+
+2. Localisez la propriété **requiredResourceAccess** dans le manifeste, et ajoutez ce qui suit à l'intérieur des crochets (\[]) :
+
+\{<br />  "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",<br />  "resourceAccess": \[<br />    \{<br />      "id": "dc890d15-9560-4a4c-9b7f-a736ec74ec4e",<br />      "type": "Role"<br />    }<br />  ]<br />}
+
+3. Sélectionnez **Save**.
+
+![Manifest](/images/Manifest.jpg "Manifest")
+
+4. Sélectionnez API permissions sous Manage. Confirmez que l'autorisation full\_access\_as\_app est bien listée.
+5. Sélectionnez Grant admin consent for org et acceptez la boîte de dialogue de consentement.
+
+![API Permissions](/images/API-permissions.jpg "API Permissions")
+
+Si vous souhaitez ajouter la prise en charge des réunions Microsoft Teams à Workspace, poursuivez la configuration ci-dessous. Si vous ne souhaitez pas ajouter la prise en charge des réunions Microsoft Teams, vous pouvez passer à l'étape 9.
+
+6. Sélectionnez Add a permission
+
+7. Sélectionnez l'autorisation suivante « Microsoft Graph > Calendars.ReadWrite » et sélectionnez Add.
+
+8. Accordez le consentement administrateur à cette autorisation.
+
+![API Permissions Teams Meeting](/images/API-permissions-Teams-meeting.jpg "API Permissions Teams Meeting")
+
+9. Sélectionnez Certificates & Secrets dans la navigation de gauche sous Manage.
+10. Sélectionnez New client secret, entrez une courte description et sélectionnez Add.
+11. Copiez la valeur (Value) du secret client nouvellement ajouté et enregistrez-la, vous en aurez besoin ultérieurement lors de la configuration du plugin de calendrier dans CMS.
+
+![Entra ID Client Secret](/images/Entra-ID-client-secret.jpg "Entra ID Client Secret")
+
+# Créer un compte utilisateur de service
+
+1. Connectez-vous à votre Office 365 en tant qu'administrateur.
+
+2. Accédez à **Office 365 admin center > USERS > Active Users**.
+
+3. Pour ajouter un nouvel utilisateur, sélectionnez l'icône « + ». La page de création d'un nouveau compte utilisateur s'affiche.
+
+4. Sur la page **create new user account**, renseignez les informations requises.
+
+a. Entrez le prénom, le nom, le nom d'affichage, le nom d'utilisateur et votre domaine de messagerie.
+
+b. Sélectionnez **Type password** et entrez le mot de passe du compte de service.
+
+c. Décochez la case **Make this person change their password the next time they sign in**.
+
+d. Attribuez au moins une licence Exchange Online.
+
+e. Entrez l'adresse e-mail du destinataire à qui le mot de passe doit être envoyé. Sélectionnez **Create**.
+
+f. Sélectionnez **Close**.
+
+**Remark:**
+
+Par défaut, Exchange remplace l'objet de la réunion par le nom de l'organisateur. Pour modifier cela, vous devez changer le traitement du calendrier (Calendar Processing) des salles que vous souhaitez utiliser.
+
+1. Connectez-vous à Exchange Online PowerShell. Pour plus de détails, consultez Connect to Exchange Online PowerShell.
+2. Exécutez la commande suivante, où \<ResourceMailbox> doit être le nom de votre salle.
+
+Set-CalendarProcessing -Identity \<ResourceMailbox> -DeleteSubject \$false -AddOrganizerToSubject \$false -DeleteComments \$false
+
+Désormais, l'objet restera celui que vous avez spécifié lors de la création de la réservation, et ne sera pas remplacé par le nom de l'organisateur de la réservation.
+
+# Gérer l'accès restreint (si nécessaire)
+
+**Important:** si vous avez ajouté une politique d'accès aux applications, vous devrez d'abord inclure le compte de service dans le groupe de distribution à accès restreint
+
+Pour configurer une politique d'accès aux applications et limiter la portée des autorisations d'application :
+
+1. Connectez-vous à Exchange Online PowerShell. Pour plus de détails, consultez Connect to Exchange Online PowerShell.
+
+2. Identifiez l'ID client de l'application et un groupe de sécurité à extension messagerie pour restreindre l'accès de l'application.
+
+a. Identifiez l'ID d'application (client) de l'application dans le portail d'enregistrement des applications Azure.
+
+b. Créez un nouveau groupe de sécurité à extension messagerie ou utilisez un groupe existant et identifiez l'adresse e-mail du groupe.
+
+c. Assurez-vous d'ajouter votre compte de service et la ou les salles que vous souhaitez utiliser au groupe de sécurité à extension messagerie.
+
+3. Créez une politique d'accès aux applications.
+
+Exécutez la commande suivante, en remplaçant les arguments **AppId**, **PolicyScopeGroupId** et **Description**.
+
+New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId [mydistributiongroup@contoso.com](mailto:mydistributiongroup@contoso.com) -AccessRight RestrictAccess -Description "Restrict this app to members of distribution group."
+
+4. Testez la politique d'accès aux applications nouvellement créée.
+
+Exécutez la commande suivante, en remplaçant les arguments **AppId** et **Identity**.
+
+Test-ApplicationAccessPolicy -Identity [room01@contoso.com](mailto:room01@contoso.com) -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
+
+Le résultat de cette commande indiquera si l'application a accès à la boîte aux lettres room01.
+
+**Remark:**
+
+Les modifications apportées aux politiques d'accès aux applications peuvent prendre jusqu'à 30 minutes pour prendre effet dans les appels API EWS.
+
+# Gérer la liste des salles (pour récupérer les salles à importer)
+
+**Remarks:**
+
+·       Pour pouvoir importer des salles dans Workspace, vous devez créer une liste de salles et y ajouter les salles que vous souhaitez pouvoir importer. Si vous ne le faites pas, vous devrez ajouter manuellement les salles dans Workspace. Nous conseillons d'utiliser une liste de salles, car c'est plus pratique que d'ajouter des salles manuellement.
+
+·       Attention, une liste de salles ne doit pas contenir plus de 100 salles. Si vous prévoyez d'en avoir davantage, veuillez les répartir en plusieurs listes de salles, car le nombre maximum de salles pouvant être retournées dans la requête pour une liste de salles est de 100.
+
+1. Connectez-vous à Exchange Online PowerShell. Pour plus de détails, consultez Connect to Exchange Online PowerShell.
+
+2. Utilisez l'Exchange Management Shell pour créer une liste de salles
+
+New-DistributionGroup -Name "MyRoomList" -RoomList
+
+3. Utilisez l'Exchange Management Shell pour ajouter une salle à une liste de salles
+
+Add-DistributionGroupMember -Identity "MyRoomList" -Member [room01@contoso.com](mailto:room01@contoso.com)
+
+4. Pour vérifier si la liste de salles a été créée avec succès, vous pouvez utiliser la commande suivante pour voir si la liste existe.
+
+Get-DistributionGroup -Identity "Room list name"
+
+Lorsque vous avez correctement configuré l'enregistrement de l'application et créé le compte de service, vous pouvez renseigner la configuration du plugin de calendrier dans le portail d'administration CMS.
+
+![Calendar Configuration](/images/Calendar-configuration.jpg "Calendar Configuration")
+
+**Exchange Server :** [http://outlook.office365.com](http://outlook.office365.com) / exemple
+
+**Application ID :** L'ID d'application provenant d'Azure
+
+**Tenant ID :** L'ID de locataire du répertoire depuis Azure
+
+**Clé secrète client :** La clé secrète client depuis Azure.
+
+**Compte de service par défaut :** Le compte de service par défaut depuis le répertoire Azure pour récupérer l'accès.
+
+**Impersonation:** Décrit ci-dessous
+
+**Adresse de la liste de salles :** L'URL SMTP de la liste de salles que vous avez configurée. Cela vous permettra d'importer des salles dans Workspace.
+
+**Autoriser la création de réunion en ligne :** Cette option doit être activée pour permettre la prise en charge des réunions Microsoft Teams.
+
+Vous pouvez également définir si l'option de réunion Teams doit être sélectionnée par défaut lors de la création d'un événement dans Workspace en configurant l'option suivante :
+
+·       Accéder à l'administration CMS
+
+·       Ouvrir les « Paramètres de l'application Workspace »
+
+·       Cocher « Activer la création de réunion en ligne par défaut »
+
+·       Cliquer sur Enregistrer
+
+![Workspace Application Settings](/images/Workspace-application-settings.png "Workspace Application Settings")
+
+## Créer un événement avec une réunion Teams depuis Workspace
+
+<Info>
+  Cette option ne sera disponible que si vous avez sélectionné une salle configurée pour utiliser la configuration de calendrier externe qui dispose de cette option, ou si votre utilisateur est configuré pour utiliser la configuration de calendrier externe pour l'usurpation d'identité.
+</Info>
+
+![Use External Booking System](/images/Use-external-booking-system.jpg "Use External Booking System")
+
+* Pour créer une réunion Teams dans Workspace, il suffit de créer un événement simple dans Workspace et de sélectionner l'option de réunion Teams lors de la création de l'événement.
+
+![New Event Teams](/images/New-event-teams.jpg "New Event Teams")
+
+* Après avoir créé l'événement avec l'option de réunion Teams activée, vous le verrez comme indiqué ci-dessous :
+
+![Event Teams Overview](/images/event-teams-overview.jpg "Event Teams Overview")
+
+# Impersonation
+
+Il existe 3 modes de fonctionnement décrits ci-dessous. Ces modes de fonctionnement doivent être définis en fonction des résultats souhaités et également selon les règles de sécurité de l'entreprise :
+
+![Impersonation](/images/Impersonation.jpg "Impersonation")
