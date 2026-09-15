@@ -1,0 +1,176 @@
+---
+- title: NDS.Services.Sensor
+---
+
+## Aperçu
+
+Gère les entrées de capteurs et les déclencheurs pour le contenu PADS4 interactif. Prend en charge les capteurs de mouvement, les lecteurs RFID, les scanners QR et les périphériques d'entrée personnalisés qui déclenchent des changements de contenu ou des flux interactifs.
+
+| Champ                                 | Valeur                                                                  |
+| ------------------------------------- | ----------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Sensor/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Sensor/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Sensor`                         |
+| Nombre total de points de terminaison | 31                                                                      |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode  | Chemin                                        | Description                                          |
+| -------- | --------------------------------------------- | ---------------------------------------------------- |
+| `GET`    | `/api/v1/area`                                | Obtenir les zones                                    |
+| `POST`   | `/api/v1/area`                                | Enregistrer une zone                                 |
+| `DELETE` | `/api/v1/area`                                | Supprimer une zone                                   |
+| `GET`    | `/api/v1/area/rules`                          | Obtenir les règles prises en charge                  |
+| `GET`    | `/api/v1/device`                              | Obtenir les appareils                                |
+| `POST`   | `/api/v1/device`                              | Enregistrer un appareil                              |
+| `DELETE` | `/api/v1/device`                              | Supprimer un appareil                                |
+| `GET`    | `/api/v1/device/types`                        | Obtenir les types d'appareils                        |
+| `GET`    | `/api/v1/device/stats`                        | Obtenir les statistiques des appareils               |
+| `GET`    | `/api/v1/device/authTypes`                    | Obtenir les types d'authentification                 |
+| `GET`    | `/api/v1/events`                              | Obtenir les événements                               |
+| `POST`   | `/api/v1/image`                               | Obtenir l'image P O S T                              |
+| `GET`    | `/api/v1/image`                               | Obtenir l'image G E T                                |
+| `POST`   | `/api/v1/incident`                            | Obtenir les incidents                                |
+| `POST`   | `/api/v1/incident/status`                     | Mettre à jour le statut d'un incident                |
+| `POST`   | `/api/v1/incident/statistics`                 | Obtenir les statistiques des incidents               |
+| `POST`   | `/api/v1/incident/resolutionStatistics`       | Obtenir les statistiques de résolution des incidents |
+| `GET`    | `/api/v1/diagnostics/toggles`                 | Obtenir les bascules                                 |
+| `GET`    | `/api/v1/diagnostics/configuration`           | Obtenir la section de configuration                  |
+| `GET`    | `/api/v1/diagnostics/configurationex`         | Obtenir la configuration                             |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`         | Obtenir les disjoncteurs                             |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`   | Réinitialiser un disjoncteur                         |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate` | Isoler un disjoncteur                                |
+| `POST`   | `/api/v1/diagnostics/events`                  | Obtenir les événements                               |
+| `GET`    | `/api/v1/health`                              | Obtenir                                              |
+| `GET`    | `/api/v1/health/clean`                        | Obtenir (nettoyé)                                    |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`     | Remettre en file d'attente les messages d'erreur     |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`       | Purger les messages d'erreur                         |
+| `GET`    | `/migration`                                  | Obtenir les migrations                               |
+| `POST`   | `/migration`                                  | Exécuter une migration                               |
+| `GET`    | `/version`                                    | Obtenir                                              |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/area`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Sensor/api/v1/area'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/area`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Sensor/api/v1/area' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/area`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Sensor/api/v1/area'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### GET `/api/v1/area/rules`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Sensor/api/v1/area/rules'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/device`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Sensor/api/v1/device'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/device`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Sensor/api/v1/device' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

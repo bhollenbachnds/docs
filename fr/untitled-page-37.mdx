@@ -1,0 +1,172 @@
+---
+- title: NDS.Services.Teams.Integration
+---
+
+## Aperçu
+
+Intégration Microsoft Teams pour PADS4. Synchronise les calendriers de salles, les données de réunions et les informations de présence Teams avec les affichages PADS4 Workspace. Gère la connexion OAuth à Microsoft 365.
+
+| Champ                                 | Valeur                                                                             |
+| ------------------------------------- | ---------------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Teams.Integration/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.Teams.Integration/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Teams.Integration`                         |
+| Nombre total de points de terminaison | 29                                                                                 |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode  | Chemin                                                          | Description                                      |
+| -------- | --------------------------------------------------------------- | ------------------------------------------------ |
+| `GET`    | `/api/v1/teams/azure-ad-token`                                  | Obtenir les jetons Azure AD                      |
+| `POST`   | `/api/v1/teams/azure-ad-token/store`                            | Créer des jetons Azure AD                        |
+| `DELETE` | `/api/v1/teams/azure-ad-token/{azureAdTokenId}`                 | Supprimer le jeton Azure AD                      |
+| `GET`    | `/api/v1/teams/azure-ad-user`                                   | Obtenir les utilisateurs Azure AD                |
+| `GET`    | `/api/v1/teams/azure-ad-user/{azureAdUserId}`                   | Obtenir l'utilisateur Azure AD                   |
+| `DELETE` | `/api/v1/teams/azure-ad-user/{azureAdUserId}`                   | Supprimer le jeton Azure AD                      |
+| `POST`   | `/api/v1/teams/azure-ad-user/store`                             | Enregistrer l'utilisateur Azure AD               |
+| `GET`    | `/api/v1/teams/azure-app-registration`                          | Obtenir les inscriptions d'applications Azure    |
+| `GET`    | `/api/v1/teams/azure-app-registration/{azureAppRegistrationId}` | Obtenir l'inscription d'application Azure        |
+| `DELETE` | `/api/v1/teams/azure-app-registration/{azureAppRegistrationId}` | Supprimer le jeton Azure AD                      |
+| `POST`   | `/api/v1/teams/azure-app-registration/store`                    | Enregistrer l'inscription d'application Azure    |
+| `GET`    | `/api/v1/teams/azure-config`                                    | Obtenir la configuration Azure                   |
+| `POST`   | `/api/v1/teams/meeting`                                         | Obtenir les réunions                             |
+| `GET`    | `/api/v1/teams/teams-calls/token/{azureAdUserId}`               | Obtenir le jeton d'appels Teams                  |
+| `POST`   | `/api/v1/teams/teams-calls/meeting`                             | Obtenir la réunion d'appels Teams                |
+| `GET`    | `/api/v1/diagnostics/toggles`                                   | Obtenir les bascules                             |
+| `GET`    | `/api/v1/diagnostics/configuration`                             | Obtenir la section de configuration              |
+| `GET`    | `/api/v1/diagnostics/configurationex`                           | Obtenir la configuration                         |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`                           | Obtenir les disjoncteurs                         |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`                     | Réinitialiser le disjoncteur                     |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate`                   | Isoler le disjoncteur                            |
+| `POST`   | `/api/v1/diagnostics/events`                                    | Obtenir les événements                           |
+| `GET`    | `/api/v1/health`                                                | Obtenir                                          |
+| `GET`    | `/api/v1/health/clean`                                          | Obtenir (propre)                                 |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`                       | Remettre en file d'attente les messages d'erreur |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`                         | Purger les messages d'erreur                     |
+| `GET`    | `/migration`                                                    | Obtenir les migrations                           |
+| `POST`   | `/migration`                                                    | Exécuter la migration                            |
+| `GET`    | `/version`                                                      | Obtenir                                          |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/teams/azure-ad-token`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-token'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/teams/azure-ad-token/store`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-token/store' \
+  -H 'Content-Type: application/json' \
+  -d '{"Id": null, "Name": "Example", "IsActive": true}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 42, "Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### DELETE `/api/v1/teams/azure-ad-token/{azureAdTokenId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-token/{azureAdTokenId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### GET `/api/v1/teams/azure-ad-user`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-user'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/teams/azure-ad-user/{azureAdUserId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-user/{azureAdUserId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/teams/azure-ad-user/{azureAdUserId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Teams.Integration/api/v1/teams/azure-ad-user/{azureAdUserId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles indiqués ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

@@ -1,0 +1,197 @@
+---
+- title: NDS.Services.Content
+---
+
+## Aperçu
+
+Gère la bibliothèque multimédia PADS4 : téléchargement de fichiers, intégration de designs Canva, polices, traitement d'images et métadonnées des ressources. Gère le stockage des fichiers, les déclencheurs de conversion de format et la gestion des versions de contenu pour tous les actifs multimédias.
+
+| Champ                                 | Valeur                                                                   |
+| ------------------------------------- | ------------------------------------------------------------------------ |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Content/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Content/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Content`                         |
+| Nombre total de points de terminaison | 44                                                                       |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                                       | Description                                      |
+| ------- | ------------------------------------------------------------ | ------------------------------------------------ |
+| `POST`  | `/api/v1/canva/designs`                                      | Get Canva Items                                  |
+| `POST`  | `/api/v1/canva/export`                                       | Export Design                                    |
+| `POST`  | `/api/v1/canva/download-image`                               | Download Canva Image                             |
+| `POST`  | `/api/v1/content/fileinfo`                                   | Get File Info                                    |
+| `POST`  | `/api/v1/content/setFileAttributes`                          | Set File Attributes                              |
+| `POST`  | `/api/v1/content/folder`                                     | Get Folders                                      |
+| `POST`  | `/api/v1/content/contentRoots`                               | Get User Content Roots                           |
+| `POST`  | `/api/v1/content/permission`                                 | Get Permissions                                  |
+| `POST`  | `/api/v1/content/setpermission`                              | Set Permissions                                  |
+| `POST`  | `/api/v1/content/getHierarchyPermissions`                    | Get Hierarchy Permissions                        |
+| `POST`  | `/api/v1/content/hierarchy`                                  | Get Hierarchy                                    |
+| `POST`  | `/api/v1/content/renameFile`                                 | Rename File                                      |
+| `POST`  | `/api/v1/content/renameFolder`                               | Rename Folder                                    |
+| `POST`  | `/api/v1/content/deleteFile`                                 | Delete File                                      |
+| `POST`  | `/api/v1/content/createFolder`                               | Create Folder                                    |
+| `POST`  | `/api/v1/content/deleteFolder`                               | Delete Folder                                    |
+| `POST`  | `/api/v1/content/moveFile`                                   | Move Files                                       |
+| `POST`  | `/api/v1/content/moveFolder`                                 | Move Folders                                     |
+| `POST`  | `/api/v1/content/copyFile`                                   | Copy Files                                       |
+| `POST`  | `/api/v1/content/copyFolder`                                 | Copy Folders                                     |
+| `POST`  | `/api/v1/content/uploadFile`                                 | Upload Files                                     |
+| `GET`   | `/api/v1/content/contentPreview`                             | Get Content Preview                              |
+| `GET`   | `/api/v1/content`                                            | Get Content                                      |
+| `GET`   | `/api/v1/content/External`                                   | Get External Content                             |
+| `POST`  | `/api/v1/font/list`                                          | Get Fonts                                        |
+| `GET`   | `/api/v1/font/download/{name}`                               | Get Font                                         |
+| `POST`  | `/api/v1/content/presentation/upload`                        | Upload Presentation                              |
+| `POST`  | `/api/v1/content/presentation/convert`                       | Convert Presentation                             |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Get Content Transfer State                       |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Get Bus Diagnostics                              |
+| `GET`   | `/api/v1/diagnostics/toggles`                                | Get Toggles                                      |
+| `GET`   | `/api/v1/diagnostics/configuration`                          | Get Config Section                               |
+| `GET`   | `/api/v1/diagnostics/configurationex`                        | Get Configuration                                |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                     |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                            |
+| `POST`  | `/api/v1/diagnostics/events`                                 | Obtenir les événements                           |
+| `GET`   | `/api/v1/health`                                             | Obtenir                                          |
+| `GET`   | `/api/v1/health/clean`                                       | Obtenir propre                                   |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages d'erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages d'erreur                     |
+| `GET`   | `/migration`                                                 | Obtenir les migrations                           |
+| `POST`  | `/migration`                                                 | Exécuter la migration                            |
+| `GET`   | `/version`                                                   | Obtenir                                          |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### POST `/api/v1/canva/designs`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Content/api/v1/canva/designs' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/canva/export`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Content/api/v1/canva/export' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/canva/download-image`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Content/api/v1/canva/download-image' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/content/fileinfo`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Content/api/v1/content/fileinfo' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/content/setFileAttributes`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Content/api/v1/content/setFileAttributes' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/content/folder`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Content/api/v1/content/folder' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Des points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez l'interface Swagger pour les schémas de paramètres complets.

@@ -1,0 +1,223 @@
+---
+- title: NDS.Services.Authentication
+---
+
+## Aperçu
+
+Gère tous les flux d'authentification pour PADS4 : fournisseurs d'identité, SSO, MFA, mappage des revendications, authentification externe, groupes, rôles, permissions et gestion des jetons de session. Il s'agit de la passerelle de sécurité centrale pour toute authentification des utilisateurs et des services.
+
+| Champ                                 | Valeur                                                                          |
+| ------------------------------------- | ------------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Authentication/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.Authentication/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Authentication`                         |
+| Nombre total de points de terminaison | 76                                                                              |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode  | Chemin                                                       | Description                                           |
+| -------- | ------------------------------------------------------------ | ----------------------------------------------------- |
+| `POST`   | `/api/v1/AuthenticationIdentityProvider`                     | Obtenir les fournisseurs                              |
+| `GET`    | `/api/v1/Claim/GetMappableProperties`                        | Obtenir les propriétés mappables                      |
+| `GET`    | `/api/v1/Claim/{mappingId}`                                  | Obtenir                                               |
+| `POST`   | `/api/v1/Claim/GetAll`                                       | Obtenir tout                                          |
+| `POST`   | `/api/v1/Claim/Save`                                         | Enregistrer                                           |
+| `DELETE` | `/api/v1/Claim`                                              | Supprimer                                             |
+| `POST`   | `/api/v1/ExternalAuthentication/Logon`                       | Assurer l'utilisateur                                 |
+| `POST`   | `/api/v1/ExternalAuthenticationProvider`                     | Obtenir les fournisseurs                              |
+| `GET`    | `/api/v1/ExternalAuthenticationProvider`                     | Obtenir les fournisseurs d'authentification externe   |
+| `POST`   | `/api/v1/ExternalAuthenticationProvider/GetAllByType`        | Obtenir tous les fournisseurs par type                |
+| `POST`   | `/api/v1/ExternalAuthenticationProvider/Save`                | Enregistrer                                           |
+| `DELETE` | `/api/v1/ExternalAuthenticationProvider/{providerId}`        | Supprimer                                             |
+| `POST`   | `/api/v1/ExternalAuthenticationProvider/UploadCertificate`   | Téléverser le certificat                              |
+| `GET`    | `/api/v1/ExternalUserGroupMapping/{id}`                      | Obtenir                                               |
+| `DELETE` | `/api/v1/ExternalUserGroupMapping/{id}`                      | Supprimer                                             |
+| `GET`    | `/api/v1/ExternalUserGroupMapping`                           | Obtenir2                                              |
+| `POST`   | `/api/v1/ExternalUserGroupMapping`                           | Enregistrer                                           |
+| `GET`    | `/api/v1/ExternalUserGroupMapping/Provider/{providerId}`     | Obtenir par fournisseur d'authentification externe    |
+| `GET`    | `/api/v1/ExternalUserGroup`                                  | Obtenir les groupes externes                          |
+| `POST`   | `/api/v1/ExternalUserGroup`                                  | Enregistrer                                           |
+| `GET`    | `/api/v1/ExternalUserGroup/{id}`                             | Obtenir                                               |
+| `DELETE` | `/api/v1/ExternalUserGroup/{id}`                             | Supprimer                                             |
+| `GET`    | `/api/v1/LdapProvider`                                       | Obtenir les connexions                                |
+| `POST`   | `/api/v1/LdapProvider/Save`                                  | Enregistrer la connexion                              |
+| `DELETE` | `/api/v1/LdapProvider/{id}`                                  | Supprimer la connexion                                |
+| `POST`   | `/api/v1/LdapProvider/SearchUsers`                           | Rechercher des utilisateurs                           |
+| `POST`   | `/api/v1/LdapProvider/AddUsers`                              | Ajouter des utilisateurs                              |
+| `POST`   | `/api/v1/Account/Logon`                                      | Connexion                                             |
+| `POST`   | `/api/v1/Account/Logoff`                                     | Déconnexion                                           |
+| `POST`   | `/api/v1/Account/ForgotPassword`                             | Mot de passe oublié                                   |
+| `POST`   | `/api/v1/Account/SetNewPassword`                             | Définir un nouveau mot de passe                       |
+| `POST`   | `/api/v1/Account/ChangePassword`                             | Changer le mot de passe                               |
+| `POST`   | `/api/v1/Account/SetUserLanguage`                            | Définir la langue de l'utilisateur                    |
+| `GET`    | `/api/v1/Account/IsAuthenticated`                            | Est authentifié                                       |
+| `GET`    | `/api/v1/Account/GetUserClaims`                              | Obtenir les revendications de l'utilisateur           |
+| `GET`    | `/api/v1/Account/RetrieveUserClaims`                         | Récupérer les revendications de l'utilisateur G E T   |
+| `POST`   | `/api/v1/Account/RetrieveUserClaims`                         | Récupérer les revendications de l'utilisateur P O S T |
+| `POST`   | `/api/v1/Account/CreateUserOtpUrl`                           | Obtenir l'URL OTP de l'utilisateur                    |
+| `POST`   | `/api/v1/Account/VerifyTotp/{code}`                          | Vérifier le TOTP                                      |
+| `GET`    | `/api/v1/membership`                                         | Obtenir l'aperçu des membres                          |
+| `GET`    | `/api/v1/Role`                                               | Obtenir les rôles G E T                               |
+| `POST`   | `/api/v1/Role`                                               | Enregistrer les rôles                                 |
+| `POST`   | `/api/v1/Role/filtered`                                      | Obtenir les rôles P O S T                             |
+| `POST`   | `/api/v1/Role/GetIdentities`                                 | Obtenir les identités                                 |
+| `POST`   | `/api/v1/Role/delete`                                        | Supprimer les rôles                                   |
+| `POST`   | `/api/v1/Role/getroles`                                      | Obtenir les rôles du rôle                             |
+| `POST`   | `/api/v1/Role/setroles`                                      | Définir les rôles du rôle                             |
+| `POST`   | `/api/v1/Scim/SetProvisionedUsers`                           | Définir les utilisateurs provisionnés                 |
+| `POST`   | `/api/v1/Scim/GetProvisionedUsers`                           | Obtenir les utilisateurs provisionnés                 |
+| `GET`    | `/api/v1/User/IsReadyForUserMigration`                       | Est prêt pour la migration des utilisateurs           |
+| `POST`   | `/api/v1/User/identities`                                    | Obtenir les informations d'identité de base           |
+| `GET`    | `/api/v1/User`                                               | Obtenir les utilisateurs G E T                        |
+| `POST`   | `/api/v1/User`                                               | Enregistrer les utilisateurs                          |
+| `POST`   | `/api/v1/User/filtered`                                      | Obtenir les utilisateurs P O S T                      |
+| `POST`   | `/api/v1/User/delete`                                        | Supprimer les utilisateurs                            |
+| `POST`   | `/api/v1/User/getroles`                                      | Obtenir les rôles de l'utilisateur                    |
+| `POST`   | `/api/v1/User/setroles`                                      | Définir les rôles de l'utilisateur                    |
+| `POST`   | `/api/v1/User/SetPassword`                                   | Définir le mot de passe                               |
+| `POST`   | `/api/v1/User/GetNonRelatedUsers`                            | Obtenir les utilisateurs non liés                     |
+| `POST`   | `/api/v1/User/resetMfa`                                      | Réinitialiser le M F A                                |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état du transfert de contenu                |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                        |
+| `GET`    | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                                  |
+| `GET`    | `/api/v1/diagnostics/configuration`                          | Obtenir la section de configuration                   |
+| `GET`    | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                              |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                              |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                          |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                                 |
+| `POST`   | `/api/v1/diagnostics/events`                                 | Obtenir les événements                                |
+| `GET`    | `/api/v1/health`                                             | Obtenir                                               |
+| `GET`    | `/api/v1/health/clean`                                       | Obtenir propre                                        |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages d'erreur      |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages d'erreur                          |
+| `GET`    | `/migration`                                                 | Obtenir les migrations                                |
+| `POST`   | `/migration`                                                 | Exécuter la migration                                 |
+| `GET`    | `/version`                                                   | Obtenir                                               |
+
+***
+
+## Exemples de requêtes & réponses
+
+### POST `/api/v1/AuthenticationIdentityProvider`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/AuthenticationIdentityProvider' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Claim/GetMappableProperties`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/GetMappableProperties'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Claim/{mappingId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/{mappingId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Claim/GetAll`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/GetAll' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Claim/Save`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/Save' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/Claim`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+> Des points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

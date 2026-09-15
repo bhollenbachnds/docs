@@ -1,0 +1,190 @@
+---
+- title: NDS.Services.Orchestration
+---
+
+## Vue d'ensemble
+
+Orchestration des workflows pour les opérations PADS4. Gère les tâches d'arrière-plan de longue durée, les tâches planifiées et les workflows inter-services tels que les pipelines de publication de contenu et les opérations en masse.
+
+| Champ                                 | Valeur                                                                         |
+| ------------------------------------- | ------------------------------------------------------------------------------ |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Orchestration/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.Orchestration/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Orchestration`                         |
+| Nombre total de points de terminaison | 37                                                                             |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                                       | Description                                       |
+| ------- | ------------------------------------------------------------ | ------------------------------------------------- |
+| `POST`  | `/api/v1/orchestration/cluster/get`                          | Obtenir les clusters                              |
+| `POST`  | `/api/v1/orchestration/cluster/getGroups`                    | Obtenir les groupes de clusters                   |
+| `POST`  | `/api/v1/orchestration/cluster/save`                         | Enregistrer un cluster                            |
+| `POST`  | `/api/v1/orchestration/cluster/delete`                       | Supprimer un cluster                              |
+| `POST`  | `/api/v1/orchestration/cluster/saveGroup`                    | Enregistrer un groupe de clusters                 |
+| `POST`  | `/api/v1/orchestration/cluster/deleteGroup`                  | Supprimer un groupe de clusters                   |
+| `GET`   | `/api/v1/orchestration/Domain`                               | Obtenir les domaines                              |
+| `POST`  | `/api/v1/orchestration/Domain`                               | Enregistrer un domaine                            |
+| `POST`  | `/api/v1/orchestration/Domain/multiple`                      | Enregistrer des domaines                          |
+| `POST`  | `/api/v1/orchestration/Domain/delete`                        | Supprimer un domaine                              |
+| `POST`  | `/api/v1/orchestration/Domain/uploadFile`                    | Téléverser un fichier                             |
+| `POST`  | `/api/v1/orchestration/management/logs`                      | Obtenir les journaux                              |
+| `POST`  | `/api/v1/orchestration/management/logex`                     | Obtenir les journaux (étendu)                     |
+| `POST`  | `/api/v1/orchestration/server/get`                           | Obtenir les serveurs                              |
+| `POST`  | `/api/v1/orchestration/server/save`                          | Enregistrer un serveur                            |
+| `POST`  | `/api/v1/orchestration/server/delete`                        | Supprimer un serveur                              |
+| `POST`  | `/api/v1/orchestration/server/getDetails`                    | Obtenir les détails du serveur                    |
+| `POST`  | `/api/v1/orchestration/server/getDomainServers`              | Obtenir les serveurs du domaine                   |
+| `POST`  | `/api/v1/orchestration/server/associateDomain`               | Associer des domaines                             |
+| `POST`  | `/api/v1/orchestration/server/deleteDomainAssociation`       | Supprimer une association de domaine              |
+| `POST`  | `/api/v1/orchestration/SystemDiag/events`                    | Obtenir les événements                            |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état de transfert de contenu            |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                    |
+| `GET`   | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                              |
+| `GET`   | `/api/v1/diagnostics/configuration`                          | Obtenir une section de configuration              |
+| `GET`   | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                          |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                          |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser un disjoncteur                      |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler un disjoncteur                             |
+| `POST`  | `/api/v1/diagnostics/events`                                 | Obtenir les événements                            |
+| `GET`   | `/api/v1/health`                                             | Obtenir                                           |
+| `GET`   | `/api/v1/health/clean`                                       | Obtenir (nettoyé)                                 |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages en erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages en erreur                     |
+| `GET`   | `/migration`                                                 | Obtenir les migrations                            |
+| `POST`  | `/migration`                                                 | Exécuter une migration                            |
+| `GET`   | `/version`                                                   | Obtenir                                           |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### POST `/api/v1/orchestration/cluster/get`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Orchestration/api/v1/orchestration/cluster/get' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/orchestration/cluster/getGroups`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Orchestration/api/v1/orchestration/cluster/getGroups' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/orchestration/cluster/save`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Orchestration/api/v1/orchestration/cluster/save' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/orchestration/cluster/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Orchestration/api/v1/orchestration/cluster/delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/orchestration/cluster/saveGroup`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Orchestration/api/v1/orchestration/cluster/saveGroup' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/orchestration/cluster/deleteGroup`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Orchestration/api/v1/orchestration/cluster/deleteGroup' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

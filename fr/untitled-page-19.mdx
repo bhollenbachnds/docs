@@ -1,0 +1,519 @@
+---
+- title: NDS.Services.Crystal
+---
+
+## Vue d'ensemble
+
+Crystal est l'API REST intégrée de PADS4 pour la gestion de l'affichage dynamique et des espaces de travail (salles de réunion). Elle fournit une interface unifiée pour gérer le contenu des affichages, les catégories, les messages, les réservations de salles de réunion, les ressources et l'occupation — couvrant à la fois la couche de lecture de l'affichage et le cycle de vie complet de la réservation de salles. Crystal s'exécute sur un chemin de base distinct des services PADS4 Foundation standard.
+
+| Champ                                 | Valeur                                                  |
+| ------------------------------------- | ------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/crystal/pads/swagger/index.html` |
+| Spécification OpenAPI                 | `https://<your-server>/crystal/pads/swagger/docs/v1`    |
+| URL de base                           | `https://<your-server>/crystal/pads`                    |
+| Nombre total de points de terminaison | 100                                                     |
+
+***
+
+## Authentification
+
+Crystal utilise son **propre point de terminaison de jeton** — il ne **pas** utilise le cookie de session PADS4 standard de `/api/v1/Account/Logon`.
+
+```bash
+# Step 1 — obtain a Bearer token from Crystal
+curl -X POST 'https://<your-server>/crystal/pads/api/token' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'grant_type=password&username=admin&password=yourpassword'
+
+# Response
+# {"access_token": "eyJ...", "token_type": "bearer", "expires_in": 3600}
+
+# Step 2 — use the token on all Crystal requests
+curl -X GET 'https://<your-server>/crystal/pads/api/public/digitalsignage/displays' \
+  -H 'Authorization: Bearer eyJ...'
+```
+
+> Tous les exemples ci-dessous supposent que le jeton est stocké dans la variable shell `$TOKEN`.
+
+***
+
+## Référence des points de terminaison
+
+### Affichage dynamique (26 points de terminaison)
+
+| Méthode  | Chemin                                                                | Description                                    |
+| -------- | --------------------------------------------------------------------- | ---------------------------------------------- |
+| `GET`    | `/api/public/digitalsignage/categories`                               | Obtenir toutes les catégories                  |
+| `GET`    | `/api/public/digitalsignage/categories/{idCategorie}`                 | Obtenir une catégorie par identifiant          |
+| `GET`    | `/api/public/digitalsignage/categories/names`                         | Obtenir les noms des catégories                |
+| `GET`    | `/api/public/digitalsignage/displays`                                 | Obtenir tous les affichages                    |
+| `POST`   | `/api/public/digitalsignage/displays`                                 | Créer un affichage                             |
+| `GET`    | `/api/public/digitalsignage/displays/{displayid}`                     | Obtenir un affichage par identifiant           |
+| `PUT`    | `/api/public/digitalsignage/displays/{displayid}`                     | Mettre à jour un affichage                     |
+| `DELETE` | `/api/public/digitalsignage/displays/{displayid}`                     | Supprimer un affichage                         |
+| `PUT`    | `/api/public/digitalsignage/displays{displayid}/associate`            | Associer un affichage à un groupe              |
+| `PUT`    | `/api/public/digitalsignage/displays{displayid}/disassociate`         | Dissocier un affichage d'un groupe             |
+| `GET`    | `/api/public/digitalsignage/displaygroups`                            | Obtenir tous les groupes d'affichages          |
+| `POST`   | `/api/public/digitalsignage/displaygroups`                            | Créer un groupe d'affichages                   |
+| `GET`    | `/api/public/digitalsignage/displaygroups/{displayGroupId}`           | Obtenir un groupe d'affichages par identifiant |
+| `PUT`    | `/api/public/digitalsignage/displaygroups/{displayGroupId}`           | Mettre à jour un groupe d'affichages           |
+| `DELETE` | `/api/public/digitalsignage/displaygroups/{displayGroupId}`           | Supprimer un groupe d'affichages               |
+| `GET`    | `/api/public/digitalsignage/masques`                                  | Obtenir tous les masques (modèles)             |
+| `GET`    | `/api/public/digitalsignage/masques/getcategorymasques/{idCategorie}` | Obtenir les masques par catégorie              |
+| `GET`    | `/api/public/digitalsignage/masques/{idmasque}`                       | Obtenir un masque par identifiant              |
+| `PUT`    | `/api/public/digitalsignage/masques/{idmasque}/activate`              | Activer un masque                              |
+| `PUT`    | `/api/public/digitalsignage/masques/{idmasque}/deactivate`            | Désactiver un masque                           |
+| `GET`    | `/api/public/digitalsignage/messages/{idMasque}`                      | Obtenir les messages planifiés pour un masque  |
+| `POST`   | `/api/public/digitalsignage/messages/broadcast`                       | Diffuser / obtenir la diffusion                |
+| `GET`    | `/api/public/digitalsignage/preview`                                  | Obtenir l'aperçu (tous)                        |
+| `GET`    | `/api/public/digitalsignage/preview/{idmasque}`                       | Obtenir l'aperçu pour un masque                |
+| `GET`    | `/api/v1/health`                                                      | Vérification de l'état de santé                |
+| `GET`    | `/version`                                                            | Obtenir la version de Crystal                  |
+
+### Espace de travail / Salles de réunion (74 points de terminaison)
+
+| Méthode  | Chemin                                                    | Description                                                   |
+| -------- | --------------------------------------------------------- | ------------------------------------------------------------- |
+| `GET`    | `/api/public/meetingrooms/absences`                       | Obtenir la liste de toutes les absences                       |
+| `PUT`    | `/api/public/meetingrooms/absences`                       | Mettre à jour une absence                                     |
+| `POST`   | `/api/public/meetingrooms/absences`                       | Créer une absence                                             |
+| `GET`    | `/api/public/meetingrooms/absences/{id}`                  | Obtenir une absence par identifiant                           |
+| `DELETE` | `/api/public/meetingrooms/absences/{id}`                  | Supprimer une absence par identifiant                         |
+| `GET`    | `/api/public/meetingrooms/additionalservices`             | Obtenir la liste de tous les services supplémentaires         |
+| `PUT`    | `/api/public/meetingrooms/additionalservices`             | Mettre à jour un service supplémentaire                       |
+| `POST`   | `/api/public/meetingrooms/additionalservices`             | Créer un service supplémentaire                               |
+| `GET`    | `/api/public/meetingrooms/additionalservices/{id}`        | Obtenir un service supplémentaire par identifiant             |
+| `DELETE` | `/api/public/meetingrooms/additionalservices/{id}`        | Supprimer un service supplémentaire par identifiant           |
+| `GET`    | `/api/public/meetingrooms/commonareas`                    | Obtenir la liste de toutes les zones communes                 |
+| `PUT`    | `/api/public/meetingrooms/commonareas`                    | Mettre à jour une zone commune                                |
+| `POST`   | `/api/public/meetingrooms/commonareas`                    | Créer une zone commune                                        |
+| `GET`    | `/api/public/meetingrooms/commonareas/{id}`               | Obtenir une zone commune par identifiant                      |
+| `DELETE` | `/api/public/meetingrooms/commonareas/{id}`               | Supprimer une zone commune par identifiant                    |
+| `POST`   | `/api/public/meetingrooms/commonareas/timeslot/status`    | Obtenir le statut des créneaux horaires de la zone commune    |
+| `GET`    | `/api/public/meetingrooms/commonarea/booking`             | Obtenir la liste de toutes les réservations de zones communes |
+| `PUT`    | `/api/public/meetingrooms/commonarea/booking`             | Mettre à jour une réservation de zone commune                 |
+| `POST`   | `/api/public/meetingrooms/commonarea/booking`             | Créer une réservation de zone commune                         |
+| `DELETE` | `/api/public/meetingrooms/commonarea/booking`             | Supprimer une réservation de zone commune par identifiant     |
+| `GET`    | `/api/public/meetingrooms/commonarea/booking/{id}`        | Obtenir une réservation de zone commune par identifiant       |
+| `GET`    | `/api/public/meetingrooms/devices/occupancysensors`       | Obtenir les capteurs d'occupation                             |
+| `GET`    | `/api/public/meetingrooms/equipment`                      | Obtenir la liste de tous les équipements                      |
+| `PUT`    | `/api/public/meetingrooms/equipment`                      | Mettre à jour un équipement                                   |
+| `POST`   | `/api/public/meetingrooms/equipment`                      | Créer un équipement                                           |
+| `GET`    | `/api/public/meetingrooms/equipment/{id}`                 | Obtenir un équipement par identifiant                         |
+| `DELETE` | `/api/public/meetingrooms/equipment/{id}`                 | Supprimer un équipement par identifiant                       |
+| `GET`    | `/api/public/meetingrooms/extendedProperties`             | Obtenir la liste de toutes les propriétés étendues            |
+| `PUT`    | `/api/public/meetingrooms/extendedProperties`             | Mettre à jour une propriété étendue                           |
+| `POST`   | `/api/public/meetingrooms/extendedProperties`             | Créer une propriété étendue                                   |
+| `GET`    | `/api/public/meetingrooms/extendedProperties/{id}`        | Obtenir une propriété étendue par identifiant                 |
+| `DELETE` | `/api/public/meetingrooms/extendedProperties/{id}`        | Supprimer une propriété étendue par identifiant               |
+| `GET`    | `/api/public/meetingrooms/failingequipment`               | Obtenir la liste de tous les équipements défaillants          |
+| `POST`   | `/api/public/meetingrooms/failingequipment/report`        | Signaler un équipement comme défaillant                       |
+| `DELETE` | `/api/public/meetingrooms/failingequipment/fix`           | Corriger / supprimer un équipement défaillant                 |
+| `GET`    | `/api/public/meetingrooms/locations`                      | Obtenir la liste de tous les emplacements                     |
+| `PUT`    | `/api/public/meetingrooms/locations`                      | Mettre à jour un emplacement                                  |
+| `POST`   | `/api/public/meetingrooms/locations`                      | Créer un emplacement                                          |
+| `DELETE` | `/api/public/meetingrooms/locations/{id}`                 | Supprimer un emplacement par identifiant                      |
+| `POST`   | `/api/public/meetingrooms/locations/associate`            | Associer des salles à un emplacement                          |
+| `GET`    | `/api/public/meetingrooms/rooms`                          | Obtenir la liste de toutes les salles                         |
+| `PUT`    | `/api/public/meetingrooms/rooms`                          | Mettre à jour une salle                                       |
+| `POST`   | `/api/public/meetingrooms/rooms`                          | Créer une salle                                               |
+| `GET`    | `/api/public/meetingrooms/rooms/{roomId}`                 | Obtenir une salle par identifiant                             |
+| `DELETE` | `/api/public/meetingrooms/rooms/{roomId}`                 | Supprimer une salle par identifiant                           |
+| `GET`    | `/api/public/meetingrooms/bookings`                       | Obtenir les réservations (avec filtres optionnels)            |
+| `PUT`    | `/api/public/meetingrooms/bookings`                       | Mettre à jour une réservation                                 |
+| `POST`   | `/api/public/meetingrooms/bookings`                       | Créer une réservation                                         |
+| `GET`    | `/api/public/meetingrooms/bookings/{id}`                  | Obtenir une réservation par identifiant                       |
+| `DELETE` | `/api/public/meetingrooms/bookings/{id}`                  | Supprimer une réservation par identifiant                     |
+| `GET`    | `/api/public/meetingrooms/bookings/exception/{id}/{date}` | Obtenir une exception de réservation par identifiant et date  |
+| `PUT`    | `/api/public/meetingrooms/bookings/occurrence`            | Mettre à jour une occurrence de réservation                   |
+| `POST`   | `/api/public/meetingrooms/bookings/occurrence`            | Créer une occurrence de réservation                           |
+| `DELETE` | `/api/public/meetingrooms/bookings/occurrence`            | Supprimer une occurrence/exception de réservation             |
+| `GET`    | `/api/public/meetingrooms/roomprofiles`                   | Obtenir la liste de tous les profils de salle                 |
+| `PUT`    | `/api/public/meetingrooms/roomprofiles`                   | Mettre à jour un profil de salle                              |
+| `POST`   | `/api/public/meetingrooms/roomprofiles`                   | Créer un profil de salle                                      |
+| `GET`    | `/api/public/meetingrooms/roomprofiles/{id}`              | Obtenir un profil de salle par identifiant                    |
+| `DELETE` | `/api/public/meetingrooms/roomprofiles/{id}`              | Supprimer un profil de salle par identifiant                  |
+| `GET`    | `/api/public/meetingrooms/roomUsers`                      | Obtenir la liste de tous les utilisateurs de salle            |
+| `PUT`    | `/api/public/meetingrooms/roomUsers`                      | Mettre à jour un utilisateur de salle                         |
+| `POST`   | `/api/public/meetingrooms/roomUsers`                      | Créer un utilisateur de salle                                 |
+| `GET`    | `/api/public/meetingrooms/roomUsers/{id}`                 | Obtenir un utilisateur de salle par identifiant               |
+| `DELETE` | `/api/public/meetingrooms/roomUsers/{id}`                 | Supprimer un utilisateur de salle par identifiant             |
+| `PUT`    | `/api/public/meetingrooms/roomUsers/setPassword`          | Définir le mot de passe d'un utilisateur de salle             |
+| `GET`    | `/api/public/meetingrooms/roomUserProfiles`               | Obtenir la liste de tous les profils d'utilisateurs de salle  |
+| `PUT`    | `/api/public/meetingrooms/roomUserProfiles`               | Mettre à jour un profil d'utilisateur de salle                |
+| `POST`   | `/api/public/meetingrooms/roomUserProfiles`               | Créer un profil d'utilisateur de salle                        |
+| `GET`    | `/api/public/meetingrooms/roomUserProfiles/{id}`          | Obtenir un profil d'utilisateur de salle par identifiant      |
+| `DELETE` | `/api/public/meetingrooms/roomUserProfiles/{id}`          | Supprimer un profil d'utilisateur de salle par identifiant    |
+| `POST`   | `/api/public/meetingrooms/statistics/occupancy`           | Obtenir les statistiques d'occupation                         |
+| `POST`   | `/api/token`                                              | Obtenir un jeton Bearer (authentification Crystal)            |
+| `GET`    | `/service/version`                                        | Obtenir la version du service                                 |
+| `GET`    | `/service/api/v1/health`                                  | Vérification de l'état de santé du service                    |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### POST `/api/token`
+
+S'authentifier et obtenir un jeton Bearer Crystal.
+
+**Request:**
+
+```bash
+curl -X POST 'https://<your-server>/crystal/pads/api/token' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -d 'grant_type=password&username=admin&password=yourpassword'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "bearer",
+  "expires_in": 3600
+}
+```
+
+***
+
+### GET `/api/public/digitalsignage/displays`
+
+Lister tous les affichages Crystal enregistrés.
+
+**Request:**
+
+```bash
+curl -X GET 'https://<your-server>/crystal/pads/api/public/digitalsignage/displays' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Lobby Screen",
+    "groupId": 2,
+    "isActive": true
+  }
+]
+```
+
+***
+
+### POST `/api/public/digitalsignage/displays`
+
+Créer un nouvel affichage.
+
+**Request:**
+
+```bash
+curl -X POST 'https://<your-server>/crystal/pads/api/public/digitalsignage/displays' \
+  -H 'Authorization: Bearer $TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"name": "Reception Display", "groupId": 1, "isActive": true}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{
+  "id": 42,
+  "name": "Reception Display",
+  "groupId": 1,
+  "isActive": true
+}
+```
+
+***
+
+### GET `/api/public/digitalsignage/categories`
+
+Obtenir toutes les catégories de contenu.
+
+**Request:**
+
+```bash
+curl -X GET 'https://<your-server>/crystal/pads/api/public/digitalsignage/categories' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+[
+  {"id": 1, "name": "Corporate News", "isActive": true},
+  {"id": 2, "name": "Emergency Alerts", "isActive": true}
+]
+```
+
+***
+
+### PUT `/api/public/digitalsignage/masques/{idmasque}/activate`
+
+Activer un masque (modèle de contenu) afin qu'il commence à être diffusé sur les affichages assignés.
+
+**Request:**
+
+```bash
+curl -X PUT 'https://<your-server>/crystal/pads/api/public/digitalsignage/masques/7/activate' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"succeeded": true, "message": null}
+```
+
+***
+
+### POST `/api/public/digitalsignage/messages/broadcast`
+
+Diffuser un message / envoyer un message aux affichages.
+
+**Request:**
+
+```bash
+curl -X POST 'https://<your-server>/crystal/pads/api/public/digitalsignage/messages/broadcast' \
+  -H 'Authorization: Bearer $TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"masqueId": 7, "displayIds": [1, 2, 3], "startDate": "2026-07-26T09:00:00", "endDate": "2026-07-26T18:00:00"}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"succeeded": true, "broadcastId": 99, "message": null}
+```
+
+***
+
+### GET `/api/public/meetingrooms/rooms`
+
+Obtenir toutes les salles de réunion.
+
+**Request:**
+
+```bash
+curl -X GET 'https://<your-server>/crystal/pads/api/public/meetingrooms/rooms' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Board Room",
+    "capacity": 12,
+    "locationId": 1,
+    "profileId": 2,
+    "isActive": true
+  }
+]
+```
+
+***
+
+### POST `/api/public/meetingrooms/rooms`
+
+Créer une nouvelle salle de réunion.
+
+**Request:**
+
+```bash
+curl -X POST 'https://<your-server>/crystal/pads/api/public/meetingrooms/rooms' \
+  -H 'Authorization: Bearer $TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"name": "Focus Room A", "capacity": 4, "locationId": 1, "profileId": 1, "isActive": true}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"id": 15, "name": "Focus Room A", "capacity": 4, "locationId": 1, "profileId": 1, "isActive": true}
+```
+
+***
+
+### POST `/api/public/meetingrooms/bookings`
+
+Créer une nouvelle réservation de salle.
+
+**Request:**
+
+```bash
+curl -X POST 'https://<your-server>/crystal/pads/api/public/meetingrooms/bookings' \
+  -H 'Authorization: Bearer $TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "roomId": 1,
+    "title": "Quarterly Review",
+    "startDate": "2026-07-28T10:00:00",
+    "endDate": "2026-07-28T11:00:00",
+    "organizerId": 5,
+    "attendees": [5, 6, 7]
+  }'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{
+  "id": 301,
+  "roomId": 1,
+  "title": "Quarterly Review",
+  "startDate": "2026-07-28T10:00:00",
+  "endDate": "2026-07-28T11:00:00",
+  "organizerId": 5
+}
+```
+
+***
+
+### GET `/api/public/meetingrooms/bookings`
+
+Obtenir les réservations avec des filtres optionnels (paramètres de requête).
+
+**Request:**
+
+```bash
+curl -X GET 'https://<your-server>/crystal/pads/api/public/meetingrooms/bookings?roomId=1&startDate=2026-07-26&endDate=2026-07-27' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+[
+  {
+    "id": 301,
+    "roomId": 1,
+    "title": "Quarterly Review",
+    "startDate": "2026-07-28T10:00:00",
+    "endDate": "2026-07-28T11:00:00"
+  }
+]
+```
+
+***
+
+### DELETE `/api/public/meetingrooms/bookings/{id}`
+
+Supprimer une réservation.
+
+**Request:**
+
+```bash
+curl -X DELETE 'https://<your-server>/crystal/pads/api/public/meetingrooms/bookings/301' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"succeeded": true, "message": null}
+```
+
+***
+
+### POST `/api/public/meetingrooms/statistics/occupancy`
+
+Récupérer les statistiques d'occupation des salles sur une plage de temps.
+
+**Request:**
+
+```bash
+curl -X POST 'https://<your-server>/crystal/pads/api/public/meetingrooms/statistics/occupancy' \
+  -H 'Authorization: Bearer $TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "roomIds": [1, 2, 3],
+    "startDate": "2026-07-01",
+    "endDate": "2026-07-31"
+  }'
+```
+
+**Réponse `200 OK`:**
+
+```json
+[
+  {
+    "roomId": 1,
+    "roomName": "Board Room",
+    "totalBookings": 48,
+    "totalHoursBooked": 96.5,
+    "occupancyRate": 0.72
+  }
+]
+```
+
+***
+
+### GET `/api/public/meetingrooms/locations`
+
+Obtenir tous les emplacements (bâtiments / étages).
+
+**Request:**
+
+```bash
+curl -X GET 'https://<your-server>/crystal/pads/api/public/meetingrooms/locations' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+[
+  {"id": 1, "name": "HQ - Floor 3", "roomCount": 8},
+  {"id": 2, "name": "HQ - Floor 4", "roomCount": 6}
+]
+```
+
+***
+
+### POST `/api/public/meetingrooms/locations/associate`
+
+Associer une ou plusieurs salles à un emplacement.
+
+**Request:**
+
+```bash
+curl -X POST 'https://<your-server>/crystal/pads/api/public/meetingrooms/locations/associate' \
+  -H 'Authorization: Bearer $TOKEN' \
+  -H 'Content-Type: application/json' \
+  -d '{"locationId": 1, "roomIds": [10, 11, 12]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"succeeded": true, "message": null}
+```
+
+***
+
+### GET `/api/v1/health`
+
+Vérification de l'état du service Crystal.
+
+**Request:**
+
+```bash
+curl -X GET 'https://<your-server>/crystal/pads/api/v1/health' \
+  -H 'Authorization: Bearer $TOKEN'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"status": "Healthy"}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes conventions REST : `GET /resource` liste, `POST /resource` crée, `PUT /resource` met à jour, `GET /resource/{id}` récupère par id, `DELETE /resource/{id}` supprime. Voir l'interface Swagger à `/crystal/pads/swagger/index.html` pour les schémas de paramètres complets.

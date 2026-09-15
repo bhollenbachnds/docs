@@ -1,0 +1,169 @@
+---
+- title: NDS.Services.Configuration
+---
+
+## Aperçu
+
+Stocke et récupère des paires clé-valeur de configuration à l'échelle du système et au niveau du domaine. Utilisé par d'autres services pour lire les paramètres d'exécution, les indicateurs de fonctionnalités et la configuration spécifique au déploiement.
+
+| Champ               | Valeur                                                                         |
+| ------------------- | ------------------------------------------------------------------------------ |
+| Swagger UI          | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/index.html`      |
+| OpenAPI spec        | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/v1/swagger.json` |
+| URL de base         | `https://<your-server>/rdx/NDS.Services.Configuration`                         |
+| Total des endpoints | 22                                                                             |
+
+***
+
+## Authentification
+
+Tous les endpoints utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des Endpoints
+
+| Méthode | Chemin                                        | Description                             |
+| ------- | --------------------------------------------- | --------------------------------------- |
+| `GET`   | `/api/v1/Configuration`                       | Obtenir les Nœuds de Configuration      |
+| `POST`  | `/api/v1/Configuration`                       | Définir les Nœuds de Configuration      |
+| `POST`  | `/api/v1/Configuration/delete`                | Supprimer les Nœuds de Configuration    |
+| `GET`   | `/api/v1/DomainConfig`                        | Obtenir la Configuration du Domaine     |
+| `POST`  | `/api/v1/DomainConfig`                        | Enregistrer la Configuration du Domaine |
+| `GET`   | `/api/v1/Feature`                             | Obtenir les Fonctionnalités             |
+| `GET`   | `/api/v1/Feature/{domain}`                    | Obtenir les Fonctionnalités2            |
+| `GET`   | `/api/v1/Feature/raw`                         | Obtenir les Fonctionnalités Brutes      |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Obtenir les Bascules                    |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Obtenir la Section de Configuration     |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Obtenir la Configuration                |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Obtenir les Disjoncteurs                |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Réinitialiser le Disjoncteur            |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isoler le Disjoncteur                   |
+| `POST`  | `/api/v1/diagnostics/events`                  | Obtenir les Événements                  |
+| `GET`   | `/api/v1/health`                              | Obtenir                                 |
+| `GET`   | `/api/v1/health/clean`                        | Obtenir Propre                          |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Remettre en File les Messages d'Erreur  |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purger les Messages d'Erreur            |
+| `GET`   | `/migration`                                  | Obtenir les Migrations                  |
+| `POST`  | `/migration`                                  | Exécuter la Migration                   |
+| `GET`   | `/version`                                    | Obtenir                                 |
+
+***
+
+## Exemples de Requêtes & Réponses
+
+### GET `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Configuration/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration/delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Feature`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Feature'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les endpoints supplémentaires suivent les mêmes modèles indiqués ci-dessus. Consultez le Swagger UI pour les schémas de paramètres complets.

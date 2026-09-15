@@ -1,0 +1,212 @@
+---
+- title: NDS.Services.Viewer
+---
+
+## Aperçu
+
+Contrôle les applications de visualisation PADS4 : commandes à distance (redémarrage, rechargement, capture d'écran), surveillance de l'état, récupération des journaux, gestion des mises à jour logicielles et configuration du visualiseur. Le service principal pour gérer ce qui s'exécute sur le matériel d'affichage.
+
+| Champ                                 | Valeur                                                                  |
+| ------------------------------------- | ----------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Viewer/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Viewer/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Viewer`                         |
+| Nombre total de points de terminaison | 65                                                                      |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                                       | Description                                              |
+| ------- | ------------------------------------------------------------ | -------------------------------------------------------- |
+| `POST`  | `/api/v1/Viewer/Cluster/Get`                                 | Obtenir les clusters                                     |
+| `GET`   | `/api/v1/Viewer/Cluster/Viewers`                             | Obtenir les visualiseurs du cluster                      |
+| `POST`  | `/api/v1/Viewer/Cluster`                                     | Enregistrer le cluster                                   |
+| `POST`  | `/api/v1/Viewer/Cluster/Delete`                              | Supprimer le cluster                                     |
+| `GET`   | `/api/v1/Viewer/Licenses`                                    | Obtenir les licences des visualiseurs                    |
+| `GET`   | `/api/v1/Viewer/priorities`                                  | Obtenir les priorités                                    |
+| `POST`  | `/api/v1/Viewer/Schedule`                                    | Obtenir les planifications                               |
+| `POST`  | `/api/v1/Viewer/Schedule/updateWeights`                      | Mettre à jour les pondérations des planifications        |
+| `POST`  | `/api/v1/Viewer/Schedule/create`                             | Créer une planification                                  |
+| `POST`  | `/api/v1/Viewer/Schedule/edit`                               | Modifier la planification                                |
+| `POST`  | `/api/v1/Viewer/Schedule/delete`                             | Supprimer la planification                               |
+| `POST`  | `/api/v1/Viewer/Schedule/content/delete`                     | Supprimer le contenu de la planification                 |
+| `POST`  | `/api/v1/Viewer/Schedule/saveRecurrenceException`            | Enregistrer l'exception de récurrence                    |
+| `GET`   | `/api/v1/Viewer/Schedule/presentationInfo`                   | Obtenir les informations de présentation                 |
+| `POST`  | `/api/v1/ShadowedViewer/delete`                              | Supprimer les visualiseurs en miroir                     |
+| `POST`  | `/api/v1/ShadowedViewer/update`                              | Mettre à jour les visualiseurs en miroir                 |
+| `GET`   | `/api/v1/ShadowedViewer/destinationRoot`                     | Obtenir la racine de destination                         |
+| `POST`  | `/api/v1/Viewer/getContextPermissions`                       | Obtenir les permissions de contexte                      |
+| `POST`  | `/api/v1/Viewer/getPermissions`                              | Obtenir les permissions                                  |
+| `POST`  | `/api/v1/Viewer/setPermissions`                              | Définir les permissions                                  |
+| `POST`  | `/api/v1/Viewer/deleteDestinationRelations`                  | Supprimer la relation de destination                     |
+| `POST`  | `/api/v1/Viewer/setDestinationParents`                       | Définir les parents de destination                       |
+| `GET`   | `/api/v1/Viewer`                                             | Obtenir                                                  |
+| `POST`  | `/api/v1/Viewer/screenshot`                                  | Obtenir les captures d'écran                             |
+| `POST`  | `/api/v1/Viewer/names`                                       | Obtenir les noms des visualiseurs                        |
+| `GET`   | `/api/v1/Viewer/GetViewerStats`                              | Obtenir les statistiques des visualiseurs                |
+| `POST`  | `/api/v1/Viewer/Filtered`                                    | Obtenir les visualiseurs filtrés                         |
+| `GET`   | `/api/v1/Viewer/{id}`                                        | Obtenir par ID                                           |
+| `POST`  | `/api/v1/Viewer/RebootViewer`                                | Redémarrer le visualiseur (reboot)                       |
+| `POST`  | `/api/v1/Viewer/RestartViewer`                               | Redémarrer le visualiseur (restart)                      |
+| `POST`  | `/api/v1/Viewer/ResetViewerContentLibrary`                   | Réinitialiser la bibliothèque de contenu du visualiseur  |
+| `GET`   | `/api/v1/Viewer/GetViewerBlackBox`                           | Obtenir la boîte noire du visualiseur                    |
+| `POST`  | `/api/v1/Viewer/GetViewerScheduleInfo`                       | Obtenir les informations de planification du visualiseur |
+| `POST`  | `/api/v1/Viewer/GetViewerLogs`                               | Obtenir les journaux du visualiseur                      |
+| `POST`  | `/api/v1/Viewer/GetViewerSyncLogs`                           | Obtenir les journaux de synchronisation du visualiseur   |
+| `POST`  | `/api/v1/Viewer/GetViewerSystemInfo`                         | Obtenir les informations système du visualiseur          |
+| `POST`  | `/api/v1/Viewer/CreateViewer`                                | Créer un visualiseur                                     |
+| `POST`  | `/api/v1/Viewer/EditViewer`                                  | Modifier le visualiseur                                  |
+| `POST`  | `/api/v1/Viewer/DeleteViewer`                                | Supprimer le visualiseur                                 |
+| `POST`  | `/api/v1/Viewer/GetViewerSettings`                           | Obtenir les paramètres du visualiseur                    |
+| `POST`  | `/api/v1/Viewer/EditViewerSettings`                          | Modifier les paramètres du visualiseur                   |
+| `POST`  | `/api/v1/Viewer/getHierarchyPermissions`                     | Obtenir les permissions de hiérarchie                    |
+| `GET`   | `/api/v1/Viewer/ViewerVariables`                             | Obtenir les variables du visualiseur                     |
+| `POST`  | `/api/v1/Viewer/ViewerVariables`                             | Modifier les variables du visualiseur                    |
+| `GET`   | `/api/v1/Viewer/ViewerVariables/Export`                      | Exporter les variables du visualiseur                    |
+| `POST`  | `/api/v1/Viewer/ViewerVariables/Import`                      | Importer les variables du visualiseur                    |
+| `POST`  | `/api/v1/Viewer/ViewerVariables/CompleteImport`              | Finaliser l'importation                                  |
+| `POST`  | `/api/v1/Viewer/ViewerVariables/Delete`                      | Supprimer les variables du visualiseur                   |
+| `POST`  | `/api/v1/Viewer/ViewerVariables/Values`                      | Modifier les valeurs des variables du visualiseur        |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état du transfert de contenu                   |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                           |
+| `GET`   | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                                     |
+| `GET`   | `/api/v1/diagnostics/configuration`                          | Obtenir la section de configuration                      |
+| `GET`   | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                                 |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                                 |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                             |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                                    |
+| `POST`  | `/api/v1/diagnostics/events`                                 | Obtenir les événements                                   |
+| `GET`   | `/api/v1/health`                                             | Obtenir                                                  |
+| `GET`   | `/api/v1/health/clean`                                       | Obtenir (propre)                                         |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages d'erreur         |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages d'erreur                             |
+| `GET`   | `/migration`                                                 | Obtenir les migrations                                   |
+| `POST`  | `/migration`                                                 | Exécuter la migration                                    |
+| `GET`   | `/version`                                                   | Obtenir                                                  |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### POST `/api/v1/Viewer/Cluster/Get`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster/Get' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Viewer/Cluster/Viewers`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster/Viewers'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Viewer/Cluster`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Viewer/Cluster/Delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Cluster/Delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Viewer/Licenses`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/Licenses'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Viewer/priorities`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Viewer/api/v1/Viewer/priorities'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles indiqués ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

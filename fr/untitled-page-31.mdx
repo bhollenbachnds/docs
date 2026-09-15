@@ -1,0 +1,114 @@
+---
+- title: NDS.Services.Package
+---
+
+## Aperçu
+
+Regroupe le contenu et la configuration PADS4 pour les déploiements hors ligne ou en réseau isolé. Crée des packages distribuables pouvant être déployés sur des appareils viewer sans connexion active au serveur.
+
+| Champ               | Valeur                                                                   |
+| ------------------- | ------------------------------------------------------------------------ |
+| Swagger UI          | `https://<your-server>/rdx/NDS.Services.Package/swagger/index.html`      |
+| OpenAPI spec        | `https://<your-server>/rdx/NDS.Services.Package/swagger/v1/swagger.json` |
+| Base URL            | `https://<your-server>/rdx/NDS.Services.Package`                         |
+| Total des endpoints | 17                                                                       |
+
+***
+
+## Authentification
+
+Tous les endpoints utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des endpoints
+
+| Méthode | Chemin                                        | Description             |
+| ------- | --------------------------------------------- | ----------------------- |
+| `POST`  | `/api/v1/package/upload`                      | Upload Package          |
+| `POST`  | `/api/v1/package`                             | Get Packages            |
+| `POST`  | `/api/v1/package/install`                     | Install Package         |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Get Toggles             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Get Config Section      |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Get Configuration       |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Get Circuit Breakers    |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Reset Circuit Breaker   |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST`  | `/api/v1/diagnostics/events`                  | Get Events              |
+| `GET`   | `/api/v1/health`                              | Get                     |
+| `GET`   | `/api/v1/health/clean`                        | Get Clean               |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Requeue Error Messages  |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purge Error Messages    |
+| `GET`   | `/migration`                                  | Get Migrations          |
+| `POST`  | `/migration`                                  | Execute Migration       |
+| `GET`   | `/version`                                    | Get                     |
+
+***
+
+## Exemples de requêtes & réponses
+
+### POST `/api/v1/package/upload`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Package/api/v1/package/upload' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/package`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Package/api/v1/package' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/package/install`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Package/api/v1/package/install' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***

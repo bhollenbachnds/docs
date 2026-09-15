@@ -1,0 +1,167 @@
+---
+- title: NDS.Nginx.Domains
+---
+
+## Aperçu
+
+Gère la configuration du routage de domaine pour le proxy inverse PADS4 Nginx. Contrôle quels noms d'hôte sont acheminés vers quels environnements de tenant PADS4 dans les déploiements multi-tenant.
+
+| Champ               | Valeur                                                                |
+| ------------------- | --------------------------------------------------------------------- |
+| Swagger UI          | `https://<your-server>/rdx/NDS.Nginx.Domains/swagger/index.html`      |
+| OpenAPI spec        | `https://<your-server>/rdx/NDS.Nginx.Domains/swagger/v1/swagger.json` |
+| URL de base         | `https://<your-server>/rdx/NDS.Nginx.Domains`                         |
+| Total des endpoints | 20                                                                    |
+
+***
+
+## Authentification
+
+Tous les endpoints utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des endpoints
+
+| Méthode  | Chemin                                        | Description                                      |
+| -------- | --------------------------------------------- | ------------------------------------------------ |
+| `GET`    | `/api/v1/Domain`                              | Obtenir tout                                     |
+| `POST`   | `/api/v1/Domain`                              | Enregistrer                                      |
+| `DELETE` | `/api/v1/Domain`                              | Supprimer                                        |
+| `GET`    | `/api/v1/Domain/validate`                     | Valider la configuration                         |
+| `POST`   | `/api/v1/Domain/reset`                        | Enregistrer la liste de domaines                 |
+| `POST`   | `/api/v1/Domain/restart`                      | Redémarrer                                       |
+| `GET`    | `/api/v1/diagnostics/toggles`                 | Obtenir les Toggles                              |
+| `GET`    | `/api/v1/diagnostics/configuration`           | Obtenir la section de configuration              |
+| `GET`    | `/api/v1/diagnostics/configurationex`         | Obtenir la configuration                         |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`         | Obtenir les Circuit Breakers                     |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`   | Réinitialiser le Circuit Breaker                 |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate` | Isoler le Circuit Breaker                        |
+| `POST`   | `/api/v1/diagnostics/events`                  | Obtenir les événements                           |
+| `GET`    | `/api/v1/health`                              | Obtenir                                          |
+| `GET`    | `/api/v1/health/clean`                        | Obtenir (nettoyé)                                |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`     | Remettre en file d'attente les messages d'erreur |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`       | Purger les messages d'erreur                     |
+| `GET`    | `/migration`                                  | Obtenir les migrations                           |
+| `POST`   | `/migration`                                  | Exécuter la migration                            |
+| `GET`    | `/version`                                    | Obtenir                                          |
+
+***
+
+## Exemples de requêtes & réponses
+
+### GET `/api/v1/Domain`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Domain`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/Domain`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### GET `/api/v1/Domain/validate`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain/validate'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Domain/reset`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain/reset' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Domain/restart`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Nginx.Domains/api/v1/Domain/restart' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les endpoints supplémentaires suivent les mêmes schémas que ceux présentés ci-dessus. Consultez le Swagger UI pour les schémas de paramètres complets.
