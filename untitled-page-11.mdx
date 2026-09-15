@@ -39,7 +39,7 @@ Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authentica
 
 ![Register An Application](/images/Register-an-application.jpg "Register An Application")
 
-4. Choose Register. On the next page, copy the values of the Application (client) ID and Directory (tenant) ID and save them, you will need them later to configure the calendar plugin in CMS.
+4. Choose Register. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them, you will need them later to configure the calendar plugin in CMS.
 
 # Configure for app-only authentication
 
@@ -49,14 +49,14 @@ To use application permissions, follow these additional steps.
 
 2. Locate the **requiredResourceAccess** property in the manifest, and add the following inside the square brackets ([]):
 
-\{<br />  "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",<br />  "resourceAccess": [<br />    \{<br />      "id": "dc890d15-9560-4a4c-9b7f-a736ec74ec4e",<br />      "type": "Role"<br />    \}<br />  ]<br />\}
+`{`<br />`  "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",`<br />`  "resourceAccess": [`<br />`    {`<br />`      "id": "dc890d15-9560-4a4c-9b7f-a736ec74ec4e",`<br />`      "type": "Role"`<br />`    }`<br />`  ]`<br />`}`
 
 3. Select **Save**.
 
 ![Manifest](/images/Manifest.jpg "Manifest")
 
-4. Select API permissions under Manage. Confirm that the full_access_as_app permission is listed.
-5. Select Grant admin consent for org and accept the consent dialog.
+4. Select API permissions under Manage. Confirm that the **full_access_as_app** permission is listed.
+5. Select **Grant admin consent** for org and accept the consent dialog.
 
 ![API Permissions](/images/API-permissions.jpg "API Permissions")
 
@@ -64,7 +64,7 @@ In case you want to add Microsoft Teams meeting support to Workspace, continue t
 
 6. Select Add a permission 
 
-7. Select the following permission "Microsoft Graph > Calendars.ReadWrite" and select Add. 
+7. Select the following permission "**Microsoft Graph > Calendars.ReadWrite**" and select Add. 
 
 8. Grant admin consent to that permission.
 
@@ -98,20 +98,24 @@ e. Enter the email address of the recipient to whom the password must be sent. S
 
 f. Select **Close**.
 
-**Remark:**
-
-By default, Exchange will change the subject of the meeting to the Organizer's name. To change this you would need to change the Calendar Processing of the room(s) that you will use.
+<Note>
+  By default, Exchange will change the subject of the meeting to the Organizer's name. To change this you would need to change the Calendar Processing of the room(s) that you will use.
+</Note>
 
 1. Connect to Exchange Online PowerShell. For details, see Connect to Exchange Online PowerShell.
 2. Run the following command, where \<ResourceMailbox> the name of your room should be.
 
+```text
 Set-CalendarProcessing -Identity \<ResourceMailbox> -DeleteSubject \$false -AddOrganizerToSubject \$false -DeleteComments \$false
+```
 
 Now the Subject will stay the subject that you have specified in the booking creation, and won't change to the Organizer of the booking.
 
 # Manage restricted access (if required)
 
-**Important:** if you added an application access policy, you will need first to include the service account in the restricted access distribution group
+<Info>
+  if you added an application access policy, you will need first to include the service account in the restricted access distribution group
+</Info>
 
 To configure an application access policy and limit the scope of application permissions:
 
@@ -129,41 +133,51 @@ c. Make sure to add your service account and the room(s) that you want to use to
 
 Run the following command, replacing the **AppId**, **PolicyScopeGroupId**, and **Description** arguments.
 
+```text
 New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId [mydistributiongroup@contoso.com](mailto:mydistributiongroup@contoso.com) -AccessRight RestrictAccess -Description "Restrict this app to members of distribution group."
+```
 
 4. Test the newly created application access policy.
 
 Run the following command, replacing the **AppId** and **Identity** arguments.
 
+```text
 Test-ApplicationAccessPolicy -Identity [room01@contoso.com](mailto:room01@contoso.com) -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
+```
 
 The output of this command will indicate whether the app has access to room01 mailbox.
 
-**Remark:**
-
-Changes to application access policies can take up to 30 minutes to take effect in EWS API calls.
+<Note>
+  Changes to application access policies can take up to 30 minutes to take effect in EWS API calls.
+</Note>
 
 # Manage room list (for retrieving rooms to import)
 
-**Remarks:**
+<Note>
+  - To be able to import rooms in Workspace you need to create a room list and add the rooms that want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient then adding rooms manually.
 
-·       To be able to import rooms in Workspace you need to create a room list and add the rooms that want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient then adding rooms manually.
-
-·       Attention, a room list should not contain more than 100 rooms, if you plan to have more, please split them into multiple room list as the maximum number of rooms that can be returned in the request for a Room List is 100.
+  - Attention, a room list should not contain more than 100 rooms, if you plan to have more, please split them into multiple room list as the maximum number of rooms that can be returned in the request for a Room List is 100.
+</Note>
 
 1. Connect to Exchange Online PowerShell. For details, see Connect to Exchange Online PowerShell.
 
 2. Use the Exchange Management Shell to create a room list
 
+```text
 New-DistributionGroup -Name "MyRoomList" -RoomList
+```
 
 3. Use the Exchange Management Shell to add a room to a room list
 
+```text
 Add-DistributionGroupMember -Identity "MyRoomList" -Member [room01@contoso.com](mailto:room01@contoso.com)
+```
 
 4. To check if the room list has been successfully created you can use the following command to see if the list exists.
 
+```text
 Get-DistributionGroup -Identity "Room list name"
+```
 
 When you have successfully set up the app registration & created the service account you can fill in the Calendar plugin configuration inside the CMS admin portal.
 
@@ -187,13 +201,10 @@ When you have successfully set up the app registration & created the service acc
 
 You can also define if the teams meeting option should be selected by default in workspace event creation if you set the following option:
 
-·       Go to CMS Administration
-
-·       Open the "Workspace application settings"
-
-·       Check "Enable online meeting creation by default"
-
-·       Click save
+- Go to CMS Administration
+- Open the "Workspace application settings"
+- Check "Enable online meeting creation by default"
+- Click save
 
 ![Workspace Application Settings](/images/Workspace-application-settings.png "Workspace Application Settings")
 
@@ -223,19 +234,19 @@ There are 3 operating modes described below, these operating modes are to be set
 
 Using this type of Full Access Impersonation, the reservation function will have the following behavior:
 
-## Booking from Outlook
+### Booking from Outlook
 
 - The reservation will be made from the user account with the choice of the room and the guests.
 - This reservation can be modified and deleted from Outlook and Workspace.
 - Changing and deleting the tablet reservation will affect both the user and resource calendar.
 
-## Booking from Workspace
+### Booking from Workspace
 
 - The reservation will be made from the user account with the choice of the room and the guests.
 - This reservation can be modified and deleted from Workspace and Outlook.
 - Changing and deleting the tablet reservation will affect both the user and resource calendar.
 
-## Booking from a tablet
+### Booking from a tablet
 
 - The reservation will be made from the service account which will usurp the identity of the connected user.
 - The owner / organizer of the meeting will be the logged in user.
@@ -254,38 +265,31 @@ New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role Applicat
 
 Using this type of "Resources Only" impersonation, the reservation function will have the following behavior.
 
-## Booking from Outlook
+### Booking from Outlook
 
 - The reservation will be made from the user account with the choice of the room and the guests.
 - This reservation can be modified and deleted from Outlook and Workspace.
 - Changing and deleting the tablet reservation will only affect the resource calendar.
 
-## Booking from Workspace
+### Booking from Workspace
 
-·       The reservation will be made from the user account with the choice of the room and the guests.
+- The reservation will be made from the user account with the choice of the room and the guests.
+- This reservation can be modified and deleted from Workspace and Outlook.
+- Changing and deleting the tablet reservation will only affect the resource calendar.
 
-·       This reservation can be modified and deleted from Workspace and Outlook.
+### Booking from a tablet
 
-·       Changing and deleting the tablet reservation will only affect the resource calendar.
-
-## Booking from a tablet
-
-·       The reservation will be made from the service account which will usurp the identity of the resource.
-
-·       The owner / organizer of the meeting will be the resource and the logged in user will be added as a participant.
-
-·       This reservation can be modified and deleted from the tablet and will affect the calendar of the user and the resource.
-
-·       Editing, deleting or adding participants can be done using the resource calendar (who owns this meeting).
+- The reservation will be made from the service account which will usurp the identity of the resource.
+- The owner / organizer of the meeting will be the resource and the logged in user will be added as a participant.
+- This reservation can be modified and deleted from the tablet and will affect the calendar of the user and the resource.
+- Editing, deleting or adding participants can be done using the resource calendar (who owns this meeting).
 
 ## #3. Impersonation = None
 
 Using this type of impersonation "None", the reservation function will have the following behavior:
 
-## Booking from Outlook
+### Booking from Outlook
 
-·       The reservation will be made from the user account with the choice of the room and the guests.
-
-·       This reservation can be changed and deleted from Outlook.
-
-·       Changing and deleting the tablet reservation will only affect the resource calendar.
+- The reservation will be made from the user account with the choice of the room and the guests.
+- This reservation can be changed and deleted from Outlook.
+- Changing and deleting the tablet reservation will only affect the resource calendar.
