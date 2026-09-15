@@ -58,9 +58,9 @@ PADS4 Foundation uses a **non-standard REST pattern** that differs from typical 
 | --- | --- | --- |
 | List / filter | `GET /resource` | `POST /resource` with filter body |
 | Create | `POST /resource` | `POST /resource/store` with `Id: null` |
-| Update | `PUT /resource/<built-in function id>` | `POST /resource/store` with existing `Id` |
-| Get one | `GET /resource/<built-in function id>` | `GET /resource/{id}` ✓ standard |
-| Delete one | `DELETE /resource/<built-in function id>` | `DELETE /resource/{id}` ✓ standard |
+| Update | `PUT /resource/{id}` | `POST /resource/store` with existing `Id` |
+| Get one | `GET /resource/{id}` | `GET /resource/{id}` ✓ standard |
+| Delete one | `DELETE /resource/{id}` | `DELETE /resource/{id}` ✓ standard |
 | Bulk delete | N/A | `POST /resource/delete` with ID array |
 
 **Why POST for listing?** PADS4 passes filter/pagination parameters in the request body (complex objects with `PageIndex`, `PageSize`, filters, sorts). This avoids the URL length limits and URL-encoding complexity of large filter sets in query strings.
