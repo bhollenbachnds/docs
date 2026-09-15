@@ -1,0 +1,178 @@
+---
+- title: NDS.Services.Replication
+---
+
+## Vue d'ensemble
+
+Gère la réplication de contenu dans les déploiements PADS4 multi-serveurs. Gère les cibles de réplication, planifie les tâches de synchronisation de contenu et surveille la santé et la latence de la réplication.
+
+| Champ                                 | Valeur                                                                       |
+| ------------------------------------- | ---------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Replication/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Replication/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Replication`                         |
+| Nombre total de points de terminaison | 31                                                                           |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                                       | Description                                              |
+| ------- | ------------------------------------------------------------ | -------------------------------------------------------- |
+| `GET`   | `/api/v1/Replication/Admin`                                  | Obtenir les collections                                  |
+| `POST`  | `/api/v1/Replication/Admin/ResetCollectionNode`              | Réinitialiser le nœud de collection                      |
+| `GET`   | `/api/v1/Replication/Admin/Servers`                          | Obtenir les serveurs                                     |
+| `POST`  | `/api/v1/Replication/Admin/ServerStatus`                     | Définir le statut du serveur                             |
+| `GET`   | `/api/v1/Replication/Admin/Addresses`                        | Obtenir la liste d'adresses                              |
+| `POST`  | `/api/v1/Replication/Admin/RemoveNodes`                      | Supprimer les nœuds                                      |
+| `POST`  | `/api/v1/Replication/Admin/ForwardReplicationTable`          | Transférer la table de réplication                       |
+| `POST`  | `/api/v1/Replication/Admin/ResetReplicationTable`            | Réinitialiser la table de réplication                    |
+| `POST`  | `/api/v1/Replication/Admin/ExpropriateReplicationTable`      | Exproprier la table de réplication                       |
+| `POST`  | `/api/v1/Replication/Admin/GetCollectionStatus`              | Obtenir le statut de la collection                       |
+| `POST`  | `/api/v1/Replication/Diagnostics/changeSetState`             | Obtenir le statut du jeu de modifications                |
+| `GET`   | `/api/v1/Replication/Diagnostics/replicationChangeSetState`  | Obtenir le statut du jeu de modifications de réplication |
+| `GET`   | `/api/v1/Replication/Diagnostics/replicationState`           | Obtenir l'état de réplication                            |
+| `GET`   | `/api/v1/Replication/Diagnostics/replicationJobsState`       | Obtenir les tâches de réplication                        |
+| `GET`   | `/api/v1/Replication/Diagnostics/busDiagnostics`             | Obtenir les diagnostics du bus                           |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état de transfert de contenu                   |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                           |
+| `GET`   | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                                     |
+| `GET`   | `/api/v1/diagnostics/configuration`                          | Obtenir la section de configuration                      |
+| `GET`   | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                                 |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                                 |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                             |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                                    |
+| `POST`  | `/api/v1/diagnostics/events`                                 | Obtenir les événements                                   |
+| `GET`   | `/api/v1/health`                                             | Obtenir                                                  |
+| `GET`   | `/api/v1/health/clean`                                       | Obtenir (propre)                                         |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages d'erreur         |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages d'erreur                             |
+| `GET`   | `/migration`                                                 | Obtenir les migrations                                   |
+| `POST`  | `/migration`                                                 | Exécuter la migration                                    |
+| `GET`   | `/version`                                                   | Obtenir                                                  |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/Replication/Admin`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Replication/api/v1/Replication/Admin'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Replication/Admin/ResetCollectionNode`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Replication/api/v1/Replication/Admin/ResetCollectionNode' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Replication/Admin/Servers`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Replication/api/v1/Replication/Admin/Servers'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Replication/Admin/ServerStatus`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Replication/api/v1/Replication/Admin/ServerStatus' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Replication/Admin/Addresses`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Replication/api/v1/Replication/Admin/Addresses'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Replication/Admin/RemoveNodes`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Replication/api/v1/Replication/Admin/RemoveNodes' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

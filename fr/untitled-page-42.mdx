@@ -1,0 +1,74 @@
+---
+- title: NDS.Services.Web.ToImage
+---
+
+## Aperçu
+
+Capture des pages web sous forme d'images ou de captures d'écran pour une utilisation en tant que contenu PADS4. Prend en charge les tailles de fenêtre d'affichage personnalisées, les conditions d'attente et l'injection CSS pour des captures web-vers-image personnalisées.
+
+| Champ                                 | Valeur                                                                       |
+| ------------------------------------- | ---------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Web.ToImage/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Web.ToImage/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Web.ToImage`                         |
+| Nombre total de points de terminaison | 15                                                                           |
+
+***
+
+## Authentification
+
+Tous les endpoints utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des endpoints
+
+| Méthode | Chemin                                        | Description             |
+| ------- | --------------------------------------------- | ----------------------- |
+| `GET`   | `/api/v1/Web/Conversion`                      | Convert Url             |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Get Toggles             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Get Config Section      |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Get Configuration       |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Get Circuit Breakers    |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Reset Circuit Breaker   |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST`  | `/api/v1/diagnostics/events`                  | Get Events              |
+| `GET`   | `/api/v1/health`                              | Get                     |
+| `GET`   | `/api/v1/health/clean`                        | Get Clean               |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Requeue Error Messages  |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purge Error Messages    |
+| `GET`   | `/migration`                                  | Get Migrations          |
+| `POST`  | `/migration`                                  | Execute Migration       |
+| `GET`   | `/version`                                    | Get                     |
+
+***
+
+## Exemples de requêtes & réponses
+
+### GET `/api/v1/Web/Conversion`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Web.ToImage/api/v1/Web/Conversion'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***

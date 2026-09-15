@@ -1,0 +1,183 @@
+---
+- title: NDS.Services.License
+---
+
+## Aperçu
+
+Gère les clés de licence PADS4, les droits aux fonctionnalités et l'allocation des sièges de viewer. Valide l'état de la licence et applique les indicateurs de fonctionnalités en fonction du niveau de licence actif.
+
+| Champ                                 | Valeur                                                                   |
+| ------------------------------------- | ------------------------------------------------------------------------ |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.License/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.License/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.License`                         |
+| Nombre total de points de terminaison | 30                                                                       |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                                       | Description                                      |
+| ------- | ------------------------------------------------------------ | ------------------------------------------------ |
+| `POST`  | `/api/v1/license/Assignment/overview`                        | Obtenir les affectations                         |
+| `POST`  | `/api/v1/license/Assignment/licenseAssignments`              | Obtenir les affectations pour les licences       |
+| `POST`  | `/api/v1/license/Assignment`                                 | Attribuer des licences                           |
+| `POST`  | `/api/v1/license/Assignment/AccessPermsissions`              | Obtenir les autorisations d'accès                |
+| `POST`  | `/api/v1/license/Assignment/AssignDefaultLicenses`           | Attribuer des licences par défaut                |
+| `POST`  | `/api/v1/license/Assignment/identities/search`               | Obtenir les identités des affectations           |
+| `GET`   | `/api/v1/license/GetLicenseCounts`                           | Obtenir le nombre de licences                    |
+| `POST`  | `/api/v1/license/SetServiceLicenses`                         | Définir les licences de service                  |
+| `GET`   | `/api/v1/license/summary`                                    | Obtenir le résumé des licences                   |
+| `GET`   | `/api/v1/license/information`                                | Obtenir les informations sur la licence          |
+| `GET`   | `/api/v1/license/beginOfflineActivation`                     | Commencer l'activation hors ligne                |
+| `POST`  | `/api/v1/license/activateLicense`                            | Activer la licence                               |
+| `POST`  | `/api/v1/license/completeOfflineActivation`                  | Terminer l'activation hors ligne                 |
+| `POST`  | `/api/v1/license/ResetLicenses`                              | Réinitialiser la licence                         |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état du transfert de contenu           |
+| `GET`   | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                   |
+| `GET`   | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                             |
+| `GET`   | `/api/v1/diagnostics/configuration`                          | Obtenir la section de configuration              |
+| `GET`   | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                     |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                            |
+| `POST`  | `/api/v1/diagnostics/events`                                 | Obtenir les événements                           |
+| `GET`   | `/api/v1/health`                                             | Obtenir                                          |
+| `GET`   | `/api/v1/health/clean`                                       | Obtenir Propre                                   |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages d'erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages d'erreur                     |
+| `GET`   | `/migration`                                                 | Obtenir les migrations                           |
+| `POST`  | `/migration`                                                 | Exécuter la migration                            |
+| `GET`   | `/version`                                                   | Obtenir                                          |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### POST `/api/v1/license/Assignment/overview`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/overview' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/license/Assignment/licenseAssignments`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/licenseAssignments' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/license/Assignment`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/license/Assignment/AccessPermsissions`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/AccessPermsissions' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/license/Assignment/AssignDefaultLicenses`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/AssignDefaultLicenses' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/license/Assignment/identities/search`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/identities/search' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Des points de terminaison supplémentaires suivent les mêmes modèles indiqués ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

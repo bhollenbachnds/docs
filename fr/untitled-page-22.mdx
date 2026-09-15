@@ -1,0 +1,76 @@
+---
+- title: NDS.Services.Document.Conversion
+---
+
+## Aperçu
+
+Convertit les documents Office (Word, Excel) vers d'autres formats tels que PDF ou image. Utilisé en interne par PADS4 lorsque des fichiers Office sont téléchargés en tant qu'éléments de contenu.
+
+| Champ                                 | Valeur                                                                               |
+| ------------------------------------- | ------------------------------------------------------------------------------------ |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Document.Conversion/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Document.Conversion/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Document.Conversion`                         |
+| Nombre total de points de terminaison | 15                                                                                   |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                        | Description                                      |
+| ------- | --------------------------------------------- | ------------------------------------------------ |
+| `POST`  | `/api/v1/Document/convert-to-excel`           | Convertir en Excel                               |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Obtenir les bascules                             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Obtenir la section de configuration              |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Obtenir la configuration                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Obtenir les disjoncteurs                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Réinitialiser le disjoncteur                     |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isoler le disjoncteur                            |
+| `POST`  | `/api/v1/diagnostics/events`                  | Obtenir les événements                           |
+| `GET`   | `/api/v1/health`                              | Obtenir                                          |
+| `GET`   | `/api/v1/health/clean`                        | Obtenir (nettoyé)                                |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Remettre en file d'attente les messages d'erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purger les messages d'erreur                     |
+| `GET`   | `/migration`                                  | Obtenir les migrations                           |
+| `POST`  | `/migration`                                  | Exécuter la migration                            |
+| `GET`   | `/version`                                    | Obtenir                                          |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### POST `/api/v1/Document/convert-to-excel`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Document.Conversion/api/v1/Document/convert-to-excel' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***

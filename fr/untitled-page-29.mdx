@@ -1,0 +1,80 @@
+---
+- title: NDS.Services.Migration
+---
+
+## Aperçu
+
+Gère les tâches de migration des données et de mise à niveau de version lors de la mise à niveau de PADS4. Suit l'état de migration, exécute les mises à niveau de schéma et valide l'intégrité des données après les changements de version.
+
+| Champ                                 | Valeur                                                                     |
+| ------------------------------------- | -------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Migration/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Migration/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Migration`                         |
+| Nombre total de points de terminaison | 21                                                                         |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                        | Description                                      |
+| ------- | --------------------------------------------- | ------------------------------------------------ |
+| `GET`   | `/api/v1/migration`                           | Historique de migration                          |
+| `POST`  | `/api/v1/migration/details`                   | Détails de migration                             |
+| `POST`  | `/api/v1/migration/run`                       | Exécuter la migration                            |
+| `POST`  | `/api/v1/migration/updateMigrationStatus`     | Mettre à jour le statut de migration             |
+| `POST`  | `/api/v1/migration/getMigrationStatus`        | Obtenir le statut de migration                   |
+| `POST`  | `/api/v1/migration/getMigrationRuns`          | Obtenir les exécutions de migration              |
+| `GET`   | `/api/v1/version`                             | Paysage des versions                             |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Obtenir les bascules                             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Obtenir la section de configuration              |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Obtenir la configuration                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Obtenir les disjoncteurs                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Réinitialiser le disjoncteur                     |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isoler le disjoncteur                            |
+| `POST`  | `/api/v1/diagnostics/events`                  | Obtenir les événements                           |
+| `GET`   | `/api/v1/health`                              | Obtenir                                          |
+| `GET`   | `/api/v1/health/clean`                        | Obtenir (nettoyé)                                |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Remettre en file d'attente les messages d'erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purger les messages d'erreur                     |
+| `GET`   | `/migration`                                  | Obtenir les migrations                           |
+| `POST`  | `/migration`                                  | Exécuter la migration                            |
+| `GET`   | `/version`                                    | Obtenir                                          |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/migration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Migration/api/v1/migration'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***

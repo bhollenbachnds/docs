@@ -1,0 +1,180 @@
+---
+- title: NDS.Services.Schedule
+---
+
+## Aperçu
+
+Le moteur de planification PADS4. Gère les tranches horaires, les affectations de playlists aux créneaux horaires, les exceptions de planification et le calendrier du contenu diffusé sur quels écrans et à quels moments.
+
+| Champ                                 | Valeur                                                                    |
+| ------------------------------------- | ------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/nds.services.schedule/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/nds.services.schedule/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/nds.services.schedule`                         |
+| Nombre total de points de terminaison | 33                                                                        |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode  | Chemin                                                             | Description                                      |
+| -------- | ------------------------------------------------------------------ | ------------------------------------------------ |
+| `PUT`    | `/api/v1/Exception`                                                | Créer ou mettre à jour                           |
+| `GET`    | `/api/v1/Exception`                                                | Obtenir                                          |
+| `DELETE` | `/api/v1/Exception`                                                | Supprimer D E L E T E                            |
+| `POST`   | `/api/v1/Exception/create`                                         | Créer                                            |
+| `DELETE` | `/api/v1/Exception/delete`                                         | Supprimer D E L E T E2                           |
+| `POST`   | `/api/v1/Exception/delete`                                         | Supprimer P O S T                                |
+| `DELETE` | `/api/v1/Exception/deleteBySchedule/{scheduleId}/{scheduleItemId}` | Supprimer D E L E T E3                           |
+| `GET`    | `/api/v1/Occurrence/forDates`                                      | Obtenir les occurrences pour les dates           |
+| `GET`    | `/api/v1/Occurrence`                                               | Obtenir les occurrences                          |
+| `POST`   | `/api/v1/Occurrence`                                               | Obtenir                                          |
+| `POST`   | `/api/v1/Occurrence/hasOccurrences`                                | A des occurrences                                |
+| `POST`   | `/api/v1/Occurrence/hasOccurrences/byGroup`                        | A des occurrences groupées                       |
+| `POST`   | `/api/v1/Occurrence/raw`                                           | Obtenir2                                         |
+| `PUT`    | `/api/v1/Schedule`                                                 | Créer ou mettre à jour                           |
+| `GET`    | `/api/v1/Schedule`                                                 | Obtenir G E T                                    |
+| `POST`   | `/api/v1/Schedule`                                                 | Obtenir P O S T                                  |
+| `DELETE` | `/api/v1/Schedule/{id}`                                            | Supprimer                                        |
+| `POST`   | `/api/v1/Schedule/humanize`                                        | Humaniser                                        |
+| `POST`   | `/api/v1/Schedule/rrule`                                           | Obtenir la règle R                               |
+| `GET`    | `/api/v1/diagnostics/toggles`                                      | Obtenir les bascules                             |
+| `GET`    | `/api/v1/diagnostics/configuration`                                | Obtenir la section de configuration              |
+| `GET`    | `/api/v1/diagnostics/configurationex`                              | Obtenir la configuration                         |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`                              | Obtenir les disjoncteurs                         |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`                        | Réinitialiser le disjoncteur                     |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate`                      | Isoler le disjoncteur                            |
+| `POST`   | `/api/v1/diagnostics/events`                                       | Obtenir les événements                           |
+| `GET`    | `/api/v1/health`                                                   | Obtenir                                          |
+| `GET`    | `/api/v1/health/clean`                                             | Obtenir (nettoyé)                                |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`                          | Remettre en file d'attente les messages d'erreur |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`                            | Purger les messages d'erreur                     |
+| `GET`    | `/migration`                                                       | Obtenir les migrations                           |
+| `POST`   | `/migration`                                                       | Exécuter la migration                            |
+| `GET`    | `/version`                                                         | Obtenir                                          |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### PUT `/api/v1/Exception`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X PUT 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Exception`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/Exception`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### POST `/api/v1/Exception/create`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception/create' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/Exception/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception/delete'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### POST `/api/v1/Exception/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception/delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes schémas que ceux présentés ci-dessus. Consultez le Swagger UI pour les schémas de paramètres complets.

@@ -1,0 +1,183 @@
+---
+- title: NDS.Services.Credentials
+---
+
+## Aperçu
+
+Magasin de credentials chiffré pour l'accès aux sources de données. Gère les enregistrements d'applications (Canva, fournisseurs OAuth), les mappages de credentials par utilisateur et les credentials génériques utilisés par les connecteurs de données et les intégrations.
+
+| Champ                                 | Valeur                                                                       |
+| ------------------------------------- | ---------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Credentials/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.Credentials/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Credentials`                         |
+| Nombre total de points de terminaison | 40                                                                           |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode  | Chemin                                                       | Description                                                              |
+| -------- | ------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `GET`    | `/api/v1/credentials/app-registration`                       | Obtenir les enregistrements d'application                                |
+| `GET`    | `/api/v1/credentials/app-registration/currentUser`           | Obtenir les enregistrements d'application par l'utilisateur actuel       |
+| `GET`    | `/api/v1/credentials/app-registration/{appRegistrationId}`   | Obtenir un enregistrement d'application                                  |
+| `DELETE` | `/api/v1/credentials/app-registration/{appRegistrationId}`   | Supprimer un enregistrement d'application                                |
+| `POST`   | `/api/v1/credentials/app-registration/store`                 | Stocker un enregistrement d'application                                  |
+| `GET`    | `/api/v1/credentials/app-registration/types`                 | Obtenir les types de fournisseurs d'informations d'identification        |
+| `POST`   | `/api/v1/credentials/app-registration/store/canva`           | Stocker les enregistrements d'application Canva par l'utilisateur actuel |
+| `GET`    | `/api/v1/credentials/{provider}/auth/init`                   | Initialiser l'authentification                                           |
+| `GET`    | `/api/v1/credentials/{provider}/auth/callback`               | Rappel                                                                   |
+| `GET`    | `/api/v1/credentials/pads/apiurl/{type}`                     | Obtenir l'URL de l'API                                                   |
+| `POST`   | `/api/v1/credentials/pads/getaccesstoken`                    | Obtenir le jeton d'accès P O S T                                         |
+| `GET`    | `/api/v1/credentials/pads/accesstoken/{tokenid}`             | Obtenir le jeton d'accès G E T                                           |
+| `POST`   | `/api/v1/credentials/pads/tokens`                            | Obtenir les jetons                                                       |
+| `GET`    | `/api/v1/credentials/token`                                  | Obtenir les jetons                                                       |
+| `POST`   | `/api/v1/credentials/token/store`                            | Stocker les jetons                                                       |
+| `DELETE` | `/api/v1/credentials/token/{tokenId}`                        | Supprimer le jeton                                                       |
+| `POST`   | `/api/v1/credentials/token/getToken`                         | Obtenir le jeton d'accès                                                 |
+| `POST`   | `/api/v1/credentials/token/oauth`                            | Obtenir le jeton O Auth                                                  |
+| `GET`    | `/api/v1/credentials/user-registration`                      | Obtenir les enregistrements d'utilisateur                                |
+| `GET`    | `/api/v1/credentials/user-registration/{azureAdUserId}`      | Obtenir un enregistrement d'utilisateur                                  |
+| `DELETE` | `/api/v1/credentials/user-registration/{azureAdUserId}`      | Supprimer le jeton Azure Ad                                              |
+| `POST`   | `/api/v1/credentials/user-registration/store`                | Stocker un enregistrement d'utilisateur                                  |
+| `GET`    | `/api/v1/credentials/config`                                 | Obtenir les configurations                                               |
+| `GET`    | `/api/v1/credentials/config/{type}`                          | Obtenir la configuration                                                 |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état de transfert de contenu                                   |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                                           |
+| `GET`    | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                                                     |
+| `GET`    | `/api/v1/diagnostics/configuration`                          | Obtenir la section de configuration                                      |
+| `GET`    | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                                                 |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                                                 |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                                             |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                                                    |
+| `POST`   | `/api/v1/diagnostics/events`                                 | Obtenir les événements                                                   |
+| `GET`    | `/api/v1/health`                                             | Obtenir                                                                  |
+| `GET`    | `/api/v1/health/clean`                                       | Obtenir (nettoyé)                                                        |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages d'erreur                         |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages d'erreur                                             |
+| `GET`    | `/migration`                                                 | Obtenir les migrations                                                   |
+| `POST`   | `/migration`                                                 | Exécuter la migration                                                    |
+| `GET`    | `/version`                                                   | Obtenir                                                                  |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/credentials/app-registration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Credentials/api/v1/credentials/app-registration'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/credentials/app-registration/currentUser`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Credentials/api/v1/credentials/app-registration/currentUser'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/credentials/app-registration/{appRegistrationId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Credentials/api/v1/credentials/app-registration/{appRegistrationId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/credentials/app-registration/{appRegistrationId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Credentials/api/v1/credentials/app-registration/{appRegistrationId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### POST `/api/v1/credentials/app-registration/store`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Credentials/api/v1/credentials/app-registration/store' \
+  -H 'Content-Type: application/json' \
+  -d '{"Id": null, "Name": "Example", "IsActive": true}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 42, "Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### GET `/api/v1/credentials/app-registration/types`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Credentials/api/v1/credentials/app-registration/types'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez le Swagger UI pour les schémas de paramètres complets.

@@ -1,0 +1,185 @@
+---
+- title: NDS.Services.Cms
+---
+
+## Aperçu
+
+Le service de gestion de contenu gère les messages, listes de lecture et modèles PADS4. Prend en charge le CRUD complet pour les messages CMS, la génération de miniatures, la planification et la gestion des listes de lecture. Service principal pour tous les flux de travail de création de contenu.
+
+| Champ                                 | Valeur                                                               |
+| ------------------------------------- | -------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Cms/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.Cms/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Cms`                         |
+| Nombre total de points de terminaison | 38                                                                   |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode  | Chemin                                                       | Description                                       |
+| -------- | ------------------------------------------------------------ | ------------------------------------------------- |
+| `GET`    | `/api/v1/cms/message/thumbnail/{messageId}`                  | Obtenir la miniature                              |
+| `GET`    | `/api/v1/cms/message/{messageId}`                            | Obtenir le message                                |
+| `DELETE` | `/api/v1/cms/message/{messageId}`                            | Supprimer le message                              |
+| `POST`   | `/api/v1/cms/message`                                        | Obtenir les messages                              |
+| `POST`   | `/api/v1/cms/message/store`                                  | Stocker le message                                |
+| `POST`   | `/api/v1/cms/message/order`                                  | Ordonner les messages                             |
+| `POST`   | `/api/v1/cms/message/messages/delete`                        | Supprimer les messages                            |
+| `POST`   | `/api/v1/cms/permissions/getHierarchyPermissions`            | Obtenir les autorisations de hiérarchie           |
+| `POST`   | `/api/v1/cms/templatecategory`                               | Obtenir les catégories de modèles                 |
+| `POST`   | `/api/v1/cms/templatecategory/store`                         | Stocker la catégorie de modèle                    |
+| `DELETE` | `/api/v1/cms/templatecategory/{templateCategoryId}`          | Supprimer la catégorie de modèle                  |
+| `POST`   | `/api/v1/cms/templatecategory/permission`                    | Obtenir les autorisations                         |
+| `POST`   | `/api/v1/cms/templatecategory/setpermission`                 | Définir les autorisations                         |
+| `GET`    | `/api/v1/cms/template/{templateId}`                          | Obtenir le modèle                                 |
+| `DELETE` | `/api/v1/cms/template/{templateId}`                          | Supprimer le modèle                               |
+| `GET`    | `/api/v1/cms/template/thumbnail/{templateId}`                | Obtenir la miniature                              |
+| `POST`   | `/api/v1/cms/template`                                       | Obtenir les modèles                               |
+| `POST`   | `/api/v1/cms/template/order`                                 | Ordonner le modèle                                |
+| `POST`   | `/api/v1/cms/template/store`                                 | Stocker le modèle                                 |
+| `DELETE` | `/api/v1/cms/template/{templateId}/keep-messages`            | Supprimer le modèle en conservant les messages    |
+| `POST`   | `/api/v1/cms/template/permission`                            | Obtenir les autorisations                         |
+| `POST`   | `/api/v1/cms/template/setpermission`                         | Définir les autorisations                         |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état de transfert de contenu            |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                    |
+| `GET`    | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                              |
+| `GET`    | `/api/v1/diagnostics/configuration`                          | Obtenir la section de configuration               |
+| `GET`    | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                          |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                          |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                      |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                             |
+| `POST`   | `/api/v1/diagnostics/events`                                 | Obtenir les événements                            |
+| `GET`    | `/api/v1/health`                                             | Obtenir                                           |
+| `GET`    | `/api/v1/health/clean`                                       | Obtenir (nettoyé)                                 |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages en erreur |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages en erreur                     |
+| `GET`    | `/migration`                                                 | Obtenir les migrations                            |
+| `POST`   | `/migration`                                                 | Exécuter la migration                             |
+| `GET`    | `/version`                                                   | Obtenir                                           |
+
+***
+
+## Exemples de requêtes & réponses
+
+### GET `/api/v1/cms/message/thumbnail/{messageId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message/thumbnail/{messageId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/cms/message/{messageId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message/{messageId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/cms/message/{messageId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message/{messageId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### POST `/api/v1/cms/message`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/cms/message/store`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message/store' \
+  -H 'Content-Type: application/json' \
+  -d '{"Id": null, "Name": "Example", "IsActive": true}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 42, "Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### POST `/api/v1/cms/message/order`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Cms/api/v1/cms/message/order' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes schémas que ceux présentés ci-dessus. Consultez le Swagger UI pour les schémas de paramètres complets.

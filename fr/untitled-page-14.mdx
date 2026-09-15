@@ -1,0 +1,91 @@
+---
+- title: NDS.Services.Authentication.Integration
+---
+
+## Aperçu
+
+Gère l'intégration avec les systèmes d'identité externes : flux de connexion SAML 2.0, diagnostics de disjoncteur pour la connectivité des fournisseurs d'identité, et gestion des files de messages pour les événements d'authentification.
+
+| Champ                                 | Valeur                                                                                      |
+| ------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Authentication.Integration/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.Authentication.Integration/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Authentication.Integration`                         |
+| Nombre total de points de terminaison | 16                                                                                          |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                             | Description             |
+| ------- | -------------------------------------------------- | ----------------------- |
+| `GET`   | `/api/v1/{domain}/saml2/Login/{providerId}`        | Saml2 Login             |
+| `GET`   | `/api/v1/{domain}/saml2/Authenticate/{providerId}` | Saml2 Authenticate      |
+| `GET`   | `/api/v1/diagnostics/toggles`                      | Get Toggles             |
+| `GET`   | `/api/v1/diagnostics/configuration`                | Get Config Section      |
+| `GET`   | `/api/v1/diagnostics/configurationex`              | Get Configuration       |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`              | Get Circuit Breakers    |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`        | Reset Circuit Breaker   |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate`      | Isolate Circuit Breaker |
+| `POST`  | `/api/v1/diagnostics/events`                       | Get Events              |
+| `GET`   | `/api/v1/health`                                   | Get                     |
+| `GET`   | `/api/v1/health/clean`                             | Get Clean               |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`          | Requeue Error Messages  |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`            | Purge Error Messages    |
+| `GET`   | `/migration`                                       | Get Migrations          |
+| `POST`  | `/migration`                                       | Execute Migration       |
+| `GET`   | `/version`                                         | Get                     |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/{domain}/saml2/Login/{providerId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication.Integration/api/v1/{domain}/saml2/Login/{providerId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/{domain}/saml2/Authenticate/{providerId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication.Integration/api/v1/{domain}/saml2/Authenticate/{providerId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
