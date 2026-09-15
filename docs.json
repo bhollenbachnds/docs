@@ -1875,8 +1875,7 @@
                 ]
               }
             ],
-            "icon": "gear-api",
-            "hidden": true
+            "icon": "gear-api"
           },
           {
             "dropdown": "Plug-ins",

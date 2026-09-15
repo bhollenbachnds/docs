@@ -10,8 +10,8 @@ hidden: true
 
   | Permission | Required | Description |
   | --- | --- | --- |
-  | **Calendars.ReadWrite** | Yes | Read and synchronize room calendar events. |
-  | **[Place.Read](http://Place.Read).All** | Optional | Required only when importing rooms from Microsoft Places or Room Lists. |
+  | **Calendars.ReadWrite ** | Yes | Read and synchronize room calendar events. |
+  | ** [Place.Read](http://Place.Read).All** | Optional | Required only when importing rooms from Microsoft Places or Room Lists. |
 
   After updating the permissions, **Administrator Consent** must be granted to the application before the service can authenticate successfully. 
 
@@ -147,9 +147,9 @@ Changes to application access policies can take up to 30 minutes to take effect 
 
 **Remarks:**
 
-·       To be able to import rooms in Workspace you need to create a room list and add the rooms that want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient than adding rooms manually.
+·       To be able to import rooms in Workspace you need to create a room list and add the rooms that want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient then adding rooms manually.
 
-·       Attention, a room list should not contain more than 100 rooms, if you plan to have more, please split them into multiple room lists as the maximum number of rooms that can be returned in the request for a Room List is 100.
+·       Attention, a room list should not contain more than 100 rooms, if you plan to have more, please split them into multiple room list as the maximum number of rooms that can be returned in the request for a Room List is 100.
 
 1. Connect to Exchange Online PowerShell. For details, see Connect to Exchange Online PowerShell.
 
@@ -218,3 +218,74 @@ You can also define if the teams meeting option should be selected by default in
 There are 3 operating modes described below, these operating modes are to be set according to the desired results and also according to the security rules of the company:
 
 ![Impersonation](/images/Impersonation.jpg "Impersonation")
+
+## #1. Impersonation = Full access
+
+Using this type of Full Access Impersonation, the reservation function will have the following behavior:
+
+## Booking from Outlook
+
+- The reservation will be made from the user account with the choice of the room and the guests.
+- This reservation can be modified and deleted from Outlook and Workspace.
+- Changing and deleting the tablet reservation will affect both the user and resource calendar.
+
+## Booking from Workspace
+
+- The reservation will be made from the user account with the choice of the room and the guests.
+- This reservation can be modified and deleted from Workspace and Outlook.
+- Changing and deleting the tablet reservation will affect both the user and resource calendar.
+
+## Booking from a tablet
+
+- The reservation will be made from the service account which will usurp the identity of the connected user.
+- The owner / organizer of the meeting will be the logged in user.
+- This reservation can be modified and deleted from the tablet and will affect the calendar of the user and the resource.
+- Editing, deleting or adding participants can be done using the user calendar (who owns this meeting).
+
+## #2. Impersonation = Resources only
+
+This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, you will have to grant the role "**ApplicationImpersonation**" to the user of the service account following this PowerShell script:
+
+```text
+New-ManagementScope -Name "CrystalResourceMailboxes" -RecipientRestrictionFilter \{RecipientTypeDetails -eq "RoomMailbox"\}
+
+New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
+```
+
+Using this type of "Resources Only" impersonation, the reservation function will have the following behavior.
+
+## Booking from Outlook
+
+- The reservation will be made from the user account with the choice of the room and the guests.
+- This reservation can be modified and deleted from Outlook and Workspace.
+- Changing and deleting the tablet reservation will only affect the resource calendar.
+
+## Booking from Workspace
+
+·       The reservation will be made from the user account with the choice of the room and the guests.
+
+·       This reservation can be modified and deleted from Workspace and Outlook.
+
+·       Changing and deleting the tablet reservation will only affect the resource calendar.
+
+## Booking from a tablet
+
+·       The reservation will be made from the service account which will usurp the identity of the resource.
+
+·       The owner / organizer of the meeting will be the resource and the logged in user will be added as a participant.
+
+·       This reservation can be modified and deleted from the tablet and will affect the calendar of the user and the resource.
+
+·       Editing, deleting or adding participants can be done using the resource calendar (who owns this meeting).
+
+## #3. Impersonation = None
+
+Using this type of impersonation "None", the reservation function will have the following behavior:
+
+## Booking from Outlook
+
+·       The reservation will be made from the user account with the choice of the room and the guests.
+
+·       This reservation can be changed and deleted from Outlook.
+
+·       Changing and deleting the tablet reservation will only affect the resource calendar.
