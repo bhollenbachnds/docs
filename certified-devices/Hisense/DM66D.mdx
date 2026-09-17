@@ -2,16 +2,49 @@
 title: "Hisense DM66D"
 ---
 
-This guide provides information on installing and configuring PADS4 Viewer on a Hisence DM66D
+This guide provides step-by-step instructions for installing and configuring the PADS4 Web Launcher on Hisense DM66D Android displays. It covers initial setup, APK installation, autostart configuration, and viewer setup.
 
 ## Compatibility
 
 - Supported Devices: Hisense DM66D (Android 11)
 
-## Installation Instructions
-
-To install PADS4 Viewer on a HiSense DM66D device, follow the standard Android installation procedure.
-
 <Note>
   Support for the Hisense DM66D has been added to our PADS4 Generic Launcher solution in **PADS4 version 2025.2**, kindly refer to the PADS4 Generic Android Viewer manual for further instructions.
 </Note>
+
+### Minimum requirements
+
+PADS4 Version Required: **2025.2**
+
+## Prerequisites
+
+- Download the latest PADS4WebLauncher.apk from your PADS4 server (e.g., https://[your-server]/[domain]/apps) or from [here](https://github.com/PADS4/PADS4-Viewer-Android/releases/tag/v1.3), and copy it to a USB stick.
+- Ensure the PADS4 Server is set up and accessible.
+
+### Installing PADS4 Viewer
+
+1. Power on the screen.
+2. Access applications menu and select **More Apps**
+3. Insert the USB stick into the screen.
+4. Select **File Browser**.
+5. Navigate to the USB drive and select **PADS4WebLauncher.apk**.
+6. Click **Install** and wait for completion.
+7. Once the installation is finished, select **Cancel**
+8. **Exit** the File browser
+
+## **Enabling Auto-Start**
+
+1. Go to **Settings** on the screen.
+2. Navigate to **Signal Management**
+3. Select **Homepage setting**.
+4. Select **PADS4 Web Launcher** from the list.
+5. Click on **Back** to close the Setting 
+
+## **Configuring Connection**
+
+1. Launch the PADS4 Web Launcher.
+2. Enter the **Server URL** in the format `<protocol>://<host>:<port>/<hostpath>/`
+3. Fill in the **ViewerName** as required.
+4. Click **Start** to connect.
+
+The PADS4 viewer is now connected and ready for use.
