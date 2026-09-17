@@ -1,16 +1,15 @@
 ---
-title: "Iiyama 64 Series"
-hidden: true
+title: "Iiyama 54 Series"
 ---
 
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on the **Iiyama 64 Series** devices.
+This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on the **Iiyama 54 Series** devices.
 
 ## **1. First-Time Use**
 
 Before installation, ensure that the **PADS4 Server is set up and configured properly**.
 
 <Note>
-  The minimum **PADS4 Server version** required is **PADS4 Foundation 2025.2**
+  The minimum **PADS4 Server version** required is **PADS4 Foundation 2025.1**
 </Note>
 
 When you turn on the device for the first time, the **Configuration Wizard** should start automatically. If it does not, please **factory reset** the device following the instructions in **1.2 Resetting the Device**.
@@ -65,7 +64,7 @@ After resetting, the **Welcome Screen** will appear. Follow the steps in **1.1 C
 
 ## **2. Installing PADS4 Viewer**
 
-To install the PADS4 Viewer, enter the **Android Menu** by pressing **Home** followed by **1 6 6 8** on the **Iiyama remote control**.
+To install the PADS4 Viewer, enter the **Android Menu** by pressing **Home** followed by **1 8 6 6** on the **Iiyama remote control**.
 
 ---
 
@@ -86,7 +85,7 @@ Ensure the **correct firmware version** is installed for full PADS4 Viewer funct
   <Step title="Step Four">
     Verify the **firmware version**:
 
-    - **64 Series:** LU64M79-B11-18
+    - **54 Series:** `t7_an400_arm64-userdebug 11 RQ3A.210805.001.A1 eng.yangpe.20230307.012903 test-keys`
   </Step>
 </Steps>
 
@@ -112,7 +111,8 @@ To obtain the correct **firmware**, contact **Iiyama Support**.
     Insert the **USB drive** into the **Iiyama display**.
   </Step>
   <Step title="Step Five">
-    Start the **screen**. A message will appear:<br />`"Do not power off the TV during the upgrade. Waiting..."`
+    Start the **screen**. A message will appear:\
+    `"Do not power off the TV during the upgrade. Waiting..."`
   </Step>
   <Step title="Step Six">
     When prompted, remove the **USB drive**.
@@ -121,21 +121,21 @@ To obtain the correct **firmware**, contact **Iiyama Support**.
 
 ---
 
-### **2.3 Installing PADS4WebLauncher from USB Stick**
+### **2.3 Installing PADS4Iiyama from USB Stick**
 
-The **PADS4WebLauncher.apk** is available on the **PADS4 Server** in:
+The **PADS4Iiyama.apk** is available on the **PADS4 Server** in:
 
-```text
+```
 C:\Program Files\PADS4\Foundation\Apps  
 ```
 
-Alternatively, download the latest version from [**here**](https://github.com/PADS4/PADS4-Viewer-Android/releases/latest).
+Alternatively, download the latest version from [**here**](https://github.com/PADS4/PADS4-Viewer-for-iiyama-signage-devices/releases/latest).
 
 #### **Installation Steps**
 
 <Steps>
   <Step title="Step One">
-    Copy the **PADS4WebLauncher.apk** file onto a **USB stick**.
+    Copy the **PADS4Iiyama.apk** file onto a **USB stick**.
   </Step>
   <Step title="Step Two">
     Insert the **USB stick** into the **Iiyama display**.
@@ -147,7 +147,7 @@ Alternatively, download the latest version from [**here**](https://github.com/PA
     Open **Apps** and launch the **File Manager** app.
   </Step>
   <Step title="Step Five">
-    Navigate to `mnt → usb_storage` and open **PADS4WebLauncher.apk**.
+    Navigate to `mnt → usb_storage` and open **PADS4Iiyama.apk**.
   </Step>
   <Step title="Step Six">
     Click **Install**, then **Open**.
@@ -162,19 +162,19 @@ Alternatively, download the latest version from [**here**](https://github.com/PA
 
 <Steps>
   <Step title="Step One">
-    Open \*\*PADS4WebLauncher \*\*and click on **System Settings**.
+    Open **PADS4Iiyama** and click on **System Settings**.
   </Step>
   <Step title="Step Two">
     Select **Signage Display → Custom App**.
   </Step>
   <Step title="Step Three">
-    Click **Select App**, choose **PADS4WebLauncher**, and press **Save**.
+    Click **Select App**, choose **PADS4Iiyama**, and press **Save**.
   </Step>
   <Step title="Step Four">
     Enable **Force Restart Custom App**.
   </Step>
   <Step title="Step Five">
-    Press **Back** three times until you return to **PADS4WebLauncher**.
+    Press **Back** three times until you return to **PADS4Iiyama**.
   </Step>
 </Steps>
 
@@ -182,28 +182,26 @@ Alternatively, download the latest version from [**here**](https://github.com/PA
 
 ## **3. Supported Features & Limitations**
 
-| Feature | Description |
-| :-: | :-- |
-| ✅ | **Automatic Software Updates** – Updates when the **PADS4 Server** updates. |
-| ✅ | **Offline Mode** – The device continues running presentations for **7 days** while offline. |
-| ✅ | **Supports HTTP & HTTPS** |
-| ✅ | **Maximum 1 Video Per Page** |
-| ✅ | **Cluster Viewer Mode** – Supported. |
-| ✅ | **Interactive Button, Text, Scrolling Text, Image, Table** |
-| ✅ | **PowerPoint & PDF Elements** – _(PowerPoint requires installation on PADS4 Server)_. |
-| ✅ | **Device Management** – Remote control via **PADS4 CTRL Center & PADS4 Agent**. |
-| ✅ | **Wake-on-LAN** – Supported. |
-| ✅ | **Proof of Play Tracking** – Monitors content playback history. |
-| ❌ | Screenshots of the web element are not supported |
-| ❌ | **Turn Off Display** – Not supported. |
+| Feature | Description                                                                                 |
+| :-----: | ------------------------------------------------------------------------------------------- |
+| ✅       | **Automatic Software Updates** – Updates when the **PADS4 Server** updates.                 |
+| ✅       | **Offline Mode** – The device continues running presentations for **7 days** while offline. |
+| ✅       | **Supports HTTP & HTTPS**                                                                   |
+| ✅       | **Maximum 1 Video Per Page**                                                                |
+| ✅       | **Cluster Viewer Mode** – Supported.                                                        |
+| ✅       | **Interactive Button, Text, Scrolling Text, Image, Table**                                  |
+| ✅       | **PowerPoint & PDF Elements** – _(PowerPoint requires installation on PADS4 Server)_.       |
+| ✅       | **Device Management** – Remote control via **PADS4 CTRL Center & PADS4 Agent**.             |
+| ✅       | **Wake-on-LAN** – Supported.                                                                |
+| ✅       | **Proof of Play Tracking** – Monitors content playback history.                             |
 
 ---
 
 ## **4. Troubleshooting**
 
-| **Problem** | **Solution** |
-| :-- | :-- |
-| **Remote control commands not working** | Ensure **SICP over network** is **enabled** on **port 5000**. |
-| **Browser not running full screen** | Check **firmware version** – may be incompatible. |
-| **Navigation bar is visible** | Updating firmware may fix this. |
-| **Repeated permission prompts for file storage** | Check **firmware version** – may be incompatible. |
+| **Problem**                                      | **Solution**                                                  |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| **Remote control commands not working**          | Ensure **SICP over network** is **enabled** on **port 5000**. |
+| **Browser not running full screen**              | Check **firmware version** – may be incompatible.             |
+| **Navigation bar is visible**                    | Updating firmware may fix this.                               |
+| **Repeated permission prompts for file storage** | Check **firmware version** – may be incompatible.             |
