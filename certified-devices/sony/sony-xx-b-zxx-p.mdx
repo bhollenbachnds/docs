@@ -1,4 +1,8 @@
-This guide provides **step-by-step instructions** for installing and configuring **PADS4 Viewer** on **Sony BZxx Series Displays**.
+---
+title: "Sony xxBZxxP"
+---
+
+This guide provides **steo-by-step instructions** for installing and configuring **PADS4 Viewer** on **Sony BZxx Series Displays**.
 
 ---
 
@@ -6,12 +10,7 @@ This guide provides **step-by-step instructions** for installing and configuring
 
 The following **Sony BZxx Series** displays are supported:
 
-- **BZ53L**
-- **BZ50L**
-- **BZ40L**
-- **BZ35L**
-- **BZ30L**
-- **BZ30J**
+- **xxBZ35P (Android 14)**
 
 **Ensure your PADS4 Server is installed and configured before proceeding.**
 
@@ -19,8 +18,7 @@ The following **Sony BZxx Series** displays are supported:
 
 ## **Minimum Requirements**
 
-**PADS4 Server Version:** **2024.2.6 or later**\
-**Firmware Version:** **6.7612 or later**
+**PADS4 Server Version:** **2026.1 or later**<br />**Firmware Version:** **4.250422**
 
 **Ensure your device firmware meets the minimum requirements before proceeding with installation.**
 
@@ -30,11 +28,7 @@ The following **Sony BZxx Series** displays are supported:
 
 **Before installing PADS4, you need to check the firmware version.**
 
-**How to check the current firmware version:**\
-1️. **Go to** `Settings -> About -> Android TV OS Build`\
-2️. **Check the version number before "release keys"**\
-3️. **If an internet connection is available**, check for firmware updates under `About`\
-4️. **If no internet connection is available**, download the latest firmware from **Sony's firmware page**
+**How to check the current firmware version:**<br />1️. **Go to** `Settings -> About -> Android TV OS Build`<br />2️. **Check the version number before "release keys"**<br />3️. **If an internet connection is available**, check for firmware updates under `About`<br />4️. **If no internet connection is available**, download the latest firmware from **Sony's firmware page**
 
 ---
 
@@ -94,18 +88,15 @@ The following **Sony BZxx Series** displays are supported:
 
 **PADS4 Server URL Format:**
 
-```
+```text
 <protocol>://<host>:<port>/<hostpath>/
 ```
 
-**Protocol:** `http` or `https` (based on SSL certificate)\
-**Host:** `DNS name` or `IP address` of the PADS4 Server\
-**Port:** **Optional** (use only if PADS4 Server is not on the default HTTP/HTTPS ports)\
-**Default Hostpath:** `PADS4`
+**Protocol:** `http` or `https` (based on SSL certificate)<br />**Host:** `DNS name` or `IP address` of the PADS4 Server<br />**Port:** **Optional** (use only if PADS4 Server is not on the default HTTP/HTTPS ports)<br />**Default Hostpath:** `PADS4`
 
 **Example Configuration:**
 
-```
+```text
 http://localhost/pads4
 ```
 
@@ -139,10 +130,7 @@ http://localhost/pads4
 
 **You can adjust PADS4 Viewer settings directly on the display.**
 
-**Steps to access settings:**\
-1️. **Connect a mouse to the device.**\
-2️. **Right-click the mouse** to open the **Viewer Settings menu**.\
-3️. **Make adjustments** to screen orientation, display settings, etc.
+**Steps to access settings:**<br />1️. **Connect a mouse to the device.**<br />2️. **Right-click the mouse** to open the **Viewer Settings menu**.<br />3️. **Make adjustments** to screen orientation, display settings, etc.
 
 **You can also return to the PADS4Sony configuration by clicking the "Launcher Settings" button.**
 
@@ -152,10 +140,7 @@ http://localhost/pads4
 
 **The PADS4Sony app updates automatically when the PADS4 Server is updated.**
 
-**How to manually update the app:**\
-1️. **Check the PADS4 Server version.**\
-2️. **If a new version is available, restart the Sony display.**\
-3️. **The PADS4Sony app will update automatically.**
+**How to manually update the app:**<br />1️. **Check the PADS4 Server version.**<br />2️. **If a new version is available, restart the Sony display.**<br />3️. **The PADS4Sony app will update automatically.**
 
 ---
 
@@ -163,13 +148,9 @@ http://localhost/pads4
 
 **To access quick settings:**
 
-1. **Press the "Options" button** on the remote.\
-   2️. Adjust various **quick settings** from this menu.
+1. **Press the "Options" button** on the remote.<br />2️. Adjust various **quick settings** from this menu.
 
-**To access the full settings menu:**\
-1️. **Press the "Home" button** on the remote.\
-2️. The **PADS4 app will close**.\
-3️. **To restart PADS4, go to**: `Settings -> System -> Restart`.
+**To access the full settings menu:**<br />1️. **Press the "Home" button** on the remote.<br />2️. The **PADS4 app will close**.<br />3️. **To restart PADS4, go to**: `Settings -> System -> Restart`.
 
 **Now the PADS4 application will start automatically.**
 
@@ -179,44 +160,42 @@ http://localhost/pads4
 
 ### **General Features**
 
-| Feature | Description                                                                               |
-| :-----: | ----------------------------------------------------------------------------------------- |
-| ✅       | **Automatic Software Updates** – The PADS4Sony app updates when the PADS4 Server updates. |
-| ✅       | **Offline Mode** – Plays scheduled content for **7 days** while offline.                  |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Automatic Software Updates** – The PADS4Sony app updates when the PADS4 Server updates. |
+| ✅ | **Offline Mode** – Plays scheduled content for **7 days** while offline. |
 
 ### **Device Features**
 
-| Feature | Description                                                                   |
-| :-----: | ----------------------------------------------------------------------------- |
-| ✅       | **Portrait Mode** – Supported, but **device menu is not supported**.          |
-| ❌       | **Block Remote Control** – Not supported.                                     |
-| ✅       | **Cluster Viewer** – Supported.                                               |
-| ✅       | **Turn Off Display** – Backlight turns off when no presentation is scheduled. |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Portrait Mode** – Supported, but **device menu is not supported**. |
+| ❌ | **Block Remote Control** – Not supported. |
+| ✅ | **Cluster Viewer** – Supported. |
+| ✅ | **Turn Off Display** – Backlight turns off when no presentation is scheduled. |
 
 ### **Video & Content Support**
 
-| Feature | Description                                                         |
-| :-----: | ------------------------------------------------------------------- |
-| ✅       | **2 Videos Per Page** – Supports seamless playback (**1920x1080**). |
-| ❌       | **Video Rotation, Overlap, Skew, Flip** – Not supported.            |
-| ✅       | **Streaming** – Supports HTTP streaming.                            |
-| ✅       | **4K Mode (3840x2160)**                    |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **2 Videos Per Page** – Supports seamless playback (**1920x1080**). |
+| ❌ | **Video Rotation, Overlap, Skew, Flip** – Not supported. |
+| ✅ | **Streaming** – Supports HTTP streaming. |
+| ✅ | **4K Mode (3840x2160)** |
 
 ### **Device Management**
 
-| Feature | Description                                  |
-| :-----: | -------------------------------------------- |
-| ✅       | **Remote Management via PADS4 CTRL Center**  |
-| ✅       | **Reboot Device, Restart Viewer**            |
-| ✅       | **Retrieve Screenshots (Exc. video) & Logs** |
-| ❌       | **Block Remote Control & Shutdown Support**  |
+| Feature | Description |
+| :-: | --- |
+| ✅ | **Remote Management via PADS4 CTRL Center** |
+| ✅ | **Reboot Device, Restart Viewer** |
+| ✅ | **Retrieve Screenshots (Exc. video) & Logs** |
+| ❌ | **Block Remote Control & Shutdown Support** |
 
 ---
 
 ## **Final Steps**
 
-**Your PADS4 Viewer is now installed and ready to use\! 🎉**
+**Your PADS4 Viewer is now installed and ready to use! 🎉**
 
-**Check the PADS4 Server for status updates.**\
-**Adjust settings via the Viewer menu.**\
-**Use remote access for advanced management.**
+**Check the PADS4 Server for status updates.**<br />**Adjust settings via the Viewer menu.**<br />**Use remote access for advanced management.**

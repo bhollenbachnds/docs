@@ -277,13 +277,20 @@
                   {
                     "group": "Sony",
                     "pages": [
-                      "certified-devices/sony/BZxx-series"
+                      "certified-devices/sony/BZxxL-series",
+                      "certified-devices/sony/sony-xx-b-zxx-p"
                     ]
                   },
                   {
                     "group": "Innes",
                     "pages": [
                       "innes_DMB300_DMB400"
+                    ]
+                  },
+                  {
+                    "group": "Maxhub",
+                    "pages": [
+                      "certified-devices/Maxhub/maxhub-nd-55-cmb"
                     ]
                   }
                 ]
