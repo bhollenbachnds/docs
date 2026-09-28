@@ -27,11 +27,11 @@ description: "Register the PADS4 app in Microsoft Entra ID for Exchange Online, 
   </Note>
 </Warning>
 
-Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticating with the new OAuth 2.0 setting within Exchange 365 (Azure), you will need a different type of account verification. You will need to add the PADS4 CMS/Workspace app within Microsoft Entra ID and add a service account. Follow the steps below to configure your Microsoft Entra ID environment for use with PADS4.
+Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticating with the new OAuth 2.0 setting within Exchange 365 (Azure), you need a different type of account verification. You need to add the PADS4 CMS/Workspace app within Microsoft Entra ID and add a service account. Follow the steps below to configure your Microsoft Entra ID environment for use with PADS4.
 
 # Register the application
 
-1. Open a browser and navigate to the Microsoft Entra ID admin center and log in using a personal account (aka: Microsoft Account) or Work or School Account.
+1. Open a browser and navigate to the Microsoft Entra ID admin center and log in using a personal account (Microsoft account) or a work or school account.
 2. Select Identity in the left-hand navigation, then select App registrations under Applications.
 
 ![Entra ID](/images/Entra-ID.png "Entra ID")
@@ -40,7 +40,7 @@ Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticat
 
 ![Register An Application](/images/Register-an-application.jpg "Register An Application")
 
-4. Select **Register**. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them. You will need them later to configure the calendar plugin in CMS.
+4. Select **Register**. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them. You need them later to configure the calendar plugin in CMS.
 
 # Configure for app-only authentication
 
@@ -60,9 +60,9 @@ To use application permissions, follow these additional steps.
 
 ![API Permissions](/images/API-permissions.jpg "API Permissions")
 
-In case you want to add Microsoft Teams meeting support to Workspace, continue the configuration below. If you do not want to add Microsoft Teams meeting support you can proceed to step 9.
+To add Microsoft Teams meeting support to Workspace, continue with the steps below. Otherwise, skip to step 9.
 
-6. Select Add a permission
+6. Select Add a permission.
 7. Select the following permission "**Microsoft Graph > Calendars.ReadWrite**" and select Add.
 
 8. Grant admin consent to that permission.
@@ -71,7 +71,7 @@ In case you want to add Microsoft Teams meeting support to Workspace, continue t
 
 9. Select Certificates & Secrets in the left-hand navigation under Manage.
 10. Select New client secret, enter a short description and select Add.
-11. Copy the Value of the newly added client secret and save it. You will need it later when configuring the calendar plugin in CMS.
+11. Copy the Value of the newly added client secret and save it. You need it later when configuring the calendar plugin in CMS.
 
 ![Entra ID Client Secret](/images/Entra-ID-client-secret.jpg "Entra ID Client Secret")
 
@@ -98,7 +98,7 @@ e. Enter the email address of the recipient to whom the password must be sent. S
 f. Select **Close**.
 
 <Note>
-  By default, Exchange will change the subject of the meeting to the Organizer's name. To change this you would need to change the Calendar Processing of the room(s) that you will use.
+  By default, Exchange changes the subject of the meeting to the organizer's name. To change this behavior, change the Calendar Processing of the rooms that you use.
 </Note>
 
 1. Connect to Exchange Online PowerShell. For details, see Connect to Exchange Online PowerShell.
@@ -108,12 +108,12 @@ f. Select **Close**.
 Set-CalendarProcessing -Identity \<ResourceMailbox> -DeleteSubject \$false -AddOrganizerToSubject \$false -DeleteComments \$false
 ```
 
-Now the Subject will stay the subject that you have specified in the booking creation, and won't change to the Organizer of the booking.
+The subject now stays as you specified it when creating the booking and doesn't change to the organizer of the booking.
 
 # Manage restricted access (if required)
 
 <Info>
-  If you added an application access policy, you will need first to include the service account in the restricted access distribution group.
+  If you added an application access policy, you first need to include the service account in the restricted access distribution group.
 </Info>
 
 To configure an application access policy and limit the scope of application permissions:
@@ -144,7 +144,7 @@ Run the following command, replacing the **AppId** and **Identity** arguments.
 Test-ApplicationAccessPolicy -Identity [room01@contoso.com](mailto:room01@contoso.com) -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
 ```
 
-The output of this command will indicate whether the app has access to room01 mailbox.
+The output of this command indicates whether the app has access to room01 mailbox.
 
 <Note>
   Changes to application access policies can take up to 30 minutes to take effect in EWS API calls.
@@ -153,32 +153,32 @@ The output of this command will indicate whether the app has access to room01 ma
 # Manage room list (for retrieving rooms to import)
 
 <Note>
-  - To be able to import rooms in Workspace you need to create a room list and add the rooms that you want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient than adding rooms manually.
+  - To import rooms in Workspace, create a room list and add the rooms that you want to import to it. Otherwise, you need to add the rooms to Workspace manually. Using a room list is recommended because it is more convenient than adding rooms manually.
 
-  - Attention, a room list should not contain more than 100 rooms. If you plan to have more, split them into multiple room lists, as the maximum number of rooms that can be returned in the request for a Room List is 100.
+  - A room list should not contain more than 100 rooms. A Room List request returns a maximum of 100 rooms. If you plan to have more, split them into multiple room lists.
 </Note>
 
 1. Connect to Exchange Online PowerShell. For details, see Connect to Exchange Online PowerShell.
 
-2. Use the Exchange Management Shell to create a room list
+2. Use the Exchange Management Shell to create a room list:
 
 ```text
 New-DistributionGroup -Name "MyRoomList" -RoomList
 ```
 
-3. Use the Exchange Management Shell to add a room to a room list
+3. Use the Exchange Management Shell to add a room to a room list:
 
 ```text
 Add-DistributionGroupMember -Identity "MyRoomList" -Member [room01@contoso.com](mailto:room01@contoso.com)
 ```
 
-4. To check if the room list has been successfully created you can use the following command to see if the list exists.
+4. To check that the room list exists, run the following command:
 
 ```text
 Get-DistributionGroup -Identity "Room list name"
 ```
 
-When you have successfully set up the app registration & created the service account you can fill in the Calendar plugin configuration inside the CMS admin portal.
+After you set up the app registration and create the service account, fill in the Calendar plugin configuration in the CMS admin portal.
 
 ![Calendar Configuration](/images/Calendar-configuration.jpg "Calendar Configuration")
 
@@ -198,16 +198,16 @@ When you have successfully set up the app registration & created the service acc
 
 **Allow online meeting creation:** This option needs to be turned on to enable Microsoft Teams meeting support.
 
-You can also define if the teams meeting option should be selected by default in workspace event creation if you set the following option:
+You can also select the Teams meeting option by default when creating events in Workspace:
 
 - Go to CMS Administration
 - Open the "Workspace application settings"
-- Check "Enable online meeting creation by default"
-- Click save
+- Select "Enable online meeting creation by default"
+- Select **Save**
 
 ![Workspace Application Settings](/images/Workspace-application-settings.png "Workspace Application Settings")
 
-## Create event with teams meeting from workspace
+## Create an event with a Teams meeting from Workspace
 
 <Info>
   This option is only available if you selected a room that uses an external calendar configuration with that option set up. It is also available if your user is configured to use the external calendar configuration for user impersonation.
@@ -215,11 +215,11 @@ You can also define if the teams meeting option should be selected by default in
 
 ![Use External Booking System](/images/Use-external-booking-system.jpg "Use External Booking System")
 
-- To create a teams meeting in workspace, just create a simple event in workspace and select the teams meeting option while creating the event.
+- To create a Teams meeting in Workspace, create an event and select the Teams meeting option while creating it.
 
 ![New Event Teams](/images/New-event-teams.jpg "New Event Teams")
 
-- After making the event with the teams meeting option turned on, you will see it as shown below:
+- After you create the event with the Teams meeting option turned on, it appears as shown below:
 
 ![Event Teams Overview](/images/event-teams-overview.jpg "Event Teams Overview")
 
@@ -254,7 +254,7 @@ Using this type of Full Access Impersonation, the reservation function will have
 
 ## #2. Impersonation = Resources only
 
-This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, you will have to grant the role "**ApplicationImpersonation**" to the user of the service account following this PowerShell script:
+This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, grant the role "**ApplicationImpersonation**" to the user of the service account following this PowerShell script:
 
 ```text
 New-ManagementScope -Name "CrystalResourceMailboxes" -RecipientRestrictionFilter \{RecipientTypeDetails -eq "RoomMailbox"\}
