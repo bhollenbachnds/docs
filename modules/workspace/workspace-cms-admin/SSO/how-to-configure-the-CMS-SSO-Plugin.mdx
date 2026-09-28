@@ -7,13 +7,13 @@ description: "Configure the PADS4 CMS SSO plugin with Azure / Entra ID details, 
   From **PADS4 2025.2 onward**, this feature is part of PADS4 CTRL Center. For more information, see CTRL Center \> Administration \> Identity.
 </Warning>
 
-This manual can only be followed if you have configured SSO in your Azure / Entra ID environment.
+Before you follow this guide, configure SSO in your Azure / Entra ID environment.
 
 Now that you have gathered all of the required information, you can configure PADS4 CMS to use SSO.
 
 ## Important
 
-For SSO to function correctly, you must configure PADS4 to use HTTPS. To achieve this, follow this guide using an SSL certificate.
+For SSO to function correctly, configure PADS4 to use HTTPS with an SSL certificate.
 
 ## Step 1: Navigate to your PADS4 CMS instance in a browser
 
@@ -21,7 +21,7 @@ Sign in with an Administrator account and select "CMS Admin".
 
 ![CM Sadmin Pn](/images/CMSadmin.png)
 
-## Step 2: Select "Plugins" in the left pane and then "Single Sign-on (SSO)"
+## Step 2: Select "Plugins" in the left pane, then "Single Sign-on (SSO)"
 
 Enable the plugin on the **top right**. Next to **"Type"**, select the **"Azure AD"** option in the drop-down list.
 
@@ -40,7 +40,7 @@ Enable the plugin on the **top right**. Next to **"Type"**, select the **"Azure 
 
 ### Important
 
-The copied string for the **"URL of the relying party"** in the CMS SSO configuration should not contain **"/Saml"** as copied from Azure, but rather only **"/crystal/pads"**.
+In the CMS SSO configuration, the **"URL of the relying party"** must end with **"/crystal/pads"**. Remove the **"/Saml2"** suffix that Azure includes in the copied string.
 
 Here, "pads" is the default domain. For example, the link copied from Azure looks like this:
 
@@ -49,8 +49,6 @@ Here, "pads" is the default domain. For example, the link copied from Azure look
 However, it should look like this instead:
 
 [https://robin.pads365.com/crystal/pads](https://robin.pads365.com/crystal/pads)
-
-Upload the Application Certificate (Raw) that you have downloaded from Azure here:
 
 ## Step 4: Upload the Application Certificate (Raw) that you have downloaded from Azure
 
@@ -68,14 +66,14 @@ Example below:
 
 ![Relationtable Pn](/images/Relationtable.png)
 
-Save the configuration, then log out. You should now see the **"Single Sign On"** option below:
+Save the configuration, then sign out. You should now see the **"Single Sign On"** option below:
 
 ![Continuewithsso Pn](/images/Continuewithsso.png)
 
 ## Important notes
 
-1. When your SSL certificate expires, be sure to upload the new certificate and private key in this section upon renewal.
+1. When your SSL certificate expires, upload the new certificate and private key in this section upon renewal.
    ![Uploadnewcertificate Pn](/images/Uploadnewcertificate.png)
-2. When your federation certificate expires, be sure to upload the new certificate and private key in this section upon renewal.
+2. When your federation certificate expires, upload the new certificate and private key in this section upon renewal.
 
 ![Renewal2 Pn](/images/renewal2.png)
