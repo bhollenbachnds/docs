@@ -3,25 +3,25 @@ title: "Users and Roles"
 description: "Manage PADS4 users and roles in the Web Portal, assign default or custom roles, and control access to content, viewers, CMS 2.0 templates, and licenses."
 ---
 
-In our latest release, 2025.1, we are introducing our new user management system.
+PADS4 version 2025.1 introduces a new user management system.
 
 This fundamental change moves the User Management settings from the System Management application to the PADS4 Web Portal.
 
-With this change, we have also introduced Roles to further refine the user management part of PADS4.
+This release also introduces roles to further refine user management in PADS4.
 
-Roles will allow you to quickly assign a certain set of licenses and permissions to a user.
+Roles let you quickly assign a certain set of licenses and permissions to a user.
 
 <Warning>
-  The new user management system is not compatible with Legacy CMS and Workspace in PADS4 version 2025.1,this has been added in PADS4 version 2025.2.
+  The new user management system is not compatible with Legacy CMS and Workspace in PADS4 version 2025.1. Support for these was added in PADS4 version 2025.2.
 </Warning>
 
 ## How to use roles in PADS4
 
 <Info>
-  The System Management and License Management licenses are required to administer your users and roles
+  The System Management and License Management licenses are required to administer your users and roles.
 </Info>
 
-- You can access it by logging in to your PADS4 Web Portal with your Administrator account. Go to Dashboard, and on the bottom left go to **Users**.
+- To access user management, log in to your PADS4 Web Portal with your Administrator account. Go to Dashboard, and on the bottom left go to **Users**.
 
 <img
   src="/images/ctrl-centre/administration/user-management/Users.png"
@@ -29,7 +29,7 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
   style={{ width:"50%" }}
 />
 
-- On the left-hand side you can switch between the Users and Roles
+- On the left-hand side, you can switch between Users and Roles.
 
 <img
   src="/images/ctrl-centre/administration/user-management/Users-overview.png"
@@ -37,7 +37,7 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
   style={{ width:"51%" }}
 />
 
-- In the user's overview, you will see the users and their corresponding information as:
+- In the users overview, you see the users and their corresponding information:
   - Name
   - Username
   - Roles
@@ -45,7 +45,7 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 ![Single User Summary Pn](/images/ctrl-centre/administration/user-management/single-user-summary.png)
 
-- In the Roles section, you will get the following overview of the roles that are available, including the default roles, which are explained below.
+- The Roles section shows an overview of the available roles, including the default roles explained below.
 
 ![Default Roles](/images/ctrl-centre/administration/user-management/default-roles.png)
 
@@ -53,19 +53,19 @@ Roles will allow you to quickly assign a certain set of licenses and permissions
 
 Use the search function to quickly locate specific users in the system. It searches across key fields: Name, Username, Roles, and License. This is ideal for admins managing PADS4.
 
-**How to Search**
+**How to search**
 
 1. Enter keywords in the search box (e.g., "john.doe", "admin role", or "Cms users group").
-2. Results filter dynamically as you type—no need to hit Enter.
+2. Results filter dynamically as you type. You don't need to press Enter.
 
-**Export Results**
+**Export results**
 
 Click the **Export** button to download results as Excel. This expands the view for bulk analysis or reporting. Exported data includes all visible columns for easy import elsewhere.
 
 ## Default roles
 
 <Note>
-  In PADS4 version 2025.1 there are five default roles, since PADS4 version 2025.2, five additional roles have been added which are listed further in the article.
+  PADS4 version 2025.1 has five default roles. PADS4 version 2025.2 adds five more roles, which are listed later in this article.
 </Note>
 
 ### CMS Advanced users group
@@ -104,13 +104,13 @@ Click the **Export** button to download results as Excel. This expands the vie
 | Content     | Read/Write/Delete |             |
 
 <Note>
-  With the release of PADS4 version 2025.2, the below default roles has been added.
+  With the release of PADS4 version 2025.2, the following default roles have been added.
 </Note>
 
 <Danger>
-  Do note that the viewer roles require an Agent or System Management ( Only for on-offline status / removal of viewers ) license to be effective outside of CMS2.0. The roles are purely to set permissions once access have been granted by the license that has been assigned to the user.
+  The viewer roles require an Agent or System Management (only for online/offline status and removal of viewers) license to be effective outside of CMS 2.0. The roles only set permissions once access has been granted by the license that has been assigned to the user.
 
-  You can choose to adjust the default viewer roles to add this license automatically to the user which has this role assigned.
+  You can choose to adjust the default viewer roles to automatically add this license to users who have this role assigned.
 </Danger>
 
 ### Viewer manager group
@@ -154,7 +154,7 @@ Click the **Export** button to download results as Excel. This expands the vie
 
 ## Customizing roles
 
-- You can edit these roles to your preferred configuration, or you can make your own Roles where you can specify any other roles that it is a member of, or assign certain licenses.
+- You can edit these roles to your preferred configuration, or create your own roles. In your own roles, you can specify other roles that the role is a member of, or assign certain licenses.
 
 <img
   src="/images/ctrl-centre/administration/user-management/new-roles.png"
@@ -168,11 +168,11 @@ Click the **Export** button to download results as Excel. This expands the vie
   style={{ width:"78%" }}
 />
 
-- With these roles or the self-created roles, you can then further specify the access that you grant users with a certain role to application available in the PADS4 Web Portal.
+- With these roles or the self-created roles, you can then further specify the access that users with a certain role have to applications available in the PADS4 Web Portal.
 
 ### Content library
 
-- Right click on the folder that you want to change/review access for and click **"Edit access"**
+- Right-click the folder that you want to change or review access for and click **"Edit access"**.
 
 <img
   src="/images/ctrl-centre/administration/user-management/content-access.png"
@@ -180,13 +180,13 @@ Click the **Export** button to download results as Excel. This expands the vie
   style={{ width:"71%" }}
 />
 
-- An overview of the roles and users with their rights on this particular folder will show and allows you to add or remove roles and users.
+- An overview of the roles and users with their rights on this folder appears. Here you can add or remove roles and users.
 
 ![Content Access 2 Pn](/images/ctrl-centre/administration/user-management/content-access-2.png)
 
-### Web designer category's
+### Web designer categories
 
-- Click the 3 dots on the right of your category and click on **"Edit access"**
+- Click the three dots on the right of your category and click **"Edit access"**.
 
 <img
   src="/images/ctrl-centre/administration/user-management/Webdesigner-category-access.png"
@@ -196,13 +196,13 @@ Click the **Export** button to download results as Excel. This expands the vie
 
 ### Web designer templates
 
-- Hover your mouse on a template and click the three dots, click on **"Edit access"**
+- Hover over a template, click the three dots, and click **"Edit access"**.
 
 ![Webdesigner Template Access Pn](/images/ctrl-centre/administration/user-management/Webdesigner-template-access.png)
 
-### Viewers & Viewer groups
+### Viewers & viewer groups
 
-- In Tree view, right click on the viewer group and click on **"Edit Access"**
+- In Tree view, right-click the viewer group and click **"Edit Access"**.
 
 <img
   src="/images/ctrl-centre/administration/user-management/treeview-perm.png"
@@ -210,7 +210,7 @@ Click the **Export** button to download results as Excel. This expands the vie
   style={{ width:"61%" }}
 />
 
-- In Detail view, hover your mouse on either the viewer group or viewer and click the three dots to "**Edit access"**.
+- In Detail view, hover over either the viewer group or viewer, click the three dots, and click **"Edit access"**.
 
 <img
   src="/images/ctrl-centre/administration/user-management/detailviewer-perm.png"
