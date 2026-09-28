@@ -1,0 +1,52 @@
+---
+title: "PowerBI in Presentation"
+description: "Embed a Power BI report or dashboard in a PADS4 presentation using the token generated in Credential Manager."
+---
+
+Once you have a token ID for a Power BI report or dashboard, you can display the content on a PADS4 Viewer by pointing a **Web element** at a purpose-built URL.
+
+## Before you begin
+
+Make sure you have:
+
+- Completed the [PowerBI in CTRL Center](/ctrl-centre/administration/power-bi-in-ctrl-center) step and copied the **token ID** for the report or dashboard.
+- A PADS4 presentation open in Designer with a **Web element** you can configure.
+
+## Build the Power BI URL
+
+Use the following format:
+
+```text
+<protocol>://<host>:<port>/PowerBI/<token id>
+```
+
+- **protocol** — `http` or `https`. Use `https` when the PADS4 Server has a valid public SSL certificate.
+- **host** — DNS name or IP address of the **PADS4 Server**.
+- **port** — optional. Include only if the PADS4 Server is not using the default HTTP/HTTPS ports.
+- **token id** — the value generated in **Credential Manager** for the report or dashboard.
+
+**Example**
+
+```text
+https://test.pads4.com/PowerBI/fb7090-5904-4931-962e-a02c4af39
+```
+
+## Display the report or dashboard
+
+1. In PADS4 Designer, place a **Web element** on the presentation page.
+2. Set the element's URL to the value you built above.
+3. Save the presentation and publish it to the target Viewer.
+
+The Viewer will load the Power BI report or dashboard using the credentials associated with the token.
+
+## Final checks
+
+Before you rely on the integration in production, confirm:
+
+- The **service principal** has been added to every Power BI **workspace** whose content you want to embed.
+- The required **API permissions** are enabled in the Power BI admin **tenant settings**.
+- The target **workspaces have a Power BI capacity** assigned, so reports don't show a warning banner or fail to display in the Viewer.
+
+<Check>
+  Once these checks pass, PADS4 is fully integrated with Power BI and ready to display reports and dashboards on any Viewer.
+</Check>

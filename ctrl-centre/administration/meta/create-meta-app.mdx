@@ -6,40 +6,39 @@ This document assumes that the reader is familiar with the Meta developer platfo
 
 The steps below explain how to create and configure a Meta app specifically for integration with **PADS4**.
 
----
-
 ## Create a New App
 
 ### Step 1: Access Meta Developer Platform
 
-Go to the Meta Developer Apps page:\
-https://developers.facebook.com/apps
+Go to the Meta Developer Apps page:<br />[https://developers.facebook.com/apps](https://developers.facebook.com/apps)
 
 ### Step 2: Create a New App
 
-Click on the **Create App** button.
+Click on the **Create App** button.<br />
 
-<img
-  height="200"
-  src="/images/ctrl-centre/credentials/meta/create-app.png"
-/>
+<Frame>
+  ![Meta Create App](/images/CTRLCenter/Credentials/Meta/MetaCreateApp.png)
+</Frame>
 
 ### Step 3: Select Business Portfolio (Optional)
 
-You may choose a business portfolio. This can also be selected later when logging into the app with a user.
+You may choose a business portfolio. This can also be selected later when logging into the app with a user.<br />
 
 <img
-  height="200"
-  src="/images/ctrl-centre/credentials/meta/business-portfolio.png"
+  src="/images/CTRLCenter/Credentials/Meta/MetaBusinessPortofolio.png"
+  alt="Meta Business Portofolio"
+  title="Meta Business Portofolio"
+  style={{ width:"86%" }}
 />
 
-### Step 4: Choose Use Case
+### tep 4: Choose Use Case
 
-For the use case, select **Other**.
+For the use case, select **Other**.<br />
 
 <img
-  height="200"
-  src="/images/ctrl-centre/credentials/meta/other.png"
+  src="/images/CTRLCenter/Credentials/Meta/MetaUseCaseOther.png"
+  alt="Meta Use Case Other"
+  title="Meta Use Case Other"
 />
 
 ### Step 5: Select App Type
@@ -53,11 +52,12 @@ Choose **Business** as the app type.
 
 ### Step 6: Enter App Details
 
-Fill in the required app details. You may also select a business portfolio here if you haven’t already.
+Fill in the required app details. You may also select a business portfolio here if you haven’t already.<br />
 
 <img
-  height="200"
-  src="/images/ctrl-centre/credentials/meta/app-details.png"
+  src="/images/CTRLCenter/Credentials/Meta/MetaCreateAppDetails.png"
+  alt="Meta Create App Details"
+  title="Meta Create App Details"
 />
 
 ### Step 7: Access the App Dashboard
@@ -77,7 +77,7 @@ Navigate to **Settings** under **Facebook Login for Business**.
 
 In the field **Valid OAuth Redirect URIs**, enter the following:
 
-```
+```text
 https://<host>:<port>/credentials/generic/authorize/callback
 ```
 

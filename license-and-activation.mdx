@@ -1,0 +1,20 @@
+---
+title: "License & Activation"
+---
+
+**License** (`/license`, administrator only) manages _this plugin's own_ activation — separate from PADS4's own application licensing.
+
+### Status card
+
+Shows current state (Active / Expired / Not activated), licensee, license key, activation mode (Online or Offline file), activation date, expiry (or "Never (perpetual)"), days remaining, last time it was checked online, and this installation's unique **Installation ID** (with a one-click copy button — needed for offline activation requests).
+
+### Activating
+
+- **Online**: paste the license key you were issued and click **Activate**. Requires this server to reach the license server directly.
+- **Offline** (no internet access from this server): copy the Installation ID from the status card, request an activation file from NDS using that ID plus your license key (done from any machine with internet access), then use **Upload activation file…** to select the `.lic` file you received. The file is validated client-side for a sane size before upload.
+
+### Removing a license
+
+Once active, a **Remove license…** option appears (behind a confirmation step, since it immediately stops the application from being usable until re-activated). Use this when moving a license to a different installation.
+
+An active license is periodically re-validated in the background; if that check fails, a warning appears on this page describing the problem without necessarily deactivating the app immediately (grace behavior depends on the license terms).

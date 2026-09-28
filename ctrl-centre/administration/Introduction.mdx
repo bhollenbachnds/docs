@@ -1,0 +1,46 @@
+---
+title: "Introduction"
+---
+
+This guide walks you through the configuration required to integrate **Microsoft Power BI** with **PADS4** through **Microsoft Azure**. It assumes you're familiar with Power BI administration, Azure app registrations, and the service principal authentication method.
+
+## What you'll set up
+
+To complete the integration, you will:
+
+- Register an application in Azure Active Directory and create a service principal.
+- Grant that service principal access to the Power BI workspaces you want to embed.
+- Assign a Power BI capacity to those workspaces.
+- Enter the resulting credentials into PADS4 CTRL Center.
+
+## Considerations and limitations
+
+Review these limitations before you start — they affect what can be embedded and which users are supported.
+
+**Not supported**
+
+- **My Workspace** is not supported when authenticating with a service principal.
+- Users cannot sign in to the Power BI portal using a service principal.
+- **Dataflows management** is not supported.
+- Reports that use **Row-Level Security (RLS)** are not supported.
+
+**Supported scope**
+
+- Only **embedding of reports and dashboards** is supported.
+
+**Requirements**
+
+- **Power BI admin rights** are required to enable the service principal under Power BI **Developer settings**.
+- **Workspaces require a Power BI capacity**, which may incur additional Azure costs. Without a capacity, reports may show a warning or fail to display in the PADS4 Viewer.
+- Minimum browser versions:
+  - **Chrome** 95
+  - **Firefox** 94
+  - **Edge** 120
+
+<Note>
+  For more background on capacities and production embedding, see the [Power BI Embedded documentation](https://learn.microsoft.com/en-us/power-bi/developer/embedded/move-to-production).
+</Note>
+
+## Next steps
+
+Continue with the setup pages in this section to register the Azure application, configure Power BI, and connect PADS4 CTRL Center.

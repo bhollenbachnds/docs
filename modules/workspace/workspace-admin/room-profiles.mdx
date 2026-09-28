@@ -1,55 +1,62 @@
-The **Room Profiles** tab allows you to define operational rules for rooms. Each profile sets behavior parameters that can be reused across multiple rooms, streamlining setup and ensuring consistency.
+---
+title: "Room profiles"
+---
 
-![Room Profiles Screen](/mnt/data/image.png)
+The **Room Profiles** tab enables you to define reusable configuration settings and operational rules for rooms. By assigning the same profile to multiple rooms, you can simplify room configuration and maintain consistent behavior.
 
-## Creating a Room Profile
+## Overview
 
-To create a new room profile, click the **Create Room Profile** button.
+When you open **Room Profiles**, the dashboard displays two default profiles:
 
-### General Tab
+- **Bookable rooms**
+- **Non-bookable rooms**
 
-In the General tab, fill in the following details:
+These standard profiles are provided by PADS4 Workspace. You can also create custom room profiles to meet your organization’s requirements.
 
-- **Name**  
-  Name of the room profile.
+By default, users can view and book all available rooms. To limit access to specific rooms, configure the applicable room permissions in the user profile.
 
-- **Description**  
-  A short explanation of the profile's purpose.
+## General
 
-- **Use External Booking System**  
-  Enables integration with external systems such as Microsoft Outlook.
+- **Name:** Enter a name for the room profile.
+- **Description:** Enter a description of the profile and its intended use.
+- **Use External Booking System:** Allows rooms assigned to this profile to be booked through an external booking system, such as Microsoft Outlook.
+- **Is a sharing desk profile:** Select this option when the profile is used for shared desks or workspaces.
+- **Is default assigned to user:** Select this option when the workspace is normally assigned to a specific user.
+- **Inactive:** Select this option to disable the profile. Clear the option to make the profile available again.
+- **Limit capacity:** Select this option to make only part of the room capacity available. Specify the percentage of capacity that is available for bookings.
+- **Enable Cleanup:** Prevents rooms assigned to this profile from being booked for 30 minutes after a meeting ends.
 
-- **Is a Sharing Desk Profile**  
-  Use this option for profiles intended for shared desks.
+### App Booking
 
-- **Is Default Assigned to a User**  
-  Indicates if this desk is normally assigned to a specific user.
+The **App Booking** settings control whether rooms assigned to this profile can be booked through the PADS4 Workspace app.
 
-- **Inactive**  
-  Marks the profile as in-bookable (e.g., temporarily unavailable).
+- **Booking type:** Select **Calendar** for bookings through the Outlook plug-in, or **Impulse** for direct bookings from a display.
+- **Use authentication:** Enables or disables user authentication in the Workspace app.
+- **Use check in:** Enables or disables check-in for reservations in the Workspace app.
+- **Anonymous check in:** Allows users to check in without authentication.
+- **Check in time:** Specifies how long users have to check in before an unconfirmed reservation is deleted.
+- **Check in time before meeting:** Specifies how long before the meeting users can check in.
+- **Daily schedule:** Defines the days and times during which app booking is available. Select the available days and configure the start and end times.
 
-- **Limit Capacity**  
-  Used in shared office scenarios to restrict the number of available seats.
+### Occupancy Sensor Booking
 
-- **Enable Cleanup**  
-  Adds a cleanup buffer time after a reservation. During this period, the room cannot be booked.
+The **Occupancy Sensor Booking** settings enable automatic room bookings based on data from an occupancy sensor. When the sensor detects presence in the workspace, it can automatically create a reservation.
 
-- **App Booking**  
-  Enables bookings via the PADS4 web application or physical room panels.
+- **Disable automatic booking:** Prevents automatic booking when presence is detected. Sensor bookings can still be deleted manually, and unconfirmed meetings are removed automatically.
+- **Time of presence before start:** Specifies the number of minutes that presence must be detected before a booking is created.
+- **Booking period:** Specifies the duration, in minutes, of the reservation created after presence is detected.
+- **Lunch break schedule:** Defines the start and end time of the lunch break.
+- **Time without presence before release:** Specifies the number of minutes without detected presence before the room is released automatically.
 
-- **Sensor Booking**  
-  Activates booking based on occupancy sensors (e.g., auto-booking when presence is detected).
+## Additional Service
 
-### Additional Tabs
+Use **Additional Service** to offer optional services during a booking, such as ordering food or drinks.
 
-- **Additional Service**  
-  Assign additional services such as catering or AV setup to rooms using this profile.
+## Extended Property
 
-- **Approval**  
-  Require approval from a designated user before a booking is finalized.
+**Extended Property** can be used to define additional room characteristics, such as comfortable chairs. 
 
-- **Extended Property**  
-  Add custom room features like wheelchair accessibility or equipment notes.
+## License 
 
-- **License**  
-  Enable this room to appear in the Outlook Add-in or assign it a QR Code for user access.
+- **Use this space in the Outlook plug-in:** Makes rooms assigned to this profile available in the Outlook plug-in.
+- **Make the QR code available for this space:** Generates a QR code for the space. Users can scan the code to open the Workspace app, authenticate with their domain account, and book the room.

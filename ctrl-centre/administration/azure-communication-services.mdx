@@ -1,0 +1,38 @@
+---
+title: "Azure Communication Services"
+description: "Create an Azure Communication Services resource and retrieve the connection string used by the PADS4 Microsoft Teams integration."
+---
+
+The PADS4 Microsoft Teams integration relies on **Azure Communication Services** to join and manage Teams meetings. This guide walks you through creating the resource and retrieving the connection string that PADS4 CTRL Center needs.
+
+## Before you begin
+
+Make sure that you have:
+
+- An **Azure subscription** with permission to create resources.
+- Completed the [Azure Set-up](/ctrl-centre/administration/azure-set-up) app registration for the Teams integration.
+
+## Step 1: Create a Communication Services resource
+
+1. Sign in to the [Microsoft Azure Portal](https://portal.azure.com).
+2. Go to **Azure Communication Services** and select **Create**.
+3. Configure the resource:
+   - **Subscription** — select your Azure subscription.
+   - **Resource group** — choose an existing group or create a new one.
+   - **Name** — any reference name for the resource.
+   - **Geography** — choose the region closest to your users.
+4. Select **Review \+ create**, then **Create**.
+
+## Step 2: Retrieve the primary connection string
+
+PADS4 CTRL Center needs the **Primary Connection String** from the resource.
+
+1. Open the Communication Services resource you just created.
+2. In the left menu, select **Keys**.
+3. Copy the **Primary key connection string**.
+
+<Warning>
+  Treat the connection string like a password. Store it securely and rotate it if it may have been exposed.
+</Warning>
+
+You can now enter this value in PADS4 CTRL Center to complete the Microsoft Teams integration.

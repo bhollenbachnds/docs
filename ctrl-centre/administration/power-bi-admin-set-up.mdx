@@ -1,0 +1,59 @@
+---
+title: "PowerBI Services Admin Set-up"
+description: "Enable service principal embedding in the Power BI admin portal and grant workspace access so PADS4 can embed Power BI content."
+---
+
+Before PADS4 can embed Power BI reports and dashboards, a Power BI admin must enable service principal embedding at the tenant level and add the Azure app registration to the workspaces you want to use.
+
+## Before you begin
+
+Make sure you have:
+
+- Completed the [Azure Set-up](/ctrl-centre/administration/azure-set-up-1) app registration.
+- **Power BI admin** rights on the tenant.
+- Optional: a **security group** containing the service principal, if you want to scope embedding to that group instead of the entire organization.
+
+## Step 1: Enable service principal embedding
+
+1. Sign in to the **Power BI admin portal**.
+2. Go to **Tenant settings**.
+3. Scroll to **Developer settings**.
+4. Expand **Embed content in apps** and turn it **On**.
+5. Choose the scope:
+   - **The entire organization** (default), or
+   - **Specific security groups** if you created a group for the service principal.
+6. Select **Apply**.
+
+<img
+  height="200"
+  src="/images/ctrl-centre/credentials/powerbi/PowerBIAdminportal.png"
+  alt="Embed content in apps setting in the Power BI admin portal"
+/>
+
+## Step 2: Add the service principal to a Power BI workspace
+
+Grant the Azure app registration access to each workspace whose reports or dashboards you want to embed in PADS4.
+
+1. Sign in to **Power BI Home**.
+2. Select **Workspaces** in the left menu.
+3. Find the workspace, open **More options**, and select **Workspace access**.
+   <img
+     height="200"
+     src="/images/ctrl-centre/credentials/powerbi/PowerBiWorkspaceaccess.png"
+     alt="Opening Workspace access from the workspace menu"
+     style={{ width:"100%" }}
+   />
+4. Select **Add people or groups**.
+5. Search for the **app registration name** you created in Azure.
+6. Add it as **Member** or **Admin**.
+   <img
+     height="200"
+     src="/images/ctrl-centre/credentials/powerbi/PowerBiAddPeople.png"
+     alt="Adding the app registration to workspace access"
+     style={{ width:"49%" }}
+   />
+7. Select **Add** to save the changes.
+
+<Tip>
+  Repeat step 2 for every workspace you plan to embed in PADS4. The service principal only sees workspaces where it has been explicitly added.
+</Tip>

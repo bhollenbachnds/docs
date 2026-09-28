@@ -1,0 +1,167 @@
+---
+title: "Sony xxBZxxL"
+description: "Install and configure the PADS4 Viewer on Sony BZxx Series professional displays running Android."
+---
+
+This guide walks you through installing and configuring the **PADS4 Viewer** on **Sony BZxx Series** professional displays.
+
+## Before you start
+
+### Supported Sony BZxx models
+
+- BZ53L
+- BZ50L
+- BZ40L
+- BZ35L
+- BZ30L
+- BZ30J
+
+<Warning>
+  Install and configure your **PADS4 Server** before setting up the display.
+</Warning>
+
+### Minimum requirements
+
+- **PADS4 Server:** 2024.2.6 or later
+- **Firmware:** 6.7612 or later
+
+Verify the device firmware meets the minimum version before you install PADS4.
+
+## First-time setup: check firmware
+
+Before installing PADS4, verify the display's firmware version:
+
+1. Go to **Settings > About > Android TV OS build**.
+2. Check the version number shown before "release keys".
+3. If the display is online, check for firmware updates under **About**.
+4. If the display is offline, download the latest firmware from Sony's firmware page.
+
+## Install PADS4Sony from a USB stick
+
+Install the PADS4Sony launcher from a USB flash drive.
+
+1. Download the **PADS4Sony .pkg file** from the [PADS4 GitHub releases page](https://github.com/PADS4/PADS4-Viewer-Sony/releases/latest).
+2. Copy the `.pkg` file to a **USB flash drive** and insert it into the Sony display.
+3. Perform a **factory reset** on the display (skip on a brand-new display):
+   - Go to **Settings > System > About > Reset > Factory data reset**.
+   - Choose **Erase everything**.
+4. The display begins the factory reset within 15 seconds and reboots.
+5. When the initial setup screen appears (language selection), **do not start** the setup process.
+6. The display detects the `.bpk` file on the USB drive and shows the package installation screen.
+7. Choose **Install** and follow the on-screen instructions.
+8. After installation, the TV opens an **activation screen**.
+9. Scroll to the bottom and select **Activate this device admin app**.
+10. When the **"Install is complete"** message appears, remove the USB drive and select **OK**.
+11. The display returns to the initial setup screen. Complete the setup, but **skip the Google account sign-in**.
+
+<Tip>
+  Allow all permission requests presented during or immediately after installation.
+</Tip>
+
+## Connect to the PADS4 Server
+
+Configure the PADS4 Server URL to establish a connection.
+
+**URL format**
+
+```text
+<protocol>://<host>:<port>/<hostpath>/
+```
+
+- **protocol** — `http` or `https` (based on your SSL certificate).
+- **host** — DNS name or IP address of the PADS4 Server.
+- **port** — optional. Only include it if the PADS4 Server does not use the default HTTP/HTTPS ports.
+- **hostpath** — default is `PADS4`.
+
+**Example**
+
+```text
+http://localhost/pads4
+```
+
+### Connect the display
+
+1. Enter the **PADS4 Server location**.
+2. Optionally, enter a **Viewer name** — or let the PADS4 Server generate one.
+3. Select **Start**.
+4. Wait for the Viewer download to complete; the Viewer then starts.
+5. When prompted, grant permission to permanently store content on the device.
+
+<Check>
+  The PADS4 Viewer starts and connects to the PADS4 Server.
+</Check>
+
+## Adjust PADS4 Viewer settings
+
+You can adjust Viewer settings directly on the display:
+
+1. Connect a **mouse** to the device.
+2. **Right-click** to open the Viewer settings menu.
+3. Adjust screen orientation, display settings, and other options.
+
+To return to the PADS4Sony configuration, select **Launcher settings**.
+
+## Update the PADS4Sony app
+
+The PADS4Sony app updates automatically when the PADS4 Server is updated.
+
+To update manually:
+
+1. Check the PADS4 Server version.
+2. If a newer version is available, restart the Sony display.
+3. The PADS4Sony app updates automatically on restart.
+
+## Access the Android menu while PADS4 is running
+
+**Quick settings**
+
+1. Press the **Options** button on the remote.
+2. Adjust the quick settings as needed.
+
+**Full settings menu**
+
+1. Press the **Home** button on the remote.
+2. The PADS4 app closes.
+3. To restart PADS4, go to **Settings > System > Restart**. PADS4 launches automatically on boot.
+
+## Supported features and limitations
+
+### General
+
+| Support | Feature |
+| :-: | :-- |
+| ✅ | Automatic software updates when the PADS4 Server is updated |
+| ✅ | Offline mode — plays scheduled content for 7 days |
+
+### Device
+
+| Support | Feature |
+| :-: | :-- |
+| ✅ | Portrait mode (device menu not supported in portrait) |
+| ❌ | Block remote control |
+| ✅ | Cluster viewer |
+| ✅ | Turn off display — backlight off when no presentation is scheduled |
+
+### Video and content
+
+| Support | Feature |
+| :-: | :-- |
+| ✅ | 2 videos per page with seamless playback (1920x1080) |
+| ❌ | Video rotation, overlap, skew, flip |
+| ✅ | HTTP streaming |
+| ✅ | 4K mode (3840x2160) |
+
+### Device management
+
+| Support | Feature |
+| :-: | :-- |
+| ✅ | Remote management via PADS4 CTRL Center |
+| ✅ | Reboot device, restart Viewer |
+| ✅ | Retrieve screenshots (excluding video) and logs |
+| ❌ | Block remote control and shutdown |
+
+## Next steps
+
+- Check the PADS4 Server for viewer status.
+- Adjust settings from the Viewer menu on the display.
+- Manage the device remotely from [PADS4 CTRL Center](/ctrl-centre/introduction).

@@ -1,0 +1,21 @@
+---
+title: "Upgrading to PADS4 2024.2"
+---
+
+If you want to upgrade to PADS4 2024.2 your current PADS4 version needs to be at least PADS4 2022.3. That means that you will need to have PADS4 2022.3 installed & running before updating to 2024.2.
+
+Any version before 2022.2 and lower will not automatically update to 2024.2, and you will need to perform an intermediate upgrade first to PADS4 2022.3.
+
+From version 2024.2 and onwards we have implemented a new central user management system.
+
+This offers a more streamlined approach to managing users and roles with user management in the PADS4 Web Portal
+
+As this is a significant change this does require a few additional points to consider when upgrading a multi-server environment as described below.
+
+##  **Upgrading multi-server installations**
+
+To implement the central user management feature, changes were made to the PADS4 Database, because of this **you first must update the PADS4 Main Server** and then the sub server. This has a few reasons:
+
+- The Main Server will block connections made with pre-2024.2 server versions, because the PADS4 Database has changed, and older implementations won't understand the new user objects.
+- Migration of licenses and users is only executed on the Main Server and those are then replicated to the sub servers. So, when first updating a sub server, it is possible that you no longer can connect to this server, depending on if the user was existing in the authentication service database.
+- 2024.2 sub-server won't connect to Main Servers that are running a version pre-2024.2, for the same reason as Main Servers.

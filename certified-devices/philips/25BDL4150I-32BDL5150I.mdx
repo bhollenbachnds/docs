@@ -4,13 +4,14 @@ title: "Tableaux 4000"
 
 This manual provides step-by-step instructions for installing and configuring **PADS4 Viewer** on Philips ePaper displays, specifically for model:
 
+- **13BDL4150I**
 - **25BDL4150I**
 
 ## **1. First-Time Use**
 
 Before proceeding, ensure that the **`LauncherServiceViewer.zip`** file is located at:
 
-```
+```text
 http://pads4serverip/PADS4/apps/
 ```
 
@@ -24,7 +25,7 @@ If the display was previously used, perform a **factory reset** to avoid configu
 
 <Steps>
   <Step title="Step One">
-    Press and hold the **universal + hidden key** on the display for ~3 seconds.
+    Press and hold the **universal \+ hidden key** on the display for ~3 seconds.
   </Step>
   <Step title="Step Two">
     The **LED** will briefly turn white, then flash green.
@@ -119,31 +120,31 @@ Ensure **scrcpy** and **adb** are correctly installed.
 
 ## **3. Supported Features & Limitations**
 
-| **Feature**                | **Details**                                                          |
-| -------------------------- | -------------------------------------------------------------------- |
-| Display Models             | ✅ Supported                                                          |
-| Portrait Mode              | ✅ Supported                                                          |
-| Remote Control             | ❌ Not supported (can configure, but remote doesn't work)             |
-| HTTPS                      | ✅ Supported                                                          |
-| Video                      | ⚠️ Not supported (only first frame shown)                            |
-| Images (JPG, PNG, BMP)     | ✅ Supported                                                          |
-| GIF                        | ⚠️ Static only                                                       |
-| Text, Line, Shape          | ✅ Supported                                                          |
-| Scrolling Text             | ⚠️ Unpredictable behavior due to low refresh rate                    |
-| Formatted Text             | ✅ Use only minute-based time formatting (avoid seconds)              |
-| Flash                      | ❌ Not supported                                                      |
-| Table                      | ✅ Supported (frequent changes may cause row visibility issues)       |
-| PDF / PowerPoint           | ✅ Only static, first page displayed                                  |
-| Interactive Button         | ⚠️ Displayed as static, not interactive                              |
-| Web                        | ❌ Not supported                                                      |
-| Colors                     | ✅ Supported (limited to ePaper color range)                          |
-| Data Providers             | ⚠️ Static data only; updates must exceed refresh rate intervals      |
-| Rules, Viewer Variables    | ✅ Supported within refresh rate limits                               |
-| Software Updates           | ✅ Supported                                                          |
-| Offline Storage, Schedules | ✅ Supported                                                          |
-| PADS4 Ctrl Center          | ✅ Supported: Viewer Log, Screenshot, Sync Log, Viewer Settings, etc. |
-| Display Management         | ❌ Shutdown, Reboot, Wake-on-LAN, and LED state not supported         |
-| Monitoring & Alerts        | ✅ Partial support (e.g., Network status)                             |
+| **Feature** | **Details** |
+| --- | --- |
+| Display Models | ✅ Supported |
+| Portrait Mode | ✅ Supported |
+| Remote Control | ❌ Not supported (can configure, but remote doesn't work) |
+| HTTPS | ✅ Supported |
+| Video | ⚠️ Not supported (only first frame shown) |
+| Images (JPG, PNG, BMP) | ✅ Supported |
+| GIF | ⚠️ Static only |
+| Text, Line, Shape | ✅ Supported |
+| Scrolling Text | ⚠️ Unpredictable behavior due to low refresh rate |
+| Formatted Text | ✅ Use only minute-based time formatting (avoid seconds) |
+| Flash | ❌ Not supported |
+| Table | ✅ Supported (frequent changes may cause row visibility issues) |
+| PDF / PowerPoint | ✅ Only static, first page displayed |
+| Interactive Button | ⚠️ Displayed as static, not interactive |
+| Web | ❌ Not supported |
+| Colors | ✅ Supported (limited to ePaper color range) |
+| Data Providers | ⚠️ Static data only; updates must exceed refresh rate intervals |
+| Rules, Viewer Variables | ✅ Supported within refresh rate limits |
+| Software Updates | ✅ Supported |
+| Offline Storage, Schedules | ✅ Supported |
+| PADS4 Ctrl Center | ✅ Supported: Viewer Log, Screenshot, Sync Log, Viewer Settings, etc. |
+| Display Management | ❌ Shutdown, Reboot, Wake-on-LAN, and LED state not supported |
+| Monitoring & Alerts | ✅ Partial support (e.g., Network status) |
 
 ---
 
@@ -160,7 +161,7 @@ Ensure **scrcpy** and **adb** are correctly installed.
 
 ## **5. Troubleshooting**
 
-| **Problem**                           | **Solution**                                                            |
-| ------------------------------------- | ----------------------------------------------------------------------- |
+| **Problem** | **Solution** |
+| --- | --- |
 | `adb devices` does not detect display | Unplug both ends of USB, reboot display (hold power 5s), reconnect USB. |
-| USB not detected by PC                | Reboot display and reconnect. Try factory reset if issue persists.      |
+| USB not detected by PC | Reboot display and reconnect. Try factory reset if issue persists. |

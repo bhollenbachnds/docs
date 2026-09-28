@@ -1,0 +1,44 @@
+---
+title: "PADS4 Set-up"
+description: "Enter the Azure and Communication Services values you gathered into PADS4 CTRL Center to complete the Microsoft Teams integration."
+---
+
+Once the Azure app registration, Communication Services resource, and user licenses are in place, you can finish the Microsoft Teams integration inside PADS4 CTRL Center.
+
+## Before you begin
+
+Make sure you have completed:
+
+- [Azure Set-up](/ctrl-centre/administration/azure-set-up) — app registration, scope, and client secret.
+- [Azure Communication Services](/ctrl-centre/administration/azure-communication-services) — resource and primary connection string.
+- [Licensing](/ctrl-centre/administration/licensing) — required Microsoft 365 licenses assigned to users.
+
+## Values to gather
+
+Collect the following values before opening PADS4 CTRL Center:
+
+| Value | Where to find it |
+| :-- | :-- |
+| **Application (Client) ID** | App Registration \> Overview |
+| **Directory (Tenant) ID** | App Registration \> Overview |
+| **Client secret** | App Registration \> Certificates & secrets |
+| **Scope name** | App Registration \> Expose an API |
+| **Primary key connection string** | Communication Services \> Keys |
+
+## Complete the integration in PADS4 CTRL Center
+
+1. Sign in to **PADS4 CTRL Center** as an administrator.
+2. Open Credentials.
+3. Click on Providers and select New.
+4. Select the **Microsoft Teams integration** settings.
+5. Enter each value from the table above.
+6. Save the configuration.
+7. Verify the connection by joining a Teams meeting through PADS4.
+
+<Check>
+  If the test meeting joins successfully, the Microsoft Teams integration is fully configured.
+</Check>
+
+<Tip>
+  If the connection fails, double-check the client secret (it can only be copied at creation time) and confirm that the affected user has both Exchange Online (Plan 2) and Microsoft Teams licenses assigned.
+</Tip>

@@ -1,0 +1,45 @@
+---
+title: "Reports"
+---
+
+**Reports** (`/reports`) builds on-demand CSV or PDF exports, with a live preview before you download.
+
+### Report types
+
+Chosen via tabs at the top:
+
+| Type | What it covers |
+| :-- | :-- |
+| **Connectivity** | Online/offline status for every device in scope, with offline durations |
+| **Offline devices** | Devices offline right now, or offline incidents within a date range |
+| **Device distribution** | How devices are spread across brands and groups |
+| **Proof of play** | What played, play counts, durations, and events |
+
+### Live vs. historical
+
+For Connectivity, Offline devices, and Device distribution, a **"Use historical date range"** checkbox controls the mode:
+
+- **Off (default)**: a **live snapshot** of current PADS4 state.
+- **On**: data limited to a selected date range, pulled from the plugin's local history (subject to the same 3-month retention as History/CMS).
+
+Proof of play always requires a date range (no live mode) and only understands whole days.
+
+### Device scope
+
+Below the report options, a **Device scope** panel lets you narrow which devices are included:
+
+- **Group tree**: check a group to include it and everything under it. You can now **exclude a specific subgroup from an otherwise-selected parent** — check the parent, then uncheck just the child you want left out; the child shows an "Excluded" tag and an unfilled checkbox instead of being indistinguishable from "never selected."
+- **Brand** filter (single select), combinable with the group tree.
+- **Fine-tune individual devices** (collapsible): search and hand-pick specific devices instead of whole groups. Selecting even one device here switches the scope entirely to "these exact devices" and overrides the group/brand filters.
+- The **Active scope** bar at the bottom always summarizes what's currently in effect (e.g. "12 of 40 devices · Group: Region A (except Store 5) · Brand: Samsung").
+- If you pick individual devices via the fine-tune panel and then clear your selection back to zero, the app blocks report generation with a warning until you either pick devices again or clear the picker entirely to fall back to group/brand scope.
+
+Proof of play reports use a different, simpler scope: an optional Element name and free-text Search, carried over automatically if you arrived here via **"Create report from this view"** from the Proof of Play page.
+
+### Preview and download
+
+The right-hand panel shows a live preview: KPI cards, charts matching what's on-screen for that report type, and a sample of rows (the full dataset is only in the actual download — the preview caps at 15–20 rows depending on report type). A scope/period banner at the top of the preview restates exactly what you're about to download.
+
+Choose **CSV** or **PDF** with the format toggle, then **Download**. PDFs are branded to match the app's own styling. CSV exports automatically neutralize any cell that looks like it could be interpreted as a spreadsheet formula (a defensive measure, invisible in normal use).
+
+An expandable **"How this report works"** panel explains, per report type, exactly what the date range and scope controls affect.

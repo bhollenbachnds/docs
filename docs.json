@@ -1,6 +1,5 @@
 {
   "theme": "mint",
-  "$schema": "https://mintlify.com/docs.json",
   "name": "PADS4 Platform",
   "colors": {
     "primary": "#00ADBA",
@@ -15,8 +14,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Contact",
-        "href": "mailto:support@pads4.com"
+        "href": "mailto:support@pads4.com",
+        "label": "Contact"
       }
     ],
     "primary": {
@@ -24,6 +23,18 @@
       "label": "Support Portal",
       "href": "https://support.pads4.com"
     }
+  },
+  "footer": {
+    "socials": {
+      "linkedin": "https://linkedin.com/company/pads-4"
+    }
+  },
+  "contextual": {
+    "options": [
+      "chatgpt",
+      "claude"
+    ],
+    "display": "header"
   },
   "navigation": {
     "languages": [
@@ -48,23 +59,24 @@
                 ]
               },
               {
-                "group": "Upgrade Information",
-                "pages": [
-                  "upgrade-info/upgrading-to-pads-4-2025-2",
-                  "upgrade-info/Upgrading-to-PADS4-2025.1"
-                ]
-              },
-              {
                 "group": "System Configuration",
                 "pages": [
-                  "system-configuration/PADS4-Hardware-Configuration-Guide",
-                  "system-configuration/Microsoft-Windows-Group-Polocies"
+                  "system-configuration/PADS4-Hardware-Configuration-Guide"
                 ]
               },
               {
                 "group": "Install PADS4",
                 "pages": [
                   "install-pads4/Downloads",
+                  {
+                    "group": "PADS4 Upgrade Guidance for Older Versions",
+                    "pages": [
+                      "upgrade-info/upgrading-to-pads-4-2025-2",
+                      "upgrade-info/Upgrading-to-PADS4-2025.1",
+                      "upgrade-info/upgrade-20241",
+                      "upgrade-info/Upgrade-2024.2"
+                    ]
+                  },
                   {
                     "group": "Install PADS4 Servers",
                     "pages": [
@@ -80,13 +92,20 @@
                       "install-pads4/install-pads4-server/Virtual-Drive-and-PADS4-Servers",
                       "install-pads4/install-pads4-server/Replication-with-Sub-and-Backup-Servers"
                     ]
+                  },
+                  {
+                    "group": "Install PADS4 Windows applications",
+                    "pages": [
+                      "install-pads4/install-pads4-client/PADS4-Windows-applications"
+                    ]
                   }
                 ]
               },
               {
-                "group": "Install PADS4 Viewers",
+                "group": "PADS4 Certified Devices",
                 "icon": "tv",
                 "pages": [
+                  "certified-devices/introduction",
                   {
                     "group": "Microsoft Windows",
                     "pages": [
@@ -109,7 +128,7 @@
                   {
                     "group": "Amino",
                     "pages": [
-                      "amino-h200"
+                      "certified-devices/Amino/amino-h200"
                     ]
                   },
                   {
@@ -136,12 +155,6 @@
                     ]
                   },
                   {
-                    "group": "ELO",
-                    "pages": [
-                      "certified-devices/elo/I-Series-2"
-                    ]
-                  },
-                  {
                     "group": "Giada",
                     "pages": [
                       "certified-devices/giada/DN84",
@@ -161,12 +174,19 @@
                       "certified-devices/hikvision/ds-dt-60-p",
                       "certified-devices/hikvision/ds-d60xx-un",
                       "certified-devices/hikvision/DS-D60C-B",
-                      "certified-devices/hikvision/DS-D6032FN"
+                      "certified-devices/hikvision/DS-D6032FN",
+                      {
+                        "group": "ELO",
+                        "pages": [
+                          "certified-devices/elo/I-Series-2"
+                        ]
+                      }
                     ]
                   },
                   {
                     "group": "Hisense",
                     "pages": [
+                      "certified-devices/Hisense/DM66GE",
                       "certified-devices/Hisense/DM66D"
                     ]
                   },
@@ -183,7 +203,9 @@
                   {
                     "group": "iiyama",
                     "pages": [
-                      "certified-devices/iiyama/54-and-60-Series",
+                      "certified-devices/iiyama/iiyama-64-series",
+                      "certified-devices/iiyama/60-Series",
+                      "certified-devices/iiyama/54-Series",
                       "certified-devices/iiyama/TW1025LASC",
                       "certified-devices/iiyama/i-iyama-tw-1023-asc"
                     ]
@@ -197,6 +219,12 @@
                     ]
                   },
                   {
+                    "group": "Maxhub",
+                    "pages": [
+                      "certified-devices/Maxhub/maxhub-CMB-Series"
+                    ]
+                  },
+                  {
                     "group": "Philips",
                     "pages": [
                       "certified-devices/philips/32BDL5150I",
@@ -207,6 +235,7 @@
                       "certified-devices/philips/4550D",
                       "certified-devices/philips/3550Q",
                       "certified-devices/philips/10BDL4551T",
+                      "certified-devices/philips/10BDL5051T",
                       "certified-devices/philips/CRD50"
                     ]
                   },
@@ -217,9 +246,10 @@
                       "certified-devices/prodvx/APPC-R23-series-Android-12",
                       "certified-devices/prodvx/APPC-R23-series-Android-11",
                       "certified-devices/prodvx/APPC-10SLBe-Android-11",
+                      "certified-devices/prodvx/appc-series-rk-32",
+                      "certified-devices/prodvx/APPC-series-RK3288-Android-8.1",
                       "certified-devices/prodvx/APPC-4200-Series-Android-9",
                       "certified-devices/prodvx/UW-series-Android-8.1",
-                      "certified-devices/prodvx/APPC-series-RK3288-Android-8.1",
                       "certified-devices/prodvx/IPPC-Series-Windows"
                     ]
                   },
@@ -253,7 +283,14 @@
                   {
                     "group": "Sony",
                     "pages": [
-                      "certified-devices/sony/BZxx-series"
+                      "certified-devices/sony/sony-xx-b-zxx-p",
+                      "certified-devices/sony/BZxxL-series"
+                    ]
+                  },
+                  {
+                    "group": "Innes",
+                    "pages": [
+                      "innes_DMB300_DMB400"
                     ]
                   }
                 ]
@@ -263,10 +300,10 @@
           {
             "dropdown": "PADS4 Super User",
             "pages": [
-              "ctrl-centre/untitled-page",
               {
                 "group": "Introduction to PADS4 Super User",
                 "pages": [
+                  "ctrl-centre/untitled-page",
                   "ctrl-centre/user-interface",
                   "ctrl-centre/diagnostics",
                   "ctrl-centre/migration-overview",
@@ -303,20 +340,15 @@
                   },
                   {
                     "group": "Design",
-                    "hidden": true,
                     "pages": [
                       "ctrl-centre/designer"
                     ]
                   },
                   {
                     "group": "CMS 2.0",
-                    "hidden": true,
-                    "pages": []
-                  },
-                  {
-                    "group": "FIDS",
-                    "hidden": true,
-                    "pages": []
+                    "pages": [
+                      "cms-2-0"
+                    ]
                   },
                   {
                     "group": "Schedules",
@@ -327,20 +359,25 @@
                   {
                     "group": "IoT",
                     "pages": [
-                      "ctrl-centre/sensors",
-                      "ctrl-centre/incidents",
-                      "ctrl-centre/sensors/How-to-use-Sensors",
-                      "ctrl-centre/sensors/How-to-create-Incidents",
-                      "ctrl-centre/sensors/workspace/sensors-workspace",
-                      "ctrl-centre/sensors/Sensor-Settings",
                       {
-                        "group": "Certified Sensors",
+                        "group": "Sensors",
                         "pages": [
-                          "ctrl-centre/sensors/certified-sensors/Certified-Sensors",
-                          "ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
-                          "ctrl-centre/sensors/certified-sensors/Mobotix",
-                          "ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
-                          "ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
+                          "ctrl-centre/sensors",
+                          "ctrl-centre/incidents",
+                          "ctrl-centre/sensors/How-to-use-Sensors",
+                          "ctrl-centre/sensors/How-to-create-Incidents",
+                          "ctrl-centre/sensors/workspace/sensors-workspace",
+                          "ctrl-centre/sensors/Sensor-Settings",
+                          {
+                            "group": "Certified Sensors",
+                            "pages": [
+                              "ctrl-centre/sensors/certified-sensors/Certified-Sensors",
+                              "ctrl-centre/sensors/certified-sensors/Milestone-XProtect",
+                              "ctrl-centre/sensors/certified-sensors/Mobotix",
+                              "ctrl-centre/sensors/certified-sensors/Quividi-VidiReports",
+                              "ctrl-centre/sensors/certified-sensors/SightCorp-DeepSight"
+                            ]
+                          }
                         ]
                       },
                       {
@@ -379,7 +416,15 @@
                   },
                   {
                     "group": "Workspace",
-                    "pages": []
+                    "pages": [
+                      "pads-4-workspace"
+                    ]
+                  },
+                  {
+                    "group": "FIDS",
+                    "pages": [
+                      "fids"
+                    ]
                   }
                 ]
               },
@@ -393,13 +438,22 @@
                       {
                         "group": "Microsoft Teams",
                         "pages": [
-                          "ctrl-centre/administration/teams"
+                          "ctrl-centre/administration/teams",
+                          "ctrl-centre/administration/azure-set-up",
+                          "ctrl-centre/administration/azure-communication-services",
+                          "ctrl-centre/administration/licensing",
+                          "ctrl-centre/administration/pads-4-set-up"
                         ]
                       },
                       {
                         "group": "Microsoft PowerBI",
                         "pages": [
-                          "ctrl-centre/administration/Power-BI"
+                          "ctrl-centre/administration/Introduction",
+                          "ctrl-centre/administration/azure-set-up-1",
+                          "ctrl-centre/administration/power-bi-admin-set-up",
+                          "ctrl-centre/administration/power-bi-set-up",
+                          "ctrl-centre/administration/power-bi-in-ctrl-center",
+                          "ctrl-centre/administration/power-bi-in-presentation"
                         ]
                       },
                       {
@@ -463,8 +517,7 @@
                         "pages": [
                           "canva-set-up-1",
                           "pads-4-canva-integration"
-                        ],
-                        "hidden": true
+                        ]
                       },
                       {
                         "group": "Custom OAuth2",
@@ -521,7 +574,6 @@
                       },
                       {
                         "group": "Multi Factor Authentication",
-                        "hidden": true,
                         "pages": [
                           "enable-multi-factor-authentication",
                           "reset-the-multi-factor-authentication",
@@ -536,7 +588,7 @@
             ]
           },
           {
-            "dropdown": "Digital Signage",
+            "dropdown": "PADS4 Digital Signage",
             "groups": [
               {
                 "group": "Getting Started",
@@ -546,35 +598,44 @@
                 ]
               },
               {
-                "group": "PADS4 CMS and Designer",
+                "group": "Designer (Web)",
                 "pages": [
                   {
-                    "group": "User Interface Designer",
+                    "group": "User Interface",
                     "pages": [
-                      "en/digital-signage/pads-4-cms-and-designer/user-interface-designer/untitled-page"
+                      "user-interface",
+                      {
+                        "group": "Menu",
+                        "pages": [
+                          "menu"
+                        ]
+                      }
                     ]
                   },
-                  "modules/digital-signage/cms/introduction",
-                  "modules/digital-signage/cms/homepage",
-                  "modules/digital-signage/cms/categories",
-                  "en/digital-signage/pads-4-web-designer/templates",
-                  "modules/digital-signage/cms/publish-a-message",
-                  "modules/digital-signage/cms/publications",
-                  "modules/digital-signage/cms/library",
-                  "modules/digital-signage/cms/ordering",
-                  "modules/digital-signage/cms/more-features"
-                ]
-              },
-              {
-                "group": "Designer (Web)",
-                "hidden": true,
-                "pages": [
                   {
                     "group": "Elements",
                     "pages": [
+                      "introductions",
+                      {
+                        "group": "Text and Time and Date",
+                        "pages": [
+                          "text"
+                        ]
+                      },
+                      {
+                        "group": "Shape",
+                        "pages": [
+                          "shape"
+                        ]
+                      },
+                      {
+                        "group": "Media",
+                        "pages": [
+                          "media"
+                        ]
+                      },
                       {
                         "group": "Canva Integration",
-                        "hidden": true,
                         "pages": [
                           "introduction-2",
                           {
@@ -606,7 +667,10 @@
                     "pages": [
                       {
                         "group": "Presentation ",
-                        "pages": []
+                        "pages": [
+                          "presentation-display-name",
+                          "proof-of-play"
+                        ]
                       },
                       {
                         "group": "Pages Properties",
@@ -644,9 +708,22 @@
                 ]
               },
               {
+                "group": "PADS4 CMS",
+                "pages": [
+                  "modules/digital-signage/cms/introduction",
+                  "modules/digital-signage/cms/homepage",
+                  "modules/digital-signage/cms/categories",
+                  "en/digital-signage/pads-4-web-designer/templates",
+                  "modules/digital-signage/cms/publish-a-message",
+                  "modules/digital-signage/cms/publications",
+                  "modules/digital-signage/cms/library",
+                  "modules/digital-signage/cms/ordering",
+                  "modules/digital-signage/cms/more-features"
+                ]
+              },
+              {
                 "group": "PADS4 Windows Applications",
                 "pages": [
-                  "modules/digital-signage/introduction",
                   {
                     "group": "Designer",
                     "pages": [
@@ -1105,7 +1182,8 @@
                             ]
                           }
                         ]
-                      }
+                      },
+                      "modules/digital-signage/introduction"
                     ]
                   },
                   {
@@ -1321,7 +1399,7 @@
             ]
           },
           {
-            "dropdown": "Workspace",
+            "dropdown": "PADS4 Workspace",
             "groups": [
               {
                 "group": "Getting Started",
@@ -1336,18 +1414,69 @@
                     "group": "Workspace Web Application",
                     "pages": [
                       "modules/workspace/workspace-web-application/introduction",
-                      "modules/workspace/workspace-web-application/searching-for-a-space",
-                      "modules/workspace/workspace-web-application/booking-a-space",
-                      "modules/workspace/workspace-web-application/booking-a-common-space",
-                      "modules/workspace/workspace-web-application/booking-a-group-workspace",
-                      "modules/workspace/workspace-web-application/declaring-remote-work",
-                      "modules/workspace/workspace-web-application/reporting-absence",
-                      "modules/workspace/workspace-web-application/my-calendar",
-                      "modules/workspace/workspace-web-application/searching-for-colleagues",
-                      "modules/workspace/workspace-web-application/special-cases",
-                      "modules/workspace/workspace-web-application/account-settings",
-                      "modules/workspace/workspace-web-application/logging-out",
-                      "modules/workspace/workspace-web-application/appendices"
+                      {
+                        "group": "Search a room",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/searching-for-a-space",
+                          "modules/workspace/workspace-web-application/FavouriteRoom"
+                        ]
+                      },
+                      {
+                        "group": "Book a space",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/booking-a-space",
+                          "modules/workspace/workspace-web-application/booking-a-common-space",
+                          "modules/workspace/workspace-web-application/booking-a-group-workspace"
+                        ]
+                      },
+                      {
+                        "group": "Remote work",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/declaring-remote-work"
+                        ]
+                      },
+                      {
+                        "group": "Report absence",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/reporting-absence"
+                        ]
+                      },
+                      {
+                        "group": "My Calendar",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/my-calendar"
+                        ]
+                      },
+                      {
+                        "group": "Search Colleagues",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/searching-for-colleagues"
+                        ]
+                      },
+                      {
+                        "group": "Special Cases",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/special-cases"
+                        ]
+                      },
+                      {
+                        "group": "Account Settings",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/account-settings"
+                        ]
+                      },
+                      {
+                        "group": "Log out",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/logging-out"
+                        ]
+                      },
+                      {
+                        "group": "Workflows",
+                        "pages": [
+                          "modules/workspace/workspace-web-application/Workflows"
+                        ]
+                      }
                     ]
                   },
                   {
@@ -1375,18 +1504,44 @@
                       "modules/workspace/workspace-cms-admin/users",
                       "modules/workspace/workspace-cms-admin/profiles",
                       {
-                        "group": "SSO Configurations",
-                        "pages": [
-                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
-                          "modules/workspace/workspace-cms-admin/SSO/how-to-configure-Single-Sign-On-Azure-for-PADS4",
-                          "modules/workspace/workspace-cms-admin/SSO/ibm-security"
-                        ]
-                      },
-                      {
                         "group": "Plugins",
                         "pages": [
                           "modules/workspace/workspace-cms-admin/plugins",
-                          "modules/workspace/workspace-cms-admin/untitled-page"
+                          {
+                            "group": "Calendar",
+                            "pages": [
+                              "Workspace/Administrator/Introduction",
+                              "Workspace/Administrator/Calendar/Google-Calendar",
+                              "Workspace/Administrator/Calendar/Exchange-Online"
+                            ]
+                          },
+                          {
+                            "group": "IoT",
+                            "pages": [
+                              {
+                                "group": "Occupancy Sensor",
+                                "pages": [
+                                  "Workspace/Administrator/External-Occupancy-Sensor",
+                                  "untitled-page",
+                                  "untitled-page-6",
+                                  "untitled-page-8"
+                                ]
+                              }
+                            ]
+                          },
+                          "Workspace/Administrator/Automated-Report",
+                          "Workspace/Administrator/Workspace-Application-Setting",
+                          {
+                            "group": "Deprecated",
+                            "pages": [
+                              "modules/workspace/workspace-cms-admin/SSO/how-to-configure-the-CMS-SSO-Plugin",
+                              "Workspace/Administrator/ActiveDirectory",
+                              "Workspace/Administrator/SMTP",
+                              "Workspace/Administrator/Userful",
+                              "Workspace/Administrator/MappedIn",
+                              "Workspace/Administrator/Mersive"
+                            ]
+                          }
                         ]
                       }
                     ]
@@ -1396,18 +1551,62 @@
                     "pages": [
                       "modules/workspace/workspace-admin/introduction",
                       "modules/workspace/workspace-admin/home",
-                      "modules/workspace/workspace-admin/rooms",
-                      "modules/workspace/workspace-admin/buildings",
-                      "modules/workspace/workspace-admin/room-profiles",
-                      "modules/workspace/workspace-admin/equipment",
-                      "modules/workspace/workspace-admin/defective-equipment",
-                      "modules/workspace/workspace-admin/users",
-                      "modules/workspace/workspace-admin/room-user-profile",
-                      "modules/workspace/workspace-admin/occupancy-sensors",
-                      "modules/workspace/workspace-admin/statistics",
-                      "modules/workspace/workspace-admin/additional-services",
-                      "modules/workspace/workspace-admin/extended-property",
-                      "modules/workspace/workspace-admin/welcome-message"
+                      {
+                        "group": "Rooms and Buildings",
+                        "pages": [
+                          {
+                            "group": "Rooms",
+                            "pages": [
+                              "modules/workspace/workspace-admin/rooms",
+                              "modules/workspace/workspace-admin/adding-room",
+                              "modules/workspace/workspace-admin/import-rooms",
+                              "modules/workspace/workspace-admin/modular-spaced",
+                              "modules/workspace/workspace-admin/common-area",
+                              "modules/workspace/workspace-admin/room-profiles"
+                            ]
+                          },
+                          "modules/workspace/workspace-admin/buildings",
+                          "modules/workspace/workspace-admin/extended-property"
+                        ]
+                      },
+                      {
+                        "group": "Users",
+                        "pages": [
+                          "modules/workspace/workspace-admin/users",
+                          "modules/workspace/workspace-admin/room-user-profile"
+                        ]
+                      },
+                      {
+                        "group": "IoT",
+                        "pages": [
+                          "modules/workspace/workspace-admin/occupancy-sensor"
+                        ]
+                      },
+                      {
+                        "group": "Equipment",
+                        "pages": [
+                          "modules/workspace/workspace-admin/equipment",
+                          "modules/workspace/workspace-admin/defective-equipment"
+                        ]
+                      },
+                      {
+                        "group": "Additional Services",
+                        "pages": [
+                          "modules/workspace/workspace-admin/additional-services"
+                        ]
+                      },
+                      {
+                        "group": "Statisics",
+                        "pages": [
+                          "modules/workspace/workspace-admin/statistics"
+                        ]
+                      },
+                      {
+                        "group": "Welcome Message",
+                        "pages": [
+                          "modules/workspace/workspace-admin/welcome-message"
+                        ]
+                      }
                     ]
                   },
                   {
@@ -1421,7 +1620,7 @@
             ]
           },
           {
-            "dropdown": "CMS 1.0",
+            "dropdown": "PADS4 CMS 1.0",
             "groups": [
               {
                 "group": "Getting Started",
@@ -1432,33 +1631,29 @@
               {
                 "group": "User Guide",
                 "pages": [
-                  "modules/legacy-cms/user-guide/login",
                   "modules/legacy-cms/user-guide/homepage",
-                  "modules/legacy-cms/user-guide/categories",
-                  "modules/legacy-cms/user-guide/masks",
                   "modules/legacy-cms/user-guide/messages",
-                  "modules/legacy-cms/user-guide/content",
-                  "modules/legacy-cms/user-guide/text-area",
                   "modules/legacy-cms/user-guide/broadcast",
                   "modules/legacy-cms/user-guide/history",
-                  "modules/legacy-cms/user-guide/logout"
+                  "modules/legacy-cms/user-guide/content"
                 ]
               },
               {
                 "group": "Administration",
                 "pages": [
-                  "modules/legacy-cms/administration/login",
                   "modules/legacy-cms/administration/create-a-profile",
                   "modules/legacy-cms/administration/create-a-user",
                   "modules/legacy-cms/administration/add-a-display",
-                  "modules/legacy-cms/administration/logout",
-                  "modules/legacy-cms/administration/media-prerequisites"
+                  "modules/legacy-cms/user-guide/categories",
+                  "modules/legacy-cms/user-guide/masks",
+                  "modules/legacy-cms/administration/media-prerequisites",
+                  "untitled-page-9"
                 ]
               }
             ]
           },
           {
-            "dropdown": "FIDS",
+            "dropdown": "PASD4 FIDS",
             "groups": [
               {
                 "group": "Getting Started",
@@ -1505,113 +1700,195 @@
               },
               {
                 "group": "Domains",
-                "openapi": "https://pads4server/rdx/NDS.Nginx.Domains//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-12"
+                ]
               },
               {
                 "group": "Authentication",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-13"
+                ]
               },
               {
                 "group": "Authentication Integration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication.Integration//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-14"
+                ]
               },
               {
                 "group": "CMS",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Cms//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-15"
+                ]
               },
               {
                 "group": "Configuration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Configuration//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-16"
+                ]
               },
               {
                 "group": "Content",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Content//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-17"
+                ]
               },
               {
                 "group": "Credentials",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-18"
+                ]
+              },
+              {
+                "group": "Crystal",
+                "pages": [
+                  "untitled-page-19"
+                ]
               },
               {
                 "group": "Data",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-20"
+                ]
               },
               {
                 "group": "Device",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-21"
+                ]
+              },
+              {
+                "group": "Document Conversion",
+                "pages": [
+                  "untitled-page-22"
+                ]
               },
               {
                 "group": "Email",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.email//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-23"
+                ]
               },
               {
                 "group": "Engine",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Engine//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-24"
+                ]
               },
               {
                 "group": "FIDS Connector",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.FIDS.Connector//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-25"
+                ]
               },
               {
                 "group": "Globalization",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Globalization//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-26"
+                ]
               },
               {
                 "group": "License",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.License//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-27"
+                ]
               },
               {
                 "group": "Messaging",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Messaging//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-28"
+                ]
               },
               {
                 "group": "Migration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Migration//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-29"
+                ]
               },
               {
                 "group": "Orchestration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Orchestration//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-30"
+                ]
               },
               {
                 "group": "Package",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-31"
+                ]
+              },
+              {
+                "group": "Powerpoint to Video",
+                "pages": [
+                  "untitled-page-32"
+                ]
               },
               {
                 "group": "Process",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-33"
+                ]
               },
               {
                 "group": "Replication",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Replication//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-34"
+                ]
               },
               {
                 "group": "Schedule",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-35"
+                ]
+              },
+              {
+                "group": "Sensor",
+                "pages": [
+                  "untitled-page-36"
+                ]
+              },
+              {
+                "group": "Teams Integration",
+                "pages": [
+                  "untitled-page-37"
+                ]
               },
               {
                 "group": "User SCIM",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.User.Scim//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-38"
+                ]
               },
               {
                 "group": "User Profile",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.UserProfile//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-39"
+                ]
               },
               {
                 "group": "Video Conversion",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Video.Conversion//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-40"
+                ]
               },
               {
                 "group": "Viewer",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Viewer//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-41"
+                ]
               },
               {
                 "group": "Web to Image",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json"
+                "pages": [
+                  "untitled-page-42"
+                ]
               }
-            ]
+            ],
+            "icon": "gear-api"
           },
           {
             "dropdown": "Plug-ins",
-            "hidden": true,
             "groups": [
               {
                 "group": "Finessetech",
@@ -1628,9 +1905,44 @@
                       }
                     ]
                   }
+                ],
+                "hidden": true
+              },
+              {
+                "group": "Reporting Plugin",
+                "pages": [
+                  {
+                    "group": "Installation",
+                    "pages": []
+                  },
+                  {
+                    "group": "User Guide",
+                    "pages": [
+                      "getting-started",
+                      "untitled-page-1",
+                      "untitled-page-2",
+                      "untitled-page-3",
+                      "untitled-page-4",
+                      "untitled-page-5",
+                      "cms-2-0-1",
+                      "licenses",
+                      "reports",
+                      "scheduled-reports"
+                    ]
+                  },
+                  {
+                    "group": "Administration",
+                    "pages": [
+                      "overview",
+                      "settings",
+                      "license-and-activation",
+                      "troubleshooting"
+                    ]
+                  }
                 ]
               }
-            ]
+            ],
+            "icon": "plug"
           }
         ]
       },
@@ -2799,123 +3111,112 @@
               },
               {
                 "group": "Domaines",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Nginx.Domains//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Authentification",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Intégration d'authentification",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Authentication.Integration//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "CMS",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Cms//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Configuration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Configuration//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Contenu",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Content//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Identifiants",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Credentials//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Données",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Data//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Appareil",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Device//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Email",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.email//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Moteur",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Engine//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Connecteur FIDS",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.FIDS.Connector//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Globalisation",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Globalization//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Licence",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.License//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Messagerie",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Messaging//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Migration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Migration//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Orchestration",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Orchestration//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Package",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Package//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Processus",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Process//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Réplication",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Replication//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Planification",
-                "openapi": "https://saas.pads365.com/rdx/nds.services.schedule//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "SCIM utilisateur",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.User.Scim//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Profil utilisateur",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.UserProfile//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Conversion vidéo",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Video.Conversion//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Visionneuse",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Viewer//swagger/v1/swagger.json"
+                "pages": []
               },
               {
                 "group": "Web vers image",
-                "openapi": "https://saas.pads365.com/rdx/NDS.Services.Web.ToImage//swagger/v1/swagger.json"
+                "pages": []
               }
             ]
           }
         ]
       }
-    ]
-  },
-  "footer": {
-    "socials": {
-      "linkedin": "https://linkedin.com/company/pads-4"
-    }
-  },
-  "contextual": {
-    "options": [
-      "chatgpt",
-      "claude"
     ]
   }
 }

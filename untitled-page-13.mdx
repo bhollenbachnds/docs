@@ -1,0 +1,223 @@
+---
+title: "NDS.Services.Authentication"
+---
+
+## Overview
+
+Manages all authentication flows for PADS4: identity providers, SSO, MFA, claims mapping, external authentication, groups, roles, permissions, and session token management. This is the central security gateway for all user and service authentication.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Services.Authentication/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Services.Authentication/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Services.Authentication` |
+| Total endpoints | 76 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `POST` | `/api/v1/AuthenticationIdentityProvider` | Get Providers |
+| `GET` | `/api/v1/Claim/GetMappableProperties` | Get Mappable Properties |
+| `GET` | `/api/v1/Claim/{mappingId}` | Get |
+| `POST` | `/api/v1/Claim/GetAll` | Get All |
+| `POST` | `/api/v1/Claim/Save` | Save |
+| `DELETE` | `/api/v1/Claim` | Delete |
+| `POST` | `/api/v1/ExternalAuthentication/Logon` | Ensure User |
+| `POST` | `/api/v1/ExternalAuthenticationProvider` | Get Providers |
+| `GET` | `/api/v1/ExternalAuthenticationProvider` | Get External Authentication Providers |
+| `POST` | `/api/v1/ExternalAuthenticationProvider/GetAllByType` | Get All Providers By Type |
+| `POST` | `/api/v1/ExternalAuthenticationProvider/Save` | Save |
+| `DELETE` | `/api/v1/ExternalAuthenticationProvider/{providerId}` | Delete |
+| `POST` | `/api/v1/ExternalAuthenticationProvider/UploadCertificate` | Upload Certificate |
+| `GET` | `/api/v1/ExternalUserGroupMapping/{id}` | Get |
+| `DELETE` | `/api/v1/ExternalUserGroupMapping/{id}` | Delete |
+| `GET` | `/api/v1/ExternalUserGroupMapping` | Get2 |
+| `POST` | `/api/v1/ExternalUserGroupMapping` | Save |
+| `GET` | `/api/v1/ExternalUserGroupMapping/Provider/{providerId}` | Get By External Authentication Provider |
+| `GET` | `/api/v1/ExternalUserGroup` | Get External Groups |
+| `POST` | `/api/v1/ExternalUserGroup` | Save |
+| `GET` | `/api/v1/ExternalUserGroup/{id}` | Get |
+| `DELETE` | `/api/v1/ExternalUserGroup/{id}` | Delete |
+| `GET` | `/api/v1/LdapProvider` | Get Connections |
+| `POST` | `/api/v1/LdapProvider/Save` | Save Connection |
+| `DELETE` | `/api/v1/LdapProvider/{id}` | Delete Connection |
+| `POST` | `/api/v1/LdapProvider/SearchUsers` | Search Users |
+| `POST` | `/api/v1/LdapProvider/AddUsers` | Add Users |
+| `POST` | `/api/v1/Account/Logon` | Logon |
+| `POST` | `/api/v1/Account/Logoff` | Logoff |
+| `POST` | `/api/v1/Account/ForgotPassword` | Forgot Password |
+| `POST` | `/api/v1/Account/SetNewPassword` | Set New Password |
+| `POST` | `/api/v1/Account/ChangePassword` | Change Password |
+| `POST` | `/api/v1/Account/SetUserLanguage` | Set User Language |
+| `GET` | `/api/v1/Account/IsAuthenticated` | Is Authenticated |
+| `GET` | `/api/v1/Account/GetUserClaims` | Get User Claims |
+| `GET` | `/api/v1/Account/RetrieveUserClaims` | Retrieve User Claims G E T |
+| `POST` | `/api/v1/Account/RetrieveUserClaims` | Retrieve User Claims P O S T |
+| `POST` | `/api/v1/Account/CreateUserOtpUrl` | Get User Otp Url |
+| `POST` | `/api/v1/Account/VerifyTotp/{code}` | Verify Totp |
+| `GET` | `/api/v1/membership` | Get Membership Overview |
+| `GET` | `/api/v1/Role` | Get Roles G E T |
+| `POST` | `/api/v1/Role` | Save Roles |
+| `POST` | `/api/v1/Role/filtered` | Get Roles P O S T |
+| `POST` | `/api/v1/Role/GetIdentities` | Get Identities |
+| `POST` | `/api/v1/Role/delete` | Delete Roles |
+| `POST` | `/api/v1/Role/getroles` | Get Role Roles |
+| `POST` | `/api/v1/Role/setroles` | Set Role Roles |
+| `POST` | `/api/v1/Scim/SetProvisionedUsers` | Set Provisioned Users |
+| `POST` | `/api/v1/Scim/GetProvisionedUsers` | Get Provisioned Users |
+| `GET` | `/api/v1/User/IsReadyForUserMigration` | Is Ready For User Migration |
+| `POST` | `/api/v1/User/identities` | Get Basic Identity Info |
+| `GET` | `/api/v1/User` | Get Users G E T |
+| `POST` | `/api/v1/User` | Save Users |
+| `POST` | `/api/v1/User/filtered` | Get Users P O S T |
+| `POST` | `/api/v1/User/delete` | Delete Users |
+| `POST` | `/api/v1/User/getroles` | Get User Roles |
+| `POST` | `/api/v1/User/setroles` | Set User Roles |
+| `POST` | `/api/v1/User/SetPassword` | Set Password |
+| `POST` | `/api/v1/User/GetNonRelatedUsers` | Get Non Related Users |
+| `POST` | `/api/v1/User/resetMfa` | Reset M F A |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Get Content Transfer State |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics` | Get Bus Diagnostics |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### POST `/api/v1/AuthenticationIdentityProvider`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/AuthenticationIdentityProvider' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/Claim/GetMappableProperties`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/GetMappableProperties'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+---
+
+### GET `/api/v1/Claim/{mappingId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/{mappingId}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Claim/GetAll`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/GetAll' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/Claim/Save`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim/Save' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### DELETE `/api/v1/Claim`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Authentication/api/v1/Claim'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.

@@ -1,0 +1,12 @@
+---
+title: "Dashboard"
+---
+
+The **Dashboard** (`/`) is the landing page for PADS4 users — a live, real-time view of every device's connectivity, fetched from PADS4 on every load (there's no polling on this page; refresh to get the latest).
+
+- **Summary cards**: total devices, online count, offline count, with percentages.
+- **Filters**: free-text search (device name), status (online/offline), group, brand. Filters combine, and results are paginated (15 per page).
+- **Table columns**: Name, Status, Online since, Offline since, Offline duration, Group, Brand — click any column header to sort; click again to reverse.
+- **Empty states**: if filters return nothing, a **Clear all filters** button is offered directly in the empty-state message.
+
+This page always reflects PADS4's current state at the moment you loaded it — it does not use the plugin's local history database.
