@@ -9,7 +9,7 @@ This article describes how to install and configure the PADS4 Viewer on Sharp/NE
 
 ## Installing the Sharp/NEC Compute Module Image
 
-Sharp/NEC provides a custom Raspberry Pi image that is required to run web applications on the Compute Module.
+Sharp/NEC provides a custom Raspberry Pi image. You need this image to run web applications on the Compute Module.
 
 If your device is not running the Sharp/NEC image, install it by following the **Manual flashing the Raspberry Pi over USB** section of the _Quick Reference Guide for Sharp MPi4 Kit 4.1_.
 
@@ -80,7 +80,7 @@ Save the file and reboot the device.
 
 ## Configuring the Viewer
 
-The Sharp/NEC image contains a configuration endpoint that is used to configure the browser startup behavior.
+The Sharp/NEC image contains a configuration endpoint that you use to configure the browser startup behavior.
 
 Open:
 
@@ -109,13 +109,13 @@ Possible values:
 - IP address of the PADS4 Server
 - Hostname of the PADS4 Server
 
-When an IP address or hostname is specified, the Viewer waits until the server is reachable.
+When you specify an IP address or hostname, the Viewer waits until the server is reachable.
 
-When `127.0.0.1` is specified, the Viewer starts even when the device is offline.
+When you specify `127.0.0.1`, the Viewer starts even when the device is offline.
 
 > **Note**
 >
-> Using `127.0.0.1` requires the Viewer application to be hosted using HTTPS.
+> To use `127.0.0.1`, you must host the Viewer application over HTTPS.
 
 ### auto\_close\_browser
 
@@ -159,13 +159,13 @@ false
 
 Specifies the NTP server.
 
-The PADS4 Server can also be used as the NTP server.
+You can also use the PADS4 Server as the NTP server.
 
 Upload the modified configuration file and reboot the device.
 
 ## Updating the Viewer
 
-After the initial installation, Viewer updates are installed automatically.
+After the initial installation, the Viewer installs updates automatically.
 
 When the PADS4 Server is upgraded, the Viewer automatically updates to the version available on the server.
 
