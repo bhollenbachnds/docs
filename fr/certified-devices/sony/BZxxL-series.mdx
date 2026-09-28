@@ -1,0 +1,168 @@
+---
+- title: Sony xxBZxxL
+- description: Installez et configurez le PADS4 Viewer sur les écrans
+    professionnels Sony BZxx Series fonctionnant sous Android.
+---
+
+Ce guide vous accompagne dans l'installation et la configuration du **PADS4 Viewer** sur les **écrans professionnels Sony BZxx Series**.
+
+## Avant de commencer
+
+### Modèles Sony BZxx pris en charge
+
+* BZ53L
+* BZ50L
+* BZ40L
+* BZ35L
+* BZ30L
+* BZ30J
+
+<Warning>
+  Installez et configurez votre **PADS4 Server** avant de configurer l'écran.
+</Warning>
+
+### Configuration minimale requise
+
+* **PADS4 Server :** 2024.2.6 ou version ultérieure
+* **Firmware:** 6.7612 ou version ultérieure
+
+Vérifiez que le firmware de l'appareil satisfait la version minimale avant d'installer PADS4.
+
+## Configuration initiale : vérification du firmware
+
+Avant d'installer PADS4, vérifiez la version du firmware de l'écran :
+
+1. Aller à **Paramètres > À propos > Android TV OS build**.
+2. Vérifiez le numéro de version affiché avant « release keys ».
+3. Si l'écran est en ligne, recherchez les mises à jour du firmware sous **À propos**.
+4. Si l'écran est hors ligne, téléchargez le dernier firmware depuis la page firmware de Sony.
+
+## Installer PADS4Sony depuis une clé USB
+
+Installez le launcher PADS4Sony depuis une clé USB.
+
+1. Téléchargez le **fichier .pkg PADS4Sony** depuis la [page des releases PADS4 sur GitHub](https://github.com/PADS4/PADS4-Viewer-Sony/releases/latest).
+2. Copiez le `.pkg` fichier sur une **clé USB** et insérez-la dans l'écran Sony.
+3. Effectuez une **réinitialisation d'usine** sur l'écran (ignorez cette étape pour un écran neuf) :
+   * Aller à **Paramètres > Système > À propos > Réinitialiser > Réinitialisation des données d'usine**.
+   * Choisissez **Tout effacer**.
+4. L'écran commence la réinitialisation d'usine dans les 15 secondes et redémarre.
+5. Lorsque l'écran de configuration initiale apparaît (sélection de la langue), **ne démarrez pas** le processus de configuration.
+6. L'écran détecte le `.pkg` fichier sur la clé USB et affiche l'écran d'installation du package.
+7. Choisissez **Installer** et suivez les instructions à l'écran.
+8. Après l'installation, le téléviseur ouvre un **écran d'activation**.
+9. Faites défiler jusqu'en bas et sélectionnez **Activer cette application d'administration de l'appareil**.
+10. Lorsque le message **"L'installation est terminée"** apparaît, retirez la clé USB et sélectionnez **OK**.
+11. L'écran revient à l'écran de configuration initiale. Terminez la configuration, mais **ignorez la connexion au compte Google**.
+
+<Tip>
+  Autorisez toutes les demandes d'autorisation présentées pendant ou immédiatement après l'installation.
+</Tip>
+
+## Se connecter au serveur PADS4
+
+Configurez l'URL du serveur PADS4 pour établir une connexion.
+
+**Format d'URL**
+
+```text
+<protocol>://<host>:<port>/<hostpath>/
+```
+
+* **protocole** — `http` ou `https` (selon votre certificat SSL).
+* **hôte** — nom DNS ou adresse IP du serveur PADS4.
+* **port** — optionnel. À inclure uniquement si le serveur PADS4 n'utilise pas les ports HTTP/HTTPS par défaut.
+* **hostpath** — la valeur par défaut est `PADS4`.
+
+**Exemple**
+
+```text
+http://localhost/pads4
+```
+
+### Connecter l'écran
+
+1. Entrez l'**emplacement du serveur PADS4**.
+2. Optionnellement, entrez un **nom de Viewer** — ou laissez le serveur PADS4 en générer un.
+3. Sélectionnez **Démarrer**.
+4. Attendez que le téléchargement du Viewer soit terminé ; le Viewer démarre ensuite.
+5. Lorsque vous y êtes invité, accordez la permission de stocker du contenu de façon permanente sur l'appareil.
+
+<Check>
+  Le PADS4 Viewer démarre et se connecte au serveur PADS4.
+</Check>
+
+## Ajuster les paramètres du PADS4 Viewer
+
+Vous pouvez ajuster les paramètres du Viewer directement sur l'écran :
+
+1. Connectez une **souris** à l'appareil.
+2. **Clic droit** pour ouvrir le menu des paramètres du Viewer.
+3. Ajustez l'orientation de l'écran, les paramètres d'affichage et d'autres options.
+
+Pour revenir à la configuration PADS4Sony, sélectionnez **Paramètres du launcher**.
+
+## Mettre à jour l'application PADS4Sony
+
+L'application PADS4Sony se met à jour automatiquement lorsque le serveur PADS4 est mis à jour.
+
+Pour mettre à jour manuellement :
+
+1. Vérifiez la version du serveur PADS4.
+2. Si une version plus récente est disponible, redémarrez l'écran Sony.
+3. L'application PADS4Sony se met à jour automatiquement au redémarrage.
+
+## Accéder au menu Android pendant que PADS4 est en cours d'exécution
+
+**Paramètres rapides**
+
+1. Appuyez sur le bouton **Options** de la télécommande.
+2. Ajustez les paramètres rapides selon vos besoins.
+
+**Menu des paramètres complet**
+
+1. Appuyez sur le bouton **Accueil** de la télécommande.
+2. L'application PADS4 se ferme.
+3. Pour redémarrer PADS4, allez dans **Paramètres > Système > Redémarrer**. PADS4 se lance automatiquement au démarrage.
+
+## Fonctionnalités prises en charge et limitations
+
+### Général
+
+| Support | Fonctionnalité                                                                |
+| :-----: | :---------------------------------------------------------------------------- |
+|    ✅    | Mises à jour logicielles automatiques lors de la mise à jour du serveur PADS4 |
+|    ✅    | Mode hors ligne — lit le contenu planifié pendant 7 jours                     |
+
+### Appareil
+
+| Support | Fonctionnalité                                                                      |
+| :-----: | :---------------------------------------------------------------------------------- |
+|    ✅    | Mode portrait (menu de l'appareil non pris en charge en portrait)                   |
+|    ❌    | Bloquer la télécommande                                                             |
+|    ✅    | Viewer en cluster                                                                   |
+|    ✅    | Éteindre l'écran — rétroéclairage éteint lorsqu'aucune présentation n'est planifiée |
+
+### Vidéo et contenu
+
+| Support | Fonctionnalité                                               |
+| :-----: | :----------------------------------------------------------- |
+|    ✅    | 2 vidéos par page avec lecture sans interruption (1920x1080) |
+|    ❌    | Rotation, chevauchement, inclinaison, retournement de vidéo  |
+|    ✅    | Streaming HTTP                                               |
+|    ✅    | Mode 4K (3840x2160)                                          |
+
+### Gestion des appareils
+
+| Support | Fonctionnalité                                              |
+| :-----: | :---------------------------------------------------------- |
+|    ✅    | Gestion à distance via PADS4 CTRL Center                    |
+|    ✅    | Redémarrer l'appareil, redémarrer le Viewer                 |
+|    ✅    | Récupérer des captures d'écran (hors vidéo) et des journaux |
+|    ❌    | Bloquer la télécommande et l'arrêt                          |
+
+## Prochaines étapes
+
+* Vérifiez le statut du viewer sur le serveur PADS4.
+* Ajustez les paramètres depuis le menu Viewer sur l'écran.
+* Gérez l'appareil à distance depuis [PADS4 CTRL Center](/fr/ctrl-centre/introduction).
