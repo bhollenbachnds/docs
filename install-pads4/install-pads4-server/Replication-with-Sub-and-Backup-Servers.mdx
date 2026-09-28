@@ -16,7 +16,7 @@ Starting from **PADS4 version 2021.3**, the replication process has been enhance
 
 This update introduces a key **networking requirement**:
 
-- A **host port** must be **opened** in the firewall for communication between servers.
+- You must **open** a **host port** in the firewall for communication between servers.
 - Both **Main Servers** and **Sub/Backup Servers** must be able to establish a **bidirectional connection** for replication to function correctly.
 
 ## Firewall configuration requirements
@@ -25,7 +25,7 @@ From **PADS4 version 2021.3**, replication between servers **requires** that:
 
 - The **Main Server** must be able to initiate a connection with the **Sub/Backup Server**.
 - The **Sub/Backup Server** must be able to initiate a connection with the **Main Server**.
-- The appropriate **host ports** must be **opened in the firewall** to allow traffic in both directions.
+- You must open the appropriate **host ports** in the firewall to allow traffic in both directions.
 
 This differs from previous versions, where only the **Sub/Backup Server** was responsible for initiating the connection to the **Main Server**.
 
