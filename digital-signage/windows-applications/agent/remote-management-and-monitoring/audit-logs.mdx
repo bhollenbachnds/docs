@@ -1,33 +1,33 @@
 With the audit trail log functions, you can view the Audit logs that are stored on your PADS4 Server.
 
-With audit logs, you can, for instance, identify the logon/logoff behaviour of users. Besides that, it is possible to find out which user scheduled a certain presentation, or changed some settings. If a user tries to use an unauthorized application, this improper activity is recorded in the audit trail.
+With audit logs, you can, for instance, identify the logon/logoff behavior of users. Besides that, it is possible to find out which user scheduled a certain presentation, or changed some settings. If a user tries to use an unauthorized application, this improper activity is recorded in the audit trail.
 
  
 
-#### **To view the audit logs that are stored on your PADS4 Server**
+#### To view the audit logs that are stored on your PADS4 Server
 
-1. Click on the **Server** tab in the navigation pane.
+1. Click the **Server** tab in the navigation pane.
 
    ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
 2. Click **Audit Logs** in the list of available server information categories.
 
-After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the Audit log window. By default the period for the current month starting from the 1st is selected.
+After this, the system will automatically retrieve the requested information from the connected PADS4 Server and display the results in the Audit log window. By default, the period for the current month starting from the 1st is selected.
 
 <Warning>
-  By default Audit logs is disabled. use the System Management application to change the server settings to allow Audit logs to be saved.
+  By default, Audit logs are disabled. Use the System Management application to change the server settings to allow Audit logs to be saved.
 </Warning>
 
  
 
-#### **Audit logs window**
+#### Audit logs window
 
 The Audit Logs window shows Audit Log entries that have been stored on your PADS4 Server.
 
 ![EN Agent Audit Window Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-AuditWindow.png)
 
-In the Audit logs window of your PADS4 Server you can view all log entries that have been recorded on your PADS4 Server.
+In the Audit logs window of your PADS4 Server, you can view all log entries that have been recorded on your PADS4 Server.
 
-The **period** can be specified. Besides that, it is possible to **filter the data** by clicking on the filter icon in the column header. Click on **Export View** to export the data, including the filters set.
+You can specify the **period**. You can also **filter the data** by clicking the filter icon in the column header. Click **Export View** to export the data, including the filters set.
 
  
 
@@ -44,7 +44,7 @@ Which application was used by this user.
 A description that describes the action performed by the user. ("Updated Schedule x","Updated Server Settings","Created new Schedule y" )
 
 **Details**\
-When the changes (update) affects one ore more property changes (example "Priority to High", or "StartDate to 01/01/2017"), these will be logged in the details column.\
+When the changes (update) affects one or more property changes (example "Priority to High", or "StartDate to 01/01/2017"), these will be logged in the details column.\
 Each Property and new value pair is separated with a linefeed.
 
 **Usertype**\
@@ -79,15 +79,15 @@ At which server was this action performed.
 
  
 
-#### **Period**
+#### Period
 
 Specify the period from which the data must be retrieved. When there is no data available, a message will be displayed.
 
  
 
-#### **Exporting audit logs information**
+#### Exporting audit logs information
 
-To process the Audit Logs information in an external application (like Microsoft Excel), the information can be exported in various formats. This includes XML and the Microsoft Excel format.
+To process the Audit Logs information in an external application (like Microsoft Excel), you can export it in various formats. This includes XML and the Microsoft Excel format.
 
 To export the Audit Logs information:
 
@@ -102,7 +102,7 @@ To export the Audit Logs information:
 
  
 
-#### **What user information is logged?**
+#### What user information is logged?
 
 - Logon / Logoff attempts for each PADS4 application
 - Scheduler CRUD (Create/Read/Update/Delete) actions for scheduling presentations in the PADS4 Scheduler application\
@@ -152,8 +152,8 @@ To export the Audit Logs information:
  
 
 <Tip>
-  When exporting, you will receive two extra columns EventTypeID and ApplicationID which will contains the numeric value of EventType and Application.\
+  When exporting, you will receive two extra columns EventTypeID and ApplicationID which contain the numeric value of EventType and Application.\
   \
-  Besides that metadata is also stored which contains the following information:\
+  Metadata is also stored, which contains the following information:\
   User, Period, Generation date and optionally filter used on the grid.
 </Tip>

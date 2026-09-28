@@ -7,14 +7,14 @@ This manual provides step-by-step instructions to configure **Single Sign-On** (
 
 ## Create a Microsoft Azure enterprise application
 
-To configure a Microsoft Entra Identity provider, you will need to connect to Azure as an Administrator and create a new enterprise application.
+To configure a Microsoft Entra identity provider, connect to Azure as an Administrator and create a new enterprise application.
 
 1. Go to [**https://portal.azure.com**](https://portal.azure.com) and sign in as an administrator.
-2. On Azure, go to the **Enterprise applications** page 
-3. Click on **New application**  
+2. On Azure, go to the **Enterprise applications** page.
+3. Click **New application**.
 
    ![Azure New Application](/images/ctrl-centre/identity/AzureNewApplication.png)
-3. Click on **Create your own Application**
+3. Click **Create your own Application**.
 
    <img
      src="/images/ctrl-centre/identity/AzureCreateOwnApp.png"
@@ -22,7 +22,7 @@ To configure a Microsoft Entra Identity provider, you will need to connect to Az
      title="Azure Create Own App"
      style={{ width:"82%" }}
    />
-3. Fill in the information requested in the from. For example you can use PADS4
+3. Fill in the information requested in the form. For example, you can use PADS4.
 
    <img
      src="/images/ctrl-centre/identity/AzureCreateYourOwnApp.png"
@@ -30,14 +30,14 @@ To configure a Microsoft Entra Identity provider, you will need to connect to Az
      title="Azure Create Your Own App"
      style={{ width:"73%" }}
    />
-3. Click the **Create** button
+3. Click the **Create** button.
 3. Your application is now being created.
 
-## Setup Single Sign On configuration
+## Set up single sign-on configuration
 
 Now that your application has been created, you need to enable and configure single sign-on.
 
-- In the left menu, click on **Single sign-on**
+- In the left menu, click **Single sign-on**.
 
   <img
     src="/images/ctrl-centre/identity/AzureSelectSSO.png"
@@ -45,18 +45,18 @@ Now that your application has been created, you need to enable and configure sin
     title="Azure Select SSO"
     style={{ width:"31%" }}
   />
-- Select **SAML** as Single Sign-On method
+- Select **SAML** as the single sign-on method.
 
   ![Azure Select SAML](/images/ctrl-centre/identity/AzureSelectSAML.png)
 
-You need to edit the basic SAML method. Click on **Edit** to do so.
+You need to edit the basic SAML method. Click **Edit** to do so.
 
 ![Azure SAML Step1](/images/ctrl-centre/identity/AzureSAMLStep1.png)
 
 Edit the **Basic SAML configuration**.
 
-- For the Identifier use the PADS4 server address and add **/saml** (e.g. https://pads4.mycompany.com/saml)
-- For the Reply URL use the PADS server address and add **/rdx/nds.services/authentication.integration/api/v1/pads/Saml2/Acs** (e.g. https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs)
+- For the Identifier, use the PADS4 server address and add **/saml** (e.g. https://pads4.mycompany.com/saml).
+- For the Reply URL, use the PADS server address and add **/rdx/nds.services/authentication.integration/api/v1/pads/Saml2/Acs** (e.g. https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs).
 
 ![Azure SAML Basic Configuration](/images/ctrl-centre/identity/AzureSAMLBasicConfiguration.png)
 
@@ -65,11 +65,11 @@ Edit the **Basic SAML configuration**.
   e.g., for a domain named "domainone", use https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/domainone/Saml2/Acs).
 </Warning>
 
-- Click on **Save** to apply the changes
+- Click **Save** to apply the changes.
 
 ## Edit attributes & claims
 
-1. You need to edit the **Attributes & Claims**. Click on **Edit** to do so.
+1. You need to edit the **Attributes & Claims**. Click **Edit** to do so.
 
    ![Download](/images/download-10.png)
 2. Edit the **Attributes & Claims**
@@ -104,8 +104,8 @@ To map Microsoft Entra groups to PADS4 roles, configure the group claim:
 
 To specify which user groups can access the application, assign the appropriate user groups to it.
 
-1. In the left menu, select Users and groups.
-2. Click Add user/group to add a new group.
+1. In the left menu, select **Users and groups**.
+2. Click **Add user/group** to add a new group.
 
    <img
      src="/images/ctrl-centre/identity/AzureAddPADS4UsersAndGroups.png"
@@ -121,7 +121,7 @@ To specify which user groups can access the application, assign the appropriate 
      title="Azure Search Group"
      style={{ width:"85%" }}
    />
-4. Click **Assign**
+4. Click **Assign**.
 
 You can repeat this action for each user group you want to assign to the application.
 
@@ -138,7 +138,7 @@ To create the identity provider in PADS4, gather these details from your Microso
 
 You'll use this information later when setting up the identity provider in PADS4.
 
-# Set up the identity provider in PADS4
+## Set up the identity provider in PADS4
 
 After creating your identity provider application, you also need to set up the corresponding identity provider in PADS4.
 
@@ -146,17 +146,17 @@ After creating your identity provider application, you also need to set up the c
 
 To create the identity provider:
 
-1. Log in to PADS4 and navigate to Administration
+1. Log in to PADS4 and navigate to Administration.
 2. In the left-hand menu, click **Credentials**.
-3. Click on **Providers**
-4. Click on **New** and select **Identity** and **Microsoft Entra**
+3. Click **Providers**.
+4. Click **New** and select **Identity** and **Microsoft Entra**.
 
    ![Pads4select Microsoft Entra](/images/ctrl-centre/identity/PADS4SelectMicrosftEntra.png)
 
 ### Fill in provider details
 
-1. **Name** – Enter a display name for the provider in PADS4
-2. **Identifier** – Enter the **Microsoft Entra Identifier** you collected earlier
+1. **Name** – Enter a display name for the provider in PADS4.
+2. **Identifier** – Enter the **Microsoft Entra Identifier** you collected earlier.
 3. **Reply URL** – Enter the URL of your local PADS4 application (e.g., `https://pads4.mycompany.com`).
 4. **Metadata URL** – Enter the **Microsoft Entra: App Federation Metadata URL** metadata URL you collected.
 
@@ -201,7 +201,7 @@ Once enabled, save these values for later use in your Microsoft Entra SCIM confi
 
 Click **Create** to complete the identity provider setup.
 
-# **Finalizing Microsoft Entra ID set-up**
+## Finalize Microsoft Entra ID setup
 
 1. **Log out** and **refresh** the PADS4 Portal.
 2. The **SSO Login** button should now be visible.

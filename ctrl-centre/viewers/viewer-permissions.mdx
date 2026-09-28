@@ -9,11 +9,11 @@ description: "Configure granular Viewer and Viewer group permissions in PADS4 CT
   All versions before that have the viewer permission administration in the PADS4 System Management application.
 </Warning>
 
-The **Viewer permissions** in **PADS4** allows you to have granular control over which **viewer group(s)** and **viewer(s)** are visible for each specific user. This way you can precisely configure what an end user is able to see and control.
+The **Viewer permissions** in **PADS4** allow you to have granular control over which **viewer group(s)** and **viewer(s)** are visible for each specific user. This way you can precisely configure what an end user is able to see and control.
 
-## **Default viewer permissions**
+## Default viewer permissions
 
-Viewer permissions work similarly as the content permissions in the PADS4 Web Portal, on each viewer group or viewer you can right click and a context menu will pop-up with the ability to open the **"Access"** menu.
+Viewer permissions work similarly to the content permissions in the PADS4 Web Portal. Right-click any viewer group or viewer to open a context menu with the option to open the **"Access"** menu.
 
 - In the Detail view of the viewers:
 
@@ -23,24 +23,24 @@ Viewer permissions work similarly as the content permissions in the PADS4 Web Po
 
 ![Treeview Perm](/images/ctrl-centre/viewers/treeview-perm.png)
 
-Once you open the **Access** menu you get an overview of the current permissions that are currently on that viewer group or viewer.
+Once you open the **Access** menu, you get an overview of the current permissions on that viewer group or viewer.
 
 ![Viewer Pm](/images/ctrl-centre/viewers/viewer-pm.png)
 
 ## How to set up permissions
 
-If you want to restrict a certain viewer group ( or viewer ) it is advised to do it as follows:
+To restrict a certain viewer group (or viewer), follow these steps:
 
-Login with your administrator account and go to the **Users** section.
+Log in with your administrator account and go to the **Users** section.
 
 - [Create a new role](https://docs.pads4.com/ctrl-centre/administration/user-management/Roles#customizing-roles)
 - Assign your newly created role to the user that requires viewer restrictions.
 - Remove any of the default viewer roles if assigned.
-- Now go to the Viewers overview and right click on a viewer group / viewer you want the user to be able to see.
-- Click on **Access**
+- Now go to the Viewers overview and right-click a viewer group / viewer you want the user to be able to see.
+- Click **Access**.
 - Now add your newly created role to the list and give it at least the **read** permission so it can see the viewer group / viewer.
   - Add more permissions if required.
-- Now if the user which has the new role assigned logs in, he will only see the viewer group / viewer where his role is assigned.
+- When the user who has the new role logs in, they only see the viewer groups / viewers where their role is assigned.
 
 <Info>
   When you have multiple roles assigned which have different permissions, remember that the most restrictive role always overrules any other role that you might have assigned.
