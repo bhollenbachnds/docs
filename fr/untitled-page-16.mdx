@@ -1,0 +1,169 @@
+---
+- title: NDS.Services.Configuration
+---
+
+## Aperçu
+
+Stocke et récupère des paires clé-valeur de configuration à l'échelle du système et au niveau du domaine. Utilisé par d'autres services pour lire les paramètres d'exécution, les indicateurs de fonctionnalités et la configuration spécifique au déploiement.
+
+| Champ                                 | Valeur                                                                         |
+| ------------------------------------- | ------------------------------------------------------------------------------ |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Configuration`                         |
+| Nombre total de points de terminaison | 22                                                                             |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                        | Description                                      |
+| ------- | --------------------------------------------- | ------------------------------------------------ |
+| `GET`   | `/api/v1/Configuration`                       | Obtenir les nœuds de configuration               |
+| `POST`  | `/api/v1/Configuration`                       | Définir les nœuds de configuration               |
+| `POST`  | `/api/v1/Configuration/delete`                | Supprimer les nœuds de configuration             |
+| `GET`   | `/api/v1/DomainConfig`                        | Obtenir la configuration du domaine              |
+| `POST`  | `/api/v1/DomainConfig`                        | Enregistrer la configuration du domaine          |
+| `GET`   | `/api/v1/Feature`                             | Obtenir les fonctionnalités                      |
+| `GET`   | `/api/v1/Feature/{domain}`                    | Obtenir les fonctionnalités2                     |
+| `GET`   | `/api/v1/Feature/raw`                         | Obtenir les fonctionnalités brutes               |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Obtenir les bascules                             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Obtenir la section de configuration              |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Obtenir la configuration                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Obtenir les disjoncteurs                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Réinitialiser le disjoncteur                     |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isoler le disjoncteur                            |
+| `POST`  | `/api/v1/diagnostics/events`                  | Obtenir les événements                           |
+| `GET`   | `/api/v1/health`                              | Obtenir                                          |
+| `GET`   | `/api/v1/health/clean`                        | Obtenir (nettoyé)                                |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Remettre en file d'attente les messages d'erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purger les messages d'erreur                     |
+| `GET`   | `/migration`                                  | Obtenir les migrations                           |
+| `POST`  | `/migration`                                  | Exécuter la migration                            |
+| `GET`   | `/version`                                    | Obtenir                                          |
+
+***
+
+## Exemples de requêtes & réponses
+
+### GET `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Configuration/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration/delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Feature`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Feature'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes schémas indiqués ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.
