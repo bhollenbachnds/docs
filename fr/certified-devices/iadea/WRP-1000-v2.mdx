@@ -1,23 +1,26 @@
-Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur l'appareil **IAdea WRP-1000 v2 (Android 12)**.
+---
+- title: IAdea WRP-1000 v2 (Android 12)
+- description: Installez et configurez PADS4 Viewer sur le panneau de signalétique
+    de salle IAdea WRP-1000 v2 Android 12 exécutant PADS4 Server 2023.1 ou
+    version ultérieure.
+---
 
-***
+Ce guide fournit des instructions étape par étape pour **installer et configurer PADS4 Viewer** sur le **IAdea WRP-1000 v2 (Android 12)** appareil.
 
 ## **1. Première utilisation**
 
-Avant l'installation, assurez-vous que le **PADS4 Server est configuré correctement**.
+Avant l'installation, assurez-vous que le **PADS4 Server est correctement configuré et installé**.
 
 <Note>
-  La version minimale **PADS4 Server** requise est **2023.1**.
+  La version minimale du **PADS4 Server** requise est **2023.1**.
 </Note>
-
-***
 
 ### **1.1 Réinitialisation de l'appareil**
 
 Si l'appareil a déjà été utilisé, effectuez une **réinitialisation d'usine** pour effacer le stockage et éviter les conflits logiciels.
 
 <Steps>
-  <Step title="Étape Une">
+  <Step title="Étape Un">
     Ouvrez **IAdea Basic Settings**.
   </Step>
 
@@ -39,14 +42,12 @@ Si l'appareil a déjà été utilisé, effectuez une **réinitialisation d'usine
 </Steps>
 
 <Warning>
-  **La réinitialisation d'usine effacera toutes les données**. Veuillez sauvegarder toute information importante avant de continuer.
+  **La réinitialisation d'usine effacera toutes les données**. Veuillez sauvegarder toutes les informations importantes avant de continuer.
 </Warning>
-
-***
 
 ### **1.2 Vérification du firmware de l'appareil**
 
-Assurez-vous que le **le firmware est mis à jour** à au moins **4.0.3 ou supérieur** avant d'installer PADS4.
+Assurez-vous que le **firmware est mis à jour** à au moins **4.0.3 ou supérieur** avant d'installer PADS4.
 
 <Steps>
   <Step title="Étape Un">
@@ -70,9 +71,7 @@ Assurez-vous que le **le firmware est mis à jour** à au moins **4.0.3 ou supé
   Version du firmware requise : **WRP-1000 (Android 12) – Firmware 4.0.3 ou supérieur**.
 </Note>
 
-***
-
-### **1.3 Mise à jour du Firmware**
+### **1.3 Mise à jour du firmware**
 
 Si votre version du firmware est obsolète, suivez ces étapes pour la mettre à jour :
 
@@ -106,11 +105,9 @@ Si votre version du firmware est obsolète, suivez ces étapes pour la mettre à
   **Les mises à jour du firmware peuvent prendre un certain temps.**
 </Note>
 
-***
+### **1.4 Configuration de la date et de l'heure**
 
-### **1.4 Configuration de la Date et de l'Heure**
-
-Des paramètres de date/heure incorrects peuvent provoquer des **erreurs de certificat et des problèmes de connexion**.
+Des paramètres de date/heure incorrects peuvent entraîner des **erreurs de certificat et des problèmes de connexion**.
 
 <Steps>
   <Step title="Étape Un">
@@ -118,29 +115,25 @@ Des paramètres de date/heure incorrects peuvent provoquer des **erreurs de cert
   </Step>
 
   <Step title="Étape Deux">
-    Cliquez sur **Time Zone**.
+    Cliquez sur **Fuseau horaire**.
   </Step>
 
   <Step title="Étape Trois">
-    Ajustez les paramètres de **Date & Time** si nécessaire.
+    Ajustez les **Date & Heure** si nécessaire.
   </Step>
 
   <Step title="Étape Quatre">
-    Cliquez sur le **Back button** pour enregistrer les modifications.
+    Cliquez sur le **bouton Retour** pour enregistrer les modifications.
   </Step>
 </Steps>
-
-***
 
 ## **2. Installation de PADS4 Viewer**
 
 Suivez les étapes ci-dessous pour installer et configurer **PADS4 Viewer sur l'IAdea WRP-1000 v2 (Android 12)**.
 
-***
-
 ### **2.1 Téléchargement de PADS4 Viewer**
 
-Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
+Le **PADS4IAdea.apk** peut être téléchargé depuis :
 
 * **PADS4 Server**:
 
@@ -149,13 +142,11 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
   ```
 
   *`(Replace [yourPADS4Server] with your server’s IP or domain name. The default domain is PADS4.)`*
-* **Github**: Téléchargez la dernière version depuis [**here**](https://github.com/PADS4/PADS4-Viewer-IAdea/releases/latest).
+* **Github**: Téléchargez la dernière version depuis [**ici**](https://github.com/PADS4/PADS4-Viewer-IAdea/releases/latest).
 
 <Warning>
-  Si vous téléchargez la dernière version, assurez-vous de la placer également dans le **PADS4 Server apps directory**, car l'appareil installera la version disponible sur le serveur.
+  Si vous téléchargez la dernière version, assurez-vous de la placer également dans le **répertoire des applications du PADS4 Server**, car l'appareil installera la version disponible sur le serveur.
 </Warning>
-
-***
 
 ### **2.2 Installation de PADS4 Viewer**
 
@@ -175,7 +166,7 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
   </Step>
 
   <Step title="Étape Quatre">
-    L'**Android Home Screen** sera maintenant accessible.
+    L'**écran d'accueil Android** sera désormais accessible.
   </Step>
 </Steps>
 
@@ -183,7 +174,7 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
 
 <Steps>
   <Step title="Étape Un">
-    Copiez le fichier **PADS4IAdea.apk** sur une **clé USB**.
+    Copiez le **PADS4IAdea.apk** sur une **clé USB**.
   </Step>
 
   <Step title="Étape Deux">
@@ -191,7 +182,7 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
   </Step>
 
   <Step title="Étape Trois">
-    Ouvrez l'**application Files** sur l'appareil.
+    Ouvrez l'**application Fichiers** sur l'appareil.
   </Step>
 
   <Step title="Étape Quatre">
@@ -199,21 +190,21 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
   </Step>
 
   <Step title="Étape Cinq">
-    Sélectionnez **PADS4IAdea.apk** et cliquez sur **Continue** dans la boîte de dialogue qui apparaît.
+    Sélectionnez **PADS4IAdea.apk** et cliquez sur **Continuer** dans la boîte de dialogue qui apparaît.
   </Step>
 
   <Step title="Étape Six">
-    Cliquez sur **Install** lorsque vous y êtes invité.
+    Cliquez sur **Installer** lorsque vous y êtes invité.
   </Step>
 
   <Step title="Étape Sept">
-    Attendez que l'installation soit terminée et cliquez sur **Done**.
+    Attendez que l'installation soit terminée et cliquez sur **Terminé**.
   </Step>
 </Steps>
 
 ***
 
-### **2.3 Configuration du démarrage automatique de PADS4 Viewer**
+### **2.3 Configurer PADS4 Viewer pour démarrer automatiquement**
 
 <Steps>
   <Step title="Étape Un">
@@ -233,7 +224,7 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
   </Step>
 
   <Step title="Étape Cinq">
-    Dans **Package Name**, saisissez :
+    Dans **Package Name**, entrez :
 
     ```
     com.pads4.viewer.iadea  
@@ -259,8 +250,8 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
 | :------------: | ------------------------------------------------------------------------------------------------ |
 |        ✅       | **Texte, Texte formaté, Images** *(JPG, PNG, BMP, GIF jusqu'à 1920x1080)*                        |
 |        ✅       | **Lecture vidéo** *(H264, H265, WebM VP8 jusqu'à 1920x1080, jusqu'à 2 vidéos FHD simultanément)* |
-|        ✅       | **Streaming Vidéo** *(HTTPS & HLS streaming supportés)*                                          |
-|        ✅       | **Éléments Web, Table, PowerPoint, PDF**                                                         |
+|        ✅       | **Vidéo en streaming** *(Streaming HTTPS & HLS pris en charge)*                                  |
+|        ✅       | **Éléments Web, Tableau, PowerPoint, PDF**                                                       |
 
 ***
 
@@ -270,8 +261,8 @@ Le fichier **PADS4IAdea.apk** peut être téléchargé depuis :
 | :------------: | --------------------------------------------------------------------- |
 |        ✅       | **Gestion à distance des appareils** – Géré via **PADS4 CTRL Center** |
 |        ✅       | **Redémarrer le Viewer & Redémarrer l'appareil**                      |
-|        ❌       | **Éteindre l'appareil** – Non pris en charge                          |
-|        ✅       | **Support TLS HTTPS**                                                 |
+|        ❌       | **Arrêt de l'appareil** – Non pris en charge                          |
+|        ✅       | **Prise en charge TLS HTTPS**                                         |
 |        ❌       | **Wake-on-LAN** – Non pris en charge                                  |
 |        ✅       | **Suivi de preuve de diffusion**                                      |
 |        ✅       | **Mise en cache du contenu & Planifications hors ligne**              |
