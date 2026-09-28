@@ -13,21 +13,21 @@ This setup ensures that if one PADS4 server becomes unavailable, the system can 
 - **DNS API Switcher**: Automatically redirects traffic between primary and secondary servers
 - **Unified Access**: Viewers and operators use a common DNS address
 
-## Step-by-Step Setup
+## Step-by-step setup
 
-### Step 1: Prepare the SQL Database
+### Step 1: Prepare the SQL database
 
 - Set up a **SQL Server** on a dedicated machine in your network.
 - Follow the standard steps for **creating a PADS4FIDS database** on this server.
 - Ensure both PADS4 servers will have access to this SQL Server.
 
-### Step 2: Install Two PADS4FIDS Servers
+### Step 2: Install two PADS4FIDS servers
 
 - Deploy **two separate PADS4FIDS servers** (on two virtual or physical machines).
 - These servers will **share the same licensing**, but you must contact the **PADS4 Sales Team** to authorize this configuration.
 - Refer to the official **PADS4 installation manual** for setup instructions.
 
-### Step 3: Install a DNS API Switcher
+### Step 3: Install a DNS API switcher
 
 - Install the **DNS API Switcher** on a machine that is **not one of the PADS4 servers**.
 - This machine can be the SQL server or another system that can **communicate with both PADS4 servers and all PADS4 Viewers**.
@@ -35,16 +35,16 @@ This setup ensures that if one PADS4 server becomes unavailable, the system can 
   - Use the **primary PADS4 server** as the default endpoint
   - Automatically switch to the **secondary server** if the primary becomes unreachable
 
-### Step 4: Configure Viewers and Operator Access
+### Step 4: Configure viewers and operator access
 
 - Configure all **PADS4 Viewers** to use the **DNS address** from the API switcher instead of a fixed server IP.
-- The DNS address should be entered as the **PADS4 Server IP** in viewer connection settings.
+- Enter the DNS address as the **PADS4 Server IP** in viewer connection settings.
 - Default ports remain unchanged unless otherwise specified:
   - **Port 80** (HTTP)
   - **Port 7237** (PADS4 communication)
 - Users accessing the **PADS4FIDS Operator** must also use the **DNS address** to ensure continuity, regardless of which server is active.
 
-## Network Diagram
+## Network diagram
 
 _A network topology diagram would be displayed here, illustrating the relationship between:_
 

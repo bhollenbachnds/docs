@@ -5,7 +5,7 @@ description: "Configure Microsoft Entra ID SAML single sign-on for PADS4, create
 
 This manual provides step-by-step instructions to configure **Single Sign-On** (SSO) for **PADS4** using **Microsoft Entra ID**.
 
-## Create a Microsoft Azure Enterprise Application
+## Create a Microsoft Azure enterprise application
 
 To configure a Microsoft Entra Identity provider, you will need to connect to Azure as an Administrator and create a new enterprise application.
 
@@ -67,7 +67,7 @@ Edit the **Basic SAML configuration**.
 
 - Click on **Save** to apply the changes
 
-## Edit Attributes & Claims
+## Edit attributes & claims
 
 1. You need to edit the **Attributes & Claims**. Click on **Edit** to do so.
 
@@ -76,13 +76,13 @@ Edit the **Basic SAML configuration**.
 
    ![Download](/images/download-11.png)
 
-## Create the Group Claim
+## Create the group claim
 
 To map Microsoft Entra groups to PADS4 roles, configure the group claim:
 
 1. Click **Add new group claim**.
 2. Select **Groups assigned to the application** (radio button).
-3. Choose **Group ID** as the source attribute.
+3. Select **Group ID** as the source attribute.
 4. Click **Save**.
 
 <img
@@ -113,7 +113,7 @@ To specify which user groups can access the application, assign the appropriate 
      title="Azure Add Pads4users And Groups"
      style={{ width:"83%" }}
    />
-3. Click **Users and groups**, choose the group you want to assign, and then click **Select**.
+3. Click **Users and groups**, select the group you want to assign, and then click **Select**.
 
    <img
      src="/images/ctrl-centre/identity/AzureSearchGroup.png"
@@ -183,7 +183,7 @@ To create the identity provider:
 
 If you don’t need to enable SCIM provisioning, click **Create** to finish setting up the identity provider.
 
-### Enable SCIM Provisioning (Optional)
+### Enable SCIM provisioning (optional)
 
 You can enable SCIM provisioning during identity provider creation. This feature synchronizes users between Microsoft Entra and PADS4, automatically creating, updating, or deleting users linked to the application.
 

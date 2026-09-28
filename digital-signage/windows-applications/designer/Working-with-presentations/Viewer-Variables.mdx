@@ -3,7 +3,7 @@
 
 ---
 
-## **What Are Viewer Variables?**
+## **What are Viewer Variables?**
 
 - **Viewer-specific placeholders** that can dynamically adjust content shown in presentations.
 - Used in **text, data providers, filters, rules, property bindings**, and more.
@@ -13,9 +13,9 @@
 
 ---
 
-## **Where to Define Viewer Variables?**
+## **Where to define Viewer Variables?**
 
-### **1. System Management Application (Recommended)**
+### **1. System Management application (recommended)**
 - **Add and manage** Viewer Variables.
 - Assign **default values** that apply to all Viewers.
 - Ensures **centralized control** and prevents unauthorized creation or deletion via PADS4 Agent.
@@ -24,12 +24,12 @@
 - Adjust **values for individual Viewers** under the **Server tab**.
 - Overwrites the default value assigned in System Management.
 
-### **3. Viewer Options Window (on the Viewer device)**
+### **3. Viewer Options window (on the Viewer device)**
 - Adjust Viewer Variables directly on the Viewer for **local adjustments**.
 
 ---
 
-## **Example: Personalized Text with Viewer Variables**
+## **Example: Personalized text with Viewer Variables**
 
 If you define a Viewer Variable `#Store Name#` with the default value **"New York Health"**, and use this text in a Text Element:
 
@@ -43,7 +43,7 @@ If you update the variable in PADS4 Agent or Viewer options (e.g., to "Chicago H
 
 ---
 
-## **Where Can Viewer Variables Be Used?**
+## **Where can Viewer Variables be used?**
 
 - **Text fields** in elements.
 - **Data Providers** (queries, filters, expressions, sort, file paths).
@@ -54,7 +54,7 @@ If you update the variable in PADS4 Agent or Viewer options (e.g., to "Chicago H
 
 ---
 
-## **Automation Examples Using Viewer Variables**
+## **Automation examples using Viewer Variables**
 
 | **Use Case**                                | **Example**                                                      |
 |---------------------------------------------|------------------------------------------------------------------|
@@ -65,7 +65,7 @@ If you update the variable in PADS4 Agent or Viewer options (e.g., to "Chicago H
 
 ---
 
-## **When Are Viewer Variables Transformed into Actual Values?**
+## **When are Viewer Variables transformed into actual values?**
 
 | **Context**                                      | **When Replaced**                                                     |
 |--------------------------------------------------|----------------------------------------------------------------------|
@@ -78,7 +78,7 @@ If you update the variable in PADS4 Agent or Viewer options (e.g., to "Chicago H
 
 ---
 
-## **Playlist Handling with Viewer Variables**
+## **Playlist handling with Viewer Variables**
 
 - **Single-item, non-alternating playlist**:  
   Viewer Variable is replaced at load time and **remains static** until next load.
@@ -87,7 +87,7 @@ If you update the variable in PADS4 Agent or Viewer options (e.g., to "Chicago H
 
 ---
 
-## **Important Notes**
+## **Important notes**
 
 - **Do NOT use Viewer Variables for constantly changing values.**  
   Viewer Variables are **not designed** to function as high-frequency data sources (use Data Providers for that).
@@ -96,7 +96,7 @@ If you update the variable in PADS4 Agent or Viewer options (e.g., to "Chicago H
 
 ---
 
-## **Key Benefits**
+## **Key benefits**
 
 - **Centralized content management** with dynamic local personalization.
 - **Single presentation** serving multiple Viewers with unique content.

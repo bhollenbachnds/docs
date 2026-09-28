@@ -3,27 +3,27 @@ The **Cognimatics feed provider** allows integration with **Cognimatics devices*
 
 ---
 
-## **Steps to Add or Modify a Cognimatics Data Provider**  
+## **Steps to add or modify a Cognimatics data provider**  
 
 ### **1. Start the Data Provider Wizard**  
 - Follow the steps in **Adding a Data Provider** or **Editing a Data Provider**.  
-- Choose **Cognimatics** as the provider type.  
+- Select **Cognimatics** as the provider type.  
 
-### **2. Configure Cognimatics Connection Settings**  
+### **2. Configure Cognimatics connection settings**  
 - Enter the **HTTP Address (IP Address)** of the **Cognimatics application**.  
 - Alternatively, specify a **manual URL** with all parameters.  
 
-### **3. Select the Active Source**  
-- Choose the **installed and active source** from the list.  
+### **3. Select the active source**  
+- Select the **installed and active source** from the list.  
 - Only **one source** can be active at a time.  
 - Selecting an **inactive source** will result in a **404 error** when testing.  
 
-### **4. Select Data Type: Real-Time or Period**  
+### **4. Select data type: Real-time or period**  
 
-#### **Real-Time Data**  
+#### **Real-time data**  
 - Displays **current people count** entering or leaving a location.  
 
-#### **Period-Based Data**  
+#### **Period-based data**  
 - Retrieves **statistical results** for a specific period:  
 
 | Period Option | Description |
@@ -35,9 +35,9 @@ The **Cognimatics feed provider** allows integration with **Cognimatics devices*
 
 ---
 
-## **5. Data Fields Returned by the Cognimatics Feed**  
+## **5. Data fields returned by the Cognimatics feed**  
 
-### **People Counter**  
+### **People counter**  
 | Field | Type | Description |
 |--------|------|-------------|
 | **Name** | String | Name of the reader. |
@@ -47,7 +47,7 @@ The **Cognimatics feed provider** allows integration with **Cognimatics devices*
 | **People Inside** | Integer | Difference between `In` and `Out` values. |
 | **Timestamp** | Date/Time | Time of data recording. |
 
-### **One-Way Flow Monitoring**  
+### **One-way flow monitoring**  
 | Field | Type | Description |
 |--------|------|-------------|
 | **Name** | String | Name of the reader. |
@@ -57,7 +57,7 @@ The **Cognimatics feed provider** allows integration with **Cognimatics devices*
 | **People Inside** | Integer | Difference between `In` and `Out` values. |
 | **Timestamp** | Date/Time | Time of data recording. |
 
-### **Queue Monitoring**  
+### **Queue monitoring**  
 | Field | Type | Description |
 |--------|------|-------------|
 | **Serial** | String | Serial number of the software. |
@@ -71,7 +71,7 @@ The **Cognimatics feed provider** allows integration with **Cognimatics devices*
 | **Region 3 People** | Integer | People in **Region 3**. |
 | **Timestamp** | Date/Time | Time of data recording. |
 
-### **Occupancy Monitoring**  
+### **Occupancy monitoring**  
 | Field | Type | Description |
 |--------|------|-------------|
 | **Name** | String | Name of the reader. |
@@ -81,7 +81,7 @@ The **Cognimatics feed provider** allows integration with **Cognimatics devices*
 | **People Inside** | Integer | Difference between `In` and `Out` values. |
 | **Timestamp** | Date/Time | Time of data recording. |
 
-### **Demographics Analysis**  
+### **Demographics analysis**  
 | Field | Type | Description |
 |--------|------|-------------|
 | **Time Start** | Date/Time | First recorded face observation. |
@@ -95,13 +95,13 @@ The **Cognimatics feed provider** allows integration with **Cognimatics devices*
 
 ---
 
-## **6. Finish the Setup**  
+## **6. Finish the setup**  
 - Click **Next** to proceed.  
 - Complete the wizard as described in **Adding a Data Provider**.  
 
 ---
 
-## **Important Considerations**  
+## **Important considerations**  
 
 - **Ensure the Correct Source is Selected:**  
   - If an **inactive source** is selected, the **Preview** button will return a **404 error**.  

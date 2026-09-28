@@ -4,7 +4,7 @@ For more details on **binding an element** to an external data source, refer to 
 
 ---
 
-## **XML Structure for External Playlists**
+## **XML structure for external playlists**
 
 To be recognized by **PADS4**, external playlists must follow a **specific XML structure**. Below is an example:
 
@@ -16,14 +16,14 @@ To be recognized by **PADS4**, external playlists must follow a **specific XML s
 </PlayList>
 ```
 
-### **Key Details:**
+### **Key details:**
 
 - Playlist text items can contain **multiple lines**, separated by an **[Enter]**.
 - **Duration** and **EffectDuration** are measured in **milliseconds**.
 
 ---
 
-## **Determining the Correct XML Structure**
+## **Determining the correct XML structure**
 
 Each **element type** requires a slightly different **XML format**. To ensure the correct structure, follow these steps:
 
@@ -35,7 +35,7 @@ Each **element type** requires a slightly different **XML format**. To ensure th
 
 ---
 
-## **Playback of External Playlists**
+## **Playback of external playlists**
 
 The behavior of an **external playlist** is determined by:
 
@@ -46,11 +46,11 @@ The behavior of an **external playlist** is determined by:
 
 ---
 
-## **Storing Playlists in a Column (XML Data Provider Only)**
+## **Storing playlists in a column (XML data provider only)**
 
 If you need to store **nested playlists** within an **XML file**, the XML parser may misinterpret the structure. To prevent this, **replace** `<` and `>` with `&lt;` and `&gt;`.
 
-### **Example Corrected XML:**
+### **Example corrected XML:**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -67,9 +67,9 @@ If you need to store **nested playlists** within an **XML file**, the XML parser
 
 ---
 
-## **Playlist Enumerations Summary**
+## **Playlist enumerations summary**
 
-### **Content Type Values**
+### **Content type values**
 
 | Value | Description                                                         |
 | ----- | ------------------------------------------------------------------- |
@@ -82,7 +82,7 @@ If you need to store **nested playlists** within an **XML file**, the XML parser
 
 ---
 
-### **Effect Values**
+### **Effect values**
 
 | Value   | Description                                                  |
 | ------- | ------------------------------------------------------------ |
@@ -122,7 +122,7 @@ If you need to store **nested playlists** within an **XML file**, the XML parser
 
 ---
 
-### **Final Notes**
+### **Final notes**
 
 - Using **external playlists** ensures **dynamic content updates** without manual intervention.
 - **Data providers** can be used to fetch real-time playlist items.

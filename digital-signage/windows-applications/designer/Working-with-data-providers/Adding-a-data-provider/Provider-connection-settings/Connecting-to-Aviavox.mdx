@@ -3,26 +3,26 @@ The **Aviavox provider** in **PADS4** enables integration with the **Aviavox Art
 
 ---
 
-### **Steps to Add or Modify an Aviavox Connection**
+### **Steps to add or modify an Aviavox connection**
 
 #### **1. Start the Data Provider Wizard**
 - Open **PADS4** and navigate to the **Data Provider Wizard**.
 - Select **Aviavox** as the **provider type**.
 - Click **Next** to continue.
 
-#### **2. Configure the Aviavox Connection Settings**
+#### **2. Configure the Aviavox connection settings**
 - Enter the **Server IP Address** where the **Aviavox server** is running.
 - Enter the **Port Number** for communication.
 - Select the appropriate **Text Encoding** format.
 - Click **Next** to proceed.
 
-#### **3. Complete the Setup**
+#### **3. Complete the setup**
 - Review the connection settings.
 - Click **Finish** to save the data provider.
 
 ---
 
-### **How Aviavox Works in PADS4**
+### **How Aviavox works in PADS4**
 - The **Aviavox system** pushes announcements to the **PADS4 Aviavox data provider**.
 - Each message includes **duration**, **language**, **zones**, and **text content**.
 - Once the message is announced, it is **removed from the data provider table**.
@@ -30,7 +30,7 @@ The **Aviavox provider** in **PADS4** enables integration with the **Aviavox Art
 
 ---
 
-### **Aviavox Data Structure**
+### **Aviavox data structure**
 | **Column Name**       | **Description** |
 |----------------------|--------------------------------------------|
 | **ID** | Unique message identifier |
@@ -44,7 +44,7 @@ The **Aviavox provider** in **PADS4** enables integration with the **Aviavox Art
 
 ---
 
-### **Example of an Aviavox Message Structure**
+### **Example of an Aviavox message structure**
 ```xml
 <Announcements>
   <Announcement>
@@ -61,7 +61,7 @@ The **Aviavox provider** in **PADS4** enables integration with the **Aviavox Art
 ```
 ---
 
-### **Key Considerations**
+### **Key considerations**
 - **Real-time updates**: Messages arrive dynamically from **Aviavox** and are removed after playback.
 - **Multi-zone support**: Messages can be played **simultaneously** in different zones.
 - **Language support**: Each message can be **multilingual**, with different translations.

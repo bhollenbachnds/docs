@@ -13,7 +13,7 @@ To follow this example, you need:
 - A **Google Chrome browser** to simulate multiple Viewers.
 - **PADS4 CTRL Center** and **PADS4 Designer** installed.
 
-## **Step 1: Simulating Cluster Viewers in Chrome**
+## **Step 1: Simulating cluster viewers in Chrome**
 
 1. **Open Chrome** and start a **HTML5 Viewer** using:
    ```text
@@ -27,7 +27,7 @@ To follow this example, you need:
 4. Arrange the browsers side by side to simulate a **multi-screen cluster**.
 5. A **green indicator** in the bottom-left confirms the Viewers are connected to the PADS4 Server.
 
-## **Step 2: Creating a Cluster Group in PADS4 CTRL Center**
+## **Step 2: Creating a cluster group in PADS4 CTRL Center**
 
 1. **Open PADS4 CTRL Center** in a browser.
 2. Navigate to **Viewers \> Overview**.
@@ -38,7 +38,7 @@ To follow this example, you need:
    - Departure Cluster3
 5. **Save the group**.
 
-## **Step 3: Creating a Cluster in PADS4 CTRL Center**
+## **Step 3: Creating a cluster in PADS4 CTRL Center**
 
 1. **Go to Viewers \> Clusters**.
 2. **Click "\+ New"** to create a new Cluster.
@@ -48,7 +48,7 @@ To follow this example, you need:
 5. **Click Save**.
    - The Cluster is now ready.
 
-## **Step 4: Download & Import the Presentation**
+## **Step 4: Download & import the presentation**
 
 1. **Download the Departure Screen presentation** file (`departure.padsz`).
 2. **Open PADS4 Scheduler** _(Windows application)_.
@@ -58,7 +58,7 @@ To follow this example, you need:
    - Select **departure.padsz**.
    - Follow the wizard to copy images and database content.
 
-## **Step 5: Scheduling the Presentation to the Cluster**
+## **Step 5: Scheduling the presentation to the cluster**
 
 1. **Open the Departure Screen presentation** in **PADS4 Designer**.
 2. **Go to the ribbon bar** and click **Schedule**.
@@ -67,7 +67,7 @@ To follow this example, you need:
 
 Now, the presentation will be shown across all **Cluster Viewers**.
 
-## **Step 6: Simulating Device Failure**
+## **Step 6: Simulating device failure**
 
 1. **Close Departure Cluster2's browser**.
    - **Departure Cluster3 will take over its data.**
@@ -77,9 +77,9 @@ Now, the presentation will be shown across all **Cluster Viewers**.
 
 This demonstrates how **PADS4 dynamically adjusts content** based on **Viewer availability**.
 
-## **How It Works in PADS4**
+## **How it works in PADS4**
 
-### **Cluster Rules and Page Management**
+### **Cluster rules and page management**
 
 1. **Each Viewer has a dedicated page**:
    - Page 1 → Departure Cluster1
@@ -90,21 +90,21 @@ This demonstrates how **PADS4 dynamically adjusts content** based on **Viewer av
    - **If a Viewer is available**, it **shows its assigned page**.
    - If a **Viewer fails**, another **automatically takes over**.
 
-### **Database-Connected Table Elements**
+### **Database-connected table elements**
 
 - **Page 1 → Rows 1-17**
 - **Page 2 → Rows 18-35**
 - **Page 3 → Rows 36-53**
 - If a Viewer **fails**, remaining Viewers adjust content **automatically**.
 
-## **Why Use Clusters?**
+## **Why use clusters?**
 
 - **Ensures continuous information flow** in case of hardware failure.
 - **Prioritizes critical information** dynamically.
 - **Enables smart automation** with predefined rules.
 - **Scales seamlessly** for **airports, retail displays, video walls, and more**.
 
-## **Advanced Cluster Features**
+## **Advanced cluster features**
 
 - Show **backup content (e.g., videos) when data is missing**.
 - **Adjust font size** dynamically if Viewers fail.

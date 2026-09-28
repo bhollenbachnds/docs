@@ -9,7 +9,7 @@ The PADS4 Configuration tool lets you define and manage key system settings for 
   ![Pads4config](/images/install-pads4/PADS4Config.png)
 </Frame>
 
-### Hosting Configuration
+### Hosting configuration
 
 Define access ports for the PADS4 interface and secure them with HTTPS.
 
@@ -18,17 +18,17 @@ Define access ports for the PADS4 interface and secure them with HTTPS.
 - **Enable HSTS**: Redirects HTTP to HTTPS automatically.
 - **TLS Version:** Select TLS 1.2\+ or 1.3. This is the minimum TLS versions that is used. If TLS 1.3 is available it will be used on TLS.1.2\+
 
-### Message Broker Configuration
+### Message broker configuration
 
 - **PADS4 Message Broker** This is the default setting and applicable for most installations.
 - **RabbitMQ** This is for legacy or specific installations
 
-### **Reverse Proxy Configuration**
+### **Reverse proxy configuration**
 
 - **PADS4 Reverse Proxy** This is the default setting and applicable for most installations
 - **NGinx** This is for legacy or specific installations
 
-### Root User Configuration
+### Root user configuration
 
 - **Username:** su/root
 - **Password:** Enter strong password for su\\root user; [required for system login.](https://docs.pads4.com/ctrl-centre/account-creation)
@@ -56,7 +56,7 @@ These settings are for PADS4 CMS 1.0.
   When changing the database while PADS4 is in use, the existing data will not be migrated. The new database starts empty.
 </Note>
 
-### Service Selection
+### Service selection
 
 To boost performance, disable unused microservices on the PADS4 Server. Configurable options include NDS.PADS4.FIDS.Server, NDS.Services.PowerBI, NDS.Services.Teams.Integration.
 
@@ -77,6 +77,6 @@ To boost performance, disable unused microservices on the PADS4 Server. Configur
   When changing the database while PADS4 is in use, the existing data will not be migrated. The new database starts empty.
 </Note>
 
-### Save and Restart Configuration
+### Save and restart configuration
 
 Click **Apply** to save settings and automatically restart services (takes about 30 seconds).
