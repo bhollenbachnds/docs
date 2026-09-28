@@ -17,17 +17,17 @@ Follow the steps below to configure your Microsoft Entra ID environment for use 
 
 ## Register the application
 
-1. Open a browser and navigate to the Microsoft Entra ID admin center and login using a**personal account**  (aka: Microsoft Account) or **Work or School Account**.
-2. Select **Identity **in the left-hand navigation, then select **App registrations** under **Applications**.
+1. Open a browser and navigate to the Microsoft Entra ID admin center and login using a **personal account** (aka: Microsoft Account) or **Work or School Account**.
+2. Select **Identity** in the left-hand navigation, then select **App registrations** under **Applications**.
 
    ![Image38 Pn](/images/Image38.png)
 3. Select **New registration**. On the **Register an application** page, set the values as follows.
 
-   **a. **Set **Name **to a friendly name for your app.
+   **a.** Set **Name** to a friendly name for your app.
 
    **b.** Set **Supported account types** to the choice that makes sense for your scenario.
 
-   **c. **For **Redirect URI**, change the dropdown to **Public client (mobile & desktop) **and set the value to : 
+   **c.** For **Redirect URI**, change the dropdown to **Public client (mobile & desktop)** and set the value to :
 
    <CodeGroup>
 
@@ -38,14 +38,14 @@ Follow the steps below to configure your Microsoft Entra ID environment for use 
    </CodeGroup>
 
    ![Image39 Pn](/images/Image39.png)
-4. Select **Register**. On the next page, copy the values of the **Application (client) ID **and **Directory (tenant) ID **and save them, you will need them later to configure the calendar plugin in CMS.
+4. Select **Register**. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them, you will need them later to configure the calendar plugin in CMS.
 
 ## Configure for app-only authentication
 
 To use application permissions, follow these additional steps.
 
-1. Select **Manifest **in the left-hand navigation under **Manage**.
-2. Locate the **requiredResourceAccess **property in the manifest, and add the following inside the square brackets ([]):
+1. Select **Manifest** in the left-hand navigation under **Manage**.
+2. Locate the **requiredResourceAccess** property in the manifest, and add the following inside the square brackets ([]):
 
    ```
    {
@@ -64,7 +64,7 @@ To use application permissions, follow these additional steps.
    ![Image40 Pn](/images/Image40.png)
 4. Select **API permissions** under **Manage**. Confirm that the
 
-   **full_access_as_app **permission is listed.
+   **full_access_as_app** permission is listed.
 5. Select **Grant admin consent for org** and accept the consent dialog.
 
 ![Image41 Pn](/images/Image41.png)
@@ -72,29 +72,29 @@ To use application permissions, follow these additional steps.
 In case you want to add Microsoft Teams meeting support to Workspace, continue the configuration below. If you do not want to add Microsoft Teams meeting support you can proceed to **step 9.**
 
 6. Select **Add a permission**
-7. Select the following permission **"Microsoft Graph\> Calendars.ReadWrite" **and select Add.
+7. Select the following permission **"Microsoft Graph\> Calendars.ReadWrite"** and select Add.
 8. Grant admin consent to that permission.
 
 ![Image42 Pn](/images/Image42.png)
 
  9. Select **Certificates & Secrets** in the left-hand navigation under Manage.
 10. Select **New client secret**, enter a short description and select **Add**.
-11. Copy the **Value **of the newly added client secret and save it, you will need it later when configuring the calendar plugin in CMS.
+11. Copy the **Value** of the newly added client secret and save it, you will need it later when configuring the calendar plugin in CMS.
 
     ![image.png](/images/image.png)
 
 ## Create a service account user
 
-1. 1. Log in to your Office 365 as an administrator. 
-2. 2. Navigate to **Office 365 admin center \> USERS \> Active Users. **
-3. 3. To add a new user, select the "\+" icon. **The create new user account** page appears. 
-4. 4. On the **create new user account page**, complete the required information. 
+1. Log in to your Office 365 as an administrator. 
+2. Navigate to **Office 365 admin center \> USERS \> Active Users.**
+3. To add a new user, select the "\+" icon. **The create new user account** page appears.
+4. On the **create new user account page**, complete the required information.
 
    **A.**  Enter the first name, last name, display name, user name, and your email domain.
 
    **B**. Select **Type password** and enter the password for the service account.
 
-   **C.** Deselect the **Make this person change their password the next time they sign in** check box. 
+   **C.** Deselect the **Make this person change their password the next time they sign in** check box.
 
    **D.** Assign at least an Exchange Online license. e. Enter the email address of the recipient to whom the password must be sent. Select **Create**.
 
@@ -115,14 +115,14 @@ To configure an application access policy and limit the scope of application per
 
 2. Identify the app’s client ID and a mail-enabled security group to restrict the app’s access.
 
-   **A.** Identify the app’s**application (client) ID**  in the **Azure app registration portal**.
+   **A.** Identify the app’s **application (client) ID** in the **Azure app registration portal**.
 
-   **B. **Create a new **mail-enabled security group** or use an existing one and identify the email address for the group.
+   **B.** Create a new **mail-enabled security group** or use an existing one and identify the email address for the group.
 
    **C.** Make sure to add your service account and the room(s) that you want to use to the **mail-enabled security group.**
 3. Create an **application access policy.**
 
-Run the following command, replacing the**AppId, PolicyScopeGroupId** , and arguments.
+Run the following command, replacing the **AppId** and **PolicyScopeGroupId** arguments.
 
 ```
 New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b - PolicyScopeGroupId mydistributiongroup@contoso.com -AccessRight RestrictAccess -Description "Restrict this app to members of distribution group."
@@ -130,7 +130,7 @@ New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b - Policy
 
 4. Test the newly created application access policy
 
-Run the following command, replacing the **Appld** and **Identity **arguments.
+Run the following command, replacing the **AppId** and **Identity** arguments.
 
 ```
 New-DistributionGroup -Name "MyRoomList" -RoomList
@@ -180,7 +180,7 @@ When you have successfully set up the app registration & created the service acc
 
 **Application ID:** The application ID from Azure
 
-**Tenant ID** : The directory tenant ID from Azure 
+**Tenant ID** : The directory tenant ID from Azure
 
 **Client secret Key**: The client secret key from Azure.
 
@@ -190,7 +190,7 @@ When you have successfully set up the app registration & created the service acc
 
 **Room list address**: The SMTP URL of the room list that you have configured. This will allow you to import rooms in Workspace.
 
-**Allow online meeting creation: **This option needs to be turned on to enable Microsoft Teams meeting support.
+**Allow online meeting creation:** This option needs to be turned on to enable Microsoft Teams meeting support.
 
 You can also define if the teams meeting option should be selected **by default** in workspace event creation if you set the following option:
 
@@ -210,7 +210,7 @@ Check “Enable online meeting creation by default” Click save
 
 ![Image47 Pn](/images/Image47.png)
 
-To **create a teams meeting** in workspace, just create a **simple event** in workspace and **select the teams meeting option** while creating the event. 
+To **create a teams meeting** in workspace, just create a **simple event** in workspace and **select the teams meeting option** while creating the event.
 
 ![Image48 Pn](/images/Image48.png)
 
@@ -268,7 +268,7 @@ New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role Applicat
 
 ![Image52 Pn](/images/Image52.png)
 
-Using this type of**"Resources Only"**  impersonation, the reservation function will have the following behavior :
+Using this type of **"Resources Only"** impersonation, the reservation function will have the following behavior :
 
 ### Booking from Outlook
 
@@ -338,7 +338,7 @@ If have followed the steps mentioned above and you are unable to import and/or b
 
 As this is quite an extensive setup, we see that configuration errors are the main cause of a system not functioning.
 
- If it is still not working we kindly ask you to open up a ticket in PADS4 Partner Portal and send us the **nds.services.crystal.pads** log file in the Logs folder of PADS4. 
+ If it is still not working we kindly ask you to open up a ticket in PADS4 Partner Portal and send us the **nds.services.crystal.pads** log file in the Logs folder of PADS4.
 
 ## Sources : 
 
