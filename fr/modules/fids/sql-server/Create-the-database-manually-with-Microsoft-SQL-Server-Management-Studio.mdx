@@ -1,0 +1,134 @@
+---
+- title: "Créer la base de données FIDS avec SQL Management Studio
+
+    \  "
+- description: "Créez manuellement la base de données PADS4FIDS dans SQL Server
+    Management Studio, ajoutez le login NT AUTHORITY\\SYSTEM et attribuez les
+    permissions utilisateur requises.
+
+    \  "
+---
+
+Cette section fournit des instructions étape par étape pour créer manuellement la base de données **PADS4FIDS** à l'aide de **SQL Server Management Studio (SSMS)**.
+
+***
+
+## **Étape 1 : Ouvrir SQL Server Management Studio**
+
+1. Lancer **SQL Server Management Studio**.
+2. Se connecter au **Moteur de base de données**.
+3. Dans l'**Explorateur d'objets**, développez votre instance SQL Server.
+4. Faites un clic droit sur **Bases de données**.
+5. Sélectionner **Nouvelle base de données...**
+
+***
+
+## **Étape 2 : Créer la base de données**
+
+1. Dans le champ **Nom de la base de données**, entrez :
+   ```text
+   PADS4FIDS
+   ```
+2. Cliquez sur **OK** pour créer la base de données.
+
+***
+
+## **Étape 3 : Vérifier la connexion NT AUTHORITY\SYSTEM**
+
+1. Développer **Sécurité** nœud.
+   &#x20;&#x20;
+2. Développer&#x20;
+   &#x20; **Logins
+   &#x20;&#x20;**.
+   &#x20;&#x20;
+3. Recherchez le login :
+   &#x20;&#x20;
+   ```text
+   NT AUTHORITY\SYSTEM
+   ```
+
+* S'il&#x20;
+  &#x20; **existe déjà**, faites un clic droit dessus et sélectionnez&#x20;
+  &#x20; **Propriétés
+  &#x20;&#x20;**, puis passez à l'
+  &#x20; **Étape 6
+  &#x20;&#x20;**.
+  &#x20;&#x20;
+* S'il&#x20;
+  &#x20; **n'existe pas
+  &#x20;&#x20;**, continuez avec l'
+  &#x20; **Étape 4
+  &#x20;&#x20;**.
+  &#x20;&#x20;
+
+***
+
+**Étape 4 : Créer le login NT AUTHORITY\SYSTEM
+&#x20;&#x20;**
+--------------
+
+1. Faites un clic droit sur&#x20;
+   &#x20; **Logins
+   &#x20;&#x20;**.
+   &#x20;&#x20;
+2. Sélectionnez&#x20;
+   &#x20; **Nouveau Login...
+   &#x20;&#x20;**
+
+***
+
+**Étape 5 : Configurer le nouveau login
+&#x20;&#x20;**
+--------------
+
+1. Dans le&#x20;
+   &#x20; **Nom du login
+   &#x20;&#x20;**&#x20;champ, entrez :
+   &#x20;&#x20;
+   ```text
+   NT AUTHORITY\SYSTEM
+   ```
+2. Sélectionnez&#x20;
+   &#x20; **Authentification Windows
+   &#x20;&#x20;**.
+   &#x20;&#x20;
+3. Ne&#x20;
+   &#x20; **pas
+   &#x20;&#x20;**&#x20;saisir de mot de passe.
+   &#x20;&#x20;
+
+***
+
+**Étape 6 : Attribuer les permissions de base de données
+&#x20;&#x20;**
+--------------
+
+1. Dans la&#x20;
+   &#x20; **Propriétés du Login
+   &#x20;&#x20;**&#x20;fenêtre, sélectionnez&#x20;
+   &#x20; **Mappage des utilisateurs
+   &#x20;&#x20;**&#x20;dans le menu de gauche.
+   &#x20;&#x20;
+2. Dans la&#x20;
+   &#x20; **Utilisateurs mappés à ce login
+   &#x20;&#x20;**&#x20;section, cochez la case à côté de :
+   &#x20;&#x20;
+   ```text
+   PADS4FIDS
+   ```
+3. Dans la&#x20;
+   &#x20; **Appartenance au rôle de base de données pour : PADS4FIDS
+   &#x20;&#x20;**, cochez le rôle :
+   &#x20;&#x20;
+   ```text
+   db_owner
+   ```
+4. Cliquez sur&#x20;
+   &#x20; **OK
+   &#x20;&#x20;**&#x20;pour enregistrer les modifications.
+   &#x20;&#x20;
+
+***
+
+La base de données PADS4FIDS est maintenant configurée et prête à l'emploi.
+&#x20;&#x20;
