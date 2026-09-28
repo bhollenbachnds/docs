@@ -3218,5 +3218,23 @@
         ]
       }
     ]
-  }
+  },
+  "redirects": [
+    {
+      "source": "/certified-devices/Maxhub/maxhub-nd-55-cmb",
+      "destination": "/certified-devices/Maxhub/maxhub-CMB-Series"
+    },
+    {
+      "source": "/certified-devices/sony/BZxx-series",
+      "destination": "/certified-devices/sony/BZxxL-series"
+    },
+    {
+      "source": "/certified-devices/iiyama/54-and-60-Series",
+      "destination": "/certified-devices/iiyama/54-Series"
+    },
+    {
+      "source": "/untitled-page-11",
+      "destination": "/Workspace/Administrator/Calendar/Exchange-Online"
+    }
+  ]
 }
