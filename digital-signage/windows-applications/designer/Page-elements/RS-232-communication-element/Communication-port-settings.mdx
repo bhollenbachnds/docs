@@ -3,12 +3,12 @@ These properties define the **RS-232 communication port settings**, ensuring suc
 
 ---
 
-## **Communication Port Settings**  
+## **Communication port settings**  
 
-### **Communication Port**  
+### **Communication port**  
 - Select the **COM (serial)** or **LPT (parallel)** port used for **RS-232 communication**.
 
-### **Baud Rate**  
+### **Baud rate**  
 - Defines the **transmission speed** in **symbols per second (bps)**.  
 - Common values: **1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200**.  
 - Must match the **external device settings**.
@@ -24,16 +24,16 @@ Determines how **parity checking** is applied for **error detection**.
 | **Mark** | Always sets the parity bit to **1**. |
 | **Space** | Always sets the parity bit to **0**. |
 
-### **Data Bits**  
+### **Data bits**  
 - Defines the number of **data bits per frame**.  
 - Standard values: **5, 6, 7, or 8 bits** (default: **8**).  
 - Must match the **external device settings**.
 
-### **Start Bits**  
+### **Start bits**  
 - Specifies the **leading bits** before actual data transmission.  
 - Standard value: **1 bit**.
 
-### **Stop Bits**  
+### **Stop bits**  
 - Specifies the **end of transmission bits**.  
 - Standard values: **1, 1.5, or 2 bits** (default: **1**).  
 - Used to **separate data packets**.
@@ -48,11 +48,11 @@ Defines **flow control** between sender and receiver to prevent **data loss**.
 | **RTS/CTS** | Hardware-based handshake using Ready-to-Send (RTS) and Clear-to-Send (CTS) signals. |
 | **DTR/DSR** | Hardware-based handshake using Data Terminal Ready (DTR) and Data Set Ready (DSR) signals. |
 
-### **Read Timeout**  
+### **Read timeout**  
 - **Time limit (in milliseconds)** for receiving a **response from the external device**.  
 - If no response is received within this time, a **timeout error occurs**.
 
-### **Write Timeout**  
+### **Write timeout**  
 - **Time limit (in milliseconds)** for successfully **sending a command**.  
 - If data cannot be transmitted within this time, a **timeout error occurs**.
 

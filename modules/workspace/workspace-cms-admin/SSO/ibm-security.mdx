@@ -18,7 +18,7 @@ Ensure the following items are ready:
 
 ---
 
-## Step 1: IBM Security Verify – Application Configuration
+## Step 1: IBM Security Verify – Application configuration
 
 ### Navigate to:
 
@@ -40,7 +40,7 @@ Ensure the following items are ready:
 
 ---
 
-### Signature Settings
+### Signature settings
 
 | Field                                  | Value                               |
 | -------------------------------------- | ----------------------------------- |
@@ -55,7 +55,7 @@ Leave **Service Provider Certificate** and **Encryption Options** blank unless e
 
 ---
 
-### SAML Subject
+### SAML subject
 
 | Field               | Value                |
 | ------------------- | -------------------- |
@@ -64,7 +64,7 @@ Leave **Service Provider Certificate** and **Encryption Options** blank unless e
 
 ---
 
-### Attribute Mapping
+### Attribute mapping
 
 Enable: ☑ **Send all known user attributes in the SAML assertion**
 
@@ -80,14 +80,14 @@ Enable: ☑ **Send all known user attributes in the SAML assertion**
 
 ---
 
-### Access Policy
+### Access policy
 
 - Set to: ☑ **Use default policy**
 - Allow from: `All devices`
 
 ---
 
-## Step 2: PADS4 Workspace – SSO Configuration
+## Step 2: PADS4 Workspace – SSO configuration
 
 In the **PADS4 Administration Portal**, configure the SSO Plugin as follows:
 
@@ -104,7 +104,7 @@ In the **PADS4 Administration Portal**, configure the SSO Plugin as follows:
 
 ---
 
-## Step 3: Mapping Groups in PADS4
+## Step 3: Mapping groups in PADS4
 
 Go to the **Relation Table** section of the SSO plugin and map incoming `groupIDs` from IBM to PADS4 profiles:
 
@@ -116,7 +116,7 @@ Go to the **Relation Table** section of the SSO plugin and map incoming `groupID
 
 ---
 
-## Final Checks
+## Final checks
 
 - Test login via PADS4 using an IBM-verified user.
 - Ensure claims are successfully received and parsed in PADS4.

@@ -12,7 +12,7 @@ Connects PADS4 to Flight Information Display System (FIDS) data sources. Manages
 
 NDS.Services.FIDS.Connector is a specialised integration service for aviation and transportation customers. It ingests flight data messages (departures, arrivals, gate changes) from industry-standard FIDS data sources, parses them, and makes the structured data available to PADS4 presentations for real-time flight information displays (FIDS/BIDS boards).
 
-## How It Works
+## How it works
 
 1. **Message Sources** are configured — these define connections to SITA, RESA, AODB, or other FIDS data providers (over TCP/IP, MQTT, file feeds, etc.).
 2. **Parsers** are attached to sources to translate raw message formats (IATA Type B, XML, CSV) into structured PADS4 flight records.
@@ -20,7 +20,7 @@ NDS.Services.FIDS.Connector is a specialised integration service for aviation an
 4. **Incoming messages** are queued and can be inspected, requeued on failure, or downloaded for debugging.
 5. **Connection status** per domain can be monitored.
 
-## Functional Areas / Controllers
+## Functional areas / controllers
 
 - connection — Monitor FIDS connection status per domain
 - message — Incoming FIDS messages: list, view details, requeue failed messages, download
@@ -29,7 +29,7 @@ NDS.Services.FIDS.Connector is a specialised integration service for aviation an
 
 ---
 
-## Endpoint Reference
+## Endpoint reference
 
 | Method | Path | Description |
 | --- | --- | --- |
@@ -40,7 +40,7 @@ NDS.Services.FIDS.Connector is a specialised integration service for aviation an
 
 ---
 
-## Request & Response Examples
+## Request & response examples
 
 ### GET `/api/v1/fids/flights`
 
@@ -223,7 +223,7 @@ fetch('/rdx/NDS.Services.Cms/api/v1/cms/message', { credentials: 'include' })
 
 ---
 
-## Common Infrastructure Endpoints
+## Common infrastructure endpoints
 
 Every PADS4 microservice exposes these standard endpoints:
 

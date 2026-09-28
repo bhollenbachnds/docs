@@ -5,7 +5,7 @@ description: "Learn how to create a Cluster in PADS4 CTRL Center, define a fallb
 
 Clusters in PADS4 allow multiple Viewers to work together as a **single unit**, ensuring continuous display functionality even if one Viewer fails. This guide walks you through **creating a Cluster**, **defining a Cluster presentation**, and **automating Viewer fallback**.
 
-## **Step 1: Creating a Cluster**
+## **Step 1: Creating a cluster**
 
 1. **Open PADS4 CTRL Center**.
 2. Navigate to **Viewers \> Clusters**.
@@ -18,22 +18,22 @@ Clusters in PADS4 allow multiple Viewers to work together as a **single unit**, 
    - Specify the **exact location** of each Viewer within the Cluster _(horizontal or vertical alignment)_.
 6. Click **Create** to finalize the Cluster.
 
-## **Step 2: Defining a Cluster Presentation**
+## **Step 2: Defining a cluster presentation**
 
 Now that the Cluster is created, we need to create a **presentation that adapts dynamically when a Viewer fails**.
 
-### **Example: A 2-Viewer Cluster**
+### **Example: A 2-viewer cluster**
 
 - **Viewer 1** will display "Viewer 1".
 - **Viewer 2** will display "Viewer 2".
 - If **Viewer 1 fails**, **Viewer 2 will take over** and display "Viewer 1" instead.
 
-### **Step 2.1: Creating the Presentation**
+### **Step 2.1: Creating the presentation**
 
 1. **Open PADS4 Designer**.
 2. **Create a new presentation**.
 
-#### **Page 1: Setup for Viewer 1**
+#### **Page 1: Setup for viewer 1**
 
 1. **Create a text element** and set its text to `"Viewer 1"`.
 2. **Go to Page Properties** and **uncheck visibility** _(page is hidden by default)_.
@@ -44,14 +44,14 @@ Now that the Cluster is created, we need to create a **presentation that adapts 
      - **Value 2:** `Constant Value = 1`
    - **Action:** **Set visibility to "visible"**.
 
-#### **Page 2: Setup for Viewer 2**
+#### **Page 2: Setup for viewer 2**
 
 1. **Duplicate Page 1** to create **Page 2**.
 2. **Change the text** from `"Viewer 1"` to `"Viewer 2"`.
 3. **Modify the Page Rule**:
    - **Change "Constant Value = 1" to "Constant Value = 2"**.
 
-## **Step 3: Scheduling the Cluster Presentation**
+## **Step 3: Scheduling the cluster presentation**
 
 1. **Open PADS4 Scheduler**.
 2. **Schedule the presentation** to **Viewer 1** and **Viewer 2**.
@@ -60,14 +60,14 @@ Now that the Cluster is created, we need to create a **presentation that adapts 
    - **Viewer 1 shows "Viewer 1".**
    - **Viewer 2 shows "Viewer 2".**
 
-## **Step 4: Simulating a Viewer Failure**
+## **Step 4: Simulating a viewer failure**
 
 1. **Close Viewer 1**.
 2. **Observe Viewer 2**:
    - **Viewer 2 will now display "Viewer 1".**
    - This happens **automatically** because **PADS4 moves content dynamically** when a Viewer fails.
 
-## **Why Use Clusters?**
+## **Why use clusters?**
 
 - **Ensures content continuity** even when hardware fails.
 - **Automatically reassigns content** to available Viewers.
