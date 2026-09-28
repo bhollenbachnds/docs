@@ -1,55 +1,62 @@
-L'onglet **Room Profiles** vous permet de définir des règles opérationnelles pour les salles. Chaque profil établit des paramètres de comportement qui peuvent être réutilisés dans plusieurs salles, simplifiant la configuration et assurant la cohérence.
+---
+- title: Room profiles
+---
 
-{/* TODO: missing image — original placeholder referenced /mnt/data/image.png with alt: "Room Profiles Screen" */}
+Le **Room Profiles** vous permet de définir des paramètres de configuration réutilisables et des règles opérationnelles pour les salles. En attribuant le même profil à plusieurs salles, vous pouvez simplifier la configuration des salles et maintenir un comportement cohérent.
 
-## Création d'un profil de salle
+## Aperçu
 
-Pour créer un nouveau profil de salle, cliquez sur le bouton **Create Room Profile**.
+Lorsque vous ouvrez **Room Profiles**, le tableau de bord affiche deux profils par défaut :
 
-### Onglet Général
+* **Bookable rooms**
+* **Non-bookable rooms**
 
-Dans l'onglet Général, remplissez les détails suivants :
+Ces profils standard sont fournis par PADS4 Workspace. Vous pouvez également créer des profils de salle personnalisés pour répondre aux besoins de votre organisation.
 
-* **Name**\
-  Nom du profil de salle.
+Par défaut, les utilisateurs peuvent consulter et réserver toutes les salles disponibles. Pour limiter l'accès à des salles spécifiques, configurez les autorisations de salle applicables dans le profil utilisateur.
 
-* **Description**\
-  Une brève explication de l'objectif du profil.
+## Général
 
-* **Use External Booking System**\
-  Permet l'intégration avec des systèmes externes tels que Microsoft Outlook.
+* **Name:** Entrez un nom pour le profil de salle.
+* **Description:** Entrez une description du profil et de son utilisation prévue.
+* **Use External Booking System :** Permet aux salles assignées à ce profil d'être réservées via un système de réservation externe, tel que Microsoft Outlook.
+* **Is a sharing desk profile :** Sélectionnez cette option lorsque le profil est utilisé pour des bureaux partagés ou des espaces de travail partagés.
+* **Is default assigned to user :** Sélectionnez cette option lorsque l'espace de travail est normalement attribué à un utilisateur spécifique.
+* **Inactive:** Sélectionnez cette option pour désactiver le profil. Décochez l'option pour rendre le profil à nouveau disponible.
+* **Limit capacity :** Sélectionnez cette option pour ne rendre disponible qu'une partie de la capacité de la salle. Indiquez le pourcentage de capacité disponible pour les réservations.
+* **Enable Cleanup :** Empêche les salles assignées à ce profil d'être réservées pendant 30 minutes après la fin d'une réunion.
 
-* **Is a Sharing Desk Profile**\
-  Utilisez cette option pour les profils destinés aux bureaux partagés.
+### App booking
 
-* **Is Default Assigned to a User**\
-  Indique si ce bureau est normalement attribué à un utilisateur spécifique.
+Les **App Booking** paramètres contrôlent si les salles assignées à ce profil peuvent être réservées via l'application PADS4 Workspace.
 
-* **Inactive**\
-  Marque le profil comme non réservable (par exemple, temporairement indisponible).
+* **Booking type :** Sélectionnez **Calendar** pour les réservations via le plug-in Outlook, ou **Impulse** pour les réservations directes depuis un écran.
+* **Use authentication :** Active ou désactive l'authentification des utilisateurs dans l'application Workspace.
+* **Use check in :** Active ou désactive l'enregistrement pour les réservations dans l'application Workspace.
+* **Anonymous check in :** Permet aux utilisateurs de s'enregistrer sans authentification.
+* **Check in time :** Indique le délai dont disposent les utilisateurs pour s'enregistrer avant qu'une réservation non confirmée soit supprimée.
+* **Check in time before meeting :** Indique combien de temps avant la réunion les utilisateurs peuvent s'enregistrer.
+* **Daily schedule :** Définit les jours et les heures pendant lesquels la réservation via l'application est disponible. Sélectionnez les jours disponibles et configurez les heures de début et de fin.
 
-* **Limit Capacity**\
-  Utilisé dans les scénarios de bureau partagé pour limiter le nombre de places disponibles.
+### Occupancy sensor booking
 
-* **Enable Cleanup**\
-  Ajoute un temps tampon de nettoyage après une réservation. Pendant cette période, la salle ne peut pas être réservée.
+Les **Occupancy Sensor Booking** paramètres permettent des réservations automatiques de salles basées sur les données d'un capteur d'occupation. Lorsque le capteur détecte une présence dans l'espace de travail, il peut créer automatiquement une réservation.
 
-* **App Booking**\
-  Permet les réservations via l'application web PADS4 ou les panneaux physiques de salle.
+* **Disable automatic booking :** Empêche la réservation automatique lorsqu'une présence est détectée. Les réservations par capteur peuvent toujours être supprimées manuellement, et les réunions non confirmées sont supprimées automatiquement.
+* **Time of presence before start :** Indique le nombre de minutes pendant lesquelles une présence doit être détectée avant qu'une réservation soit créée.
+* **Booking period :** Indique la durée, en minutes, de la réservation créée après la détection d'une présence.
+* **Lunch break schedule :** Définit l'heure de début et de fin de la pause déjeuner.
+* **Time without presence before release :** Indique le nombre de minutes sans présence détectée avant que la salle soit libérée automatiquement.
 
-* **Sensor Booking**\
-  Active la réservation basée sur des capteurs d'occupation (par exemple, réservation automatique lorsqu'une présence est détectée).
+## Additional service
 
-### Onglets supplémentaires
+Utilisez **Additional Service** pour proposer des services optionnels lors d'une réservation, tels que la commande de nourriture ou de boissons.
 
-* **Additional Service**\
-  Attribuez des services supplémentaires tels que la restauration ou la configuration audiovisuelle aux salles utilisant ce profil.
+## Extended property
 
-* **Approval**\
-  Exiger l'approbation d'un utilisateur désigné avant qu'une réservation ne soit finalisée.
+**Extended Property** peut être utilisé pour définir des caractéristiques supplémentaires de la salle, telles que des chaises confortables.
 
-* **Extended Property**\
-  Ajoutez des caractéristiques personnalisées comme l'accessibilité aux fauteuils roulants ou des notes sur l'équipement.
+## Licence
 
-* **License**\
-  Permettez à cette salle d'apparaître dans le module complémentaire Outlook ou attribuez-lui un code QR pour l'accès des utilisateurs.
+* **Use this space in the Outlook plug-in :** Rend les salles assignées à ce profil disponibles dans le plug-in Outlook.
+* **Make the QR code available for this space :** Génère un code QR pour l'espace. Les utilisateurs peuvent scanner le code pour ouvrir l'application Workspace, s'authentifier avec leur compte de domaine et réserver la salle.
