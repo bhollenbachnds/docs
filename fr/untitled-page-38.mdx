@@ -1,0 +1,174 @@
+---
+- title: NDS.Services.User.Scim
+---
+
+## Aperçu
+
+Point de terminaison de provisionnement d'utilisateurs SCIM 2.0 pour PADS4. Permet aux fournisseurs d'identité (Azure AD, Okta, etc.) de provisionner, mettre à jour et déprovisionner automatiquement les utilisateurs via le protocole SCIM standard.
+
+| Champ                                 | Valeur                                                                     |
+| ------------------------------------- | -------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.User.Scim/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.User.Scim/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.User.Scim`                         |
+| Nombre total de points de terminaison | 31                                                                         |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode  | Chemin                                                       | Description                                         |
+| -------- | ------------------------------------------------------------ | --------------------------------------------------- |
+| `GET`    | `/api/v1/scim/ServiceProviderConfig`                         | Obtenir la configuration du fournisseur de services |
+| `GET`    | `/api/v1/scim/ResourceTypes`                                 | Obtenir le type de ressource                        |
+| `GET`    | `/api/v1/scim/Schemas`                                       | Obtenir les schémas                                 |
+| `GET`    | `/api/v1/scim/groups`                                        | Obtenir les groupes                                 |
+| `POST`   | `/api/v1/scim/groups`                                        | Créer un groupe                                     |
+| `GET`    | `/api/v1/scim/groups/{id}`                                   | Obtenir un groupe                                   |
+| `PATCH`  | `/api/v1/scim/groups/{id}`                                   | Modifier un groupe                                  |
+| `PUT`    | `/api/v1/scim/groups/{id}`                                   | Mettre à jour un groupe                             |
+| `DELETE` | `/api/v1/scim/groups/{id}`                                   | Supprimer un groupe                                 |
+| `GET`    | `/api/v1/scim/users`                                         | Obtenir les utilisateurs                            |
+| `POST`   | `/api/v1/scim/users`                                         | Créer un utilisateur                                |
+| `GET`    | `/api/v1/scim/users/{id}`                                    | Obtenir un utilisateur                              |
+| `PATCH`  | `/api/v1/scim/users/{id}`                                    | Modifier un utilisateur                             |
+| `PUT`    | `/api/v1/scim/users/{id}`                                    | Mettre à jour un utilisateur                        |
+| `DELETE` | `/api/v1/scim/users/{id}`                                    | Supprimer un utilisateur                            |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Obtenir l'état de transfert de contenu              |
+| `GET`    | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics`       | Obtenir les diagnostics du bus                      |
+| `GET`    | `/api/v1/diagnostics/toggles`                                | Obtenir les bascules                                |
+| `GET`    | `/api/v1/diagnostics/configuration`                          | Obtenir la section de configuration                 |
+| `GET`    | `/api/v1/diagnostics/configurationex`                        | Obtenir la configuration                            |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`                        | Obtenir les disjoncteurs                            |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`                  | Réinitialiser le disjoncteur                        |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate`                | Isoler le disjoncteur                               |
+| `POST`   | `/api/v1/diagnostics/events`                                 | Obtenir les événements                              |
+| `GET`    | `/api/v1/health`                                             | Obtenir                                             |
+| `GET`    | `/api/v1/health/clean`                                       | Obtenir (nettoyé)                                   |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`                    | Remettre en file d'attente les messages d'erreur    |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`                      | Purger les messages d'erreur                        |
+| `GET`    | `/migration`                                                 | Obtenir les migrations                              |
+| `POST`   | `/migration`                                                 | Exécuter la migration                               |
+| `GET`    | `/version`                                                   | Obtenir                                             |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/scim/ServiceProviderConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/ServiceProviderConfig'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/scim/ResourceTypes`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/ResourceTypes'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/scim/Schemas`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/Schemas'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/scim/groups`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/groups'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/scim/groups`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/groups' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/scim/groups/{id}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.User.Scim/api/v1/scim/groups/{id}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez le Swagger UI pour les schémas de paramètres complets.
