@@ -1,0 +1,103 @@
+Ces propriétés déterminent comment votre élément&#x20;
+&#x20; **gère le texte multiligne** lorsqu'il est connecté à une&#x20;
+&#x20; **source de données externe**.
+&#x20;&#x20;
+
+***
+
+**Options de gestion du texte
+&#x20;&#x20;**
+--------------
+
+### **Diviser le texte multiligne en éléments de liste de lecture&#xA; &#x20;**
+
+* **Activé** – Chaque&#x20;
+  &#x20; **ligne de texte** de la source de données est traitée comme un&#x20;
+  &#x20; **élément distinct de la liste de lecture**, permettant un&#x20;
+  &#x20; **affichage alterné**.
+  &#x20;&#x20;
+* **Désactivé** – La&#x20;
+  &#x20; **valeur textuelle entière** est traitée comme&#x20;
+  &#x20; **un seul élément de liste de lecture**, affichant toutes les lignes ensemble.
+  &#x20;&#x20;
+
+***
+
+**Fonctionnement
+&#x20;&#x20;**
+--------------
+
+Si une&#x20;
+&#x20; **valeur textuelle multiligne** est reçue d'une&#x20;
+&#x20; **source de données**, ce paramètre contrôle si :
+&#x20;&#x20;
+
+1. **Chaque ligne est affichée séparément** (comme un bandeau d'actualités défilant ou des annonces en rotation).
+   &#x20;&#x20;
+2. **Toutes les lignes sont affichées ensemble** dans un seul bloc de texte.
+   &#x20;&#x20;
+
+***
+
+**Exemple d'utilisation
+&#x20;&#x20;**
+--------------
+
+### **Scénario 1 : Annonces de vol (activé)&#xA; &#x20;**
+
+**Entrée de la source de données :
+&#x20;&#x20;**
+
+```
+Boarding  
+Einsteigen
+```
+
+* **Avec la division activée :
+  &#x20;&#x20;**&#x20;Chaque mot apparaît&#x20;
+  &#x20; **individuellement** dans la playlist (ex. : "Boarding" → "Einsteigen").
+  &#x20;&#x20;
+* **Avec la division désactivée :
+  &#x20;&#x20;**&#x20;Les deux lignes sont affichées&#x20;
+  &#x20; **ensemble** dans un seul bloc de texte.
+  &#x20;&#x20;
+
+***
+
+### **Scénario 2 : Playlist d'images (activé)&#xA; &#x20;**
+
+**Entrée de la source de données :
+&#x20;&#x20;**
+
+```
+c:\folder\image1.jpg  
+c:\folder\image2.jpg  
+```
+
+* **Sans division :
+  &#x20;&#x20;**&#x20;L'élément image&#x20;
+  &#x20; **ne peut pas lire** l'intégralité de l'entrée comme un chemin valide.
+  &#x20;&#x20;
+* **Avec division :
+  &#x20;&#x20;**&#x20;L'élément&#x20;
+  &#x20; **traite chaque ligne séparément**, permettant à une&#x20;
+  &#x20; **playlist d'images** de s'afficher en séquence.
+  &#x20;&#x20;
+
+***
+
+**Notes importantes
+&#x20;&#x20;**
+--------------
+
+* Le&#x20;
+  &#x20; **séparateur entre les lignes de texte** est le&#x20;
+  &#x20; **caractère de retour chariot et saut de ligne** (
+  &#x20; `<CR> <LF>`).
+  &#x20;&#x20;
+* Cette fonctionnalité est utile lorsque vous travaillez avec&#x20;
+  &#x20; **des listes d'images, de messages ou des flux de données en temps réel**.
+  &#x20;&#x20;
+* Fonctionne en combinaison avec&#x20;
+  &#x20; **les options de playlist** pour définir comment les éléments sont affichés.
+  &#x20;&#x20;

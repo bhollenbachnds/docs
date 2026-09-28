@@ -1,0 +1,61 @@
+---
+- title: Maxhub CMB-Series
+- description: "Configurez le PADS4 Web Launcher sur les écrans Maxhub CMB-Series
+    Android 14 : installez l'APK depuis une clé USB, définissez-le comme
+    application d'accueil avec démarrage automatique, et connectez un serveur."
+---
+
+Ce guide fournit des instructions étape par étape pour installer et configurer le PADS4 Web Launcher sur les écrans Android Maxhub CMB-Series. Il couvre la configuration initiale, l'installation de l'APK, la configuration du démarrage automatique et la configuration du viewer.
+
+### Appareils compatibles :
+
+* **Maxhub CMB-Series (Android 14)**
+
+<Note>
+  La prise en charge de la Maxhub CMB-Series a été ajoutée à notre solution PADS4 Generic Launcher dans **PADS4 version 2026.1**. Veuillez vous référer au manuel PADS4 Generic Android Viewer pour de plus amples instructions.
+</Note>
+
+### Configuration minimale requise
+
+Version PADS4 requise : **2026.1**
+
+Firmware de l'appareil : 2026-06-09
+
+## Prérequis
+
+* Téléchargez le dernier PADS4WebLauncher.apk depuis votre serveur PADS4 (par ex., https\://\[your-server]/\[domain]/apps) ou depuis [ici](https://github.com/PADS4/PADS4-Viewer-Android/releases/tag/v1.3), et copiez-le sur une clé USB.
+* Assurez-vous que le serveur PADS4 est configuré et accessible.
+
+### Installation du PADS4 Viewer
+
+1. Allumez l'écran.
+2. Accédez à **Toutes les applications**.
+3. Insérez la clé USB dans l'écran.
+4. Sélectionnez **Finder**.
+5. Naviguez jusqu'au lecteur USB et sélectionnez **PADS4WebLauncher.apk**.
+6. Cliquez sur **Installer** et attendez la fin de l'opération.
+7. Une fois l'installation terminée, sélectionnez **Terminé**.
+8. **Quitter** le navigateur de fichiers.
+
+## **Activation du démarrage automatique**
+
+1. Ouvrez **Paramètres** sur l'écran.
+2. Allez dans **Applications**.
+3. Sélectionnez **PADS4 Web Launcher**.
+4. Sélectionnez **Application par défaut**.
+5. Sélectionnez **PADS4 Web Launcher** dans la liste des applications disponibles.
+6. Retournez au menu principal **Paramètres** et allez dans **Système**.
+7. Sélectionnez **Démarrage & Arrêt**.
+8. Sélectionner **Startup Channel Android**.
+9. Définir le **Default startup item** sur **PADS4 Web Launcher**.
+10. Activer **Auto startup**.
+11. Appuyer sur **Back** pour quitter les paramètres.
+
+## **Configuration de la connexion**
+
+1. Lancer le PADS4 Web Launcher.
+2. Saisir l' **Server URL** au format `<protocol>://<host>:<port>/<hostpath>/`.
+3. Remplir le **ViewerName** selon les besoins.
+4. Cliquer sur **Start** pour se connecter.
+
+Le viewer PADS4 est maintenant connecté et prêt à l'emploi.

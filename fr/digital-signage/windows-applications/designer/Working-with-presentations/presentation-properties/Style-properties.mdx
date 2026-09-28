@@ -1,39 +1,39 @@
-Les **propriétés de style** définissent comment votre présentation sera lue, y compris les options pour synchroniser la lecture sur plusieurs Viewers.
+The **Style properties** define how your presentation will be played, including options for synchronizing playback across multiple Viewers.
 
 ***
 
-## **Synchroniser les Viewers**
+## **Synchronize Viewers**
 
-### **Calculer l'heure du changement de page en fonction de l'heure planifiée**
+### **Calculate time of page change based on scheduled time**
 
-* **Lorsqu'elle est activée**, cette option garantit que la présentation est **lue de manière synchrone** sur tous les écrans (Viewers) auxquels elle a été programmée.
-* **Lorsqu'elle est activée**, les comportements dynamiques des pages tels que **le saut conditionnel de pages** (par exemple, sauter une page lorsqu'aucune donnée n'est disponible) **ne fonctionneront plus**, car la synchronisation est prioritaire.
+* **When enabled**, this option ensures that the presentation is **played synchronously** on all displays (Viewers) to which it has been scheduled.
+* **When enabled**, dynamic page behaviors such as **conditional page skipping** (e.g., skipping a page when no data is available) **will no longer function**, as synchronization takes priority.
 
 ***
 
-## **Exemple de lecture synchronisée**
+## **Example of synchronized playback**
 
-Si une présentation est programmée pour démarrer à **10:00** et contient **deux pages**, chacune affichée pendant **1 minute**, la lecture se déroulerait comme suit :
+If a presentation is scheduled to start at **10:00** and contains **two pages**, each displayed for **1 minute**, the playback would proceed as follows:
 
-* **10:00 - 10:01** : La page 1 est affichée
-* **10:01 - 10:02** : La page 2 est affichée
-* **10:02 - 10:03** : La page 1 est affichée
-* **10:03 - 10:04** : La page 2 est affichée
-* **10:04 - 10:05** : La page 1 est affichée
-* **10:05 - 10:06** : La page 2 est affichée
+* **10:00 - 10:01**: Page 1 is displayed
+* **10:01 - 10:02**: Page 2 is displayed
+* **10:02 - 10:03**: La page 1 est affichée
+* **10:03 - 10:04**: La page 2 est affichée
+* **10:04 - 10:05**: La page 1 est affichée
+* **10:05 - 10:06**: La page 2 est affichée
 
-Si le **PADS4 Viewer** est redémarré à **10:03**, la présentation **reprendra** en affichant **Page 2** pour le temps restant jusqu'à **10:04**, moment où elle passera à la Page 1.
+Si le **PADS4 Viewer** est redémarré à **10:03**, la présentation va **reprendre** en affichant **la page 2** pour le temps restant jusqu'à **10:04**, moment où elle passera à la page 1.
 
 ***
 
 ## **Remarques**
 
-* **La synchronisation est basée sur l'horloge système** de chaque PC PADS4 Viewer. Le Viewer utilise cette horloge pour déterminer le moment précis d'affichage de chaque page, assurant l'alignement avec les autres Viewers.
-* Comme la synchronisation est **basée sur le temps**, **la présentation peut ne pas toujours commencer par la Page 1**.
-* La synchronisation fonctionne au **niveau de la page**, ce qui signifie que tous les écrans participants passent à la page suivante **simultanément**.
+* **La synchronisation est basée sur l'horloge système** de chaque PC PADS4 Viewer. Le Viewer utilise cette horloge pour déterminer le moment précis auquel afficher chaque page, garantissant ainsi l'alignement avec les autres Viewers.
+* Parce que la synchronisation est **basée sur le temps**, **la présentation peut ne pas toujours démarrer depuis la page 1**.
+* La synchronisation fonctionne au niveau de la **page**, ce qui signifie que tous les écrans participants passent à la page suivante **simultanément**.
 * Le système **se resynchronise automatiquement à chaque changement de page**.
 * La synchronisation nécessite que la présentation contienne au moins **deux pages**.
 * La synchronisation **dépend de la durée des pages**. Elle **ne fonctionnera pas** if:
-  * Les durées des pages sont désactivées ou ignorées.
-  * La présentation utilise des règles ou des options qui contournent le minutage des pages.
-* **Des facteurs externes** tels qu'une utilisation élevée du CPU sur un PC Viewer peuvent affecter la synchronisation parfaite, bien que le système tentera de se resynchroniser à chaque transition de page.
+  * Les durées de pages sont désactivées ou ignorées.
+  * La présentation utilise des règles ou des options qui contournent la temporisation des pages.
+* **Les facteurs externes** tels qu'une utilisation élevée du CPU sur un PC Viewer peuvent affecter la synchronisation parfaite, bien que le système tente de se resynchroniser à chaque transition de page.
