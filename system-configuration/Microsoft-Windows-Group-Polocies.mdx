@@ -3,9 +3,9 @@ title: "Microsoft Windows Group Policies"
 description: "Use Microsoft Windows Group Policies to centrally manage PADS4 Desktop Viewer settings for users and user groups across your organization."
 ---
 
-Many organizations use Microsoft Group Policies to centrally manage settings for the users. With the Group Policies of Microsoft you can centrally manage the Desktop Viewer settings.
+Many organizations use Microsoft Group Policies to centrally manage settings for their users. With Microsoft Group Policies, you can centrally manage the Desktop Viewer settings.
 
-PADS4 has implemented group policies for the Desktop Viewer application. These let you specify the settings from a central location and push them towards 1 or more users or user groups. The Desktop Viewer options window automatically detects the policies you set and disables those options in the user interface. This way it is possible to push a set of predefined settings towards users, and still give them the opportunity to change some settings locally.
+PADS4 has implemented group policies for the Desktop Viewer application. These let you specify the settings from a central location and push them to one or more users or user groups. The Desktop Viewer options window automatically detects the policies you set and disables those options in the user interface. This way, you can push a set of predefined settings to users while still letting them change some settings locally.
 
 The pushed settings are stored in the registry under:
 
@@ -15,21 +15,23 @@ The 'normal settings' are stored in the registry under:
 
 HKEY\_CURRENT\_USER\\SOFTWARE\\Net Display Systems\\PADS4
 
-To configure the usage of Group Policies for PADS4 Desktop Viewers Installation PADS4 Server
+## Configure Group Policies for PADS4 Desktop Viewers
 
-First Install PADS4 Server (or more components, but the policy files are installed along with the Server installation).
+### Install PADS4 Server
 
-Install Group Policy Template file
+First, install PADS4 Server (or more components, but the policy files are installed along with the Server installation).
+
+### Install the Group Policy template file
 
 Copy PADS4.admx from C:\\Program Files\\Net Display Systems\\PADS4\\PolicyDefinitions to the Domain Policy Definitions directory on the domain server (usually: \\FQDN\\SYSVOL\\FQDN\\Policies\\PolicyDefinitions)
 
-Policy Translation File
+### Install the policy translation file
 
 Copy PADS4.adml from C:\\Program Files\\Net Display Systems\\PADS4\\PolicyDefinitions to the Domain Policy Definitions Language directory on the domain server (usually: \\FQDN\\SYSVOL\<FQDN\>\\Policies\\PolicyDefinitions\\en-US)
 
-Microsoft Group Policy Management Console (GPMC)
+### Configure policies in the Group Policy Management Console (GPMC)
 
-Open the Group Policy Management Console application and next open the Group Policy Editor.
+Open the Group Policy Management Console application, then open the Group Policy Editor.
 
 Select User configuration / Policies / Administrative Templates: Policy definition / Net Display Systems / PADS4 / Desktop Viewer
 
@@ -42,8 +44,8 @@ PADS4 Property Table for the Desktop Viewer:
 | PADS4 Domain | Domain | String | Custom Domain (default is PADS). |
 | Enable PADS4 Screensaver on startup | Screensaver timeout | Number | Interval in milliseconds after which the screensaver is started when the user did not hit the keyboard or mouse. |
 |  | Show logon screen on resume | Boolean | After the screensaver is active and the user moves the mouse or hits the keyboard, the logon screen can be shown. |
-| PADS4 Hostpath | Hostpath | String | The hostpath as specified in the PADS4 Server settings (default PADS4) which is used for the http synchronisation. |
-| Http portnumber | HTTP port number | Number | Port number used for synchronisation and specified in the PADS4 Server settings (default is 8080). |
+| PADS4 Hostpath | Hostpath | String | The hostpath as specified in the PADS4 Server settings (default PADS4) which is used for the HTTP synchronization. |
+| Http portnumber | HTTP port number | Number | Port number used for synchronization and specified in the PADS4 Server settings (default is 8080). |
 | Identification mode | Identification mode | Selection | Identification mode when connecting to the PADS4 Server. |
 | User permissions | User can view messages | Boolean | User can open the messages window. |
 |  | User can open options window | Boolean | User can open the options window to change settings (not recommended with group policies). |
@@ -57,10 +59,10 @@ PADS4 Property Table for the Desktop Viewer:
 |  | Port Number | Number | Port number on which the PADS4 Server listens for incoming calls (default is 7237). |
 | Content Library Synchronization | Synchronization Mode | Selection | When automatic is selected, the content is synchronized. |
 | Content Library storage folder | Mode | Selection | When set to Manual specify the destination. Use variables like %APPDATA% to change the location to user specific folders. |
-|  | Content library folder | String | folder location where the PADS4 content library is located. |
-| Tray icon appearance | Appearance | Selection | The way the Desktop Viewer is visible in the windows tray. |
+|  | Content library folder | String | Folder location where the PADS4 content library is located. |
+| Tray icon appearance | Appearance | Selection | The way the Desktop Viewer is visible in the Windows tray. |
 | Use local timezone for scheduled presentations | Use local timezone for scheduled presentations | Boolean | Use the timezone of the local system for determining when to show a message. |
 
-NOTE
-
-This allows you to specify the settings from a central location and push these settings towards users. The users are not able to override these settings using the Options Window. The options that you set/push are disabled in the Desktop Viewer Options Window.
+<Note>
+  This allows you to specify the settings from a central location and push these settings to users. Users can't override these settings using the Options Window. The options that you set or push are disabled in the Desktop Viewer Options Window.
+</Note>
