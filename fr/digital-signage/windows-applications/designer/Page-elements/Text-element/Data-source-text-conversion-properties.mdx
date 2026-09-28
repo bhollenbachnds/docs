@@ -1,0 +1,125 @@
+Ces propriétés déterminent comment votre élément&#x20;
+&#x20; **gère le texte multiligne
+&#x20;&#x20;**&#x20;lorsqu'il est connecté à une&#x20;
+&#x20; **source de données externe
+&#x20;&#x20;**.
+&#x20;&#x20;
+
+***
+
+**Options de gestion du texte
+&#x20;&#x20;**
+--------------
+
+### **Diviser le texte multiligne en éléments de liste de lecture&#xA; &#x20;**
+
+* **Activé
+  &#x20;&#x20;**&#x20;– Chaque&#x20;
+  &#x20; **ligne de texte
+  &#x20;&#x20;**&#x20;de la source de données est traitée comme un&#x20;
+  &#x20; **élément de liste de lecture distinct
+  &#x20;&#x20;**, permettant un&#x20;
+  &#x20; **affichage alterné
+  &#x20;&#x20;**.
+  &#x20;&#x20;
+* **Désactivé
+  &#x20;&#x20;**&#x20;– La&#x20;
+  &#x20; **valeur textuelle entière
+  &#x20;&#x20;**&#x20;est traitée comme&#x20;
+  &#x20; **un seul élément de liste de lecture
+  &#x20;&#x20;**, affichant toutes les lignes ensemble.
+  &#x20;&#x20;
+
+***
+
+**Fonctionnement
+&#x20;&#x20;**
+--------------
+
+Si une&#x20;
+&#x20; **valeur textuelle multiligne
+&#x20;&#x20;**&#x20;est reçue d'une&#x20;
+&#x20; **source de données
+&#x20;&#x20;**, ce paramètre contrôle si :
+&#x20;&#x20;
+
+1. **Chaque ligne est affichée séparément
+   &#x20;&#x20;**&#x20;(comme un bandeau d'actualités défilant ou des annonces en rotation).
+   &#x20;&#x20;
+2. **Toutes les lignes sont affichées ensemble
+   &#x20;&#x20;**&#x20;dans un seul bloc de texte.
+   &#x20;&#x20;
+
+***
+
+**Exemple d'utilisation
+&#x20;&#x20;**
+--------------
+
+### **Scénario 1 : Annonces de vol (activé)&#xA; &#x20;**
+
+**Entrée de la source de données :
+&#x20;&#x20;**
+
+```
+Boarding  
+Einsteigen
+```
+
+* **Avec la division activée :
+  &#x20;&#x20;**&#x20;Chaque mot apparaît&#x20;
+  &#x20; **individuellement
+  &#x20;&#x20;**&#x20;dans la liste de lecture (par ex., "Boarding" → "Einsteigen").
+  &#x20;&#x20;
+* **Avec la division désactivée :
+  &#x20;&#x20;**&#x20;Les deux lignes sont affichées&#x20;
+  &#x20; **ensemble
+  &#x20;&#x20;**&#x20;dans un seul bloc de texte.
+  &#x20;&#x20;
+
+***
+
+### **Scénario 2 : Liste de lecture d'images (activé)&#xA; &#x20;**
+
+**Entrée de la source de données :
+&#x20;&#x20;**
+
+```
+c:\folder\image1.jpg  
+c:\folder\image2.jpg  
+```
+
+* **Sans division :
+  &#x20;&#x20;**&#x20;L'élément image&#x20;
+  &#x20; **ne peut pas lire
+  &#x20;&#x20;**&#x20;l'intégralité de l'entrée comme un chemin valide.
+  &#x20;&#x20;
+* **Avec division :
+  &#x20;&#x20;**&#x20;L'élément&#x20;
+  &#x20; **traite chaque ligne séparément
+  &#x20;&#x20;**, permettant à une&#x20;
+  &#x20; **liste de lecture d'images
+  &#x20;&#x20;**&#x20;de s'afficher en séquence.
+  &#x20;&#x20;
+
+***
+
+**Notes importantes
+&#x20;&#x20;**
+--------------
+
+* Le&#x20;
+  &#x20; **séparateur entre les lignes de texte
+  &#x20;&#x20;**&#x20;est le&#x20;
+  &#x20; **caractère de retour chariot et saut de ligne
+  &#x20;&#x20;**&#x20;(
+  &#x20; `<CR> <LF>`).
+  &#x20;&#x20;
+* Cette fonctionnalité est utile lorsqu'on travaille avec des&#x20;
+  &#x20; **listes d'images, de messages ou de flux de données en temps réel
+  &#x20;&#x20;**.
+  &#x20;&#x20;
+* Fonctionne en combinaison avec les&#x20;
+  &#x20; **options de liste de lecture
+  &#x20;&#x20;**&#x20;pour définir comment les éléments sont affichés.
+  &#x20;&#x20;
