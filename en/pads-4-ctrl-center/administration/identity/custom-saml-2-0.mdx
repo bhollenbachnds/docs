@@ -5,20 +5,20 @@ description: "Connect PADS4 CTRL Center to any custom SAML 2.0 identity provider
 
 PADS4 can connect to any identity provider that supports the SAML 2.0 protocol.
 
-To configure a custom identity provider (IdP) other than Microsoft Entra or Okta, first collect several configuration details. You need these details when you create the identity provider in PADS4. Gather the following from your IdP application:
+To configure a custom identity provider (IdP) other than Microsoft Entra or Okta, first gather the following details from your IdP application:
 
 - Metadata URL of the IdP application
 - Sign-on/Login URL of the IdP application
 - Identifier of the IdP application
 - Signing certificate of the IdP application
 
-You will use this information when configuring the identity provider in PADS4.
+You use this information when you configure the identity provider in PADS4.
 
 ## Configure a custom SAML 2.0 provider
 
 To create the identity provider:
 
-1. Log in to PADS4 and navigate to **Administration**.
+1. Sign in to PADS4 and navigate to **Administration**.
 2. In the left-hand menu, click **Credentials**.
 3. Click **Providers**.
 4. Click **New** and select **Identity** and **Custom SAML 2.0**.
@@ -51,6 +51,6 @@ Click **Create** to complete the identity provider setup.
 
 ## Finalize your custom SAML 2.0 setup
 
-1. **Log out** and **refresh** the PADS4 Portal.
+1. **Sign out** and **refresh** the PADS4 Portal.
 2. The **SSO Login** button should now be visible.
 3. **Sign in** using your **Custom SAML 2.0** provider.
