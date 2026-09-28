@@ -155,12 +155,6 @@
                     ]
                   },
                   {
-                    "group": "ELO",
-                    "pages": [
-                      "certified-devices/elo/I-Series-2"
-                    ]
-                  },
-                  {
                     "group": "Giada",
                     "pages": [
                       "certified-devices/giada/DN84",
@@ -180,7 +174,13 @@
                       "certified-devices/hikvision/ds-dt-60-p",
                       "certified-devices/hikvision/ds-d60xx-un",
                       "certified-devices/hikvision/DS-D60C-B",
-                      "certified-devices/hikvision/DS-D6032FN"
+                      "certified-devices/hikvision/DS-D6032FN",
+                      {
+                        "group": "ELO",
+                        "pages": [
+                          "certified-devices/elo/I-Series-2"
+                        ]
+                      }
                     ]
                   },
                   {
@@ -216,6 +216,12 @@
                       "certified-devices/lg/webOS-8",
                       "certified-devices/lg/webOS-6",
                       "certified-devices/lg/webOS-4.1"
+                    ]
+                  },
+                  {
+                    "group": "Maxhub",
+                    "pages": [
+                      "certified-devices/Maxhub/maxhub-CMB-Series"
                     ]
                   },
                   {
@@ -277,20 +283,14 @@
                   {
                     "group": "Sony",
                     "pages": [
-                      "certified-devices/sony/BZxxL-series",
-                      "certified-devices/sony/sony-xx-b-zxx-p"
+                      "certified-devices/sony/sony-xx-b-zxx-p",
+                      "certified-devices/sony/BZxxL-series"
                     ]
                   },
                   {
                     "group": "Innes",
                     "pages": [
                       "innes_DMB300_DMB400"
-                    ]
-                  },
-                  {
-                    "group": "Maxhub",
-                    "pages": [
-                      "certified-devices/Maxhub/maxhub-nd-55-cmb"
                     ]
                   }
                 ]
