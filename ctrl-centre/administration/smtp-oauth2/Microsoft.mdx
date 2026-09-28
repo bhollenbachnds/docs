@@ -18,7 +18,7 @@ This document provides step-by-step instructions for creating OAuth2 credentials
 ![MS Smtp1](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp1.png)
 
 - Use the following information:
-  - **Name:** Enter a descriptive name ( e.g. Gateway SMTP App )
+  - **Name:** Enter a descriptive name (e.g. Gateway SMTP App)
   - **Supported account types:** Accounts in this organizational directory only
   - **Redirect URI:** The redirect URI specifies where the authorization server should send the user back after successfully authenticating to return an access token to their email account.
     - **Type**: Web
@@ -34,7 +34,7 @@ This document provides step-by-step instructions for creating OAuth2 credentials
 
 - Go to **Certificates & secrets** \> **Client Secrets** \> **New client secret**.
 - Add a description (e.g., "SMTP Secret") and select an expiration period (e.g., 24 months).
-- Click**Add** , **then immediately copy** the **value** of the client secret. **Note**: **This value is only shown once**, and you will not be able to retrieve it after leaving this page. If you lose it, you'll need to generate a new one. This is your “**ClientSecret**”.
+- Click **Add**, **then immediately copy** the **value** of the client secret. **Note**: **This value is only shown once**, and you will not be able to retrieve it after leaving this page. If you lose it, you'll need to generate a new one. This is your “**ClientSecret**”.
 - Store it securely, as it grants access to your application
 
 ## **3. Configure API permissions**
@@ -52,7 +52,7 @@ This document provides step-by-step instructions for creating OAuth2 credentials
 
 ![MS Smtp5](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp5.png)
 
-- Search for permission **SMTP.Send** and this permission as well.
+- Search for permission **SMTP.Send** and add this permission as well.
 
 ![MS Smtp6](/images/ctrl-centre/administration/smtp-oauth2/MS-smtp6.png)
 

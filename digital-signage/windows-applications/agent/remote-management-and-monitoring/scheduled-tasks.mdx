@@ -52,7 +52,7 @@ Generated description that shows when the task will be executed.
 Shows if the task is waiting for executing, is currently running or has been finished.
 
 **Last Run**\
-If the tasks has been executed at least once, this information shows if the last execution was successful or failed.
+If the task has been executed at least once, this information shows if the last execution was successful or failed.
 
 **Destinations**\
 Shows all destinations for which the task has been scheduled. For server tasks the value 'Server' will be displayed.
@@ -103,7 +103,7 @@ From the scheduled tasks window you can remotely schedule new tasks, modify exis
   Scheduled tasks - not only server tasks, but also viewer tasks - can only be managed on your PADS4 Server. The functions for managing scheduled tasks are NOT available in the scheduled tasks window of a PADS4 Viewer.
 </Warning>
 
-When scheduling a tasks there is a distinction between server tasks and viewer tasks. When you schedule a server task that needs to be processed by your connected PADS4 Server, then the task is automatically forwarded to the right PADS4 Server where it is locally stored. Scheduled viewer tasks are also automatically forwarded to the right PADS4 Server, but the PADS4 Server in its turn forwards the task to the right PADS4 Viewer where it is locally stored. This automatic task forwarding system ensures that your task will be executed at the right place and on the right time, even when the system is temporarily offline.
+When scheduling a task there is a distinction between server tasks and viewer tasks. When you schedule a server task that needs to be processed by your connected PADS4 Server, then the task is automatically forwarded to the right PADS4 Server where it is locally stored. Scheduled viewer tasks are also automatically forwarded to the right PADS4 Server, but the PADS4 Server in its turn forwards the task to the right PADS4 Viewer where it is locally stored. This automatic task forwarding system ensures that your task will be executed at the right place and on the right time, even when the system is temporarily offline.
 
  
 
@@ -120,13 +120,13 @@ When scheduling a tasks there is a distinction between server tasks and viewer t
 
    | **Task**            | **Type**    | **Description**                                                                                                                                                                                                                                                                 |
    | :------------------ | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | Update software     | Viewer task | Download and/or install the newest software update on one or more Viewer PCs.  For more details about the update software task, see the description of the [PADS Software](/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software) window. |
-   | Restart process     | Viewer task | Restart the PADS4 Viewer process on one or more Viewer PCs.  For more details about the restart process task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.          |
-   | Reboot              | Viewer task | Restart one or more Viewer PCs.  For more details about the reboot task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                                               |
-   | Shut down           | Viewer task | Turn off one or more Viewer PCs.  For more details about the shut down task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                                           |
-   | Wake-on-LAN         | Viewer task | Turn on one or more Viewer PCs via wake-on-LAN.  For more details about the wake-on-LAN task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                          |
-   | Install font        | Viewer task | Install fonts on one or more Viewer PCs.  For more details about the install font task, see the description of the [Fonts](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Fonts.htm) window.                             |
-   | Update software     | Server task | Download and/or install the newest software update on your Server PC.  For more details about the update software task, see the description of the [PADS Software](/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software) window.         |
+   | Update software     | Viewer task | Download and/or install the newest software update on one or more Viewer PCs. For more details about the update software task, see the description of the [PADS Software](/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software) window.  |
+   | Restart process     | Viewer task | Restart the PADS4 Viewer process on one or more Viewer PCs. For more details about the restart process task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.           |
+   | Reboot              | Viewer task | Restart one or more Viewer PCs. For more details about the reboot task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                                                |
+   | Shut down           | Viewer task | Turn off one or more Viewer PCs. For more details about the shut down task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                                            |
+   | Wake-on-LAN         | Viewer task | Turn on one or more Viewer PCs via wake-on-LAN. For more details about the wake-on-LAN task, see the description of the [Viewer connections](/digital-signage/windows-applications/agent/remote-management-and-monitoring/viewer-connections) window.                           |
+   | Install font        | Viewer task | Install fonts on one or more Viewer PCs. For more details about the install font task, see the description of the [Fonts](https://pads4documentation.blob.core.windows.net/agent/Content/Remote%20management%20and%20monitoring/Fonts.htm) window.                              |
+   | Update software     | Server task | Download and/or install the newest software update on your Server PC. For more details about the update software task, see the description of the [PADS Software](/digital-signage/windows-applications/agent/remote-management-and-monitoring/pads4-software) window.          |
    | Restart process     | Server task | Restart the PADS4 Server process on your Server PC.                                                                                                                                                                                                                             |
    | Alert status report | Server task | Generate a status report with details about generated alerts in a certain period.                                                                                                                                                                                               |
 3. Specify the task-specific settings and click **Next** to continue.
@@ -145,7 +145,7 @@ When scheduling a tasks there is a distinction between server tasks and viewer t
 
    ![EN Agent Taskwizard Specifyperiod Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Taskwizard-Specifyperiod.png)
 
-   You can schedule your task to be executed at one specific moment by selecting **Now** or specifying a **Start Time**,
+   You can schedule your task to be executed at one specific moment by selecting **Now** or specifying a **Start Time**.
 
    To make your task recurring, click the recurrence button. 
 
@@ -170,7 +170,7 @@ After this, your task will be created and forwarded to your PADS4 Server or PADS
 After this an exact copy of the task will be created and forwarded to your PADS4 Server or PADS4 Viewer where it is locally stored.
 
 <Warning>
-  When you have created a duplicated task you always have to edit the scheduling of your duplicated task. Otherwise you will have to identical tasks running at the same moment for the same destinations, which may lead to conflicts.
+  When you have created a duplicated task you always have to edit the scheduling of your duplicated task. Otherwise you will have two identical tasks running at the same moment for the same destinations, which may lead to conflicts.
 </Warning>
 
  

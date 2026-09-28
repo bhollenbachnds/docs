@@ -45,7 +45,7 @@ Once gateways are set up in PADS4, Workspace will automatically import them into
 In this case, the sensor will:
 
 - Create a booking of 15 minutes once a motion sensor has detected motion for 2 minutes.
-- Cancel/remove a booking (automatic or not) if there was never any motion detected during the bookings’ first 5 minutes.
+- Cancel/remove a booking (automatic or not) if there was never any motion detected during the booking’s first 5 minutes.
 - Cut-off/release a booking (automatic or not) if there was motion detected during the meeting but hasn't detected any new motion for 5 minutes.
 - Won't cancel/release/create a booking between 12pm and 1pm.
 
@@ -62,4 +62,4 @@ Finally, the automatic bookings never overwrite/overlap existing bookings. Take 
 
 - When the type is set to **Room Link,** you can select a room to link the LED to using the link (chain-icon) button. The LED will then indicate the status of the linked room (modular spaces are also allowed): Red for currently occupied/reserved by a booking and green for free / no current booking.
 - When the type is set to **Sensor Link**, you can select a sensor to link the LED to. The LED will then indicate the status of the linked sensor: Red for currently detecting motion and green for no motion detected.
-- Once the LED turns green, that also means the motion delay has passed and the room with release/cancel the current booking after the number of minutes configured in the room profile have passed.
+- Once the LED turns green, that also means the motion delay has passed and the room will release/cancel the current booking after the number of minutes configured in the room profile have passed.

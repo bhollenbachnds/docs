@@ -5,7 +5,7 @@ description: "Set up the PADS4 CMS Calendar plugin against Microsoft Entra ID an
 
 How to configure your Microsoft Azure / Exchange environment to set up the CMS Calendar plugin and allow room bookings through Workspace.
 
-### Remark :
+### Remark:
 
 **Microsoft renamed Azure Active Directory to Microsoft Entra ID.**
 
@@ -27,7 +27,7 @@ Follow the steps below to configure your Microsoft Entra ID environment for use 
 
    **b.** Set **Supported account types** to the choice that makes sense for your scenario.
 
-   **c.** For **Redirect URI**, change the dropdown to **Public client (mobile & desktop)** and set the value to :
+   **c.** For **Redirect URI**, change the dropdown to **Public client (mobile & desktop)** and set the value to:
 
    <CodeGroup>
 
@@ -90,13 +90,13 @@ In case you want to add Microsoft Teams meeting support to Workspace, continue t
 3. To add a new user, select the "\+" icon. **The create new user account** page appears.
 4. On the **create new user account page**, complete the required information.
 
-   **A.**  Enter the first name, last name, display name, user name, and your email domain.
+   **A.** Enter the first name, last name, display name, user name, and your email domain.
 
    **B**. Select **Type password** and enter the password for the service account.
 
    **C.** Deselect the **Make this person change their password the next time they sign in** check box.
 
-   **D.** Assign at least an Exchange Online license. e. Enter the email address of the recipient to whom the password must be sent. Select **Create**.
+   **D.** Assign at least an Exchange Online license.
 
    **E.** Enter the email address of the recipient to whom the password must be sent. Select **Create**.
 
@@ -140,7 +140,7 @@ Test-ApplicationAccessPolicy -Identity room01@contoso.com -AppId e7e4dbfc-046-40
 The output of this command will indicate whether the app has access to room01 mailbox.
 
 <Info>
-  Remarks : Changes to application access policies can take up to 30 minutes to take effect in EWS API calls.
+  Remarks: Changes to application access policies can take up to 30 minutes to take effect in EWS API calls.
 </Info>
 
 ## Manage room list (for retrieving rooms to import)
@@ -148,8 +148,8 @@ The output of this command will indicate whether the app has access to room01 ma
 <Info>
   Remarks:
 
-  - To be able to import rooms in Workspace you need to create a room list and add the rooms that want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient then adding rooms manually.
-  - Attention, a room list should not contain more than 100 rooms, if you plan to have more, please split them into multiple room list as the maximum number of rooms that can be returned in the request for a Room List is 100. 
+  - To be able to import rooms in Workspace you need to create a room list and add the rooms that you want to be able to import to the room list. If you don't do this, then you need to manually add the rooms to Workspace. We advise to use a room list as this is more convenient than adding rooms manually.
+  - Attention, a room list should not contain more than 100 rooms, if you plan to have more, please split them into multiple room lists as the maximum number of rooms that can be returned in the request for a Room List is 100. 
 </Info>
 
 1. Connect to Exchange Online PowerShell. For details, see **Connect to Exchange Online PowerShell.**
@@ -180,7 +180,7 @@ When you have successfully set up the app registration & created the service acc
 
 **Application ID:** The application ID from Azure
 
-**Tenant ID** : The directory tenant ID from Azure
+**Tenant ID**: The directory tenant ID from Azure
 
 **Client secret Key**: The client secret key from Azure.
 
@@ -205,7 +205,7 @@ Check “Enable online meeting creation by default” Click save
 ### Create event with teams meeting from workspace
 
 <Info>
-  Remark : This option will only be available if you selected a room that is configured to use the external calendar configuration that has that option set up or also if your user is configured to use the external calendar configuration for user impersonation.
+  Remark: This option will only be available if you selected a room that is configured to use the external calendar configuration that has that option set up or also if your user is configured to use the external calendar configuration for user impersonation.
 </Info>
 
 ![Image47 Pn](/images/Image47.png)
@@ -214,13 +214,13 @@ To **create a teams meeting** in workspace, just create a **simple event** in wo
 
 ![Image48 Pn](/images/Image48.png)
 
-After making the event with the teams meeting option **turned on**, you will see it as shown below :
+After making the event with the teams meeting option **turned on**, you will see it as shown below:
 
 ![Image49 Pn](/images/Image49.png)
 
 ### **Impersonation**
 
-There are 3 operating modes described below, these operating modes are to be set according to the desired results and also according to the security rules of the company :
+There are 3 operating modes described below, these operating modes are to be set according to the desired results and also according to the security rules of the company:
 
 ![Image50 Pn](/images/Image50.png)
 
@@ -256,7 +256,7 @@ Editing, deleting or adding participants can be done using the user calendar (wh
 
 ### **#2. Impersonation = Resources only**
 
-This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, you will have to grant the role **"ApplicationImpersonation"** to the user of the service account following this PowerShell script :
+This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, you will have to grant the role **"ApplicationImpersonation"** to the user of the service account following this PowerShell script:
 
 ```powershell
 New-ManagementScope -Name "CrystalResourceMailboxes" - RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
@@ -268,7 +268,7 @@ New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role Applicat
 
 ![Image52 Pn](/images/Image52.png)
 
-Using this type of **"Resources Only"** impersonation, the reservation function will have the following behavior :
+Using this type of **"Resources Only"** impersonation, the reservation function will have the following behavior:
 
 ### Booking from Outlook
 
@@ -298,7 +298,7 @@ Editing, deleting or adding participants can be done using the resource calendar
 
 ### #3. Impersonation = None
 
-Using this type of impersonation "None", the reservation function will have the following behavior :
+Using this type of impersonation "None", the reservation function will have the following behavior:
 
 ### Booking from Outlook
 
@@ -322,9 +322,7 @@ Editing, deleting, or adding participants can be done using the resource calenda
 
 This activation function in Microsoft Exchange will allow you to import automatically from a mailing list or your Exchange resources.
 
-If this function is not activated it will be necessary to manually create these rooms. However, once the rooms have been created, the functioning of the Workspace application will remain strictly the
-
-same between an imported room and a created room.
+If this function is not activated it will be necessary to manually create these rooms. However, once the rooms have been created, the functioning of the Workspace application will remain strictly the same between an imported room and a created room.
 
 ### Delegation
 
@@ -334,12 +332,12 @@ This delegation will allow the service account to read the Resources calendar.
 
 ### Troubleshooting
 
-If have followed the steps mentioned above and you are unable to import and/or book rooms in Workspace we kindly ask you to double- check the configuration in the CMS Calendar plugin configuration with your tenant setup. 
+If you have followed the steps mentioned above and you are unable to import and/or book rooms in Workspace we kindly ask you to double-check the configuration in the CMS Calendar plugin configuration with your tenant setup. 
 
 As this is quite an extensive setup, we see that configuration errors are the main cause of a system not functioning.
 
  If it is still not working we kindly ask you to open up a ticket in PADS4 Partner Portal and send us the **nds.services.crystal.pads** log file in the Logs folder of PADS4.
 
-## Sources : 
+## Sources:
 
-[Authenticate an EWS application by using OAuth ](https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth)
+[Authenticate an EWS application by using OAuth](https://learn.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth)
