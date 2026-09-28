@@ -4,7 +4,7 @@ description: "Register the PADS4 app in Microsoft Entra ID for Exchange Online, 
 ---
 
 <Warning>
-  [EWS in Exchange Online will be End of Life in Q4 - 2026](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online), please make sure to migrate your registered application to make use of the Microsoft Graph API as follows when you have an existing application registered as below:
+  [EWS in Exchange Online will be End of Life in Q4 - 2026](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online). If you have an existing application registered as below, migrate it to use the Microsoft Graph API as follows:
 
   Make sure to add the following permissions to your existing application registration:
 
@@ -13,9 +13,9 @@ description: "Register the PADS4 app in Microsoft Entra ID for Exchange Online, 
   | **Calendars.ReadWrite** | Yes | Read and synchronize room calendar events. |
   | **Place.Read.All** | Optional | Required only when importing rooms from Microsoft Places or Room Lists. |
 
-  After updating the permissions, **Administrator Consent** must be granted to the application before the service can authenticate successfully.
+  After updating the permissions, you must grant **Administrator Consent** to the application before the service can authenticate successfully.
 
-  Within PADS4 - CMS 1.0 Admin, the Calendar configuration must then be updated: 
+  Within PADS4 - CMS 1.0 Admin, you must then update the Calendar configuration: 
 
   ![Calendar Graph API](/images/Workspace/Administrator/Calendar-GraphAPI.png "Calendar Graph API")
 
@@ -40,7 +40,7 @@ Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticat
 
 ![Register An Application](/images/Register-an-application.jpg "Register An Application")
 
-4. Select **Register**. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them, you will need them later to configure the calendar plugin in CMS.
+4. Select **Register**. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them. You will need them later to configure the calendar plugin in CMS.
 
 # Configure for app-only authentication
 
@@ -71,7 +71,7 @@ In case you want to add Microsoft Teams meeting support to Workspace, continue t
 
 9. Select Certificates & Secrets in the left-hand navigation under Manage.
 10. Select New client secret, enter a short description and select Add.
-11. Copy the Value of the newly added client secret and save it, you will need it later when configuring the calendar plugin in CMS.
+11. Copy the Value of the newly added client secret and save it. You will need it later when configuring the calendar plugin in CMS.
 
 ![Entra ID Client Secret](/images/Entra-ID-client-secret.jpg "Entra ID Client Secret")
 
@@ -102,7 +102,7 @@ f. Select **Close**.
 </Note>
 
 1. Connect to Exchange Online PowerShell. For details, see Connect to Exchange Online PowerShell.
-2. Run the following command, where \<ResourceMailbox> the name of your room should be.
+2. Run the following command, replacing \<ResourceMailbox> with the name of your room.
 
 ```text
 Set-CalendarProcessing -Identity \<ResourceMailbox> -DeleteSubject \$false -AddOrganizerToSubject \$false -DeleteComments \$false
@@ -210,7 +210,7 @@ You can also define if the teams meeting option should be selected by default in
 ## Create event with teams meeting from workspace
 
 <Info>
-  This option will only be available if you selected a room that is configured to use the external calendar configuration that has that option set up or also if your user is configured to use the external calendar configuration for user impersonation.
+  This option is only available if you selected a room that uses an external calendar configuration with that option set up. It is also available if your user is configured to use the external calendar configuration for user impersonation.
 </Info>
 
 ![Use External Booking System](/images/Use-external-booking-system.jpg "Use External Booking System")
@@ -225,7 +225,7 @@ You can also define if the teams meeting option should be selected by default in
 
 # Impersonation
 
-There are 3 operating modes described below, these operating modes are to be set according to the desired results and also according to the security rules of the company:
+There are 3 operating modes described below. Set the operating mode according to the desired results and also according to the security rules of the company:
 
 ![Impersonation](/images/Impersonation.jpg "Impersonation")
 

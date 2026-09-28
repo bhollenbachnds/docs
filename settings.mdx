@@ -10,7 +10,7 @@ Base URL, service account username/password, domain (defaults to `PADS` if blank
 
 ### Status monitor
 
-How often the connectivity background poll runs — toggle between seconds (minimum 10) or minutes. This drives Dashboard freshness indirectly (via snapshots) and directly powers History.
+How often the connectivity background poll runs. Toggle between seconds (minimum 10) or minutes. This drives Dashboard freshness indirectly (via snapshots) and directly powers History.
 
 ### CMS monitor
 
@@ -31,8 +31,8 @@ Maximum age (minutes) before a cached Distribution snapshot is considered stale 
 
 ### Email delivery (SMTP)
 
-Host, port, username/password, from address, Secure (implicit TLS on connect, typically port 465) vs. STARTTLS options, and an "accept self-signed certificates" escape hatch (only for trusted internal networks — it disables certificate verification). **Send test email** sends a real message to an address you provide, using whatever is currently in the form (including an unsaved password), so you can verify before committing.
+Host, port, username/password, from address, Secure (implicit TLS on connect, typically port 465) vs. STARTTLS options, and an "accept self-signed certificates" escape hatch (only for trusted internal networks, because it disables certificate verification). **Send test email** sends a real message to an address you provide, using whatever is currently in the form (including an unsaved password), so you can verify before committing.
 
 ### Deployment
 
-**Secure session cookies (HTTPS only)** — on by default. Leave on for any deployment behind real TLS; turn off only for plain-HTTP testing (see Installation & Deployment §5). **Requires a service restart** to take effect — this is the one setting on this page that doesn't apply live.
+**Secure session cookies (HTTPS only)** — on by default. Leave on for any deployment behind real TLS; turn off only for plain-HTTP testing (see Installation & Deployment §5). **Requires a service restart** to take effect. This is the one setting on this page that doesn't apply live.

@@ -5,12 +5,12 @@ description: "Prerequisites and steps to upgrade an existing PADS4 installation 
 
 To upgrade to PADS4 2025.2, your current version must be at least 2022.3, meaning PADS4 2022.3 must be installed and running first.
 
-Versions 2022.2 or earlier will not auto-update to 2025.2; an intermediate upgrade to 2022.3 is required.
+Versions 2022.2 or earlier will not auto-update to 2025.2; you must first perform an intermediate upgrade to 2022.3.
 
 <Warning>
   User Accounts and Security Update
 
-  As of version 2025.1, the default users User1 and Administrator have been removed to enhance security. During setup, you must create a new user account. This user is created by the Root user, whose password is defined during the installation process.
+  As of version 2025.1, the default users User1 and Administrator have been removed to enhance security. During setup, you must create a new user account. You create this user with the Root user, whose password you define during the installation process.
 </Warning>
 
 ### **Release notes**
@@ -30,7 +30,7 @@ In this section, you’ll find an overview of all migration steps. By selecting 
 ## Updating Azure single sign-on reply URL
 
 <Warning>
-  This change has to be applied before the update to 2025.2. It can also be applied at any time before the migration as this would not affect the current installation.
+  You must apply this change before the update to 2025.2. You can apply it at any time before the migration, as it does not affect the current installation.
 </Warning>
 
 From PADS4 version **2025.2**, the expected Reply URL on the external identity provider changes to support multi-domain usage.
