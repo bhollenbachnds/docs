@@ -1,0 +1,25 @@
+---
+- title: Rapports planifiés
+- description: Configurez des rapports planifiés qui envoient par e-mail des PDF
+    de Connectivité, d'Appareils hors ligne ou de Distribution des appareils
+    quotidiennement, hebdomadairement ou mensuellement, et gérez les
+    planifications actives.
+---
+
+**Rapports planifiés** (`/scheduled`) envoie par e-mail un PDF selon une cadence récurrente. Vous pouvez planifier des rapports de Connectivité, d'Appareils hors ligne ou de Distribution des appareils. Les rapports de preuve de diffusion ne sont pas planifiables.
+
+Vous devez configurer SMTP dans **Paramètres** d'abord. Si SMTP n'est pas configuré, une bannière vous en informe, et les planifications ne seront pas envoyées tant que vous ne l'aurez pas configuré.
+
+1. Cliquez sur **Ajouter une planification**.
+2. Sélectionnez **Type de rapport** et **Cadence** (Quotidienne / Hebdomadaire / Mensuelle).
+3. Saisissez un ou plusieurs **Destinataires** sous forme d'adresses e-mail séparées par des virgules ou des points-virgules. L'application valide les adresses avant que vous puissiez soumettre.
+4. Définissez la **Portée des appareils** en utilisant le même panneau groupe/marque/appareil décrit dans [Portée des appareils](/fr/reports#device-scope).
+5. Cliquez sur **Créer une planification**.
+
+Le tableau **Planifications actives** répertorie chaque planification configurée. Chaque ligne comprend :
+
+* Une colonne de résumé de la portée.
+* Un **Activé/Désactivé** bouton bascule, qui suspend la livraison sans supprimer la planification.
+* Une action **Supprimer** qui ouvre une boîte de dialogue de confirmation. Vous ne pouvez pas annuler une suppression.
+
+Les modifications de planification prennent effet immédiatement. Vous n'avez pas besoin de redémarrer le serveur.

@@ -1,0 +1,138 @@
+---
+- title: Connexions des Viewers
+- description: Vérifiez l'état de connexion de vos PADS4 Viewers, filtrez la
+    liste, redémarrez, relancez, éteignez ou réveillez les viewers via
+    wake-on-LAN, et enregistrez leur black box.
+---
+
+Grâce aux fonctions de connexion du Viewer, vous pouvez vérifier à distance l'état de connexion de vos PADS4 Viewers. Les Viewers peuvent être redémarrés, réinitialisés, éteints ou allumés (wake-on-LAN), ou vous pouvez enregistrer la boîte noire d'un Viewer.
+
+ 
+
+#### **Pour vérifier l'état de connexion de vos PADS4 Viewers**
+
+1. Cliquer sur l'onglet **Server** dans le volet de navigation.
+
+   ![EN Agent Navigationpane Servertab Pn](/images/digital-signage/windows-applications/agent/remote-management-and-monitoring/EN-Agent-Navigationpane-Servertab.png)
+2. Cliquer sur **Viewer Connections** dans la liste des catégories d'informations serveur disponibles.
+
+Après cela, le système récupérera automatiquement les informations demandées depuis le serveur PADS4 connecté et affichera les résultats dans la fenêtre des connexions de visionneuses. Si votre installation PADS4 comprend des sous-serveurs, la fenêtre des connexions de visionneuses affichera toujours les résultats globaux de l'ensemble de votre installation PADS4, quel que soit le serveur que vous avez sélectionné.
+
+ 
+
+#### **Fenêtre des connexions de visionneuses**
+
+Dans la fenêtre des connexions de visionneuses, vous pouvez voir en un coup d'œil quelles PADS4 Viewers fonctionnent correctement et quelles PADS4 Viewers ont perdu leur connexion réseau.
+
+![EN Agent Viewerconnections Pn](/images/digital-signage/windows-applications/agent/main-window/EN-Agent-Viewerconnections.png)
+
+<Tip>
+  Pour chaque PADS4 Viewer répertoriée, l'icône en face de l'icône reflète son état de connexion. Pour déterminer l'état de connexion d'une PADS4 Viewer, le système examine l'état à la fois de PADS4 Viewer et de PADS4 Controller (= le processus en arrière-plan pour l'exécution de certaines tâches). Si seul PADS4 Controller est déconnecté, vous obtiendrez une icône d'avertissement au lieu d'une icône d'erreur.
+</Tip>
+
+**Viewer**\
+Le nom unique qui identifie la PADS4 Viewer au sein du système PADS4.
+
+**Description**\
+La chaîne descriptive qui peut avoir été spécifiée pour donner des informations supplémentaires sur la visionneuse.
+
+**Statut de la Viewer**\
+Le statut de l'application PADS4 Viewer. Si le statut est « déconnecté », la visionneuse n'a pas de connexion réseau avec le serveur PADS4 et ne pourra recevoir aucune mise à jour concernant les présentations planifiées ou le contenu. Les présentations précédemment planifiées ont été mises en cache localement par PADS4 Viewer et peuvent encore fonctionner correctement. Les PADS4 Viewers peuvent fonctionner hors ligne pendant une période maximale d'une semaine.
+
+**Adresse IP**\
+L'adresse IP de la Viewer.
+
+**Connecté depuis**\
+L'horodatage du moment depuis lequel la visionneuse a eu une connexion fonctionnelle avec le serveur PADS4.
+
+**Déconnecté depuis**\
+L'horodatage du moment depuis lequel la visionneuse a perdu sa connexion avec le serveur PADS4. Si aucun horodatage n'est affiché, cela signifie que la visionneuse ne s'est jamais connectée avec succès au serveur PADS4 depuis le démarrage du serveur.
+
+**Licence**\
+La licence qui a été attribuée à cette visionneuse. Les visionneuses ne peuvent se connecter avec succès au serveur PADS4 que lorsqu'elles disposent d'une licence valide. Les licences peuvent être attribuées avec l'application PADS4 System Management.
+
+**Statut du Controller**\
+Le statut du processus PADS4 Controller.
+
+**Adresse MAC**\
+L'adresse MAC unique de la Viewer.
+
+<Tip>
+  Si le statut du controller est « déconnecté » alors que le statut de la visionneuse est « connecté », la PADS4 Viewer peut encore fonctionner correctement, mais vous ne pouvez pas accéder à la visionneuse via PADS4 Agent. À l'inverse, si le statut du Controller est « connecté » alors que le statut de la Viewer est « déconnecté », la PADS4 Viewer ne fonctionnera pas correctement, mais vous pouvez toujours utiliser la plupart des fonctions de PADS4 Agent pour accéder à la visionneuse.
+</Tip>
+
+Lorsque vous sélectionnez un élément de visionneuse dans la fenêtre des connexions de visionneuses, des informations détaillées supplémentaires sur cette visionneuse s'affichent en bas de la fenêtre.
+
+ 
+
+#### **Vue**
+
+Possibilité d'afficher les Viewers ou les Desktop Viewers. Le filtre s'applique aux deux vues.
+
+ 
+
+#### **Filtre**
+
+Le filtrage des Viewers peut être utilisé pour afficher une ou plusieurs Viewers en fonction d'un critère de recherche. Cela peut être un moyen rapide de trouver une certaine Viewer.
+
+Avec le **dropdown (None)** la sélection pour Viewer ou HTML Viewer peut être effectuée.
+
+Deuxièmement, il est possible de rechercher une Viewer en **spécifiant une sous-chaîne dans la zone de texte** et si nécessaire **sensible à la casse**.\
+PADS4 va **rechercher dans les colonnes Viewer, Description, Adresse IP et Adresse MAC** si cela contient la sous-chaîne (sous-chaîne signifie que la séquence de caractères sera recherchée dans toute la ligne de texte).\
+Tous les éléments qui ne correspondent pas aux critères seront masqués.
+
+ 
+
+#### **Redémarrer la Viewer, redémarrer le système, arrêter et wake-on-LAN**
+
+Depuis la fenêtre des connexions de visionneuses, vous pouvez redémarrer, redémarrer le système ou allumer/éteindre à distance une PADS4 Viewer. Lors d'un redémarrage de la Viewer, seul le processus Viewer s'exécutant sur le PC Viewer sera redémarré, tandis qu'un redémarrage du système entraînera un redémarrage complet du PC Viewer. Lors d'un arrêt d'une Viewer, le PC Viewer sera complètement éteint. Les PC Viewers ne peuvent être rallumés à distance que si le PC Viewer dispose d'une prise en charge intégrée du wake-on-LAN et que cette fonctionnalité a été activée.
+
+<Tip>
+  Les tâches de redémarrage, de redémarrage du système, d'arrêt et de wake-on-LAN peuvent également être effectuées en tant que tâches planifiées. Pour prolonger la durée de vie de vos écrans et économiser de l'énergie, il est recommandé de faire éteindre automatiquement vos Viewers en fin de journée et de les rallumer le matin si vos écrans ne sont utilisés que pendant la journée.
+</Tip>
+
+ 
+
+#### **Pour redémarrer une visionneuse**
+
+1. Cliquez sur l'élément de visionneuse dans la fenêtre des connexions de visionneuses pour le sélectionner. (ou utilisez le menu contextuel en utilisant le bouton droit de la souris au-dessus de l'élément de visionneuse)\
+   Vous pouvez éventuellement sélectionner plusieurs éléments en appuyant sur la touche \[Ctrl] ou \[Shift] et en la maintenant enfoncée tout en cliquant sur des éléments de visionneuse.
+2. Cliquez sur **Restart Viewer** dans le **Home** menu.
+3. Cliquez sur **Yes** pour confirmer que vous souhaitez redémarrer le processus de visionneuse.
+
+ 
+
+#### **Pour redémarrer le système ou arrêter une visionneuse**
+
+1. Cliquez sur l'élément de visionneuse dans la fenêtre des connexions de visionneuses pour le sélectionner.\
+   Vous pouvez éventuellement sélectionner plusieurs éléments en appuyant sur la touche \[Ctrl] ou \[Shift] et en la maintenant enfoncée tout en cliquant sur des éléments de visionneuse.
+2. Cliquez sur **Reboot** ou **Shut down** dans le **Home** menu.
+3. Cliquez sur **Yes** pour confirmer que vous souhaitez redémarrer le système ou arrêter la visionneuse.
+
+Si la commande de redémarrage du système ou d'arrêt a été reçue avec succès par la visionneuse, vous êtes informé que le PC Viewer sera arrêté dans 10 secondes. Par conséquent, vous perdrez (temporairement) la connexion.
+
+ 
+
+#### **Pour allumer une visionneuse via wake-on-LAN**
+
+1. Cliquez sur l'élément de visionneuse dans la fenêtre des connexions de visionneuses pour le sélectionner.\
+   Vous pouvez éventuellement sélectionner plusieurs éléments en appuyant sur la touche \[Ctrl] ou \[Shift] et en la maintenant enfoncée tout en cliquant sur des éléments de visionneuse.
+2. Cliquez sur **Wake-on-LAN** dans le **Home** menu.
+
+Dans la fenêtre des tâches, vous pouvez voir si le signal wake-on-LAN a été envoyé avec succès par le serveur PADS4. Cela ne signifie PAS automatiquement que la fonction wake-on-LAN a été reçue avec succès par la visionneuse. Si la visionneuse a été allumée avec succès, vous verrez normalement son statut de Viewer et son statut de Controller dans la fenêtre des connexions de visionneuses mis à jour sur « connecté ».
+
+ 
+
+#### **Enregistrement de la boîte noire d'une visionneuse**
+
+Pour enregistrer la [boîte noire](https://pads4documentation.blob.core.windows.net/agent/Content/Main%20Window/Navigation%20pane.htm) de votre Viewer pour l'analyser ou la comparer hors ligne ultérieurement :
+
+1. Cliquez sur l'élément de visionneuse dans la fenêtre des connexions de visionneuses pour le sélectionner.
+2. Cliquez sur **Save Black Box** dans le **Home** menu.
+3. Entrez un **Nom de fichier** et cliquez sur **Enregistrer** pour sauvegarder les informations.
+
+Après cela, le fichier black box sera enregistré sur votre ordinateur.
+
+<Tip>
+  Chaque PADS4 Viewer crée automatiquement ce qu'on appelle une black box dans laquelle des informations précieuses sur PADS4 sont stockées. Cela inclut des informations système et divers journaux. Lorsque vous rencontrez un problème avec un PADS4 Viewer, la black box est la source d'information idéale pour analyser la situation et localiser le problème. Ainsi, lorsque vous contactez le support pour un problème avec un PADS4 Viewer, il est conseillé d'envoyer toujours le fichier black box.
+</Tip>
