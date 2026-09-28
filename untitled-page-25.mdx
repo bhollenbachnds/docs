@@ -1,0 +1,254 @@
+---
+title: "NDS.Services.FIDS.Connector"
+---
+
+## Overview
+
+Connects PADS4 to Flight Information Display System (FIDS) data sources. Manages message sources, parsers, message handlers, and the incoming flight/departure message queue for airport and transportation display systems.
+
+---
+
+## Purpose
+
+NDS.Services.FIDS.Connector is a specialised integration service for aviation and transportation customers. It ingests flight data messages (departures, arrivals, gate changes) from industry-standard FIDS data sources, parses them, and makes the structured data available to PADS4 presentations for real-time flight information displays (FIDS/BIDS boards).
+
+## How It Works
+
+1. **Message Sources** are configured — these define connections to SITA, RESA, AODB, or other FIDS data providers (over TCP/IP, MQTT, file feeds, etc.).
+2. **Parsers** are attached to sources to translate raw message formats (IATA Type B, XML, CSV) into structured PADS4 flight records.
+3. **Handlers** define what happens when a message is received — store it, trigger a content update, forward it.
+4. **Incoming messages** are queued and can be inspected, requeued on failure, or downloaded for debugging.
+5. **Connection status** per domain can be monitored.
+
+## Functional Areas / Controllers
+
+- connection — Monitor FIDS connection status per domain
+- message — Incoming FIDS messages: list, view details, requeue failed messages, download
+- messagesource — Configure FIDS data sources, parsers, and handlers
+- ReplicationClient — Internal replication diagnostics
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `GET` | `/api/v1/fids/flights` | Get current flight schedule data |
+| `GET` | `/api/v1/fids/flights/{flightNumber}` | Get details for a specific flight |
+| `GET` | `/api/v1/fids/config` | Get FIDS data source configuration |
+| `POST` | `/api/v1/fids/config` | Update FIDS data source configuration |
+
+---
+
+## Request & Response Examples
+
+### GET `/api/v1/fids/flights`
+
+Get current flight schedule data
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://certify.pads365.com/rdx/NDS.Services.FIDS.Connector/api/v1/fids/flights'
+```
+
+**Response `200 OK`:**
+
+```json
+{
+  "Flights": [
+    {
+      "FlightNumber": "EK101",
+      "Airline": "Emirates",
+      "Origin": "DXB",
+      "Destination": "AMS",
+      "ScheduledDeparture": "2024-07-25T14:30:00Z",
+      "Status": "OnTime",
+      "Gate": "B12"
+    },
+    {
+      "FlightNumber": "KL891",
+      "Airline": "KLM",
+      "Origin": "AMS",
+      "Destination": "JFK",
+      "ScheduledDeparture": "2024-07-25T16:00:00Z",
+      "Status": "Delayed",
+      "DelayMinutes": 30,
+      "Gate": "C7"
+    }
+  ],
+  "Code": "OK",
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+### GET `/api/v1/fids/flights/{flightNumber}`
+
+Get details for a specific flight
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://certify.pads365.com/rdx/NDS.Services.FIDS.Connector/api/v1/fids/flights/{flightNumber}'
+```
+
+**Response `200 OK`:**
+
+```json
+{
+  "FlightNumber": "EK101",
+  "Airline": "Emirates",
+  "Origin": "DXB",
+  "Destination": "AMS",
+  "ScheduledDeparture": "2024-07-25T14:30:00Z",
+  "ActualDeparture": null,
+  "Status": "OnTime",
+  "Gate": "B12",
+  "Terminal": "D",
+  "Code": "OK",
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+### GET `/api/v1/fids/config`
+
+Get FIDS data source configuration
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://certify.pads365.com/rdx/NDS.Services.FIDS.Connector/api/v1/fids/config'
+```
+
+**Response `200 OK`:**
+
+```json
+{
+  "DataSource": "SITA",
+  "RefreshIntervalSeconds": 60,
+  "IsEnabled": true,
+  "Code": "OK",
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+### POST `/api/v1/fids/config`
+
+Update FIDS data source configuration
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://certify.pads365.com/rdx/NDS.Services.FIDS.Connector/api/v1/fids/config' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "DataSource": "SITA",
+  "ConnectionString": "endpoint=sita-api.example.com;key=<api-key>",
+  "RefreshIntervalSeconds": 30,
+  "IsEnabled": true
+}'
+```
+
+**Response `200 OK`:**
+
+```json
+{
+  "Code": "OK",
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+---
+
+## Authentication
+
+All endpoints (except Logon itself) require a valid **session cookie**. PADS4 uses cookie-based session authentication — not Bearer tokens.
+
+### Step 1 — Log in
+
+```http
+POST https://certify.pads365.com/rdx/NDS.Services.Authentication/api/v1/Account/Logon
+Content-Type: application/json
+
+{
+  "Username": "Administrator",
+  "Password": "<password>",
+  "Domain": "pads"
+}
+```
+
+**Response body:**
+
+```json
+{
+  "Claims": [
+    { "Name": "userId",      "Value": "d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a" },
+    { "Name": "displayName", "Value": "Administrator" },
+    { "Name": "email",       "Value": "admin@pads4.local" }
+  ],
+  "Code": 0,
+  "Succeeded": true,
+  "Message": null
+}
+```
+
+The server sets a **session cookie** (`Set-Cookie` header). The response body returns identity claims — it is NOT a token you send back.
+
+### Step 2 — Use the session cookie
+
+**curl** — save cookie once, reuse on every call:
+
+```bash
+# Login — save cookie
+curl -c cookies.txt -X POST \
+  'https://certify.pads365.com/rdx/NDS.Services.Authentication/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"Username":"Administrator","Password":"<password>","Domain":"pads"}'
+
+# Subsequent calls — send saved cookie
+curl -b cookies.txt 'https://certify.pads365.com/rdx/NDS.Services.Cms/api/v1/cms/message'
+```
+
+**Postman:** Enable _Send cookies_ and _Automatically follow redirects_. The session cookie is stored and sent automatically after a successful Logon call.
+
+**Browser / fetch:**
+
+```js
+fetch('/rdx/NDS.Services.Cms/api/v1/cms/message', { credentials: 'include' })
+```
+
+---
+
+## Common Infrastructure Endpoints
+
+Every PADS4 microservice exposes these standard endpoints:
+
+| Method | Path | Description |
+| --- | --- | --- |
+| GET | `/api/v1/health` | Basic health check |
+| GET | `/api/v1/health/clean` | Deep health check |
+| GET | `/api/v1/diagnostics/toggles` | Active feature toggles |
+| GET | `/api/v1/diagnostics/configuration` | Current running configuration |
+| GET | `/api/v1/diagnostics/configurationex` | Extended configuration |
+| GET | `/api/v1/diagnostics/circuitbreakers` | Circuit breaker status |
+| POST | `/api/v1/diagnostics/events` | Query diagnostic events |
+| GET | `/migration` | Migration status |
+| GET | `/version` | Service version string |
+| POST | `/api/v1/Management/RequeueErrorMessages` | Requeue failed messages |
+| POST | `/api/v1/Management/PurgeErrorMessages` | Purge failed messages |
+
+**Health check example:**
+
+```bash
+curl -b cookies.txt 'https://certify.pads365.com/rdx/NDS.Services.Cms/api/v1/health'
+```
+
+```json
+{ "IsFaulted": false, "Stati": [{ "IsFaulted": false, "Name": "Default" }] }
+```
+
+---

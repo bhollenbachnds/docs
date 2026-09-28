@@ -1,0 +1,183 @@
+---
+title: "NDS.Services.License"
+---
+
+## Overview
+
+Manages PADS4 license keys, feature entitlements, and viewer seat allocation. Validates license state and enforces feature flags based on the active license tier.
+
+| Field | Value |
+| --- | --- |
+| Swagger UI | `https://<your-server>/rdx/NDS.Services.License/swagger/index.html` |
+| OpenAPI spec | `https://<your-server>/rdx/NDS.Services.License/swagger/v1/swagger.json` |
+| Base URL | `https://<your-server>/rdx/NDS.Services.License` |
+| Total endpoints | 30 |
+
+---
+
+## Authentication
+
+All endpoints use the standard PADS4 session cookie. Obtain it once and reuse:
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Replace `https://<your-server>` with your PADS4 server address and `<ServiceName>` with the service path shown above.
+
+---
+
+## Endpoint Reference
+
+| Method | Path | Description |
+| --- | --- | --- |
+| `POST` | `/api/v1/license/Assignment/overview` | Get Assignments |
+| `POST` | `/api/v1/license/Assignment/licenseAssignments` | Get Assignments For Licenses |
+| `POST` | `/api/v1/license/Assignment` | Assign Licenses |
+| `POST` | `/api/v1/license/Assignment/AccessPermsissions` | Get Access Permissions |
+| `POST` | `/api/v1/license/Assignment/AssignDefaultLicenses` | Assign Default Licenses |
+| `POST` | `/api/v1/license/Assignment/identities/search` | Get Assignments Identities |
+| `GET` | `/api/v1/license/GetLicenseCounts` | Get License Counts |
+| `POST` | `/api/v1/license/SetServiceLicenses` | Set Service Licenses |
+| `GET` | `/api/v1/license/summary` | Get License Summary |
+| `GET` | `/api/v1/license/information` | Get License Information |
+| `GET` | `/api/v1/license/beginOfflineActivation` | Begin Offline Activation |
+| `POST` | `/api/v1/license/activateLicense` | Activate License |
+| `POST` | `/api/v1/license/completeOfflineActivation` | Complete Offline Activation |
+| `POST` | `/api/v1/license/ResetLicenses` | Reset License |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/contentTransferState` | Get Content Transfer State |
+| `GET` | `/api/v1/ReplicationClient/Diagnostics/busDiagnostics` | Get Bus Diagnostics |
+| `GET` | `/api/v1/diagnostics/toggles` | Get Toggles |
+| `GET` | `/api/v1/diagnostics/configuration` | Get Config Section |
+| `GET` | `/api/v1/diagnostics/configurationex` | Get Configuration |
+| `GET` | `/api/v1/diagnostics/circuitbreakers` | Get Circuit Breakers |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/reset` | Reset Circuit Breaker |
+| `GET` | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST` | `/api/v1/diagnostics/events` | Get Events |
+| `GET` | `/api/v1/health` | Get |
+| `GET` | `/api/v1/health/clean` | Get Clean |
+| `POST` | `/api/v1/Management/RequeueErrorMessages` | Requeue Error Messages |
+| `POST` | `/api/v1/Management/PurgeErrorMessages` | Purge Error Messages |
+| `GET` | `/migration` | Get Migrations |
+| `POST` | `/migration` | Execute Migration |
+| `GET` | `/version` | Get |
+
+---
+
+## Request & Response Examples
+
+### POST `/api/v1/license/Assignment/overview`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/overview' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/license/Assignment/licenseAssignments`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/licenseAssignments' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/license/Assignment`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/license/Assignment/AccessPermsissions`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/AccessPermsissions' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/license/Assignment/AssignDefaultLicenses`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/AssignDefaultLicenses' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+### POST `/api/v1/license/Assignment/identities/search`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.License/api/v1/license/Assignment/identities/search' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Response `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+---
+
+> Additional endpoints follow the same patterns shown above. See the Swagger UI for full parameter schemas.
