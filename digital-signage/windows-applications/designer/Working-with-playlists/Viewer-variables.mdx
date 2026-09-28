@@ -5,17 +5,17 @@
 
 ## **Managing Viewer Variables**  
 
-### **System Management (Administrator Level)**  
+### **System Management (administrator level)**  
 - Viewer Variables are created in **PADS4 System Management**.  
 - Each variable has a **default value** assigned.  
 - These variables apply to all Viewers unless overridden.  
 - Users **cannot add or remove variables** through **PADS4 Agent**.  
 
-### **PADS4 Agent (User Level)**  
+### **PADS4 Agent (user level)**  
 - Viewer variables can be **modified** via **PADS4 Agent (Server tab)**.  
 - Changes made here **overwrite** the default values set in **System Management**.  
 
-### **Viewer Options (Local Adjustment)**  
+### **Viewer Options (local adjustment)**  
 - The **Viewer Options window** in the **PADS4 Viewer** application allows **local adjustments**.  
 - These changes **override both System Management and PADS4 Agent settings**.  
 
@@ -23,11 +23,11 @@
 
 ## **Using Viewer Variables**  
 
-### **How Viewer Variables Are Identified**  
+### **How Viewer Variables are identified**  
 - A Viewer Variable is written as `#VariableName#`.  
 - Example: `#Store Name#`.  
 
-### **Using Viewer Variables in Text Elements**  
+### **Using Viewer Variables in text elements**  
 - Example:  
   - **System Management:** `#Store Name# = New York Health`  
   - **Text Element:** `Welcome to #Store Name#!`  
@@ -37,18 +37,18 @@ This method allows **one presentation to be used across multiple locations** whi
 
 ---
 
-## **Where Can Viewer Variables Be Used?**  
+## **Where can Viewer Variables be used?**  
 
-### **Text-Based Fields**  
+### **Text-based fields**  
 - Playlist text content.  
 - Rule conditions.  
 - Property bindings.  
 - Data provider connections.  
 
-### **Data Providers**  
+### **Data providers**  
 - Used in **sorting, filtering, expressions, file references, parameters, SQL queries**.  
 
-### **Automation Use Cases**  
+### **Automation use cases**  
 - **Store Size Filtering:**  
   - If a store has a **Viewer Variable for size** (`L, XL, XXL`), only products relevant to that size are displayed.  
 - **Location-Based Content:**  
@@ -58,40 +58,40 @@ This method allows **one presentation to be used across multiple locations** whi
 
 ---
 
-## **When NOT to Use Viewer Variables**  
+## **When NOT to use Viewer Variables**  
 - **For continuous real-time updates** (e.g., rapidly changing stock prices).  
 - In these cases, a **data provider** should be used instead.  
 
 ---
 
-## **When Are Viewer Variables Updated?**  
+## **When are Viewer Variables updated?**  
 
-### **Inside the Data Source**  
+### **Inside the data source**  
 - When the **Viewer retrieves data**, the **variables are replaced immediately**.  
 - If the **data provider updates**, the **new values are applied**.  
 
-### **In Data Providers**  
+### **In data providers**  
 - If a **Viewer Variable** is used in **filters, sorting, or queries**, it is **replaced at the start of data retrieval**.  
 - If a data provider **updates once per hour**, **Viewer Variables only update after the next read cycle**.  
 
-### **In Presentations**  
+### **In presentations**  
 - When a **presentation loads**, **Viewer Variables in elements (text, images, videos) are replaced**.  
 
-### **In Rules**  
+### **In rules**  
 - **Viewer Variables in rules** are replaced **only when the rule is checked**.  
 - **Rule checks do not trigger automatically** if a Viewer Variable changes.  
 
-### **In Property Bindings**  
+### **In property bindings**  
 - If a **data provider updates on a set interval**, the **newest Viewer Variable values replace the old ones**.  
 - However, changing a Viewer Variable **does not force the data provider to refresh**.  
 
-### **In Playlists**  
+### **In playlists**  
 - If the **playlist contains only one item**, the **Viewer Variable is replaced only once** (it does not update).  
 - If **playlist alternation is enabled**, the **Viewer Variable is replaced with new values after each interval**.  
 
 ---
 
-## **Key Benefits of Viewer Variables**  
+## **Key benefits of Viewer Variables**  
 - **One presentation can be used across multiple locations**, reducing duplication.  
 - **Automated content personalization**, such as store names and locations.  
 - **Works seamlessly with data providers, filters, and rules**.  

@@ -2,7 +2,7 @@
 title: "Installation and Deployment"
 ---
 
-## PADS4 Reporting Plugin — Installation
+## PADS4 Reporting Plugin — installation
 
 **Windows Installation Guide (Setup.exe)**
 
@@ -24,7 +24,7 @@ For how to use the application after installation, see our Administration Guide.
 
 ---
 
-## 2. What the Installer Does
+## 2. What the installer does
 
 | Item | Value |
 | :-- | :-- |
@@ -47,7 +47,7 @@ Keeping all runtime data under ProgramData means upgrades and even uninstalls ne
 
 ---
 
-## 4. First Launch & Activation
+## 4. First launch & activation
 
 1. Open the app in a browser and go to the **Administrator** sign-in (`/admin/login`, or follow the "Sign in as an administrator" link from the regular login page).
 2. Sign in with the default credentials: `admin` **/** `changeme`.
@@ -63,7 +63,7 @@ Keeping all runtime data under ProgramData means upgrades and even uninstalls ne
 
 ---
 
-## 5. HTTPS & Session Cookies
+## 5. HTTPS & session cookies
 
 Session cookies default to **requiring HTTPS**. If the app is reachable only over plain HTTP (testing, internal-only access by IP), turn this off in **Settings → Deployment → Secure session cookies** — otherwise sign-in will silently fail, because the browser won't return a `Secure` cookie over HTTP. This setting requires a service restart to take effect.
 
@@ -71,7 +71,7 @@ For production, put a TLS-terminating reverse proxy (IIS with ARR, or nginx) in 
 
 ---
 
-## 6. Service Operations
+## 6. Service operations
 
 ```powershell
 Get-Service PADS4ReportingPlugin

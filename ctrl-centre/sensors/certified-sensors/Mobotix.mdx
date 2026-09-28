@@ -2,14 +2,14 @@ This guide explains how to connect **Mobotix cameras** with **PADS4** to retriev
 
 ---
 
-## **Step 1: Configuring the Mobotix M7 Device**
+## **Step 1: Configuring the Mobotix M7 device**
 To ensure proper integration, event profiles in the Mobotix camera must be set up to match the **AIFacedetect App**.
 
-### **Accessing Camera Settings**
+### **Accessing camera settings**
 1. **Log in** to the Mobotix camera.
 2. Navigate to **Setup Menu > Event Control > Event Overview > Message Events**.
 
-### **Check and Apply the Following Event Properties**
+### **Check and apply the following event properties**
 | **Property**             | **Value**           |
 |--------------------------|--------------------|
 | Event sensor type        | **MxMessageSystem** |
@@ -19,7 +19,7 @@ To ensure proper integration, event profiles in the Mobotix camera must be set u
 
 ---
 
-## **Step 2: Configuring the AIFacedetect App**
+## **Step 2: Configuring the AIFacedetect app**
 To enable **facial detection** for masked and unmasked faces:
 
 1. **Navigate to:**  
@@ -37,7 +37,7 @@ To enable **facial detection** for masked and unmasked faces:
 
 ---
 
-## **Step 3: Configuring the Mobotix Connection in PADS4**
+## **Step 3: Configuring the Mobotix connection in PADS4**
 1. **Open PADS4 CTRL Center**.
 2. **Navigate to Sensors** (If the **Sensors** category is not visible, you may need an **IOT module license**. Contact your PADS4 partner for assistance).
 3. Click **New Camera Software** and select **Mobotix**.
@@ -51,7 +51,7 @@ Once completed, **PADS4 will connect to the Mobotix camera** and begin **receivi
 
 ---
 
-## **Additional Notes**
+## **Additional notes**
 - **Certified Sensors**: For details on the data retrieved from Mobotix, check the **Certified Sensors** page in PADS4.
 - **Event Handling**: The configured events will trigger **real-time incident creation** in PADS4.
 - **Integration Uses**:

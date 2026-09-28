@@ -5,7 +5,7 @@ These **item-level rules** enable dynamic changes, such as modifying the **foreg
 
 ---
 
-## **Applying Rules to Individual Scrolling Text Items**  
+## **Applying rules to individual scrolling text items**  
 
 When a **rule** is triggered, it can modify multiple properties, including:  
 - Making the **entire scrolling text element invisible**  
@@ -21,13 +21,13 @@ Each **separate item** in the scrolling text can be **validated independently** 
 
 ---
 
-## **Special Properties for Playlist Items & Rules**  
+## **Special properties for playlist items & rules**  
 
-### **Change Font & Foreground Color Based on a Rule**  
+### **Change font & foreground color based on a rule**  
 
 A **rule** can be added to validate text content and apply a **font and foreground color change** when a condition is met.
 
-#### **Example: Highlighting a Specific Line in a Scrolling Text**  
+#### **Example: Highlighting a specific line in a scrolling text**  
 1. **Data Source Example**  
    ```
    Line one  
@@ -43,25 +43,25 @@ A **rule** can be added to validate text content and apply a **font and foregrou
    - Click on **Set Properties** → **Change Foreground Color** (e.g., make it red).  
    - **Press F2** to preview → **Line two will display in red**, while the rest remain unchanged.
 
-#### **Example: Applying a Rule to Multiple Lines**  
+#### **Example: Applying a rule to multiple lines**  
 - If the rule is instead:  
   **IF Current Data Starts With ‘Line’**,  
   **all lines** would be affected and displayed in the same color.
 
 ---
 
-## **Changing the Separator Based on a Rule**  
+## **Changing the separator based on a rule**  
 
 This example demonstrates how to create a **stock exchange ticker** using the **Scrolling Text Element** with **dynamic separator images** based on stock price movement.
 
-#### **Data Source Example**
+#### **Data source example**
 | Stock       | CurrentPrice | OldPrice | Description        |
 |------------|-------------|---------|-------------------|
 | Coca Cola  | 42.40       | 41.30   | Coca Cola 42.40  |
 | Microsoft  | 65.22       | 67.43   | Microsoft 65.22  |
 | Google     | 820.19      | 834.11  | Google 820.19    |
 
-#### **Steps to Implement**  
+#### **Steps to implement**  
 1. **Connect a Scrolling Text Element** to a **static data provider** with stock data.  
 2. **Enable Data Scrolling**.  
 3. Set **Scroll Options** to **Directly after previous text** and **select the Description column** for the scrolling text.  
@@ -76,7 +76,7 @@ This example demonstrates how to create a **stock exchange ticker** using the **
 
 ---
 
-## **Key Takeaways**  
+## **Key takeaways**  
 - **Rules allow item-level customization** in scrolling text.  
 - **Individual text items** can have **different fonts, colors, and separators** based on **real-time data validation**.  
 - **Database values** can control how **text content and separators** appear dynamically.  

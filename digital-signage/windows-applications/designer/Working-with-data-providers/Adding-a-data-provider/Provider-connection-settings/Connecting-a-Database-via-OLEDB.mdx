@@ -10,18 +10,18 @@ Before setting up an **OLEDB connection** in **PADS4**, ensure:
 
 ---
 
-## **Steps to Add/Modify an OLEDB Connection in PADS4**
+## **Steps to add/modify an OLEDB connection in PADS4**
 
 ### **1. Start the Data Provider Wizard**
 - Follow the steps outlined in **Adding a Data Provider** or **Editing a Data Provider**.
 - Select **OLEDB** as the provider type.
 
-### **2. Enter the OLEDB Connection String**
+### **2. Enter the OLEDB connection string**
 - Provide the **OLEDB connection string** to establish a link with your database.
 - The format of this string depends on the **OLEDB driver** in use.
 - Visit [www.connectionstrings.com](https://www.connectionstrings.com) for reference.
 
-#### **Example Connection String for Microsoft Access**
+#### **Example connection string for Microsoft Access**
 ```plaintext
 Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\MyDatabase.accdb;Persist Security Info=True
 ```
@@ -30,14 +30,14 @@ Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\MyDatabase.accdb;Persist Securi
 
 ---
 
-### **3. Select the Data Source**
-- Choose one of the detected data sources:
+### **3. Select the data source**
+- Select one of the detected data sources:
   - **Tables**
   - **Views**
   - **Stored Procedures**
-- If no predefined data sources are available, choose **SQL Statement** and manually enter an **SQL query**.
+- If no predefined data sources are available, select **SQL Statement** and manually enter an **SQL query**.
 
-#### **Example SQL Query**
+#### **Example SQL query**
 ```sql
 SELECT * FROM Customers
 ```
@@ -49,13 +49,13 @@ Only use **SQL statements** when necessary. Manually written queries need to be 
 
 ---
 
-### **4. Complete the Setup**
+### **4. Complete the setup**
 - Follow the remaining steps in the **Adding a Data Provider** guide.
 - Click **Finish** to save the connection settings.
 
 ---
 
-## **Important Considerations**
+## **Important considerations**
 - **Ensure Network Access:**  
   - If using a **PADS4 Data Server**, the **OLEDB driver must be installed** on the **server**, and the database **must be accessible**.
   - If **not using a Data Server**, ensure that **each PADS4 Viewer and Designer** has the **correct OLEDB driver installed**.

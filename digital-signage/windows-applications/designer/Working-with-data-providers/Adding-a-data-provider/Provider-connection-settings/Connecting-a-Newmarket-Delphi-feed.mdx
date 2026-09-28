@@ -3,15 +3,15 @@ The **Newmarket Delphi** provider in **PADS4** allows you to connect to **Delphi
 
 ---
 
-### **Steps to Add or Modify a Newmarket Delphi Feed Connection**  
+### **Steps to add or modify a Newmarket Delphi feed connection**  
 
 #### **1. Start the Data Provider Wizard**
 - Open **PADS4** and go to the **Data Provider Wizard**.
 - Select **Newmarket Delphi Feed** as the **provider type**.
 - Click **Next** to continue.
 
-#### **2. Select the Server Version**
-- Choose the **server version**:
+#### **2. Select the server version**
+- Select the **server version**:
   - **Older versions** require different credentials.
   - **Newer versions** may offer improved performance and security.
 
@@ -19,7 +19,7 @@ The **Newmarket Delphi** provider in **PADS4** allows you to connect to **Delphi
 - Enter the **Delphi NWS (Newmarket Web Services) credentials**.
 - Click **Connect** (if credentials are saved, the system may connect automatically).
 
-#### **4. Choose the Data Type to Retrieve**
+#### **4. Choose the data type to retrieve**
 - **Get Location**  
   - Select the **Location ID** from the dropdown list.
 
@@ -35,7 +35,7 @@ The **Newmarket Delphi** provider in **PADS4** allows you to connect to **Delphi
   - Check **External ID** if using external Location IDs.
   - Enable **Include location data** *(adds location-related columns, may impact performance)*.
 
-#### **5. Configure Older Delphi Feed Settings (Version 9.6 and Earlier)**
+#### **5. Configure older Delphi feed settings (version 9.6 and earlier)**
 - Enter the **Delphi Service URL** *(e.g., http://your-ip-address/MeetingSpaceServices/Request.asmx)*.
 - Enter the **Property Key** *(building ID number)*.
 - Provide a **Username** *(Vendor System)* and **Password** *(License Key)*.
@@ -44,14 +44,14 @@ The **Newmarket Delphi** provider in **PADS4** allows you to connect to **Delphi
   - **Get Room Information** *(retrieves room availability details)*.
   - **Include Characteristics** *(matches room details automatically)*.
 
-#### **6. Apply Optional Filters**
+#### **6. Apply optional filters**
 - **Event Key** – Filter by event name.
 - **Room Group** – Filter by room group *(case-sensitive)*.
 - **Exhibit** – Filter rooms with scheduled exhibitions.
 - **Postable** – Filter based on postable status.
 - **Alternate Language** – Select an alternative language template.
 
-#### **7. Define the Date/Time Range for Data Retrieval**
+#### **7. Define the date/time range for data retrieval**
 - **Today** – Retrieves data for the current day.
   - Optionally, set an **offset in days**.
 - **Now** – Retrieves current data.
@@ -61,13 +61,13 @@ The **Newmarket Delphi** provider in **PADS4** allows you to connect to **Delphi
 
 Click **Next** to continue.
 
-#### **8. Complete the Setup**
+#### **8. Complete the setup**
 - **Review** the connection settings.
 - Click **Finish** to save the data provider.
 
 ---
 
-### **Important Notes**
+### **Important notes**
 - **Performance Considerations**:
   - Enabling **Include Room Data** may **slow performance** due to additional processing.
   - Older Delphi versions require **manual entry** of service URLs.

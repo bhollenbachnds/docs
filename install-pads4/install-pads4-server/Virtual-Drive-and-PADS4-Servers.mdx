@@ -4,7 +4,7 @@ description: "How PADS4 2021.3 and higher use a Virtual Drive to expose the new 
 hidden: true
 ---
 
-# Upgrading to PADS4 Version 2021.3 and Higher
+# Upgrading to PADS4 version 2021.3 and higher
 
 With the release of **PADS4 version 2021.3**, a new **Advanced Content Library System** has been introduced. This update enhances functionality and security by transitioning from an open folder structure to a controlled environment. As a result, existing installations may require minor adjustments to accommodate this change.
 
@@ -24,11 +24,11 @@ When using **PADS4 Designer**, **Data Folder Data Providers**, **PADS4 CMS**, or
 
 For existing installations that rely on the traditional **Content Library folder**, compatibility is maintained through this mechanism. The **Virtual Drive** is automatically installed during the upgrade process.
 
-### Performance Considerations
+### Performance considerations
 
-Users may experience a slight change in performance, as the **Virtual Drive** retrieves content dynamically from the closed environment instead of a direct file system structure.
+You may experience a slight change in performance, as the **Virtual Drive** retrieves content dynamically from the closed environment instead of a direct file system structure.
 
-## How Does It Work?
+## How does it work?
 
 When installing **PADS4 Server version 2021.3 or higher**, a **Virtual Drive Service** is automatically deployed. This service provides seamless integration with the new **Advanced Content Library**.
 
@@ -52,7 +52,7 @@ Although the folder appears to contain files, no actual data is stored locally. 
 
 Additionally, any new files uploaded via the **PADS4 Web Portal** will appear in the **Virtual Drive** folder.
 
-## Log File Location
+## Log file location
 
 For troubleshooting and log analysis, the **Virtual Drive Service** maintains a dedicated log file. You can find it here:
 
@@ -60,7 +60,7 @@ For troubleshooting and log analysis, the **Virtual Drive Service** maintains a 
 C:\Program Files\NDS\PADS4 Foundation\NDS.Content.FileSystem.Service\NDS.Content.FileSystem.Service.log
 ```
 
-## API for Content Management
+## API for content management
 
 With **PADS4 version 2021.3**, a new **Content Management API** has been introduced, replacing the previous **Agent SDK**. This API provides improved functionality and flexibility for managing content programmatically.
 

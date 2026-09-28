@@ -3,7 +3,7 @@ The **row properties** define the **layout and real-time data** displayed in eac
 
 ---
 
-## **Editing Row Content**  
+## **Editing row content**  
 
 1. Click **Edit** to open the **Edit Row** window.  
 2. Design the **row layout** by adding **page elements** and setting their properties.  
@@ -13,17 +13,17 @@ The **row properties** define the **layout and real-time data** displayed in eac
 
 ---
 
-## **Row Design & Layout**  
+## **Row design & layout**  
 
 - Similar to **designing a standard page**, you can add **any type of page element** (except another table element).  
 - Elements can be arranged in a **single line** or **multiple lines** to create **multi-line rows**.  
 - Elements can be **linked to a data source** for **real-time data updates**.
 
-### **Data Display & Scrolling**  
+### **Data display & scrolling**  
 
 - **Connected to Data Source:**  
   - **Each row element** pulls **real-time data** from a **data provider**.  
-  - The **Row property** should be set to **1** for the first row (automatically increases for additional rows).  
+  - Set the **Row property** to **1** for the first row (automatically increases for additional rows).  
 
 - **Not Connected to Data Source:**  
   - Displays the **same content across all rows**.  
@@ -33,14 +33,14 @@ The **row properties** define the **layout and real-time data** displayed in eac
   - To enable scrolling, turn on **data scrolling** for each **scrolling row element**.  
   - Use **"Don’t Scroll the First X Rows"** to keep **certain rows static**.  
 
-### **Using Multiple Data Providers**  
+### **Using multiple data providers**  
 
 - A row **can include multiple data providers**.  
 - Be aware that **each element's Row property** will increase for additional rows.
 
 ---
 
-## **Row Height & Automatic Adjustment**  
+## **Row height & automatic adjustment**  
 
 | **Height Setting** | **Behavior** |
 |--------------------|--------------|
@@ -52,23 +52,23 @@ The **row properties** define the **layout and real-time data** displayed in eac
 
 ---
 
-## **Advanced Row Features**  
+## **Advanced row features**  
 
-### **Grouping Rows**  
+### **Grouping rows**  
 - Group **related data elements** together.  
 - Useful for **category-based** or **sorted** tables.  
 
-### **Multi-Line Row Display**  
+### **Multi-line row display**  
 - Example: At an **airport**, the first line displays **flight details**, and the second line displays **route information**.  
 - If **no route information exists**, the **second line disappears**, and the **row height adjusts automatically**.  
 
-### **Property Bindings & Calculated Row Numbers**  
+### **Property bindings & calculated row numbers**  
 - When using **property bindings**, enable **scrolling** to let the **binding dynamically adjust** to the correct row number.  
 - During **runtime**, the **initial row number** will be used, and the **system calculates additional row numbers** as the table **refreshes**.
 
 ---
 
-## **Best Practices & Tips**  
+## **Best practices & tips**  
 
 - **Enable scrolling** for data-driven elements to **display all information dynamically**.  
 - **Use grouping** to categorize data for **better readability**.  

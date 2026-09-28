@@ -4,7 +4,7 @@ For more details on Milestone XProtect, visit: [www.milestonesys.com](https://ww
 
 ---
 
-## **Step 1: Create Alarms in Milestone XProtect**
+## **Step 1: Create alarms in Milestone XProtect**
 To enable PADS4 to retrieve alarms:
 1. **Open XProtect Management Client**.
 2. Navigate to the **Alarms** category.
@@ -16,21 +16,21 @@ For details on creating incidents, refer to the **How to Use Sensors** section.
 
 ---
 
-## **Step 2: Configure SQL Server to Allow PADS4 Access**
+## **Step 2: Configure SQL Server to allow PADS4 access**
 PADS4 does not connect directly to Milestone; instead, it **reads data from the SQL Server database**. This approach enables SQL Server to **send push notifications** when data changes, improving system performance.
 
-### **Allow SQL Server Network Connections**
+### **Allow SQL Server network connections**
 1. Ensure that the SQL Server instance used by Milestone **allows network connections**.
 2. Check for **firewall settings** that might block access.
 
-### **Test SQL Server Connectivity**
+### **Test SQL Server connectivity**
 1. Install **Microsoft SQL Server Management Studio (SSMS)** on the PADS4 server.
 2. Try **connecting to the Milestone database** using SSMS.
 3. If the connection is successful, **SQL Server and firewall settings are correctly configured**.
 
 ---
 
-## **Step 3: Enable SQL Server Authentication for PADS4**
+## **Step 3: Enable SQL Server authentication for PADS4**
 To allow PADS4 to connect to SQL Server, enable **Mixed Mode Authentication**:
 1. **Connect to SQL Server** using **SSMS** and **Windows Authentication**.
 2. **Right-click** on the SQL Server instance and **select Properties**.
@@ -40,10 +40,10 @@ To allow PADS4 to connect to SQL Server, enable **Mixed Mode Authentication**:
 
 ---
 
-## **Step 4: Create a SQL User Account for PADS4**
+## **Step 4: Create a SQL user account for PADS4**
 A **SQL user account** is required to access the Milestone database. You can create one using **SSMS** (Graphical User Interface) or **SQL scripts**.
 
-### **Option 1: Create a SQL User Using SSMS**
+### **Option 1: Create a SQL user using SSMS**
 1. **Connect to SQL Server** via SSMS.
 2. Expand **Security** > **Logins**.
 3. **Right-click** on **Logins** and select **New Login**.
@@ -52,7 +52,7 @@ A **SQL user account** is required to access the Milestone database. You can cre
 6. **Uncheck "Enforce password policy"**.
 7. Set the **default database** to `Surveillance`.
 
-#### **Grant Database Permissions**
+#### **Grant database permissions**
 1. Navigate to **User Mapping**.
 2. Select the **Surveillance database**.
 3. Assign **db_owner** role (to allow full access).
@@ -60,7 +60,7 @@ A **SQL user account** is required to access the Milestone database. You can cre
 
 ---
 
-### **Option 2: Create a SQL User Using a Script**
+### **Option 2: Create a SQL user using a script**
 Alternatively, you can create a user with **read-only access** using the following SQL script:
 
 ```sql
@@ -87,7 +87,7 @@ After execution, the `PADS4Reader` account is **created and configured**.
 
 ---
 
-## **Step 5: Configure PADS4 CTRL Center for Milestone Integration**
+## **Step 5: Configure PADS4 CTRL Center for Milestone integration**
 1. **Open PADS4 CTRL Center**.
 2. **Navigate to the Sensors section**.
 3. **Add a new Milestone sensor**.

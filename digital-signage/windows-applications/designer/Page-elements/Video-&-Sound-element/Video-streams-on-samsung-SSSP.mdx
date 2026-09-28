@@ -3,7 +3,7 @@ Samsung **Smart Signage Platform (SSSP)** devices support **video streaming**, i
 
 ---
 
-## **Playing HLS Streams on Samsung SSSP**  
+## **Playing HLS streams on Samsung SSSP**  
 
 If the **HLS stream URL does not end with `.m3u8`**, follow these steps:  
 1. **Manually modify the URL** using Samsung’s notation.  
@@ -16,7 +16,7 @@ http://<server>:<port>/<path>|COMPONENT=HLS
 
 ---
 
-## **Lynk DRM Protocol Support**  
+## **Lynk DRM protocol support**  
 
 Samsung **Lynk DRM** (Digital Rights Management) allows playback of **encrypted video streams**.  
 
@@ -29,23 +29,23 @@ To enable **Lynk DRM**, you must modify the stream URL by adding **query options
 
 ---
 
-## **Lynk DRM Stream URL Examples**  
+## **Lynk DRM stream URL examples**  
 
-### **Example 1: Default Lynk DRM Usage**  
+### **Example 1: Default Lynk DRM usage**  
 ```
 http://server.nds.local/stream1.mp4?lynk_server
 ```
 - **Lynk DRM server address is not specified**, so the system **automatically** uses the host of the stream (`server.nds.local`).  
 - Since **`lynk_type` is not defined**, the system assumes **unencrypted content**.  
 
-### **Example 2: Specifying a Lynk DRM Server**  
+### **Example 2: Specifying a Lynk DRM server**  
 ```
 http://server.nds.local/stream1.mp4?lynk_server=lynkserver.nds.local:8080
 ```
 - **Lynk DRM server explicitly set** to `lynkserver.nds.local`.  
 - **Port 8080 is used for connection**.  
 
-### **Example 3: Playing Encrypted Streams**  
+### **Example 3: Playing encrypted streams**  
 ```
 http://server.nds.local/stream1.mp4?lynk_server=lynkserver.nds.local:8080&lynk_type=encrypted
 ```
@@ -54,7 +54,7 @@ http://server.nds.local/stream1.mp4?lynk_server=lynkserver.nds.local:8080&lynk_t
 
 ---
 
-## **Considerations for Streaming on Samsung SSSP**  
+## **Considerations for streaming on Samsung SSSP**  
 - **HLS streams must be formatted correctly** using `|COMPONENT=HLS`.  
 - **Lynk DRM-protected content requires a properly configured server**.  
 - **Incorrect DRM settings will prevent playback**.  
