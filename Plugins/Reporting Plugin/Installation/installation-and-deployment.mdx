@@ -108,7 +108,7 @@ Remove via **Apps & features** (or the uninstaller in the install directory). Th
 
 **Service won't start after install**<br />Check the logs in `C:\ProgramData\PADS4 Reporting Plugin\logs\`. The most common cause is another application already using port 3001 — change the port in the service XML (see [Section 6](#6-service-operations)) and restart.
 
-**Sign-in page loads but sessions don't persist / login silently fails**<br />The secure-cookie mismatch described in [Section 5](#5-https--session-cookies): the app is being accessed over plain HTTP with secure cookies still enabled (the default). Turn the setting off for HTTP-only use, or put TLS in front.
+**Sign-in page loads but sessions don't persist / login silently fails**<br />The secure-cookie mismatch described in [Section 5](#5-https-&-session-cookies): the app is being accessed over plain HTTP with secure cookies still enabled (the default). Turn the setting off for HTTP-only use, or put TLS in front.
 
 **"This installation has not been activated" blocking PADS4 user login**<br />The product license has expired or was never activated. An administrator needs to sign in and resolve it on the **License & activation** page.
 
