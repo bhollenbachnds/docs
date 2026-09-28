@@ -8,7 +8,7 @@ title: "Single Sign-on (SSO)"
 
 This manual can only be followed if you have configured SSO in your Azure / Entra ID environment. 
 
-Now that all of the above information has been gathered, PADS4CMS can now be configured to make use of SSO.
+Now that all of the above information has been gathered, PADS4 CMS can now be configured to make use of SSO.
 
 ## Important :
 
@@ -28,18 +28,18 @@ Enable the plugin on the **top right**, next to **"Type"**, select the **"Azure 
 
 ## Step 3 : Insert the information obtained from the previous section
 
-| Known in Azure Active Directory | Know in PADS4 |
+| Known in Azure Active Directory | Known in PADS4 |
 | --- | --- |
 | Azure AD Identifier | Federation Service Identifier |
 | URL of Relying Party | URL of Relying party |
 | SAML SSO URL | SAML SSO URL |
-| App Federation Metadata | Federation Metada URL |
+| App Federation Metadata | Federation Metadata URL |
 | Certificate (Raw) | Certificate of the federation server (.cer) |
 | Object ID | Active directory group ID |
 
 ### Important :
 
-The copied string for the **“ URL of the relying party ”** in the CMS SSO configuration should not contain\*\*“ /Saml ”\*\*  as copied from Azure butrather only\*\*“ /crystal/pads ”\*\* .
+The copied string for the **“ URL of the relying party ”** in the CMS SSO configuration should not contain **“ /Saml ”** as copied from Azure but rather only **“ /crystal/pads ”**.
 
 (Where "pads" is the default domain) Example: The Azure copied link looks like this:
 
@@ -49,7 +49,7 @@ however, it should be like this instead
 
 [https://robin.pads365.com/crystal/pads](https://robin.pads365.com/crystal/pads)
 
-Upload the Application Certificate (Raw) that you have downloadedfrom Azure here:
+Upload the Application Certificate (Raw) that you have downloaded from Azure here:
 
 ## Step 4 : Upload the Application Certificate (Raw) that you have downloaded from Azure
 
@@ -61,20 +61,20 @@ For the **"relying party signing certificate"**, we suggest using the certificat
 
 ![Relyingpartysigning Pn](/images/Relyingpartysigning.png)
 
-When you configure the\*\*“Relation Table”\*\*  in CMS Admin for SSO, seta profile that you created for the SSO users or group in relation totheir privilege level.
+When you configure the **“Relation Table”** in CMS Admin for SSO, set a profile that you created for the SSO users or group in relation to their privilege level.
 
 Example below:
 
 ![Relationtable Pn](/images/Relationtable.png)
 
-Save the configuration then log out and you should now see thebelow **“Single Sign On”** as an  option :
+Save the configuration then log out and you should now see the below **“Single Sign On”** as an  option :
 
 ![Continuewithsso Pn](/images/Continuewithsso.png)
 
 ## Important Notes :
 
-1. When you SSL Certificate expires, be sure to upload the new certificate and private key in this section upon renewal
+1. When your SSL Certificate expires, be sure to upload the new certificate and private key in this section upon renewal
    ![Uploadnewcertificate Pn](/images/Uploadnewcertificate.png)
-2. When you federation certificate expires, be sure to upload the new certificate and private key in this section upon renewal
+2. When your federation certificate expires, be sure to upload the new certificate and private key in this section upon renewal
 
 ![Renewal2 Pn](/images/renewal2.png)
