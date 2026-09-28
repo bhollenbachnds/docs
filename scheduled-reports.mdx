@@ -1,14 +1,22 @@
 ---
-title: "Scheduled Reports"
+title: "Scheduled reports"
 description: "Set up scheduled reports that email Connectivity, Offline devices, or Device distribution PDFs daily, weekly, or monthly, and manage active schedules."
 ---
 
-**Scheduled reports** (`/scheduled`) emails a PDF on a recurring cadence — Connectivity, Offline devices, or Device distribution (proof of play isn't schedulable). Requires SMTP to be configured in Settings first; if it isn't, a banner says so and schedules simply won't send until it is.
+**Scheduled reports** (`/scheduled`) emails a PDF on a recurring cadence. You can schedule Connectivity, Offline devices, or Device distribution reports. Proof of play reports aren't schedulable.
+
+You must configure SMTP in **Settings** first. If SMTP isn't configured, a banner tells you so, and schedules won't send until you configure it.
 
 1. Click **Add schedule**.
 2. Select **Report type** and **Cadence** (Daily / Weekly / Monthly).
-3. Enter one or more **Recipients** (comma- or semicolon-separated email addresses — validated before you can submit).
+3. Enter one or more **Recipients** as comma- or semicolon-separated email addresses. The app validates the addresses before you can submit.
 4. Set the **Device scope** using the same group-tree/brand/device panel described in [Device scope](/reports#device-scope).
 5. Click **Create schedule**.
 
-The **Active schedules** table lists everything configured, with a scope summary column, an **Enabled/Disabled** toggle (pauses delivery without deleting the schedule), and **Delete** (with a confirmation dialog — this can't be undone). Schedule changes take effect immediately; no server restart is needed.
+The **Active schedules** table lists every configured schedule. Each row includes:
+
+- A scope summary column.
+- An **Enabled/Disabled** toggle, which pauses delivery without deleting the schedule.
+- A **Delete** action, which opens a confirmation dialog. You can't undo a deletion.
+
+Schedule changes take effect immediately. You don't need to restart the server.
