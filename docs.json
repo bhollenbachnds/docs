@@ -318,7 +318,8 @@
               },
               "install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
               "ctrl-centre/account-creation"
-            ]
+            ],
+            "icon": "bicep"
           },
           {
             "dropdown": "PADS4 Ctrl Center",
@@ -1659,7 +1660,8 @@
                   "untitled-page-9"
                 ]
               }
-            ]
+            ],
+            "icon": "pen-nib"
           },
           {
             "dropdown": "PASD4 FIDS",
@@ -1697,7 +1699,8 @@
                   "modules/visitor-management/settings"
                 ]
               }
-            ]
+            ],
+            "icon": "people-group"
           },
           {
             "dropdown": "API Reference",
