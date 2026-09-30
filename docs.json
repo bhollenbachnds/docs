@@ -109,14 +109,14 @@
                   {
                     "group": "Microsoft Windows",
                     "pages": [
-                      "certified-devices/windows/Windows-Viewer",
-                      "certified-devices/windows/Windows-HTML5-Viewer",
                       {
-                        "group": "Windows 11 with a Local Account",
+                        "group": "Windows 11 (Local Account)",
                         "pages": [
                           "certified-devices/windows/windows-11-pro"
                         ]
-                      }
+                      },
+                      "certified-devices/windows/Windows-Viewer",
+                      "certified-devices/windows/Windows-HTML5-Viewer"
                     ]
                   },
                   {
