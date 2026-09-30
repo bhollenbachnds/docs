@@ -14,7 +14,7 @@ This guide walks you through installing Windows 11 Pro and setting it up with a 
 
 Once you have everything ready, follow the steps below to install Windows 11 Pro and create your local account.
 
-## Step by step guide
+## Step-by-step guide
 
 1. Boot the PC from the Windows 11 Pro USB drive and go through the installation as normal.
 2. On the screen **"How would you like to set up this device?"**, select **Set up for work or school**, then click **Next**.
@@ -27,7 +27,7 @@ Once you have everything ready, follow the steps below to install Windows 11 Pro
    ![Local Name](/images/certified_devices/windows/local-name.png "Local Name")
 6. Choose three security questions and answer each one. Windows uses these to reset the password if it is forgotten.
    ![Security Questions](/images/certified_devices/windows/security-questions.png "Security Questions")
-7. Review the privacy settings (location, diagnostic data, and so on). Set each one as needed and click **Accept**
+7. Review the privacy settings (location, diagnostic data, and so on). Set each one as needed and click **Accept**.
    ![Privacy](/images/certified_devices/windows/Privacy.png "Privacy")
 8. Windows finishes the setup and restarts. The PC then starts into Windows 11 Pro 26H2.
 
@@ -40,12 +40,16 @@ If the **Domain join instead** option is missing or the setup insists on an onli
 1. At the account/network screen, press **Shift + F10** (or **Shift + Fn + F10**).
 2. Run:
 
-start ms-cxh:localonly
+   ```bash
+   start ms-cxh:localonly
+   ```
 
 3. A local-account creation window should appear; create the username/password and continue.
 
 If that does not work on your 26H1 build, use:
 
-oobe\\bypassnro
+```bash
+oobe\bypassnro
+```
 
 The PC restarts; then choose **I don’t have internet** and **Continue with limited setup**.
