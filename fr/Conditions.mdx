@@ -1,0 +1,48 @@
+---
+- title: Conditions
+- description: Référence de chaque type de condition disponible dans l'éditeur de
+    règles PADS4 Designer, incluant les valeurs du data provider, du système et
+    du Data Vault.
+---
+
+Lorsque vous créez une règle dans PADS4, la **condition** (la clause IF) définit la valeur que PADS4 évalue lors de la lecture. Vous pouvez comparer avec des valeurs fixes, des informations système, ou des données provenant d'un data provider ou d'un Data Vault.
+
+Les sections ci-dessous répertorient chaque type de condition disponible dans l'éditeur de règles, regroupés par source.
+
+## Valeurs statiques et d'exécution
+
+* **Constant** — Utilisez une valeur statique. Spécifiez manuellement la **Value** à utiliser comme constante.
+* **Viewer variable** — Une variable viewer qui est remplacée par sa valeur réelle à l'exécution.
+
+## Valeurs du data provider
+
+Utilisez ces conditions pour réagir aux données provenant d'un data provider ou d'un Data Vault.
+
+* **Current Data** — Utilisez la colonne actuelle et la ligne actuelle du Data Vault actif.
+* **Previous Data** — Utilisez la colonne actuelle et la ligne précédente du data provider actif. Permet de comparer deux valeurs de données consécutives.
+* **Other Column** — Utilisez la ligne actuelle mais une colonne différente du data provider actif. Sélectionnez manuellement la **Column** à utiliser.
+* **Other Data** — Utilisez un data provider, une colonne et une ligne spécifiques. Sélectionnez manuellement le **Data Provider**, **Column**, et **Row** à utiliser.
+* **Row Count** — Utilisez le nombre de lignes d'un data provider spécifique. Sélectionnez manuellement le **Data Provider** à utiliser.
+* **Current Row Number** — Utilisez le numéro de ligne actuel du data provider actif. Applicable uniquement aux éléments de page.
+
+## Date et heure système
+
+Utilisez ces conditions pour déclencher des règles basées sur l'horloge du PC de lecture.
+
+* **System Date** — La date système du PC de lecture.
+* **System Date Time** — La date et l'heure système combinées du PC de lecture.
+* **System Time** — L'heure système du PC de lecture.
+* **System Time (UTC)** — L'heure système du PC de lecture en UTC.
+* **System Long Time** — L'heure système du PC de lecture au format heure longue.
+* **System Long Time (UTC)** — L'heure système du PC de lecture au format heure longue et en UTC.
+
+## Contexte de présentation
+
+* **Page Name** — Le nom de la page actuelle dans la présentation. Applicable uniquement aux pages et aux éléments de page.
+* **Page Number** — Le numéro de séquence de la page actuelle dans la présentation. Applicable uniquement aux pages et aux éléments de page.
+
+## Viewer
+
+* **Viewer Name** — Le nom de viewer unique du viewer qui lit la présentation.
+* **Computer Name** — Le nom de l'ordinateur sur lequel la présentation est lue.
+* **Computer Language Name** — Le nom de langue Microsoft Windows du PC sur lequel la présentation est lue.
