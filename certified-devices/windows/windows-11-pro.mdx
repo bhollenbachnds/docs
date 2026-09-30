@@ -9,7 +9,7 @@ This guide walks you through installing Windows 11 Pro and setting it up with a 
 **Before you start, make sure you have:**
 
 - A bootable Windows 11 Pro USB drive
-- A device that meets the Windows 11 requirements, including TPM 2.0 and Secure Boot and the PADS4 requirements
+- A device that meets the Windows 11 requirements, including TPM 2.0 and Secure Boot, and that meets the PADS4 requirements
 - A username and password for the local account
 
 Once you have everything ready, follow the steps below to install Windows 11 Pro and create your local account.
@@ -25,7 +25,7 @@ Once you have everything ready, follow the steps below to install Windows 11 Pro
    ![Domain2](/images/certified_devices/windows/domain2.png "Domain2")
 5. Enter a username for the **local** account and click **Next**. Then enter a password and confirm it.
    ![Local Name](/images/certified_devices/windows/local-name.png "Local Name")
-6. Choose three security questions and answer each one. Windows uses these to reset the password if it is forgotten.
+6. Select three security questions and answer each one. Windows uses these to reset the password if you forget it.
    ![Security Questions](/images/certified_devices/windows/security-questions.png "Security Questions")
 7. Review the privacy settings (location, diagnostic data, and so on). Set each one as needed and click **Accept**.
    ![Privacy](/images/certified_devices/windows/Privacy.png "Privacy")
@@ -44,7 +44,7 @@ If the **Domain join instead** option is missing or the setup insists on an onli
    start ms-cxh:localonly
    ```
 
-3. A local-account creation window should appear; create the username/password and continue.
+3. A local account creation window appears. Create the username and password, and continue.
 
 If that does not work on your 26H1 build, use:
 
@@ -52,4 +52,4 @@ If that does not work on your 26H1 build, use:
 oobe\bypassnro
 ```
 
-The PC restarts; then choose **I don’t have internet** and **Continue with limited setup**.
+The PC restarts. Then select **I don’t have internet** and **Continue with limited setup**.
