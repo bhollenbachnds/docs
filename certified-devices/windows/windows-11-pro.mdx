@@ -1,0 +1,51 @@
+---
+title: "Windows 11 Pro"
+---
+
+By default, Windows 11 pushes you to sign in with a Microsoft account during setup. That's not always what you want. On a PADS4 Viewer, a local account is often more practical.
+
+This guide walks you through installing Windows 11 Pro and setting it up with a local account instead of a Microsoft account. When you're done, you'll have a clean Windows 11 Pro installation in the default workgroup, ready to use or to join to a domain later.
+
+**Before you start, make sure you have:**
+
+- A bootable Windows 11 Pro USB drive
+- A device that meets the Windows 11 requirements, including TPM 2.0 and Secure Boot and the PADS4 requirements
+- A username and password for the local account
+
+Once you have everything ready, follow the steps below to install Windows 11 Pro and create your local account.
+
+## Step by step guide
+
+1. Boot the PC from the Windows 11 Pro USB drive and go through the installation as normal.
+2. On the screen **"How would you like to set up this device?"**, select **Set up for work or school**, then click **Next**.
+   ![Sign Up Work](/images/certified_devices/windows/sign-up-work.png "Sign Up Work")
+3. When you are asked to sign in with a Microsoft account, click **Sign-in options**.
+   ![Domain](/images/certified_devices/windows/domain.png "Domain")
+4. Select **Domain join instead**.
+   ![Domain2](/images/certified_devices/windows/domain2.png "Domain2")
+5. Enter a username for the **local** account and click **Next**. Then enter a password and confirm it.
+   ![Local Name](/images/certified_devices/windows/local-name.png "Local Name")
+6. Choose three security questions and answer each one. Windows uses these to reset the password if it is forgotten.
+   ![Security Questions](/images/certified_devices/windows/security-questions.png "Security Questions")
+7. Review the privacy settings (location, diagnostic data, and so on). Set each one as needed and click **Accept**
+   ![Privacy](/images/certified_devices/windows/Privacy.png "Privacy")
+8. Windows finishes the setup and restarts. The PC then starts into Windows 11 Pro 26H2.
+
+Windows 11 is ready to use. The PC is a member of the default workgroup **WORKGROUP** and is not joined to a domain.
+
+## Command fallback
+
+If the **Domain join instead** option is missing or the setup insists on an online account:
+
+1. At the account/network screen, press **Shift + F10** (or **Shift + Fn + F10**).
+2. Run:
+
+start ms-cxh:localonly
+
+3. A local-account creation window should appear; create the username/password and continue.
+
+If that does not work on your 26H1 build, use:
+
+oobe\\bypassnro
+
+The PC restarts; then choose **I don’t have internet** and **Continue with limited setup**.
