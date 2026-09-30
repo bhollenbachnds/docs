@@ -1,0 +1,94 @@
+---
+- title: NDS.Services.Authentication.Integration
+- description: "Référence API pour NDS.Services.Authentication.Integration : flux
+    de connexion SAML 2.0, diagnostics de disjoncteur pour les fournisseurs
+    d'identité, et files d'événements d'authentification."
+---
+
+## Aperçu
+
+Gère l'intégration avec les systèmes d'identité externes : flux de connexion SAML 2.0, diagnostics de disjoncteur pour la connectivité des fournisseurs d'identité, et gestion des files de messages pour les événements d'authentification.
+
+| Champ                                 | Valeur                                                                                      |
+| ------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Authentication.Integration/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Authentication.Integration/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Authentication.Integration`                         |
+| Nombre total de points de terminaison | 16                                                                                          |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                             | Description                            |
+| ------- | -------------------------------------------------- | -------------------------------------- |
+| `GET`   | `/api/v1/{domain}/saml2/Login/{providerId}`        | Connexion Saml2                        |
+| `GET`   | `/api/v1/{domain}/saml2/Authenticate/{providerId}` | Authentification Saml2                 |
+| `GET`   | `/api/v1/diagnostics/toggles`                      | Obtenir les bascules                   |
+| `GET`   | `/api/v1/diagnostics/configuration`                | Obtenir la section de configuration    |
+| `GET`   | `/api/v1/diagnostics/configurationex`              | Obtenir la configuration               |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`              | Obtenir les disjoncteurs               |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`        | Réinitialiser le disjoncteur           |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate`      | Isoler le disjoncteur                  |
+| `POST`  | `/api/v1/diagnostics/events`                       | Obtenir les événements                 |
+| `GET`   | `/api/v1/health`                                   | Obtenir                                |
+| `GET`   | `/api/v1/health/clean`                             | Obtenir (nettoyé)                      |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`          | Remettre en file les messages d'erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`            | Purger les messages d'erreur           |
+| `GET`   | `/migration`                                       | Obtenir les migrations                 |
+| `POST`  | `/migration`                                       | Exécuter la migration                  |
+| `GET`   | `/version`                                         | Obtenir                                |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/{domain}/saml2/Login/{providerId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication.Integration/api/v1/{domain}/saml2/Login/{providerId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/{domain}/saml2/Authenticate/{providerId}`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Authentication.Integration/api/v1/{domain}/saml2/Authenticate/{providerId}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Id": 1, "Name": "Example Item", "IsActive": true, "Code": "OK", "Succeeded": true}
+```
+
+***
