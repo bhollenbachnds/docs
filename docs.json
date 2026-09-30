@@ -591,7 +591,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "icon": "box-check"
           },
           {
             "dropdown": "PADS4 Digital Signage",
@@ -1402,7 +1403,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "icon": "display"
           },
           {
             "dropdown": "PADS4 Workspace",
@@ -1623,7 +1625,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "icon": "building-circle-check"
           },
           {
             "dropdown": "PADS4 CMS 1.0",
@@ -1679,7 +1682,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "icon": "plane-departure"
           },
           {
             "dropdown": "Visitor Management",
