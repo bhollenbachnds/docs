@@ -5,33 +5,33 @@ description: "Walkthrough for each Canva user to create their own developer inte
 
 Each Canva user must complete this procedure individually. The integration is user-specific and cannot be shared.
 
-1. Open a web browser and go to [https://canva.com/developers](https://canva.com/developers). 
+1. Open a web browser and go to [https://canva.com/developers](https://canva.com/developers).
 2. Log in using your Canva account.
-3. Navigate to **Your integrations.**
-4. Click **Create an integration**.
-   <Frame>
-     ![Screenshot 2026 06 03 131053](/images/DigitalSignage/Designer/Screenshot-2026-06-03-131053.png)
-   </Frame>
-5. Select either a Public or Private integration. Accept the Canva Developer Terms and click **Create integration**.
-   <Frame>
-     ![Public Private](/images/DigitalSignage/Designer/PublicPrivate.png)
-   </Frame>
-6. On the configuration page, enter a name for the integration. Click **Generate secret**.
-   <Frame>
-     ![Configurate Integration](/images/DigitalSignage/Designer/ConfigurateIntegration.png)
-   </Frame>
+3. Navigate to **Your apps.**
+4. Click **Create an app**.
+5. Give it a **App name**
+   <img
+     src="/images/digital-signage/designer/Canva-create-app.png"
+     alt="Canva Create App"
+     title="Canva Create App"
+     style={{ width:"56%" }}
+   />
+6. Select either a Public or Private integration. Accept the Canva Developer Terms and click **Create App**
+7. Select **Outside Canva** and click on **Go to setup**
+   ![Pads4canva](/images/digital-signage/designer/PADS4Canva.png "Pads4canva")
+8. Select **Start integration.**<br />
+9. On the configuration page, enter a name for the integration. Click **Generate secret**.
+   ![Canva Secret](/images/digital-signage/designer/canva-secret.png "Canva Secret")
    <Warning>
      Copy the **Client ID** and **Client Secret**, and store them securely. These are required for the PADS4 configuration. If you lose the Client Secret, you must generate a new one.
    </Warning>
-7. Go to the **Scopes** section and enable the required scopes shown below.
-   <Frame>
-     ![Scopes](/images/DigitalSignage/Designer/Scopes.png)
-   </Frame>
-8. Navigate to the **Authentication** section. \
-   Set **URL1** to:\
-   https://\<PADS4Server\>/rdx/NDS.Services.Credentials/api/v1/credentials/canva/auth/callback/\
-   Replace `<PADS4Server>` with the hostname or IP address of your PADS4 server.
-   <Frame>
-     ![Authentication](/images/DigitalSignage/Designer/Authentication.png)
-   </Frame>
-9. The Canva setup is now complete. Proceed with configuring the integration in PADS4 using the saved credentials.
+10. Go to the **Scopes** section and enable the required scopes shown below.<br />
+    <img
+      src="/images/digital-signage/designer/canva-scope.png"
+      alt="Canva Scope"
+      title="Canva Scope"
+      style={{ width:"72%" }}
+    />
+11. Navigate to the **Authentication** section. <br />Set **URL1** to:<br />https://\<PADS4Server>/rdx/NDS.Services.Credentials/api/v1/credentials/canva/auth/callback/<br />Replace `<PADS4Server>` with the hostname or IP address of your PADS4 server.
+    ![Canva Redirectpng](/images/digital-signage/designer/canva-redirectpng.png "Canva Redirectpng")
+12. The Canva setup is now complete. Proceed with configuring the integration in PADS4 using the saved credentials.
