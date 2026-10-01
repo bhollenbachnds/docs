@@ -1,0 +1,29 @@
+---
+- title: Configuration de Canva
+- description: Guide pas à pas pour chaque utilisateur Canva afin de créer sa
+    propre intégration développeur, générer le secret client et autoriser PADS4
+    à accéder à son compte Canva.
+---
+
+Chaque utilisateur Canva doit effectuer cette procédure individuellement. L'intégration est spécifique à l'utilisateur et ne peut pas être partagée.
+
+1. Ouvrez un navigateur web et accédez à [https://canva.com/developers](https://canva.com/developers).
+2. Connectez-vous avec votre compte Canva.
+3. Accédez à **Your apps**.
+4. Cliquez sur **Create an app**.
+5. Saisissez un **App name**.
+   <img src="/images/digital-signage/designer/Canva-create-app.png" alt="Canva Create App" title="Canva Create App" style={{ width:"56%" }} />
+6. Sélectionnez une intégration Public ou Private. Acceptez les Canva Developer Terms et cliquez sur **Create App**.
+7. Sélectionnez **Outside Canva** et cliquez sur **Go to setup**.
+   ![Pads4canva](/images/digital-signage/designer/PADS4Canva.png "Pads4canva")
+8. Cliquez sur **Start integration**.
+9. Sur la page de configuration, saisissez un nom pour l'intégration. Cliquez sur **Generate secret**.
+   ![Canva Secret](/images/digital-signage/designer/canva-secret.png "Canva Secret")
+   <Warning>
+     Copiez le **Client ID** et le **Client Secret**, et conservez-les en lieu sûr. Ils sont nécessaires pour la configuration de PADS4. Si vous perdez le Client Secret, vous devez en générer un nouveau.
+   </Warning>
+10. Accédez à la section **Scopes** et activez les scopes requis indiqués ci-dessous.<br />
+    <img src="/images/digital-signage/designer/canva-scope.png" alt="Canva Scope" title="Canva Scope" style={{ width:"72%" }} />
+11. Accédez à la section **Authentication**. <br />Définissez **URL1** to:<br />https\://\<PADS4Server>/rdx/NDS.Services.Credentials/api/v1/credentials/canva/auth/callback/<br />Remplacez `<PADS4Server>` par le nom d'hôte ou l'adresse IP de votre serveur PADS4.
+    ![Canva Redirectpng](/images/digital-signage/designer/canva-redirectpng.png "Canva Redirectpng")
+12. La configuration Canva est maintenant terminée. Configurez l'intégration dans PADS4 en utilisant les identifiants enregistrés.
