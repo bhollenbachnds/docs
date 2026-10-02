@@ -54,11 +54,11 @@ Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticat
 # Register the application
 
 1. Open a browser and navigate to the Microsoft Entra ID admin center and log in using a personal account (Microsoft account) or a work or school account.
-2. Select Identity in the left-hand navigation, then select App registrations under Applications.
+2. Select **Identity** in the left-hand navigation, then select **App registrations** under **Applications**.
 
 ![Entra ID](/images/Entra-ID.png "Entra ID")
 
-3. Select New registration. On the Register an application page, set the values as follows.<br /> a. Set Name to a friendly name for your app.<br /> b. Set Supported account types to the choice that makes sense for your scenario.<br /> c. For Redirect URI, change the dropdown to Public client (mobile & desktop) and set the value to: **urn:ietf:wg:oauth:2.0:oob**
+3. Select **New registration**. On the **Register an application** page, set the values as follows.<br /> a. Set **Name** to a friendly name for your app.<br /> b. Set **Supported account types** to the choice that makes sense for your scenario.<br /> c. For **Redirect URI**, change the dropdown to **Public client (mobile & desktop)** and set the value to: **urn:ietf:wg:oauth:2.0:oob**
 
 ![Register An Application](/images/Register-an-application.jpg "Register An Application")
 
@@ -77,23 +77,22 @@ To use application permissions, follow these additional steps.
 
 ![Manifest](/images/Manifest.jpg "Manifest")
 
-4. Select API permissions under Manage. Confirm that the **full_access_as_app** permission is listed.
+4. Select **API permissions** under **Manage**. Confirm that the **full_access_as_app** permission is listed.
 5. Select **Grant admin consent** for org and accept the consent dialog.
 
 ![API Permissions](/images/API-permissions.jpg "API Permissions")
 
 To add Microsoft Teams meeting support to Workspace, continue with the steps below. Otherwise, skip to step 9.
 
-6. Select Add a permission.
-7. Select the following permission "**Microsoft Graph > Calendars.ReadWrite**" and select Add.
-
+6. Select **Add a permission**.
+7. Select the **Microsoft Graph > Calendars.ReadWrite** permission, then select **Add**.
 8. Grant admin consent to that permission.
 
 ![API Permissions Teams Meeting](/images/API-permissions-Teams-meeting.jpg "API Permissions Teams Meeting")
 
-9. Select Certificates & Secrets in the left-hand navigation under Manage.
-10. Select New client secret, enter a short description and select Add.
-11. Copy the Value of the newly added client secret and save it. You need it later when configuring the calendar plugin in CMS.
+9. Select **Certificates & Secrets** in the left-hand navigation under **Manage**.
+10. Select **New client secret**, enter a short description, and select **Add**.
+11. Copy the **Value** of the newly added client secret and save it. You need it later when configuring the calendar plugin in CMS.
 
 ![Entra ID Client Secret](/images/Entra-ID-client-secret.jpg "Entra ID Client Secret")
 
@@ -220,10 +219,10 @@ After you set up the app registration and create the service account, fill in th
 
 You can also select the Teams meeting option by default when creating events in Workspace:
 
-- Go to CMS Administration
-- Open the "Workspace application settings"
-- Select "Enable online meeting creation by default"
-- Select **Save**
+- Go to **CMS Administration**.
+- Open **Workspace application settings**.
+- Select **Enable online meeting creation by default**.
+- Select **Save**.
 
 ![Workspace Application Settings](/images/Workspace-application-settings.png "Workspace Application Settings")
 
@@ -251,7 +250,7 @@ There are three operating modes, described below. Set the operating mode accordi
 
 ## #1. Impersonation = Full access
 
-Using this type of Full Access Impersonation, the reservation function behaves as follows:
+With **Full access** impersonation, the reservation function behaves as follows:
 
 ### Booking from Outlook
 
@@ -274,7 +273,7 @@ Using this type of Full Access Impersonation, the reservation function behaves a
 
 ## #2. Impersonation = Resources only
 
-This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, grant the role "**ApplicationImpersonation**" to the user of the service account using this PowerShell script:
+This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, grant the **ApplicationImpersonation** role to the user of the service account using this PowerShell script:
 
 ```text
 New-ManagementScope -Name "CrystalResourceMailboxes" -RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
@@ -282,7 +281,7 @@ New-ManagementScope -Name "CrystalResourceMailboxes" -RecipientRestrictionFilter
 New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
 ```
 
-Using this type of "Resources Only" impersonation, the reservation function behaves as follows.
+With **Resources only** impersonation, the reservation function behaves as follows:
 
 ### Booking from Outlook
 
@@ -305,10 +304,10 @@ Using this type of "Resources Only" impersonation, the reservation function beha
 
 ## #3. Impersonation = None
 
-Using this type of impersonation "None", the reservation function behaves as follows:
+With **None** impersonation, the reservation function behaves as follows:
 
 ### Booking from Outlook
 
 - The reservation is made from the user account with the choice of the room and the guests.
-- You can change and delete this reservation from Outlook.
+- You can modify and delete this reservation from Outlook.
 - Changing and deleting the tablet reservation only affects the resource calendar.
