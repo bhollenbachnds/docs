@@ -14,7 +14,7 @@ To configure a Microsoft Entra identity provider, connect to Azure as an Adminis
 3. Click **New application**.
 
    ![Azure New Application](/images/ctrl-centre/identity/AzureNewApplication.png)
-3. Click **Create your own Application**.
+4. Click **Create your own Application**.
 
    <img
      src="/images/ctrl-centre/identity/AzureCreateOwnApp.png"
@@ -22,7 +22,7 @@ To configure a Microsoft Entra identity provider, connect to Azure as an Adminis
      title="Azure Create Own App"
      style={{ width:"82%" }}
    />
-3. Fill in the information requested in the form. For example, you can use PADS4.
+5. Fill in the information requested in the form. For example, you can use PADS4.
 
    <img
      src="/images/ctrl-centre/identity/AzureCreateYourOwnApp.png"
@@ -30,12 +30,12 @@ To configure a Microsoft Entra identity provider, connect to Azure as an Adminis
      title="Azure Create Your Own App"
      style={{ width:"73%" }}
    />
-3. Click the **Create** button.
-3. Your application is now being created.
+6. Click the **Create** button.
+7. Azure creates your application.
 
 ## Set up single sign-on configuration
 
-Now that your application has been created, you need to enable and configure single sign-on.
+After Azure creates your application, enable and configure single sign-on.
 
 - In the left menu, click **Single sign-on**.
 
@@ -49,14 +49,14 @@ Now that your application has been created, you need to enable and configure sin
 
   ![Azure Select SAML](/images/ctrl-centre/identity/AzureSelectSAML.png)
 
-You need to edit the basic SAML method. Click **Edit** to do so.
+To edit the basic SAML method, click **Edit**.
 
 ![Azure SAML Step1](/images/ctrl-centre/identity/AzureSAMLStep1.png)
 
 Edit the **Basic SAML configuration**.
 
-- For the Identifier, use the PADS4 server address and add **/saml** (e.g. https://pads4.mycompany.com/saml).
-- For the Reply URL, use the PADS server address and add **/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs** (e.g. https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs).
+- For the Identifier, use the PADS4 server address and add **/saml** (e.g., https://pads4.mycompany.com/saml).
+- For the Reply URL, use the PADS server address and add **/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs** (e.g., https://pads4.mycompany.com/rdx/nds.services.authentication.integration/api/v1/pads/Saml2/Acs).
 
 ![Azure SAML Basic Configuration](/images/ctrl-centre/identity/AzureSAMLBasicConfiguration.png)
 
@@ -69,10 +69,10 @@ Edit the **Basic SAML configuration**.
 
 ## Edit attributes & claims
 
-1. You need to edit the **Attributes & Claims**. Click **Edit** to do so.
+1. To edit the **Attributes & Claims**, click **Edit**.
 
    ![Download](/images/download-10.png)
-2. Edit the **Attributes & Claims**
+2. Edit the **Attributes & Claims**.
 
    ![Download](/images/download-11.png)
 
@@ -166,13 +166,13 @@ To create the identity provider:
      title="Pads4create Microsoft Entra Id Provider"
      style={{ width:"65%" }}
    />
-5. The **Identifier** and **Assertion Consumer Service URL** are filled in.
+5. PADS4 fills in the **Identifier** and **Assertion Consumer Service URL**.
 
 ### Upload certificates
 
-1. **Provider Signing Certificate** - Upload the **Certificate (Raw)** (`.cer`) file you downloaded from your Microsoft Entra identity provider configuration.
-2. **PADS4 Identity Provider Certificate** - Upload a certificate (`.pfx`) to sign SAML assertions from PADS4 to Microsoft Entra.
-3. **Password** - Enter the password for the uploaded `.pfx` certificate (below the certificate field).
+1. **Provider Signing Certificate** – Upload the **Certificate (Raw)** (`.cer`) file you downloaded from your Microsoft Entra identity provider configuration.
+2. **PADS4 Identity Provider Certificate** – Upload a certificate (`.pfx`) to sign SAML assertions from PADS4 to Microsoft Entra.
+3. **Password** – Enter the password for the uploaded `.pfx` certificate (below the certificate field).
 
    <img
      src="/images/ctrl-centre/identity/PADS4UploadCertificateEntra.png"
