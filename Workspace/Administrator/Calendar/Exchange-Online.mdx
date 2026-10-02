@@ -127,7 +127,7 @@ f. Select **Close**.
 2. Run the following command, replacing \<ResourceMailbox> with the name of your room.
 
 ```text
-Set-CalendarProcessing -Identity \<ResourceMailbox> -DeleteSubject \$false -AddOrganizerToSubject \$false -DeleteComments \$false
+Set-CalendarProcessing -Identity <ResourceMailbox> -DeleteSubject $false -AddOrganizerToSubject $false -DeleteComments $false
 ```
 
 The subject now stays as you specified it when creating the booking and doesn't change to the organizer of the booking.
@@ -155,7 +155,7 @@ c. Make sure to add your service account and the room(s) that you want to use to
 Run the following command, replacing the **AppId**, **PolicyScopeGroupId**, and **Description** arguments.
 
 ```text
-New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId [mydistributiongroup@contoso.com](mailto:mydistributiongroup@contoso.com) -AccessRight RestrictAccess -Description "Restrict this app to members of distribution group."
+New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyScopeGroupId mydistributiongroup@contoso.com -AccessRight RestrictAccess -Description "Restrict this app to members of distribution group."
 ```
 
 4. Test the newly created application access policy.
@@ -163,7 +163,7 @@ New-ApplicationAccessPolicy -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b -PolicyS
 Run the following command, replacing the **AppId** and **Identity** arguments.
 
 ```text
-Test-ApplicationAccessPolicy -Identity [room01@contoso.com](mailto:room01@contoso.com) -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
+Test-ApplicationAccessPolicy -Identity room01@contoso.com -AppId e7e4dbfc-046f-4074-9b3b-2ae8f144f59b
 ```
 
 The output of this command indicates whether the app has access to room01 mailbox.
@@ -189,7 +189,7 @@ New-DistributionGroup -Name "MyRoomList" -RoomList
 3. Use the Exchange Management Shell to add a room to a room list:
 
 ```text
-Add-DistributionGroupMember -Identity "MyRoomList" -Member [room01@contoso.com](mailto:room01@contoso.com)
+Add-DistributionGroupMember -Identity "MyRoomList" -Member room01@contoso.com
 ```
 
 4. To check that the room list exists, run the following command:
@@ -277,7 +277,7 @@ Using this type of Full Access Impersonation, the reservation function behaves a
 This option requires that the service account has the right to impersonate all resources imported into PADS4 CMS. To manage this, grant the role "**ApplicationImpersonation**" to the user of the service account using this PowerShell script:
 
 ```text
-New-ManagementScope -Name "CrystalResourceMailboxes" -RecipientRestrictionFilter \{RecipientTypeDetails -eq "RoomMailbox"\}
+New-ManagementScope -Name "CrystalResourceMailboxes" -RecipientRestrictionFilter {RecipientTypeDetails -eq "RoomMailbox"}
 
 New-ManagementRoleAssignment -name "CrystalResourceImpersonation" -Role ApplicationImpersonation -User "serviceAccount" -CustomRecipientWriteScope "CrystalResourceMailboxes"
 ```
