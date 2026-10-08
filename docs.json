@@ -3243,7 +3243,7 @@
     },
     {
       "source": "/certified-devices/iiyama/54-and-60-Series",
-      "destination": "/untitled-page-44"
+      "destination": "/certify-devices/iiyama/54-series"
     },
     {
       "source": "/untitled-page-11",
@@ -3255,19 +3255,19 @@
     },
     {
       "source": "/certified-devices/iiyama/TW1025LASC",
-      "destination": "/untitled-page-43"
+      "destination": "/certify-devices/iiyama/TW1025LACS"
     },
     {
       "source": "/certified-devices/iiyama/54-Series",
-      "destination": "/untitled-page-44"
+      "destination": "/certify-devices/iiyama/54-series"
     },
     {
       "source": "/certified-devices/iiyama/60-Series",
-      "destination": "/untitled-page-45"
+      "destination": "/certify-devices/iiyama/60-series"
     },
     {
       "source": "/certified-devices/iiyama/iiyama-64-series",
-      "destination": "/untitled-page-46"
+      "destination": "/certify-devices/iiyama/64-series"
     }
   ]
 }
