@@ -1,0 +1,79 @@
+---
+- title: Comment utiliser les Capteurs
+- description: "Intégrez des caméras et des capteurs dans PADS4 CTRL Center :
+    ajoutez des appareils, regroupez-les dans des Zones, définissez des règles
+    d'incident et utilisez les données dans PADS4 Designer."
+---
+
+PADS4 vous permet d'intégrer des **caméras, des logiciels de gestion de caméras et d'autres capteurs** pour collecter et traiter des données en temps réel. Ces capteurs fournissent des capacités de **mesure d'audience**, **reconnaissance faciale**, **comptage de personnes** et **surveillance environnementale**.
+
+Pour une liste des **capteurs certifiés**, consultez la **page des capteurs certifiés**.
+
+## **Aperçu**
+
+La **section Aperçu des capteurs** affiche tous les capteurs ajoutés. Un **point vert** indique que PADS4 dispose d'une **connexion active** au capteur.
+
+### **Ajout d'un nouveau capteur**
+
+Pour ajouter un nouveau capteur, suivez ces étapes :
+
+1. **Accédez à la page Aperçu des capteurs** dans PADS4.
+2. **Cliquez sur le bouton "Nouveau"** dans l'en-tête.
+3. **Sélectionnez le type de capteur** – Caméra ou logiciel de gestion de capteurs.
+4. **Spécifiez le modèle/type** de l'appareil.
+5. **Ajoutez éventuellement une description et un emplacement** pour faciliter l'identification du capteur.
+6. **Saisissez les identifiants et le nom d'hôte** où se trouve le capteur.
+7. **Enregistrez la configuration** – PADS4 tentera d'établir une connexion.
+
+## **Regroupement des capteurs en zones**
+
+Une **Zone** est un regroupement logique de capteurs. Cela permet une **collecte et analyse de données agrégées**.
+
+### **Comptage de personnes**
+
+* Si plusieurs **caméras de comptage de personnes** se trouvent dans une Zone, leurs données sont **combinées**.
+* Utile pour **suivre l'occupation totale** lorsqu'il y a plusieurs points d'entrée.
+
+### **Créer une nouvelle zone**
+
+1. **Accéder à la page des Zones** dans PADS4.
+2. **Cliquer sur « New »** dans l'en-tête.
+3. **Saisir un nom de Zone** et (facultatif) une description.
+4. **Sélectionner les Capteurs** appartenant à cette zone.
+5. **Attribuer des Règles** pour automatiser la détection d'incidents.
+6. **Enregistrer la Configuration**.
+
+## **Définir des règles d'incident**
+
+Les règles définissent **les conditions qui déclenchent un incident**, permettant des réponses automatisées.
+
+### **Règles disponibles**
+
+| **Règle**                | **Description**                                                                                                                           |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **No Facemask**          | Détecte si une personne **ne porte pas de masque** et déclenche un incident.                                                              |
+| **Maximum People Count** | Définit une **occupation maximale** pour une zone. Si elle est dépassée, un incident est créé.                                            |
+| **Maximum Temperature**  | Surveille la température corporelle. Si **un seuil défini est dépassé** (par ex., 36,5°C), un incident est déclenché.                     |
+| **Milestone Alarms**     | Utilise les **Milestone VMS** alarmes pour détecter des problèmes de sécurité ou de sûreté. Les alarmes peuvent déclencher des incidents. |
+
+> **Note:** Le paramètre de température doit correspondre à l'unité configurée de la caméra (**Celsius ou Fahrenheit**).
+
+## **Gérer les incidents**
+
+Les incidents sont générés lorsque **des règles sont déclenchées**. Vous pouvez gérer les incidents dans le **PADS4 CTRL Center**.
+
+Pour plus de détails, consultez la **Page Comment utiliser les incidents**.
+
+## **Utiliser les données des capteurs dans PADS4 Designer**
+
+PADS4 Designer vous permet d'intégrer **des données de capteurs** dans des présentations.
+
+### **Options d'utilisation des données**
+
+* **Événements de caméra en temps réel** pour des présentations interactives.
+* **Données de zone agrégées** pour l'analyse d'audience.
+* **Alertes d'incident** affichées sur la signalétique pour une réponse immédiate.
+
+## **Conclusion**
+
+L'**intégration des capteurs** de PADS4 permet **la surveillance en temps réel, des alertes automatisées basées sur des règles et une signalétique numérique interactive**. En **configurant les capteurs et en définissant des règles**, les entreprises peuvent améliorer **la sécurité, l'engagement de l'audience et l'efficacité opérationnelle**.

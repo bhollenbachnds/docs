@@ -1,0 +1,74 @@
+---
+- title: Google Calendar
+---
+
+<Card title="Vérifier si c'est correct" type="warning">
+  Ajouter une capture d'écran
+
+  ([https://developers.google.com/workspace/guides/create-credentials#service-account](https://developers.google.com/workspace/guides/create-credentials#service-account)
+
+  [https://medium.com/product-monday/accessing-google-calendar-api-with-service-account-a99aa0f7f743](https://medium.com/product-monday/accessing-google-calendar-api-with-service-account-a99aa0f7f743))&#x20;
+</Card>
+
+Utilisez cette section pour configurer le service Google Calendar lorsque vous utilisez PADS4 CMS avec le module Workspace. Les étapes suivantes vous montrent comment générer un fichier JSON de configuration et configurer le compte Google Workspace.
+
+ 
+
+**Configuration du compte de service**
+
+Le compte de service est le compte Google Workspace que PADS4 CMS utilise pour :
+
+• Récupérer une liste de salles
+
+• Gérer les réservations
+
+Effectuez les étapes suivantes :
+
+Depuis le site d'administration Google Workspace : [<u>https://console.developers.google.com/cloud-resource-manager</u>](https://console.developers.google.com/cloud-resource-manager)
+
+* Créez un projet pour l'application PADS4 CMS.
+* Après avoir créé le projet, sélectionnez-le dans la console pour activer les API.
+
+Les API à activer sont :
+
+• Google Calendar
+
+• Admin SDK
+
+* Créez un compte de service avec la configuration suivante.
+
+* Créez une clé privée pour le compte de service.
+
+* Téléchargez le fichier de clé au format JSON. Vous en aurez besoin ultérieurement lors de la configuration de PADS4 CMS.
+
+* Autorisez les actions que PADS4 CMS requiert pour le compte de service.
+
+Récupérez le numéro d'ID du compte de service.
+
+Accédez ensuite à la console d'administration, [https://admin.google.com](https://admin.google.com), et ouvrez l'onglet "Security" et "Manage API client access".
+
+Ajoutez ensuite votre ID et les URL suivantes :
+
+[https://www.googleapis.com/auth/admin.directory.resource.calendar](https://www.googleapis.com/auth/admin.directory.resource.calendar)
+
+[https://www.googleapis.com/auth/admin.directory.resource.calendar.readonly](https://www.googleapis.com/auth/admin.directory.resource.calendar.readonly)
+
+[https://www.googleapis.com/auth/calendar](https://www.googleapis.com/auth/calendar)
+
+Créez et configurez des ressources dans la console d'administration : [https://admin.google.com](https://admin.google.com)
+
+Accédez à "Apps" puis à "GSuite".
+
+Sélectionnez ensuite l'application "Calendar".
+
+#### Activer Google Calendar dans PADS4 CMS
+
+Une fois cette étape terminée, retournez dans la section administrateur de PADS4 CMS et accédez à Plugins.<br /><br />Sélectionnez l'option Calendar.<br /><br />Réglez le curseur dans le coin supérieur droit sur "<u>ON</u>" et renseignez les informations suivantes :<br /><br />Sélectionnez l'option Google Calendar sous Authentication Type.
+
+Clé du compte de service : *Téléchargez votre fichier JSON ici*.
+
+Username: *Renseignez votre adresse e-mail.*
+
+Désactiver les notifications de réservation : *Indiquez si vous souhaitez désactiver les notifications oui/non.*
+
+Enregistrez les options et vérifiez que la connexion est valide en important des salles dans le module Workspace.

@@ -1,0 +1,174 @@
+---
+- title: Iiyama 64 Series
+- sidebarTitle: 64 Series
+- description: Installez et configurez PADS4 Viewer sur les écrans Android Iiyama
+    64 Series, y compris la mise à jour du firmware, l'installation de
+    l'application et le démarrage automatique.
+---
+
+Les écrans Iiyama de la série 64 fonctionnent sous Android 14. Vous installez l'application PADS4 Viewer sur l'écran pour afficher les présentations PADS4. Cette page explique comment configurer l'écran, vérifier le firmware, installer l'application et configurer son démarrage automatique.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* Écrans Iiyama de la série 64
+
+### Configuration minimale requise
+
+| Exigence               | Minimum                            |
+| ---------------------- | ---------------------------------- |
+| PADS4 Server           | PADS4 2025.2 ou version ultérieure |
+| Firmware de l'appareil | `LU64M79-B11-18`                   |
+
+### Autres prérequis
+
+* Un serveur PADS4 configuré et opérationnel.
+* La télécommande Iiyama.
+* Une clé USB. Vous l'utilisez pour installer l'application.
+* Pour mettre à jour le firmware, formatez la clé en FAT32.
+
+### Ouvrir le menu Android
+
+Pour ouvrir le menu Android, appuyez sur **Home** sur la télécommande, puis appuyez sur **1**, **6**, **6**, **8**.
+
+## Préparer l'appareil
+
+Lorsque vous allumez l'écran pour la première fois, l'assistant de configuration démarre automatiquement. Si l'assistant ne démarre pas, ou si quelqu'un a déjà utilisé l'écran, réinitialisez d'abord l'écran.
+
+### Réinitialiser l'appareil
+
+Réinitialisez l'écran pour effacer le stockage et éviter les conflits logiciels.
+
+<Warning>
+  Une réinitialisation d'usine supprime toutes les données et tous les paramètres de l'écran.
+</Warning>
+
+1. Ouvrez le menu Android.
+2. Sélectionnez **Paramètres**.
+3. Accédez à **System Tools** > **Factory Reset**, puis sélectionnez **Factory Reset**.
+4. Appuyez sur **OK** pour confirmer.
+
+Une fois la réinitialisation terminée, l'écran **Bienvenue** s'affiche. Continuez avec [Effectuer la configuration initiale](#complete-the-first-time-setup).
+
+### Effectuer la configuration initiale
+
+1. Sur l'écran **Bienvenue**, sélectionnez votre langue, puis sélectionnez **Démarrer**.
+2. Sur l'écran **Paramètre de sécurité** écran, assurez-vous que **SICP Network Port** est activé.
+3. Sur l' **Paramètre réseau** écran, sélectionnez le type de réseau, puis configurez le réseau.
+4. Sur l' **Signage Display Settings** écran, sélectionnez **Skip**.
+5. Sur l' **Clone Media Files** écran, sélectionnez **Skip**.
+6. Sur l' **Setup Complete** écran, sélectionnez **Finish**.
+
+## Vérifier la version du firmware
+
+PADS4 Viewer nécessite cette version de firmware pour fonctionner pleinement : `LU64M79-B11-18`.
+
+1. Ouvrez le menu Android.
+2. Sélectionnez **Settings**.
+3. Sélectionnez **About**.
+4. Comparez la version du firmware avec `LU64M79-B11-18`.
+
+Si la version est différente, [mettez à jour le firmware](#update-the-firmware).
+
+## Mettre à jour le firmware
+
+Contactez le support Iiyama pour obtenir le fichier firmware approprié.
+
+<Warning>
+  N'éteignez pas l'écran pendant la mise à jour.
+</Warning>
+
+1. Formatez une clé USB en FAT32.
+2. Téléchargez le fichier firmware depuis le support Iiyama, et extrayez-le.
+3. Copiez le fichier firmware extrait dans le dossier racine de la clé USB.
+4. Insérez la clé USB dans l'écran.
+5. Allumez l'écran. L'écran affiche ce message : `Do not power off the TV during the upgrade. Waiting...`
+6. Lorsque l'écran vous le demande, retirez la clé USB.
+
+## Installer PADS4 Viewer
+
+Installez le `PADS4WebLauncher.apk` fichier depuis une clé USB. Vous trouverez le fichier sur votre PADS4 Server dans `http(s)://<server>/<domain>/apps`. Vous pouvez également télécharger la dernière version depuis [GitHub](https://github.com/PADS4/PADS4-Viewer-for-iiyama-signage-devices/releases/latest).
+
+1. Copiez `PADS4WebLauncher.apk` sur une clé USB.
+2. Insérez la clé USB dans l'écran.
+3. Ouvrez le menu Android.
+4. Sélectionnez **Apps**, puis ouvrez l'application **File Manager**.
+5. Accédez à `mnt` > `usb_storage`, puis ouvrez `PADS4WebLauncher.apk`.
+6. Sélectionnez **Install**, puis sélectionnez **Open**.
+
+## Connecter le Viewer au PADS4 Server
+
+L'emplacement du serveur a ce format : `http(s)://<server>/<domain>`. Remplacez `<server>` par l'adresse IP ou le nom d'hôte de votre PADS4 Server. Remplacez `<domain>` par votre domaine PADS4. Le domaine par défaut est `PADS4`.
+
+1. Entrez l'emplacement du PADS4 Server.
+2. (Facultatif) Entrez un nom pour le Viewer. Si vous laissez le champ vide, le PADS4 Server génère un nom.
+3. Sélectionnez **Start**.
+4. Définissez **PADS4 IIyama Touch** comme application d'accueil, puis sélectionnez **Always**.
+
+<Check>
+  Le Viewer affiche une LED verte et le nom du Viewer. Cela signifie que la connexion fonctionne.
+</Check>
+
+## Démarrer le Viewer automatiquement
+
+Définissez l'application comme application personnalisée de l'écran. L'écran démarre alors PADS4 Viewer automatiquement, et le redémarre s'il s'arrête.
+
+1. Ouvrez PADS4 Viewer, puis sélectionnez **System Settings**.
+2. Accédez à **Signage Display** > **Custom App**.
+3. Sélectionnez **Select App**, sélectionnez **PADS4WebLauncher**, puis sélectionnez **Save**.
+4. Activez **Force Restart Custom App**.
+5. Appuyez sur **Back** trois fois pour revenir à PADS4 Viewer.
+
+{/* SCREENSHOT: System Settings > Signage Display > Custom App, with PADS4WebLauncher selected and Force Restart Custom App turned on. Crop to the settings panel. */}
+
+## Mettre à jour PADS4 Viewer
+
+PADS4 Viewer se met à jour automatiquement lorsque le PADS4 Server se met à jour.
+
+## Fonctionnalités prises en charge et limitations
+
+### Général
+
+| Fonctionnalité                      | Support | Notes                                                                                      |
+| ----------------------------------- | ------- | ------------------------------------------------------------------------------------------ |
+| Mises à jour automatiques du Viewer | Oui     | Le Viewer se met à jour lorsque le PADS4 Server se met à jour.                             |
+| Mode hors ligne                     | Oui     | Le Viewer continue de diffuser les présentations pendant 7 jours lorsqu'il est hors ligne. |
+| HTTP et HTTPS                       | Oui     |                                                                                            |
+| Mode portrait                       | Oui     |                                                                                            |
+| Cluster Viewer                      | Oui     |                                                                                            |
+
+### Vidéo et images
+
+| Fonctionnalité | Support | Notes                       |
+| -------------- | ------- | --------------------------- |
+| Vidéos         | Oui     | Maximum d'1 vidéo par page. |
+| Images         | Oui     |                             |
+
+### Contenu et données
+
+| Fonctionnalité                                         | Support | Notes                                              |
+| ------------------------------------------------------ | ------- | -------------------------------------------------- |
+| Texte, texte défilant, tableaux et formes              | Oui     |                                                    |
+| Élément web                                            | Oui     |                                                    |
+| PowerPoint et PDF                                      | Oui     | PowerPoint doit être installé sur le PADS4 Server. |
+| Fournisseurs de données, Variables du Viewer et règles | Oui     |                                                    |
+
+### Gestion des appareils
+
+| Fonctionnalité                            | Support | Notes                                                      |
+| ----------------------------------------- | ------- | ---------------------------------------------------------- |
+| Gestion à distance dans PADS4 CTRL Center | Oui     | Contrôle à distance avec PADS4 CTRL Center et PADS4 Agent. |
+| Wake-on-LAN                               | Oui     |                                                            |
+| Récupérer des captures d'écran            | Oui     |                                                            |
+| Récupérer les journaux                    | Oui     |                                                            |
+| Preuve de diffusion                       | Oui     | Enregistre l'historique de lecture du contenu.             |
+
+## Dépannage
+
+| Problème                                                                         | Solution                                                                                                                                  |
+| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Les commandes de télécommande ne fonctionnent pas.                               | Assurez-vous que SICP sur le réseau est activé et qu'il utilise le port 5000.                                                             |
+| Le navigateur ne s'exécute pas en plein écran.                                   | Vérifiez la version du firmware. Le firmware peut être incompatible. Voir [Vérifiez la version du firmware](#check-the-firmware-version). |
+| La barre de navigation est visible.                                              | [Mettez à jour le firmware](#update-the-firmware). Une mise à jour du firmware peut résoudre ce problème.                                 |
+| L'écran demande répétitivement l'autorisation d'accéder au stockage de fichiers. | Vérifiez la version du firmware. Le firmware peut être incompatible. Voir [Vérifiez la version du firmware](#check-the-firmware-version). |

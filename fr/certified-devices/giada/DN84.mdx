@@ -1,0 +1,68 @@
+---
+- title: Giada DN84
+- description: Installez et configurez PADS4 Viewer sur le lecteur multimédia
+    Giada DN84 Android 14, y compris l'installation de l'APK, le démarrage
+    automatique et la connexion à votre serveur PADS4.
+- sidebarTitle: DN84
+---
+
+Le Giada DN84 est un lecteur multimédia Android 14 que vous utilisez comme écran. Vous installez l'application PADS4 Web Launcher sur le lecteur pour afficher les présentations PADS4. Cette page explique comment installer l'application, la définir comme application d'accueil et la connecter à votre PADS4 Server.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* Giada DN84 (Android 14)
+
+### Configuration minimale requise
+
+| Exigence        | Minimum                            |
+| --------------- | ---------------------------------- |
+| PADS4 Server    | PADS4 2025.1 ou version ultérieure |
+| Version Android | Android 14                         |
+
+### Autres prérequis
+
+* Un PADS4 Server installé et en cours d'exécution.
+* Une clé USB. Vous l'utilisez pour installer l'application.
+* Accès réseau depuis le lecteur vers le PADS4 Server.
+
+## Installer PADS4 Viewer
+
+Installez le fichier `PADS4WebLauncher.apk` depuis une clé USB. Obtenez la dernière version depuis l'une de ces sources :
+
+* Votre PADS4 Server : `https://<your-server>/<domain>/apps`
+* GitHub: [Dernière version](https://github.com/PADS4/PADS4-Viewer-Android)
+
+1. Copiez `PADS4WebLauncher.apk` sur une clé USB.
+2. Allumez l'écran et ouvrez le menu avec les applications installées.
+3. Insérez la clé USB dans le lecteur.
+4. Ouvrez l'application **FileBrowser**.
+5. Accédez à la clé USB, puis sélectionnez `PADS4WebLauncher.apk`.
+6. Dans le message d'avertissement, sélectionnez **Continue**.
+7. Sélectionnez **Install**, et attendez que l'installation soit terminée.
+8. Sélectionnez **Done**, puis fermez **FileBrowser**.
+
+## Connecter le Viewer au serveur PADS4
+
+L'emplacement du serveur a ce format : `http(s)://<server>/<domain>`. Remplacez `<server>` par l'adresse IP ou le nom d'hôte de votre serveur PADS4. Remplacez `<domain>` par votre domaine PADS4. Le domaine par défaut est `PADS4`.
+
+1. Entrez l'emplacement du serveur PADS4.
+2. (Facultatif) Entrez un nom pour le Viewer. Si vous laissez le champ vide, le serveur PADS4 génère un nom.
+3. Sélectionnez **Start**.
+4. Définissez **PADS4 IIyama Touch** comme application d'accueil, puis sélectionnez **Always**.
+
+<Check>
+  Le Viewer affiche une LED verte et le nom du Viewer. Cela signifie que la connexion fonctionne.
+</Check>
+
+## Démarrer le Viewer automatiquement
+
+Définissez PADS4 Web Launcher comme application d'accueil, afin que le lecteur démarre automatiquement PADS4 Viewer.
+
+1. Ouvrez **Settings**.
+2. Accédez à **Apps**.
+3. Sélectionnez **PADS4 Web Launcher**.
+4. Sélectionnez **Home app**, puis sélectionnez **PADS4 Web Launcher**.
+
+PADS4 Viewer démarre.

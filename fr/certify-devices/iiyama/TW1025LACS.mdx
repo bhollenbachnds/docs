@@ -1,0 +1,69 @@
+---
+- title: Iiyama TW1025LASC
+- sidebarTitle: TW1025LASC
+- description: Installer et configurer PADS4 Viewer sur l'écran tactile Android
+    Iiyama TW1025LASC, y compris la réinitialisation d'usine, l'installation de
+    l'application et la connexion au serveur.
+---
+
+Le Iiyama TW1025LASC est un écran tactile Android. Vous installez l'application PADS4 Viewer sur l'écran pour afficher les présentations PADS4. Cette page explique comment réinitialiser l'écran, installer l'application et la connecter à votre PADS4 Server.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* TW1025LASC-B1PRN (Android 12)
+* TW1025LASC-B3PRN (Android 13)
+
+### Configuration minimale requise
+
+| Exigence        | Minimum                                              |
+| --------------- | ---------------------------------------------------- |
+| PADS4 Server    | PADS4 2025.1 ou version ultérieure                   |
+| Version Android | 12 (TW1025LASC-B1PRN) ou <br />13 (TW1025LASC-B3PRN) |
+
+### Autres prérequis
+
+* Un PADS4 Server entièrement opérationnel.
+* Une clé USB. Vous l'utilisez pour installer l'application.
+
+## Préparer l'appareil
+
+Lorsque vous allumez l'écran pour la première fois, l'écran d'accueil Android apparaît. S'il n'apparaît pas, ou si quelqu'un a utilisé l'écran auparavant, réinitialisez l'écran.
+
+### Réinitialiser l'appareil
+
+<Warning>
+  Une réinitialisation d'usine supprime toutes les données et paramètres de l'écran.
+</Warning>
+
+1. Ouvrir **Paramètres**.
+2. Aller à **Système** > **Options de réinitialisation**.
+3. Sélectionner **Effacer toutes les données (réinitialisation d'usine)**.
+4. Confirmer la réinitialisation.
+
+## Installer PADS4 Viewer
+
+Obtenir `PADS4IiyamaTouch.apk` depuis le dossier Apps de votre PADS4 Server. Vous trouverez le dossier Apps à `http(s)://<server>/<domain>/apps`. Utilisez le fichier de votre propre serveur afin que la version de l'application corresponde au serveur.
+
+1. Copier `PADS4IiyamaTouch.apk` sur une clé USB.
+2. Insérer la clé USB dans l'écran.
+3. Ouvrir l'application **Gestionnaire de fichiers**.
+4. Aller sur la clé USB, puis sélectionner `PADS4IiyamaTouch.apk`.
+5. Si Android bloque l'installation, sélectionner **Paramètres** dans le message, activer **Autoriser depuis cette source** pour le Gestionnaire de fichiers, puis revenir en arrière.
+6. Sélectionner **Installer**, puis ouvrir l'application **PADS4 IIyama Touch**.
+
+## Connecter le Viewer au PADS4 Server
+
+L'emplacement du serveur a ce format : `http(s)://<server>/<domain>`. Remplacer `<server>` par l'adresse IP ou le nom d'hôte de votre PADS4 Server. Remplacer `<domain>` par votre domaine PADS4. Le domaine par défaut est `PADS4`.
+
+1. Entrer l'emplacement du PADS4 Server.
+2. (Facultatif) Entrer un nom pour le Viewer. Si vous laissez le champ vide, le PADS4 Server génère un nom.
+3. Sélectionner **Démarrer**.
+4. Définir **PADS4 IIyama Touch** comme application d'accueil, puis sélectionner **Toujours**.
+
+<Check>
+  Le Viewer affiche une LED verte et le nom du Viewer. Cela signifie que la connexion fonctionne.
+</Check>
+
+Pour modifier l'orientation de l'écran et d'autres options, ouvrir **Paramètres du Viewer**.
