@@ -1,0 +1,171 @@
+---
+title: "Iiyama 54 Series"
+sidebarTitle: "54 Series"
+description: "Install and configure PADS4 Viewer on Iiyama 54 Series Android displays, including the firmware update, app installation, and automatic startup."
+---
+
+Iiyama 54 Series displays run Android 11. You install the PADS4 Viewer app on the display to show PADS4 presentations. This page explains how to set up the display, check the firmware, install the app, and set the app to start automatically.
+
+## Before you begin
+
+### Supported devices
+
+- Iiyama 54 Series displays 
+
+### Minimum requirements
+
+| Requirement | Minimum |
+| --- | --- |
+| PADS4 Server | PADS4 2025.1 or later |
+| Device firmware | `t7_an400_arm64-userdebug 11 RQ3A.210805.001.A1 eng.yangpe.20230307.012903 test-keys` |
+
+### Other prerequisites
+
+- A PADS4 Server that is set up and configured.
+- The Iiyama remote control.
+- A USB flash drive. You use it to install the app. 
+- To update the firmware, format the drive with FAT32.
+
+### Open the Android menu
+
+To open the Android menu, press **Home** on the remote control, and then press **1**, **6**, **6**, **8**.
+
+## Prepare the device
+
+When you turn on the display for the first time, the Configuration Wizard starts automatically. If the wizard does not start, or if someone used the display before, reset the display first.
+
+### Reset the device
+
+Reset the display to clear the storage and prevent software conflicts.
+
+<Warning>
+  A factory reset removes all data and settings from the display.
+</Warning>
+
+1. Open the Android menu.
+2. Select **Settings**.
+3. Go to **System Tools** > **Factory Reset**, and then select **Factory Reset**.
+4. Press **OK** to confirm.
+
+When the reset is complete, the **Welcome** screen appears. Continue with [Complete the first-time setup](#complete-the-first-time-setup).
+
+### Complete the first-time setup
+
+1. On the **Welcome** screen, select your language, and then select **Start**.
+2. On the **Security Setting** screen, make sure that **SICP Network Port** is turned on.
+3. On the **Network Setting** screen, select the network type, and then configure the network.
+4. On the **Signage Display Settings** screen, select **Skip**.
+5. On the **Clone Media Files** screen, select **Skip**.
+6. On the **Setup Complete** screen, select **Finish**.
+
+## Check the firmware version
+
+PADS4 Viewer needs this firmware version to work fully: `t7_an400_arm64-userdebug 11 RQ3A.210805.001.A1 eng.yangpe.20230307.012903 test-keys`.
+
+1. Open the Android menu.
+2. Select **Settings**.
+3. Select **About**.
+4. Compare the firmware version with `t7_an400_arm64-userdebug 11 RQ3A.210805.001.A1 eng.yangpe.20230307.012903 test-keys`.
+
+If the version is different, [update the firmware](#update-the-firmware).
+
+## Update the firmware
+
+Contact Iiyama Support to get the correct firmware file.
+
+<Warning>
+  Do not turn off the display during the update.
+</Warning>
+
+1. Format a USB flash drive with FAT32.
+2. Download the firmware file from Iiyama Support, and extract it.
+3. Copy the extracted firmware file to the root folder of the USB flash drive.
+4. Insert the USB flash drive into the display.
+5. Turn on the display. The display shows a message that tells you not to turn it off during the upgrade.
+6. When the display asks you to, remove the USB flash drive.
+
+## Install PADS4 Viewer
+
+Install the `PADS4Iiyama.apk` file from a USB flash drive. You find the file on your PADS4 Server in `http(s)://<server>/<domain>/apps`. You can also download the latest version from [GitHub](https://github.com/PADS4/PADS4-Viewer-for-iiyama-signage-devices/releases/latest).
+
+1. Copy `PADS4Iiyama.apk` to a USB flash drive.
+2. Insert the USB flash drive into the display.
+3. Open the Android menu.
+4. Select **Apps**, and then open the **File Manager** app.
+5. Go to `mnt` > `usb_storage`, and then open `PADS4Iiyama.apk`.
+6. Select **Install**, and then select **Open**.
+
+## Connect the Viewer to the PADS4 Server
+
+The server location has this format: `http(s)://<server>/<domain>`. Replace `<server>` with the IP address or host name of your PADS4 Server. Replace `<domain>` with your PADS4 domain. The default domain is `PADS4`.
+
+1. Enter the PADS4 Server location.
+2. (Optional) Enter a name for the Viewer. If you leave the field empty, the PADS4 Server generates a name.
+3. Select **Start**.
+4. Set **PADS4 IIyama Touch** as the Home app, and then select **Always**.
+
+<Check>
+  The Viewer connects to the PADS4 Server.
+</Check>
+
+## Start the Viewer automatically
+
+Set the app as the custom app of the display. The display then starts PADS4 Viewer automatically, and restarts it if it stops.
+
+1. Open PADS4 Viewer, and then select **System Settings**.
+2. Go to **Signage Display** > **Custom App**.
+3. Select **Select App**, select **PADS4Iiyama**, and then select **Save**.
+4. Turn on **Force Restart Custom App**.
+5. Press **Back** three times to return to PADS4 Viewer.
+
+{/* SCREENSHOT: System Settings > Signage Display > Custom App, with PADS4Iiyama selected and Force Restart Custom App turned on. Crop to the settings panel. */}
+
+## Update PADS4 Viewer
+
+PADS4 Viewer updates automatically when the PADS4 Server updates.
+
+## Supported features and limitations
+
+### General
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Automatic Viewer updates | Yes | The Viewer updates when the PADS4 Server updates. |
+| Offline mode | Yes | The Viewer keeps playing presentations for 7 days while it is offline. |
+| HTTP and HTTPS | Yes |  |
+| Portrait mode | Yes |  |
+| Cluster Viewer | Yes |  |
+
+### Video and images
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Videos | Yes | Maximum of 1 video on a page. |
+| Images | Yes |  |
+
+### Content and data
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Text, scrolling text, tables and shapes | Yes |  |
+| Web element | Yes |  |
+| PowerPoint and PDF | Yes | PowerPoint must be installed on the PADS4 Server. |
+| Data providers, Viewer Variables, and rules | Yes |  |
+
+### Device management
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Remote management in PADS4 CTRL Center | Yes | Remote control with PADS4 CTRL Center and PADS4 Agent. |
+| Connection monitoring and alerts | Yes |  |
+| Wake-on-LAN | Yes |  |
+| Proof of play | Yes | Records the playback history of content. |
+
+## Troubleshooting
+
+| Problem | Solution |
+| --- | --- |
+| The remote control commands do not work. | Make sure that SICP over network is turned on, and that it uses port 5000. |
+| The browser does not run in full screen. | Check the firmware version. The firmware can be incompatible. See [Check the firmware version](#check-the-firmware-version). |
+| The navigation bar is visible. | [Update the firmware](#update-the-firmware). A firmware update can fix this problem. |
+| The display repeatedly asks for permission to access file storage. | Check the firmware version. The firmware can be incompatible. See [Check the firmware version](#check-the-firmware-version). |
