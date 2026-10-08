@@ -3,23 +3,23 @@ title: "LG WebOS 8"
 description: Install and configure the PADS4 HTML5 Viewer on LG webOS Signage 24 (8.0) displays, with firmware update, SI Server setup, and 4K playback support.
 ---
 
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **LG webOS Signage 24 (8.0)** devices.
+This guide explains how to **install and configure PADS4 Viewer** on **LG webOS Signage 24 (8.0)** devices.
 
-## **1. First-time use**
+## 1. First-time use
 
-Before installation, ensure that the **PADS4 Server version 2026.1 is set up and configured properly**.
+Before you install, make sure that **PADS4 Server version 2026.1 is set up and configured properly**.
 
 <Note>
-  This guide is specific to **webOS Signage 24 (8.0).** If the **Configuration Wizard** does not start automatically, reset the device as described in **1.2 Resetting the Device**.
+  This guide is specific to **webOS Signage 24 (8.0).** If the **Configuration Wizard** does not start automatically, reset the device as described in **1.2 Resetting the device**.
 </Note>
 
-### **1.1 Configuring the device**
+### 1.1 Configuring the device
 
-No changes need to be made before installing the **PADS4 Viewer**. Proceed directly to **Installation**.
+You do not need to change anything before you install **PADS4 Viewer**. Go directly to **Installation**.
 
-### **1.2 Resetting the device**
+### 1.2 Resetting the device
 
-If the device was used previously, perform a **factory reset** to clear storage and prevent software conflicts.
+If someone used the device before, perform a **factory reset** to clear storage and prevent software conflicts.
 
 <Steps>
   <Step title="Step One">
@@ -39,13 +39,13 @@ If the device was used previously, perform a **factory reset** to clear storage 
   </Step>
 </Steps>
 
-After resetting, the **Welcome Screen** will appear. Follow the steps in **1.1 Configuring the Device**.
+After the reset, the **Welcome Screen** appears. Follow the steps in **1.1 Configuring the device**.
 
-## **2. Installing PADS4 Viewer**
+## 2. Installing PADS4 Viewer
 
 Follow these steps to install the **PADS4 Viewer** on **LG webOS Signage 24 (8.0)**.
 
-#### **Installation steps**
+#### Installation steps
 
 <Steps>
   <Step title="Step One">
@@ -87,17 +87,17 @@ Follow these steps to install the **PADS4 Viewer** on **LG webOS Signage 24 (8.0
   </Step>
 </Steps>
 
-After completing these steps, the **PADS4 HTML5 Viewer** will download and start automatically.
+After you complete these steps, the **PADS4 HTML5 Viewer** downloads and starts automatically.
 
-- A **connection indicator icon** will appear at the bottom left of the screen:
+- A **connection indicator icon** appears at the bottom left of the screen:
   - **Green** = Connection successful
   - **Red** = Connection issue
 
 To troubleshoot, check the **Viewer Settings** and **log files** for errors.
 
-### **2.1 Checking device firmware**
+### 2.1 Checking device firmware
 
-Ensure the **correct firmware version** is installed for full **PADS4 Viewer** functionality.
+Make sure that the **correct firmware version** is installed for full **PADS4 Viewer** functionality.
 
 <Steps>
   <Step title="Step One">
@@ -107,11 +107,11 @@ Ensure the **correct firmware version** is installed for full **PADS4 Viewer** f
     Open the **SI App (ZIP) Dashboard** and check the **firmware version**.
   </Step>
   <Step title="Step Three">
-    Ensure the **firmware version** is **03.32.01** _(required for PADS4)_.
+    Make sure that the **firmware version** is **03.32.01** _(required for PADS4)_.
   </Step>
 </Steps>
 
-### **2.2 Updating firmware**
+### 2.2 Updating firmware
 
 <Steps>
   <Step title="Step One">
@@ -121,15 +121,15 @@ Ensure the **correct firmware version** is installed for full **PADS4 Viewer** f
     Insert the **USB stick** into the **LG WebOS8 device**.
   </Step>
   <Step title="Step Three">
-    The **device will detect the USB stick** and start the **firmware update** automatically.
+    The **device detects the USB stick** and starts the **firmware update** automatically.
   </Step>
 </Steps>
 
-### **2.3 Adjusting PADS4 Viewer settings**
+### 2.3 Adjusting PADS4 Viewer settings
 
 - **Press and hold the left mouse button** or **touch the screen for 3 seconds** to access **Viewer Settings**.
 
-## **3. Supported features & limitations**
+## 3. Supported features & limitations
 
 | Feature | Description |
 | :-: | :-- |
@@ -149,12 +149,12 @@ Ensure the **correct firmware version** is installed for full **PADS4 Viewer** f
 | ❌ | **Playback Speed Adjustment** – Not supported. |
 | ❌ | **Retrieving screenshots from video content** – Not supported. |
 
-## **4. Troubleshooting**
+## 4. Troubleshooting
 
 | **Problem** | **Solution** |
 | :-- | :-- |
-| **Connection issues to PADS4 Server** | Ensure the **correct URL** is configured under **SI Server Settings**. |
-| **Firmware version incorrect** | Check and **update firmware** to **03.32.01** following **2.2 Updating Firmware**. |
-| **Remote control commands not working** | Ensure **block remote control** is disabled in **Device Settings**. |
+| **Connection issues to PADS4 Server** | Make sure that the **correct URL** is configured under **SI Server Settings**. |
+| **Firmware version incorrect** | Check and **update firmware** to **03.32.01** following **2.2 Updating firmware**. |
+| **Remote control commands not working** | Make sure that **block remote control** is disabled in **Device Settings**. |
 | **Screen does not turn off** | **Turn Off Display** is **not supported** on **webOS Signage 24 (8.0).** |
 | **Streaming issues** | Verify the **stream encoder format** (MP4, MPEGTS, MP2T). Use `rtp://239.0.0.1/?encoding=mpegts` if needed. |
