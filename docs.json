@@ -3252,6 +3252,22 @@
     {
       "source": "/canva-set-up-1",
       "destination": "/canva-set-up"
+    },
+    {
+      "source": "/certified-devices/iiyama/TW1025LASC",
+      "destination": "/untitled-page-43"
+    },
+    {
+      "source": "/certified-devices/iiyama/54-Series",
+      "destination": "/untitled-page-44"
+    },
+    {
+      "source": "/certified-devices/iiyama/60-Series",
+      "destination": "/untitled-page-45"
+    },
+    {
+      "source": "/certified-devices/iiyama/iiyama-64-series",
+      "destination": "/untitled-page-46"
     }
   ]
 }
