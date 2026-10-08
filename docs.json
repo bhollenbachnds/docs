@@ -3258,6 +3258,10 @@
       "destination": "/certify-devices/iiyama/TW1025LACS"
     },
     {
+      "source": "/certified-devices/iiyama/i-iyama-tw-1023-asc",
+      "destination": "/certify-devices/iiyama/TW1023ACS"
+    },
+    {
       "source": "/certified-devices/iiyama/54-Series",
       "destination": "/certify-devices/iiyama/54-series"
     },
