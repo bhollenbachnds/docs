@@ -1,0 +1,38 @@
+---
+- title: System Viewer Variables
+- description: Référence pour les System Viewer Variables intégrées que PADS4
+    fournit au moment de l'exécution, notamment viewername, monitorname et
+    pads4serverurl, et comment les utiliser.
+---
+
+Viewer Variables, également connues sous le nom de **Dynamic Filtering**, permettent **la gestion de contenu pilotée par les données** dans PADS4. Cette fonctionnalité vous permet de créer une **présentation unique** qui s'ajuste dynamiquement pour plusieurs Viewers en fonction de valeurs prédéfinies.
+
+Pour un exemple détaillé de l'utilisation des Viewer Variables, consultez la **Viewer Variables Introduction Page**.
+
+***
+
+## **Variables système du Viewer**
+
+En plus des **Viewer Variables personnalisées**, PADS4 fournit des **System Viewer Variables** au moment de l'exécution. Ces variables intégrées vous permettent d'accéder dynamiquement aux informations système essentielles.
+
+### **Variables système du Viewer disponibles**
+
+| **Nom de la Viewer Variable** | **Description**                                                                                               |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **viewername**                | Le **nom d'identification** du Viewer.                                                                        |
+| **monitorname**               | Identique à **viewername**. Utilisé dans les anciennes versions de PADS pour la **compatibilité ascendante**. |
+| **pads4serverurl**            | Affiche l'**URL du serveur PADS4**, formatée comme suit : **HTTP(s)://server/hostpath**                       |
+
+***
+
+## **Fonctionnement des System Viewer Variables**
+
+* **Mises à jour automatiques** – Les System Viewer Variables sont générées par PADS4 au moment de l'exécution et reflètent toujours l'état actuel du Viewer.
+* **Utilisation dans les présentations** – Vous pouvez les inclure dans des **champs de texte**, **fournisseurs de données**, ou **d'autres éléments de contenu dynamique**.
+* **Compatibilité** – Ces variables assurent une **intégration transparente** entre les différentes versions de PADS4.
+
+***
+
+## **Conclusion**
+
+Les System Viewer Variables fournissent des informations essentielles sur le **Viewer et le serveur PADS4** sans nécessiter de saisie manuelle. Elles simplifient **la personnalisation et l'automatisation du contenu**, faisant de PADS4 une **solution d'affichage dynamique** plus efficace.

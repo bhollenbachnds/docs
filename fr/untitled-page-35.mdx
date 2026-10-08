@@ -1,0 +1,183 @@
+---
+- title: NDS.Services.Schedule
+- description: Référence API pour NDS.Services.Schedule, le moteur de
+    planification PADS4 pour les dayparts, les créneaux horaires de playlists,
+    les exceptions de planification et les calendriers.
+---
+
+## Aperçu
+
+Le moteur de planification PADS4. Gère les dayparts, les affectations de playlists aux créneaux horaires, les exceptions de planification et le calendrier du contenu diffusé sur quels écrans et à quels moments.
+
+| Champ               | Valeur                                                                    |
+| ------------------- | ------------------------------------------------------------------------- |
+| Swagger UI          | `https://<your-server>/rdx/nds.services.schedule/swagger/index.html`      |
+| OpenAPI spec        | `https://<your-server>/rdx/nds.services.schedule/swagger/v1/swagger.json` |
+| Base URL            | `https://<your-server>/rdx/nds.services.schedule`                         |
+| Total des endpoints | 33                                                                        |
+
+***
+
+## Authentification
+
+Tous les endpoints utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des endpoints
+
+| Méthode  | Chemin                                                             | Description               |
+| -------- | ------------------------------------------------------------------ | ------------------------- |
+| `PUT`    | `/api/v1/Exception`                                                | Create Or Update          |
+| `GET`    | `/api/v1/Exception`                                                | Get                       |
+| `DELETE` | `/api/v1/Exception`                                                | Delete D E L E T E        |
+| `POST`   | `/api/v1/Exception/create`                                         | Create                    |
+| `DELETE` | `/api/v1/Exception/delete`                                         | Delete D E L E T E2       |
+| `POST`   | `/api/v1/Exception/delete`                                         | Delete P O S T            |
+| `DELETE` | `/api/v1/Exception/deleteBySchedule/{scheduleId}/{scheduleItemId}` | Delete D E L E T E3       |
+| `GET`    | `/api/v1/Occurrence/forDates`                                      | Get Occurrences For Dates |
+| `GET`    | `/api/v1/Occurrence`                                               | Get Occurrences           |
+| `POST`   | `/api/v1/Occurrence`                                               | Get                       |
+| `POST`   | `/api/v1/Occurrence/hasOccurrences`                                | Has Occurrences           |
+| `POST`   | `/api/v1/Occurrence/hasOccurrences/byGroup`                        | Has Occurrences Grouped   |
+| `POST`   | `/api/v1/Occurrence/raw`                                           | Get2                      |
+| `PUT`    | `/api/v1/Schedule`                                                 | Create Or Update          |
+| `GET`    | `/api/v1/Schedule`                                                 | Get G E T                 |
+| `POST`   | `/api/v1/Schedule`                                                 | Get P O S T               |
+| `DELETE` | `/api/v1/Schedule/{id}`                                            | Delete                    |
+| `POST`   | `/api/v1/Schedule/humanize`                                        | Humanize                  |
+| `POST`   | `/api/v1/Schedule/rrule`                                           | Get R Rule                |
+| `GET`    | `/api/v1/diagnostics/toggles`                                      | Get Toggles               |
+| `GET`    | `/api/v1/diagnostics/configuration`                                | Get Config Section        |
+| `GET`    | `/api/v1/diagnostics/configurationex`                              | Get Configuration         |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers`                              | Get Circuit Breakers      |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/reset`                        | Reset Circuit Breaker     |
+| `GET`    | `/api/v1/diagnostics/circuitbreakers/isolate`                      | Isolate Circuit Breaker   |
+| `POST`   | `/api/v1/diagnostics/events`                                       | Get Events                |
+| `GET`    | `/api/v1/health`                                                   | Get                       |
+| `GET`    | `/api/v1/health/clean`                                             | Get Clean                 |
+| `POST`   | `/api/v1/Management/RequeueErrorMessages`                          | Requeue Error Messages    |
+| `POST`   | `/api/v1/Management/PurgeErrorMessages`                            | Purge Error Messages      |
+| `GET`    | `/migration`                                                       | Get Migrations            |
+| `POST`   | `/migration`                                                       | Execute Migration         |
+| `GET`    | `/version`                                                         | Get                       |
+
+***
+
+## Exemples de requêtes & réponses
+
+### PUT `/api/v1/Exception`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X PUT 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Exception`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/Exception`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### POST `/api/v1/Exception/create`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception/create' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### DELETE `/api/v1/Exception/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X DELETE 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception/delete'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true, "Message": null}
+```
+
+***
+
+### POST `/api/v1/Exception/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Schedule/api/v1/Exception/delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Des endpoints supplémentaires suivent les mêmes schémas que ceux présentés ci-dessus. Consultez le Swagger UI pour les schémas de paramètres complets.
