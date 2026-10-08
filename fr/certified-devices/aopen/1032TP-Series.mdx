@@ -1,0 +1,168 @@
+---
+- title: AOPEN 1032TP Series
+- description: Installez et configurez PADS4 Viewer sur les appareils tactiles
+    Android AOPEN 1032TP Series, notamment l'installation de l'APK, la connexion
+    au serveur et les paramètres de l'appareil.
+- sidebarTitle: 1032TP Series
+---
+
+{/*
+  Template: certified-devices-template-android.mdx
+  Suggested path: certified-devices/aopen/1032tp-series.mdx
+  Replaces: /certified-devices/aopen/1032TP-Series
+  */}
+
+Les appareils tactiles AOPEN 1032TP Series fonctionnent sous Android. Vous installez l'application PADS4 Viewer sur l'appareil pour afficher les présentations PADS4. Cette page explique comment installer l'application, la connecter à votre PADS4 Server et modifier les paramètres de l'appareil.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* AOPEN AT1032TP
+* AOPEN eTILE-X1032TP
+
+### Configuration minimale requise
+
+| Exigence                          | Minimum                            |
+| --------------------------------- | ---------------------------------- |
+| PADS4 Server, AOPEN AT1032TP      | PADS4 2024.1 ou version ultérieure |
+| PADS4 Server, AOPEN eTILE-X1032TP | PADS4 2025.1 ou version ultérieure |
+| Version Android                   | 11                                 |
+
+### Autres prérequis
+
+* Un PADS4 Server installé et en cours d'exécution. Vous avez besoin de son emplacement pour connecter le Viewer.
+* Une clé USB. Vous l'utilisez pour installer l'application.
+* Accès réseau depuis l'appareil vers le PADS4 Server.
+
+## Installer PADS4 Viewer
+
+Installez le `PADS4AOpen.apk` fichier depuis une clé USB. Vous trouverez le fichier sur votre PADS4 Server dans `http(s)://<server>/<domain>/apps`. Vous pouvez également télécharger la dernière version depuis [GitHub](https://github.com/PADS4/PADS4-Viewer-AOpen/releases/download/v1.0/PADS4AOpen.apk).
+
+Si vous téléchargez le fichier, copiez-le également dans le `Apps` dossier sur le PADS4 Server. Si le serveur contient une version différente, l'appareil installe cette version lors de la connexion.
+
+<Note>
+  La prise en charge de l'eTILE-X1032TP a débuté avec PADS4 2025.1. Si votre PADS4 Server est plus ancien, remplacez le `PADS4AOpen.apk` fichier dans le `Apps` dossier par le dernier téléchargement.
+</Note>
+
+1. Copiez `PADS4AOpen.apk` sur une clé USB.
+2. Insérez la clé USB dans l'appareil.
+3. Ouvrez l'application **File Manager**.
+4. Accédez à la clé USB, puis ouvrez `PADS4AOpen.apk`.
+5. Un message indique que l'installation depuis des sources inconnues n'est pas autorisée. Sélectionnez **Settings**, puis autorisez l'installation depuis cette source.
+6. Appuyez sur **Back**, puis sélectionnez **Install**.
+7. Une fois l'installation terminée, ouvrez l'application PADS4 AOpen.
+
+## Connecter le Viewer au PADS4 Server
+
+L'emplacement du serveur a ce format : `http(s)://<server>/<domain>`. Remplacez `<server>` par l'adresse IP ou le nom d'hôte de votre PADS4 Server. Remplacez `<domain>` par votre domaine PADS4. Le domaine par défaut est `PADS4`.
+
+1. Entrez l'emplacement du PADS4 Server.
+2. (Facultatif) Entrez un nom pour le Viewer. Si vous laissez le champ vide, le PADS4 Server génère un nom.
+3. Sélectionnez **Start**.
+4. Définissez **PADS4 IIyama Touch** comme application d'accueil, puis sélectionnez **Always**.
+
+<Check>
+  Le Viewer affiche une LED verte et le nom du Viewer. Cela signifie que la connexion fonctionne.
+</Check>
+
+Vous pouvez définir l'orientation de l'écran et les restrictions de la télécommande avec PADS4 Agent ou dans les paramètres du Viewer.
+
+## Modifier les paramètres de l'appareil
+
+### Ouvrir les options du Viewer
+
+Appuyez longuement sur l'écran pour ouvrir le menu. Vous pouvez également modifier les options à distance dans PADS4 CTRL Center ou avec PADS4 Agent.
+
+### Ouvrir les paramètres Android
+
+<Warning>
+  Si **Hide Status Bar** est activé, vous ne pouvez quitter les paramètres Android qu'en redémarrant l'appareil. Pour le redémarrer, débranchez l'alimentation.
+</Warning>
+
+1. Ouvrez le menu du Viewer.
+2. Sélectionnez **Launcher Settings**.
+3. Sélectionnez l'icône d'engrenage dans le coin inférieur droit.
+
+Les paramètres Android s'ouvrent.
+
+### Désactiver la barre de navigation Android
+
+Désactivez la barre de navigation pour empêcher toute utilisation non autorisée de l'appareil. Cette étape est facultative.
+
+<Warning>
+  Après avoir désactivé la barre de navigation, vous ne pouvez quitter les paramètres qu'en redémarrant l'appareil. Pour le redémarrer, débranchez l'alimentation.
+</Warning>
+
+1. Ouvrez le menu du Viewer.
+2. Sélectionnez **Launcher Settings**.
+3. Sélectionnez l'icône d'engrenage dans le coin inférieur droit.
+4. Sélectionnez **System Tools**.
+5. Sélectionnez **Disable Navigation Bar**.
+
+### Réinitialiser l'appareil
+
+<Warning>
+  Une réinitialisation d'usine supprime toutes les données et tous les paramètres de l'appareil.
+</Warning>
+
+1. [Ouvrir les paramètres Android](#open-the-android-settings).
+2. Accédez à **Backup & Reset**.
+3. Sélectionnez **Factory Data Reset**.
+4. (Facultatif) Sélectionnez **Erase SD Card**.
+5. Sélectionnez **Reset Tablet**.
+6. Sélectionnez **Erase Everything**.
+
+## Mettre à jour PADS4 Viewer
+
+Le HTML5 Viewer se met à jour automatiquement. Pour installer manuellement une version plus récente de l'application, répétez les étapes de [Installer PADS4 Viewer](#install-pads4-viewer).
+
+## Fonctionnalités prises en charge et limitations
+
+### Général
+
+| Fonctionnalité                         | Prise en charge | Remarques                                                                                                  |
+| -------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------- |
+| Mises à jour automatiques du Viewer    | Oui             | Le HTML5 Viewer se met à jour automatiquement.                                                             |
+| Mode hors ligne                        | Oui             | La lecture et les mises à jour de planification continuent pendant 7 jours hors ligne.                     |
+| HTTP et HTTPS                          | Oui             |                                                                                                            |
+| Mode portrait                          | Oui             | L'appareil fait pivoter l'écran automatiquement.                                                           |
+| Cluster Viewer                         | Oui             | L'appareil peut faire partie d'une configuration en cluster.                                               |
+| Vérification de l'intégrité du contenu | Oui             | La PADS4 Content Library vérifie chaque fichier avec une somme de contrôle MD5 lors de la synchronisation. |
+
+### Vidéo et images
+
+| Fonctionnalité                                            | Prise en charge | Remarques             |
+| --------------------------------------------------------- | --------------- | --------------------- |
+| Vidéos sur une page                                       | Oui             | Une vidéo à la fois.  |
+| Streaming vidéo                                           | Oui             | Streaming HTTP.       |
+| Lecture vidéo transparente                                | Non             |                       |
+| Rotation, réflexion, inclinaison et retournement de vidéo | Non             |                       |
+| Formats d'image                                           | Oui             | JPG, PNG, BMP et GIF. |
+
+### Contenu et données
+
+| Fonctionnalité                                                 | Support | Remarques                                                                                                                |
+| -------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Texte, texte défilant, tableaux, formes et boutons interactifs | Oui     | Les lignes et le texte formaté sont également pris en charge. Les effets Flash et de découpe ne sont pas pris en charge. |
+| Élément web                                                    | Oui     |                                                                                                                          |
+| PowerPoint et PDF                                              | Partiel | PDF est pris en charge et nécessite une licence Xpert.                                                                   |
+| Fournisseurs de données, variables Viewer et règles            | Oui     | Comprend plus de 70 fournisseurs de données, variables Viewer et liaisons de propriétés.                                 |
+
+### Gestion des appareils
+
+| Fonctionnalité                            | Support | Remarques                                                                                                                                                                   |
+| ----------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gestion à distance dans PADS4 CTRL Center | Oui     | Vous pouvez modifier les paramètres du Viewer à distance.                                                                                                                   |
+| Surveillance des connexions et alertes    | Oui     |                                                                                                                                                                             |
+| Redémarrer le Viewer                      | Oui     |                                                                                                                                                                             |
+| Redémarrer l'appareil                     | Non     |                                                                                                                                                                             |
+| Éteindre l'appareil                       | Non     |                                                                                                                                                                             |
+| Wake-on-LAN                               | Non     |                                                                                                                                                                             |
+| Éteindre l'écran                          | Non     |                                                                                                                                                                             |
+| Bloquer la télécommande                   | Oui     | Empêche toute utilisation non autorisée.                                                                                                                                    |
+| Récupérer des captures d'écran            | Oui     |                                                                                                                                                                             |
+| Récupérer les journaux                    | Oui     |                                                                                                                                                                             |
+| Preuve de diffusion                       | Oui     | L'appareil stocke jusqu'à 50 000 enregistrements lorsqu'il est hors ligne. Lorsque le stockage est plein, l'appareil supprime d'abord les enregistrements les plus anciens. |
+| Installer des polices                     | Oui     |                                                                                                                                                                             |
+| Barre lumineuse LED                       | Oui     | Rouge, vert, bleu, cyan, jaune, magenta et blanc.                                                                                                                           |
