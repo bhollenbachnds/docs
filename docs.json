@@ -3268,6 +3268,22 @@
     {
       "source": "/certified-devices/iiyama/iiyama-64-series",
       "destination": "/certify-devices/iiyama/64-series"
+    },
+    {
+      "source": "/untitled-page-43",
+      "destination": "/certify-devices/iiyama/TW1025LACS"
+    },
+    {
+      "source": "/untitled-page-44",
+      "destination": "/certify-devices/iiyama/54-series"
+    },
+    {
+      "source": "/untitled-page-45",
+      "destination": "/certify-devices/iiyama/60-series"
+    },
+    {
+      "source": "/untitled-page-46",
+      "destination": "/certify-devices/iiyama/64-series"
     }
   ]
 }
