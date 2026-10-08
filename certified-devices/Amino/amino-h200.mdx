@@ -1,92 +1,125 @@
 ---
 title: "Amino H200"
-description: "Install and configure the PADS4 Viewer on Amino H200 Android 12 and 14 devices using Amino Orchestrate, APKs, and autostart configuration."
+description: "Install and configure PADS4 Viewer on Amino H200 Android players with Amino Orchestrate, including the application, configuration, and server connection."
+sidebarTitle: "H200"
 ---
 
-This manual provides step-by-step instructions for configuring the Amino H200 device and installing the PADS4 Viewer. It covers initial setup, APK installation, autostart configuration, and viewer setup.
+The Amino H200 is an Android media player that you manage from the Amino Orchestrate console. You add PADS4 Viewer as an application in Orchestrate, and Orchestrate installs it on the player. This page explains how to set up the application and the configuration in Orchestrate, add the player, and connect PADS4 Viewer to your PADS4 Server.
 
-**Compatible Devices:**
+## Before you begin
 
-- **Amino H200 (Android 12)**
-- **Amino H200 (Android 14)**
+### Supported devices
 
-**Minimum requirements**
+- Amino H200 (Android 12)
+- Amino H200 (Android 14)
 
-PADS4 Version Required: **2025.1** \
-Firmware: 25.6.2540.10R (Android 12)\
-                  25.8.2620.4R (Android 14)
+### Minimum requirements
 
-## Installing PADS4 Viewer in Amino Orchestrate
+| Requirement | Minimum |
+| --- | --- |
+| PADS4 Server | PADS4 2025.1 or later |
+| Firmware, Android 12 | `25.6.2540.10R` |
+| Firmware, Android 14 | `25.8.2620.4R` |
 
-Amino is using a central console to manage the devices. Make sure you have an account and download the Generic Android Viewer
+### Other prerequisites
 
-1. In your browser open the URL: [https://orchestrate.amino.tv/](https://orchestrate.amino.tv/)
-2. On the main page go to Application **sections**.
-3. Click on **Add Application**.
-4. Enter PADS4 Viewer as **Application Name**.
-5. Upload the **Generic Android Viewer APK**.
+- An Amino Orchestrate account.
+- The APK file of the Generic Android Viewer. See [PADS4 Generic Android Viewer](/certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer).
+- The serial number of the player.
 
-The viewer is ready for deploying to your device.
+## Install PADS4 Viewer
 
-## Configure configuration in Orchestra
+Amino players are managed from a central console, Amino Orchestrate. You add PADS4 Viewer as an application, put it in a configuration, and then add the player to that configuration. Orchestrate installs PADS4 Viewer when the player comes online.
 
-1. Navigate to **Configurations**
-2. Select **Add Configuration** and provide a name for your Configurations
-3. Click **Add** to save the Configurations
+### Add PADS4 Viewer as an application
+
+1. Open the Amino Orchestrate site: `https://orchestrate.amino.tv/`.
+2. On the main page, go to the **Applications** section.
+3. Select **Add Application**.
+4. In **Application Name**, enter `PADS4 Viewer`.
+5. Upload the APK file of the Generic Android Viewer.
+
+PADS4 Viewer is now ready to deploy to a player.
+
+### Create a configuration
+
+1. Go to **Configurations**.
+2. Select **Add Configuration**, and then enter a name.
+3. Select **Add**.
 4. Open the **Parameters** tab.
-5. Select the **Target Version** of the Firmware
-6. Click **Save Changes** to apply.
-7. Open the **Applications** tab in the configuration view.
-8. Click on **Add Action** and select your PADS4 application.
-9. Verify the app is listed, set **Action** to **Install**, and select the correct **Version** if applicable.
-10. Click **Save Changes** to apply.
+5. In **Target Version**, select the firmware version.
+6. Select **Save Changes**.
+7. Open the **Applications** tab.
+8. Select **Add Action**, and then select **PADS4 Viewer**.
+9. Check that PADS4 Viewer appears in the list. Set **Action** to **Install**, and select the correct **Version** if necessary.
+10. Select **Save Changes**.
 
-## Set auto start
+### Set PADS4 Viewer as the Home app
 
-1. Open the **Parameters** tab.
-2. Under **Application Settings**, select the PADS4 Viewer app from the **Home App** dropdown.
-3. Click **Save Changes**.
+Set PADS4 Viewer as the Home app, so that the player starts it automatically.
 
-## Add PADS4 Viewers to Orchestra
+1. In the configuration, open the **Parameters** tab.
+2. Under **Application Settings**, in **Home App**, select **PADS4 Viewer**.
+3. Select **Save Changes**.
 
-1. Navigate to **Devices** and select **Device list.**
-2. Click on **Add Device**.
-3. Enter the **Serial Number** of your device.
-4. Under **Configuration**, select the configuration you want to use.
-5. Once the Viewer comes on-line the player will install.
+### Add the player to Orchestrate
 
-## Configuring PADS4 Viewer
+1. Go to **Devices** > **Device list**.
+2. Select **Add Device**.
+3. Enter the serial number of the player.
+4. Under **Configuration**, select the configuration that you created.
+5. Wait until the player comes online. Orchestrate then installs PADS4 Viewer.
 
-After installing, the PADS4 Viewer opens. Enter your PADS4 server address in the format `https://<host>:<port>/<domain>/`
+## Connect the Viewer to the PADS4 Server
 
-- Optionally, enter a custom viewer name.
-- Click Start to connect
+After the installation, PADS4 Viewer opens on the player. The server location has this format: `https://<host>:<port>/<domain>/`.
 
-Wait for connection; a green LED and viewer name indicate success.
+1. Enter the PADS4 Server location.
+2. (Optional) Enter a name for the Viewer.
+3. Select **Start**.
 
-## Supported features and possibilities
+<Check>
+  The Viewer shows a green LED and the name of the Viewer. This means that the connection works.
+</Check>
+
+## Update PADS4 Viewer
+
+## Supported features and limitations
+
+### General
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Automatic Viewer updates | Yes |  |
+| HTTP and HTTPS | Yes |  |
+| Portrait mode | Yes |  |
+| Cluster Viewer | Yes |  |
+
+### Video and images
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Videos on one page | Yes | Maximum of 2 videos at the same time. Video formats: H264 and H265. |
+| Video streaming | Yes |  |
+| Image formats | Yes | PNG, JPG, BMP, and GIF. |
+
+### Content and data
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Text, scrolling text, tables, shapes, and interactive buttons | Yes | Lines and formatted text are also supported. |
+| Web element | Yes |  |
+| PowerPoint and PDF | Yes | PowerPoint must be installed on the PADS4 Server. |
+| Data providers, Viewer Variables, and rules | Yes | Includes more than 70 PADS4 data providers, Data Vault, and property bindings. Rules work on presentation, page, and element level. |
 
 ### Device management
 
-| Supported | Feature |
-| :-: | :-- |
-| ✅ | Remote Device Management via PADS4 CTRL Center |
-| ✅ | Reboot & Restart Viewer |
-| ❌ | Shutdown & Wake-on-LAN |
-| ✅ | Screenshot |
-| ✅ | Portrait Mode |
-
-### **Playback & content support**
-
-| Supported | Feature |
-| :-: | :-- |
-| ✅ | Up to 2 simultaneous videos |
-| ✅ | Streaming video |
-| ✅ | Image format: PNG, JPG, BMP, GIF |
-| ✅ | Video format: H264, H265 |
-| ✅ | Text, Line, Shape, Scrolling Text, Formatted Text, Tables, Interactive Buttons |
-| ✅ | Web Element |
-| ✅ | Data Providers and Data Vault – Supports 70\+ PADS4 data providers |
-| ✅ | Viewer Variables – Simplifies content management without modifying presentations |
-| ✅ | Property Bindings – Allows dynamic element properties using external data sources |
-| ✅ | Rules support on presentation, page and element |
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Remote management in PADS4 CTRL Center | Yes |  |
+| Restart Viewer | Yes |  |
+| Reboot device | Yes |  |
+| Shut down device | No |  |
+| Retrieve screenshots | Yes |  |
+| Retrieve logs | Yes |  |
+| Proof of play | Yes |  |

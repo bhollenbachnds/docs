@@ -1,47 +1,66 @@
 ---
-title: "DN84 (Android)"
-description: Install the PADS4 Web Launcher on the Giada DN84 Android 14 media player, including prerequisites, APK installation, autostart, and server pairing.
+title: "Giada DN84"
+description: "Install and configure PADS4 Viewer on the Giada DN84 Android 14 media player, including the APK installation, autostart, and connection to your PADS4 Server."
+sidebarTitle: "DN84"
 ---
 
-This manual provides step-by-step instructions for configuring the Giada DN84 device and installing the PADS4 Viewer. It covers initial setup, APK installation, autostart configuration, and viewer setup.
+The Giada DN84 is an Android 14 media player that you use as a screen. You install the PADS4 Web Launcher app on the player to show PADS4 presentations. This page explains how to install the app, set it as the Home app, and connect it to your PADS4 Server.
 
-**Compatible Devices:**
+## Before you begin
 
-- **DN84** (Android 14)
+### Supported devices
 
-**Minimum requirements**
+- Giada DN84 (Android 14)
 
-PADS4 Version Required: **2025.1**
+### Minimum requirements
 
-## **Prerequisites**
+| Requirement | Minimum |
+| --- | --- |
+| PADS4 Server | PADS4 2025.1 or later |
+| Android version | Android 14 |
 
-Download the latest PADS4WebLauncher.apk from your PADS4 server (e.g., https://\[your-server\]/\[domain\]/apps) or from [**here**](https://github.com/PADS4/PADS4-Viewer-Android/releases/tag/v1.3), and copy it to a USB stick.
+### Other prerequisites
 
-Ensure the PADS4 Server is set up and accessible.
+- A PADS4 Server that is installed and running.
+- A USB flash drive. You use it to install the app.
+- Network access from the player to the PADS4 Server.
 
-## **Installing PADS4 Viewer**
+## Install PADS4 Viewer
 
-1. Power on the screen and access the installed applications menu.
-2. Insert the USB stick into the screen.
-3. Select **FileBrowser**.
-4. Navigate to the USB drive and select **PADS4WebLauncher.apk**.
-5. Click **Continue** on the warning prompt.
-6. Click **Install** and wait for completion.
-7. Select **Done**, then close FileBrowser
+Install the `PADS4WebLauncher.apk` file from a USB flash drive. Get the latest version from one of these sources:
 
-## **Enabling auto-start**
+- Your PADS4 Server: `https://<your-server>/<domain>/apps`
+- GitHub: [Latest release](https://github.com/PADS4/PADS4-Viewer-Android)
 
-1. Go to **Settings** on the screen.
-2. Navigate to **Apps**.
-3. Select the **PADS4 Web Launcher**.
-4. Select **Home app** and select **PADS4 Web Launcher.**
-5. The PADS4 viewer will start.
+1. Copy `PADS4WebLauncher.apk` to a USB flash drive.
+2. Turn on the screen, and open the menu with the installed applications.
+3. Insert the USB flash drive into the player.
+4. Open the **FileBrowser** app.
+5. Go to the USB flash drive, and then select `PADS4WebLauncher.apk`.
+6. In the warning message, select **Continue**.
+7. Select **Install**, and wait until the installation is complete.
+8. Select **Done**, and then close **FileBrowser**.
 
-## **Configuring connection**
+## Connect the Viewer to the PADS4 Server
 
-1. Launch the PADS4 Web Launcher.
-2. Enter the **Server URL** in the format `<protocol>://<host>:<port>/<hostpath>/`
-3. Fill in the **ViewerName** as required.
-4. Click **Start** to connect.
+The server location has this format: `http(s)://<server>/<domain>`. Replace `<server>` with the IP address or host name of your PADS4 Server. Replace `<domain>` with your PADS4 domain. The default domain is `PADS4`.
 
-The PADS4 viewer is now connected and ready for use.
+1. Enter the PADS4 Server location.
+2. (Optional) Enter a name for the Viewer. If you leave the field empty, the PADS4 Server generates a name.
+3. Select **Start**.
+4. Set **PADS4 IIyama Touch** as the Home app, and then select **Always**.
+
+<Check>
+  The Viewer shows a green LED and the name of the Viewer. This means that the connection works.
+</Check>
+
+## Start the Viewer automatically
+
+Set PADS4 Web Launcher as the Home app, so that the player starts PADS4 Viewer automatically.
+
+1. Open **Settings**.
+2. Go to **Apps**.
+3. Select **PADS4 Web Launcher**.
+4. Select **Home app**, and then select **PADS4 Web Launcher**.
+
+PADS4 Viewer starts.

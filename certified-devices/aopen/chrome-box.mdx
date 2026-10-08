@@ -1,17 +1,84 @@
 ---
-title: "ChromeBox-series"
-description: "Install and configure the PADS4 Viewer on AOPEN ChromeBox-series digital signage players running ChromeOS using the standard ChromeOS procedure."
+title: "AOPEN ChromeBox Series"
+description: "Install and configure PADS4 Viewer on AOPEN ChromeBox Series digital signage players that run ChromeOS, including the install steps and the server connection."
+sidebarTitle: "ChromeBox Series"
 ---
 
-This guide explains how to install and configure PADS4 Viewer on AOPEN ChromeBox-Series devices running ChromeOS.
+{/*
+  Template: certified-devices-template-platform-managed.mdx
+  Suggested path: certified-devices/aopen/chromebox-series.mdx
+  Replaces: /certified-devices/aopen/chrome-box
+  The old page gives no installation steps, only a link to the ChromeOS guide.
+  */}
 
-## Compatibility
+AOPEN ChromeBox Series players run ChromeOS. You set up PADS4 Viewer with the standard ChromeOS procedure, and the player then loads it from your PADS4 Server. This page lists the supported devices and links to the installation steps.
 
-- Supported Operating System: ChromeOS
-- Supported Devices: AOPEN ChromeBox-Series computers
+## Before you begin
 
-## Installation instructions
+### Supported devices
 
-To install PADS4 Viewer on an AOPEN ChromeBox-Series device, follow the standard ChromeOS installation procedure.
+- AOPEN ChromeBox Series players
 
-For detailed, step-by-step guidance, see the “Installing PADS4 on ChromeOS” guide.
+### Minimum requirements
+
+| Requirement | Minimum |
+| --- | --- |
+| PADS4 Server | PADS4 Foundation 2024.1 or later |
+| Platform version | ChromeOS |
+
+### Other prerequisites
+
+- Network access from the player to the PADS4 Server.
+- Access to the management tool for the player. 
+
+## Install PADS4 Viewer
+
+Install PADS4 Viewer with the standard ChromeOS procedure. For the steps, see [ChromeOS and ChromeOS Flex](/certified-devices/chromeOS/ChromeOS).
+
+## Supported features and limitations
+
+### General
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Automatic Viewer updates | Yes |  |
+| Offline mode | No |  |
+| HTTP and HTTPS | Yes |  |
+| Portrait mode | Yes |  |
+| Cluster Viewer | Yes |  |
+
+### Video and images
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Videos on one page | Yes |  |
+| Video streaming | Yes |  |
+| 4K video | Yes |  |
+| Seamless video playback | Yes |  |
+| Video rotation, reflection, skew, and flip | Yes |  |
+| Image formats | Yes |  |
+
+### Content and data
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Text, scrolling text, tables, shapes, and interactive buttons | Yes |  |
+| Web element | Yes |  |
+| PowerPoint and PDF | Yes |  |
+| Data providers, Viewer Variables, and rules | Yes |  |
+
+### Device management
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Remote management in PADS4 CTRL Center | Yes |  |
+| Connection monitoring and alerts | Yes |  |
+| Restart Viewer | Yes |  |
+| Reboot device | Yes |  |
+| Shut down device | Yes |  |
+| Wake-on-LAN | n/a |  |
+| Turn off display | n/a |  |
+| Block remote control | n/a |  |
+| Retrieve screenshots | Yes |  |
+| Retrieve logs | Yes |  |
+| Proof of play | Yes |  |
