@@ -3,17 +3,6 @@ title: "Windows HTML5 Viewer"
 description: "Install and configure the PADS4 Windows HTML5 Viewer on Windows 10 build 1909 or newer PCs, with sync repeat support and Kiosk mode user switching."
 ---
 
-## Requirements
-
-- Windows 10 build 1909 or higher
-- PADS4 Server version 2025.1 or higher
-
-<Warning>
-  PADS4 Windows HTML viewer version 1.4.0 \+ PADS4 version 2025.2 is required to have the "Switch User" option in the Launcher settings, which enables easy user account switching when using Windows Kiosk mode.
-</Warning>
-
-## Overview
-
 The Windows HTML5 Viewer offers several advantages over the legacy Windows Viewer:
 
 - Supports sync repeat functionality
@@ -25,25 +14,35 @@ The Windows HTML5 Viewer offers several advantages over the legacy Windows Viewe
 - Enhanced security via Kiosk mode
 - Automatic updates from the PADS4 Server (no manual updates required)
 
-> Note: This viewer shares the same limitations as other HTML viewers. Refer to the [HTML5 Viewer Known Limitations](https://support.pads4.com/en/support/solutions/articles/204000036395-known-limitations-for-html5-viewer) for more information.
+<Note>
+  This viewer shares the same limitations as other HTML viewers. For more information, see [HTML5 Viewer Known Limitations](https://support.pads4.com/en/support/solutions/articles/204000036395-known-limitations-for-html5-viewer).
+</Note>
 
----
+## Before you begin
 
-## Download
+### Minimum requirements
 
-> Download the installation package from the provided source.\
-> [https://github.com/PADS4/PADS4-Viewer-Windows/releases](https://github.com/PADS4/PADS4-Viewer-Windows/releases)
+| Requirement | Minimum |
+| --- | --- |
+| Windows | Windows 10 build 1909 or later |
+| PADS4 Server | PADS4 2025.1 or later |
 
----
+<Warning>
+  The **Switch User** option in the Launcher settings requires PADS4 Windows HTML viewer version 1.4.0 and PADS4 version 2025.2. This option lets you switch user accounts when you use Windows Kiosk mode.
+</Warning>
 
-## Installation instructions
+### Other prerequisites
+
+- The installation package. Download it from [GitHub](https://github.com/PADS4/PADS4-Viewer-Windows/releases).
+
+## Install PADS4 Viewer
 
 1. Run `PADS4WindowsHTMLviewer.exe` as **Administrator**.
-2. Select the installation directory (or use the default).
-3. **Optional**: Uncheck _“Configure Windows to launch the PADS4 HTML5 Viewer in Kiosk Mode”_ if:
-   - You want to use it as a screensaver
-   - You want to run it under a regular Windows user
-4. Accept the License Agreement and click **Install**.
+2. Select the installation directory, or use the default.
+3. (Optional) Clear **Configure Windows to launch the PADS4 HTML5 Viewer in Kiosk Mode** if one of these applies:
+   - You want to use the Viewer as a screensaver.
+   - You want to run the Viewer under a regular Windows user.
+4. Accept the License Agreement, and then select **Install**.
 
 <img
   height="200"
@@ -55,55 +54,49 @@ The Windows HTML5 Viewer offers several advantages over the legacy Windows Viewe
   src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/installer-progress.png"
 />
 
-5. Once installation completes, click **Reboot** to restart the machine.
+5. When the installation is complete, select **Reboot** to restart the machine.
 
 <img
   height="200"
   src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/installation-succesful.png"
 />
 
----
+## Connect the Viewer to the PADS4 Server
 
-## Initial configuration
+After the reboot, the Viewer starts in Kiosk mode.
 
-After reboot, the viewer will launch in **Kiosk Mode**.
-
-1. On first launch, enter your **PADS4 Server Address** and **Viewer Name**.
+1. Enter your **PADS4 Server Address** and **Viewer Name**.
 
 <img
   height="200"
   src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/server-config.png"
 />
 
-2. Click **Start** to connect the viewer.
+2. Select **Start** to connect the Viewer.
 
 <img
   height="200"
   src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/viewer-started.png"
 />
 
-To access viewer settings or return to launcher settings, right-click anywhere on the screen.
+To open the Viewer settings or return to the Launcher settings, right-click anywhere on the screen.
 
 <img
   height="200"
   src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/viewer-settings.png"
 />
 
----
+## Switch to a regular user account
 
-## Switching to a regular user account
+You can exit Kiosk mode and switch to a standard Windows account in three ways:
 
-You can exit Kiosk Mode and switch to a standard Windows account in three ways:
+- In PADS4 2025.2 and later, open the **Viewer settings**, go to **Launcher settings**, and then select **Switch User** in the lower-right corner.
+- Use **Remote Desktop**, if configured, to log in with a different user account.
+- Hold the **Shift** key while you reboot the machine. The Windows login screen opens.
 
-- <u>Since PADS4 version </u>**<u>2025.2</u>** you can switch users with the "**Switch User**" option by entering the **Viewer settings** -\> **Launcher settings** -\> bottom right "**Switch User**".
-- Use **Remote Desktop** (if configured) to log in directly using a different user account.
-- Reboot the machine while holding the **Shift** key. This brings up the Windows login screen.
+## Use the Viewer as a screensaver
 
----
-
-## Using the Viewer as a screensaver
-
-1. During installation, ensure Kiosk Mode is **not** enabled.
+1. During the installation, make sure that Kiosk mode is **not** enabled.
 2. Open **Screensaver Settings** in Windows.
 3. Select **Pads4viewer** as the screensaver.
 
@@ -112,37 +105,31 @@ You can exit Kiosk Mode and switch to a standard Windows account in three ways:
   src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/screensaver.png"
 />
 
-4. Click **Apply** and **OK**.
+4. Select **Apply**, and then select **OK**.
 
-The viewer will now start based on the configured screensaver timer.
-
----
+The Viewer now starts based on the configured screensaver timer.
 
 ## Kiosk mode script reference
 
-To review the system's Kiosk mode configuration, refer to the PowerShell script:
+To review the Kiosk mode configuration of the system, see this PowerShell script:
 
 ```plaintext
 C:\Program Files\PADS4\Launcher Service\configure-kioskmode
 ```
 
----
+## Supported features and limitations
 
-## Supported features & limitations
-
-| Feature | Description |
-| --- | --- |
-| ✅ Automatic Software Updates | Updates automatically from the PADS4 Server |
-| ✅ Offline Mode | Runs presentations for up to 7 days without a network connection |
-| ✅ HTTP & HTTPS Support | Both protocols are supported |
-| ✅ Max 4 Videos per Page | Up to 4 videos can be shown on a single page |
-| ❌ Video Rotation / Seamless / Flip | These video enhancements are not supported |
-| ✅ Streaming Support | Streaming via HTTP & HTTPS |
-| ✅ Cluster Viewer Mode | Supported |
-| ✅ Interactive Elements | Buttons, text, scrolling text, image, tables |
-| ✅ PowerPoint & PDF | PowerPoint requires installation on PADS4 Server |
-| ✅ Remote Device Management | Managed through PADS4 Agent |
-| ✅ Wake-on-LAN | Devices can be remotely powered on |
-| ❌ Turn Off Display | Not supported |
-
----
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Automatic Viewer updates | Yes | Updates automatically from the PADS4 Server. |
+| Offline mode | Yes | Runs presentations for up to 7 days without a network connection. |
+| HTTP and HTTPS | Yes |  |
+| Videos on one page | Yes | Maximum of 4 videos on one page. |
+| Video rotation, seamless videos, and flip | No |  |
+| Video streaming | Yes | Streaming over HTTP and HTTPS. |
+| Cluster Viewer | Yes |  |
+| Interactive elements | Yes | Buttons, text, scrolling text, images, and tables. |
+| PowerPoint and PDF | Yes | PowerPoint must be installed on the PADS4 Server. |
+| Remote device management | Yes | Managed with PADS4 Agent. |
+| Wake-on-LAN | Yes | You can turn on devices remotely. |
+| Turn off display | No |  |
