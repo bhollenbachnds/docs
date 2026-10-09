@@ -1,0 +1,150 @@
+---
+- title: NDS.Services.Process
+- description: Référence API pour NDS.Services.Process, qui lance et suit les
+    processus en arrière-plan dans PADS4, y compris leur statut et leur sortie.
+---
+
+## Aperçu
+
+Gère l'exécution des processus en arrière-plan dans PADS4. Suit les processus en cours d'exécution, leur statut et leur sortie. Utilisé par d'autres services pour lancer et surveiller des opérations de longue durée.
+
+| Champ               | Valeur                                                                   |
+| ------------------- | ------------------------------------------------------------------------ |
+| Swagger UI          | `https://<your-server>/rdx/NDS.Services.Process/swagger/index.html`      |
+| OpenAPI spec        | `https://<your-server>/rdx/NDS.Services.Process/swagger/v1/swagger.json` |
+| URL de base         | `https://<your-server>/rdx/NDS.Services.Process`                         |
+| Total des endpoints | 19                                                                       |
+
+***
+
+## Authentification
+
+Tous les endpoints utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des endpoints
+
+| Méthode | Chemin                                        | Description               |
+| ------- | --------------------------------------------- | ------------------------- |
+| `POST`  | `/api/v1/process`                             | Schedule Task             |
+| `GET`   | `/api/v1/process`                             | Get Processes             |
+| `POST`  | `/api/v1/process/getResult`                   | Get Scheduled Task Result |
+| `POST`  | `/api/v1/public-process`                      | Schedule Task             |
+| `GET`   | `/api/v1/public-process`                      | Get Processes             |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Get Toggles               |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Get Config Section        |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Get Configuration         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Get Circuit Breakers      |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Reset Circuit Breaker     |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker   |
+| `POST`  | `/api/v1/diagnostics/events`                  | Get Events                |
+| `GET`   | `/api/v1/health`                              | Get                       |
+| `GET`   | `/api/v1/health/clean`                        | Get Clean                 |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Requeue Error Messages    |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purge Error Messages      |
+| `GET`   | `/migration`                                  | Get Migrations            |
+| `POST`  | `/migration`                                  | Execute Migration         |
+| `GET`   | `/version`                                    | Get                       |
+
+***
+
+## Exemples de requêtes & réponses
+
+### POST `/api/v1/process`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Process/api/v1/process' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/process`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Process/api/v1/process'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/process/getResult`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Process/api/v1/process/getResult' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/public-process`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Process/api/v1/public-process' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/public-process`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Process/api/v1/public-process'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***

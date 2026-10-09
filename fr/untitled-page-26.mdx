@@ -1,0 +1,145 @@
+---
+- title: NDS.Services.Globalization
+- description: Référence API pour NDS.Services.Globalization, qui fournit les
+    fuseaux horaires, cultures, formats de date et d'heure, et ressources
+    multilingues de PADS4.
+---
+
+## Aperçu
+
+Fournit la prise en charge de la localisation pour PADS4 : fuseaux horaires, cultures, formats de date/heure et gestion des ressources multilingues. Utilisé par d'autres services et l'interface utilisateur pour gérer le formatage régional.
+
+| Champ               | Valeur                                                                         |
+| ------------------- | ------------------------------------------------------------------------------ |
+| Swagger UI          | `https://<your-server>/rdx/NDS.Services.Globalization/swagger/index.html`      |
+| OpenAPI spec        | `https://<your-server>/rdx/NDS.Services.Globalization/swagger/v1/swagger.json` |
+| Base URL            | `https://<your-server>/rdx/NDS.Services.Globalization`                         |
+| Total des endpoints | 19                                                                             |
+
+***
+
+## Authentification
+
+Tous les endpoints utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des endpoints
+
+| Méthode | Chemin                                        | Description             |
+| ------- | --------------------------------------------- | ----------------------- |
+| `GET`   | `/api/v1/Globalization/SupportedLanguages`    | Get Supported Languages |
+| `GET`   | `/api/v1/Globalization/Cultures`              | Get All Cultures        |
+| `GET`   | `/api/v1/Globalization/TimeZones`             | Get Time Zones          |
+| `GET`   | `/api/v1/Globalization/ServerCulture`         | Get Server Culture      |
+| `GET`   | `/api/v1/Globalization/ServerTimeZone`        | Get Server Time Zone    |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Get Toggles             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Get Config Section      |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Get Configuration       |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Get Circuit Breakers    |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Reset Circuit Breaker   |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST`  | `/api/v1/diagnostics/events`                  | Get Events              |
+| `GET`   | `/api/v1/health`                              | Get                     |
+| `GET`   | `/api/v1/health/clean`                        | Get Clean               |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Requeue Error Messages  |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purge Error Messages    |
+| `GET`   | `/migration`                                  | Get Migrations          |
+| `POST`  | `/migration`                                  | Execute Migration       |
+| `GET`   | `/version`                                    | Get                     |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/Globalization/SupportedLanguages`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Globalization/api/v1/Globalization/SupportedLanguages'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Globalization/Cultures`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Globalization/api/v1/Globalization/Cultures'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Globalization/TimeZones`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Globalization/api/v1/Globalization/TimeZones'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Globalization/ServerCulture`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Globalization/api/v1/Globalization/ServerCulture'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Globalization/ServerTimeZone`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Globalization/api/v1/Globalization/ServerTimeZone'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***

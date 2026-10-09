@@ -1,117 +1,116 @@
-## Exigences
+---
+- title: Windows HTML5 Viewer
+- description: Installez et configurez le PADS4 Windows HTML5 Viewer sur des PC
+    Windows 10 build 1909 ou plus récents, avec prise en charge de la répétition
+    synchronisée et du changement d'utilisateur en mode Kiosk.
+---
 
-* Windows 10 build 1909 ou supérieur
-* PADS4 Server version 2025.1 ou supérieur
-
-## Aperçu
-
-Le Windows HTML5 Viewer offre plusieurs avantages par rapport au Windows Viewer classique :
+Le Windows HTML5 Viewer offre plusieurs avantages par rapport au Windows Viewer hérité :
 
 * Prend en charge la fonctionnalité de répétition synchronisée
 * Permet les changements d'orientation sans modifier les paramètres Windows
-* Fournit une expérience cohérente sur tous les visualiseurs HTML
+* Offre une expérience cohérente sur tous les viewers HTML
 * Peut être utilisé comme économiseur d'écran
-* Support plus facile pour les nouvelles fonctionnalités
+* Prise en charge facilitée des nouvelles fonctionnalités
 * Performances améliorées
-* Sécurité renforcée via le mode Kiosque
-* Mises à jour automatiques depuis le PADS4 Server (aucune mise à jour manuelle requise)
+* Sécurité renforcée via le mode Kiosk
+* Mises à jour automatiques depuis le serveur PADS4 (aucune mise à jour manuelle requise)
 
-> Note: This viewer shares the same limitations as other HTML viewers. Refer to the [Limitations connues du HTML5 Viewer](https://support.pads4.com/hc/en-us/articles/207590696-Known-limitations-for-HTML5-Viewer) pour plus d'informations.
+<Note>
+  Ce viewer partage les mêmes limitations que les autres viewers HTML. Pour plus d'informations, voir [Limitations connues du HTML5 Viewer](https://support.pads4.com/en/support/solutions/articles/204000036395-known-limitations-for-html5-viewer).
+</Note>
 
-***
+## Avant de commencer
 
-## Téléchargement
+### Configuration minimale requise
 
-> Téléchargez le package d'installation depuis la source fournie.\
-> [https://github.com/PADS4/PADS4-Viewer-Windows/releases](https://github.com/PADS4/PADS4-Viewer-Windows/releases)
+| Exigence     | Minimum                                     |
+| ------------ | ------------------------------------------- |
+| Windows      | Windows 10 build 1909 ou version ultérieure |
+| PADS4 Server | PADS4 2025.1 ou version ultérieure          |
 
-***
+<Warning>
+  L'**Switch User** option dans les paramètres du Launcher nécessite PADS4 Windows HTML viewer version 1.4.0 et PADS4 version 2025.2. Cette option vous permet de changer de compte utilisateur lorsque vous utilisez le mode Kiosk de Windows.
+</Warning>
 
-## Instructions d'installation
+### Autres prérequis
 
-1. Exécutez `PADS4WindowsHTMLviewer.exe` en tant qu'**Administrator**.
-2. Choisissez le répertoire d'installation (ou utilisez celui par défaut).
-3. **Optionnel** : Décochez *"Configure Windows to launch the PADS4 HTML5 Viewer in Kiosk Mode"* if:
-   * Vous voulez l'utiliser comme économiseur d'écran
-   * Vous voulez l'exécuter sous un utilisateur Windows normal
-4. Acceptez le contrat de licence et cliquez sur **Install**.
+* Le package d'installation. Téléchargez-le depuis [GitHub](https://github.com/PADS4/PADS4-Viewer-Windows/releases).
+
+## Installer PADS4 Viewer
+
+1. Exécuter `PADS4WindowsHTMLviewer.exe` en tant que **Administrateur**.
+2. Sélectionnez le répertoire d'installation ou utilisez celui par défaut.
+3. (Facultatif) Décochez **Configure Windows to launch the PADS4 HTML5 Viewer in Kiosk Mode** si l'une de ces conditions s'applique :
+   * Vous souhaitez utiliser le Viewer comme économiseur d'écran.
+   * Vous souhaitez exécuter le Viewer sous un utilisateur Windows standard.
+4. Acceptez le Contrat de licence, puis sélectionnez **Install**.
 
 <img height="200" src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/installer.png" />
 
 <img height="200" src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/installer-progress.png" />
 
-5. Une fois l'installation terminée, cliquez sur **Reboot** pour redémarrer la machine.
+5. Une fois l'installation terminée, sélectionnez **Reboot** pour redémarrer la machine.
 
 <img height="200" src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/installation-succesful.png" />
 
-***
+## Connecter le Viewer au PADS4 Server
 
-## Configuration initiale
+Après le redémarrage, le Viewer démarre en mode Kiosk.
 
-Après le redémarrage, le visualiseur se lancera en **Kiosk Mode**.
-
-1. Au premier lancement, entrez votre **PADS4 Server Address** et **Viewer Name**.
+1. Entrez votre **PADS4 Server Address** et **Viewer Name**.
 
 <img height="200" src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/server-config.png" />
 
-2. Cliquez sur **Start** pour connecter le visualiseur.
+2. Sélectionnez **Start** pour connecter le Viewer.
 
 <img height="200" src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/viewer-started.png" />
 
-Pour accéder aux paramètres du visualiseur ou revenir aux paramètres du lanceur, faites un clic droit n'importe où sur l'écran.
+Pour ouvrir les paramètres du Viewer ou revenir aux paramètres du Launcher, faites un clic droit n'importe où sur l'écran.
 
 <img height="200" src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/viewer-settings.png" />
 
-***
-
 ## Passer à un compte utilisateur standard
 
-Vous pouvez quitter le mode Kiosque et passer à un compte Windows standard de deux façons :
+Vous pouvez quitter le mode Kiosk et passer à un compte Windows standard de trois façons :
 
-* **Méthode 1** : Redémarrez la machine tout en maintenant la touche **Shift** enfoncée. Cela affiche l'écran de connexion Windows.
-* **Méthode 2** : Utilisez **Remote Desktop** (si configuré) pour vous connecter directement avec un compte utilisateur différent.
+* Dans PADS4 2025.2 et versions ultérieures, ouvrez les **Viewer settings**, accédez à **Launcher settings**, puis sélectionnez **Switch User** dans le coin inférieur droit.
+* Utilisez **Remote Desktop**, si configuré, pour vous connecter avec un autre compte utilisateur.
+* Maintenez la touche **Shift** enfoncée pendant le redémarrage de la machine. L'écran de connexion Windows s'ouvre.
 
-***
+## Utiliser le Viewer comme économiseur d'écran
 
-## Utiliser le visualiseur comme économiseur d'écran
-
-1. Pendant l'installation, assurez-vous que le mode Kiosque est **not** activé.
+1. Lors de l'installation, assurez-vous que le mode Kiosk est **désactivé**.
 2. Ouvrez **Screensaver Settings** dans Windows.
 3. Sélectionnez **Pads4viewer** comme économiseur d'écran.
 
 <img height="200" src="/images/install-pads4/install-pads4-viewer/intall-pads4-html5-windows-viewer/screensaver.png" />
 
-4. Cliquez sur **Apply** et **OK**.
+4. Sélectionnez **Apply**, puis sélectionnez **OK**.
 
-Le visualiseur démarrera maintenant en fonction de la minuterie configurée pour l'économiseur d'écran.
+Le Viewer démarre désormais en fonction du minuteur d'économiseur d'écran configuré.
 
-***
+## Référence du script du mode Kiosk
 
-## Référence du script du mode Kiosque
-
-Pour examiner la configuration du mode Kiosque du système, consultez le script PowerShell :
+Pour examiner la configuration du mode Kiosk du système, consultez ce script PowerShell :
 
 ```plaintext
 C:\Program Files\PADS4\Launcher Service\configure-kioskmode
 ```
 
-***
-
 ## Fonctionnalités prises en charge et limitations
 
-| Fonctionnalité                          | Description                                                     |
-| --------------------------------------- | --------------------------------------------------------------- |
-| ✅ Mises à jour automatiques du logiciel | Mises à jour automatiques depuis le PADS4 Server                |
-| ✅ Mode hors ligne                       | Exécute des présentations jusqu'à 7 jours sans connexion réseau |
-| ✅ Support HTTP & HTTPS                  | Les deux protocoles sont pris en charge                         |
-| ✅ Maximum 4 vidéos par page             | Jusqu'à 4 vidéos peuvent être affichées sur une seule page      |
-| ❌ Rotation vidéo / Seamless / Flip      | Ces améliorations vidéo ne sont pas prises en charge            |
-| ✅ Support de streaming                  | Streaming via HTTP & HTTPS                                      |
-| ✅ Mode Cluster Viewer                   | Pris en charge                                                  |
-| ✅ Éléments interactifs                  | Boutons, texte, texte défilant, image, tableaux                 |
-| ✅ PowerPoint & PDF                      | PowerPoint nécessite une installation sur le PADS4 Server       |
-| ✅ Gestion des appareils à distance      | Géré via PADS4 Agent                                            |
-| ✅ Wake-on-LAN                           | Les appareils peuvent être allumés à distance                   |
-| ❌ Éteindre l'écran                      | Non pris en charge                                              |
-
-***
+| Fonctionnalité                                           | Support | Notes                                                            |
+| -------------------------------------------------------- | ------- | ---------------------------------------------------------------- |
+| Mises à jour automatiques du Viewer                      | Oui     | Se met à jour automatiquement depuis le PADS4 Server.            |
+| Mode hors ligne                                          | Oui     | Exécute des présentations jusqu'à 7 jours sans connexion réseau. |
+| HTTP et HTTPS                                            | Oui     |                                                                  |
+| Vidéos sur une page                                      | Oui     | Maximum de 4 vidéos sur une page.                                |
+| Rotation vidéo, vidéos sans interruption et retournement | Non     |                                                                  |
+| Streaming vidéo                                          | Oui     | Streaming via HTTP et HTTPS.                                     |
+| Cluster Viewer                                           | Oui     |                                                                  |
+| Éléments interactifs                                     | Oui     | Boutons, texte, texte défilant, images et tableaux.              |
+| PowerPoint et PDF                                        | Oui     | PowerPoint doit être installé sur le PADS4 Server.               |
+| Gestion des appareils à distance                         | Oui     | Géré avec PADS4 Agent.                                           |
+| Wake-on-LAN                                              | Oui     | Vous pouvez allumer des appareils à distance.                    |
+| Éteindre l'écran                                         | Non     |                                                                  |

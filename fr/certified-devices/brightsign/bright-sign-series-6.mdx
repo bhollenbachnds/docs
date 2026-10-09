@@ -1,0 +1,148 @@
+---
+- title: BrightSign Series 6
+- description: Installez et configurez PADS4 Viewer sur les lecteurs BrightSign
+    Series 6 (HD6 et XD6), y compris les fichiers du lecteur, la carte microSD
+    et la connexion au serveur.
+- sidebarTitle: Series 6
+---
+
+{/*
+  Template: certified-devices-template-player-image.mdx
+  Suggested path: certified-devices/brightsign/series-6.mdx
+  Replaces: /certified-devices/brightsign/bright-sign-series-6
+  */}
+
+Les lecteurs BrightSign Series 6 exécutent le PADS4 Viewer depuis une carte microSD. Vous générez les fichiers du lecteur sur votre PADS4 Server, puis vous les copiez sur la carte. Cette page explique comment générer les fichiers, configurer le lecteur et le connecter à votre PADS4 Server.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* BrightSign HD6
+* BrightSign XD6
+
+### Configuration minimale requise
+
+| Exigence                                      | Minimum                                       |
+| --------------------------------------------- | --------------------------------------------- |
+| PADS4 Server                                  | PADS4 Foundation 2023.2 ou version ultérieure |
+| Firmware ou système d'exploitation du lecteur | BrightSign OS 9.1.92.2 ou version ultérieure  |
+| Stockage                                      | Carte microSD                                 |
+
+Le lecteur prend en charge uniquement une carte microSD. Il ne prend pas en charge le stockage USB.
+
+### Autres prérequis
+
+* Un PADS4 Server installé et en cours d'exécution. Terminez l'installation du serveur avant de configurer le lecteur.
+* Un ordinateur avec un lecteur de carte microSD et un navigateur web.
+* Accès réseau du lecteur au PADS4 Server.
+
+### Mettre à jour le BrightSign OS
+
+Si le lecteur exécute une version plus ancienne du BrightSign OS, mettez-le à jour avec l'un de ces outils :
+
+* **BNS.cloud**, une plateforme cloud pour les mises à jour de firmware à distance.
+* **BrightAuthor:connected**, qui met à jour le firmware depuis votre PC.
+
+## Préparer les fichiers du lecteur
+
+Vous générez les fichiers du PADS4 Viewer avec le PADS4 BrightSign Player Wizard sur votre PADS4 Server.
+
+1. Sur votre ordinateur, ouvrez un navigateur web.
+2. Accédez à `https://<your-server>/<domain>/Apps/Brightsign`. Remplacez `<your-server>` par le nom DNS ou l'adresse IP de votre PADS4 Server. Remplacez `<domain>` par votre nom de domaine PADS4.
+3. Appuyez sur **Entrée** pour démarrer l'assistant.
+4. À l'étape 1, **Configurer le PADS4 Server**, vérifiez l'URL du serveur. L'assistant la renseigne à partir de l'adresse dans votre navigateur. Sélectionnez **Suivant**.
+5. À l'étape 2, **Télécharger les fichiers du lecteur BrightSign**, sélectionnez **Télécharger**. Vous obtenez un fichier ZIP avec l'application du lecteur BrightSign.
+6. Une fois le téléchargement terminé, sélectionnez **Suivant**.
+
+Par exemple : `https://example.pads365.com/PADS4/Apps/Brightsign`
+
+## Écrire les fichiers sur le lecteur
+
+<Warning>
+  La carte microSD doit être vide avant de copier les fichiers dessus.
+</Warning>
+
+1. Extrayez le fichier ZIP téléchargé.
+2. Insérez une carte microSD vide dans le lecteur de carte de votre ordinateur.
+3. Copiez les fichiers extraits sur la carte microSD.
+4. Retirez la carte microSD de votre ordinateur.
+5. Insérez la carte microSD dans le slot microSD du lecteur.
+
+## Configurer le lecteur
+
+1. Si le lecteur est déjà allumé, attendez qu'il détecte la carte. Le PADS4 Viewer démarre automatiquement.
+2. Si le lecteur est éteint, allumez-le. Le PADS4 Viewer démarre automatiquement.
+3. Si le PADS4 Viewer ne démarre pas, appuyez sur le bouton **Réinitialiser** du lecteur. Le PADS4 Viewer démarre après le redémarrage.
+
+## Connecter le Viewer au PADS4 Server
+
+Les fichiers du lecteur contiennent déjà l'emplacement du serveur que vous avez vérifié dans l'assistant. Le Viewer se connecte au démarrage.
+
+<Check>
+  Le Viewer affiche un nom par défaut, par exemple `BrightSign0002`.
+</Check>
+
+Pour modifier le nom du Viewer :
+
+1. Dans PADS4 CTRL Center, accédez à Viewers.
+2. Modifiez le **Nom du Viewer**.
+
+## Mettre à jour le PADS4 Viewer
+
+Le Viewer se met à jour automatiquement.
+
+## Fonctionnalités prises en charge et limitations
+
+### Général
+
+| Fonctionnalité                         | Support | Remarques                                                                                                  |
+| -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Mises à jour automatiques du Viewer    | Oui     | Le Viewer se met à jour automatiquement.                                                                   |
+| Mode hors ligne                        | Oui     | Le lecteur continue de lire les présentations planifiées pendant 7 jours lorsqu'il est hors ligne.         |
+| HTTP et HTTPS                          | Oui     |                                                                                                            |
+| Mode portrait                          | Oui     |                                                                                                            |
+| Cluster Viewer                         | Oui     |                                                                                                            |
+| Stockage USB                           | Non     | Le lecteur prend en charge uniquement une carte microSD.                                                   |
+| Vérification de l'intégrité du contenu | Oui     | La PADS4 Content Library vérifie chaque fichier avec une somme de contrôle MD5 lors de la synchronisation. |
+
+### Vidéo et images
+
+| Fonctionnalité       | Support | Remarques                                            |
+| -------------------- | ------- | ---------------------------------------------------- |
+| Vidéos sur une page  | Oui     | La vidéo est prise en charge dans les présentations. |
+| Streaming vidéo      | Oui     |                                                      |
+| Vidéo 4K             | Oui     |                                                      |
+| Lecture vidéo fluide | Oui     |                                                      |
+| Formats d'image      | Oui     |                                                      |
+
+### Contenu et données
+
+| Fonctionnalité                                                 | Support | Remarques |
+| -------------------------------------------------------------- | ------- | --------- |
+| Texte, texte défilant, tableaux, formes et boutons interactifs | Oui     |           |
+| Élément web                                                    | Oui     |           |
+| PowerPoint et PDF                                              | Oui     |           |
+| Fournisseurs de données, variables Viewer et règles            | Oui     |           |
+
+### Gestion des appareils
+
+| Fonctionnalité                            | Support | Remarques                                                                                                                                 |
+| ----------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Gestion à distance dans PADS4 CTRL Center | Oui     | Inclut la modification des paramètres du Viewer.                                                                                          |
+| Surveillance des connexions et alertes    | Oui     |                                                                                                                                           |
+| Redémarrer le Viewer                      | Oui     |                                                                                                                                           |
+| Redémarrer l'appareil                     | Non     |                                                                                                                                           |
+| Éteindre l'appareil                       | Non     |                                                                                                                                           |
+| Wake-on-LAN                               | Non     |                                                                                                                                           |
+| Éteindre l'écran                          | n/a     |                                                                                                                                           |
+| Bloquer la télécommande                   | n/a     |                                                                                                                                           |
+| Récupérer les captures d'écran            | Oui     |                                                                                                                                           |
+| Récupérer les journaux                    | Oui     |                                                                                                                                           |
+| Preuve de diffusion                       | Oui     | Le lecteur stocke jusqu'à 50 000 enregistrements. Lorsque le lecteur atteint la limite, il supprime les enregistrements les plus anciens. |
+
+## Dépannage
+
+| Problème                                                           | Solution                                                           |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| PADS4 Viewer ne démarre pas après l'insertion de la carte microSD. | Appuyez sur le **Reset** bouton sur le lecteur pour le redémarrer. |
