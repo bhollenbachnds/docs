@@ -1,271 +1,168 @@
 ---
-title: "DN73 (Android)"
-description: Set up the PADS4 Viewer on the Giada DN73 Android 10 signage player, covering factory reset, APK install, server connection, and playback limits.
+title: "Giada DN73"
+description: "Install and configure PADS4 Viewer on the Giada DN73 Android signage player, including the factory reset, APK installation, and server connection."
+sidebarTitle: "DN73"
 ---
 
-This manual provides step-by-step instructions for configuring the Giada DN73 device and installing the PADS4 Viewer. It covers initial setup, APK installation, autostart configuration, and viewer setup.
+{/*
+  Template: certified-devices-template-android.mdx
+  Suggested path: certified-devices/giada/dn73.mdx
+  Replaces: /certified-devices/giada/D73-and-D74
+  The old page also covers the DN74. Compare it with dn74.mdx.
+  */}
 
-**Compatible Devices:**
+The Giada DN73 is a signage player that runs Android 7.1 and Android 10. You install the PADS4Giada app on the player to show PADS4 presentations. This page explains how to prepare the player, install the app, and connect it to your PADS4 Server.
 
-- **DN73 (Android 10)**
+## Before you begin
 
-**Minimum requirements**
+### Supported devices
 
-PADS4 Version Required: **2022.1**
+- Giada DN73 (Android 10)
+- Giada DN73 (Android 7.1)
 
-## **First-time use**
+### Minimum requirements
 
-During installation, you will need to **configure the PADS4 Server location**. It is recommended to **complete the PADS4 Server installation first** before proceeding with device setup.
+| Requirement | Minimum |
+| --- | --- |
+| PADS4 Server | PADS4 2022.1 or later |
+| PADS4Giada app | PADS4Giada 1.0 |
+| Android version | Android 10 <br />Android 7.1 |
 
-<Note>
-  The minimum **PADS4 Server version** required for the **PADS4Giada app** is **PADS4 Foundation 2022.1**.\
-  The minimum **PADS4Giada version** supporting **DN73 and DN74** is **PADS4Giada 1.0**.
-</Note>
+### Other prerequisites
 
-### **Resetting the device**
+- A PADS4 Server that is installed and running.
+- A USB flash drive. You use it to install the app.
+- Network access from the player to the PADS4 Server.
 
-If the device was previously used, a **factory reset** is recommended to **clear storage** and **prevent interference** with the **PADS4 Viewer software**.
-
-<Steps>
-  <Step title="Step One">
-    Open **Android Settings**.
-  </Step>
-  <Step title="Step Two">
-    Select **Backup & Reset**.
-  </Step>
-  <Step title="Step Three">
-    Select **Factory Data Reset**.
-  </Step>
-  <Step title="Step Four">
-    Click **Reset Tablet**.
-  </Step>
-  <Step title="Step Five">
-    Confirm by clicking **Erase Everything**.
-  </Step>
-</Steps>
-
-### **Enabling default superuser access**
-
-This step is **required** to enable **automatic updates** of the **PADS4Giada app**. If **Superuser Access** is not granted, **manual interaction** will be required for updates.
-
-<Steps>
-  <Step title="Step One">
-    Open the **SuperSU app**.
-  </Step>
-  <Step title="Step Two">
-    Go to **Settings**.
-  </Step>
-  <Step title="Step Three">
-    Click **Default Access**.
-  </Step>
-  <Step title="Step Four">
-    Select **Grant** in the dialog that appears.
-  </Step>
-  <Step title="Step Five">
-    Exit the app.
-  </Step>
-</Steps>
-
-_Optional:_ To reset **screen orientation**, navigate to:\
-➡ **Android Settings** → **Display** → **HDMI** → **Screen Rotation** → **Select "0"**.
-
-## **Installing PADS4 Viewer**
-
-Follow the steps below to **install and configure PADS4 Viewer** on **Giada DN73 and DN74**.
-
-### **Installing PADS4Giada from USB stick**
-
-The **PADS4Giada.apk** is available on the **PADS4 Server** in the following directory:
-
-```text
-C:\Program Files\PADS4\Foundation\Apps
-```
-
-Alternatively, download the **latest version** from [**here**](https://github.com/PADS4/PADS4-Viewer-Giada/releases/latest) and place it in the **PADS4 Server apps directory** to ensure the correct version is installed.
-
-#### **Installation steps**
-
-<Steps>
-  <Step title="Step One">
-    Copy the **PADS4Giada.apk** to a **USB stick**.
-  </Step>
-  <Step title="Step Two">
-    Insert the **USB stick** into the **Giada DN73/DN74 device**.
-  </Step>
-  <Step title="Step Three">
-    Open the **File Explorer app** on the device.
-  </Step>
-  <Step title="Step Four">
-    Select **USB Storage**.
-  </Step>
-  <Step title="Step Five">
-    Click on the **APK file** to install.
-  </Step>
-  <Step title="Step Six">
-    If prompted with a **security warning**, click **Settings**.
-  </Step>
-  <Step title="Step Seven">
-    Enable **Unknown Sources** and confirm by clicking **OK**.
-  </Step>
-  <Step title="Step Eight">
-    Return to **File Explorer** and click the **APK file** again.
-  </Step>
-  <Step title="Step Nine">
-    Click **Install** in the confirmation dialog.
-  </Step>
-  <Step title="Step Ten">
-    After installation, click **Open** to start the **PADS4Giada app**.
-  </Step>
-</Steps>
-
-### **Validating date & time configuration**
-
-Ensure the **date and time** are set correctly to avoid **certificate errors** or **connection issues**.
-
-<Steps>
-  <Step title="Step One">
-    Open the **PADS4Giada app**.
-  </Step>
-  <Step title="Step Two">
-    Click **System Settings** to open **Android Settings**.
-  </Step>
-  <Step title="Step Three">
-    Navigate to **Date & Time**.
-  </Step>
-  <Step title="Step Four">
-    Configure the **correct date and time**.
-  </Step>
-  <Step title="Step Five - *Optional*">
-    Enable **Auto Sync Date & Time** if supported by the network.
-  </Step>
-</Steps>
-
-### **Connecting to PADS4 Server**
-
-**PADS4 Server Address Format:**
-
-```text
-protocol://host:port/hostpath/  
-```
-
-- **Protocol:** `HTTP` or `HTTPS` (depends on SSL certificate).
-- **Host:** DNS name or **IP address** of **PADS4 Server**.
-- **Port:** _(Optional - specify only if using non-default ports)._
-- **Host Path:** Configured in **System Management** _`(default: PADS4)`_.
-
-#### **Connection steps**
-
-<Steps>
-  <Step title="Step One">
-    Enter the **PADS4 Server Location**.
-  </Step>
-  <Step title="Step Two - *Optional*">
-    Specify a **Viewer Name** (if left blank, PADS4 will generate one).
-  </Step>
-  <Step title="Step Three">
-    Press **Start**.
-  </Step>
-  <Step title="Step Four">
-    Grant **permission to store content** when prompted.
-  </Step>
-  <Step title="Step Five">
-    If **Android System WebView** is outdated, it will be updated automatically.
-  </Step>
-  <Step title="Step Six">
-    The **PADS4 Viewer** will be **downloaded and installed**.
-  </Step>
-  <Step title="Step Seven">
-    If prompted, set **PADS4Giada as the Home App** and press **Always**.
-  </Step>
-</Steps>
-
-### **Adjusting PADS4 Viewer settings**
-
-To access **Viewer Settings**:
-
-- **Press and hold the left mouse button** or **touch the screen for 3 seconds**.
-
-### **Updating PADS4 Viewer & PADS4Giada app**
-
-The **PADS4 Viewer & PADS4Giada app** will **automatically update** when the **PADS4 Server** is updated.
-
-### **Accessing Android menu**
-
-If you access the **Android Menu** while **PADS4Giada** is running, the device will **reboot in 30 seconds** (as the **Viewer Monitor Service** detects inactivity).
-
-To prevent reboot, **stop the PADS4Giada app within 30 seconds**.
-
-## **Supported features & limitations**
-
-Below are the supported features and limitations for **PADS4 Viewer on Giada DN73 & DN74 (Android 7.1).**
-
-### **General device capabilities**
-
-| Feature | Description |
-| :-: | --- |
-| ✅ | **Supported Display Models** – Compatible with DN73 & DN74 devices. |
-| ✅ | **Portrait Mode** – Supported. |
-| ❌ | **Remote Control Blocking** – Only blocks buttons on the device and touch screen (not full remote control). |
-| ✅ | **Supports HTTP & HTTPS** |
-
-### **Playback & content support**
-
-| Feature | Description |  |
-| :-: | --- | --- |
-| ✅ | **Maximum Videos Supported** – Up to **2 simultaneous videos**. |  |
-| ❌ | **Streaming Video** – Not supported. |  |
-| ✅ | **Image Formats** – JPG, PNG, BMP, GIF |  |
-| ✅ | **Text, Line, Shape, Scrolling Text, Formatted Text, Tables, Interactive Buttons** |  |
-| ❌ | **Flash Element** – Not supported. |  |
-| ✅ | **Web Element** – Interactive **Address Bar not supported**. |  |
-| ✅ | **Colors** – Supported (except for **texture and pattern colors**). |  |
-
-| Feature | Description |
-| :-: | --- |
-| ✅ | **Data Providers** – Supports **70\+ PADS4 data providers** for retrieving and integrating real-time data. |
-| ✅ | **Viewer Variables** – Simplifies content management without modifying presentations. |
-| ✅ | **Property Bindings** – Allows dynamic element properties using external data sources. |
-
-### **Rules & automation**
-
-| Feature | Description |
-| :-: | --- |
-| ✅ | **Presentation Rules** – Supported. |
-| ✅ | **Page Rules** – Supported. |
-| ✅ | **Element Rules** – Supported. |
-
-### **Device management**
-
-| Feature | Description |
-| :-: | --- |
-| ✅ | **Remote Device Management** – Managed via **PADS4 CTRL Center & PADS4 Agent**. |
-| ✅ | **Connection State Monitoring & Alerts** – Sends alerts for network failures. |
-| ✅ | **Reboot & Restart Viewer** – Supported. |
-| ❌ | **Shutdown & Wake-on-LAN** – Not supported. |
-| ✅ | **Turn Off Display** – Supported. |
-| ✅ | **Screenshot Capture** – Retrieve screenshots of the display. |
-| ✅ | **Logs & System Monitoring** – Viewer logs, synchronization logs, and system info available. |
-| ✅ | **Viewer Settings & Font Installation** – Manage settings and install custom fonts. |
-| ❌ | **LED Light Control** – Not supported. |
-| ✅ | **Proof of Play Tracking** – Monitors content playback history. |
-| ✅ | **Blackbox Support** – Provides system logs for troubleshooting and support. |
-
----
-
-## **General limitations**
+### Open the Android menu
 
 <Warning>
-  **Data Providers** – **HTML5 Viewer** cannot read data directly from external sources; it must be retrieved through the **PADS4 Data Server**.
+  If you open the Android menu while PADS4Giada is running, the player restarts after 30 seconds. The Viewer Monitor Service detects that the app is not active. To prevent this, stop the PADS4Giada app within 30 seconds.
 </Warning>
 
-<Warning>
-  **Content Library** – Supports **content from PADS4 Content Library** but **does not support file paths pointing to a local disk**.
-</Warning>
+## Prepare the device
+
+### Reset the device
+
+Reset the player if it was used before. This clears the storage and prevents software conflicts.
 
 <Warning>
-  **Proof of Play Storage Limit** – Stores **up to 50,000 records** offline. When the limit is reached, the **oldest records are automatically deleted**.
+  A factory reset removes all data and settings from the player.
 </Warning>
 
-<Warning>
-  **Storage Capacity** – The available **storage for content varies** depending on the **device and browser**.
-</Warning>
+1. Open the Android settings.
+2. Select **Backup & Reset**.
+3. Select **Factory Data Reset**.
+4. Select **Reset Tablet**.
+5. Select **Erase Everything**.
+
+### Turn on default superuser access
+
+Superuser access is needed for automatic updates of the PADS4Giada app. Without it, you must update the app manually.
+
+1. Open the **SuperSU** app.
+2. Go to **Settings**.
+3. Select **Default Access**.
+4. In the dialog, select **Grant**.
+5. Close the app.
+
+### Reset the screen orientation
+
+This step is optional.
+
+1. In the Android settings, go to **Display** > **HDMI** > **Screen Rotation**.
+2. Select **0**.
+
+### Check the date and time
+
+A correct date and time prevent certificate errors and connection problems.
+
+1. Open the PADS4Giada app.
+2. Select **System Settings**. The Android settings open.
+3. Go to **Date & Time**.
+4. Set the correct date and time.
+5. (Optional) Turn on **Auto Sync Date & Time**, if your network supports it.
+
+## Install PADS4 Viewer
+
+Install the `PADS4Giada.apk` file from a USB flash drive. You find the file on your PADS4 Server in `http(s)://<server>/<domain>/apps`. 
+
+You can also download the latest version from [GitHub](https://github.com/PADS4/PADS4-Viewer-Giada/releases/latest). If you download the file, also copy it to the `Apps` folder on the PADS4 Server, so that the correct version is installed.
+
+1. Copy `PADS4Giada.apk` to a USB flash drive.
+2. Insert the USB flash drive into the player.
+3. Open the **File Explorer** app.
+4. Select **USB Storage**.
+5. Select the APK file.
+6. If a security warning appears, select **Settings**.
+7. Turn on **Unknown Sources**, and then select **OK**.
+8. Go back to **File Explorer**, and select the APK file again.
+9. In the confirmation dialog, select **Install**.
+10. When the installation is complete, select **Open** to start the PADS4Giada app.
+
+## Connect the Viewer to the PADS4 Server
+
+The server location has this format: `http(s)://<server>/<domain>`. Replace `<server>` with the IP address or host name of your PADS4 Server. Replace `<domain>` with your PADS4 domain. The default domain is `PADS4`.
+
+1. Enter the PADS4 Server location.
+2. (Optional) Enter a name for the Viewer. If you leave the field empty, the PADS4 Server generates a name.
+3. Select **Start**.
+
+<Check>
+  The Viewer shows a green LED and the name of the Viewer. This means that the connection works.
+</Check>
+
+## Update PADS4 Viewer
+
+PADS4 Viewer and the PADS4Giada app update automatically when the PADS4 Server updates.
+
+## Supported features and limitations
+
+### General
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Automatic Viewer updates | Yes |  |
+| Offline mode | Yes |  |
+| HTTP and HTTPS | Yes |  |
+| Portrait mode | Yes |  |
+| Cluster Viewer | Yes |  |
+| Content Library | Yes |  |
+
+### Video and images
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Videos on one page | Yes | Up to 2 videos at the same time. |
+| Video streaming | No |  |
+| Image formats | Yes | JPG, PNG, BMP, and GIF. |
+
+### Content and data
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Text, scrolling text, tables, shapes, and interactive buttons | Yes |  |
+| Web element | Yes |  |
+| PowerPoint and PDF | Yes |  |
+| Data providers, Viewer Variables, and rules | Yes |  |
+
+### Device management
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Remote management in PADS4 CTRL Center | Yes |  |
+| Connection monitoring and alerts | Yes |  |
+| Restart Viewer | Yes |  |
+| Reboot device | Yes |  |
+| Shut down device | No |  |
+| Wake-on-LAN | No |  |
+| Turn off display | Yes |  |
+| Block remote control | Partial |  |
+| Retrieve screenshots | Yes |  |
+| Retrieve logs | Yes |  |
+| Proof of play | Yes |  |
+| Install fonts | Yes |  |
+| LED light control | No |  |
+| Blackbox support | Yes |  |
+
+The PADS4 Content Library supports content from the library only, not from file paths on a local disk.
