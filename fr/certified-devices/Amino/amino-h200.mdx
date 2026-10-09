@@ -1,0 +1,127 @@
+---
+- title: Amino H200
+- description: Installez et configurez PADS4 Viewer sur les lecteurs Android Amino
+    H200 avec Amino Orchestrate, notamment l'application, la configuration et la
+    connexion au serveur.
+- sidebarTitle: H200
+---
+
+L'Amino H200 est un lecteur multimédia Android que vous gérez depuis la console Amino Orchestrate. Vous ajoutez PADS4 Viewer en tant qu'application dans Orchestrate, et Orchestrate l'installe sur le lecteur. Cette page explique comment configurer l'application et la configuration dans Orchestrate, ajouter le lecteur et connecter PADS4 Viewer à votre serveur PADS4.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* Amino H200 (Android 12)
+* Amino H200 (Android 14)
+
+### Configuration minimale requise
+
+| Exigence             | Minimum                            |
+| -------------------- | ---------------------------------- |
+| PADS4 Server         | PADS4 2025.1 ou version ultérieure |
+| Firmware, Android 12 | `25.6.2540.10R`                    |
+| Firmware, Android 14 | `25.8.2620.4R`                     |
+
+### Autres prérequis
+
+* Un compte Amino Orchestrate.
+* Le fichier APK du Generic Android Viewer. Voir [PADS4 Generic Android Viewer](/fr/certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer).
+* Le numéro de série du lecteur.
+
+## Installer PADS4 Viewer
+
+Les lecteurs Amino sont gérés depuis une console centrale, Amino Orchestrate. Vous ajoutez PADS4 Viewer en tant qu'application, vous le placez dans une configuration, puis vous ajoutez le lecteur à cette configuration. Orchestrate installe PADS4 Viewer lorsque le lecteur se connecte.
+
+### Ajouter PADS4 Viewer en tant qu'application
+
+1. Ouvrez le site Amino Orchestrate : `https://orchestrate.amino.tv/`.
+2. Sur la page principale, accédez à la section **Applications**.
+3. Sélectionnez **Add Application**.
+4. Dans **Application Name**, saisissez `PADS4 Viewer`.
+5. Téléchargez le fichier APK du Generic Android Viewer.
+
+PADS4 Viewer est maintenant prêt à être déployé sur un lecteur.
+
+### Créer une configuration
+
+1. Accédez à **Configurations**.
+2. Sélectionnez **Add Configuration**, puis saisissez un nom.
+3. Sélectionnez **Add**.
+4. Ouvrez l'onglet **Parameters**.
+5. Dans **Target Version**, sélectionnez la version du firmware.
+6. Sélectionnez **Save Changes**.
+7. Ouvrez l'onglet **Applications**.
+8. Sélectionnez **Add Action**, puis sélectionnez **PADS4 Viewer**.
+9. Vérifiez que PADS4 Viewer apparaît dans la liste. Définissez **Action** sur **Install**, et sélectionnez la **Version** correcte si nécessaire.
+10. Sélectionnez **Save Changes**.
+
+### Définir PADS4 Viewer comme application Home
+
+Définissez PADS4 Viewer comme application Home, afin que le lecteur le démarre automatiquement.
+
+1. Dans la configuration, ouvrez l'onglet **Parameters**.
+2. Sous **Application Settings**, dans **Home App**, sélectionnez **PADS4 Viewer**.
+3. Sélectionnez **Save Changes**.
+
+### Ajouter le lecteur à Orchestrate
+
+1. Accédez à **Devices** > **Device list**.
+2. Sélectionnez **Add Device**.
+3. Saisissez le numéro de série du lecteur.
+4. Sous **Configuration**, sélectionnez la configuration que vous avez créée.
+5. Attendez que le lecteur se connecte. Orchestrate installe alors PADS4 Viewer.
+
+## Connecter le Viewer au serveur PADS4
+
+Après l'installation, PADS4 Viewer s'ouvre sur le lecteur. L'emplacement du serveur a ce format : `https://<host>:<port>/<domain>/`.
+
+1. Saisissez l'emplacement du serveur PADS4.
+2. (Facultatif) Saisissez un nom pour le Viewer.
+3. Sélectionnez **Start**.
+
+<Check>
+  Le Viewer affiche une LED verte et le nom du Viewer. Cela signifie que la connexion fonctionne.
+</Check>
+
+## Mettre à jour PADS4 Viewer
+
+## Fonctionnalités prises en charge et limitations
+
+### Général
+
+| Fonctionnalité                      | Prise en charge | Remarques |
+| ----------------------------------- | --------------- | --------- |
+| Mises à jour automatiques du Viewer | Oui             |           |
+| HTTP et HTTPS                       | Oui             |           |
+| Mode portrait                       | Oui             |           |
+| Cluster Viewer                      | Oui             |           |
+
+### Vidéo et images
+
+| Fonctionnalité      | Prise en charge | Remarques                                                      |
+| ------------------- | --------------- | -------------------------------------------------------------- |
+| Vidéos sur une page | Oui             | Maximum de 2 vidéos simultanées. Formats vidéo : H264 et H265. |
+| Streaming vidéo     | Oui             |                                                                |
+| Formats d'image     | Oui             | PNG, JPG, BMP et GIF.                                          |
+
+### Contenu et données
+
+| Fonctionnalité                                                 | Prise en charge | Remarques                                                                                                                                                                    |
+| -------------------------------------------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Texte, texte défilant, tableaux, formes et boutons interactifs | Oui             | Les lignes et le texte formaté sont également pris en charge.                                                                                                                |
+| Élément web                                                    | Oui             |                                                                                                                                                                              |
+| PowerPoint et PDF                                              | Oui             | PowerPoint doit être installé sur le serveur PADS4.                                                                                                                          |
+| Fournisseurs de données, Variables Viewer et règles            | Oui             | Inclut plus de 70 fournisseurs de données PADS4, Data Vault et les liaisons de propriétés. Les règles fonctionnent au niveau de la présentation, de la page et de l'élément. |
+
+### Gestion des appareils
+
+| Fonctionnalité                            | Prise en charge | Remarques |
+| ----------------------------------------- | --------------- | --------- |
+| Gestion à distance dans PADS4 CTRL Center | Oui             |           |
+| Redémarrer le Viewer                      | Oui             |           |
+| Redémarrer l'appareil                     | Oui             |           |
+| Éteindre l'appareil                       | Non             |           |
+| Récupérer des captures d'écran            | Oui             |           |
+| Récupérer les journaux                    | Oui             |           |
+| Preuve de diffusion                       | Oui             |           |

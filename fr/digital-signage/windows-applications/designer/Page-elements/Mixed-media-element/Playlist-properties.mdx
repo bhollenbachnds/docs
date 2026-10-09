@@ -1,0 +1,44 @@
+Ces propriétés définissent **les éléments multimédias (images, vidéos, flux)** qui seront affichés dans votre élément Mixed Media. Vous pouvez créer un **affichage d'un seul élément** ou une **liste de lecture** qui exécute les fichiers multimédias de manière séquentielle.
+
+***
+
+### **Gestion de la liste de lecture**
+
+* **Ajouter**, **modifier**, **réorganiser**, ou **supprimer** des éléments dans votre liste de lecture.
+* Les éléments de la liste de lecture peuvent être gérés en **vue détaillée** ou en **vue liste**.
+* **Boutons de navigation** en bas de la fenêtre de liste de lecture vous permettent de parcourir la liste.
+* **Durée totale** affiche la durée cumulée de tous les éléments de la liste de lecture.
+
+> **Important:**\
+> Pour des conseils approfondis sur la gestion des listes de lecture, consultez **Travailler avec les listes de lecture**.
+
+***
+
+### **Élément de liste de lecture : options de type**
+
+| **Type**                                    | **Description**                                                                                                                                                                        |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Média depuis la bibliothèque de contenu** | Référence un **fichier image ou vidéo** existant stocké dans la **PADS4 Content Library** (recommandé). Les fichiers sont **automatiquement synchronisés** sur tous les PC du système. |
+| **Média depuis une URL**                    | Une **référence URL directe** vers une source média (par ex., image ou vidéo hébergée sur le web).                                                                                     |
+| **Flux vidéo**                              | Une **URL de flux** de référence (par ex., caméra IP ou service de diffusion en direct).                                                                                               |
+| **Séparateur**                              | Un **vide** élément de playlist, utilisé pour créer une **pause** dans la séquence.                                                                                                    |
+
+***
+
+### **Propriétés de chaque élément de playlist**
+
+| **Propriété**                               | **Description**                                                                                                                        |
+| ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Média depuis la bibliothèque de contenu** | Contient la **référence de fichier relative** vers un élément de la bibliothèque de contenu.                                           |
+| **Média depuis une URL**                    | Contient l'**URL** pointant vers la source média.                                                                                      |
+| **Flux vidéo**                              | Contient l'**URL de flux** de référence.                                                                                               |
+| **Durée**                                   | Durée (en secondes) pendant laquelle l'élément sera affiché. Si c'est une **vidéo**, sa durée naturelle est utilisée.                  |
+| **Effet**                                   | **Effet de transition** appliqué lors de l'apparition de l'élément (par ex., fondu, glissement) et **durée de l'effet** (en secondes). |
+
+***
+
+### **Remarques importantes**
+
+* **Seules les références** aux fichiers médias sont incluses, **pas** le média lui-même. Cela permet des **mises à jour automatiques** pendant la lecture si le fichier source change.
+* **Les propriétés de la Play List** sont **désactivées** lorsque l'élément est lié à une **source de données**. Dans ce cas, le contenu média est contrôlé par des **données en temps réel**.
+* **Les séparateurs** sont un moyen pratique d'**insérer des pauses** sans média entre les éléments d'une séquence.

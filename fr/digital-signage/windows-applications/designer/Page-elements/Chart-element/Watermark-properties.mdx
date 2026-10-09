@@ -1,0 +1,44 @@
+---
+- title: Propriétés du filigrane de graphique
+- description: Ajouter une image de filigrane à un graphique en utilisant une
+    image depuis la PADS4 Content Library ou depuis un fichier, et découvrir
+    comment chaque source d'image est synchronisée.
+---
+
+Ces propriétés vous permettent d'ajouter une image de filigrane à votre graphique.
+
+***
+
+#### **Image de filigrane**
+
+**Type**\
+Définit la source de l'image de filigrane. Options disponibles :
+
+| Option                              | Description                                                                                                                                                                                                                                                                                            |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Image depuis la Content Library** | Le filigrane fait référence à une image existante dans la PADS4 Content Library (recommandé). Les éléments de la Content Library sont automatiquement synchronisés entre tous les PC du système. Les références sont relatives et restent valides si la bibliothèque est déplacée.                     |
+| **Image depuis un fichier**         | Le filigrane fait référence à un fichier image situé en dehors de la PADS4 Content Library. Ces fichiers ne sont **pas** synchronisés automatiquement et nécessitent une distribution manuelle. Les références sont absolues et les fichiers doivent exister à l'emplacement spécifié pour la lecture. |
+| **Aucune image**                    | Aucune image de filigrane ne sera incluse.                                                                                                                                                                                                                                                             |
+
+***
+
+**Contenu**\
+Spécifie la référence du fichier image, en fonction du **Type** sélectionné. Vous pouvez parcourir la **Content Library** ou le système de fichiers à l'aide du bouton de navigation.
+
+* Si **Image depuis un fichier** est sélectionné, indiquez le chemin complet et le nom du fichier.
+
+***
+
+**Étirer**\
+Lorsqu'activé, l'image de filigrane est redimensionnée pour s'adapter entièrement aux limites du graphique.\
+Lorsqu'il est désactivé, l'image de filigrane s'affiche à sa taille d'origine.
+
+* Si elle est plus petite que le graphique, l'image peut ne pas couvrir l'intégralité de l'arrière-plan.
+* Si elle est plus grande que le graphique, l'image peut être rognée.
+
+***
+
+#### **Remarques**
+
+* **Seules les références** aux fichiers image sont stockées dans la présentation, **pas les images elles-mêmes**.
+* Si le fichier image source est mis à jour, l'image mise à jour sera utilisée automatiquement lors de la lecture.

@@ -1,0 +1,68 @@
+---
+- title: Iiyama TW1023ASC
+- sidebarTitle: TW1023ASC
+- description: Installez et configurez PADS4 Viewer sur l'écran tactile Android
+    Iiyama TW1023ASC, y compris la réinitialisation d'usine, l'installation de
+    l'application et la connexion au serveur.
+---
+
+Le Iiyama TW1023ASC est un écran tactile Android. Vous installez l'application PADS4 Viewer sur l'écran pour afficher les présentations PADS4. Cette page explique comment réinitialiser l'écran, installer l'application et le connecter à votre PADS4 Server.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* TW1023ASC-B2P (Android 13)
+
+### Configuration minimale requise
+
+| Exigence        | Minimum                            |
+| --------------- | ---------------------------------- |
+| PADS4 Server    | PADS4 2025.1 ou version ultérieure |
+| Version Android | 13                                 |
+
+### Autres prérequis
+
+* Un PADS4 Server entièrement opérationnel.
+* Une clé USB. Vous l'utilisez pour installer l'application.
+
+## Préparer l'appareil
+
+Lorsque vous allumez l'écran pour la première fois, l'écran d'accueil Android apparaît. S'il n'apparaît pas, ou si quelqu'un a déjà utilisé l'écran, réinitialisez l'écran.
+
+### Réinitialiser l'appareil
+
+<Warning>
+  Une réinitialisation d'usine supprime toutes les données et tous les paramètres de l'écran.
+</Warning>
+
+1. Ouvrez **Settings**.
+2. Accédez à **System** > **Reset options**.
+3. Sélectionnez **Erase all data (factory reset)**.
+4. Confirmez la réinitialisation.
+
+## Installer PADS4 Viewer
+
+Obtenez `PADS4IiyamaTouch.apk` depuis le dossier Apps de votre PADS4 Server. Vous trouverez le dossier Apps à `http(s)://<server>/<domain>/apps`. Utilisez le fichier de votre propre serveur afin que la version de l'application corresponde au serveur.
+
+1. Copiez `PADS4IiyamaTouch.apk` sur une clé USB.
+2. Insérez la clé USB dans l'écran.
+3. Ouvrez l'application **File Manager**.
+4. Accédez à la clé USB, puis sélectionnez `PADS4IiyamaTouch.apk`.
+5. Si Android bloque l'installation, sélectionnez **Settings** dans le message, activez **Allow from this source** pour File Manager, puis revenez en arrière.
+6. Sélectionnez **Install**, puis ouvrez l'application **PADS4 IIyama Touch**.
+
+## Connecter le Viewer au PADS4 Server
+
+L'emplacement du serveur a ce format : `http(s)://<server>/<domain>`. Remplacez `<server>` par l'adresse IP ou le nom d'hôte de votre PADS4 Server. Remplacez `<domain>` par votre domaine PADS4. Le domaine par défaut est `PADS4`.
+
+1. Entrez l'emplacement du PADS4 Server.
+2. (Facultatif) Entrez un nom pour le Viewer. Si vous laissez le champ vide, le PADS4 Server génère un nom.
+3. Sélectionnez **Start**.
+4. Définissez **PADS4 IIyama Touch** comme application d'accueil, puis sélectionnez **Always**.
+
+<Check>
+  Le Viewer affiche une LED verte et le nom du Viewer. Cela signifie que la connexion fonctionne.
+</Check>
+
+Pour modifier l'orientation de l'écran et d'autres options, ouvrez **Viewer Settings**.

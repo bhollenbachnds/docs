@@ -1,0 +1,172 @@
+---
+- title: NDS.Services.Configuration
+- description: Référence API pour NDS.Services.Configuration, qui stocke les
+    paramètres clé-valeur au niveau système et au niveau domaine ainsi que les
+    indicateurs de fonctionnalités pour les autres services PADS4.
+---
+
+## Aperçu
+
+Stocke et récupère des paires clé-valeur de configuration au niveau système et au niveau domaine. Utilisé par d'autres services pour lire les paramètres d'exécution, les indicateurs de fonctionnalités et la configuration spécifique au déploiement.
+
+| Champ                                 | Valeur                                                                         |
+| ------------------------------------- | ------------------------------------------------------------------------------ |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/index.html`      |
+| OpenAPI spec                          | `https://<your-server>/rdx/NDS.Services.Configuration/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Configuration`                         |
+| Nombre total de points de terminaison | 22                                                                             |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin du service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                        | Description             |
+| ------- | --------------------------------------------- | ----------------------- |
+| `GET`   | `/api/v1/Configuration`                       | Get Config Nodes        |
+| `POST`  | `/api/v1/Configuration`                       | Set Config Nodes        |
+| `POST`  | `/api/v1/Configuration/delete`                | Delete Config Nodes     |
+| `GET`   | `/api/v1/DomainConfig`                        | Get Domain Config       |
+| `POST`  | `/api/v1/DomainConfig`                        | Save Domain Config      |
+| `GET`   | `/api/v1/Feature`                             | Get Features            |
+| `GET`   | `/api/v1/Feature/{domain}`                    | Get Features2           |
+| `GET`   | `/api/v1/Feature/raw`                         | Get Features Raw        |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Get Toggles             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Get Config Section      |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Get Configuration       |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Get Circuit Breakers    |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Reset Circuit Breaker   |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isolate Circuit Breaker |
+| `POST`  | `/api/v1/diagnostics/events`                  | Get Events              |
+| `GET`   | `/api/v1/health`                              | Get                     |
+| `GET`   | `/api/v1/health/clean`                        | Get Clean               |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Requeue Error Messages  |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purge Error Messages    |
+| `GET`   | `/migration`                                  | Get Migrations          |
+| `POST`  | `/migration`                                  | Execute Migration       |
+| `GET`   | `/version`                                    | Get                     |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Configuration`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/Configuration/delete`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Configuration/delete' \
+  -H 'Content-Type: application/json' \
+  -d '{"Ids": [1, 2, 3]}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/DomainConfig`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/DomainConfig' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/Feature`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Configuration/api/v1/Feature'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Les points de terminaison supplémentaires suivent les mêmes modèles que ceux présentés ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.

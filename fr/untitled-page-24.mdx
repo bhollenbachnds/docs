@@ -1,0 +1,175 @@
+---
+- title: NDS.Services.Engine
+- description: Référence API pour NDS.Services.Engine, le moteur de rendu de
+    présentation PADS4 pour les instances de moteur, les tâches de rendu et le
+    cycle de vie de lecture du contenu.
+---
+
+## Aperçu
+
+Le moteur de rendu de présentation PADS4. Gère les instances du moteur, les tâches de rendu et le cycle de vie de la lecture du contenu. Utilisé pour déclencher des rendus à la demande et récupérer le résultat rendu.
+
+| Champ                                 | Valeur                                                                  |
+| ------------------------------------- | ----------------------------------------------------------------------- |
+| Swagger UI                            | `https://<your-server>/rdx/NDS.Services.Engine/swagger/index.html`      |
+| Spécification OpenAPI                 | `https://<your-server>/rdx/NDS.Services.Engine/swagger/v1/swagger.json` |
+| URL de base                           | `https://<your-server>/rdx/NDS.Services.Engine`                         |
+| Nombre total de points de terminaison | 23                                                                      |
+
+***
+
+## Authentification
+
+Tous les points de terminaison utilisent le cookie de session PADS4 standard. Obtenez-le une fois et réutilisez-le :
+
+```bash
+# Log in and save the session cookie
+curl -c cookies.txt -X POST 'https://<your-server>/api/v1/Account/Logon' \
+  -H 'Content-Type: application/json' \
+  -d '{"UserName": "admin", "Password": "yourpassword", "Domain": "yourdomain"}'
+
+# Use the cookie on all subsequent requests
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/<ServiceName>/...'
+```
+
+> Remplacez `https://<your-server>` par l'adresse de votre serveur PADS4 et `<ServiceName>` par le chemin de service indiqué ci-dessus.
+
+***
+
+## Référence des points de terminaison
+
+| Méthode | Chemin                                        | Description                                      |
+| ------- | --------------------------------------------- | ------------------------------------------------ |
+| `GET`   | `/api/v1/engine`                              | Obtenir                                          |
+| `GET`   | `/api/v1/engine/dataset`                      | Obtenir les jeux de données                      |
+| `POST`  | `/api/v1/engine/dataset`                      | Enregistrer un jeu de données                    |
+| `POST`  | `/api/v1/engine/dataset/Invalidate`           | Invalider un enregistrement de données           |
+| `POST`  | `/api/v1/engine/dataset/UploadRecord`         | Téléverser un jeu de données                     |
+| `POST`  | `/api/v1/engine/dataset/Upload`               | Téléverser                                       |
+| `POST`  | `/api/v1/engine/dataset/RequestDataSet`       | Demander un jeu de données                       |
+| `GET`   | `/api/v1/engine/message/test`                 | Tester                                           |
+| `POST`  | `/api/v1/engine/message`                      | Obtenir les messages                             |
+| `GET`   | `/api/v1/diagnostics/toggles`                 | Obtenir les bascules                             |
+| `GET`   | `/api/v1/diagnostics/configuration`           | Obtenir la section de configuration              |
+| `GET`   | `/api/v1/diagnostics/configurationex`         | Obtenir la configuration                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers`         | Obtenir les disjoncteurs                         |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/reset`   | Réinitialiser un disjoncteur                     |
+| `GET`   | `/api/v1/diagnostics/circuitbreakers/isolate` | Isoler un disjoncteur                            |
+| `POST`  | `/api/v1/diagnostics/events`                  | Obtenir les événements                           |
+| `GET`   | `/api/v1/health`                              | Obtenir                                          |
+| `GET`   | `/api/v1/health/clean`                        | Nettoyer                                         |
+| `POST`  | `/api/v1/Management/RequeueErrorMessages`     | Remettre en file d'attente les messages d'erreur |
+| `POST`  | `/api/v1/Management/PurgeErrorMessages`       | Purger les messages d'erreur                     |
+| `GET`   | `/migration`                                  | Obtenir les migrations                           |
+| `POST`  | `/migration`                                  | Exécuter la migration                            |
+| `GET`   | `/version`                                    | Obtenir                                          |
+
+***
+
+## Exemples de requêtes et de réponses
+
+### GET `/api/v1/engine`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### GET `/api/v1/engine/dataset`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X GET 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/engine/dataset`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/engine/dataset/Invalidate`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset/Invalidate' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/engine/dataset/UploadRecord`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset/UploadRecord' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+### POST `/api/v1/engine/dataset/Upload`
+
+**Request:**
+
+```bash
+curl -b cookies.txt -X POST 'https://<your-server>/rdx/NDS.Services.Engine/api/v1/engine/dataset/Upload' \
+  -H 'Content-Type: application/json' \
+  -d '{"PageIndex": 0, "PageSize": 20}'
+```
+
+**Réponse `200 OK`:**
+
+```json
+{"Items": [], "TotalCount": 0, "PageIndex": 0, "PageSize": 20, "Code": "OK", "Succeeded": true}
+```
+
+***
+
+> Des points de terminaison supplémentaires suivent les mêmes modèles présentés ci-dessus. Consultez l'interface Swagger UI pour les schémas de paramètres complets.
