@@ -3300,6 +3300,10 @@
     {
       "source": "/introduction",
       "destination": "/getting-started/Introduction"
+    },
+    {
+      "source": "/PADS4-Platform",
+      "destination": "/getting-started/Introduction"
     }
   ]
 }
