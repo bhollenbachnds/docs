@@ -3,7 +3,7 @@ title: "Viewer variables"
 description: "Use Viewer Variables to customize content per Viewer in text, data providers, and rules, set in System Management, PADS4 Agent, or Viewer Options."
 ---
 
-**Viewer Variables** enable dynamic content customization by replacing placeholders with real-time values for each **Viewer**. These variables can be used in **text fields, data providers, rules, filters, and other elements**, ensuring that displayed content is specific to each Viewer without requiring separate presentations.
+**Viewer Variables** enable dynamic content customization by replacing placeholders with real-time values for each **Viewer**. You can use these variables in **text fields, data providers, rules, filters, and other elements**. This keeps displayed content specific to each Viewer without requiring separate presentations.
 
 ---
 
@@ -13,7 +13,7 @@ description: "Use Viewer Variables to customize content per Viewer in text, data
 - Viewer Variables are created in **PADS4 System Management**.  
 - Each variable has a **default value** assigned.  
 - These variables apply to all Viewers unless overridden.  
-- Users **cannot add or remove variables** through **PADS4 Agent**.  
+- You **cannot add or remove variables** through **PADS4 Agent**.  
 
 ### **PADS4 Agent (user level)**  
 - You can **modify** Viewer Variables via **PADS4 Agent (Server tab)**.  
@@ -34,8 +34,8 @@ description: "Use Viewer Variables to customize content per Viewer in text, data
 ### **Using Viewer Variables in text elements**  
 - Example:  
   - **System Management:** `#Store Name# = New York Health`  
-  - **Text Element:** `Welcome to #Store Name#!`  
-  - **Displayed Output:** `Welcome to New York Health!`  
+  - **Text element:** `Welcome to #Store Name#!`  
+  - **Displayed output:** `Welcome to New York Health!`  
 
 This method allows **one presentation to be used across multiple locations** while dynamically adjusting text.
 
@@ -53,18 +53,18 @@ This method allows **one presentation to be used across multiple locations** whi
 - Used in **sorting, filtering, expressions, file references, parameters, SQL queries**.  
 
 ### **Automation use cases**  
-- **Store Size Filtering:**  
+- **Store size filtering:**  
   - If a store has a **Viewer Variable for size** (`L, XL, XXL`), only products relevant to that size are displayed.  
-- **Location-Based Content:**  
+- **Location-based content:**  
   - A **GPS-based Viewer Variable** allows **location-specific maps or ads** to be displayed.  
-- **Single Presentation for Multiple Viewers:**  
-  - Instead of creating multiple presentations, **one presentation can be used with Viewer Variables** to change **store names, addresses, or promotions dynamically**.  
+- **Single presentation for multiple Viewers:**  
+  - Instead of creating multiple presentations, **use one presentation with Viewer Variables** to change **store names, addresses, or promotions dynamically**.  
 
 ---
 
-## **When NOT to use Viewer Variables**  
+## **When not to use Viewer Variables**  
 - **For continuous real-time updates** (e.g., rapidly changing stock prices).  
-- In these cases, a **data provider** should be used instead.  
+- In these cases, use a **data provider** instead.  
 
 ---
 
