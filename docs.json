@@ -3297,6 +3297,10 @@
     {
       "source": "/certified-devices/giada/DM-Series",
       "destination": "/certified-devices/giada/dm-series"
+    },
+    {
+      "source": "/introduction",
+      "destination": "/PADS4-Platform"
     }
   ]
 }
