@@ -42,17 +42,18 @@
         "language": "en",
         "dropdowns": [
           {
-            "dropdown": "Installation Guide",
+            "dropdown": "Getting Started",
             "icon": "rocket",
             "color": {
               "light": "#00ADBA",
               "dark": "#00ADBA"
             },
-            "groups": [
+            "pages": [
+              "untitled-page-11",
+              "PADS4-Platform",
               {
                 "group": "Getting Started",
                 "pages": [
-                  "introduction",
                   "system-requirements",
                   "network-requirements",
                   "prerequisites"
