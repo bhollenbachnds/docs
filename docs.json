@@ -49,8 +49,7 @@
               "dark": "#00ADBA"
             },
             "pages": [
-              "untitled-page-11",
-              "PADS4-Platform",
+              "getting-started/Introduction",
               {
                 "group": "Getting Started",
                 "pages": [
