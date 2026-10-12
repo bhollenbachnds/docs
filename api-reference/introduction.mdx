@@ -5,7 +5,7 @@ description: "Overview of the PADS4 REST API reference, including authentication
 
 ## Authentication
 
-PADS4 Foundation uses **cookie-based session authentication** — not Bearer tokens.
+PADS4 Foundation uses **cookie-based session authentication**, not Bearer tokens.
 
 ### 1. Log in
 
@@ -31,7 +31,7 @@ curl -c cookies.txt -X POST \
 }
 ```
 
-The server sets a `Set-Cookie` header containing the session cookie. The response body is an array of **16 identity claims** (user ID, display name, email, domain, roles, etc.) — it is NOT a token you send back.
+The server sets a `Set-Cookie` header containing the session cookie. The response body is an array of **16 identity claims** (user ID, display name, email, domain, roles, etc.). It is NOT a token you send back.
 
 ### 2. Use the session cookie
 
