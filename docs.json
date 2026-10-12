@@ -94,7 +94,7 @@
                     ]
                   },
                   {
-                    "group": "Install PADS4 Windows applications",
+                    "group": "Install PADS4 Windows Applications",
                     "pages": [
                       "install-pads4/install-pads4-client/PADS4-Windows-applications"
                     ]
@@ -660,7 +660,7 @@
                             ]
                           },
                           {
-                            "group": "Working with Canva integration",
+                            "group": "Working with Canva Integration",
                             "pages": [
                               "the-canva-library"
                             ]
@@ -710,7 +710,7 @@
                           "what-is-a-rules",
                           "creating-a-rules",
                           {
-                            "group": "Advanced rules",
+                            "group": "Advanced Rules",
                             "pages": [
                               "Conditions"
                             ]
@@ -756,7 +756,7 @@
                         ]
                       },
                       {
-                        "group": "Working with presentations",
+                        "group": "Working with Presentations",
                         "pages": [
                           "digital-signage/windows-applications/designer/Working-with-presentations/Introduction",
                           "digital-signage/windows-applications/designer/Working-with-presentations/Content-Library",
@@ -774,7 +774,7 @@
                           "digital-signage/windows-applications/designer/Working-with-presentations/Closing-a-presentation",
                           "digital-signage/windows-applications/designer/Working-with-presentations/Auto-save-and-recover",
                           {
-                            "group": "Presentation properties",
+                            "group": "Presentation Properties",
                             "pages": [
                               "digital-signage/windows-applications/designer/Working-with-presentations/presentation-properties/Introduction",
                               "digital-signage/windows-applications/designer/Working-with-presentations/presentation-properties/General-properties",
@@ -802,7 +802,7 @@
                           "digital-signage/windows-applications/designer/Working-with-pages/Clearing-a-page",
                           "digital-signage/windows-applications/designer/Working-with-pages/Removing-a-page",
                           {
-                            "group": "Page properties",
+                            "group": "Page Properties",
                             "pages": [
                               "digital-signage/windows-applications/designer/Working-with-pages/Page-properties/Introduction",
                               "digital-signage/windows-applications/designer/Working-with-pages/Page-properties/General-properties",
@@ -1001,7 +1001,7 @@
                             ]
                           },
                           {
-                            "group": "Presentation in page Element",
+                            "group": "Presentation in Page Element",
                             "pages": [
                               "digital-signage/windows-applications/designer/Page-elements/Presentation-in-page-element/Introduction",
                               "digital-signage/windows-applications/designer/Page-elements/Presentation-in-page-element/Background-color-properties",
@@ -1124,7 +1124,7 @@
                             ]
                           },
                           {
-                            "group": "Custom elements",
+                            "group": "Custom Elements",
                             "pages": [
                               "digital-signage/windows-applications/designer/Page-elements/Custom-elements/Custom-elements"
                             ]
@@ -1151,7 +1151,7 @@
                               "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Choosing-a-provider-type",
                               "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/General-provider-settings",
                               {
-                                "group": "Provider connection settings",
+                                "group": "Provider Connection Settings",
                                 "pages": [
                                   "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-.NET-framework-data-provider",
                                   "digital-signage/windows-applications/designer/Working-with-data-providers/Adding-a-data-provider/Provider-connection-settings/Connecting-a-Bluefox-Digital-Signage-content-feed",
@@ -1211,7 +1211,7 @@
                           "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/connecting-to-your-PADS4-server",
                           "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/logging-on-to-your-PADS4-server",
                           {
-                            "group": "Specifying connection and log on properties",
+                            "group": "Specifying Connection and Log On Properties",
                             "pages": [
                               "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/connection-properties",
                               "digital-signage/windows-applications/scheduler/starting-the-pads4-scheduler/Specifying-connection-and-log-on-properties/logon-properties"
@@ -1380,7 +1380,7 @@
                         ]
                       },
                       {
-                        "group": "Monitoring & Alerts window",
+                        "group": "Monitoring & Alerts Window",
                         "pages": [
                           "digital-signage/windows-applications/agent/monitoring-and-alerts/monitoring-and-alerts-window"
                         ]
@@ -1430,14 +1430,14 @@
                     "pages": [
                       "modules/workspace/workspace-web-application/introduction",
                       {
-                        "group": "Search a room",
+                        "group": "Search a Room",
                         "pages": [
                           "modules/workspace/workspace-web-application/searching-for-a-space",
                           "modules/workspace/workspace-web-application/FavouriteRoom"
                         ]
                       },
                       {
-                        "group": "Book a space",
+                        "group": "Book a Space",
                         "pages": [
                           "modules/workspace/workspace-web-application/booking-a-space",
                           "modules/workspace/workspace-web-application/booking-a-common-space",
@@ -1445,13 +1445,13 @@
                         ]
                       },
                       {
-                        "group": "Remote work",
+                        "group": "Remote Work",
                         "pages": [
                           "modules/workspace/workspace-web-application/declaring-remote-work"
                         ]
                       },
                       {
-                        "group": "Report absence",
+                        "group": "Report Absence",
                         "pages": [
                           "modules/workspace/workspace-web-application/reporting-absence"
                         ]
@@ -1481,7 +1481,7 @@
                         ]
                       },
                       {
-                        "group": "Log out",
+                        "group": "Log Out",
                         "pages": [
                           "modules/workspace/workspace-web-application/logging-out"
                         ]
