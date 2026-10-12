@@ -653,7 +653,7 @@
                         "pages": [
                           "introduction-2",
                           {
-                            "group": "Configaration",
+                            "group": "Configuration",
                             "pages": [
                               "canva-set-up",
                               "pads4-canva-integration"
@@ -680,7 +680,7 @@
                     "group": "Properties",
                     "pages": [
                       {
-                        "group": "Presentation ",
+                        "group": "Presentation",
                         "pages": [
                           "presentation-display-name",
                           "proof-of-play"
@@ -1611,7 +1611,7 @@
                         ]
                       },
                       {
-                        "group": "Statisics",
+                        "group": "Statistics",
                         "pages": [
                           "modules/workspace/workspace-admin/statistics"
                         ]
@@ -1670,7 +1670,7 @@
             "icon": "pen-nib"
           },
           {
-            "dropdown": "PASD4 FIDS",
+            "dropdown": "PADS4 FIDS",
             "groups": [
               {
                 "group": "Getting Started",
