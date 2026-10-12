@@ -3310,6 +3310,10 @@
     {
       "source": "/PADS4-Platform",
       "destination": "/getting-started/Introduction"
+    },
+    {
+      "source": "/certified-devices/newline/stv4324-plus",
+      "destination": "/certified-devices/newline/stv-plus"
     }
   ]
 }
