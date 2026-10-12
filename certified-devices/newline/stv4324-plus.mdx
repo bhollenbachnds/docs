@@ -1,0 +1,162 @@
+---
+title: "Newline STV4324+"
+sidebarTitle: "STV4324+"
+description: "Install and configure PADS4 Viewer on the Newline STV4324+ Android 14 display, including the firmware check, the app installation, and the server connection."
+---
+
+{/*
+  Template: certified-devices-template-android.mdx
+  Suggested path: certified-devices/newline/stv4324-plus.mdx
+  New page. Facts from the author: Android 14, firmware V2.0.16, PADS4 2026.1.
+  Every UI label, menu path, and file name that the author did not give is marked [TODO: confirm].
+  The install and connect steps follow the Generic Android Viewer page and must be checked on the device.
+  */}
+
+The Newline STV4324+ is an Android 14 display. You install the PADS4 Viewer app on the display to show PADS4 presentations. This page explains how to check the firmware, install the app from a USB flash drive, and connect it to your PADS4 Server.
+
+## Before you begin
+
+### Supported devices
+
+- Newline STV4324+ (Android 14)
+
+### Minimum requirements
+
+| Requirement | Minimum |
+| --- | --- |
+| PADS4 Server | PADS4 2026.1 or later |
+| Device firmware | `V2.0.16` |
+| Android version | Android 14 |
+
+### Other prerequisites
+
+- A USB flash drive. You use it to install the app. 
+- The remote control of the display.
+- Network access from the display to the PADS4 Server.
+
+### Open the Android menu
+
+To open the Android menu, press the **cogwheel** on the remote control. 
+
+## Prepare the device
+
+When you turn on the display for the first time, the Configuration Wizard starts automatically. If the wizard does not start, or if someone used the display before, reset the display first.
+
+### **Reset the device**
+
+Reset the display to clear the storage and prevent software conflicts.
+
+<Warning>
+  A factory reset removes all data and settings from the display.
+</Warning>
+
+1. Open the Android menu.
+2. In the settings menu, go to **System**
+3. In System selects **About**
+4. Select **Reset**
+5. Select Factory Reset
+6. Enter the PIN code 
+   <Note>
+     The default PIN is 1111
+   </Note>
+7. Confirm the Factory reset
+
+## Check the firmware version
+
+PADS4 Viewer needs firmware version `V2.0.16` or later to work fully. 
+
+1. Open the Android menu.
+2. In the settings menu, go to **System**
+3. In System selects **About**
+4. Compare the firmware version with `V2.0.16`.
+
+If the version is lower, update the firmware.
+
+### Update the firmware
+
+<Warning>
+  Do not turn off the display during the update.
+</Warning>
+
+1. Open the Android menu.
+2. In the settings menu, go to **System**
+3. Click on System Update 
+4. Select Over the air method
+
+## Install PADS4 Viewer
+
+Install the `PADS4WebLauncher.apk` file from a USB flash drive. You find the file on your PADS4 Server in `http(s)://<server>/<domain>/apps`. You can also download the latest version from [GitHub](https://github.com/PADS4/PADS4-Viewer-Android/releases).
+
+1. Copy the APK file to a USB flash drive.
+2. Insert the USB flash drive into the display.
+3. Open the File Commander
+4. Browse to the APK file on the USB flash drive, and then select it.
+5. If a security warning appears, allow the installation from this source. 
+6. Select **Install**, and then select **Done.**
+
+## **Start the Viewer automatically**
+
+Set PADS4 Web Launcher as the Home app, so that the player starts PADS4 Viewer automatically.
+
+1. Open the Android menu.
+2. Go to **Source & Inputs.**
+3. Go to **Android** from the **Starting Source.**
+4. Go to **Select App auto-launch** and select **Custom**.
+5. Select **PADS4 Web Laucher**.
+6. Select **OK** 
+
+This setting will start PADS4 automatically. 
+
+## Connect the Viewer to the PADS4 Server
+
+The server location has this format: `http(s)://<server>/<domain>`. Replace `<server>` with the IP address or host name of your PADS4 Server. Replace `<domain>` with your PADS4 domain. The default domain is `PADS4`.
+
+1. Enter the PADS4 Server location.
+2. (Optional) Enter a name for the Viewer. If you leave the field empty, the PADS4 Server generates a name.
+3. Select **Start**.
+
+<Check>
+  The Viewer shows a green LED and the name of the Viewer. This means that the connection works.
+</Check>
+
+## Supported features and limitations
+
+### General
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Offline mode | Yes |  |
+| HTTP and HTTPS | Yes |  |
+| Portrait mode | Yes |  |
+| Cluster Viewer | Yes |  |
+
+### Video and images
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Videos on one page | Yes |  |
+| Video streaming | Yes |  |
+| 4K video | Yes |  |
+| Seamless video playback | Yes |  |
+| Video rotation, reflection, skew, and flip | Yes |  |
+
+### Content and data
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Text, scrolling text, tables, shapes, and interactive buttons | Yes |  |
+| Web element | Yes |  |
+| PowerPoint and PDF | Yes | PowerPoint must be installed on the PADS4 Server. |
+| Data providers, Viewer Variables, and rules | Yes |  |
+
+### Device management
+
+| Feature | Support | Notes |
+| --- | --- | --- |
+| Remote management in PADS4 CTRL Center | Yes |  |
+| Connection monitoring and alerts | Yes |  |
+| Restart Viewer | Yes |  |
+| Reboot device | Yes |  |
+| Retrieve screenshots | Yes |  |
+| Retrieve logs | Yes |  |
+| Proof of play | Yes |  |

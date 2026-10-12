@@ -231,6 +231,12 @@
                     ]
                   },
                   {
+                    "group": "Newline",
+                    "pages": [
+                      "certified-devices/newline/stv4324-plus.mdx"
+                    ]
+                  },
+                  {
                     "group": "Philips",
                     "pages": [
                       "certified-devices/philips/32BDL5150I",
