@@ -3,50 +3,50 @@ title: "OPS CRD50"
 description: Step-by-step guide to installing and configuring the PADS4 Viewer on the Philips CRD50 OPS Android module for use inside compatible signage displays.
 ---
 
-This guide provides step-by-step instructions for **installing and configuring PADS4 Viewer** on **Philips CRD50 displays**.
+This guide explains how to **install and configure PADS4 Viewer** on **Philips CRD50 displays**.
 
 ---
 
-## **1. First-time use**
+## 1. First-time use
 
-Before installation, ensure that the **PADS4 Server is set up and configured properly**.
+Before you install, make sure that the **PADS4 Server is set up and configured properly**.
 
 📌 **Minimum PADS4 Server version required:** **PADS4 Foundation 2023.1**
 
-When turning on the device for the first time, the **Configuration Wizard** will appear. If not, **reset the device** as described in **1.2 Resetting the Device**.
+When you turn on the device for the first time, the **Configuration Wizard** appears. If it does not appear, **reset the device** as described in **1.2 Resetting the device**.
 
 ---
 
-### **1.1 Configuring the device**
+### 1.1 Configuring the device
 
 <Steps>
   <Step title="Step One">
-    On the **Welcome Screen**, select your preferred **language** and click **Start**.
+    On the **Welcome Screen**, select your preferred **language** and select **Start**.
   </Step>
   <Step title="Step Two">
-    On the **Security Settings** screen, ensure **SICP Network Port** is **enabled**. _(Other settings can be enabled or disabled as required.)_
+    On the **Security Settings** screen, make sure that **SICP Network Port** is **enabled**. _(You can enable or disable other settings as required.)_
   </Step>
   <Step title="Step Three">
     On the **Network Settings** screen, select and configure the **network type**.
   </Step>
   <Step title="Step Four">
-    On the **Signage Display Settings** screen, press **Skip**.
+    On the **Signage Display Settings** screen, select **Skip**.
   </Step>
   <Step title="Step Five">
-    On the **Clone Media Files** screen, press **Skip**.
+    On the **Clone Media Files** screen, select **Skip**.
   </Step>
   <Step title="Step Six">
-    Press **Finish** to complete the setup.
+    Select **Finish** to complete the setup.
   </Step>
 </Steps>
 
-The device will display **CMND & Deploy**, an **app supplied by Philips** _(No configuration is required for this app)._
+The device displays **CMND & Deploy**, an **app supplied by Philips** _(No configuration is required for this app)._
 
 ---
 
-### **1.2 Resetting the device**
+### 1.2 Resetting the device
 
-If the device was previously used, perform a **factory reset** to clear storage and prevent software conflicts.
+If someone used the device before, perform a **factory reset** to clear storage and prevent software conflicts.
 
 <Steps>
   <Step title="Step One">
@@ -62,23 +62,23 @@ If the device was previously used, perform a **factory reset** to clear storage 
     Select **System Tools → Factory Reset**.
   </Step>
   <Step title="Step Five">
-    Click **Factory Reset** and confirm by pressing **OK**.
+    Select **Factory Reset**, and then select **OK** to confirm.
   </Step>
 </Steps>
 
-After resetting, the **Welcome Screen** will appear. Follow the steps in **1.1 Configuring the Device**.
+After the reset, the **Welcome Screen** appears. Follow the steps in **1.1 Configuring the device**.
 
 ---
 
-## **2. Installing PADS4 Viewer**
+## 2. Installing PADS4 Viewer
 
 Follow these steps to install the **PADS4 Viewer** on **Philips CRD50**.
 
 ---
 
-### **2.1 Checking device firmware**
+### 2.1 Checking device firmware
 
-Ensure the **correct firmware version** is installed for full **PADS4 Viewer** functionality.
+Make sure that the **correct firmware version** is installed for full **PADS4 Viewer** functionality.
 
 <Steps>
   <Step title="Step One">
@@ -94,13 +94,13 @@ Ensure the **correct firmware version** is installed for full **PADS4 Viewer** f
     Select **About**.
   </Step>
   <Step title="Step Five">
-    Ensure the **Build Number** is **FB04.01** _(required for PADS4)_.
+    Make sure that the **Build Number** is **FB04.01** _(required for PADS4)_.
   </Step>
 </Steps>
 
 ---
 
-### **2.2 Updating device firmware**
+### 2.2 Updating device firmware
 
 To update the **firmware**, follow the **Philips instructions**:
 
@@ -108,9 +108,9 @@ To update the **firmware**, follow the **Philips instructions**:
 
 ---
 
-### **2.3 Installing PADS4Philips from USB stick**
+### 2.3 Installing PADS4Philips from USB stick
 
-The **PADS4Philips.apk** file can be found on the **PADS4 Server** in:
+You can find the **PADS4Philips.apk** file on the **PADS4 Server** in:
 
 ```
 C:\Program Files\PADS4\Foundation\Apps
@@ -118,7 +118,7 @@ C:\Program Files\PADS4\Foundation\Apps
 
 Alternatively, download the latest version from [**this link**](http://go.pads4.com/?fwlink=1006) and place it in the **apps directory on the PADS4 Server**.
 
-#### **Installation steps**
+#### Installation steps
 
 <Steps>
   <Step title="Step One">
@@ -146,7 +146,7 @@ Alternatively, download the latest version from [**this link**](http://go.pads4.
 
 ---
 
-## **3. Supported features & limitations**
+## 3. Supported features & limitations
 
 | Feature | Description                                                                             |
 | :-----: | --------------------------------------------------------------------------------------- |
@@ -164,12 +164,12 @@ Alternatively, download the latest version from [**this link**](http://go.pads4.
 
 ---
 
-## **4. Troubleshooting**
+## 4. Troubleshooting
 
 | **Problem**                                                               | **Solution**                                                             |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| **Block Remote Control, Turn Off Display, Shutdown Commands Not Working** | Ensure **SICP over Network** is **enabled** and hosted on **port 5000**. |
+| **Block Remote Control, Turn Off Display, Shutdown Commands Not Working** | Make sure that **SICP over Network** is **enabled** and hosted on **port 5000**. |
 | **Viewer does not start in full screen**                                  | Check **firmware version** and **update if necessary**.                  |
 | **Device fails to connect over Ethernet**                                 | Updating the **firmware** may resolve this issue.                        |
 | **Navigation bar remains visible**                                        | **Firmware update** required.                                            |
-| **Viewer repeatedly asks for content storage permission**                 | Check if **correct firmware version** is installed.                      |
+| **Viewer repeatedly asks for content storage permission**                 | Check that the **correct firmware version** is installed.                      |
