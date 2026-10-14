@@ -1,0 +1,164 @@
+---
+- title: Newline STV+
+- sidebarTitle: STV+
+- description: Installez et configurez PADS4 Viewer sur l'écran Newline STV+
+    Android 14, y compris la vérification du firmware, l'installation de
+    l'application et la connexion au serveur.
+---
+
+{/*
+  Template: certified-devices-template-android.mdx
+  Suggested path: certified-devices/newline/stv4324-plus.mdx
+  New page. Facts from the author: Android 14, firmware V2.0.16, PADS4 2026.1.
+  Every UI label, menu path, and file name that the author did not give is marked [TODO: confirm].
+  The install and connect steps follow the Generic Android Viewer page and must be checked on the device.
+  */}
+
+Le Newline STV+ est un écran Android 14. Vous installez l'application PADS4 Viewer sur l'écran pour afficher les présentations PADS4. Cette page explique comment vérifier le firmware, installer l'application depuis une clé USB et la connecter à votre PADS4 Server.
+
+## Avant de commencer
+
+### Appareils pris en charge
+
+* Newline STV+ (Android 14)
+
+### Configuration minimale requise
+
+| Exigence               | Minimum                            |
+| ---------------------- | ---------------------------------- |
+| PADS4 Server           | PADS4 2026.1 ou version ultérieure |
+| Firmware de l'appareil | `V2.0.16`                          |
+| Version Android        | Android 14                         |
+
+### Autres prérequis
+
+* Une clé USB. Vous l'utilisez pour installer l'application.
+* La télécommande de l'écran.
+* Accès réseau depuis l'écran vers le PADS4 Server.
+
+### Ouvrir le menu Android
+
+Pour ouvrir le menu Android, appuyez sur la **molette de configuration** de la télécommande.
+
+## Préparer l'appareil
+
+Lorsque vous allumez l'écran pour la première fois, l'Assistant de configuration démarre automatiquement. Si l'assistant ne démarre pas, ou si quelqu'un a déjà utilisé l'écran, réinitialisez d'abord l'écran.
+
+### Réinitialiser l'appareil
+
+Réinitialisez l'écran pour effacer le stockage et éviter les conflits logiciels.
+
+<Warning>
+  Une réinitialisation d'usine supprime toutes les données et tous les paramètres de l'écran.
+</Warning>
+
+1. Ouvrez le menu Android.
+2. Dans le menu des paramètres, accédez à **Système**.
+3. Dans **Système**, sélectionnez **À propos**.
+4. Sélectionnez **Réinitialiser**.
+5. Sélectionnez **Réinitialisation d'usine**.
+6. Entrez le code PIN.
+   <Note>
+     Le code PIN par défaut est 1111.
+   </Note>
+7. Confirmez la réinitialisation d'usine.
+
+## Vérifier la version du firmware
+
+PADS4 Viewer nécessite la version de firmware `V2.0.16` ou une version ultérieure pour fonctionner pleinement.
+
+1. Ouvrez le menu Android.
+2. Dans le menu des paramètres, accédez à **Système**.
+3. Dans **Système**, sélectionnez **À propos**.
+4. Comparez la version du firmware avec `V2.0.16`.
+
+Si la version est inférieure, mettez à jour le firmware.
+
+### Mettre à jour le firmware
+
+<Warning>
+  N'éteignez pas l'écran pendant la mise à jour.
+</Warning>
+
+1. Ouvrez le menu Android.
+2. Dans le menu des paramètres, accédez à **Système**.
+3. Sélectionnez **Mise à jour du système**.
+4. Sélectionnez la méthode de mise à jour par voie hertzienne.
+
+## Installer PADS4 Viewer
+
+Installez le `PADS4WebLauncher.apk` fichier depuis une clé USB. Vous trouverez le fichier sur votre PADS4 Server dans `http(s)://<server>/<domain>/apps`. Vous pouvez également télécharger la dernière version depuis [GitHub](https://github.com/PADS4/PADS4-Viewer-Android/releases).
+
+1. Copiez le fichier APK sur une clé USB.
+2. Insérez la clé USB dans l'écran.
+3. Ouvrez l'application **File Commander**.
+4. Accédez au fichier APK sur la clé USB, puis sélectionnez-le.
+5. Si un avertissement de sécurité apparaît, autorisez l'installation depuis cette source.
+6. Sélectionnez **Installer**, puis sélectionnez **Terminé**.
+
+## Démarrer le Viewer automatiquement
+
+Définissez PADS4 Web Launcher comme application d'accueil afin que l'écran démarre PADS4 Viewer automatiquement.
+
+1. Ouvrez le menu Android.
+2. Accédez à **Source & Entrées**.
+3. Sous **Source de démarrage**, accédez à **Android**.
+4. Accédez à **Sélectionner le lancement automatique de l'application**, puis sélectionnez **Personnalisé**.
+5. Sélectionnez **PADS4 Web Launcher**.
+6. Sélectionnez **OK**.
+
+L'écran démarre maintenant PADS4 Viewer automatiquement.
+
+## Connecter le Viewer au PADS4 Server
+
+L'emplacement du serveur a ce format : `http(s)://<server>/<domain>`. Remplacez `<server>` par l'adresse IP ou le nom d'hôte de votre PADS4 Server. Remplacez `<domain>` par votre domaine PADS4. Le domaine par défaut est `PADS4`.
+
+1. Entrez l'emplacement du PADS4 Server.
+2. (Facultatif) Entrez un nom pour le Viewer. Si vous laissez le champ vide, le PADS4 Server génère un nom.
+3. Sélectionnez **Démarrer**.
+
+<Check>
+  Le Viewer affiche une LED verte et le nom du Viewer. Cela signifie que la connexion fonctionne.
+</Check>
+
+## Fonctionnalités prises en charge et limitations
+
+### Général
+
+| Fonctionnalité  | Prise en charge | Notes |
+| --------------- | --------------- | ----- |
+| Mode hors ligne | Oui             |       |
+| HTTP et HTTPS   | Oui             |       |
+| Mode portrait   | Oui             |       |
+| Cluster Viewer  | Oui             |       |
+
+### Vidéo et images
+
+| Fonctionnalité                                            | Support | Notes |
+| --------------------------------------------------------- | ------- | ----- |
+| Vidéos sur une page                                       | Oui     |       |
+| Streaming vidéo                                           | Oui     |       |
+| Vidéo 4K                                                  | Oui     |       |
+| Lecture vidéo fluide                                      | Oui     |       |
+| Rotation, réflexion, inclinaison et retournement de vidéo | Oui     |       |
+
+### Contenu et données
+
+| Fonctionnalité                                                 | Support | Notes                                              |
+| -------------------------------------------------------------- | ------- | -------------------------------------------------- |
+| Texte, texte défilant, tableaux, formes et boutons interactifs | Oui     |                                                    |
+| Élément Web                                                    | Oui     |                                                    |
+| PowerPoint et PDF                                              | Oui     | PowerPoint doit être installé sur le PADS4 Server. |
+| Fournisseurs de données, Variables Viewer et règles            | Oui     |                                                    |
+
+### Gestion des appareils
+
+| Fonctionnalité                            | Support | Notes |
+| ----------------------------------------- | ------- | ----- |
+| Gestion à distance dans PADS4 CTRL Center | Oui     |       |
+| Surveillance des connexions et alertes    | Oui     |       |
+| Redémarrer le Viewer                      | Oui     |       |
+| Redémarrer l'appareil                     | Oui     |       |
+| Récupérer les captures d'écran            | Oui     |       |
+| Récupérer les journaux                    | Oui     |       |
+| Preuve de diffusion                       | Oui     |       |
