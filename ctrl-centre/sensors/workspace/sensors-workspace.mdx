@@ -36,8 +36,8 @@ Once gateways are set up in PADS4, Workspace will automatically import them into
 
 ![Ws Sensor4](/images/ctrl-centre/sensors/workspace/ws-sensor4.png)
 
-- Linking a sensor to a room means it will automatically create a booking on that room. This happens when the sensor is detecting sensor for the number of minutes defined in the room profile. The meeting it will create will be called PIR and has the duration that is also defined in the room profile.
-- In the room profile you can also define the lunch break. Lunch break is the timerange the time that the sensor won't be affecting any meeting. It won't cut-off/release the booking if people are absent and it won't create a new automatic booking either.
+- Linking a sensor to a room means it will automatically create a booking on that room. This happens when the sensor is detecting motion for the number of minutes defined in the room profile. The meeting it will create will be called PIR and has the duration that is also defined in the room profile.
+- In the room profile you can also define the lunch break. Lunch break is the time range that the sensor won't be affecting any meeting. It won't cut-off/release the booking if people are absent and it won't create a new automatic booking either.
 - Take the following example of a room profile setup:
 
 ![Ws Sensor5](/images/ctrl-centre/sensors/workspace/ws-sensor5.png)
@@ -51,7 +51,7 @@ In this case, the sensor will:
 
 It's important to note that the "**Time without presence before release**" starts timing these 5 minutes **after** the motion delay has passed. So, in this case, if the motion delay of the sensor was set to 120 seconds (2 minutes), it will release/cancel 7 minutes after the sensor notified that it did not detect any motion anymore. If it detects motion during these 7 minutes, it will repeat the process.
 
-Finally, the automatic bookings never overwrite/overlap existing bookings. Take the example from before; If it automatically creates a meeting 9 minutes before an upcoming booking, this automatic booking will only take 9 minutes even though the room profile is configured to create a booking of 15 minutes.
+Finally, the automatic bookings never overwrite/overlap existing bookings. Take the example from before; if it automatically creates a meeting 9 minutes before an upcoming booking, this automatic booking will only take 9 minutes even though the room profile is configured to create a booking of 15 minutes.
 
 ## LEDs
 
