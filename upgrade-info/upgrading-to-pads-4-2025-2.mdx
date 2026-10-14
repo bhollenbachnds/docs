@@ -5,7 +5,7 @@ description: "Prerequisites and steps to upgrade an existing PADS4 installation 
 
 To upgrade to PADS4 2025.2, your current version must be at least 2022.3, meaning PADS4 2022.3 must be installed and running first.
 
-Versions 2022.2 or earlier will not auto-update to 2025.2; you must first perform an intermediate upgrade to 2022.3.
+Versions 2022.2 or earlier don't auto-update to 2025.2. You must first perform an intermediate upgrade to 2022.3.
 
 <Warning>
   User Accounts and Security Update
@@ -13,7 +13,7 @@ Versions 2022.2 or earlier will not auto-update to 2025.2; you must first perfor
   As of version 2025.1, the default users User1 and Administrator have been removed to enhance security. During setup, you must create a new user account. You create this user with the Root user, whose password you define during the installation process.
 </Warning>
 
-### **Release notes**
+### Release notes
 
 PADS4 2025.2 release notes are available \[[here](https://www.netdisplaysystems.com/downloads/ForwardLinks/PADS4relnotes.pdf)\]
 
@@ -44,14 +44,14 @@ Follow these steps:
 3. Open Enterprise applications → All applications.
 4. Search for and select the application you created for PADS4.
 5. In the left-hand Manage menu, select Single sign-on.
-6. On the Single sign-on page, in the Basic SAML Configuration section, click Edit.
-7. In the Basic SAML Configuration panel, under Reply URL (Assertion Consumer Service URL), click Add reply URL.
+6. On the Single sign-on page, in the Basic SAML Configuration section, select Edit.
+7. In the Basic SAML Configuration panel, under Reply URL (Assertion Consumer Service URL), select Add reply URL.
 8. In the new row, enter the domain-related Reply URL in the first column, for example:<br /><br />https://\[PADS4Server\]/rdx/nds.services.authentication.integration/api/v1/**pads**/Saml2/Acs<br />
    <Frame>
      ![Entra ID Basic SAML Configuration Reply URL](/images/install-pads4/EntraID_Basic_SAML_Configuration_Reply-URL.png "Entra ID Basic SAML Configuration Reply URL")
    </Frame>
 9. In this example, **pads** is the domain segment added to the existing Reply URL. If your domain is different from the default `pads` domain, replace `pads` in the URL with your own domain value.
-10. Click Save at the top of the panel to apply the changes.
+10. Select Save at the top of the panel to apply the changes.
 
 ## Viewer roles
 

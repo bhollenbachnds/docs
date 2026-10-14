@@ -5,11 +5,11 @@ description: "Reference of TCP, UDP, and HTTP ports used by PADS4 server and cli
 
 This page explains the usage of network ports by PADS4. Be aware that the port numbers mentioned are the default settings. Some ports can be adjusted.
 
-The network communication between the components of the PADS4 system uses TCP/IP. PADS4 now uses one port number to communicate and by default it's 7237.
+The network communication between the components of the PADS4 system uses TCP/IP. PADS4 now uses one port number to communicate, and by default it's 7237.
 
 If you are using a firewall on the PADS4 Server, you must open one or more of the above port numbers so that PADS4 can communicate over the network. 
 
-On the client side it's not necessary to open any port numbers in the firewall.
+On the client side, it's not necessary to open any port numbers in the firewall.
 
 ## PADS4 Server ports used with external connections
 
@@ -51,9 +51,9 @@ Port 80 and/or 443 (HTTP)
 ### Note
 
 <Note>
-  PADS4 has built-in features to automatically detect a PADS4 Server in your network. However a PADS4 Server can only be automatically detected when the UDP port number 3702 is not blocked by a firewall on the server PC or somewhere else in the network.
+  PADS4 has built-in features to automatically detect a PADS4 Server in your network. However, PADS4 can only detect a PADS4 Server automatically when UDP port 3702 is not blocked by a firewall on the server PC or elsewhere in the network.
 </Note>
 
 <Note>
-  With version 2021.3 a new mechanism is introduced which replicates both ways. Changes on the Sub/Backup Server are synchronized with the Main Server and changes from the Main are synchronized with the Sub/Backup Servers.
+  Version 2021.3 introduces a new mechanism that replicates both ways. Changes on the Sub/Backup Server are synchronized with the Main Server and changes from the Main are synchronized with the Sub/Backup Servers.
 </Note>

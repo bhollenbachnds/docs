@@ -3,7 +3,7 @@ title: "PADS4 Configuration"
 description: "Configure PADS4 after installation: set hosting ports, HSTS, TLS version, message broker, reverse proxy, root user, and Foundation storage."
 ---
 
-The PADS4 Configuration tool lets you define and manage key system settings for your installation. Use it post-install to tailor hosting, security, and services.
+The PADS4 Configuration tool lets you define and manage key system settings for your installation. Use it after installation to tailor hosting, security, and services.
 
 <Frame>
   ![Pads4config](/images/install-pads4/PADS4Config.png)
@@ -16,22 +16,22 @@ Define access ports for the PADS4 interface and secure them with HTTPS.
 - **HTTP Port**: For PADS4 CTRL Center (default: 80).
 - **HTTPS Port (SSL)**: Enables secure communication (default: 443).
 - **Enable HSTS**: Redirects HTTP to HTTPS automatically.
-- **TLS Version:** Select TLS 1.2\+ or 1.3. This is the minimum TLS version that is used. If you select TLS 1.2\+ and TLS 1.3 is available, TLS 1.3 is used.
+- **TLS Version:** Select TLS 1.2\+ or 1.3. This is the minimum TLS version PADS4 uses. If you select TLS 1.2\+ and TLS 1.3 is available, TLS 1.3 is used.
 
 ### Message broker configuration
 
-- **PADS4 Message Broker** This is the default setting and applicable for most installations.
-- **RabbitMQ** This is for legacy or specific installations.
+- **PADS4 Message Broker:** This is the default setting and applicable for most installations.
+- **RabbitMQ:** This is for legacy or specific installations.
 
 ### Reverse proxy configuration
 
-- **PADS4 Reverse Proxy** This is the default setting and applicable for most installations.
-- **NGinx** This is for legacy or specific installations.
+- **PADS4 Reverse Proxy:** This is the default setting and applicable for most installations.
+- **NGinx:** This is for legacy or specific installations.
 
 ### Root user configuration
 
 - **Username:** su/root
-- **Password:** Enter a strong password for su\\root user; [required for system login.](https://docs.pads4.com/ctrl-centre/account-creation)
+- **Password:** Enter a strong password for the su\\root user; [required for system login.](https://docs.pads4.com/ctrl-centre/account-creation)
 
 ### PADS4 Foundation Services
 
@@ -47,7 +47,7 @@ These settings are for PADS4 CMS 1.0.
 
 - **Default Language:** Set the default language of the database.
 - **Database Configuration:** Select the database type for storage:
-  - **SQLite** This is the default setting and applicable for most installations.
+  - **SQLite:** This is the default setting and applicable for most installations.
   - **Microsoft SQL Server**
     - Hostname and port for Microsoft SQL Server
     - Username and password for Microsoft SQL Server
@@ -66,9 +66,9 @@ To boost performance, disable unused microservices on the PADS4 Server. Configur
 
 ### Sensor database
 
-Click **Change Sensor Database**.
+Select **Change Sensor Database**.
 
-- Select the database type you want to use. You can select from the following options:
+- Select the database type you want to use. You can choose from the following options:
   - SQLite (default)
   - SQL Server
   - PostgreSQL
@@ -81,4 +81,4 @@ Click **Change Sensor Database**.
 
 ### Save and restart configuration
 
-Click **Apply** to save settings and automatically restart services (takes about 30 seconds).
+Select **Apply** to save settings and automatically restart services (takes about 30 seconds).
