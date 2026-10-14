@@ -4,7 +4,7 @@ description: "Register an OAuth 2.0 service as a CustomOAuth2 provider in PADS4 
 sidebarTitle: "Custom OAuth 2.0"
 ---
 
-Use a CustomOAuth2 provider to connect PADS4 to an external service that uses OAuth 2.0 and has no dedicated provider in PADS4. You register the provider once in PADS4 CTRL Center. PADS4 then gets an access token from the service and renews the token before it expires. In PADS4 Designer and PADS4 System Management, data providers and Data Vaults refer to the token of Custom OAuth2 registration.
+Use a CustomOAuth2 provider to connect PADS4 to an external service that uses OAuth 2.0 and has no dedicated provider in PADS4. You register the provider once in PADS4 CTRL Center. PADS4 then gets an access token from the service and renews the token before it expires. In PADS4 Designer and PADS4 System Management, data providers and Data Vaults refer to the token of the CustomOAuth2 registration.
 
 ## How the token stays valid
 
@@ -109,10 +109,10 @@ You do not enter the credentials of the external service in your data configurat
 
 <Tabs>
   <Tab title="PADS4 Designer">
-    1. In PADS4 Designer, open the data provider that supports Advanced Connection Settings
-    2. In the Advanced Connections Settings, select Add a header 
-    3. Select **oauth2** from the Predefined Header
-    4. Copy the Token you created in CTRL Center
+    1. In PADS4 Designer, open a data provider that supports **Advanced Connection Settings**.
+    2. In **Advanced Connection Settings**, select **Add a header**.
+    3. Select **oauth2** from **Predefined Header**.
+    4. Copy the token that you created in CTRL Center.
     5. Save the data provider and test the connection.
   </Tab>
 </Tabs>
