@@ -1,0 +1,24 @@
+---
+- title: Mise à niveau vers PADS4 2024.2
+- description: Vérifiez la version minimale requise pour mettre à niveau vers
+    PADS4 2024.2 et découvrez pourquoi vous devez mettre à jour le serveur
+    principal avant les sous-serveurs dans les configurations multi-serveurs.
+---
+
+Si vous souhaitez mettre à niveau vers PADS4 2024.2, votre version actuelle de PADS4 doit être au minimum PADS4 2022.3. Cela signifie que vous devez avoir PADS4 2022.3 installé et en cours d'exécution avant de mettre à jour vers 2024.2.
+
+Les versions 2022.2 et inférieures ne se mettent pas automatiquement à jour vers 2024.2. Vous devez d'abord effectuer une mise à niveau intermédiaire vers PADS4 2022.3.
+
+À partir de la version 2024.2, PADS4 inclut un nouveau système central de gestion des utilisateurs.
+
+Cela offre une approche plus rationalisée pour gérer les utilisateurs et les rôles grâce à la gestion des utilisateurs dans le PADS4 Web Portal.
+
+Étant donné qu'il s'agit d'un changement important, vous devez tenir compte de quelques points supplémentaires lors de la mise à niveau d'un environnement multi-serveurs, comme décrit ci-dessous.
+
+## Mise à niveau des installations multi-serveurs
+
+Pour mettre en œuvre la fonctionnalité de gestion centrale des utilisateurs, nous avons modifié la base de données PADS4. Pour cette raison, **vous devez d'abord mettre à jour le serveur principal PADS4** puis le sous-serveur. Il y a plusieurs raisons à cela :
+
+* Le serveur principal bloquera les connexions effectuées avec des versions de serveur antérieures à 2024.2, car la base de données PADS4 a changé et les anciennes implémentations ne comprendront pas les nouveaux objets utilisateur.
+* La migration des licences et des utilisateurs est uniquement exécutée sur le serveur principal, puis répliquée sur les sous-serveurs. Ainsi, si vous mettez à jour un sous-serveur en premier, vous pourriez ne plus être en mesure de vous connecter à ce serveur. Cela dépend de si l'utilisateur existe dans la base de données du service d'authentification.
+* Un sous-serveur 2024.2 ne se connectera pas aux serveurs principaux exécutant une version antérieure à 2024.2, pour la même raison que les serveurs principaux.
