@@ -534,7 +534,6 @@
                       },
                       {
                         "group": "Custom OAuth2",
-                        "hidden": true,
                         "pages": [
                           "ctrl-centre/administration/custom-o-auth2"
                         ]
