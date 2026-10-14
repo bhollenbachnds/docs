@@ -56,7 +56,7 @@ Keeping all runtime data under ProgramData means upgrades and even uninstalls ne
    - **Online activation**: enter the license key you received, then click **Activate**. The app contacts NDS's license server directly.
    - **Offline activation** (no internet access from this machine): copy the **Installation ID** shown on the page, request an activation file from NDS using that ID and your license key, then upload the `.lic` file here.
 5. Once activated, open **Settings** and configure, at minimum:
-   - **PADS4 connection** — base URL, service account username/password, domain. Use **Test PADS4 connection** to confirm before saving.
+   - **PADS4 connection**: base URL, service account username/password, domain. Use **Test PADS4 connection** to confirm before saving.
    - **Status monitor** poll interval (how often the app checks device connectivity).
    - **CMS monitor**, **Proof of play**, and **Email delivery (SMTP)** as needed. See the Manual for what each field does.
 6. Sign out, then sign in again via the **regular login page** using actual PADS4 user credentials. Verify that dashboards and reports load correctly. A PADS4 user needs **Management / All** claims to sign in.
@@ -92,7 +92,7 @@ Or use `services.msc` → **PADS4 Reporting Plugin**.
 
 ## 7. Upgrading
 
-Run the newer Setup.exe over the existing installation. It stops the running service, replaces the application files, and re-registers/starts the service automatically. Everything under `C:\ProgramData\PADS4 Reporting Plugin` — database, history, license activation, all settings — survives the upgrade untouched. You don't need a separate backup/restore step, though backing up `reporting.db` beforehand never hurts.
+Run the newer Setup.exe over the existing installation. It stops the running service, replaces the application files, and re-registers/starts the service automatically. Everything under `C:\ProgramData\PADS4 Reporting Plugin` survives the upgrade untouched. This includes the database, history, license activation, and all settings. You don't need a separate backup/restore step, though backing up `reporting.db` beforehand never hurts.
 
 ---
 
@@ -108,13 +108,13 @@ Remove via **Apps & features** (or the uninstaller in the install directory). Th
 
 **Service won't start after install**<br />Check the logs in `C:\ProgramData\PADS4 Reporting Plugin\logs\`. The most common cause is another application already using port 3001. Change the port in the service XML (see [Section 6](#6-service-operations)) and restart.
 
-**Sign-in page loads but sessions don't persist / login silently fails**<br />The secure-cookie mismatch described in [Section 5](#5-https-&-session-cookies): the app is being accessed over plain HTTP with secure cookies still enabled (the default). Turn the setting off for HTTP-only use, or put TLS in front.
+**Sign-in page loads but sessions don't persist / login silently fails**<br />The secure-cookie mismatch described in [Section 5](#5-https-&-session-cookies). You're accessing the app over plain HTTP while secure cookies are still enabled (the default). Turn the setting off for HTTP-only use, or put TLS in front.
 
 **"This installation has not been activated" blocking PADS4 user login**<br />The product license has expired or was never activated. An administrator needs to sign in and resolve it on the **License & activation** page.
 
 **Status monitor / CMS monitor not collecting anything**<br />Configure the PADS4 connection and service account in Settings (administrator sign-in). Settings apply immediately without a service restart. Secure cookies is the one exception.
 
-**Can't reach the app from another machine**<br />The firewall rule was skipped during setup. Re-add it: `netsh advfirewall firewall add rule name="PADS4 Reporting Plugin" dir=in action=allow protocol=TCP localport=3001` (elevated prompt), or re-run the installer with the firewall task checked.
+**Can't reach the app from another machine**<br />The firewall rule was skipped during setup. To re-add it, run `netsh advfirewall firewall add rule name="PADS4 Reporting Plugin" dir=in action=allow protocol=TCP localport=3001` in an elevated prompt. Alternatively, re-run the installer with the firewall task checked.
 
 **Scheduled reports not sending email**<br />Configure SMTP in Settings, then use **Send test email** on that same page before relying on a real schedule.
 
