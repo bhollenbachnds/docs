@@ -62,11 +62,11 @@ Microsoft renamed Azure Active Directory to Microsoft Entra ID. When authenticat
 
 ![Entra ID](/images/Entra-ID.png "Entra ID")
 
-3. Select **New registration**. On the **Register an application** page, set the values as follows.<br /> a. Set **Name** to a friendly name for your app.<br /> b. Set **Supported account types** to the choice that makes sense for your scenario.<br /> c. For **Redirect URI**, change the dropdown to **Public client (mobile & desktop)** and set the value to: **urn:ietf:wg:oauth:2.0:oob**
+3. Click **New registration**. On the **Register an application** page, set the values as follows.<br /> a. Set **Name** to a friendly name for your app.<br /> b. Set **Supported account types** to the choice that makes sense for your scenario.<br /> c. For **Redirect URI**, change the dropdown to **Public client (mobile & desktop)** and set the value to: **urn:ietf:wg:oauth:2.0:oob**
 
 ![Register An Application](/images/Register-an-application.jpg "Register An Application")
 
-4. Select **Register**. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them. You need them later to configure the calendar plugin in CMS.
+4. Click **Register**. On the next page, copy the values of the **Application (client) ID** and **Directory (tenant) ID** and save them. You need them later to configure the calendar plugin in CMS.
 
 # Configure for app-only authentication
 
@@ -77,25 +77,25 @@ To use application permissions, follow these additional steps.
 
 `{`<br />`  "resourceAppId": "00000002-0000-0ff1-ce00-000000000000",`<br />`  "resourceAccess": [`<br />`    {`<br />`      "id": "dc890d15-9560-4a4c-9b7f-a736ec74ec4e",`<br />`      "type": "Role"`<br />`    }`<br />`  ]`<br />`}`
 
-3. Select **Save**.
+3. Click **Save**.
 
 ![Manifest](/images/Manifest.jpg "Manifest")
 
 4. Select **API permissions** under **Manage**. Confirm that the **full_access_as_app** permission is listed.
-5. Select **Grant admin consent** for org and accept the consent dialog.
+5. Click **Grant admin consent** for org and accept the consent dialog.
 
 ![API Permissions](/images/API-permissions.jpg "API Permissions")
 
 To add Microsoft Teams meeting support to Workspace, continue with the steps below. Otherwise, skip to step 9.
 
-6. Select **Add a permission**.
-7. Select the **Microsoft Graph > Calendars.ReadWrite** permission, then select **Add**.
+6. Click **Add a permission**.
+7. Select the **Microsoft Graph > Calendars.ReadWrite** permission, then click **Add**.
 8. Grant admin consent to that permission.
 
 ![API Permissions Teams Meeting](/images/API-permissions-Teams-meeting.jpg "API Permissions Teams Meeting")
 
 9. Select **Certificates & Secrets** in the left-hand navigation under **Manage**.
-10. Select **New client secret**, enter a short description, and select **Add**.
+10. Click **New client secret**, enter a short description, and click **Add**.
 11. Copy the **Value** of the newly added client secret and save it. You need it later when configuring the calendar plugin in CMS.
 
 ![Entra ID Client Secret](/images/Entra-ID-client-secret.jpg "Entra ID Client Secret")
@@ -106,7 +106,7 @@ To add Microsoft Teams meeting support to Workspace, continue with the steps bel
 
 2. Navigate to **Office 365 admin center > USERS > Active Users**.
 
-3. To add a new user, select the "+" icon. The create new user account page appears.
+3. To add a new user, click the "+" icon. The create new user account page appears.
 
 4. On the **create new user account** page, complete the required information.
 
@@ -118,9 +118,9 @@ c. Deselect the **Make this person change their password the next time they sign
 
 d. Assign at least an Exchange Online license.
 
-e. Enter the email address of the recipient to whom the password must be sent. Select **Create**.
+e. Enter the email address of the recipient to whom the password must be sent. Click **Create**.
 
-f. Select **Close**.
+f. Click **Close**.
 
 <Note>
   By default, Exchange changes the subject of the meeting to the organizer's name. To change this behavior, change the Calendar Processing of the rooms that you use.
@@ -226,7 +226,7 @@ You can also select the Teams meeting option by default when creating events in 
 - Go to **CMS Administration**.
 - Open **Workspace application settings**.
 - Select **Enable online meeting creation by default**.
-- Select **Save**.
+- Click **Save**.
 
 ![Workspace Application Settings](/images/Workspace-application-settings.png "Workspace Application Settings")
 
