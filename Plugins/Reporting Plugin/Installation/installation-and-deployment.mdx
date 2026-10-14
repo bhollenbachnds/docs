@@ -2,7 +2,7 @@
 title: "Installation and deployment"
 ---
 
-## PADS4 Reporting Plugin — installation
+## Install the PADS4 Reporting Plugin
 
 **Windows installation guide (Setup.exe)**
 
@@ -53,13 +53,13 @@ Keeping all runtime data under ProgramData means upgrades and even uninstalls ne
 2. Sign in with the default credentials: `admin` **/** `changeme`.
 3. You must **change the password** immediately. The default is never usable beyond first login.
 4. You'll then land on **License & activation**. You cannot configure or use the application until you activate this installation:
-   - **Online activation**: enter the license key you received, click **Activate**. The app contacts NDS's license server directly.
+   - **Online activation**: enter the license key you received, then click **Activate**. The app contacts NDS's license server directly.
    - **Offline activation** (no internet access from this machine): copy the **Installation ID** shown on the page, request an activation file from NDS using that ID and your license key, then upload the `.lic` file here.
 5. Once activated, open **Settings** and configure, at minimum:
    - **PADS4 connection** — base URL, service account username/password, domain. Use **Test PADS4 connection** to confirm before saving.
-   - **Status monitor** poll interval (how often device connectivity is checked).
+   - **Status monitor** poll interval (how often the app checks device connectivity).
    - **CMS monitor**, **Proof of play**, and **Email delivery (SMTP)** as needed. See the Manual for what each field does.
-6. Sign out, then sign in again via the **regular login page** using actual PADS4 user credentials. Verify that dashboards and reports load correctly. A PADS4 user needs **Management / All** claims to be let in.
+6. Sign out, then sign in again via the **regular login page** using actual PADS4 user credentials. Verify that dashboards and reports load correctly. A PADS4 user needs **Management / All** claims to sign in.
 
 ---
 
@@ -92,19 +92,19 @@ Or use `services.msc` → **PADS4 Reporting Plugin**.
 
 ## 7. Upgrading
 
-Run the newer Setup.exe over the existing installation. It stops the running service, replaces the application files, and re-registers/starts the service automatically. Everything under `C:\ProgramData\PADS4 Reporting Plugin` — database, history, license activation, all settings — survives the upgrade untouched. No separate backup/restore step is required, though backing up `reporting.db` beforehand never hurts.
+Run the newer Setup.exe over the existing installation. It stops the running service, replaces the application files, and re-registers/starts the service automatically. Everything under `C:\ProgramData\PADS4 Reporting Plugin` — database, history, license activation, all settings — survives the upgrade untouched. You don't need a separate backup/restore step, though backing up `reporting.db` beforehand never hurts.
 
 ---
 
 ## 8. Uninstalling
 
-Remove via **Apps & features** (or the uninstaller in the install directory). The service and firewall rule are removed, but the data directory is **deliberately left in place** so a later reinstall picks up the existing database and license. The uninstaller shows where it is. Delete `C:\ProgramData\PADS4 Reporting Plugin` manually for a complete wipe.
+Remove via **Apps & features** (or the uninstaller in the install directory). The uninstaller removes the service and firewall rule. It **deliberately leaves the data directory in place** so a later reinstall picks up the existing database and license. The uninstaller shows where it is. Delete `C:\ProgramData\PADS4 Reporting Plugin` manually for a complete wipe.
 
 ---
 
 ## 9. Troubleshooting
 
-**The installer warns about an unknown publisher (SmartScreen)**<br />The installer is not yet code-signed. Choose "More info → Run anyway" if you obtained it from NDS directly.
+**The installer warns about an unknown publisher (SmartScreen)**<br />The installer is not yet code-signed. Click "More info → Run anyway" if you obtained it from NDS directly.
 
 **Service won't start after install**<br />Check the logs in `C:\ProgramData\PADS4 Reporting Plugin\logs\`. The most common cause is another application already using port 3001. Change the port in the service XML (see [Section 6](#6-service-operations)) and restart.
 
