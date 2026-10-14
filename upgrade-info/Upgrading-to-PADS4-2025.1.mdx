@@ -3,9 +3,9 @@ title: "Upgrading from before 2025.1"
 description: "Prerequisites and steps to upgrade an existing PADS4 installation to version 2025.1, including HSTS, user management, and version 2022.3 baseline."
 ---
 
-If you want to upgrade to PADS4 2025.1 your current PADS4 version needs to be at least PADS4 2022.3. That means that you will need to have PADS4 2022.3 installed & running before updating to 2025.1.
+If you want to upgrade to PADS4 2025.1, your current PADS4 version must be at least PADS4 2022.3. That means you need to have PADS4 2022.3 installed and running before you update to 2025.1.
 
-Any version before 2022.2 and lower will not automatically update to 2025.1, and you will need to perform an intermediate upgrade first to PADS4 2022.3.
+Versions 2022.2 and lower don't automatically update to 2025.1. You need to perform an intermediate upgrade to PADS4 2022.3 first.
 
 Release notes for PADS4 Version 2025.1 [can be found here.](https://www.netdisplaysystems.com/downloads/ForwardLinks/PADS4relnotes.pdf)
 
@@ -15,7 +15,7 @@ Release notes for PADS4 Version 2025.1 [can be found here.](https://www.netdispl
   As of version 2025.1, the default users User1 and Administrator have been removed to enhance security. During setup, you must create a new user account. You create this user with the Root user, whose password you define during the installation process.
 </Warning>
 
-In our latest release, 2025.1, we are introducing our new user management system.
+In our latest release, 2025.1, we introduce our new user management system.
 
 <Warning>
   This fundamental change moves the User Management settings from the System Management application to the PADS4 Web Portal.
@@ -27,7 +27,7 @@ In our latest release, 2025.1, we are introducing our new user management system
 
 ### HSTS
 
-From 2023.2 onwards, we have implemented a new security feature with the PADS4 configuration wizard called HSTS.
+From 2023.2 onwards, the PADS4 configuration wizard includes a new security feature called HSTS.
 
 <img
   className="block"
@@ -35,8 +35,8 @@ From 2023.2 onwards, we have implemented a new security feature with the PADS4 c
   alt="HSTS"
 />
 
-The HSTS toggle will enable HTTP Strict Transport Security header on all http requests. This header will instruct smart devices (PADS4 HTML5 Viewers, PADS4 CTRL Center, PADS4 CMS (legacy)) to use the HTTPS protocol instead of HTTP. For example, if you connect to [http://pads4server.com/](http://pads4server.com/), all connections on that web app will be upgraded to HTTPS.
+The HSTS toggle enables the HTTP Strict Transport Security header on all http requests. This header instructs smart devices (PADS4 HTML5 Viewers, PADS4 CTRL Center, PADS4 CMS (legacy)) to use the HTTPS protocol instead of HTTP. For example, if you connect to [http://pads4server.com/](http://pads4server.com/), all connections on that web app are upgraded to HTTPS.
 
 <Warning>
-  Important: You need to have HTTPS enabled and have a valid certificate. If the certificate is not valid, any connection from HTTP or HTTPS will not work. This means that PADS4 devices on HTTP will no longer connect to the server and the connection will be lost. Make sure to always check if your certificate is valid and working on HTTPS, before enabling HSTS.
+  Important: You need to have HTTPS enabled and have a valid certificate. If the certificate is not valid, any connection from HTTP or HTTPS doesn't work. This means that PADS4 devices on HTTP no longer connect to the server, and the connection is lost. Always check that your certificate is valid and working on HTTPS before you enable HSTS.
 </Warning>
