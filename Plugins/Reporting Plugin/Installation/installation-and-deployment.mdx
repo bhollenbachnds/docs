@@ -18,7 +18,7 @@ For how to use the application after installation, see our Administration Guide.
 | :-- | :-- |
 | OS | Windows Server 2019\+ or Windows 10/11 (64-bit) |
 | Access | Administrator rights to run the installer |
-| Network | The machine must be able to reach the PADS4 instance. Internet access is only needed for **online** license activation. Offline activation is available for air-gapped sites |
+| Network | The machine must be able to reach the PADS4 instance. Internet access is only needed for **online** license activation. Offline activation is available for air-gapped sites. |
 | PADS4 | A reachable PADS4 instance, plus a service account with **Management / All** claims for background monitoring |
 | Disk | Small to start; grows with retained history, bounded by the retention windows configured in Settings |
 
@@ -84,7 +84,7 @@ Or use `services.msc` → **PADS4 Reporting Plugin**.
 | Path | Purpose |
 | :-- | :-- |
 | `C:\Program Files\PADS4 Reporting Plugin` | Application files (do not modify, except the service XML below) |
-| `C:\Program Files\PADS4 Reporting Plugin\PADS4ReportingService.xml` | Service definition — edit the `&lt;arguments&gt;` line to change the port (`--port &lt;n&gt;`) or database path, then restart the service |
+| `C:\Program Files\PADS4 Reporting Plugin\PADS4ReportingService.xml` | Service definition — edit the `<arguments>` line to change the port (`--port <n>`) or database path, then restart the service |
 | `C:\ProgramData\PADS4 Reporting Plugin\reporting.db` | SQLite database (settings, history, license state) |
 | `C:\ProgramData\PADS4 Reporting Plugin\logs\` | Service logs |
 
