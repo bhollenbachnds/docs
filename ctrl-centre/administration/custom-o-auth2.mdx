@@ -1,4 +1,135 @@
 ---
-title: "Custom OAuth2"
-description: "Configure a custom OAuth2 identity provider in PADS4 CTRL Center to authenticate users against third-party services that support the OAuth2 protocol."
+title: "Connect a custom OAuth 2.0 provider"
+description: "Register any OAuth 2.0 service as a CustomOAuth2 provider in PADS4 CTRL Center, create a token that PADS4 keeps valid, and use it in data providers and Data Vaults."
+sidebarTitle: "Custom OAuth 2.0"
 ---
+
+Use a CustomOAuth2 provider to connect PADS4 to an external service that uses OAuth 2.0 and has no dedicated provider in PADS4. You register the provider once in PADS4 CTRL Center. PADS4 then gets an access token from the service and renews the token before it expires. In PADS4 Designer and PADS4 System Management, data providers and Data Vaults refer to the token of Custom OAuth2 regastration.
+
+## How the token stays valid
+
+An OAuth 2.0 access token is valid for a limited time. The external service sets this time in the token response.
+
+PADS4 reads the expiration date of each token and gets a new token from the token endpoint before the current token expires. The token ID that you use in your data providers and Data Vaults stays the same. You do not need to update your presentations or data configuration when PADS4 renews the token.
+
+<Note>
+  PADS4 cannot renew a token when the external service rejects the request, for example because the client secret expired or an administrator revoked the consent. In that case, fix the cause and re-authenticate the token. 
+</Note>
+
+## Before you begin
+
+- You need access to **Credentials** in PADS4 CTRL Center. 
+- Register PADS4 as an application (client) at the external service. Collect these values from the service:
+  - The client ID and the client secret
+  - The URL of the token endpoint
+  - The URL of the authorization endpoint, if the service uses a grant type with user sign-in
+  - The grant type, the scope, and the audience that the service requires
+
+<Tip>
+  Write down when the client secret expires at the external service. Create a new secret and update the provider in PADS4 before that date, so the token renewal does not stop.
+</Tip>
+
+## Register the CustomOAuth2 provider
+
+<Steps>
+  <Step title="Open the providers">
+    In PADS4 CTRL Center, go to **Administration** > **Credentials**, and then select **Providers**.
+  </Step>
+  <Step title="Add a CustomOAuth2 provider">
+    Select **New**, and then select **CustomOAuth2**. The **Create a new CustomOAuth2 app registration** dialog opens.
+  </Step>
+  <Step title="Enter the provider settings">
+    Enter the values that you collected from the external service. Fields marked with an asterisk (\*) are required. See [CustomOAuth2 settings](#customoauth2-settings) for a description of each field.
+  </Step>
+  <Step title="Save the provider">
+    Select **Create**. The provider appears in the list with the provider name **CustomOAuth2**.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: CTRL Center > Credentials > Providers > New > CustomOAuth2. The "Create a new CustomOAuth2 app registration" dialog, top part with App name to Scope. Crop to the dialog. */}
+
+<Frame caption="The Create a new CustomOAuth2 app registration dialog">
+  <img
+    src="/images/NewOAuth2.png"
+    alt="New O Auth2"
+    title="New O Auth2"
+  />
+</Frame>
+
+### CustomOAuth2 settings
+
+| Setting | Description |
+| --- | --- |
+| **App name** | A name that helps you recognize the provider later, for example `Exchange Calendar`. Maximum 48 characters. Required. |
+| **App (client) id** | The client ID of the application that you registered at the external service. Required. |
+| **Client secret** | The client secret of that application. Required. |
+| **Token endpoint** | The URL where PADS4 requests and renews access tokens, for example `https://login.example.com/oauth2/token`. Required. |
+| **Authorization endpoint** | The URL where a user signs in and gives consent. Fill in this field only for a grant type with user sign-in, such as `authorization_code`. |
+| **User info endpoint** | The URL where PADS4 gets information about the signed-in user. Use it together with **User info strategy** set to **Endpoint**. |
+| **Grant Type** | The OAuth 2.0 grant type that the service uses, for example `client_credentials` or `authorization_code`. |
+| **Audience** | The API or resource that the token is for. Fill in this field only if the service requires it. |
+| **Scope** | The permissions that PADS4 requests, as the service expects them. Separate several scopes with a space. |
+| **User info strategy** | How PADS4 gets the user details for the token:<br />**-- None --**: PADS4 does not read user details.<br />**JWT**: PADS4 reads the user details from the claims in the token.<br />**Endpoint**: PADS4 gets the user details from the **User info endpoint**. |
+| **User ID claim** | The claim that contains the unique ID of the user, for example `sub`. Used with **JWT** or **Endpoint**. |
+| **Username claim** | The claim that contains the user name, for example `preferred_username`. Used with **JWT** or **Endpoint**. |
+| **Email claim** | The claim that contains the email address of the user, for example `email`. Used with **JWT** or **Endpoint**. |
+
+To change a provider later, go to **Providers**, select the more options menu (**⋮**) next to the provider, and then select **Edit**.
+
+<Warning>
+  After you edit a provider, re-authenticate its tokens. Until you do, the tokens can still use the old settings or stop working. 
+</Warning>
+
+## Create a token
+
+A token is the connection between PADS4 and the external service. You use the token ID in Designer and System Management.
+
+<Steps>
+  <Step title="Open the overview">
+    In **Credentials**, select **Overview**.
+  </Step>
+  <Step title="Select the provider">
+    In the **Providers** list, select the CustomOAuth2 provider that you created.
+  </Step>
+  <Step title="Connect to the service">
+    Select **Connect**. If the grant type requires a user sign-in, the sign-in page of the external service opens. Sign in with the account that PADS4 must use, and give consent.
+  </Step>
+  <Step title="Copy the token ID">
+    The new token appears in the table with its **Token**, **Name** and **RLS Role**. Select the copy icon next to the token ID to copy it.
+
+    ![Custom O Auth Token](/images/CustomOAuthToken.png "Custom O Auth Token")
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: CTRL Center > Credentials > Overview with a CustomOAuth2 provider selected and one token in the table. Show the Connect button and the copy icon. */}
+
+## Use the token in a data provider or Data Vault
+
+You do not enter the credentials of the external service in your data configuration. You refer to the token instead. PADS4 adds the current access token to each request.
+
+<Tabs>
+  <Tab title="PADS4 Designer">
+    1. In PADS4 Designer, open the data provider that supports Advanced Connection Settings
+    2. In the Advanced Connections Settings, select Add a header 
+    3. Select **oauth2** from the Predefined Header
+    4. Copy the Token you created in CTRL Center
+    5. Save the data provider and test the connection.
+  </Tab>
+</Tabs>
+
+<Check>
+  The data provider or Data Vault shows data from the external service. The data keeps updating after the first access token expires, because PADS4 renews the token.
+</Check>
+
+## Manage tokens
+
+In **Credentials** > **Overview**, select the provider, and then select the more options menu (**⋮**) next to a token:
+
+- **Re-authenticate**: Gets a new token from the external service with the current provider settings. Use it after you edit the provider, after you replace the client secret, or when PADS4 cannot renew the token. The token ID stays the same. 
+- **Delete**: Removes the token. Data providers and Data Vaults that use this token can no longer get data from the external service.
+
+## Related
+
+- [Credentials](/ctrl-centre/administration/credentials)
+- [Microsoft Power BI in a presentation](/ctrl-centre/administration/power-bi-in-presentation)
+- [Register a Canva provider in CTRL Center](/pads-4-canva-integration)
