@@ -113,7 +113,7 @@ Sélectionnez ensuite le bouton **Add**.
   Nous vous recommandons vivement de créer un groupe d'utilisateurs PADS4 CMS avec Windows Server AD comme source.
 </Warning>
 
-## Étape 10 : Configurez Single Sign On (SSO)
+## Étape 10 : Configurez le Single Sign-On (SSO)
 
 Sélectionnez **"Single sign-on option"** dans le volet de gauche puis **"SAML"**.
 
@@ -131,7 +131,7 @@ Sélectionnez "Add identifier" et **"Add Reply URL"** et fournissez la valeur se
 
 **Identifier**: URL PADS4 CMS locale avec /Saml2 **(par exemple :** [https://robin.pads365.com/crystal/domain/Saml2](https://robin.pads365.com/crystal/domain/Saml2))
 
-Si un port réseau unique est utilisé, assurez-vous de l'inclure dans la chaîne ci-dessus.
+Si vous utilisez un port réseau unique, assurez-vous de l'inclure dans la chaîne ci-dessus.
 
 Par exemple : [https://robin.pads365.com:444/crystal/domain/Saml2](https://robin.pads365.com:444/crystal/domain/Saml2)
 
@@ -143,7 +143,7 @@ Si vous utilisez le nom de domaine par défaut, ce sera : [https://robin.pads365
 
 Reply URL : URL PADS4 CMS locale avec /Saml2/Acs **(par exemple :** [**https://robin.pads365.com/crystal/domain/Saml2/Acs**](https://robin.pads365.com/crystal/domain/Saml2/Acs))
 
-Si un port réseau unique est utilisé, assurez-vous de l'inclure dans la chaîne ci-dessus.
+Si vous utilisez un port réseau unique, assurez-vous de l'inclure dans la chaîne ci-dessus.
 
 Par exemple : [https://robin.pads365.com:444/crystal/domain/Saml2/Acs](https://robin.pads365.com:444/crystal/domain/Saml2/Acs)
 
@@ -158,7 +158,7 @@ Si vous utilisez le nom de domaine par défaut, ce sera :
 <Info>
   **Remarque :** Si vous avez configuré SSO sur une version antérieure à 2023.1, le nom de domaine n'était pas requis dans l'URL lors de l'utilisation d'un seul domaine. À partir de la version 2023.1, le nom de domaine est requis dans l'URL à la fois pour les configurations à un et à plusieurs domaines.
 
-  Par conséquent, lors de la mise à jour d'une version antérieure à 2023.1 avec SSO configuré vers la dernière version, assurez-vous d'ajouter le domaine à la fois à l'Identifier et à la Reply URL.
+  Par conséquent, vous devez mettre à jour la configuration si vous passez d'une version antérieure à 2023.1 avec SSO configuré à la dernière version. Assurez-vous d'ajouter le domaine à la fois à l'Identifier et à la Reply URL.
 
   **Assurez-vous de "Save" ces configurations.**
 </Info>
