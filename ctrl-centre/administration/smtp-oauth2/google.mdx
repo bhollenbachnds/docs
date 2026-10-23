@@ -24,7 +24,7 @@ This document provides step-by-step instructions for creating OAuth2 credentials
 
 ## **2. Enable Gmail API**
 
-- In your newly created project, go to **API's & Services \> Library**
+- In your newly created project, go to **APIs & Services \> Library**
 - Search for "Gmail API" in the search bar
 
 ![Google Smtp3](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp3.png)
@@ -36,7 +36,7 @@ This document provides step-by-step instructions for creating OAuth2 credentials
 
 ## **3. Configure OAuth consent screen**
 
-- Navigate to **API's & Services \> OAuth consent screen**
+- Navigate to **APIs & Services \> OAuth consent screen**
 
 ![Google Smtp5](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp5.png)
 
@@ -55,7 +55,7 @@ This document provides step-by-step instructions for creating OAuth2 credentials
 
 ## **4. Create OAuth2 credentials**
 
-- Go to **API's & Services \> Clients**
+- Go to **APIs & Services \> Clients**
 
 ![Google Smtp7](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp7.png)
 
@@ -65,7 +65,7 @@ This document provides step-by-step instructions for creating OAuth2 credentials
 
 ![Google Smtp8](/images/ctrl-centre/administration/smtp-oauth2/Google-smtp8.png)
 
-- Under **Authorized redirect URI's**, click **Add URI** and enter:
+- Under **Authorized redirect URIs**, click **Add URI** and enter:
   - http://\<host\>:\<port\>/credentials/generic/authorize/callback
     - **Host:** DNS name or IP address of your PADS4 Web Portal
     - **Port:** Optional, if the PADS4 Web Portal is not using the default ports for HTTP or HTTPS, you should specify the port number.
