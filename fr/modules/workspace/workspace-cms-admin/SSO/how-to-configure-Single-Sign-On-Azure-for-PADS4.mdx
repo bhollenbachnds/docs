@@ -9,7 +9,7 @@ Le processus ci-dessous vous aide à configurer votre installation PADS4 CMS pou
 
 Vous devez configurer l'instance Azure pour permettre aux utilisateurs de votre organisation d'accéder à l'application PADS4 (Legacy) CMS. Pour activer cela, veuillez suivre les étapes de ce document :
 
-## Étape 1 : Naviguez et connectez-vous à votre page "Azure portal" en tant qu'administrateur
+## Étape 1 : Connectez-vous au "Azure portal" en tant qu'administrateur
 
 [https://portal.azure.com/](https://portal.azure.com/)
 
@@ -17,7 +17,7 @@ Vous devez configurer l'instance Azure pour permettre aux utilisateurs de votre 
 
 ![Microsftentra ID Pn](/images/MicrosftentraID.png)
 
-## Étape 3 : Dans le panneau de gauche, sélectionnez "Enterprise Applications"
+## Étape 3 : Dans le volet de gauche, sélectionnez "Enterprise Applications"
 
 ![Enterprise Applications Pn](/images/EnterpriseApplications.png)
 
@@ -37,7 +37,7 @@ Vous devez configurer l'instance Azure pour permettre aux utilisateurs de votre 
 
 ![Step5 Pn](/images/step5.png)
 
-## Étape 6 : Remplissez les informations demandées dans le formulaire et sélectionnez create
+## Étape 6 : Remplissez les informations demandées dans le formulaire et sélectionnez **Create**
 
 ![Step6 Pn](/images/step6.png)
 
@@ -47,18 +47,18 @@ Vous devez configurer l'instance Azure pour permettre aux utilisateurs de votre 
 
 ## Étape 7 : Créez un groupe de connecteurs / connecteur d'application proxy
 
-Sélectionnez la **Manage Application Proxy Connectors** **section**
+Sélectionnez la section **Manage Application Proxy Connectors**.
 
 ![Step7 Pn](/images/step7.png)
 
-1. Dans le menu Application Proxy, sélectionnez + Download ConnectorService
+1. Dans le menu Application Proxy, sélectionnez **+ Download ConnectorService**.
 2. Acceptez les conditions et téléchargez le fichier **<u>AADApplicationProxyConnectorInstaller.exe</u>** sur le PC serveur.
 3. Exécutez l'installateur et assurez-vous de valider vos identifiants d'administrateur Azure pendant la configuration.
 
    ![Step8 Pn](/images/step8.png)
-4. Une fois l'installation terminée, sélectionnez la **+New Connector** Group section
+4. Une fois l'installation terminée, sélectionnez la section **+New Connector Group**.
 5. Créez un nom par défaut pour votre connexion. Par exemple : **SSO Connector**
-6. Sélectionnez votre machine serveur dans la liste Connector
+6. Sélectionnez votre machine serveur dans la liste **Connector**.
 7. Sélectionnez la région où se trouve votre machine.
 
    ![Step9 Pn](/images/step9.png)
@@ -67,7 +67,7 @@ Sélectionnez la **Manage Application Proxy Connectors** **section**
 
 ## Création d'une application locale dans Azure
 
-1. Sélectionnez **Add an on-premises application**
+1. Sélectionnez **Add an on-premises application**.
 
    ![Step10 Pn](/images/step10.png)
 
@@ -75,7 +75,7 @@ Sélectionnez la **Manage Application Proxy Connectors** **section**
   Ignorez cette étape (8) si vous n'utilisez pas d'Application Proxy.
 </Warning>
 
-## Étape 8 : Remplissez les informations demandées dans le formulaire et sélectionnez create
+## Étape 8 : Remplissez les informations demandées dans le formulaire et sélectionnez **Create**
 
 ![Addyouownonpromiseapp Pn](/images/Addyouownonpromiseapp.png)
 
@@ -89,11 +89,11 @@ Pre-authentication : Azure Active Directory
 
 Connector Group : SSO Connector (default). <u>C'est le groupe de connecteurs que vous venez de configurer</u>
 
-Sélectionnez ensuite le bouton add
+Sélectionnez ensuite le bouton **Add**.
 
-## Étape 9 : Naviguez vers l'application nouvellement créée
+## Étape 9 : Accédez à l'application nouvellement créée
 
-1. Naviguez vers l'application nouvellement créée en sélectionnant **"Enterprise Applications"** et utilisez la **barre de recherche** pour trouver votre application. **Sélectionnez-la** puis naviguez vers "Users and Groups" :
+1. Sélectionnez **"Enterprise Applications"**, puis utilisez la **barre de recherche** pour trouver votre application. **Sélectionnez-la**, puis accédez à "Users and Groups" :
 
 ![Userandgroups Pn](/images/userandgroups.png)
 
@@ -105,7 +105,7 @@ Sélectionnez ensuite le bouton add
 
 ![Add Pn](/images/add.png)
 
-4. Utilisez la barre de recherche pour rechercher un utilisateur ou un groupe. Sélectionnez **"select"** et **"assign"** une fois terminé
+4. Utilisez la barre de recherche pour rechercher un utilisateur ou un groupe. Une fois terminé, sélectionnez **"Select"**, puis **"Assign"**.
 
 ![Add2 Pn](/images/add2.png)
 
@@ -285,7 +285,7 @@ Copiez la chaîne à côté de l'option **"Identifier (Entity ID)"**.
 
 Sélectionnez **"home"** dans portal.azure.com et sélectionnez **"Microsoft Entra ID"**
 
-Naviguez vers **"Groups"** dans le volet de gauche
+Accédez à **"Groups"** dans le volet de gauche
 
 Recherchez le groupe que vous avez assigné dans votre application et copiez l'**"Object Id"**
 
