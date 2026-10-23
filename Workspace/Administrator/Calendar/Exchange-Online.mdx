@@ -3,12 +3,12 @@ title: "Exchange Online"
 description: "Register the PADS4 app in Microsoft Entra ID for Exchange Online, create a service account, manage room lists and impersonation, and migrate to Graph API."
 ---
 
+<Danger>
+  PADS4 version 2026.1 adds support for the Microsoft Graph API.
+</Danger>
+
 <Warning>
   [EWS in Exchange Online will be End of Life in Q4 - 2026](https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online). If you have an existing application registered as below, migrate it to use the Microsoft Graph API as follows:
-
-  <Danger>
-    PADS4 version 2026.1 adds support for the Microsoft Graph API.
-  </Danger>
 
   Make sure to add the following permissions to your existing application registration:
 
@@ -47,6 +47,7 @@ description: "Register the PADS4 app in Microsoft Entra ID for Exchange Online, 
 
   - Change the calendar provider from **Exchange O365** to **Graph API**.  
   - Configure the **Webhook Notification URL**, if required. This setting is optional when the notification endpoint uses the same DNS host name already configured for the application.  
+  - In case PADS4 is deployed in a secure environment, make sure the following domain is accessible on the network: [graph.microsoft.com](https://graph.microsoft.com) 
 
   <Note>
     _The webhook notification endpoint must be publicly accessible over HTTPS to receive Microsoft Graph change notifications._
@@ -103,11 +104,8 @@ To add Microsoft Teams meeting support to Workspace, continue with the steps bel
 # Create a service account user
 
 1. Log in to your Office 365 as an administrator.
-
 2. Navigate to **Office 365 admin center > USERS > Active Users**.
-
 3. To add a new user, click the "+" icon. The create new user account page appears.
-
 4. On the **create new user account** page, complete the required information.
 
 a. Enter the first name, last name, display name, user name, and your email domain.
@@ -144,7 +142,6 @@ The subject now stays as you specified it when creating the booking and doesn't 
 To configure an application access policy and limit the scope of application permissions:
 
 1. Connect to Exchange Online PowerShell. For details, see Connect to Exchange Online PowerShell.
-
 2. Identify the app's client ID and a mail-enabled security group to restrict the app's access.
 
 a. Identify the app's application (client) ID in the Azure app registration portal.
