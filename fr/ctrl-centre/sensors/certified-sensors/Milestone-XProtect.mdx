@@ -61,7 +61,7 @@ Un **compte utilisateur SQL** est nécessaire pour accéder à la base de donné
 1. **Connectez-vous à SQL Server** via SSMS.
 2. Développez **Security** > **Logins**.
 3. **Faites un clic droit** sur **Logins** et sélectionnez **New Login**.
-4. **Entrez un nom de connexion** (par exemple, `PADS4Reader`pads4\_milestone\_user).
+4. **Entrez un nom de connexion** (par exemple, `PADS4Reader`).
 5. Sélectionnez **SQL Server Authentication** et **définissez un mot de passe**.
 6. **Décochez "Enforce password policy"**.
 7. Définissez la **base de données par défaut** à `Surveillance`.
@@ -99,7 +99,7 @@ GRANT RECEIVE ON QueryNotificationErrorsQueue TO [PADS4Reader]
 1. **Remplacez** `<password>` par un mot de passe sécurisé.
 2. **Exécutez le script** dans SSMS.
 
-Après l'exécution, le compte `PADS4Reader`pads4\_milestone\_user **est créé et configuré**.
+Après l'exécution, le compte `PADS4Reader` **est créé et configuré**.
 
 ***
 
@@ -108,7 +108,7 @@ Après l'exécution, le compte `PADS4Reader`pads4\_milestone\_user **est créé 
 1. **Ouvrez PADS4 CTRL Center**.
 2. **Naviguez vers la section Sensors**.
 3. **Ajoutez un nouveau capteur Milestone**.
-4. Entrez l'**adresse du serveur SQL, le nom de la base de données, le nom d'utilisateur (`PADS4Reader`pads4\_milestone\_user), et le mot de passe**.
+4. Entrez l'**adresse du serveur SQL, le nom de la base de données, le nom d'utilisateur (`PADS4Reader`), et le mot de passe**.
 
 Une fois configuré, **PADS4 peut récupérer les alarmes depuis Milestone XProtect**.
 
