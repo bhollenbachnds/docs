@@ -39,7 +39,7 @@ description: "Register the PADS4 app in Microsoft Entra ID for Exchange Online, 
     </tbody>
   </table>
 
-  After updating the permissions, you must grant **Administrator Consent** to the application before the service can authenticate successfully.
+  After updating the permissions, you must grant admin consent to the application before the service can authenticate successfully.
 
   Within PADS4 - CMS 1.0 Admin, you must then update the Calendar configuration: 
 
@@ -47,7 +47,7 @@ description: "Register the PADS4 app in Microsoft Entra ID for Exchange Online, 
 
   - Change the calendar provider from **Exchange O365** to **Graph API**.  
   - Configure the **Webhook Notification URL**, if required. This setting is optional when the notification endpoint uses the same DNS host name already configured for the application.  
-  - In case PADS4 is deployed in a secure environment, make sure the following domain is accessible on the network: [graph.microsoft.com](https://graph.microsoft.com) 
+  - If you deploy PADS4 in a secure environment, make sure the following domain is accessible on the network: [graph.microsoft.com](https://graph.microsoft.com) 
 
   <Note>
     _The webhook notification endpoint must be publicly accessible over HTTPS to receive Microsoft Graph change notifications._
@@ -116,7 +116,7 @@ c. Deselect the **Make this person change their password the next time they sign
 
 d. Assign at least an Exchange Online license.
 
-e. Enter the email address of the recipient to whom the password must be sent. Click **Create**.
+e. Enter the email address of the person who should receive the password. Click **Create**.
 
 f. Click **Close**.
 
