@@ -1,0 +1,133 @@
+---
+- title: Connecter un fournisseur OAuth 2.0 personnalisé
+- description: Enregistrez un service OAuth 2.0 en tant que fournisseur
+    CustomOAuth2 dans PADS4 CTRL Center, créez un jeton que PADS4 renouvelle, et
+    utilisez-le dans les fournisseurs de données et les Data Vaults.
+- sidebarTitle: Custom OAuth 2.0
+---
+
+Utilisez un fournisseur CustomOAuth2 pour connecter PADS4 à un service externe qui utilise OAuth 2.0 et ne dispose pas de fournisseur dédié dans PADS4. Vous enregistrez le fournisseur une seule fois dans PADS4 CTRL Center. PADS4 obtient ensuite un jeton d'accès auprès du service et renouvelle le jeton avant son expiration. Dans PADS4 Designer et PADS4 System Management, les fournisseurs de données et les Data Vaults font référence au jeton de l'enregistrement CustomOAuth2.
+
+## Comment le jeton reste valide
+
+Un jeton d'accès OAuth 2.0 est valide pour une durée limitée. Le service externe définit cette durée dans la réponse du jeton.
+
+PADS4 lit la date d'expiration de chaque jeton et obtient un nouveau jeton auprès du point de terminaison du jeton avant l'expiration du jeton actuel. L'ID du jeton que vous utilisez dans vos fournisseurs de données et Data Vaults reste le même. Vous n'avez pas besoin de mettre à jour vos présentations ou votre configuration de données lorsque PADS4 renouvelle le jeton.
+
+<Note>
+  PADS4 ne peut pas renouveler un jeton lorsque le service externe rejette la demande, par exemple parce que le secret client a expiré ou qu'un administrateur a révoqué le consentement. Dans ce cas, corrigez la cause et ré-authentifiez le jeton.
+</Note>
+
+## Avant de commencer
+
+* Vous devez avoir accès à **Credentials** dans PADS4 CTRL Center.
+* Enregistrez PADS4 en tant qu'application (client) auprès du service externe. Collectez ces valeurs auprès du service :
+  * L'ID client et le secret client
+  * L'URL du point de terminaison du jeton
+  * L'URL du point de terminaison d'autorisation, si le service utilise un type d'octroi avec connexion utilisateur
+  * Le type d'octroi, la portée et l'audience requis par le service
+
+<Tip>
+  Notez la date d'expiration du secret client auprès du service externe. Créez un nouveau secret et mettez à jour le fournisseur dans PADS4 avant cette date, afin que le renouvellement du jeton ne s'arrête pas.
+</Tip>
+
+## Enregistrer le fournisseur CustomOAuth2
+
+<Steps>
+  <Step title="Ouvrir les fournisseurs">
+    Dans PADS4 CTRL Center, accédez à **Administration** > **Credentials**, puis sélectionnez **Providers**.
+  </Step>
+
+  <Step title="Ajouter un fournisseur CustomOAuth2">
+    Sélectionnez **New**, puis sélectionnez **CustomOAuth2**. La boîte de dialogue **Create a new CustomOAuth2 app registration** s'ouvre.
+  </Step>
+
+  <Step title="Saisir les paramètres du fournisseur">
+    Saisissez les valeurs que vous avez collectées auprès du service externe. Les champs marqués d'un astérisque (\*) sont obligatoires. Consultez [CustomOAuth2 settings](#customoauth2-settings) pour une description de chaque champ.
+  </Step>
+
+  <Step title="Enregistrer le fournisseur">
+    Sélectionnez **Create**. Le fournisseur apparaît dans la liste avec le nom de fournisseur **CustomOAuth2**.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: CTRL Center > Credentials > Providers > New > CustomOAuth2. The "Create a new CustomOAuth2 app registration" dialog, top part with App name to Scope. Crop to the dialog. */}
+
+<Frame caption="La boîte de dialogue Create a new CustomOAuth2 app registration">
+  <img src="/images/NewOAuth2.png" alt="New O Auth2" title="New O Auth2" />
+</Frame>
+
+### CustomOAuth2 settings
+
+| Paramètre                  | Description                                                                                                                                                                                                                                                                                                                               |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **App name**               | Un nom qui vous aide à reconnaître le fournisseur ultérieurement, par exemple `Exchange Calendar`. Maximum 48 caractères. Obligatoire.                                                                                                                                                                                                    |
+| **App (client) id**        | L'ID client de l'application que vous avez enregistrée auprès du service externe. Obligatoire.                                                                                                                                                                                                                                            |
+| **Client secret**          | Le secret client de cette application. Obligatoire.                                                                                                                                                                                                                                                                                       |
+| **Token endpoint**         | L'URL où PADS4 demande et renouvelle les jetons d'accès, par exemple `https://login.example.com/oauth2/token`. Obligatoire.                                                                                                                                                                                                               |
+| **Authorization endpoint** | L'URL où un utilisateur se connecte et donne son consentement. Renseignez ce champ uniquement pour un type d'octroi avec connexion utilisateur, tel que `authorization_code`.                                                                                                                                                             |
+| **User info endpoint**     | L'URL où PADS4 obtient des informations sur l'utilisateur connecté. À utiliser conjointement avec **User info strategy** défini sur **Endpoint**.                                                                                                                                                                                         |
+| **Grant Type**             | Le type d'octroi OAuth 2.0 utilisé par le service, par exemple `client_credentials` ou `authorization_code`.                                                                                                                                                                                                                              |
+| **Audience**               | L'API ou la ressource pour laquelle le jeton est destiné. Renseignez ce champ uniquement si le service l'exige.                                                                                                                                                                                                                           |
+| **Scope**                  | Les autorisations que PADS4 demande, telles que le service les attend. Séparez plusieurs portées par un espace.                                                                                                                                                                                                                           |
+| **User info strategy**     | Comment PADS4 obtient les détails de l'utilisateur pour le jeton :<br />**-- None --** : PADS4 ne lit pas les détails de l'utilisateur.<br />**JWT** : PADS4 lit les détails de l'utilisateur à partir des revendications dans le jeton.<br />**Endpoint** : PADS4 obtient les détails de l'utilisateur depuis le **User info endpoint**. |
+| **User ID claim**          | La revendication qui contient l'ID unique de l'utilisateur, par exemple `sub`. Utilisé avec **JWT** ou **Endpoint**.                                                                                                                                                                                                                      |
+| **Username claim**         | La revendication qui contient le nom d'utilisateur, par exemple `preferred_username`. Utilisé avec **JWT** ou **Endpoint**.                                                                                                                                                                                                               |
+| **Email claim**            | La revendication qui contient l'adresse e-mail de l'utilisateur, par exemple `email`. Utilisé avec **JWT** ou **Endpoint**.                                                                                                                                                                                                               |
+
+Pour modifier un fournisseur ultérieurement, accédez à **Providers**, sélectionnez le menu plus d'options (**⋮**) à côté du fournisseur, puis sélectionnez **Edit**.
+
+<Warning>
+  Après avoir modifié un fournisseur, ré-authentifiez ses jetons. Jusqu'à ce que vous le fassiez, les jetons peuvent encore utiliser les anciens paramètres ou cesser de fonctionner.
+</Warning>
+
+## Créer un jeton
+
+Un jeton est la connexion entre PADS4 et le service externe. Vous utilisez l'ID du jeton dans Designer et System Management.
+
+<Steps>
+  <Step title="Ouvrir la vue d'ensemble">
+    Dans **Credentials**, sélectionnez **Overview**.
+  </Step>
+
+  <Step title="Sélectionner le fournisseur">
+    Dans la liste **Providers**, sélectionnez le fournisseur CustomOAuth2 que vous avez créé.
+  </Step>
+
+  <Step title="Se connecter au service">
+    Sélectionnez **Connect**. Si le type d'octroi nécessite une connexion utilisateur, la page de connexion du service externe s'ouvre. Connectez-vous avec le compte que PADS4 doit utiliser et donnez votre consentement.
+  </Step>
+
+  <Step title="Copier l'ID du jeton">
+    Le nouveau jeton apparaît dans le tableau avec son **Token**, **Name** et **RLS Role**. Sélectionnez l'icône de copie à côté de l'ID du jeton pour le copier.
+
+    ![Custom O Auth Token](/images/CustomOAuthToken.png "Custom O Auth Token")
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: CTRL Center > Credentials > Overview with a CustomOAuth2 provider selected and one token in the table. Show the Connect button and the copy icon. */}
+
+## Utiliser le jeton dans un fournisseur de données ou un Data Vault
+
+Vous ne saisissez pas les identifiants du service externe dans votre configuration de données. Vous faites référence au jeton à la place. PADS4 ajoute le jeton d'accès actuel à chaque requête.
+
+<Tabs>
+  <Tab title="PADS4 Designer">
+    1. Dans PADS4 Designer, ouvrez un fournisseur de données qui prend en charge **Advanced Connection Settings**.
+    2. Dans **Advanced Connection Settings**, sélectionnez **Add a header**.
+    3. Sélectionnez **oauth2** depuis **Predefined Header**.
+    4. Copiez le jeton que vous avez créé dans CTRL Center.
+    5. Enregistrez le fournisseur de données et testez la connexion.
+  </Tab>
+</Tabs>
+
+<Check>
+  Le fournisseur de données ou le Data Vault affiche les données du service externe. Les données continuent de se mettre à jour après l'expiration du premier jeton d'accès, car PADS4 renouvelle le jeton.
+</Check>
+
+## Gérer les jetons
+
+Dans **Credentials** > **Overview**, sélectionnez le fournisseur, puis sélectionnez le menu plus d'options (**⋮**) à côté d'un jeton :
+
+* **Re-authenticate**: Obtient un nouveau jeton auprès du service externe avec les paramètres actuels du fournisseur. Utilisez-le après avoir modifié le fournisseur, après avoir remplacé le secret client, ou lorsque PADS4 ne peut pas renouveler le jeton. L'ID du jeton reste le même.
+* **Delete**: Supprime le jeton. Les fournisseurs de données et les Data Vaults qui utilisent ce jeton ne peuvent plus obtenir de données du service externe.
