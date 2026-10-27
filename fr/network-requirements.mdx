@@ -1,0 +1,72 @@
+---
+- title: Exigences réseau et pare-feu de PADS4
+- description: Trouvez les ports TCP, UDP et HTTP utilisés par le PADS4 Server et
+    les Viewers, y compris le port par défaut 7237, ainsi que les règles de
+    pare-feu entrantes et sortantes dont vous avez besoin.
+---
+
+Cette page répertorie les ports réseau utilisés par PADS4. Les numéros de port sont les paramètres par défaut. Vous pouvez en modifier certains.
+
+Les composants du système PADS4 communiquent via TCP/IP. PADS4 utilise un port pour cette communication. Le port par défaut est 7237.
+
+Si vous utilisez un pare-feu sur le PADS4 Server, ouvrez les ports dont vous avez besoin à partir des tableaux de cette page. Du côté client, vous n'avez pas besoin d'ouvrir de ports dans le pare-feu.
+
+## Ports du PADS4 Server pour les connexions externes
+
+| Port        | Protocole          | Règle de pare-feu  | Description                                                                       |
+| ----------- | ------------------ | ------------------ | --------------------------------------------------------------------------------- |
+| 7237        | TCP                | Entrant            | Port par défaut pour la communication PADS4.                                      |
+| 3702        | UDP                | Entrant            | Nécessaire pour rechercher un PADS4 Server sur le réseau (découverte réseau).     |
+| 4525 ou 443 | HTTP               | Sortant            | Activation en ligne. Un seul des deux ports doit être disponible.                 |
+| 443 / 80    | HTTPS<br />ou HTTP | Entrant et sortant | Mises à jour logicielles et réplication lorsque vous utilisez plusieurs serveurs. |
+| 7           | UDP                | Sortant            | Wake on LAN (port Wake on LAN standard).                                          |
+| 9           | UDP                | Sortant            | Wake on LAN (port Wake on LAN standard).                                          |
+| 123         | UDP                | Entrant et sortant | Network Time Protocol (NTP), pour la synchronisation de l'heure du Viewer.        |
+
+<Info>
+  À partir de PADS4 2021.3, la réplication fonctionne dans les deux sens. PADS4 synchronise les modifications sur le Sub Server ou le Backup Server avec le Main Server. Il synchronise également les modifications sur le Main Server avec les Sub Servers et les Backup Servers.
+</Info>
+
+## Ports du PADS4 HTML5 Viewer
+
+<table>
+  <colgroup>
+    <col width="130" />
+
+    <col width="100" />
+
+    <col width="519" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th>Port</th>
+      <th>Protocole</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>443 / 80</td>
+      <td>HTTPS ou HTTP</td>
+      <td>Communication entre le HTML5 Viewer et le PADS4 Server.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Ports du PADS4 Windows Viewer
+
+| Port | Protocole | Règle de pare-feu  | Description                                                                   |
+| ---- | --------- | ------------------ | ----------------------------------------------------------------------------- |
+| 7237 | TCP       | Sortant            | Port par défaut pour la communication PADS4.                                  |
+| 3702 | UDP       | Sortant            | Nécessaire pour rechercher un PADS4 Server sur le réseau (découverte réseau). |
+| 7    | UDP       | Entrant            | Wake on LAN (port Wake on LAN standard).                                      |
+| 9    | UDP       | Entrant            | Wake on LAN (port Wake on LAN standard).                                      |
+| 123  | UDP       | Entrant et sortant | Network Time Protocol (NTP), pour la synchronisation de l'heure du Viewer.    |
+
+## Détection automatique du PADS4 Server
+
+<Note>
+  PADS4 peut détecter automatiquement un PADS4 Server sur votre réseau. Cela ne fonctionne que si aucun pare-feu sur l'ordinateur serveur, ou ailleurs sur le réseau, ne bloque le port UDP 3702.
+</Note>
