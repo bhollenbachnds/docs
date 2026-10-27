@@ -1,59 +1,66 @@
 ---
 title: "PADS4 network and firewall requirements"
-description: "Reference of TCP, UDP, and HTTP ports used by PADS4 server and client components, including default port 7237 and required inbound or outbound firewall rules."
+description: "Find the TCP, UDP, and HTTP ports that PADS4 Server and the Viewers use, including default port 7237, and the inbound and outbound firewall rules you need."
 ---
 
-This page explains which network ports PADS4 uses. The port numbers listed are the default settings. You can adjust some ports.
+This page lists the network ports that PADS4 uses. The port numbers are the default settings. You can change some of them. 
 
-The network communication between the components of the PADS4 system uses TCP/IP. PADS4 uses one port to communicate. The default port is 7237.
+Components of the PADS4 system communicate over TCP/IP. PADS4 uses one port for this communication. The default port is 7237.
 
-If you use a firewall on the PADS4 Server, open one or more of the port numbers listed below so that PADS4 can communicate over the network.
+If you use a firewall on the PADS4 Server, open the ports that you need from the tables on this page. On the client side, you don't need to open any ports in the firewall.
 
-On the client side, it's not necessary to open any port numbers in the firewall.
+## PADS4 Server ports for external connections
 
-## PADS4 Server ports used with external connections
-
-| Port | Protocol | Firewall rules | Description |
+| Port | Protocol | Firewall rule | Description |
 | --- | --- | --- | --- |
-| 7237 | TCP | Inbound | Default port used for PADS4 communication |
-| 3702 | UDP | Inbound | Required for PADS4 server search function (discover network functionality) |
-| 4525 or 443 | HTTP | Outbound | Online activation (only one port has to be available) |
-| 80 and/or 443 | HTTP | Inbound / Outbound | Software updates and replication when using more servers |
-| 7 | UDP | Outbound | Wake On LAN function (standard WOL port) |
-| 9 | UDP | Outbound | Wake On LAN function (standard WOL port) |
-| 123 | UDP | Inbound / Outbound | Required for NTP (Network Time Protocol for Viewer time synchronization) |
+| 7237 | TCP | Inbound | Default port for PADS4 communication. |
+| 3702 | UDP | Inbound | Needed to search for a PADS4 Server on the network (network discovery). |
+| 4525 or 443 | HTTP | Outbound | Online activation. Only one of the two ports must be available. |
+| 443 / 80 | HTTPS<br />or HTTP | Inbound and outbound | Software updates, and replication when you use more than one server. |
+| 7 | UDP | Outbound | Wake on LAN (standard Wake on LAN port). |
+| 9 | UDP | Outbound | Wake on LAN (standard Wake on LAN port). |
+| 123 | UDP | Inbound and outbound | Network Time Protocol (NTP), for Viewer time synchronization. |
 
-## PADS4 Server local ports
-
-_PADS4 uses these ports locally only._
-
-| Port | Protocol | Description |
-| --- | --- | --- |
-| 15672 | HTTP | Used by RabbitMQ for HTTP API connection |
-| 15671 | HTTP | Used by RabbitMQ https for HTTP API over TLS connection |
-| 5672 | TCP | Used by RabbitMQ AMQP |
-| 5671 | TCP | Used by RabbitMQ AMQP over TLS |
-
-## PADS4 Viewer ports
-
-| Port | Protocol | Firewall rules | Description |
-| --- | --- | --- | --- |
-| 7237 | TCP | Outbound | Default port used for PADS4 communication |
-| 3702 | UDP | Outbound | Required for PADS4 server search function (discover network functionality) |
-| 7 | UDP | Inbound | Wake On LAN function (standard WOL port) |
-| 9 | UDP | Inbound | Wake On LAN function (standard WOL port) |
-| 123 | UDP | Inbound / Outbound | Required for NTP (Network Time Protocol for Viewer time synchronization) |
+<Info>
+  From PADS4 2021.3, replication works in both directions. Changes on the Sub Server or Backup Server are synchronized with the Main Server. Changes on the Main Server are synchronized with the Sub Servers and Backup Servers.
+</Info>
 
 ## PADS4 HTML5 Viewer ports
 
-Port 80 and/or 443 (HTTP)
+<table>
+  <colgroup>
+    <col width="130" />
+    <col width="100" />
+    <col width="519" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Port</th>
+      <th>Protocol</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>443 / 80</td>
+      <td>HTTPS or HTTP</td>
+      <td>Communication between the HTML5 Viewer and PADS4 Server.</td>
+    </tr>
+  </tbody>
+</table>
 
-### Note
+## PADS4 Windows Viewer ports
+
+| Port | Protocol | Firewall rule | Description |
+| --- | --- | --- | --- |
+| 7237 | TCP | Outbound | Default port for PADS4 communication. |
+| 3702 | UDP | Outbound | Needed to search for a PADS4 Server on the network (network discovery). |
+| 7 | UDP | Inbound | Wake on LAN (standard Wake on LAN port). |
+| 9 | UDP | Inbound | Wake on LAN (standard Wake on LAN port). |
+| 123 | UDP | Inbound and outbound | Network Time Protocol (NTP), for Viewer time synchronization. |
+
+## Automatic detection of PADS4 Server
 
 <Note>
-  PADS4 has built-in features to automatically detect a PADS4 Server in your network. However, PADS4 can only detect a PADS4 Server automatically when no firewall on the server PC or elsewhere in the network blocks UDP port 3702.
-</Note>
-
-<Note>
-  Version 2021.3 introduces a new mechanism that replicates both ways. Changes on the Sub/Backup Server are synchronized with the Main Server and changes from the Main are synchronized with the Sub/Backup Servers.
+  PADS4 can detect a PADS4 Server on your network automatically. This works only if no firewall on the server computer, or elsewhere on the network, blocks UDP port 3702.
 </Note>
