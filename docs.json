@@ -910,15 +910,6 @@
                             ]
                           },
                           {
-                            "group": "Flash Player Element",
-                            "pages": [
-                              "digital-signage/windows-applications/designer/Page-elements/Flash-player-element/Introduction",
-                              "digital-signage/windows-applications/designer/Page-elements/Flash-player-element/Interactivity-properties",
-                              "digital-signage/windows-applications/designer/Page-elements/Flash-player-element/Playlist-properties",
-                              "digital-signage/windows-applications/designer/Page-elements/Flash-player-element/Zoom-level-properties"
-                            ]
-                          },
-                          {
                             "group": "Formatted Text Element",
                             "pages": [
                               "digital-signage/windows-applications/designer/Page-elements/Formated-text-element/Introduction",
