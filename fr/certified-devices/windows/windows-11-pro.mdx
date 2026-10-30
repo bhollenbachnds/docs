@@ -1,0 +1,56 @@
+---
+- title: Windows 11 Pro
+---
+
+Par défaut, Windows 11 vous invite à vous connecter avec un compte Microsoft lors de la configuration. Ce n'est pas toujours ce que vous souhaitez. Sur un PADS4 Viewer, un compte local est souvent plus pratique.
+
+Ce guide vous explique comment installer Windows 11 Pro et le configurer avec un compte local plutôt qu'un compte Microsoft. Une fois terminé, vous disposerez d'une installation propre de Windows 11 Pro dans le groupe de travail par défaut, prête à être utilisée ou à être jointe à un domaine ultérieurement.
+
+**Avant de commencer, assurez-vous d'avoir :**
+
+* Une clé USB amorçable Windows 11 Pro
+* Un appareil répondant aux exigences de Windows 11, notamment TPM 2.0 et Secure Boot, et répondant aux exigences de PADS4
+* Un nom d'utilisateur et un mot de passe pour le compte local
+
+Une fois que vous avez tout préparé, suivez les étapes ci-dessous pour installer Windows 11 Pro et créer votre compte local.
+
+## Guide étape par étape
+
+1. Démarrez le PC depuis la clé USB Windows 11 Pro et suivez l'installation normalement.
+2. Sur l'écran **"Comment souhaitez-vous configurer cet appareil ?"**, sélectionnez **Configurer pour le travail ou l'école**, puis cliquez sur **Suivant**.
+   ![Sign Up Work](/images/certified_devices/windows/sign-up-work.png "Sign Up Work")
+3. Lorsqu'il vous est demandé de vous connecter avec un compte Microsoft, cliquez sur **Options de connexion**.
+   ![Domain](/images/certified_devices/windows/domain.png "Domain")
+4. Sélectionnez **Joindre un domaine à la place**.
+   ![Domain2](/images/certified_devices/windows/domain2.png "Domain2")
+5. Entrez un nom d'utilisateur pour le compte **local** et cliquez sur **Suivant**. Entrez ensuite un mot de passe et confirmez-le.
+   ![Local Name](/images/certified_devices/windows/local-name.png "Local Name")
+6. Sélectionnez trois questions de sécurité et répondez à chacune d'elles. Windows les utilise pour réinitialiser le mot de passe si vous l'oubliez.
+   ![Security Questions](/images/certified_devices/windows/security-questions.png "Security Questions")
+7. Vérifiez les paramètres de confidentialité (localisation, données de diagnostic, etc.). Configurez chacun selon vos besoins et cliquez sur **Accepter**.
+   ![Privacy](/images/certified_devices/windows/Privacy.png "Privacy")
+8. Windows termine la configuration et redémarre. Le PC démarre ensuite sous Windows 11 Pro 26H2.
+
+Windows 11 est prêt à être utilisé. Le PC est membre du groupe de travail par défaut **WORKGROUP** et n'est pas joint à un domaine.
+
+## Solution de repli par commande
+
+Si l'option **Joindre un domaine à la place** est manquante ou si la configuration insiste sur un compte en ligne :
+
+1. Sur l'écran de compte/réseau, appuyez sur **Shift + F10** (ou **Shift + Fn + F10**).
+
+2. Run:
+
+   ```bash
+   start ms-cxh:localonly
+   ```
+
+3. Une fenêtre de création de compte local apparaît. Créez le nom d'utilisateur et le mot de passe, puis continuez.
+
+Si cela ne fonctionne pas sur votre build 26H1, utilisez :
+
+```bash
+oobe\bypassnro
+```
+
+Le PC redémarre. Sélectionnez ensuite **Je n'ai pas Internet** et **Continuer avec une configuration limitée**.
