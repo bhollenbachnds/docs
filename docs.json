@@ -1417,10 +1417,13 @@
                     "pages": [
                       "modules/workspace/workspace-web-application/introduction",
                       {
-                        "group": "Search a Room",
+                        "group": "Searching for a space",
                         "pages": [
-                          "modules/workspace/workspace-web-application/searching-for-a-space",
-                          "modules/workspace/workspace-web-application/FavouriteRoom"
+                          "modules/workspace/search-for-a-space",
+                          "modules/workspace/filter-space",
+                          "modules/workspace/view-space-details",
+                          "modules/workspace/workspace-web-application/FavouriteRoom",
+                          "modules/workspace/Find-a-space-on-the-floor-plan"
                         ]
                       },
                       {
