@@ -2,18 +2,18 @@
 title: "Proof of Play"
 ---
 
-**Proof of Play** (`/proof-of-play`) answers "what played, where, and how much" — built from PADS4's play-log data, synced continuously into the plugin's local database in the background (not fetched live per page view, which is what makes this page fast).
+**Proof of Play** (`/proof-of-play`) answers "what played, where, and how much." It's built from PADS4's play-log data, which syncs continuously into the plugin's local database in the background. The page doesn't fetch data live per page view, which is what makes it fast.
 
 If PADS4 isn't configured yet, this page shows a plain message asking an administrator to complete Settings instead of any data.
 
 ### Banners you might see
 
-- **Collecting proof-of-play history — X of Y days synced.** Appears while the background sync is still backfilling history after first setup (or after retention settings change). It updates itself automatically every 10 seconds — data appears in the tables as each day finishes syncing, no need to reload the page.
+- **Collecting proof-of-play history — X of Y days synced.** Appears while the background sync is still backfilling history after first setup (or after retention settings change). It updates itself automatically every 10 seconds. Data appears in the tables as each day finishes syncing, so you don't need to reload the page.
 - **"The last sync from PADS4 failed. Showing the most recently collected data."** The background sync hit an error on its most recent attempt; you're looking at the last successful data, not a live failure of the page itself.
 
 ### Filters
 
-Date range (both dates inclusive), an optional time-of-day window (From/To hour), Device, Element, and a free-text Search box that matches content, element, or device name (debounced — it waits for you to stop typing before querying).
+Date range (both dates inclusive), an optional time-of-day window (From/To hour), Device, Element, and a free-text Search box that matches content, element, or device name (debounced: it waits for you to stop typing before querying).
 
 ### The three views
 
