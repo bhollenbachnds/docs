@@ -1,0 +1,124 @@
+---
+- title: Premiers pas avec PADS4 Workspace
+- sidebarTitle: Mise en route
+- description: Configurez votre premier bâtiment, vos premières salles et votre
+    premier utilisateur dans PADS4 Workspace, et effectuez une première
+    réservation dans l'application web Workspace.
+---
+
+Ce guide vous accompagne d'un espace de travail PADS4 vide jusqu'à une première réservation. À la fin, vous disposez d'une salle à un étage d'un bâtiment, d'un utilisateur pouvant la réserver, et d'une réservation dans l'application web Workspace.
+
+## Ce dont vous avez besoin
+
+* Accès à l'interface d'administration Workspace, avec un rôle vous permettant de gérer Workspace. \[TODO : confirmer le rôle requis]
+* L'adresse de votre serveur PADS4.
+* Un calendrier connecté (Microsoft ou Google) si vous souhaitez importer des salles. Sans calendrier, vous pouvez créer des salles manuellement.
+* Une adresse e-mail pour la salle, si vous la créez manuellement. \[TODO : confirmer si l'adresse e-mail est requise pour une salle créée manuellement]
+
+<Steps>
+  <Step title="Ouvrir l'interface d'administration">
+    1. Dans un navigateur web, accédez à `http://<server-ip>:<port>`.
+    2. Connectez-vous. Dans la plupart des cas, vous pouvez utiliser l'authentification unique (SSO) avec vos identifiants Windows.
+    3. Si vous y êtes invité, sélectionnez le module Workspace.
+  </Step>
+
+  <Step title="Connecter votre calendrier">
+    Connectez le calendrier qui contient vos ressources de salle. Ignorez cette étape si vous créez toutes les salles manuellement.
+
+    Dans **Administrator Setup**, configurez la **Calendar** section pour Microsoft ou Google. Pour la procédure complète, consultez les pages d'intégration du calendrier pour votre plateforme.
+
+    {/* TODO: confirm the menu path to the Administrator Setup > Calendar section and add links to the Microsoft Graph, Exchange Online, and Google Calendar pages. */}
+  </Step>
+
+  <Step title="Ajouter des salles">
+    <Tabs>
+      <Tab title="Importer depuis votre calendrier">
+        1. Accédez à **Rooms**, puis sélectionnez **Import Rooms**.
+        2. Sélectionnez la source du calendrier : **Microsoft** ou **Google**.
+        3. Sélectionnez les salles à importer.
+        4. Sélectionnez **Save**.
+      </Tab>
+
+      <Tab title="Créer une salle manuellement">
+        1. Accédez à **Rooms**, puis créez une salle.
+        2. Dans l'onglet **General**, saisissez le **Room Name**, **Room Type**, **E-mail Address**, et **Capacity**.
+        3. Enregistrez la salle.
+      </Tab>
+    </Tabs>
+
+    {/* TODO: confirm the name of the button for manual room creation. */}
+
+    {/* SCREENSHOT: Workspace admin interface > Rooms, the room list after an import. */}
+  </Step>
+
+  <Step title="Créer un emplacement et affecter des salles">
+    Les utilisateurs trouvent les salles par pays, ville, bâtiment et étage ; vous avez donc besoin d'une structure d'emplacement.
+
+    1. Accédez à **Buildings**, puis sélectionnez **Create new location**.
+    2. Saisissez le pays.
+    3. Faites un clic droit sur le pays, sélectionnez **Create**, et saisissez la ville.
+    4. Faites un clic droit sur la ville, sélectionnez **Create**, et saisissez le nom du bâtiment.
+    5. Faites un clic droit sur le bâtiment, sélectionnez **Create**, et saisissez le nom ou le numéro de l'étage.
+    6. Sélectionnez l'étage, puis sélectionnez **Import Rooms** ou l'icône **+**.
+    7. Sélectionnez les salles pour cet étage, puis sélectionnez **Save**.
+
+    <Tip>
+      Pour afficher les salles sur un plan d'étage interactif, ajoutez une carte d'étage à l'étage. Voir [Buildings](/fr/modules/workspace/workspace-admin/buildings).
+    </Tip>
+  </Step>
+
+  <Step title="Vérifier le profil de salle">
+    Un profil de salle définit le comportement d'une salle, par exemple si les utilisateurs doivent s'enregistrer. Workspace inclut deux profils par défaut : **Bookable rooms** et **Non-bookable rooms**. Pour une première réservation, le profil par défaut est suffisant.
+
+    Pour modifier le comportement ultérieurement, accédez à **Room Profiles**. Voir [Room profiles](/fr/modules/workspace/workspace-admin/room-profiles).
+
+    {/* TODO: confirm how a room is assigned to a room profile and which profile a new room gets by default. */}
+  </Step>
+
+  <Step title="Ajouter un utilisateur">
+    Si vos utilisateurs se connectent via SSO, ils peuvent se connecter à l'application web Workspace sans compte séparé. \[TODO : confirmer]
+
+    Pour ajouter un utilisateur manuellement :
+
+    1. Accédez à **Room Users**, puis ajoutez un utilisateur de salle.
+    2. Saisissez le **Name**, **Password**, et **Confirm password**.
+    3. Sélectionnez un **Profile**.
+    4. Enregistrez l'utilisateur.
+
+    Par défaut, les utilisateurs peuvent consulter et réserver toutes les salles disponibles. Pour limiter les salles accessibles à un utilisateur, utilisez un profil d'utilisateur de salle. Voir [Room user profile](/fr/modules/workspace/workspace-admin/room-user-profile).
+  </Step>
+
+  <Step title="Effectuer une première réservation">
+    1. Ouvrez l'application web Workspace et connectez-vous. \[TODO : confirmer l'URL de l'application web Workspace]
+    2. Recherchez la salle. Vous pouvez filtrer par nom, capacité, bâtiment, étage et équipement.
+    3. Sélectionnez le bouton **+** en bas à droite.
+    4. Saisissez un **Subject**, sélectionnez la **Date**, et vérifiez le **Space**.
+    5. Enregistrez la réservation.
+
+    {/* TODO: confirm the name of the button that saves a booking. */}
+  </Step>
+</Steps>
+
+<Check>
+  La réservation apparaît dans votre calendrier dans l'application web Workspace. Si la salle est connectée à un calendrier, la réservation apparaît également dans ce calendrier. \[TODO : confirmer]
+</Check>
+
+## Et ensuite
+
+<CardGroup cols={2}>
+  <Card title="Room profiles" icon="sliders" href="/fr/modules/workspace/workspace-admin/room-profiles">
+    Configurez l'enregistrement, le temps de nettoyage et la réservation par capteur d'occupation pour les salles.
+  </Card>
+
+  <Card title="Equipment and additional services" icon="box" href="/fr/modules/workspace/workspace-admin/equipment">
+    Décrivez ce que chaque salle offre et permettez aux utilisateurs de demander des services.
+  </Card>
+
+  <Card title="Booking a space" icon="calendar-plus" href="/fr/modules/workspace/workspace-web-application/booking-a-space">
+    Ajoutez des participants, des visiteurs externes, des rappels et des services à une réservation.
+  </Card>
+
+  <Card title="Outlook add-in" icon="envelope" href="/fr/modules/workspace/workspace-outlook-plugin/introduction">
+    Permettez aux utilisateurs de réserver des salles depuis Outlook Calendar.
+  </Card>
+</CardGroup>
