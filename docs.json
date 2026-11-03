@@ -1406,13 +1406,9 @@
           },
           {
             "dropdown": "PADS4 Workspace",
-            "groups": [
-              {
-                "group": "Getting Started",
-                "pages": [
-                  "modules/workspace/introduction"
-                ]
-              },
+            "icon": "building-circle-check",
+            "pages": [
+              "pads-4-workspace-2",
               {
                 "group": "User Applications",
                 "pages": [
@@ -1623,8 +1619,7 @@
                   }
                 ]
               }
-            ],
-            "icon": "building-circle-check"
+            ]
           },
           {
             "dropdown": "PADS4 CMS 1.0",

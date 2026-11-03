@@ -1,0 +1,115 @@
+---
+title: "Get started with PADS4 Workspace"
+sidebarTitle: "Getting started"
+description: "Set up your first building, rooms, and user in PADS4 Workspace, and make a first booking in the Workspace web application."
+---
+
+This guide takes you from an empty PADS4 Workspace to a first booking. At the end, you have a room on a floor of a building, a user who can book it, and a booking in the Workspace web application.
+
+## What you need
+
+- Access to the Workspace admin interface, with a role that allows you to manage Workspace. [TODO: confirm the required role]
+- The address of your PADS4 server.
+- A connected calendar (Microsoft or Google) if you want to import rooms. Without a calendar, you can create rooms manually.
+- An email address for the room, if you create the room manually. [TODO: confirm whether the email address is required for a manually created room]
+
+<Steps>
+  <Step title="Open the admin interface">
+    1. In a web browser, go to `http://<server-ip>:<port>`.
+    2. Sign in. In most cases, you can use single sign-on (SSO) with your Windows credentials.
+    3. If you are asked, select the Workspace module.
+  </Step>
+  <Step title="Connect your calendar">
+    Connect the calendar that holds your room resources. Skip this step if you create all rooms manually.
+
+    In **Administrator Setup**, configure the **Calendar** section for Microsoft or Google. For the full procedure, see the calendar integration pages for your platform.
+
+    {/* TODO: confirm the menu path to the Administrator Setup > Calendar section and add links to the Microsoft Graph, Exchange Online, and Google Calendar pages. */}
+  </Step>
+  <Step title="Add rooms">
+    <Tabs>
+      <Tab title="Import from your calendar">
+        1. Go to **Rooms**, and then select **Import Rooms**.
+        2. Select the calendar source: **Microsoft** or **Google**.
+        3. Select the rooms to import.
+        4. Select **Save**.
+      </Tab>
+      <Tab title="Create a room manually">
+        1. Go to **Rooms**, and then create a room.
+        2. On the **General** tab, enter the **Room Name**, **Room Type**, **E-mail Address**, and **Capacity**.
+        3. Save the room.
+      </Tab>
+    </Tabs>
+
+    {/* TODO: confirm the name of the button for manual room creation. */}
+
+    {/* SCREENSHOT: Workspace admin interface > Rooms, the room list after an import. */}
+  </Step>
+  <Step title="Create a location and assign rooms">
+    Users find rooms by country, city, building, and floor, so you need a location structure.
+
+    1. Go to **Buildings**, and then select **Create new location**.
+    2. Enter the country.
+    3. Right-click the country, select **Create**, and enter the city.
+    4. Right-click the city, select **Create**, and enter the building name.
+    5. Right-click the building, select **Create**, and enter the floor name or number.
+    6. Select the floor, and then select **Import Rooms** or the **\+** icon.
+    7. Select the rooms for this floor, and then select **Save**.
+
+    <Tip>
+      To show rooms on an interactive floor plan, add a floor map to the floor. See [Buildings](/modules/workspace/workspace-admin/buildings).
+    </Tip>
+  </Step>
+  <Step title="Check the room profile">
+    A room profile defines how a room behaves, for example whether users must check in. Workspace includes two default profiles: **Bookable rooms** and **Non-bookable rooms**. For a first booking, the default profile is enough.
+
+    To change the behavior later, go to **Room Profiles**. See [Room profiles](/modules/workspace/workspace-admin/room-profiles).
+
+    {/* TODO: confirm how a room is assigned to a room profile and which profile a new room gets by default. */}
+  </Step>
+  <Step title="Add a user">
+    If your users sign in with SSO, they can sign in to the Workspace web application without a separate account. [TODO: confirm]
+
+    To add a user manually:
+
+    1. Go to **Room Users**, and then add a room user.
+    2. Enter the **Name**, **Password**, and **Confirm password**.
+    3. Select a **Profile**.
+    4. Save the user.
+
+    By default, users can view and book all available rooms. To limit the rooms for a user, use a room user profile. See [Room user profile](/modules/workspace/workspace-admin/room-user-profile).
+  </Step>
+  <Step title="Make a first booking">
+    1. Open the Workspace web application and sign in. [TODO: confirm the URL of the Workspace web application]
+    2. Search for the room. You can filter by name, capacity, building, floor, and equipment.
+    3. Select the **\+** button in the lower-right corner.
+    4. Enter a **Subject**, select the **Date**, and check the **Space**.
+    5. Save the booking.
+
+    {/* TODO: confirm the name of the button that saves a booking. */}
+  </Step>
+</Steps>
+
+<Check>
+  The booking appears in your calendar in the Workspace web application. If the room is connected to a calendar, the booking also appears in that calendar. [TODO: confirm]
+</Check>
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Room profiles" icon="sliders" href="/modules/workspace/workspace-admin/room-profiles">
+    Set check-in, cleanup time, and occupancy sensor booking for rooms.
+  </Card>
+
+  <Card title="Equipment and additional services" icon="box" href="/modules/workspace/workspace-admin/equipment">
+    Describe what each room offers and let users request services.
+  </Card>
+
+  <Card title="Booking a space" icon="calendar-plus" href="/modules/workspace/workspace-web-application/booking-a-space">
+    Add participants, external visitors, reminders, and services to a booking.
+  </Card>
+
+  <Card title="Outlook add-in" icon="envelope" href="/modules/workspace/workspace-outlook-plugin/introduction">
+    Let users book rooms from Outlook Calendar.
+  </Card>
+</CardGroup>
