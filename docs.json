@@ -1413,7 +1413,7 @@
                 "group": "User Applications",
                 "pages": [
                   {
-                    "group": "Workspace Web Application",
+                    "group": "PADS4 Workspace",
                     "pages": [
                       "modules/workspace/workspace-web-application/introduction",
                       {
@@ -1482,14 +1482,14 @@
                     ]
                   },
                   {
-                    "group": "Workspace Mobile Application",
+                    "group": "PADS4 Workspace Mobile",
                     "pages": [
                       "modules/workspace/workspace-mobile-application/introduction",
                       "modules/workspace/workspace-mobile-application/installation"
                     ]
                   },
                   {
-                    "group": "Workspace Outlook Plugin",
+                    "group": "Microsoft Outlook add-in",
                     "pages": [
                       "modules/workspace/workspace-outlook-plugin/introduction"
                     ]
