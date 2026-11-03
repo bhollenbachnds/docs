@@ -3226,6 +3226,10 @@
   },
   "redirects": [
     {
+      "source": "/modules/workspace/introduction",
+      "destination": "/pads-4-workspace-2"
+    },
+    {
       "source": "/certified-devices/aopen/e",
       "destination": "/certified-devices/aopen/etile-series"
     },
