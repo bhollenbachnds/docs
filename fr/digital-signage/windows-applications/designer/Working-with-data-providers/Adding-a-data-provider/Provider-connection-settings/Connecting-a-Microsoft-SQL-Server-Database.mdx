@@ -1,61 +1,56 @@
----
-title: "Connecter une base Microsoft SQL Server"
-description: "Connectez une base Microsoft SQL Server à PADS4 : nom du serveur, authentification Windows ou SQL Server, puis tables, vues, procédures ou requêtes."
----
-
-Le **Microsoft SQL Server** fournisseur dans **PADS4** vous permet de vous connecter à une **SQL Server database**, de récupérer des données et de les utiliser dans votre présentation.
+The **Microsoft SQL Server** provider in **PADS4** allows you to connect to a **SQL Server database**, retrieve data, and use it in your presentation.
 
 ***
 
-### **Étapes pour ajouter ou modifier une connexion Microsoft SQL Server**
+### **Steps to add or modify a Microsoft SQL Server connection**
 
-#### **1. Démarrer l'Assistant Fournisseur de données**
+#### **1. Start the Data Provider Wizard**
 
-* Ouvrez **PADS4** et accédez à l'**Data Provider Wizard**.
-* Sélectionnez **Microsoft SQL Server** comme **type de fournisseur**.
-* Cliquez sur **Next** pour continuer.
+* Open **PADS4** and go to the **Data Provider Wizard**.
+* Select **Microsoft SQL Server** as the **provider type**.
+* Click **Next** to continue.
 
-#### **2. Spécifier les paramètres de connexion SQL Server**
+#### **2. Specify SQL Server connection settings**
 
-* Saisissez le **SQL Server Name**:
-  * Tapez manuellement le **nom du serveur**.
-  * Cliquez sur le **bouton déroulant** pour rechercher et sélectionner un serveur disponible sur votre réseau.
-* Dans la section **Logon to the Server**, choisissez l'une des méthodes d'authentification :
-  * **Windows Authentication** *(utilise les identifiants de l'utilisateur actuel)*.
-  * **SQL Server Authentication** *(nécessite un nom d'utilisateur et un mot de passe)*.
-* Cliquez sur **Next** pour continuer.
+* Enter the **SQL Server Name**:
+  * Manually type the **server name**.
+  * Click the **drop-down button** to scan and select an available server on your network.
+* In the **Logon to the Server** section, select one of the authentication methods:
+  * **Windows Authentication** *(uses the current user's credentials)*.
+  * **SQL Server Authentication** *(requires a username and password)*.
+* Click **Next** to continue.
 
-#### **3. Sélectionner la base de données et la source de données**
+#### **3. Select the database and data source**
 
-* Choisissez la **base de données** dans la liste déroulante.
+* Select the **database** from the drop-down list.
 
-* Sélectionnez la **source de données**:
-  * **Tables** – Récupérer des données à partir d'une table spécifique.
-  * **Views** – Utiliser une vue SQL Server prédéfinie.
-  * **Stored Procedures** – Exécuter une procédure stockée.
-  * **SQL Statement** – Saisir manuellement une requête SQL personnalisée.
+* Select the **data source**:
+  * **Tables** – Retrieve data from a specific table.
+  * **Views** – Use a predefined SQL Server view.
+  * **Stored Procedures** – Execute a stored procedure.
+  * **SQL Statement** – Manually enter a custom SQL query.
 
-* Si vous utilisez **SQL Statement**, assurez-vous qu'elle est optimisée pour les performances.
+* If using **SQL Statement**, ensure it is optimized for performance.
 
-* Cliquez sur **Next** pour continuer.
+* Click **Next** to continue.
 
-#### **4. Terminer la configuration**
+#### **4. Complete the setup**
 
-* **Vérifiez** les paramètres de connexion.
-* Cliquez sur **Finish** pour enregistrer le fournisseur de données.
+* **Review** the connection settings.
+* Click **Finish** to save the data provider.
 
 ***
 
-### **Remarques importantes**
+### **Important notes**
 
 * **SQL Server Authentication**:
-  * Si vous utilisez **Windows Authentication**, assurez-vous que le **PADS4 service** dispose des **autorisations appropriées**.
-  * Si vous utilisez **SQL Server Authentication**, utilisez un **nom d'utilisateur et mot de passe sécurisés**.
-* **Optimisation des requêtes**:
-  * L'utilisation de **Views** ou de **Stored Procedures** est recommandée pour l'efficacité.
-  * Évitez les **requêtes SQL complexes** dans les **SQL Statements** lorsque c'est possible.
-* **Considérations de performance**:
-  * **SQL Server est optimisé** pour traiter les requêtes en interne.
-  * L'utilisation d'un **PADS4 Data Server** peut ne pas fournir d'avantages supplémentaires.
+  * If using **Windows Authentication**, ensure the **PADS4 service** has **proper permissions**.
+  * If using **SQL Server Authentication**, use a **secure username and password**.
+* **Optimizing Queries**:
+  * Using **Views** or **Stored Procedures** is recommended for efficiency.
+  * Avoid **complex SQL queries** in **SQL Statements** when possible.
+* **Performance Considerations**:
+  * **SQL Server is optimized** for handling queries internally.
+  * Using a **PADS4 Data Server** may not provide additional benefits.
 
-Cette configuration garantit que **PADS4** peut récupérer efficacement des **données SQL Server en temps réel**, ce qui est utile pour les **présentations dynamiques, tableaux de bord et automatisations**.
+This setup ensures **PADS4** can efficiently retrieve **real-time SQL Server data**, making it useful for **dynamic presentations, dashboards, and automation**.
