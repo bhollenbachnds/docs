@@ -1,0 +1,51 @@
+---
+- title: Configurer les approbations et les demandes de réservation
+- description: Activez l'approbation pour les salles et autorisez les demandes de
+    réservation dans PADS4 Workspace, et accordez aux utilisateurs les droits
+    pour approuver les réservations et gérer les salles.
+---
+
+Configurez les approbations et les demandes de réservation afin que les utilisateurs puissent suivre les processus dans [Approbations et demandes de réservation](/fr/modules/workspace/booking-workflows). Vous configurez trois éléments : l'approbation pour une salle, les demandes de réservation pour les utilisateurs, et les gestionnaires pour les salles.
+
+## Activer l'approbation pour une salle
+
+<Steps>
+  <Step title="Ouvrir la salle">
+    Dans l'interface d'administration, accédez à **Rooms**, puis ouvrez la salle.
+  </Step>
+
+  <Step title="Activer l'approbation">
+    Dans l'onglet **Approval**, spécifiez que les réservations pour cette salle nécessitent une approbation.
+  </Step>
+
+  <Step title="Enregistrer la salle">
+    Enregistrez vos modifications.
+  </Step>
+</Steps>
+
+\[TODO: confirmer comment vous attribuez l'approbateur, et si vous pouvez définir plusieurs approbateurs.]
+
+## Autoriser les demandes de réservation pour un utilisateur
+
+1. Accédez à **Room Users**, puis ouvrez l'utilisateur.
+2. Activez **Booking request enabled**. L'utilisateur peut alors envoyer des demandes de réservation à son gestionnaire.
+3. Enregistrez l'utilisateur.
+
+\[TODO: confirmer comment vous attribuez le gestionnaire à l'utilisateur.]
+
+## Accorder à un utilisateur les droits de gestionnaire
+
+Les gestionnaires peuvent modifier les réunions dans les salles qu'ils gèrent.
+
+1. Accédez à **Room Users**, puis ouvrez l'utilisateur.
+2. Activez **Enable bookings overview**. L'onglet **Manager** apparaît à côté de l'onglet **Delegation**.
+3. Dans l'onglet **Manager**, sélectionnez les salles que l'utilisateur gère.
+4. Enregistrez l'utilisateur.
+
+\[TODO: confirmer les étapes dans l'onglet **Manager**.]
+
+## Connexe
+
+* [Utilisateurs](/fr/modules/workspace/workspace-admin/users)
+* [Salles](/fr/modules/workspace/workspace-admin/adding-room)
+* [Approbations et demandes de réservation](/fr/modules/workspace/booking-workflows)
