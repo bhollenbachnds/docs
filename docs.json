@@ -1440,7 +1440,9 @@
                       {
                         "group": "Remote Work",
                         "pages": [
-                          "modules/workspace/workspace-web-application/declaring-remote-work"
+                          "modules/workspace/workspace-web-application/declaring-remote-work",
+                          "modules/workspace/remote-work",
+                          "modules/workspace/declaring-remote-work"
                         ]
                       },
                       {
@@ -1581,7 +1583,8 @@
                         "group": "Users",
                         "pages": [
                           "modules/workspace/workspace-admin/users",
-                          "modules/workspace/workspace-admin/room-user-profile"
+                          "modules/workspace/workspace-admin/room-user-profile",
+                          "modules/workspace/admin/set-telework-allowance"
                         ]
                       },
                       {

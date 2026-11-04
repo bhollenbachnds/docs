@@ -1,0 +1,58 @@
+---
+title: "Set the remote work allowance"
+description: "Turn on remote work for users in PADS4 Workspace and set how many remote work days each user can declare, for one period or for several periods."
+---
+
+Set how many days a user can work remotely. Users declare their remote work days in the Workspace web application, and PADS4 Workspace counts them against this allowance. The admin interface calls remote work **Teleworking**.
+
+## Before you begin
+
+- Create the room user. See [Users](/modules/workspace/workspace-admin/users).
+- Decide whether you set remote work for a single user or for a group of users with a room user profile.
+
+## Turn on teleworking
+
+Choose the level that fits your organization.
+
+| Level | Where | Setting | Use it for |
+| --- | --- | --- | --- |
+| User | **Room Users** > the user | **Teleworking** | A user who works from an off-site location. |
+| Profile | **Room User Profiles** > the profile | **Teleworking** | A group of users who primarily work from home. |
+
+{/* TODO: confirm how the profile setting and the user setting work together, and whether the profile setting turns on the remote work tool for all users with the profile. */}
+
+## Set the allowance for a user
+
+<Steps>
+  <Step title="Open the user">
+    In the admin interface, go to **Room Users**, and then open the user.
+  </Step>
+  <Step title="Open the Teleworking tab">
+    Select the **Teleworking** tab.
+  </Step>
+  <Step title="Set the maximum number of days">
+    Enter the maximum number of days that the user can work from home or another remote location.
+  </Step>
+  <Step title="Add schedule periods">
+    (Optional) Create a schedule for a specific period. For each period, enter the start date, the end date, and the number of teleworking days that are allowed.
+  </Step>
+  <Step title="Save the user">
+    Save your changes.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: Workspace admin interface > Room Users > a user, the Teleworking tab with two schedule periods. */}
+
+Use schedule periods for different arrangements during the year, for example a temporary policy, a seasonal schedule, or an individual agreement.
+
+{/* TODO: confirm how the maximum number of days and the schedule periods work together, for example whether the periods replace the maximum number of days during their dates. */}
+
+## Verify the allowance
+
+Ask the user to open the remote work tool in the Workspace web application. The remaining remote work days are shown at the bottom left. See [Declare remote work](/modules/workspace/workspace-web-application/declaring-remote-work).
+
+## Related
+
+- [Users](/modules/workspace/workspace-admin/users)
+- [Room user profile](/modules/workspace/workspace-admin/room-user-profile)
+- [Remote work in PADS4 Workspace](/modules/workspace/workspace-web-application/remote-work-overview)
