@@ -1438,7 +1438,7 @@
                         ]
                       },
                       {
-                        "group": "Remote Work",
+                        "group": "Teleworking (remote)",
                         "pages": [
                           "modules/workspace/remote-work",
                           "modules/workspace/declaring-remote-work"
@@ -1447,8 +1447,7 @@
                       {
                         "group": "Report Absence",
                         "pages": [
-                          "modules/workspace/workspace-web-application/reporting-absence",
-                          "untitled-page-43"
+                          "modules/workspace/workspace-web-application/reporting-absence"
                         ]
                       },
                       {
