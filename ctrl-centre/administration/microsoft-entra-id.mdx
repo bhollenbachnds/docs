@@ -6,6 +6,12 @@ description: "Configure Microsoft Entra ID SAML single sign-on for PADS4, create
 
 This guide shows you how to configure **Single Sign-On** (SSO) for **PADS4** using **Microsoft Entra ID**.
 
+## Configure multiple SSO tenants
+
+PADS4 supports **multiple SSO tenant configurations**. To connect more than one **Microsoft Entra ID tenant**, create a separate **identity provider** in PADS4 for each tenant.
+
+Follow the steps in this guide for each tenant, using its own Microsoft Entra application details and signing certificate. In PADS4, go to **Administration** > **Credentials** > **Providers**, click **New**, and select **Identity** > **Microsoft Entra**. Enter a distinct **Name** so you can easily identify each provider.
+
 ## Create a Microsoft Azure enterprise application
 
 To configure a Microsoft Entra identity provider, connect to Azure as an administrator and create a new enterprise application.
