@@ -212,7 +212,7 @@ After you set up the app registration and create the service account, fill in th
 
 **Default service account:** The default service account from Azure directory for retrieving the access.
 
-**Impersonation:** Described below
+**Impersonation:** See [Impersonation](#impersonation).
 
 **Room list address:** The SMTP URL of the room list that you have configured. This allows you to import rooms in Workspace.
 
@@ -268,7 +268,7 @@ With **Full access** impersonation, the reservation function behaves as follows:
 ### Booking from a tablet
 
 - The reservation is made from the service account, which impersonates the connected user.
-- The owner / organizer of the meeting is the logged in user.
+- The owner / organizer of the meeting is the logged-in user.
 - You can modify and delete this reservation from the tablet. Doing so affects the calendar of the user and the resource.
 - You can edit, delete, or add participants using the user calendar (who owns this meeting).
 
@@ -299,7 +299,7 @@ With **Resources only** impersonation, the reservation function behaves as follo
 ### Booking from a tablet
 
 - The reservation is made from the service account, which impersonates the resource.
-- The owner / organizer of the meeting is the resource. The logged in user is added as a participant.
+- The owner / organizer of the meeting is the resource. PADS4 adds the logged-in user as a participant.
 - You can modify and delete this reservation from the tablet. Doing so affects the calendar of the user and the resource.
 - You can edit, delete, or add participants using the resource calendar (who owns this meeting).
 
