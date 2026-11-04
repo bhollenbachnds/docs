@@ -1,0 +1,64 @@
+---
+- title: Définir l'allocation de travail à distance
+- description: Activez le travail à distance pour les utilisateurs dans PADS4
+    Workspace et définissez le nombre de jours de travail à distance que chaque
+    utilisateur peut déclarer, pour une période ou pour plusieurs périodes.
+---
+
+Définissez le nombre de jours pendant lesquels un utilisateur peut travailler à distance. Les utilisateurs déclarent leurs jours de travail à distance dans l'application web Workspace, et PADS4 Workspace les décompte de cette allocation. L'interface d'administration appelle le travail à distance **Télétravail**.
+
+## Avant de commencer
+
+* Créez l'utilisateur de salle. Voir [Utilisateurs](/fr/modules/workspace/workspace-admin/users).
+* Décidez si vous définissez le travail à distance pour un seul utilisateur ou pour un groupe d'utilisateurs avec un profil d'utilisateur de salle.
+
+## Activer le télétravail
+
+Choisissez le niveau qui convient à votre organisation.
+
+| Niveau      | Où                                 | Paramètre       | Utiliser pour                                                            |
+| ----------- | ---------------------------------- | --------------- | ------------------------------------------------------------------------ |
+| Utilisateur | **Room Users** > l'utilisateur     | **Télétravail** | Un utilisateur qui travaille depuis un site distant.                     |
+| Profil      | **Room User Profiles** > le profil | **Télétravail** | Un groupe d'utilisateurs qui travaillent principalement depuis chez eux. |
+
+{/* TODO: confirm how the profile setting and the user setting work together, and whether the profile setting turns on the remote work tool for all users with the profile. */}
+
+## Définir l'allocation pour un utilisateur
+
+<Steps>
+  <Step title="Ouvrir l'utilisateur">
+    Dans l'interface d'administration, accédez à **Room Users**, puis ouvrez l'utilisateur.
+  </Step>
+
+  <Step title="Ouvrir l'onglet Télétravail">
+    Sélectionnez l'onglet **Télétravail**.
+  </Step>
+
+  <Step title="Définir le nombre maximum de jours">
+    Entrez le nombre maximum de jours pendant lesquels l'utilisateur peut travailler depuis chez lui ou depuis un autre lieu distant.
+  </Step>
+
+  <Step title="Ajouter des périodes de planification">
+    (Facultatif) Créez un planning pour une période spécifique. Pour chaque période, entrez la date de début, la date de fin et le nombre de jours de télétravail autorisés.
+  </Step>
+
+  <Step title="Enregistrer l'utilisateur">
+    Enregistrez vos modifications.
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: Workspace admin interface > Room Users > a user, the Teleworking tab with two schedule periods. */}
+
+Utilisez des périodes de planification pour différents arrangements au cours de l'année, par exemple une politique temporaire, un planning saisonnier ou un accord individuel.
+
+{/* TODO: confirm how the maximum number of days and the schedule periods work together, for example whether the periods replace the maximum number of days during their dates. */}
+
+## Vérifier l'allocation
+
+Demandez à l'utilisateur d'ouvrir l'outil de travail à distance dans l'application web Workspace. Les jours de travail à distance restants sont affichés en bas à gauche. Voir [Déclarer le travail à distance](/fr/modules/workspace/workspace-web-application/declaring-remote-work).
+
+## Associé
+
+* [Utilisateurs](/fr/modules/workspace/workspace-admin/users)
+* [Profil d'utilisateur de salle](/fr/modules/workspace/workspace-admin/room-user-profile)
+* [Travail à distance dans PADS4 Workspace](/modules/workspace/workspace-web-application/remote-work-overview)
