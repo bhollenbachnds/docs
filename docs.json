@@ -1429,9 +1429,12 @@
                       {
                         "group": "Book a Space",
                         "pages": [
-                          "modules/workspace/workspace-web-application/booking-a-space",
-                          "modules/workspace/workspace-web-application/booking-a-common-space",
-                          "modules/workspace/workspace-web-application/booking-a-group-workspace"
+                          "modules/workspace/book-a-space",
+                          "modules/workspace/invite-participants-visitors",
+                          "modules/workspace/booking-reminders",
+                          "modules/workspace/add-service",
+                          "modules/workspace/book-common-area",
+                          "modules/workspace/book-a-group-workspace"
                         ]
                       },
                       {
