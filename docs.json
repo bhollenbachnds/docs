@@ -1462,7 +1462,8 @@
                       {
                         "group": "Search Colleagues",
                         "pages": [
-                          "modules/workspace/workspace-web-application/searching-for-colleagues"
+                          "modules/workspace/colleague-search",
+                          "modules/workspace/search-for-colleagues"
                         ]
                       },
                       {
@@ -1580,7 +1581,8 @@
                         "pages": [
                           "modules/workspace/workspace-admin/users",
                           "modules/workspace/workspace-admin/room-user-profile",
-                          "modules/workspace/admin/set-telework-allowance"
+                          "modules/workspace/admin/set-telework-allowance",
+                          "modules/workspace/admin/turn-on-colleague-search"
                         ]
                       },
                       {
