@@ -1485,10 +1485,13 @@
                         ]
                       },
                       {
-                        "group": "Workflows",
+                        "group": "Booking approvals and requests",
                         "pages": [
-                          "modules/workspace/workspace-web-application/Workflows"
-                        ]
+                          "modules/workspace/workspace-web-application/Workflows",
+                          "modules/workspace/booking-workflows",
+                          "modules/workspace/booking-approval"
+                        ],
+                        "hidden": true
                       }
                     ]
                   },
