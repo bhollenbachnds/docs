@@ -1,0 +1,17 @@
+---
+- title: Rapports planifiés
+- description: Configurez des rapports planifiés qui envoient par e-mail des PDF
+    de Connectivité, d'Appareils hors ligne ou de Distribution des appareils
+    quotidiennement, hebdomadairement ou mensuellement, et gérez les plannings
+    actifs.
+---
+
+**Rapports planifiés** (`/scheduled`) envoie par e-mail un PDF selon une cadence récurrente — Connectivité, Appareils hors ligne ou Distribution des appareils (le proof of play n'est pas planifiable). Nécessite que le SMTP soit configuré dans Settings au préalable ; si ce n'est pas le cas, une bannière l'indique et les plannings n'enverront simplement rien tant que ce n'est pas fait.
+
+1. Cliquez sur**Add schedule**.
+2. Sélectionnez**Report type** et**Cadence** (Quotidienne / Hebdomadaire / Mensuelle).
+3. Saisissez un ou plusieurs**Recipients** (adresses e-mail séparées par des virgules ou des points-virgules — validées avant la soumission).
+4. Définissez la**Device scope** en utilisant le même panneau arborescence de groupes/marque/appareil décrit dans[Device scope](/fr/reports#device-scope).
+5. Cliquez sur**Create schedule**.
+
+Le tableau**Active schedules** liste tout ce qui est configuré, avec une colonne de résumé de la portée, un bouton**Enabled/Disabled** (met en pause la livraison sans supprimer le planning), et**Delete** (avec une boîte de dialogue de confirmation — cette action est irréversible). Les modifications de planning prennent effet immédiatement ; aucun redémarrage du serveur n'est nécessaire.
