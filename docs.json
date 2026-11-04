@@ -1447,13 +1447,16 @@
                       {
                         "group": "Report Absence",
                         "pages": [
-                          "modules/workspace/workspace-web-application/reporting-absence"
+                          "modules/workspace/absence-overview",
+                          "modules/workspace/report-absence"
                         ]
                       },
                       {
                         "group": "My Calendar",
                         "pages": [
-                          "modules/workspace/workspace-web-application/my-calendar"
+                          "modules/workspace/my-calender",
+                          "modules/workspace/calendar-view",
+                          "modules/workspace/calendar-entries"
                         ]
                       },
                       {
@@ -1472,12 +1475,6 @@
                         "group": "Account Settings",
                         "pages": [
                           "modules/workspace/workspace-web-application/account-settings"
-                        ]
-                      },
-                      {
-                        "group": "Log Out",
-                        "pages": [
-                          "modules/workspace/workspace-web-application/logging-out"
                         ]
                       },
                       {
