@@ -1467,15 +1467,20 @@
                         ]
                       },
                       {
-                        "group": "Special Cases",
+                        "group": "Account Settings",
                         "pages": [
-                          "modules/workspace/workspace-web-application/special-cases"
+                          "modules/workspace/account-settings",
+                          "modules/workspace/account-notifications"
                         ]
                       },
                       {
-                        "group": "Account Settings",
+                        "group": "Advanced booking options",
                         "pages": [
-                          "modules/workspace/workspace-web-application/account-settings"
+                          "modules/workspace/advanced-booking",
+                          "modules/workspace/book-modular-room",
+                          "modules/workspace/book-with-approval",
+                          "modules/workspace/booking-request",
+                          "modules/workspace/delegation"
                         ]
                       },
                       {
