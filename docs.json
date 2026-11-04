@@ -1498,8 +1498,11 @@
                   {
                     "group": "PADS4 Workspace Mobile",
                     "pages": [
-                      "modules/workspace/workspace-mobile-application/introduction",
-                      "modules/workspace/workspace-mobile-application/installation"
+                      "modules/workspace/mobile-introduction",
+                      "modules/workspace/ios-install",
+                      "modules/workspace/android-install",
+                      "modules/workspace/connect-to-server",
+                      "modules/workspace/sign-in"
                     ]
                   },
                   {
