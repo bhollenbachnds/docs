@@ -1440,7 +1440,6 @@
                       {
                         "group": "Remote Work",
                         "pages": [
-                          "modules/workspace/workspace-web-application/declaring-remote-work",
                           "modules/workspace/remote-work",
                           "modules/workspace/declaring-remote-work"
                         ]
@@ -1448,7 +1447,8 @@
                       {
                         "group": "Report Absence",
                         "pages": [
-                          "modules/workspace/workspace-web-application/reporting-absence"
+                          "modules/workspace/workspace-web-application/reporting-absence",
+                          "untitled-page-43"
                         ]
                       },
                       {
