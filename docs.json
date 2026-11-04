@@ -31,8 +31,9 @@
   },
   "contextual": {
     "options": [
+      "claude",
       "chatgpt",
-      "claude"
+      "download-pdf"
     ],
     "display": "header"
   },
