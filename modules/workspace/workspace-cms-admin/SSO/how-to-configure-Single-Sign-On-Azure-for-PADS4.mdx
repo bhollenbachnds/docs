@@ -50,7 +50,7 @@ Select the **Manage Application Proxy Connectors** **section**.
 
 ![Step7 Pn](/images/step7.png)
 
-1. In the Application Proxy menu, select the + Download Connector Service
+1. In the Application Proxy menu, select **+ Download Connector Service**.
 2. Agree to the terms and download the **<u>AADApplicationProxyConnectorInstaller.exe</u>** file to the server PC.
 3. Run the installer and make sure to validate your Azure Administrator credentials during the setup.
 
@@ -62,7 +62,7 @@ Select the **Manage Application Proxy Connectors** **section**.
 
    ![Step9 Pn](/images/step9.png)
 8. Save your new connection here.
-9. Head back to the Enterprise Applications section, and select the **"Add your own on-premises application"**
+9. Navigate back to the Enterprise Applications section and select **"Add your own on-premises application"**.
 
 ## Create an on-premises application within Azure
 
@@ -92,7 +92,7 @@ Then select **Add**.
 
 ## Step 9: Navigate to the newly created application
 
-1. Navigate to the newly created application by selecting **"Enterprise Applications"** and use **the search bar** to find your application. **Select it** and then navigate to "Users and Groups":
+1. Select **"Enterprise Applications"** and use **the search bar** to find the newly created application. **Select it** and then navigate to "Users and Groups":
 
 ![Userandgroups Pn](/images/userandgroups.png)
 
@@ -109,7 +109,7 @@ Then select **Add**.
 ![Add2 Pn](/images/add2.png)
 
 <Warning>
-  We highly recommend that you create a PADS4 CMS user group with the Windows Server AD as the source.
+  PADS4 highly recommends that you create a PADS4 CMS user group with the Windows Server AD as the source.
 </Warning>
 
 ## Step 10: Configure single sign-on (SSO)
@@ -157,7 +157,7 @@ https://robin.pads365.com/crystal/pads/Saml2/Acs
 <Info>
   **Remark:** If you have configured SSO on a version before 2023.1, the domain name wasn't required in the URL when using only one domain. From version 2023.1 onwards, the domain name is required in the URL both for one and multi-domain setups.
 
-  Therefore, when updating from a version before 2023.1 with SSO configured, to the latest release, make sure to add the domain to both the Identifier and Reply URL.
+  If you update to the latest release from a version before 2023.1 with SSO configured, add the domain to both the Identifier and Reply URL.
 
   **Be sure to "Save" these configurations.**
 </Info>
@@ -195,7 +195,7 @@ Name: **group**
 Namespace: http://schemas.xmlsoap.org/claims
 
 <Info>
-  Remark: You may experience the following behavior. The SSO button on the login page works and you can enter your credentials, but you are redirected to the PADS4 Login portal with "No account is defined for your authentication request" in the URL.
+  Remark: You may experience the following behavior. The SSO button on the login page works and you can enter your credentials, but PADS4 redirects you to the PADS4 Login portal with "No account is defined for your authentication request" in the URL.
 
   **There can be 2 causes:**
 
