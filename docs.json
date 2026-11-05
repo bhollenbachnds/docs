@@ -1435,7 +1435,8 @@
                           "modules/workspace/booking-reminders",
                           "modules/workspace/add-service",
                           "modules/workspace/book-common-area",
-                          "modules/workspace/book-a-group-workspace"
+                          "modules/workspace/book-a-group-workspace",
+                          "modules/workspace/booking-no-organizer"
                         ]
                       },
                       {
