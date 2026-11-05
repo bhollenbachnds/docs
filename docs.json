@@ -1591,10 +1591,11 @@
                       {
                         "group": "Users",
                         "pages": [
-                          "modules/workspace/workspace-admin/users",
-                          "modules/workspace/workspace-admin/room-user-profile",
-                          "modules/workspace/admin/set-telework-allowance",
-                          "modules/workspace/admin/turn-on-colleague-search"
+                          "modules/workspace/admin/room-users",
+                          "modules/workspace/admin/add-user",
+                          "modules/workspace/admin/room-user-settings",
+                          "modules/workspace/admin/room-user-profiles",
+                          "modules/workspace/admin/create-room-user-profile"
                         ]
                       },
                       {
