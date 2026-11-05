@@ -1,0 +1,53 @@
+---
+- title: Ajouter un utilisateur de salle
+- description: Créez un utilisateur de salle dans l'interface d'administration
+    PADS4 Workspace en saisissant un nom et un mot de passe, et en choisissant
+    un profil d'utilisateur de salle.
+---
+
+Ajoutez un utilisateur de salle afin qu'une personne puisse se connecter à PADS4 Workspace et réserver des espaces. Vous saisissez d'abord les informations requises, puis les autres paramètres.
+
+## Avant de commencer
+
+* Créez un profil d'utilisateur de salle si l'utilisateur a besoin d'un accès limité. Par défaut, un utilisateur peut consulter et réserver toutes les salles disponibles. Voir [Créer un profil d'utilisateur de salle](/fr/modules/workspace/admin/create-room-user-profile).
+* Collectez l'adresse e-mail et, si l'utilisateur utilise une carte NFC, le numéro de la carte NFC.
+
+## Ajouter un utilisateur de salle
+
+<Steps>
+  <Step title="Ouvrir Room Users">
+    Dans l'interface d'administration Workspace, accédez à **Room Users**.
+  </Step>
+
+  <Step title="Ajouter l'utilisateur">
+    Ajoutez un nouvel utilisateur.
+  </Step>
+
+  <Step title="Saisir les informations requises">
+    | Champ                         | Description                                                                                                                            |
+    | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+    | **Nom**                       | Le nom complet de l'utilisateur. Saisissez entre 6 et 50 caractères.                                                                   |
+    | **Mot de passe**              | Le mot de passe de l'utilisateur.                                                                                                      |
+    | **Confirmer le mot de passe** | Le même mot de passe à nouveau. Les deux valeurs doivent être identiques.                                                              |
+    | **Profil**                    | Le profil d'utilisateur de salle de l'utilisateur. Le profil peut restreindre les salles que l'utilisateur peut consulter et réserver. |
+  </Step>
+
+  <Step title="Saisir des informations supplémentaires">
+    (Facultatif) Saisissez l'**E-mail**, le nom de famille dans **Nom**, le **Prénom**, et le **Numéro NFC**. Voir [Paramètres des utilisateurs de salle](/fr/modules/workspace/admin/room-user-settings).
+  </Step>
+
+  <Step title="Enregistrer l'utilisateur">
+    Enregistrez l'utilisateur.&#x20;
+  </Step>
+</Steps>
+
+{/* SCREENSHOT: Workspace admin interface > Room Users, the form to add a room user. */}
+
+<Check>
+  L'utilisateur apparaît dans la liste de l'onglet **Utilisateurs de salle**.
+</Check>
+
+## Étapes suivantes
+
+* Limitez les salles, configurez la délégation ou accordez des droits de gestionnaire. Voir [Paramètres des utilisateurs de salle](/fr/modules/workspace/admin/room-user-settings).
+* Définissez l'allocation de télétravail. Voir [Définir l'allocation de télétravail](/fr/modules/workspace/admin/set-telework-allowance).
