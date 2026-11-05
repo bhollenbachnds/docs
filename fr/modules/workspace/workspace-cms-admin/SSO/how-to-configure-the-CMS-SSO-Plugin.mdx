@@ -1,20 +1,20 @@
 Vous ne pouvez suivre ce manuel que si vous avez configuré SSO dans votre environnement Azure / Entra ID. Vous pouvez suivre cet article pour le faire : **Single Sign On (Azure)**
 
-Maintenant que toutes les informations ci-dessus ont été recueillies, vous pouvez configurer PADS4 CMS pour utiliser SSO.
+Maintenant que vous avez recueilli toutes les informations ci-dessus, vous pouvez configurer PADS4 CMS pour utiliser SSO.
 
 ## Important
 
-Pour que SSO fonctionne correctement, PADS4 doit être configuré avec l'utilisation de HTTPS. Pour y parvenir, vous devez suivre ce guide en utilisant un certificat SSL.
+Pour que SSO fonctionne correctement, vous devez configurer PADS4 pour utiliser HTTPS. Pour y parvenir, vous devez suivre ce guide en utilisant un certificat SSL.
 
 ## Étape 1 : Accédez à votre instance PADS4 CMS dans un navigateur
 
-Connectez-vous avec un compte Administrateur et sélectionnez "CMS Admin"
+Connectez-vous avec un compte administrateur et sélectionnez "CMS Admin".
 
 ![CM Sadmin Pn](/images/CMSadmin.png)
 
 ## Étape 2 : Sélectionnez "Plugins" dans le volet de gauche, puis "Single Sign-on (SSO)"
 
-Activez le plugin en haut à **droite**. À côté de **"Type"**, sélectionnez l'option **"Azure AD"** dans la liste déroulante
+Activez le plugin en haut à **droite**. À côté de **"Type"**, sélectionnez l'option **"Azure AD"** dans la liste déroulante.
 
 ![Plugin Type Azure AD Pn](/images/Pluging-Type-AzureAD.png)
 
@@ -49,7 +49,7 @@ Téléchargez le certificat d'application (Raw) que vous avez téléchargé depu
 
 Pour le **"relying party signing certificate"**, nous vous suggérons d'utiliser le certificat que vous utilisez pour votre configuration HTTPS. Convertissez ce certificat en .pfx.
 
-### La section ci-dessous est l'endroit où le certificat et la clé privée doivent être configurés.
+### Configurez le certificat et la clé privée dans la section ci-dessous
 
 ![Relyingpartysigning Pn](/images/Relyingpartysigning.png)
 
@@ -65,9 +65,9 @@ Enregistrez la configuration, puis déconnectez-vous. Vous devriez maintenant vo
 
 ## Notes importantes
 
-1. Lorsque votre certificat SSL expire, assurez-vous de télécharger le nouveau certificat et la clé privée dans cette section lors du renouvellement
+1. Lorsque votre certificat SSL expire, assurez-vous de télécharger le nouveau certificat et la clé privée dans cette section lors du renouvellement.
 
    ![Uploadnewcertificate Pn](/images/Uploadnewcertificate.png)
-2. Lorsque votre certificat de fédération expire, assurez-vous de télécharger le nouveau certificat et la clé privée dans cette section lors du renouvellement
+2. Lorsque votre certificat de fédération expire, assurez-vous de télécharger le nouveau certificat et la clé privée dans cette section lors du renouvellement.
 
 ![Renewal2 Pn](/images/renewal2.png)
