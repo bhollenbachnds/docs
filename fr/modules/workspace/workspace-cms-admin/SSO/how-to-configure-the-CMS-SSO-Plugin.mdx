@@ -1,8 +1,8 @@
-Ce manuel ne peut être suivi que si vous avez configuré SSO dans votre environnement Azure / Entra ID. Vous pouvez suivre cet article pour le faire : **Single Sign On (Azure)**
+Vous ne pouvez suivre ce manuel que si vous avez configuré SSO dans votre environnement Azure / Entra ID. Vous pouvez suivre cet article pour le faire : **Single Sign On (Azure)**
 
-Maintenant que toutes les informations ci-dessus ont été recueillies, PADS4 CMS peut être configuré pour utiliser SSO.
+Maintenant que toutes les informations ci-dessus ont été recueillies, vous pouvez configurer PADS4 CMS pour utiliser SSO.
 
-## Important :
+## Important
 
 Pour que SSO fonctionne correctement, PADS4 doit être configuré avec l'utilisation de HTTPS. Pour y parvenir, vous devez suivre ce guide en utilisant un certificat SSL.
 
@@ -14,7 +14,7 @@ Connectez-vous avec un compte Administrateur et sélectionnez "CMS Admin"
 
 ## Étape 2 : Sélectionnez "Plugins" dans le volet de gauche, puis "Single Sign-on (SSO)"
 
-Activez le plugin en haut à **droite**, à côté de **"Type"**, sélectionnez l'option **"Azure AD"** dans la liste déroulante
+Activez le plugin en haut à **droite**. À côté de **"Type"**, sélectionnez l'option **"Azure AD"** dans la liste déroulante
 
 ![Plugin Type Azure AD Pn](/images/Pluging-Type-AzureAD.png)
 
@@ -29,7 +29,7 @@ Activez le plugin en haut à **droite**, à côté de **"Type"**, sélectionnez 
 | Certificate (Raw)                 | Certificate of the federation server (.cer) |
 | Object ID                         | Active directory group ID                   |
 
-### Important :
+### Important
 
 La chaîne copiée pour **" URL of the relying party "** dans la configuration SSO du CMS ne doit pas contenir **" /Saml "** comme copié depuis Azure mais plutôt seulement **" /crystal/pads "**.
 
@@ -37,7 +37,7 @@ La chaîne copiée pour **" URL of the relying party "** dans la configuration S
 
 [https://robin.pads365.com/crystal/pads/Saml2](https://robin.pads365.com/crystal/pads/Saml2)
 
-cependant, il devrait plutôt être comme ceci
+Cependant, il devrait plutôt ressembler à ceci :
 
 [https://robin.pads365.com/crystal/pads](https://robin.pads365.com/crystal/pads)
 
@@ -59,11 +59,11 @@ Exemple ci-dessous :
 
 ![Relationtable Pn](/images/Relationtable.png)
 
-Enregistrez la configuration, puis déconnectez-vous et vous devriez maintenant voir **"Single Sign On"** comme option :
+Enregistrez la configuration, puis déconnectez-vous. Vous devriez maintenant voir l'option **"Single Sign On"** :
 
 ![Continuewithsso Pn](/images/Continuewithsso.png)
 
-## Notes importantes :
+## Notes importantes
 
 1. Lorsque votre certificat SSL expire, assurez-vous de télécharger le nouveau certificat et la clé privée dans cette section lors du renouvellement
 
