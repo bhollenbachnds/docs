@@ -308,7 +308,8 @@
                   "innes_DMB300_DMB400"
                 ]
               }
-            ]
+            ],
+            "icon": "check-square"
           },
           {
             "dropdown": "PADS4 Super User",
