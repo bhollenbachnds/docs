@@ -101,212 +101,211 @@
                     ]
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "dropdown": "Works with PADS4",
+            "pages": [
+              "certified-devices/introduction",
+              {
+                "group": "Microsoft Windows",
+                "pages": [
+                  {
+                    "group": "Windows 11 (Local Account)",
+                    "pages": [
+                      "certified-devices/windows/windows-11-pro"
+                    ]
+                  },
+                  "certified-devices/windows/Windows-Viewer",
+                  "certified-devices/windows/Windows-HTML5-Viewer"
+                ]
               },
               {
-                "group": "PADS4 Certified Devices",
-                "icon": "tv",
+                "group": "Generic Android Viewer",
                 "pages": [
-                  "certified-devices/introduction",
+                  "certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
+                ]
+              },
+              {
+                "group": "Google Chrome OS",
+                "pages": [
+                  "certified-devices/chromeOS/ChromeOS"
+                ]
+              },
+              {
+                "group": "Amino",
+                "pages": [
+                  "certified-devices/Amino/amino-h200"
+                ]
+              },
+              {
+                "group": "Aopen",
+                "pages": [
+                  "certified-devices/aopen/untitled-page",
+                  "certified-devices/aopen/etile-series",
+                  "certified-devices/aopen/chrome-box",
+                  "certified-devices/aopen/1032TP-Series"
+                ]
+              },
+              {
+                "group": "BrightSign",
+                "pages": [
+                  "certified-devices/brightsign/bright-sign-series-6",
+                  "certified-devices/brightsign/BrightSign-Series-5",
+                  "certified-devices/brightsign/BrightSign-Series-4"
+                ]
+              },
+              {
+                "group": "Crestron",
+                "pages": [
+                  "certified-devices/crestron/TSS-1070-B-S"
+                ]
+              },
+              {
+                "group": "Giada",
+                "pages": [
+                  "certified-devices/giada/DN84",
+                  "certified-devices/giada/DN76",
+                  "certified-devices/giada/dn-74-android",
+                  "certified-devices/giada/D73-and-D74",
+                  "certified-devices/giada/dm-series",
+                  "certified-devices/giada/D6-Series",
+                  "certified-devices/giada/F-Series",
+                  "certified-devices/giada/F108D",
+                  "certified-devices/giada/chrome-os-flex"
+                ]
+              },
+              {
+                "group": "HikVision",
+                "pages": [
+                  "certified-devices/hikvision/ds-dt-60-p",
+                  "certified-devices/hikvision/ds-d60xx-un",
+                  "certified-devices/hikvision/DS-D60C-B",
+                  "certified-devices/hikvision/DS-D6032FN",
                   {
-                    "group": "Microsoft Windows",
+                    "group": "ELO",
                     "pages": [
-                      {
-                        "group": "Windows 11 (Local Account)",
-                        "pages": [
-                          "certified-devices/windows/windows-11-pro"
-                        ]
-                      },
-                      "certified-devices/windows/Windows-Viewer",
-                      "certified-devices/windows/Windows-HTML5-Viewer"
-                    ]
-                  },
-                  {
-                    "group": "Generic Android Viewer",
-                    "pages": [
-                      "certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
-                    ]
-                  },
-                  {
-                    "group": "Google Chrome OS",
-                    "pages": [
-                      "certified-devices/chromeOS/ChromeOS"
-                    ]
-                  },
-                  {
-                    "group": "Amino",
-                    "pages": [
-                      "certified-devices/Amino/amino-h200"
-                    ]
-                  },
-                  {
-                    "group": "Aopen",
-                    "pages": [
-                      "certified-devices/aopen/untitled-page",
-                      "certified-devices/aopen/etile-series",
-                      "certified-devices/aopen/chrome-box",
-                      "certified-devices/aopen/1032TP-Series"
-                    ]
-                  },
-                  {
-                    "group": "BrightSign",
-                    "pages": [
-                      "certified-devices/brightsign/bright-sign-series-6",
-                      "certified-devices/brightsign/BrightSign-Series-5",
-                      "certified-devices/brightsign/BrightSign-Series-4"
-                    ]
-                  },
-                  {
-                    "group": "Crestron",
-                    "pages": [
-                      "certified-devices/crestron/TSS-1070-B-S"
-                    ]
-                  },
-                  {
-                    "group": "Giada",
-                    "pages": [
-                      "certified-devices/giada/DN84",
-                      "certified-devices/giada/DN76",
-                      "certified-devices/giada/dn-74-android",
-                      "certified-devices/giada/D73-and-D74",
-                      "certified-devices/giada/dm-series",
-                      "certified-devices/giada/D6-Series",
-                      "certified-devices/giada/F-Series",
-                      "certified-devices/giada/F108D",
-                      "certified-devices/giada/chrome-os-flex"
-                    ]
-                  },
-                  {
-                    "group": "HikVision",
-                    "pages": [
-                      "certified-devices/hikvision/ds-dt-60-p",
-                      "certified-devices/hikvision/ds-d60xx-un",
-                      "certified-devices/hikvision/DS-D60C-B",
-                      "certified-devices/hikvision/DS-D6032FN",
-                      {
-                        "group": "ELO",
-                        "pages": [
-                          "certified-devices/elo/I-Series-2"
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "group": "Hisense",
-                    "pages": [
-                      "certified-devices/Hisense/DM66GE",
-                      "certified-devices/Hisense/DM66D"
-                    ]
-                  },
-                  {
-                    "group": "IAdea",
-                    "pages": [
-                      "certified-devices/iadea/WRP-1000-v2",
-                      "certified-devices/iadea/XDS-1078",
-                      "certified-devices/iadea/XMP-8550-and-8552",
-                      "certified-devices/iadea/WRP-1000",
-                      "certified-devices/iadea/XDS-Series"
-                    ]
-                  },
-                  {
-                    "group": "iiyama",
-                    "pages": [
-                      "certify-devices/iiyama/64-series",
-                      "certify-devices/iiyama/60-series",
-                      "certify-devices/iiyama/54-series",
-                      "certify-devices/iiyama/TW1023ACS",
-                      "certify-devices/iiyama/TW1025LACS"
-                    ]
-                  },
-                  {
-                    "group": "LG",
-                    "pages": [
-                      "certified-devices/lg/webOS-8",
-                      "certified-devices/lg/webOS-6",
-                      "certified-devices/lg/webOS-4.1"
-                    ]
-                  },
-                  {
-                    "group": "Maxhub",
-                    "pages": [
-                      "certified-devices/Maxhub/maxhub-CMB-Series"
-                    ]
-                  },
-                  {
-                    "group": "Newline",
-                    "pages": [
-                      "certified-devices/newline/stv-plus"
-                    ]
-                  },
-                  {
-                    "group": "Philips",
-                    "pages": [
-                      "certified-devices/philips/32BDL5150I",
-                      "certified-devices/philips/25BDL4150I-32BDL5150I",
-                      "certified-devices/philips/d-line-5050-d",
-                      "certified-devices/philips/4650D",
-                      "certified-devices/philips/3650Q",
-                      "certified-devices/philips/4550D",
-                      "certified-devices/philips/3550Q",
-                      "certified-devices/philips/10BDL4551T",
-                      "certified-devices/philips/10BDL5051T",
-                      "certified-devices/philips/CRD50"
-                    ]
-                  },
-                  {
-                    "group": "ProDVX",
-                    "pages": [
-                      "certified-devices/prodvx/appc_s_series",
-                      "certified-devices/prodvx/APPC-R23-series-Android-12",
-                      "certified-devices/prodvx/APPC-R23-series-Android-11",
-                      "certified-devices/prodvx/APPC-10SLBe-Android-11",
-                      "certified-devices/prodvx/appc-series-rk-32",
-                      "certified-devices/prodvx/APPC-series-RK3288-Android-8.1",
-                      "certified-devices/prodvx/APPC-4200-Series-Android-9",
-                      "certified-devices/prodvx/UW-series-Android-8.1",
-                      "certified-devices/prodvx/IPPC-Series-Windows"
-                    ]
-                  },
-                  {
-                    "group": "Qbic",
-                    "pages": [
-                      "certified-devices/qbic/BXP-100",
-                      "certified-devices/qbic/BXP-300",
-                      "certified-devices/qbic/BXP-321",
-                      "certified-devices/qbic/TD-0350",
-                      "certified-devices/qbic/TD-1050",
-                      "certified-devices/qbic/TD-1060",
-                      "certified-devices/qbic/td-1070"
-                    ]
-                  },
-                  {
-                    "group": "Samsung",
-                    "pages": [
-                      "certified-devices/samsung/tizen-8-0-smhx-virtual-3-d-spatial-signage",
-                      "certified-devices/samsung/EMDX-076D",
-                      "certified-devices/samsung/Tizen-7.0-SSSP10",
-                      "certified-devices/samsung/Tizen-6.5-SSSP10",
-                      "certified-devices/samsung/Tizen-5.0-SSSP7"
-                    ]
-                  },
-                  {
-                    "group": "Sharp NEC",
-                    "pages": [
-                      "certified-devices/sharpnec/Compute-Module-4"
-                    ]
-                  },
-                  {
-                    "group": "Sony",
-                    "pages": [
-                      "certified-devices/sony/sony-xx-b-zxx-p",
-                      "certified-devices/sony/BZxxL-series"
-                    ]
-                  },
-                  {
-                    "group": "Innes",
-                    "pages": [
-                      "innes_DMB300_DMB400"
+                      "certified-devices/elo/I-Series-2"
                     ]
                   }
+                ]
+              },
+              {
+                "group": "Hisense",
+                "pages": [
+                  "certified-devices/Hisense/DM66GE",
+                  "certified-devices/Hisense/DM66D"
+                ]
+              },
+              {
+                "group": "IAdea",
+                "pages": [
+                  "certified-devices/iadea/WRP-1000-v2",
+                  "certified-devices/iadea/XDS-1078",
+                  "certified-devices/iadea/XMP-8550-and-8552",
+                  "certified-devices/iadea/WRP-1000",
+                  "certified-devices/iadea/XDS-Series"
+                ]
+              },
+              {
+                "group": "iiyama",
+                "pages": [
+                  "certify-devices/iiyama/64-series",
+                  "certify-devices/iiyama/60-series",
+                  "certify-devices/iiyama/54-series",
+                  "certify-devices/iiyama/TW1023ACS",
+                  "certify-devices/iiyama/TW1025LACS"
+                ]
+              },
+              {
+                "group": "LG",
+                "pages": [
+                  "certified-devices/lg/webOS-8",
+                  "certified-devices/lg/webOS-6",
+                  "certified-devices/lg/webOS-4.1"
+                ]
+              },
+              {
+                "group": "Maxhub",
+                "pages": [
+                  "certified-devices/Maxhub/maxhub-CMB-Series"
+                ]
+              },
+              {
+                "group": "Newline",
+                "pages": [
+                  "certified-devices/newline/stv-plus"
+                ]
+              },
+              {
+                "group": "Philips",
+                "pages": [
+                  "certified-devices/philips/32BDL5150I",
+                  "certified-devices/philips/25BDL4150I-32BDL5150I",
+                  "certified-devices/philips/d-line-5050-d",
+                  "certified-devices/philips/4650D",
+                  "certified-devices/philips/3650Q",
+                  "certified-devices/philips/4550D",
+                  "certified-devices/philips/3550Q",
+                  "certified-devices/philips/10BDL4551T",
+                  "certified-devices/philips/10BDL5051T",
+                  "certified-devices/philips/CRD50"
+                ]
+              },
+              {
+                "group": "ProDVX",
+                "pages": [
+                  "certified-devices/prodvx/appc_s_series",
+                  "certified-devices/prodvx/APPC-R23-series-Android-12",
+                  "certified-devices/prodvx/APPC-R23-series-Android-11",
+                  "certified-devices/prodvx/APPC-10SLBe-Android-11",
+                  "certified-devices/prodvx/appc-series-rk-32",
+                  "certified-devices/prodvx/APPC-series-RK3288-Android-8.1",
+                  "certified-devices/prodvx/APPC-4200-Series-Android-9",
+                  "certified-devices/prodvx/UW-series-Android-8.1",
+                  "certified-devices/prodvx/IPPC-Series-Windows"
+                ]
+              },
+              {
+                "group": "Qbic",
+                "pages": [
+                  "certified-devices/qbic/BXP-100",
+                  "certified-devices/qbic/BXP-300",
+                  "certified-devices/qbic/BXP-321",
+                  "certified-devices/qbic/TD-0350",
+                  "certified-devices/qbic/TD-1050",
+                  "certified-devices/qbic/TD-1060",
+                  "certified-devices/qbic/td-1070"
+                ]
+              },
+              {
+                "group": "Samsung",
+                "pages": [
+                  "certified-devices/samsung/tizen-8-0-smhx-virtual-3-d-spatial-signage",
+                  "certified-devices/samsung/EMDX-076D",
+                  "certified-devices/samsung/Tizen-7.0-SSSP10",
+                  "certified-devices/samsung/Tizen-6.5-SSSP10",
+                  "certified-devices/samsung/Tizen-5.0-SSSP7"
+                ]
+              },
+              {
+                "group": "Sharp NEC",
+                "pages": [
+                  "certified-devices/sharpnec/Compute-Module-4"
+                ]
+              },
+              {
+                "group": "Sony",
+                "pages": [
+                  "certified-devices/sony/sony-xx-b-zxx-p",
+                  "certified-devices/sony/BZxxL-series"
+                ]
+              },
+              {
+                "group": "Innes",
+                "pages": [
+                  "innes_DMB300_DMB400"
                 ]
               }
             ]
