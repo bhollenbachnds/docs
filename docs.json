@@ -111,14 +111,14 @@
               {
                 "group": "Microsoft Windows",
                 "pages": [
+                  "certified-devices/windows/Windows-Viewer",
+                  "certified-devices/windows/Windows-HTML5-Viewer",
                   {
                     "group": "Windows 11 (Local Account)",
                     "pages": [
                       "certified-devices/windows/windows-11-pro"
                     ]
-                  },
-                  "certified-devices/windows/Windows-Viewer",
-                  "certified-devices/windows/Windows-HTML5-Viewer"
+                  }
                 ]
               },
               {
@@ -1980,8 +1980,8 @@
             "dropdown": "Test",
             "hidden": true,
             "pages": [
-              "untitled-page-44",
-              "untitled-page-45"
+              "untitled-page-45",
+              "untitled-page-44"
             ]
           }
         ]
