@@ -337,9 +337,10 @@
                 "group": "User Applications",
                 "pages": [
                   {
-                    "group": "Home",
-                    "hidden": true,
-                    "pages": []
+                    "group": "Log on",
+                    "pages": [
+                      "ctrl-center/login/banner"
+                    ]
                   },
                   {
                     "group": "Dashboard",
@@ -594,6 +595,12 @@
                           "log-in-with-mfa",
                           "log-in-with"
                         ]
+                      },
+                      {
+                        "group": "Login Banner",
+                        "pages": [
+                          "untitled-page-43"
+                        ]
                       }
                     ]
                   }
@@ -723,7 +730,7 @@
                 ]
               },
               {
-                "group": "PADS4 CMS",
+                "group": "PADS4 CMS 2.0",
                 "pages": [
                   "modules/digital-signage/cms/introduction",
                   "modules/digital-signage/cms/homepage",
@@ -1401,6 +1408,39 @@
                     ]
                   }
                 ]
+              },
+              {
+                "group": "PADS4 CMS 1.0",
+                "pages": [
+                  {
+                    "group": "Getting Started",
+                    "pages": [
+                      "modules/legacy-cms/introduction"
+                    ]
+                  },
+                  {
+                    "group": "User Guide",
+                    "pages": [
+                      "modules/legacy-cms/user-guide/homepage",
+                      "modules/legacy-cms/user-guide/messages",
+                      "modules/legacy-cms/user-guide/broadcast",
+                      "modules/legacy-cms/user-guide/history",
+                      "modules/legacy-cms/user-guide/content"
+                    ]
+                  },
+                  {
+                    "group": "Administration",
+                    "pages": [
+                      "modules/legacy-cms/administration/create-a-profile",
+                      "modules/legacy-cms/administration/create-a-user",
+                      "modules/legacy-cms/administration/add-a-display",
+                      "modules/legacy-cms/user-guide/categories",
+                      "modules/legacy-cms/user-guide/masks",
+                      "modules/legacy-cms/administration/media-prerequisites",
+                      "untitled-page-9"
+                    ]
+                  }
+                ]
               }
             ],
             "icon": "display"
@@ -1641,40 +1681,6 @@
                 ]
               }
             ]
-          },
-          {
-            "dropdown": "PADS4 CMS 1.0",
-            "groups": [
-              {
-                "group": "Getting Started",
-                "pages": [
-                  "modules/legacy-cms/introduction"
-                ]
-              },
-              {
-                "group": "User Guide",
-                "pages": [
-                  "modules/legacy-cms/user-guide/homepage",
-                  "modules/legacy-cms/user-guide/messages",
-                  "modules/legacy-cms/user-guide/broadcast",
-                  "modules/legacy-cms/user-guide/history",
-                  "modules/legacy-cms/user-guide/content"
-                ]
-              },
-              {
-                "group": "Administration",
-                "pages": [
-                  "modules/legacy-cms/administration/create-a-profile",
-                  "modules/legacy-cms/administration/create-a-user",
-                  "modules/legacy-cms/administration/add-a-display",
-                  "modules/legacy-cms/user-guide/categories",
-                  "modules/legacy-cms/user-guide/masks",
-                  "modules/legacy-cms/administration/media-prerequisites",
-                  "untitled-page-9"
-                ]
-              }
-            ],
-            "icon": "pen-nib"
           },
           {
             "dropdown": "PADS4 FIDS",
@@ -1969,6 +1975,14 @@
               }
             ],
             "icon": "plug"
+          },
+          {
+            "dropdown": "Test",
+            "hidden": true,
+            "pages": [
+              "untitled-page-44",
+              "untitled-page-45"
+            ]
           }
         ]
       },
