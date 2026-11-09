@@ -50,6 +50,7 @@
               "dark": "#00ADBA"
             },
             "pages": [
+              "untitled-page-44",
               "getting-started/Introduction",
               {
                 "group": "Getting Started",
@@ -111,14 +112,14 @@
               {
                 "group": "Microsoft Windows",
                 "pages": [
+                  "certified-devices/windows/Windows-Viewer",
+                  "certified-devices/windows/Windows-HTML5-Viewer",
                   {
                     "group": "Windows 11 (Local Account)",
                     "pages": [
                       "certified-devices/windows/windows-11-pro"
                     ]
-                  },
-                  "certified-devices/windows/Windows-Viewer",
-                  "certified-devices/windows/Windows-HTML5-Viewer"
+                  }
                 ]
               },
               {
@@ -308,7 +309,8 @@
                   "innes_DMB300_DMB400"
                 ]
               }
-            ]
+            ],
+            "icon": "check-square"
           },
           {
             "dropdown": "PADS4 Super User",
@@ -1706,21 +1708,6 @@
             "icon": "plane-departure"
           },
           {
-            "dropdown": "Visitor Management",
-            "pages": [
-              {
-                "group": "Getting Started",
-                "pages": [
-                  "modules/visitor-management/introduction",
-                  "modules/visitor-management/home-and-creating-users",
-                  "modules/visitor-management/archive",
-                  "modules/visitor-management/settings"
-                ]
-              }
-            ],
-            "icon": "people-group"
-          },
-          {
             "dropdown": "API Reference",
             "groups": [
               {
@@ -1977,11 +1964,7 @@
           },
           {
             "dropdown": "Test",
-            "hidden": true,
-            "pages": [
-              "untitled-page-44",
-              "untitled-page-45"
-            ]
+            "hidden": true
           }
         ]
       },
