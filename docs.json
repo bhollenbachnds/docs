@@ -51,7 +51,6 @@
             },
             "pages": [
               "getting-started/home",
-              "getting-started/Introduction",
               {
                 "group": "Getting Started",
                 "pages": [
@@ -328,7 +327,7 @@
               "install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
               "ctrl-centre/account-creation"
             ],
-            "icon": "bicep"
+            "icon": "user-shield"
           },
           {
             "dropdown": "PADS4 Ctrl Center",
@@ -608,7 +607,7 @@
                 ]
               }
             ],
-            "icon": "box-check"
+            "icon": "gauge-high"
           },
           {
             "dropdown": "PADS4 Digital Signage",
@@ -1448,7 +1447,7 @@
           },
           {
             "dropdown": "PADS4 Workspace",
-            "icon": "building-circle-check",
+            "icon": "buildings",
             "pages": [
               "pads-4-workspace-2",
               {
