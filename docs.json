@@ -119,7 +119,8 @@
                       "certified-devices/windows/windows-11-pro"
                     ]
                   }
-                ]
+                ],
+                "expanded": false
               },
               {
                 "group": "Generic Android Viewer",
