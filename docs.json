@@ -50,7 +50,7 @@
               "dark": "#00ADBA"
             },
             "pages": [
-              "untitled-page-44",
+              "getting-started/home",
               "getting-started/Introduction",
               {
                 "group": "Getting Started",
