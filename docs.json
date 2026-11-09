@@ -1978,11 +1978,7 @@
           },
           {
             "dropdown": "Test",
-            "hidden": true,
-            "pages": [
-              "untitled-page-45",
-              "untitled-page-44"
-            ]
+            "hidden": true
           }
         ]
       },
