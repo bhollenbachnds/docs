@@ -105,7 +105,7 @@
             ]
           },
           {
-            "dropdown": "Works with PADS4",
+            "dropdown": "PADS4 Certified Devices",
             "pages": [
               "certified-devices/introduction",
               {
@@ -1960,10 +1960,6 @@
               }
             ],
             "icon": "plug"
-          },
-          {
-            "dropdown": "Test",
-            "hidden": true
           }
         ]
       },
