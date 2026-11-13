@@ -599,7 +599,7 @@
                       {
                         "group": "Login Banner",
                         "pages": [
-                          "untitled-page-43"
+                          "ctrl-center/administrator/log-in-banner"
                         ]
                       }
                     ]
