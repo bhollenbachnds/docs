@@ -1,0 +1,91 @@
+---
+title: "Add a third-party plugin"
+sidebarTitle: "Add a plugin"
+description: "Add a third-party plugin in PADS4 CTRL Center, assign the plugin license to users, and check that the plugin opens in PADS4."
+---
+
+Add a third-party plugin to PADS4 CTRL Center so that users can open the application from PADS4.
+
+## Before you begin
+
+- You have the following details from the plugin provider, which is the vendor or PADS4:
+  - The plugin URL.
+  - The validation endpoint URL. PADS4 calls this endpoint to check if a user can use the plugin.
+  - (Optional) An icon for the plugin.
+- The plugin allows the PADS4 server to show it in an iframe. Ask the plugin provider if you are not sure.
+- You have a license for the plugin, if the plugin needs one. See [Licensing for third-party plugins](/ctrl-center/administrator/plugin/licensing).
+
+## Add the plugin
+
+<Steps>
+  <Step title="Open the Plugins page">
+    In PADS4 CTRL Center, open the application menu and select **Config**. In the navigation on the left, select **Plugins**.
+
+    {/* SCREENSHOT: CTRL Center > Config > Plugins, with the Add button. File: plugins-screen.png */}
+  </Step>
+  <Step title="Open the Add Plugin dialog">
+    Select **Add**. The **Add Plugin** dialog opens.
+
+    {/* SCREENSHOT: the Add Plugin dialog. File: add-plugin-dialog.png */}
+  </Step>
+  <Step title="Enter the plugin settings">
+    Enter a name in **Name**. Enter the **Plugin URL** and the **Validation Endpoint URL**. (Optional) Change the icon and enter a **Description**. See [Third-party plugin settings](/ctrl-center/administrator/plugin/settings).
+  </Step>
+  <Step title="Save the plugin">
+    Select **Save**.
+  </Step>
+</Steps>
+
+The **Save** button stays unavailable until you complete all required fields. Required fields have an asterisk (\*).
+
+## Assign a license to users
+
+If the plugin needs a license, assign it to the users who must use the plugin. Users without the license cannot use the plugin.
+
+<Steps>
+  <Step title="Open the user">
+    In PADS4 CTRL Center, go to **Users**. Select the user.
+  </Step>
+  <Step title="Assign the license">
+    Assign the plugin license to the user. 
+  </Step>
+</Steps>
+
+See [Licensing for third-party plugins](/ctrl-center/administrator/plugin/licensing) for the license types.
+
+## Verify that the plugin works
+
+1. Sign in to PADS4 as a user who has the plugin license.
+2. In the application menu, select the plugin.
+
+<Check>
+  The plugin opens inside PADS4.
+</Check>
+
+To test the license, sign in as a user without the license. This user cannot use the plugin.
+
+## Edit or remove a plugin
+
+The **Plugins** page shows an overview of all plugins that you added. Each plugin has a menu with three dots.
+
+<Steps>
+  <Step title="Open the plugin menu">
+    On the **Plugins** page, select the three dots for the plugin.
+  </Step>
+  <Step title="Choose an action">
+    Select **Edit** to change the settings of the plugin. Select **Delete** to remove the plugin.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The plugin does not open in PADS4">
+    The plugin must allow the PADS4 server to show it in an iframe. Ask the plugin provider to change this setting.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+- [Licensing for third-party plugins](/ctrl-center/administrator/plugin/licensing)
+- [Third-party plugin settings](/ctrl-center/administrator/plugin/settings)

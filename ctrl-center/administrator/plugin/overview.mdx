@@ -1,0 +1,49 @@
+---
+title: "Third-party plugins"
+description: "Learn how third-party plugins add applications that are not part of the PADS4 platform to PADS4 CTRL Center, and how PADS4 checks access for each user."
+---
+
+Third-party plugins add applications that are not part of the PADS4 platform to PADS4 CTRL Center. Other vendors can build them, and PADS4 can also provide them. Users open a plugin from the same application menu that they use to switch between PADS4 applications.
+
+<Info>
+  Available from PADS4 2026.2. 
+</Info>
+
+## How third-party plugins work
+
+You add a plugin in PADS4 CTRL Center by entering the URL of the application and the URL of a validation endpoint. PADS4 then checks for each user if the user can use the plugin:
+
+1. A user signs in to PADS4 and selects the plugin.
+2. PADS4 sends a check call to the validation endpoint of the plugin. The call includes the plugin licenses that are assigned to the user.
+3. The endpoint accepts or declines the user.
+4. If the endpoint accepts the user, PADS4 opens the plugin.
+
+The plugin opens in an embedded frame (an _iframe_) inside PADS4. PADS4 keeps its application menu visible, so users can switch to another application. 
+
+A user who does not have the license for the plugin cannot use it. 
+
+## What the plugin developer must do
+
+A plugin only works when its developer has built the integration with PADS4. The developer must:
+
+- Provide an endpoint that accepts or declines a user.
+- Allow the PADS4 server to show the plugin in an iframe. Without this setting, the plugin does not open in PADS4.
+- Check the license, if the plugin needs one. See [Licensing for third-party plugins](/ctrl-center/administrator/plugin/licensing).
+
+PADS4 provides documentation for plugin developers. 
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Add a third-party plugin" icon="puzzle-piece" href="/ctrl-center/administrator/plugin/add-plugin">
+    Add a plugin and assign a license to your users.
+  </Card>
+
+  <Card title="Licensing for third-party plugins" icon="key" href="/ctrl-center/administrator/plugin/licensing">
+    Find out if a plugin needs a license and how you assign it.
+  </Card>
+
+  <Card title="Third-party plugin settings" icon="sliders" href="/ctrl-center/administrator/plugin/settings">
+    Look up the fields in the Add Plugin dialog.
+  </Card>
+</CardGroup>
