@@ -607,8 +607,8 @@
                         "pages": [
                           "ctrl-center/administrator/plugin/overview",
                           "ctrl-center/administrator/plugin/add-plugin",
-                          "ctrl-center/administrator/plugin/licensing",
-                          "ctrl-center/administrator/plugin/settings"
+                          "ctrl-center/administrator/plugin/settings",
+                          "ctrl-center/administrator/plugin/licensing"
                         ]
                       }
                     ]
