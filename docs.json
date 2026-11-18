@@ -109,14 +109,20 @@
             "pages": [
               "certified-devices/introduction",
               {
-                "group": "Microsoft Windows",
+                "group": "Microsoft",
                 "pages": [
-                  "certified-devices/windows/Windows-Viewer",
-                  "certified-devices/windows/Windows-HTML5-Viewer",
                   {
-                    "group": "Windows 11 (Local Account)",
+                    "group": "Windows Viewer",
                     "pages": [
+                      "certified-devices/windows/Windows-Viewer",
+                      "certified-devices/windows/Windows-HTML5-Viewer",
                       "certified-devices/windows/windows-11-pro"
+                    ]
+                  },
+                  {
+                    "group": "Microsoft Teams  Rooms",
+                    "pages": [
+                      "certified-devices/microsoft/microsoft-team-room"
                     ]
                   }
                 ]
