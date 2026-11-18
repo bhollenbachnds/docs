@@ -601,6 +601,15 @@
                         "pages": [
                           "ctrl-center/administrator/log-in-banner"
                         ]
+                      },
+                      {
+                        "group": "Plugins",
+                        "pages": [
+                          "ctrl-center/administrator/plugin/overview",
+                          "ctrl-center/administrator/plugin/add-plugin",
+                          "ctrl-center/administrator/plugin/licensing",
+                          "ctrl-center/administrator/plugin/settings"
+                        ]
                       }
                     ]
                   }
@@ -1907,24 +1916,6 @@
           {
             "dropdown": "Plug-ins",
             "groups": [
-              {
-                "group": "Finessetech",
-                "pages": [
-                  {
-                    "group": "BonVoy VMS",
-                    "pages": [
-                      {
-                        "group": "Installation Manual",
-                        "pages": [
-                          "introduction-1",
-                          "installation"
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hidden": true
-              },
               {
                 "group": "Reporting Plugin",
                 "pages": [

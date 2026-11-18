@@ -1,0 +1,21 @@
+---
+title: "Third-party plugin settings"
+sidebarTitle: "Plugin settings"
+description: "Look up the fields in the Add Plugin dialog in PADS4 CTRL Center, including the plugin URL, the validation endpoint URL, and the icon."
+---
+
+Use this page to look up the fields in the **Add Plugin** dialog. To open the dialog, open the application menu in PADS4 CTRL Center, select **Config** > **Plugins**, and then select **Add**.
+
+| Setting | Required | Description |
+| --- | --- | --- |
+| **Name** | Yes | The name of the plugin. |
+| **Icon** | Yes | The icon of the plugin. See [Icon](#icon). |
+| **Plugin URL** | Yes | The URL of the application. PADS4 opens this URL in an iframe when a user selects the plugin. |
+| **Validation Endpoint URL** | Yes | The URL of the endpoint that accepts or declines a user. PADS4 calls it for each user, and includes the plugin licenses that are assigned to the user. |
+| **Description** | No | A description of the plugin. |
+
+Select **Save** to add the plugin. Select **Cancel** to close the dialog without saving. **Save** is unavailable until all required fields have a value.
+
+## Icon
+
+The default value is `extension`. Select the upload button to use your own image. The preview next to the button shows the current icon.
