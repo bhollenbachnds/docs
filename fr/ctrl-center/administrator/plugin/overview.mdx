@@ -1,0 +1,51 @@
+---
+- title: Plugins tiers
+- description: Découvrez comment les plugins tiers ajoutent des applications qui
+    ne font pas partie de la plateforme PADS4 à PADS4 CTRL Center, et comment
+    PADS4 vérifie l'accès pour chaque utilisateur.
+---
+
+Les plugins tiers ajoutent à PADS4 CTRL Center des applications qui ne font pas partie de la plateforme PADS4. D'autres vendeurs peuvent les créer, et PADS4 peut également en fournir. Les utilisateurs ouvrent un plugin depuis le même menu d'application qu'ils utilisent pour passer d'une application PADS4 à une autre.
+
+<Info>
+  Disponible à partir de PADS4 2026.2.
+</Info>
+
+## Fonctionnement des plugins tiers
+
+Vous ajoutez un plugin dans PADS4 CTRL Center en saisissant l'URL de l'application et l'URL d'un point de terminaison de validation. PADS4 vérifie ensuite pour chaque utilisateur si celui-ci peut utiliser le plugin :
+
+1. Un utilisateur se connecte à PADS4 et sélectionne le plugin.
+2. PADS4 envoie un appel de vérification au point de terminaison de validation du plugin. L'appel inclut les licences du plugin attribuées à l'utilisateur.
+3. Le point de terminaison accepte ou refuse l'utilisateur.
+4. Si le point de terminaison accepte l'utilisateur, PADS4 ouvre le plugin.
+
+Le plugin s'ouvre dans un cadre intégré (un *iframe*) dans PADS4. PADS4 maintient son menu d'application visible, afin que les utilisateurs puissent passer à une autre application.
+
+Un utilisateur qui ne dispose pas de la licence pour le plugin ne peut pas l'utiliser.
+
+## Ce que le développeur du plugin doit faire
+
+Un plugin ne fonctionne que si son développeur a intégré l'intégration avec PADS4. Le développeur doit :
+
+* Fournir un point de terminaison qui accepte ou refuse un utilisateur.
+* Autoriser le serveur PADS4 à afficher le plugin dans un iframe. Sans ce paramètre, le plugin ne s'ouvre pas dans PADS4.
+* Vérifier la licence, si le plugin en nécessite une. Voir [Licences pour les plugins tiers](/ctrl-center/administrator/third-party-plugins/licensing).
+
+PADS4 fournit une documentation pour les développeurs de plugins.
+
+## Étapes suivantes
+
+<CardGroup cols={2}>
+  <Card title="Ajouter un plugin tiers" icon="puzzle-piece" href="/ctrl-center/administrator/third-party-plugins/add-a-third-party-plugin">
+    Ajoutez un plugin et attribuez une licence à vos utilisateurs.
+  </Card>
+
+  <Card title="Licences pour les plugins tiers" icon="key" href="/ctrl-center/administrator/third-party-plugins/licensing">
+    Découvrez si un plugin nécessite une licence et comment vous l'attribuez.
+  </Card>
+
+  <Card title="Paramètres des plugins tiers" icon="sliders" href="/ctrl-center/administrator/third-party-plugins/settings">
+    Consultez les champs de la boîte de dialogue Add Plugin.
+  </Card>
+</CardGroup>
