@@ -169,6 +169,12 @@
                 ]
               },
               {
+                "group": "ELO",
+                "pages": [
+                  "certified-devices/elo/I-Series-2"
+                ]
+              },
+              {
                 "group": "Giada",
                 "pages": [
                   "certified-devices/giada/DN84",
@@ -188,13 +194,7 @@
                   "certified-devices/hikvision/ds-dt-60-p",
                   "certified-devices/hikvision/ds-d60xx-un",
                   "certified-devices/hikvision/DS-D60C-B",
-                  "certified-devices/hikvision/DS-D6032FN",
-                  {
-                    "group": "ELO",
-                    "pages": [
-                      "certified-devices/elo/I-Series-2"
-                    ]
-                  }
+                  "certified-devices/hikvision/DS-D6032FN"
                 ]
               },
               {
