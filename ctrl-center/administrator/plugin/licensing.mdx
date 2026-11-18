@@ -1,0 +1,42 @@
+---
+title: "Licensing for third-party plugins"
+sidebarTitle: "Plugin licensing"
+description: "Find out if a third-party plugin needs a license, which license types exist, and how PADS4 checks the license for each user."
+---
+
+Some third-party plugins need a license. This page explains the license types, how PADS4 checks them, and how you assign them to users.
+
+## License types
+
+If a plugin needs a license, PADS4 creates the license in the PADS4 license manager. 
+
+| License type | What it does |
+| --- | --- |
+| Module license | Gives the PADS4 system access to the plugin. You either have it or you do not. |
+| Plugin user license | Gives one user access to the plugin. You assign it to a user. |
+
+## How PADS4 checks the license
+
+Each time that a user opens the plugin, PADS4 sends the plugin licenses of the user to the validation endpoint of the plugin. The plugin decides if the user has access. A user without the license cannot use the plugin.
+
+The name of the license in the PADS4 license manager must be the same as the name that the plugin checks. The plugin provider and PADS4 agree on this name.
+
+## Assign a license to a user
+
+<Steps>
+  <Step title="Open the user">
+    In PADS4 CTRL Center, go to **Users**. Select the user.
+  </Step>
+  <Step title="Assign the license">
+    Assign the plugin user license to the user. 
+  </Step>
+</Steps>
+
+## Plugins without a license
+
+If a plugin does not need a license, PADS4 still checks each user with the validation endpoint. The endpoint can accept or decline the user. 
+
+## Related
+
+- [Third-party plugins](/ctrl-center/administrator/third-party-plugins/overview)
+- [Add a third-party plugin](/ctrl-center/administrator/third-party-plugins/add-a-third-party-plugin)

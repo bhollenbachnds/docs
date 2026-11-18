@@ -51,7 +51,6 @@
             },
             "pages": [
               "getting-started/home",
-              "getting-started/Introduction",
               {
                 "group": "Getting Started",
                 "pages": [
@@ -106,18 +105,24 @@
             ]
           },
           {
-            "dropdown": "Works with PADS4",
+            "dropdown": "PADS4 Certified Devices",
             "pages": [
               "certified-devices/introduction",
               {
-                "group": "Microsoft Windows",
+                "group": "Microsoft",
                 "pages": [
-                  "certified-devices/windows/Windows-Viewer",
-                  "certified-devices/windows/Windows-HTML5-Viewer",
                   {
-                    "group": "Windows 11 (Local Account)",
+                    "group": "Windows Viewer",
                     "pages": [
+                      "certified-devices/windows/Windows-Viewer",
+                      "certified-devices/windows/Windows-HTML5-Viewer",
                       "certified-devices/windows/windows-11-pro"
+                    ]
+                  },
+                  {
+                    "group": "Microsoft Teams  Rooms",
+                    "pages": [
+                      "certified-devices/microsoft/microsoft-team-room"
                     ]
                   }
                 ]
@@ -328,7 +333,7 @@
               "install-pads4/install-pads4-server/How-to-enter-the-PADS4-Product-Key",
               "ctrl-centre/account-creation"
             ],
-            "icon": "bicep"
+            "icon": "user-shield"
           },
           {
             "dropdown": "PADS4 Ctrl Center",
@@ -600,7 +605,16 @@
                       {
                         "group": "Login Banner",
                         "pages": [
-                          "untitled-page-43"
+                          "ctrl-center/administrator/log-in-banner"
+                        ]
+                      },
+                      {
+                        "group": "Plugins",
+                        "pages": [
+                          "ctrl-center/administrator/plugin/overview",
+                          "ctrl-center/administrator/plugin/add-plugin",
+                          "ctrl-center/administrator/plugin/settings",
+                          "ctrl-center/administrator/plugin/licensing"
                         ]
                       }
                     ]
@@ -608,7 +622,7 @@
                 ]
               }
             ],
-            "icon": "box-check"
+            "icon": "gauge-high"
           },
           {
             "dropdown": "PADS4 Digital Signage",
@@ -1448,7 +1462,7 @@
           },
           {
             "dropdown": "PADS4 Workspace",
-            "icon": "building-circle-check",
+            "icon": "buildings",
             "pages": [
               "pads-4-workspace-2",
               {
@@ -1909,24 +1923,6 @@
             "dropdown": "Plug-ins",
             "groups": [
               {
-                "group": "Finessetech",
-                "pages": [
-                  {
-                    "group": "BonVoy VMS",
-                    "pages": [
-                      {
-                        "group": "Installation Manual",
-                        "pages": [
-                          "introduction-1",
-                          "installation"
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "hidden": true
-              },
-              {
                 "group": "Reporting Plugin",
                 "pages": [
                   {
@@ -1961,10 +1957,6 @@
               }
             ],
             "icon": "plug"
-          },
-          {
-            "dropdown": "Test",
-            "hidden": true
           }
         ]
       },

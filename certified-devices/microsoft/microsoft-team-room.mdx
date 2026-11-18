@@ -1,0 +1,173 @@
+---
+title: "Microsoft Teams Rooms"
+description: "Show a PADS4 HTML5 Viewer presentation as digital signage on Microsoft Teams Rooms devices (Windows and Android) when the room is idle."
+---
+
+Microsoft Teams Rooms devices can show digital signage on the front-of-room display when the room is idle. You can use a PADS4 HTML5 Viewer presentation as the signage source. This page explains how to check the Viewer URL, set up Intune for Android devices, add the PADS4 source in Teams Rooms Pro Management, and assign it to rooms.
+
+Digital signage in Teams Rooms is a Microsoft Teams feature, not a PADS4 integration. Teams Rooms loads the PADS4 HTML5 Viewer as a web page. You do not install PADS4 software on the room device.
+
+<Info>
+  Microsoft released digital signage in Teams Rooms in August 2026. If the feature does not work as this page describes, check the Microsoft Teams Rooms release notes for changes.
+</Info>
+
+### Supported devices
+
+- Microsoft Teams Rooms on Windows
+- Microsoft Teams Rooms on Android
+
+Use a device that Microsoft certifies for Teams Rooms, for example from Neat, Logitech, Poly, Yealink, Crestron, or Lenovo. You cannot test this setup on other hardware or on a virtual device.
+
+### Minimum requirements
+
+| Requirement | Minimum |
+| --- | --- |
+| PADS4 Server | 2026.1 |
+| Device | A certified Teams Rooms device on Windows or Android |
+| Licenses | Teams Rooms Pro and Intune, both assigned to the room resource account |
+
+A Teams Rooms Basic license does not support digital signage or Intune management.
+
+### Other prerequisites
+
+- A PADS4 Server that is installed and running.
+- A published PADS4 presentation for the HTML5 Viewer.
+- A public HTTPS URL for the HTML5 Viewer. The URL has this format: `https://<server>/<domain>/apps/viewer/`. Replace `<server>` with the host name of your PADS4 Server. Replace `<domain>` with your PADS4 domain. The default domain is `PADS4`.
+- The Global Administrator role, or the Teams Rooms Pro Management administrator role.
+- Access to the Intune admin center as an Intune administrator.
+
+## Check the Viewer URL
+
+Teams Rooms accepts only a web page that meets these requirements. Check each one before you configure Teams Rooms.
+
+| Requirement | Details |
+| --- | --- |
+| HTTPS | The URL must be a valid HTTPS URL. |
+| No sign-in | The page loads without a sign-in or permission prompt. |
+| Framing allowed | The response does not send an `X-Frame-Options` header that blocks framing. If the response has a `Content-Security-Policy` header with a `frame-ancestors` directive, it includes `https://teams.microsoft.com`. |
+| Restricted iframe | The page works in an iframe with `sandbox="allow-scripts allow-same-origin"`. The page cannot open pop-ups, navigate the top-level window, or submit forms that leave the frame. |
+| Display size | The content fits the display of the room, usually 1920 × 1080 pixels in landscape. |
+
+1. Open a private browser window that has no cookies, and go to the Viewer URL. Make sure the presentation starts without a sign-in prompt.
+2. On a computer with normal internet access, check the response headers. Replace `<viewer-url>` with your Viewer URL.
+   ```bash
+   curl -sD - -o /dev/null https://<viewer-url>
+   ```
+3. In the output, check these headers:
+   - There is no `x-frame-options` header, or it does not block framing.
+   - There is no `content-security-policy` header, or it has no `frame-ancestors` directive, or the directive includes `https://teams.microsoft.com`.
+
+<Warning>
+  If the PADS4 Server sends a blocking `x-frame-options` header or `frame-ancestors` directive, Teams Rooms does not show an error. It refuses to load the source. Change the header on the server that hosts the Viewer before you continue. 
+</Warning>
+
+## Set up Intune for Android devices
+
+Skip this section if you use Teams Rooms on Windows.
+
+Teams Rooms on Android must be enrolled in Intune with the Android Open Source Project (AOSP) method. Without this enrollment, Teams Rooms Pro Management cannot send settings, including digital signage, to the device. You do this once for your tenant.
+
+<Warning>
+  If the AOSP enrollment profile does not exist, the device still signs in and takes calls. But the settings from Teams Rooms Pro Management fail, with errors such as `Settings fetch failed`.
+</Warning>
+
+### Create the AOSP enrollment profile
+
+1. Sign in to the [Intune admin center](https://intune.microsoft.com) as an Intune administrator.
+2. Go to **Devices** > **Enrollment** > **Android**.
+3. Under **Android Open Source Project (AOSP)** > **Enrollment Profiles**, select **Corporate-owned, user-associated devices**.
+4. Select **Create policy**.
+5. Configure the profile:
+   | Setting | Value |
+   | --- | --- |
+   | **Name** | A name you recognize, for example `AOSP - Teams Devices` |
+   | **Wi-Fi** | **Not configured** |
+   | **For Microsoft Teams devices** | **Enabled** |
+   | **Apply device name template** | **No** |
+   | **Token expiration date** | Keep the default (65 years) |
+6. Select **Next**, check the settings, and then select **Create**.
+
+<Note>
+  A tenant can have only one enrollment profile with **For Microsoft Teams devices** enabled. If a profile already exists, do not create a second one. Check its settings and token expiration date instead.
+</Note>
+
+### Create a compliance policy (recommended)
+
+A compliance policy is not required for digital signage. It prevents devices from showing as noncompliant, and it prevents Conditional Access from signing devices out after enrollment.
+
+1. In the Intune admin center, go to **Devices** > **Compliance**, and then select **Create policy**.
+2. For **Platform**, select **Android (AOSP)**, and then select **Create**.
+3. Enter a name for the policy.
+4. Under **Device Health**, set **Rooted Devices** to **Block**. Set the minimum and maximum OS version that fit your devices.
+5. Under **System Security**, set **Require encryption of data storage on device** to **Yes**.
+6. Assign the policy to all AOSP-enrolled devices, or to a dynamic Microsoft Entra ID group for this enrollment profile, and then create the policy.
+
+### Enroll the device
+
+A device that you enroll after you create the profile uses the profile automatically. If you enrolled a device before the profile existed, reset the device to factory settings and enroll it again.
+
+## Add PADS4 as a signage source
+
+1. Sign in to [Teams Rooms Pro Management](https://portal.rooms.microsoft.com).
+2. Go to **Settings** > **Digital signage**, and turn on digital signage for the tenant.
+3. Select **Add source**.
+4. Enter a name and a description for the source, for example `PADS4`, and then select **Next**.
+5. For the source type, select **Custom**.
+6. Enter the Viewer URL that you checked in [Check the Viewer URL](#check-the-viewer-url), and then select **Next**.
+7. Accept the terms of use, and then select **Submit**.
+
+<Note>
+  Teams Rooms does not support SharePoint and OneDrive for Business URLs as custom sources.
+</Note>
+
+If Teams Rooms Pro Management rejects the URL, check the requirements in [Check the Viewer URL](#check-the-viewer-url).
+
+## Assign the source to rooms
+
+### Assign the source to one room
+
+1. In Teams Rooms Pro Management, go to **Rooms**, and then select the room.
+2. Go to **Settings** > **Digital signage**, and turn it on.
+3. Select the PADS4 source that you added.
+4. Set the signage settings, and then select **Apply**. For the settings, see [Signage settings](#signage-settings).
+5. Select **Apply now**, and then select **Submit**.
+
+The device must be online, connected, and signed in. If you just enrolled or restarted the device, wait 10 to 15 minutes before you apply the settings.
+
+### Assign the source to several rooms
+
+1. On the digital signage page of the tenant, select the row of the PADS4 source.
+2. Select **Assign to rooms**.
+3. Confirm the source, and set the signage settings.
+4. Search for and select the rooms or room groups, and then apply the settings.
+
+### Signage settings
+
+| Setting | Description |
+| --- | --- |
+| **Show Teams info banner** | Shows the room name and a calendar preview over the signage content. Turn it off to show PADS4 content in full screen. |
+| **Activate signage when idle for (minutes)** | The time that the room must be idle before signage starts. A lower value starts signage sooner after a meeting ends or someone leaves. |
+| **Deactivate signage before reservation (minutes)** | The time before a scheduled meeting when signage stops and the home screen returns. |
+| **Allow screen timeout when idle** | If you turn this off, the display stays on during signage, regardless of the screen timeout of the operating system. Turn it off so the content stays visible. |
+
+## Verify the setup
+
+1. Make sure that no meeting is scheduled for the room. Do not touch the console until the idle time that you set has passed.
+2. Check that the PADS4 presentation appears in full screen on the display of the room.
+3. Touch the console. The Teams home screen appears immediately.
+
+<Note>
+  The **Status** tab in Teams Rooms Pro Management does not show the health of a custom signage source. Check the physical display to verify the setup.
+</Note>
+
+## Troubleshooting
+
+| Problem | Solution |
+| --- | --- |
+| Teams Rooms Pro Management shows `Unable to save settings... retried during maintenance window`. | The console was in use, or the management agent did not finish reconnecting after a sign-in or restart. Leave the console idle for about 15 minutes, and then try again. |
+| An Android device shows the error `Settings fetch failed`. | The AOSP enrollment profile does not exist, or the device enrolled before you created it. Check the profile in the Intune admin center. Then reset the device to factory settings and enroll it again. See [Set up Intune for Android devices](#set-up-intune-for-android-devices). |
+| Teams Rooms Pro Management rejects the source URL. | Check the header requirements in [Check the Viewer URL](#check-the-viewer-url). The most common cause is a blocking `x-frame-options` header or `frame-ancestors` directive on the PADS4 Server. |
+| The content does not fill the screen, or it is cut off. | Design the PADS4 content for the resolution of the display of the room. If you show the Teams info banner, leave the top 15% of the screen free. |
+| Signage never starts and the room stays on the home screen. | Check that no meeting is scheduled or about to start. Check that the idle time has passed. |
+
+If these solutions do not solve the problem, collect the device logs before you contact Microsoft Support. In Teams Rooms Pro Management, select the room, and then go to **Actions** > **Log Collection**.
