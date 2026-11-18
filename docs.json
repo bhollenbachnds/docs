@@ -128,15 +128,15 @@
                 ]
               },
               {
-                "group": "Generic Android Viewer",
+                "group": "Google",
                 "pages": [
-                  "certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
+                  "certified-devices/chromeOS/ChromeOS"
                 ]
               },
               {
-                "group": "Google Chrome OS",
+                "group": "Generic Android Viewer",
                 "pages": [
-                  "certified-devices/chromeOS/ChromeOS"
+                  "certified-devices/generic-android-viewer/PADS4-Generic-Android-Viewer"
                 ]
               },
               {
