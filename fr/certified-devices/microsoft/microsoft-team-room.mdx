@@ -1,0 +1,175 @@
+---
+- title: Microsoft Teams Rooms
+- description: Affichez une présentation PADS4 HTML5 Viewer comme affichage
+    dynamique sur les appareils Microsoft Teams Rooms (Windows et Android)
+    lorsque la salle est inactive.
+---
+
+Les appareils Microsoft Teams Rooms peuvent afficher de la signalétique numérique sur l'écran en salle lorsque la salle est inactive. Vous pouvez utiliser une présentation PADS4 HTML5 Viewer comme source de signalétique. Cette page explique comment vérifier l'URL du Viewer, configurer Intune pour les appareils Android, ajouter la source PADS4 dans Teams Rooms Pro Management et l'attribuer aux salles.
+
+La signalétique numérique dans Teams Rooms est une fonctionnalité de Microsoft Teams, et non une intégration PADS4. Teams Rooms charge le PADS4 HTML5 Viewer en tant que page web. Vous n'installez pas le logiciel PADS4 sur l'appareil de la salle.
+
+<Info>
+  Microsoft a publié la signalétique numérique dans Teams Rooms en août 2026. Si la fonctionnalité ne fonctionne pas comme décrit sur cette page, consultez les notes de version de Microsoft Teams Rooms pour connaître les modifications.
+</Info>
+
+### Appareils pris en charge
+
+* Microsoft Teams Rooms sur Windows
+* Microsoft Teams Rooms sur Android
+
+Utilisez un appareil certifié par Microsoft pour Teams Rooms, par exemple de Neat, Logitech, Poly, Yealink, Crestron ou Lenovo. Vous ne pouvez pas tester cette configuration sur un autre matériel ou sur un appareil virtuel.
+
+### Configuration minimale requise
+
+| Exigence     | Minimum                                                                           |
+| ------------ | --------------------------------------------------------------------------------- |
+| PADS4 Server | 2026.1                                                                            |
+| Appareil     | Un appareil Teams Rooms certifié sous Windows ou Android                          |
+| Licences     | Teams Rooms Pro et Intune, tous deux attribués au compte de ressource de la salle |
+
+Une licence Teams Rooms Basic ne prend pas en charge la signalétique numérique ni la gestion Intune.
+
+### Autres prérequis
+
+* Un PADS4 Server installé et en cours d'exécution.
+* Une présentation PADS4 publiée pour le HTML5 Viewer.
+* Une URL HTTPS publique pour le HTML5 Viewer. L'URL a ce format : `https://<server>/<domain>/apps/viewer/`. Remplacez `<server>` par le nom d'hôte de votre PADS4 Server. Remplacez `<domain>` par votre domaine PADS4. Le domaine par défaut est `PADS4`.
+* Le rôle Administrateur général, ou le rôle d'administrateur Teams Rooms Pro Management.
+* Accès au centre d'administration Intune en tant qu'administrateur Intune.
+
+## Vérifier l'URL du Viewer
+
+Teams Rooms accepte uniquement une page web qui répond à ces exigences. Vérifiez chacune d'elles avant de configurer Teams Rooms.
+
+| Exigence                            | Détails                                                                                                                                                                                                                                    |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| HTTPS                               | L'URL doit être une URL HTTPS valide.                                                                                                                                                                                                      |
+| Aucune connexion requise            | La page se charge sans invite de connexion ni de permission.                                                                                                                                                                               |
+| Intégration dans un cadre autorisée | La réponse n'envoie pas d'en-tête `X-Frame-Options` qui bloque l'intégration dans un cadre. Si la réponse contient un en-tête `Content-Security-Policy` avec une directive `frame-ancestors`, elle inclut `https://teams.microsoft.com`.   |
+| iframe restreint                    | La page fonctionne dans un iframe avec `sandbox="allow-scripts allow-same-origin"`. La page ne peut pas ouvrir de fenêtres contextuelles, naviguer dans la fenêtre de niveau supérieur ni soumettre des formulaires qui quittent le cadre. |
+| Taille d'affichage                  | Le contenu s'adapte à l'écran de la salle, généralement 1920 × 1080 pixels en mode paysage.                                                                                                                                                |
+
+1. Ouvrez une fenêtre de navigation privée sans cookies et accédez à l'URL du Viewer. Assurez-vous que la présentation démarre sans invite de connexion.
+2. Sur un ordinateur disposant d'un accès internet normal, vérifiez les en-têtes de réponse. Remplacez `<viewer-url>` par votre URL du Viewer.
+   ```bash
+   curl -sD - -o /dev/null https://<viewer-url>
+   ```
+3. Dans la sortie, vérifiez ces en-têtes :
+   * Il n'y a pas d'en-tête `x-frame-options`, ou il ne bloque pas l'intégration dans un cadre.
+   * Il n'y a pas d'en-tête `content-security-policy`, ou il ne contient pas de directive `frame-ancestors`, ou la directive inclut `https://teams.microsoft.com`.
+
+<Warning>
+  Si le PADS4 Server envoie un en-tête `x-frame-options` bloquant ou une directive `frame-ancestors`, Teams Rooms n'affiche pas d'erreur. Il refuse de charger la source. Modifiez l'en-tête sur le serveur qui héberge le Viewer avant de continuer.
+</Warning>
+
+## Configurer Intune pour les appareils Android
+
+Ignorez cette section si vous utilisez Teams Rooms sur Windows.
+
+Teams Rooms sur Android doit être inscrit dans Intune avec la méthode Android Open Source Project (AOSP). Sans cette inscription, Teams Rooms Pro Management ne peut pas envoyer de paramètres, y compris la signalétique numérique, à l'appareil. Vous effectuez cette opération une seule fois pour votre tenant.
+
+<Warning>
+  Si le profil d'inscription AOSP n'existe pas, l'appareil se connecte quand même et prend les appels. Mais les paramètres de Teams Rooms Pro Management échouent, avec des erreurs telles que `Settings fetch failed`.
+</Warning>
+
+### Créer le profil d'inscription AOSP
+
+1. Connectez-vous au [Centre d'administration Intune](https://intune.microsoft.com) en tant qu'administrateur Intune.
+2. Accédez à **Appareils** > **Inscription** > **Android**.
+3. Sous **Android Open Source Project (AOSP)** > **Profils d'inscription**, sélectionnez **Appareils d'entreprise associés à un utilisateur**.
+4. Sélectionnez **Créer une stratégie**.
+5. Configurez le profil :
+   | Paramètre                                 | Valeur                                                           |
+   | ----------------------------------------- | ---------------------------------------------------------------- |
+   | **Nom**                                   | Un nom que vous reconnaissez, par exemple `AOSP - Teams Devices` |
+   | **Wi-Fi**                                 | **Non configuré**                                                |
+   | **Pour les appareils Microsoft Teams**    | **Activé**                                                       |
+   | **Appliquer un modèle de nom d'appareil** | **Non**                                                          |
+   | **Date d'expiration du jeton**            | Conserver la valeur par défaut (65 ans)                          |
+6. Sélectionnez **Suivant**, vérifiez les paramètres, puis sélectionnez **Créer**.
+
+<Note>
+  Un tenant ne peut avoir qu'un seul profil d'inscription avec **Pour les appareils Microsoft Teams** activé. Si un profil existe déjà, n'en créez pas un second. Vérifiez plutôt ses paramètres et sa date d'expiration du jeton.
+</Note>
+
+### Créer une stratégie de conformité (recommandé)
+
+Une stratégie de conformité n'est pas requise pour la signalétique numérique. Elle empêche les appareils d'apparaître comme non conformes et empêche l'accès conditionnel de déconnecter les appareils après l'inscription.
+
+1. Dans le centre d'administration Intune, accédez à **Appareils** > **Conformité**, puis sélectionnez **Créer une stratégie**.
+2. Pour **Plateforme**, sélectionnez **Android (AOSP)**, puis sélectionnez **Créer**.
+3. Entrez un nom pour la stratégie.
+4. Sous **Intégrité de l'appareil**, définissez **Appareils rootés** à **Block**. Définissez la version minimale et maximale du système d'exploitation adaptée à vos appareils.
+5. Sous **System Security**, définissez **Require encryption of data storage on device** sur **Yes**.
+6. Attribuez la stratégie à tous les appareils inscrits AOSP, ou à un groupe Microsoft Entra ID dynamique pour ce profil d'inscription, puis créez la stratégie.
+
+### Inscrire l'appareil
+
+Un appareil que vous inscrivez après avoir créé le profil utilise automatiquement ce profil. Si vous avez inscrit un appareil avant que le profil n'existe, réinitialisez l'appareil aux paramètres d'usine et inscrivez-le à nouveau.
+
+## Ajouter PADS4 comme source d'affichage dynamique
+
+1. Connectez-vous à [Teams Rooms Pro Management](https://portal.rooms.microsoft.com).
+2. Accédez à **Settings** > **Digital signage**, et activez l'affichage dynamique pour le locataire.
+3. Sélectionnez **Add source**.
+4. Entrez un nom et une description pour la source, par exemple `PADS4`, puis sélectionnez **Next**.
+5. Pour le type de source, sélectionnez **Custom**.
+6. Entrez l'URL du Viewer que vous avez vérifiée dans [Check the Viewer URL](#check-the-viewer-url), puis sélectionnez **Next**.
+7. Acceptez les conditions d'utilisation, puis sélectionnez **Submit**.
+
+<Note>
+  Teams Rooms ne prend pas en charge les URL SharePoint et OneDrive Entreprise comme sources personnalisées.
+</Note>
+
+Si Teams Rooms Pro Management rejette l'URL, vérifiez les exigences dans [Check the Viewer URL](#check-the-viewer-url).
+
+## Attribuer la source aux salles
+
+### Attribuer la source à une salle
+
+1. Dans Teams Rooms Pro Management, accédez à **Rooms**, puis sélectionnez la salle.
+2. Accédez à **Settings** > **Digital signage**, et activez-le.
+3. Sélectionnez la source PADS4 que vous avez ajoutée.
+4. Définissez les paramètres d'affichage dynamique, puis sélectionnez **Apply**. Pour les paramètres, voir [Signage settings](#signage-settings).
+5. Sélectionnez **Apply now**, puis sélectionnez **Submit**.
+
+L'appareil doit être en ligne, connecté et connecté à un compte. Si vous venez d'inscrire ou de redémarrer l'appareil, attendez 10 à 15 minutes avant d'appliquer les paramètres.
+
+### Attribuer la source à plusieurs salles
+
+1. Sur la page d'affichage dynamique du locataire, sélectionnez la ligne de la source PADS4.
+2. Sélectionnez **Assign to rooms**.
+3. Confirmez la source et définissez les paramètres d'affichage dynamique.
+4. Recherchez et sélectionnez les salles ou groupes de salles, puis appliquez les paramètres.
+
+### Paramètres d'affichage dynamique
+
+| Paramètre                                           | Description                                                                                                                                                                                                                      |
+| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Show Teams info banner**                          | Affiche le nom de la salle et un aperçu du calendrier par-dessus le contenu d'affichage dynamique. Désactivez cette option pour afficher le contenu PADS4 en plein écran.                                                        |
+| **Activate signage when idle for (minutes)**        | La durée pendant laquelle la salle doit être inactive avant que l'affichage dynamique ne démarre. Une valeur plus faible démarre l'affichage dynamique plus tôt après la fin d'une réunion ou lorsque quelqu'un quitte la salle. |
+| **Deactivate signage before reservation (minutes)** | Le délai avant une réunion planifiée à partir duquel l'affichage dynamique s'arrête et l'écran d'accueil réapparaît.                                                                                                             |
+| **Allow screen timeout when idle**                  | Si vous désactivez cette option, l'écran reste allumé pendant l'affichage dynamique, indépendamment du délai d'expiration de l'écran du système d'exploitation. Désactivez-la pour que le contenu reste visible.                 |
+
+## Vérifier la configuration
+
+1. Assurez-vous qu'aucune réunion n'est planifiée pour la salle. Ne touchez pas la console tant que le temps d'inactivité que vous avez défini ne s'est pas écoulé.
+2. Vérifiez que la présentation PADS4 s'affiche en plein écran sur l'écran de la salle.
+3. Touchez la console. L'écran d'accueil Teams apparaît immédiatement.
+
+<Note>
+  L'onglet **Status** dans Teams Rooms Pro Management n'affiche pas l'état de santé d'une source d'affichage dynamique personnalisée. Vérifiez l'écran physique pour confirmer la configuration.
+</Note>
+
+## Résolution des problèmes
+
+| Problème                                                                                           | Solution                                                                                                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Teams Rooms Pro Management affiche `Unable to save settings... retried during maintenance window`. | La console était en cours d'utilisation, ou l'agent de gestion n'a pas terminé la reconnexion après une connexion ou un redémarrage. Laissez la console inactive pendant environ 15 minutes, puis réessayez.                                                                                                                    |
+| Un appareil Android affiche l'erreur `Settings fetch failed`.                                      | Le profil d'inscription AOSP n'existe pas, ou l'appareil a été inscrit avant que vous ne le créiez. Vérifiez le profil dans le centre d'administration Intune. Réinitialisez ensuite l'appareil aux paramètres d'usine et inscrivez-le à nouveau. Voir [Set up Intune for Android devices](#set-up-intune-for-android-devices). |
+| Teams Rooms Pro Management rejette l'URL de la source.                                             | Vérifiez les exigences relatives aux en-têtes dans [Check the Viewer URL](#check-the-viewer-url). La cause la plus fréquente est un en-tête `x-frame-options` bloquant ou une directive `frame-ancestors` sur le serveur PADS4.                                                                                                 |
+| Le contenu ne remplit pas l'écran, ou il est coupé.                                                | Concevez le contenu PADS4 pour la résolution de l'écran de la salle. Si vous affichez la bannière d'informations Teams, laissez les 15 % supérieurs de l'écran libres.                                                                                                                                                          |
+| L'affichage dynamique ne démarre jamais et la salle reste sur l'écran d'accueil.                   | Vérifiez qu'aucune réunion n'est planifiée ou sur le point de commencer. Vérifiez que le temps d'inactivité s'est écoulé.                                                                                                                                                                                                       |
+
+Si ces solutions ne résolvent pas le problème, collectez les journaux de l'appareil avant de contacter le Support Microsoft. Dans Teams Rooms Pro Management, sélectionnez la salle, puis accédez à **Actions** > **Log Collection**.
