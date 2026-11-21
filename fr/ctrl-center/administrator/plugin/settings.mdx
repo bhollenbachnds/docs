@@ -1,0 +1,23 @@
+---
+- title: Paramètres du plugin tiers
+- sidebarTitle: Paramètres du plugin
+- description: Consultez les champs de la boîte de dialogue Add Plugin dans PADS4
+    CTRL Center, notamment l'URL du plugin, l'URL du point de terminaison de
+    validation et l'icône.
+---
+
+Utilisez cette page pour consulter les champs dans la **Add Plugin** boîte de dialogue. Pour ouvrir la boîte de dialogue, ouvrez le menu de l'application dans PADS4 CTRL Center, sélectionnez **Config** > **Plugins**, puis sélectionnez **Add**.
+
+| Paramètre                   | Requis | Description                                                                                                                                                              |
+| --------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Name**                    | Oui    | Le nom du plugin.                                                                                                                                                        |
+| **Icon**                    | Oui    | L'icône du plugin. Voir [Icon](#icon).                                                                                                                                   |
+| **Plugin URL**              | Oui    | L'URL de l'application. PADS4 ouvre cette URL dans un iframe lorsqu'un utilisateur sélectionne le plugin.                                                                |
+| **Validation Endpoint URL** | Oui    | L'URL du point de terminaison qui accepte ou refuse un utilisateur. PADS4 l'appelle pour chaque utilisateur et inclut les licences du plugin attribuées à l'utilisateur. |
+| **Description**             | Non    | Une description du plugin.                                                                                                                                               |
+
+Sélectionnez **Save** pour ajouter le plugin. Sélectionnez **Cancel** pour fermer la boîte de dialogue sans enregistrer. **Save** n'est pas disponible tant que tous les champs obligatoires n'ont pas de valeur.
+
+## Icon
+
+La valeur par défaut est `extension`. Sélectionnez le bouton de téléchargement pour utiliser votre propre image. L'aperçu à côté du bouton affiche l'icône actuelle.

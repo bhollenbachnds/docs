@@ -1,0 +1,98 @@
+---
+- title: Ajouter un plugin tiers
+- sidebarTitle: Ajouter un plugin
+- description: Ajoutez un plugin tiers dans PADS4 CTRL Center, attribuez la
+    licence du plugin aux utilisateurs et vérifiez que le plugin s'ouvre dans
+    PADS4.
+---
+
+Ajoutez un plugin tiers à PADS4 CTRL Center afin que les utilisateurs puissent ouvrir l'application depuis PADS4.
+
+## Avant de commencer
+
+* Vous disposez des informations suivantes de la part du fournisseur du plugin, c'est-à-dire le vendeur ou PADS4 :
+  * L'URL du plugin.
+  * L'URL du point de terminaison de validation. PADS4 appelle ce point de terminaison pour vérifier si un utilisateur peut utiliser le plugin.
+  * (Facultatif) Une icône pour le plugin.
+* Le plugin autorise le serveur PADS4 à l'afficher dans un iframe. Demandez au fournisseur du plugin si vous n'êtes pas sûr.
+* Vous disposez d'une licence pour le plugin, si le plugin en nécessite une. Voir [Licences pour les plugins tiers](/ctrl-center/administrator/third-party-plugins/licensing).
+
+## Ajouter le plugin
+
+<Steps>
+  <Step title="Ouvrir la page Plugins">
+    Dans PADS4 CTRL Center, ouvrez le menu de l'application et sélectionnez **Config**. Dans la navigation à gauche, sélectionnez **Plugins**.
+
+    {/* SCREENSHOT: CTRL Center > Config > Plugins, with the Add button. File: plugins-screen.png */}
+  </Step>
+
+  <Step title="Ouvrir la boîte de dialogue Ajouter un plugin">
+    Sélectionnez **Add**. La **Add Plugin** boîte de dialogue s'ouvre.
+
+    {/* SCREENSHOT: the Add Plugin dialog. File: add-plugin-dialog.png */}
+  </Step>
+
+  <Step title="Saisir les paramètres du plugin">
+    Saisissez un nom dans **Name**. Saisissez l'**Plugin URL** et l'**Validation Endpoint URL**. (Facultatif) Modifiez l'icône et saisissez une **Description**. Voir [Paramètres des plugins tiers](/ctrl-center/administrator/third-party-plugins/settings).
+  </Step>
+
+  <Step title="Enregistrer le plugin">
+    Sélectionnez **Save**.
+  </Step>
+</Steps>
+
+Le bouton **Save** reste indisponible jusqu'à ce que vous ayez rempli tous les champs obligatoires. Les champs obligatoires sont marqués d'un astérisque (\*).
+
+## Attribuer une licence aux utilisateurs
+
+Si le plugin nécessite une licence, attribuez-la aux utilisateurs qui doivent utiliser le plugin. Les utilisateurs sans licence ne peuvent pas utiliser le plugin.
+
+<Steps>
+  <Step title="Ouvrir l'utilisateur">
+    Dans PADS4 CTRL Center, accédez à **Users**. Sélectionnez l'utilisateur.
+  </Step>
+
+  <Step title="Attribuer la licence">
+    Attribuez la licence du plugin à l'utilisateur.
+  </Step>
+</Steps>
+
+Voir [Licences pour les plugins tiers](/ctrl-center/administrator/third-party-plugins/licensing) pour les types de licences.
+
+## Vérifier que le plugin fonctionne
+
+1. Connectez-vous à PADS4 en tant qu'utilisateur disposant de la licence du plugin.
+2. Dans le menu de l'application, sélectionnez le plugin.
+
+<Check>
+  Le plugin s'ouvre dans PADS4.
+</Check>
+
+Pour tester la licence, connectez-vous en tant qu'utilisateur sans licence. Cet utilisateur ne peut pas utiliser le plugin.
+
+## Modifier ou supprimer un plugin
+
+La page **Plugins** affiche une vue d'ensemble de tous les plugins que vous avez ajoutés. Chaque plugin dispose d'un menu avec trois points.
+
+<Steps>
+  <Step title="Ouvrir le menu du plugin">
+    Sur la page **Plugins**, sélectionnez les trois points du plugin.
+  </Step>
+
+  <Step title="Choisir une action">
+    Sélectionnez **Edit** pour modifier les paramètres du plugin. Sélectionnez **Delete** pour supprimer le plugin.
+  </Step>
+</Steps>
+
+## Dépannage
+
+<AccordionGroup>
+  <Accordion title="Le plugin ne s'ouvre pas dans PADS4">
+    Le plugin doit autoriser le serveur PADS4 à l'afficher dans un iframe. Demandez au fournisseur du plugin de modifier ce paramètre.
+  </Accordion>
+</AccordionGroup>
+
+## Étapes suivantes
+
+* [Licences pour les plugins tiers](/ctrl-center/administrator/third-party-plugins/licensing)
+* [Paramètres des plugins tiers](/ctrl-center/administrator/third-party-plugins/settings)

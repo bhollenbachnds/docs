@@ -1,0 +1,45 @@
+---
+- title: Licences pour les plugins tiers
+- sidebarTitle: Licences de plugin
+- description: Découvrez si un plugin tiers nécessite une licence, quels types de
+    licences existent et comment PADS4 vérifie la licence pour chaque
+    utilisateur.
+---
+
+Certains plugins tiers nécessitent une licence. Cette page explique les types de licences, comment PADS4 les vérifie et comment vous les attribuez aux utilisateurs.
+
+## Types de licences
+
+Si un plugin nécessite une licence, PADS4 crée la licence dans le gestionnaire de licences PADS4.
+
+| Type de licence               | Ce qu'elle fait                                                              |
+| ----------------------------- | ---------------------------------------------------------------------------- |
+| Licence de module             | Donne au système PADS4 l'accès au plugin. Vous l'avez ou vous ne l'avez pas. |
+| Licence utilisateur de plugin | Donne à un utilisateur l'accès au plugin. Vous l'attribuez à un utilisateur. |
+
+## Comment PADS4 vérifie la licence
+
+Chaque fois qu'un utilisateur ouvre le plugin, PADS4 envoie les licences du plugin de l'utilisateur au point de terminaison de validation du plugin. Le plugin décide si l'utilisateur a accès. Un utilisateur sans licence ne peut pas utiliser le plugin.
+
+Le nom de la licence dans le gestionnaire de licences PADS4 doit être identique au nom que le plugin vérifie. Le fournisseur du plugin et PADS4 se mettent d'accord sur ce nom.
+
+## Attribuer une licence à un utilisateur
+
+<Steps>
+  <Step title="Ouvrir l'utilisateur">
+    Dans PADS4 CTRL Center, accédez à **Users**. Sélectionnez l'utilisateur.
+  </Step>
+
+  <Step title="Attribuer la licence">
+    Attribuez la licence utilisateur du plugin à l'utilisateur.
+  </Step>
+</Steps>
+
+## Plugins sans licence
+
+Si un plugin n'a pas besoin de licence, PADS4 vérifie quand même chaque utilisateur auprès du point de terminaison de validation. Le point de terminaison peut accepter ou refuser l'utilisateur.
+
+## Associé
+
+* [Plugins tiers](/ctrl-center/administrator/third-party-plugins/overview)
+* [Ajouter un plugin tiers](/ctrl-center/administrator/third-party-plugins/add-a-third-party-plugin)
